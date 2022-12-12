@@ -5,12 +5,12 @@ Global Englacial Temperature database
 Open-access database of englacial temperature measurements compiled from published literature and submitted entries.
 
 ## Data structure
-- [`studies.csv`](studies.csv): Table of all studies that have been included to date. The column "catalogued" indicates whether data from the study has been incorporated into the database.
+- [`sources.csv`](sources.csv): Table of all studies that have been included to date. The column "catalogued" indicates whether data from the study has been incorporated into the database.
 
-- [`measurement_info.csv`](measurement_info.csv):
+- [`boreholes.csv`](boreholes.csv):
 Metadata about each individual temperature profile.
 
-- [`data.csv`](data.csv):
+- [`temperatures.csv`](temperatures.csv):
 Depth vs. temperature data linked to the the data in `measurement_info.csv` and `studies.csv` via `study_id` and `measurement_id`
 
 ## How to contribute
