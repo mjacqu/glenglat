@@ -111,7 +111,7 @@ resources:
           format: '%Y-%m-%d'
           title: Start date
           description: First date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
-        - name: last_date
+        - name: end_date
           type: date
           format: '%Y-%m-%d'
           title: End date
@@ -170,6 +170,10 @@ resources:
           type: number
           title: Depth
           description: depth measurement in meters
+        - name: to_bottom
+          type: boolean
+          title: To bottom
+          description: Indication whether borehole reached bedrock (true, false, or unknown)
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
