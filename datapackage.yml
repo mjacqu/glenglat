@@ -52,7 +52,7 @@ resources:
           type: string
           title: Publication url
           description: DOI url for published studies if available, null if data was submitted directly
-      primaryKey: ['study_id']
+      primaryKey: ['source_id']
       missing values: ['']
   - name: boreholes
     title: Borehole infos
@@ -137,7 +137,7 @@ resources:
           title: Extraction method
           description: how data was obtained (plot digitizer or import)
       primaryKey: ['borehole_id']
-      foreignKey: ['study_id']
+      foreignKey: ['source_id']
   - name: temperatures.csv
     title: Temperatures
     description: Temperature and depth measurements
