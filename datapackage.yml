@@ -29,7 +29,7 @@ resources:
         - name: source_id
           type: integer
           title: Source identifier
-          constratins:
+          constraints:
             required: true
             unique: true
         - name: first_author
@@ -137,8 +137,12 @@ resources:
           title: Extraction method
           description: how data was obtained (plot digitizer or import)
       primaryKey: ['borehole_id']
-      foreignKey: ['source_id']
-  - name: temperatures.csv
+      foreignKeys:
+        - fields: ['source_id']
+          reference:
+            resource: sources
+            fields: ['source_id']
+  - name: temperatures
     title: Temperatures
     description: Temperature and depth measurements
     path: temperatures.csv
@@ -152,9 +156,9 @@ resources:
         - name: source_id
           type: integer
           title: Source ID
-        - name: measurement_id
+        - name: borehole_id
           type: integer
-          title: Measurement ID
+          title: Borehole ID
           constraints:
             required: true
         - name: temperature_degC
@@ -166,4 +170,8 @@ resources:
           title: Depth
           description: depth measurement in meters
       primaryKey: ['id']
-      foreignKey: ['source_id', 'borehole_id']
+      foreignKeys:
+        - fields: ['source_id', 'borehole_id']
+          reference:
+            resource: boreholes
+            fields: ['source_id', 'borehole_id']
