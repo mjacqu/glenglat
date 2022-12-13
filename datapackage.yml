@@ -53,7 +53,7 @@ resources:
           title: Publication url
           description: DOI url for published studies if available, null if data was submitted directly
       primaryKey: ['source_id']
-      missing values: ['']
+      missingValues: ['']
   - name: boreholes
     title: Borehole infos
     description: Metadata about each individual borehole and temperature profile.
@@ -136,6 +136,7 @@ resources:
           type: string
           title: Extraction method
           description: how data was obtained (plot digitizer or import)
+      missingValues: ['']
       primaryKey: ['borehole_id']
       foreignKeys:
         - fields: ['source_id']
@@ -169,6 +170,7 @@ resources:
           type: number
           title: Depth
           description: depth measurement in meters
+      missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
         - fields: ['source_id', 'borehole_id']
