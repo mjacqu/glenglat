@@ -46,7 +46,7 @@ resources:
           description: Full publication title or "personal communication" if data was submitted but not published anyhwere in the submitted form
         - name: included
           type: boolean
-          title: Data included: True or False
+          title: 'Data included: True or False'
           description: Indicator of whether any data from the given study was included in the database
         - name: url
           type: string
