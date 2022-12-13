@@ -165,5 +165,5 @@ resources:
           type: number
           title: Depth
           description: depth measurement in meters
-      primaryKey: ['ID']
+      primaryKey: ['id']
       foreignKey: ['source_id', 'borehole_id']
