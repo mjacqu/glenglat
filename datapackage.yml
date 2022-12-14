@@ -170,10 +170,6 @@ resources:
           type: number
           title: Depth
           description: depth measurement in meters
-        - name: to_bottom
-          type: boolean
-          title: To bottom
-          description: Indication whether borehole reached bedrock (true, false, or unknown)
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
