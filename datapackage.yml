@@ -29,7 +29,7 @@ resources:
         - name: source_id
           type: integer
           title: Source identifier
-          constratins:
+          constraints:
             required: true
             unique: true
         - name: first_author
@@ -46,14 +46,14 @@ resources:
           description: Full publication title or "personal communication" if data was submitted but not published anyhwere in the submitted form
         - name: included
           type: boolean
-          title: Data included: True or False
+          title: 'Data included: True or False'
           description: Indicator of whether any data from the given study was included in the database
         - name: url
           type: string
           title: Publication url
           description: DOI url for published studies if available, null if data was submitted directly
-      primaryKey: ['study_id']
-      missing values: ['']
+      primaryKey: ['source_id']
+      missingValues: ['']
   - name: boreholes
     title: Borehole infos
     description: Metadata about each individual borehole and temperature profile.
@@ -111,7 +111,7 @@ resources:
           format: '%Y-%m-%d'
           title: Start date
           description: First date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
-        - name: last_date
+        - name: end_date
           type: date
           format: '%Y-%m-%d'
           title: End date
@@ -136,9 +136,14 @@ resources:
           type: string
           title: Extraction method
           description: how data was obtained (plot digitizer or import)
+      missingValues: ['']
       primaryKey: ['borehole_id']
-      foreignKey: ['study_id']
-  - name: temperatures.csv
+      foreignKeys:
+        - fields: ['source_id']
+          reference:
+            resource: sources
+            fields: ['source_id']
+  - name: temperatures
     title: Temperatures
     description: Temperature and depth measurements
     path: temperatures.csv
@@ -152,9 +157,9 @@ resources:
         - name: source_id
           type: integer
           title: Source ID
-        - name: measurement_id
+        - name: borehole_id
           type: integer
-          title: Measurement ID
+          title: Borehole ID
           constraints:
             required: true
         - name: temperature_degC
@@ -165,5 +170,14 @@ resources:
           type: number
           title: Depth
           description: depth measurement in meters
-      primaryKey: ['ID']
-      foreignKey: ['source_id', 'borehole_id']
+        - name: to_bottom
+          type: boolean
+          title: To bottom
+          description: Indication whether borehole reached bedrock (true, false, or unknown)
+      missingValues: ['']
+      primaryKey: ['id']
+      foreignKeys:
+        - fields: ['source_id', 'borehole_id']
+          reference:
+            resource: boreholes
+            fields: ['source_id', 'borehole_id']
