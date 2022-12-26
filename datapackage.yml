@@ -36,6 +36,8 @@ resources:
           type: string
           title: First author
           description: First author of published study or person who submitted the data
+          constraints:
+            required: true
         - name: year
           type: year
           title: Year
