@@ -105,7 +105,9 @@ resources:
         - name: glacier_name
           type: string
           title: Glacier name
-          description: Common glacier or icecap name if known
+          description: Formal or informal glacier or icecap name as provided by authors or data provider.
+          constraints:
+            required: true
         - name: rgi_id
           type: string
           title: RGI-ID
