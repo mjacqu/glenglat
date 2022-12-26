@@ -110,6 +110,9 @@ resources:
           type: string
           title: RGI-ID
           description: Randolph Glacier Inventory ID from RGI 6.0
+          constraints:
+            maxLength: 14
+            pattern: 'RGI60-\d{2}.\d{5}'
         - name: start_date
           type: date
           format: '%Y-%m-%d'
