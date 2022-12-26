@@ -37,7 +37,7 @@ resources:
           title: First author
           description: First author of published study or person who submitted the data
         - name: year
-          type: integer
+          type: year
           title: Year
           description: Year of study publication or data submission
         - name: title
