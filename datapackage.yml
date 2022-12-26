@@ -21,7 +21,7 @@ resources:
   - name: sources
     title: Sources
     description: All data sources that were considerd in the compilation of this database.
-    path: sources.csv
+    path: data/sources.csv
     format: csv
     profile: tabular-data-resource
     schema:
@@ -57,7 +57,7 @@ resources:
   - name: boreholes
     title: Borehole infos
     description: Metadata about each individual borehole and temperature profile.
-    path: boreholes.csv
+    path: data/boreholes.csv
     format: csv
     profile: tabular-data-resource
     schema:
@@ -146,7 +146,7 @@ resources:
   - name: temperatures
     title: Temperatures
     description: Temperature and depth measurements
-    path: temperatures.csv
+    path: data/temperatures.csv
     format: csv
     profile: tabular-data-resource
     schema:
