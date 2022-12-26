@@ -139,7 +139,14 @@ resources:
         - name: extraction_method
           type: string
           title: Extraction method
-          description: how data was obtained (plot digitizer or import)
+          description: |-
+            Specification of data extraction method.
+
+            - plot digitizer: data digitized with plot digitizer
+            - manual: data read off plot and entered manually
+            - import: direct data import from source
+          constraints:
+            enum: ['plot digitizer', 'manual', 'import']
       missingValues: ['']
       primaryKey: ['borehole_id']
       foreignKeys:
