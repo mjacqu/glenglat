@@ -40,6 +40,8 @@ resources:
           type: year
           title: Year
           description: Year of study publication or data submission
+          constraints:
+            required: true
         - name: title
           type: string
           title: Publication title
