@@ -3,7 +3,7 @@ version: 0.1
 created: '2022-10-27T15:17:45Z'
 title: Global englacial temperature database (glenglat)
 description: |-
-  Englacial temperature database compiled from digitized and submitted englacial temperature measurements.
+  Englacial temperature database compiled from digitized and imported englacial temperature measurements.
 languages:
   - en
 licenses:
@@ -19,7 +19,6 @@ contributors:
     role: author
 resources:
   - name: sources
-    title: Sources
     description: All data sources that were considerd in the compilation of this database.
     path: data/sources.csv
     format: csv
@@ -27,39 +26,33 @@ resources:
     schema:
       fields:
         - name: source_id
+          description: Unique identifier.
           type: integer
-          title: Source identifier
           constraints:
             required: true
             unique: true
         - name: first_author
+          description: First author of published study or person who submitted the data.
           type: string
-          title: First author
-          description: First author of published study or person who submitted the data
           constraints:
             required: true
         - name: year
+          description: Year of study publication or data submission.
           type: year
-          title: Year
-          description: Year of study publication or data submission
           constraints:
             required: true
         - name: title
+          description: Full publication title or "personal communication" if data was submitted but not published anyhwere in the submitted form.
           type: string
-          title: Publication title
-          description: Full publication title or "personal communication" if data was submitted but not published anyhwere in the submitted form
         - name: included
+          description: Indicator of whether any data from the given study was included in the database.
           type: boolean
-          title: 'Data included: True or False'
-          description: Indicator of whether any data from the given study was included in the database
         - name: url
+          description: DOI url for published studies if available, null if data was submitted directly.
           type: string
-          title: Publication url
-          description: DOI url for published studies if available, null if data was submitted directly
       primaryKey: ['source_id']
       missingValues: ['']
   - name: boreholes
-    title: Borehole infos
     description: Metadata about each individual borehole and temperature profile.
     path: data/boreholes.csv
     format: csv
@@ -68,90 +61,77 @@ resources:
       fields:
         - name: source_id
           type: integer
-          title: Source identifier
+          description: Source ID.
           constraints:
             required: true
             unique: false
         - name: borehole_id
+          description: Unique identifier.
           type: integer
-          title: Borehole Identifier
           constraints:
             required: true
             unique: true
         - name: location_source
+          description: Data source used to approximate borehole location if such was not published or provided.
           type: string
-          title: Source of location data
-          description: Data source used to approximate borehole location if not published
         - name: y_lat
+          description: Latitude or Y (north-south) coordinate.
           type: number
-          description: Latitude or Y (north-south) coordinate
         - name: x_lon
+          description: Longitude or X (east-west) coordinate.
           type: number
-          description: Longitude or X (east-west) coordinate
         - name: epsg
+          description: EPSG code of X and Y coordinates if not lat/long (EPSG 4326).
           type: integer
-          title: EPSG code
-          description: EPSG code of X and Y coordinates if not lat/long (EPSG 4326)
         - name: elevation_source
+          description: Data source used to approximate borehole location if not published. 
           type: string
-          title: Source of elevation data
-          description: Data source used to approximate borehole location if not published
         - name: elevation_masl
+          description: Elevation of borehole drill site in meters above sea-level (masl).
           type: number
-          title: Borehole elevation
-          description: elevation in meters above sea-level
           constraints:
             required: true
             maximum: 9999.0
         - name: glacier_name
-          type: string
-          title: Glacier name
           description: Formal or informal glacier or icecap name as provided by authors or data provider.
+          type: string
           constraints:
             required: true
         - name: rgi_id
+          description: Randolph Glacier Inventory ID from RGI 6.0. 
           type: string
-          title: RGI-ID
-          description: Randolph Glacier Inventory ID from RGI 6.0
           constraints:
             required: true
             maxLength: 14
             pattern: 'RGI60-\d{2}.\d{5}'
         - name: start_date
+          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
           type: date
           format: '%Y-%m-%d'
-          title: Start date
-          description: First date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
         - name: end_date
+          description: Date of temperature measurement or, if not known precisely, the latest possible date (e.g. '2019' -> '2019-12-31').
           type: date
           format: '%Y-%m-%d'
-          title: End date
-          description: Last date of temperature measurement or, if not known precisely, the latest possible date (e.g. '2019' -> '2019-12-31').
         - name: published_accuracy
+          description: If published, accuracy of original temperature measurement.
           type: number
-          title: Published accuracy
-          description: If published, accuracy of original temperature measurement
         - name: to_bottom
+          description: Indication whether the borehole reached bedrock (TRUE, FALSE, or null).
           type: boolean
-          title: To bottom
-          description: Indication whether borehole reached bedrock (true, false, or unknown)
         - name: site_description
+          description: Description of site area (e.g. accumulation or ablation area, summit region etc.).
           type: string
-          title: Site description
-          description: Description of site area (e.g. accumulation or ablation area, summit region etc.)
         - name: notes
+          description: Any additional notes about borehole location or measurement.
           type: string
-          title: Notes
-          description: Any additional notes about borehole location or measurement
         - name: extraction_method
-          type: string
-          title: Extraction method
           description: |-
             Specification of data extraction method.
 
             - plot digitizer: data digitized with plot digitizer
             - manual: data read off plot and entered manually
             - import: direct data import from source
+          type: string
           constraints:
             enum: ['plot digitizer', 'manual', 'import']
       missingValues: ['']
@@ -162,32 +142,29 @@ resources:
             resource: sources
             fields: ['source_id']
   - name: temperatures
-    title: Temperatures
-    description: Temperature and depth measurements
+    description: Temperature and depth measurements.
     path: data/temperatures.csv
     format: csv
     profile: tabular-data-resource
     schema:
       fields:
         - name: id
+          description: Unique identifier.
           type: integer
-          title: ID
         - name: source_id
+          description: Source ID.
           type: integer
-          title: Source ID
         - name: borehole_id
+          description: Borehole ID. 
           type: integer
-          title: Borehole ID
           constraints:
             required: true
         - name: temperature_degC
+          description: Temperature measurement in degrees celcius.
           type: number
-          title: Temperature
-          description: temperature measurement in degrees C
         - name: depth_m
+          description: Depth measurement in meters below the glacier surface.
           type: number
-          title: Depth
-          description: depth measurement in meters
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
