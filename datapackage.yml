@@ -101,6 +101,7 @@ resources:
           title: Borehole elevation
           description: elevation in meters above sea-level
           constraints:
+            required: true
             maximum: 9999.0
         - name: glacier_name
           type: string
