@@ -77,9 +77,13 @@ resources:
         - name: y_lat
           description: Latitude or Y (north-south) coordinate.
           type: number
+          constraints:
+            required: true
         - name: x_lon
           description: Longitude or X (east-west) coordinate.
           type: number
+          constraints:
+            required: true
         - name: epsg
           description: EPSG code of X and Y coordinates if not lat/long (EPSG 4326).
           type: integer
