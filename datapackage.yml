@@ -12,10 +12,14 @@ licenses:
     path: https://creativecommons.org/licenses/by/4.0
 contributors:
   - title: Mylène Jacquemart
-    organization: 'Laboratory of hydraulics, hydrology, and glaciology (VAW), ETH Zurich, Switzerland'
+    organization: 'Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland'
+    email: jacquemart@vaw.baug.ethz.ch
     role: author
   - title: Guillem Carcanade
-    organization: 'Laboratory of hydraulics, hydrology, and glaciology (VAW), ETH Zurich, Switzerland'
+    organization: 'Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland'
+    role: author
+  - title: Ethan Welty
+    organization: 'World Glacier Monitoring Service (WGMS)'
     role: author
 resources:
   - name: sources
