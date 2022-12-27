@@ -22,9 +22,9 @@ contributors:
     organization: 'World Glacier Monitoring Service (WGMS)'
     role: author
 resources:
-  - name: sources
+  - name: source
     description: All data sources that were considerd in the compilation of this database.
-    path: data/sources.csv
+    path: data/source.csv
     format: csv
     dialect:
       header: true
@@ -35,7 +35,7 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: source_id
+        - name: id
           description: Unique identifier.
           type: integer
           constraints:
@@ -67,11 +67,11 @@ resources:
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
-      primaryKey: ['source_id']
+      primaryKey: ['id']
       missingValues: ['']
-  - name: boreholes
+  - name: borehole
     description: Metadata about each individual borehole and temperature profile.
-    path: data/boreholes.csv
+    path: data/borehole.csv
     format: csv
     dialect:
       header: true
@@ -88,7 +88,7 @@ resources:
           constraints:
             required: true
             unique: false
-        - name: borehole_id
+        - name: id
           description: Unique identifier.
           type: integer
           constraints:
@@ -194,15 +194,15 @@ resources:
             pattern: '[^\s]+( [^\s]+)*'
             enum: ['plot digitizer', 'manual', 'import']
       missingValues: ['']
-      primaryKey: ['borehole_id']
+      primaryKey: ['id']
       foreignKeys:
         - fields: ['source_id']
           reference:
-            resource: sources
-            fields: ['source_id']
-  - name: temperatures
+            resource: source
+            fields: ['id']
+  - name: temperature
     description: Temperature and depth measurements.
-    path: data/temperatures.csv
+    path: data/temperature.csv
     format: csv
     dialect:
       header: true
@@ -242,5 +242,5 @@ resources:
       foreignKeys:
         - fields: ['source_id', 'borehole_id']
           reference:
-            resource: boreholes
-            fields: ['source_id', 'borehole_id']
+            resource: borehole
+            fields: ['source_id', 'id']
