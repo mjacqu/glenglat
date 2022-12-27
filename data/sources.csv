@@ -20,7 +20,7 @@ source_id,first_author,year,title,included,url
 26,Adrien Gilbert,2012,"The influence of snow cover thickness on the thermal regime of Tête Rousse Glacier (Mont Blanc range, 3200 m a.s.l.): Consequences for outburst flood hazards and glacier response to climate change",True,https://doi.org/10.1029/2011JF002258
 27,Adrien Gilbert,2015,Assessment of thermal change in cold avalanching glaciers in relation to climate warming,True,https://doi.org/10.1002/2015GL064838
 28,Garry Clarke,1976,"Post-Surge Temperatures in Steele Glacier, Yukon Territory, Canada",True,https://doi.org/10.3189/S0022143000031580
-29,David F. Classen ,1976,"Thermal drilling and deep ice-temperature measurements on the Fox Glacier, Yukon",True,
+29,David F. Classen,1976,"Thermal drilling and deep ice-temperature measurements on the Fox Glacier, Yukon",True,
 30,Olaf Eisen,2009,"Deducing the thermal structure in the tongue of Gornergletscher, Switzerland, from radar surveys and borehole measurements",True,https://doi.org/10.3189/172756409789097612
 31,Adrien Gilbert,2020,The influence of water percolation through crevasses on the thermal regime of a Himalayan mountain glacier,True,https://doi.org/10.5194/tc-14-1273-2020
 32,Wilfried Haeberli,2004,Characteristics and potential climatic significance of “miniature ice caps” (crest- and cornice-type low-altitude ice archives),True,https://doi.org/10.3189/172756504781830330
@@ -31,15 +31,15 @@ source_id,first_author,year,title,included,url
 37,Jānis Karuss,2021,"Drainage system and thermal structure of a High Arctic polythermal glacier: Waldemarbreen, western Svalbard",True,https://doi.org/10.1017/jog.2021.125
 38,Christophe Kinnard,2020,"Mass Balance and Climate History of a High-Altitude Glacier, Desert Andes of Chile",True,https://doi.org/10.3389/feart.2020.00040
 39,V. M. Kotlyakov,2004,Deep drilling of glaciers in Eurasian Arctic as a source of paleoclimatic records,True,https://doi.org/10.1016/j.quascirev.2003.12.013
-40,Zhongqin Li ,2011,"Mechanisms and simulation of accelerated shrinkage of continental glaciers: A case study of Urumqi Glacier No. 1 in eastern Tianshan, Central Asia",True,https://doi.org/10.1007/s12583-011-0194-5
-41,Yaping Liu ,2009,Distribution of borehole temperature at four high-altitude alpine glaciers in Central Asia,True,https://doi.org/10.1007/s11629-009-0254-9
+40,Zhongqin Li,2011,"Mechanisms and simulation of accelerated shrinkage of continental glaciers: A case study of Urumqi Glacier No. 1 in eastern Tianshan, Central Asia",True,https://doi.org/10.1007/s12583-011-0194-5
+41,Yaping Liu,2009,Distribution of borehole temperature at four high-altitude alpine glaciers in Central Asia,True,https://doi.org/10.1007/s11629-009-0254-9
 46,Maohuan Huang,1990,On the Temperature Distribution of Glaciers in China,True,https://doi.org/10.3189/S002214300000945X
 47,M. H. Masiokas,2020,A Review of the Current State and Recent Changes of the Andean Cryosphere,True,https://doi.org/10.3389/feart.2020.00099
 48,P. Ginot,2006,Glacier mass balance reconstruction by sublimation induced enrichment of chemical species on Cerro Tapado (Chilean Andes),True,https://doi.org/10.5194/cp-2-21-2006
 50,Katie E. Miles,2018,Polythermal structure of a Himalayan debris-covered glacier revealed by borehole thermometry,True,https://doi.org/10.1038/s41598-018-34327-5
 51,Fritz Müller,1976,On the Thermal Regime of a High-Arctic Valley Glacier,True,https://doi.org/10.3189/S0022143000031476
 52,David L. Naftz,1993,"Ice thickness, ablation, and other glaciological measurements on Upper Fremont Glacier, Wyoming",True,https://doi.org/10.1080/02723646.1993.10642488
-54,Rune Strand Ødegård ,1997,"Comparison of radio-echo sounding (30–1000 MHz) and high-resolution borehole-temperature measurements at Finsterwalderbreen, southern Spitsbergen, Svalbard",True,https://doi.org/10.3189/S0260305500012271
+54,Rune Strand Ødegård,1997,"Comparison of radio-echo sounding (30–1000 MHz) and high-resolution borehole-temperature measurements at Finsterwalderbreen, southern Spitsbergen, Svalbard",True,https://doi.org/10.3189/S0260305500012271
 55,W. S. B. Paterson,1971,"Temperature Measurements in Athabasca Glacier, Alberta, Canada",True,https://doi.org/10.3189/S0022143000022036
 56,Rickard Pettersson,2003,"Cold surface layer thinning on Storglaciären, Sweden, observed by repeated ground penetrating radar surveys",True,https://doi.org/10.1029/2003JF000024
 57,Pierre-Alain Herren,2013,The onset of Neoglaciation 6000 years ago in western Mongolia revealed by an ice core from the Tsambagarav mountain range,True,https://doi.org/10.1016/j.quascirev.2013.02.025
@@ -48,7 +48,7 @@ source_id,first_author,year,title,included,url
 60,Takayuki Shiraiwa,2001,"Characteristics of a crater glacier at Ushkovsky volcano, Kamchatka, Russia, as revealed by the physical properties of ice cores and borehole thermometry",True,https://doi.org/10.3189/172756501781832061
 61,Nadia Signer,2014,Analysis of ice temperatures of four selected very small glaciers in the Swiss Alps by means of modelling and ground penetrating radar,True,
 62,I. Sobota,2011,"Snow accumulation, melt, mass loss, and the near-surface ice temperature structure of Irenebreen, Svalbard",True,https://doi.org/10.1016/j.polar.2011.06.003
-63,Rune Strand Ødegård ,1992,"Thermal regime of a valley glacier, Erikbreen, northern Spitsbergen",True,https://doi.org/10.3402/polar.v11i2.6718
+63,Rune Strand Ødegård,1992,"Thermal regime of a valley glacier, Erikbreen, northern Spitsbergen",True,https://doi.org/10.3402/polar.v11i2.6718
 64,Huan Sun,2021,"Twentieth century warming reflected by the Malan Glacier borehole temperatures, northern Tibetan Plateau",True,https://doi.org/10.1080/15230430.2021.1974667
 65,Stephan Suter,2002,"Cold firn and ice in the Monte Rosa and Mont Blanc areas: spatial occurrence, surface energy balance and climatic evidence",True,https://doi.org/10.3929/ethz-a-004288434
 66,Lonnie G. Thompson,1990,"Glacial Stage Ice-Core Records from the Subtropical Dunde Ice Cap, China",True,https://doi.org/10.3189/S0260305500008776
@@ -58,14 +58,14 @@ source_id,first_author,year,title,included,url
 71,Yuzhe Wang,2018,"An investigation of the thermomechanical features of Laohugou Glacier No. 12 on Qilian Shan, western China, using a two-dimensional first-order flow-band ice flow model",True,https://doi.org/10.5194/tc-12-851-2018
 73,V. Zagorodnov,2006,Influence of air temperature on a glacier’s active-layer temperature,True,https://doi.org/10.3189/172756406781812203
 74,Tong Zhang,2013,"Observed and modelled ice temperature and velocity along the main flowline of East Rongbuk Glacier, Qomolangma (Mount Everest), Himalaya",True,https://doi.org/10.3189/2013JoG12J202
-75,David F. Classen ,1977,Temperature profiles for the Barnes Ice Cap surge zone,True,https://doi.org/10.3189/S0022143000021079
+75,David F. Classen,1977,Temperature profiles for the Barnes Ice Cap surge zone,True,https://doi.org/10.3189/S0022143000021079
 76,Adrien Gilbert,2016,"Sensitivity of Barnes Ice Cap, Baffin Island, Canada, to climate state and internal dynamics",True,https://doi.org/10.1002/2016JF003839
 78,GEUS | William Colgan,2022,GEUS Greenland Temperature Project,True,
 79,Gwen Flowers,2022,Personal communication,True,
 80,Gwen Flowers,2022,Personal communication,True,
 81,Gwenn Flowers,2022,Personal communication,True,
 82,Shin Sugiyama,2019,"Subglacial water pressure and ice speed variations at Johnsons Glacier, Livingston Island, Antarctic Peninsula",True,https://doi.org/10.1017/jog.2019.45
-83,ICIMOD | Tika Gurung ,2022,Personal communication,True,
+83,ICIMOD | Tika Gurung,2022,Personal communication,True,
 3,Joel Fisher,1953,"The Cold Ice Tunnel on the Silbersattel, Monte Rosa: Preliminary Report",False,https://doi.org/10.3189/S0022143000025703
 4,Joel Fisher,1955,Internal Temperatures of a Cold Glacier and Conclusions Therefrom,False,https://doi.org/10.3189/002214355793702163
 9,Louis Lliboutry,1976,15m Deep Temperatures in the Glaciers of Mont Blanc (French Alps),False,https://doi.org/10.3189/S0022143000031531
@@ -77,7 +77,7 @@ source_id,first_author,year,title,included,url
 43,Adrien Gilbert,2018,"Mechanisms leading to the 2016 giant twin glacier collapses, Aru Range, Tibet",False,https://doi.org/10.5194/tc-12-2883-2018
 44,Wilfried Haeberli,1985,Temperature and Accumulation of High Altitude Firn in the Alps,False,https://doi.org/10.3189/1985AoG6-1-161-163
 45,F. Karner,2013,"A decade of energy and mass balance investigations on the glacier Kongsvegen, Svalbard",False,https://doi.org/10.1029/2012JD018342
-49,F. Loewe ,1970,Screen Temperatures and 10m Temperatures*,False,https://doi.org/10.3189/S0022143000023571
+49,F. Loewe,1970,Screen Temperatures and 10m Temperatures*,False,https://doi.org/10.3189/S0022143000023571
 53,Oleg V. Nagornov,2006,Temperature reconstruction for Arctic glaciers,False,https://doi.org/10.1016/j.palaeo.2005.11.035
 68,D. C. Trabant,1985,Estimation and Effects of Internal Accumulation on Five Glaciers in Alaska,False,https://doi.org/10.3189/1985AoG6-1-113-117
 72,Nat H. Wilson,2013,Comparison of thermal structure and evolution between neighboring subarctic glaciers,False,https://doi.org/10.1002/jgrf.20096
