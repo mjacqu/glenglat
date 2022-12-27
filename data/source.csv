@@ -1,4 +1,4 @@
-source_id,first_author,year,title,included,url
+id,first_author,year,title,included,url
 1,Heinz Blatter,1984,Modelling Temperature Distribution in Alpine Glaciers,True,https://doi.org/10.3189/1984AoG5-1-18-22
 2,Heinz Blatter,1987,"On the Thermal Regime of an Arctic Valley Glacier: A Study of White Glacier, Axel Heiberg Island, N.W.T., Canada",True,https://doi.org/10.3189/S0022143000008704
 5,Adrien Gilbert,2010,"Atmospheric warming at a high-elevation tropical site revealed by englacial temperatures at Illimani, Bolivia (6340 m above sea level, 16°S, 67°W)",True,https://doi.org/10.1029/2009JD012961
