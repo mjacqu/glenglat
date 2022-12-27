@@ -72,8 +72,17 @@ resources:
             required: true
             unique: true
         - name: location_source
-          description: Data source used to approximate borehole location if such was not published or provided.
+          description: |-
+            Data source used to determine borehole location. The addition "guess" indicates that the location could not be well corroborated against a published plot.
+
+            - published: Coordinates published in original publication
+            - digitized from plot: Coordinates could be retrieved by digitizing a location plot and its axes
+            - from metadata: Coordinates were provided as metadata with data submission
+            - web map service approximation: Through comparison against a published plot, coordinates could be easily approximated using e.g., google maps, caltopo etc.
+            - web map service guess: Comparison against published plot was hard, largely relied on elevation to find probably location
           type: string
+          constraints:
+            enum: ['published', 'digitized from plot', 'from metadata', 'web map service approximation', 'web map service guess']
         - name: y_lat
           description: Latitude or Y (north-south) coordinate.
           type: number
@@ -88,8 +97,17 @@ resources:
           description: EPSG code of X and Y coordinates if not lat/long (EPSG 4326).
           type: integer
         - name: elevation_source
-          description: Data source used to approximate borehole location if not published. 
+          description: |-
+            Data source used to determine borehole elevation. 
+
+            - published: Elevation published in original publication
+            - digitized from plot: Elevation could be retrieved by digitizing a location plot and its axes
+            - estimated from plot: Elevation estimated from countrline plot
+            - from metadata: Elevation was provided as metadata with data submission
+            - web map service guess: Comparison against location and modern elevation dataset embedded in web map service (e.g., caltopo, google maps)
           type: string
+          constraints:
+            enum: ['published', 'digitized from plot', 'estimated from plot', 'from metadata', 'web map service guess']
         - name: elevation
           description: Elevation of borehole drill site in meters above sea-level (masl).
           type: number
