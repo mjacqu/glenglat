@@ -86,9 +86,10 @@ resources:
         - name: elevation_source
           description: Data source used to approximate borehole location if not published. 
           type: string
-        - name: elevation_masl
+        - name: elevation
           description: Elevation of borehole drill site in meters above sea-level (masl).
           type: number
+          unit: 'm'
           constraints:
             required: true
             maximum: 9999.0
@@ -112,9 +113,10 @@ resources:
           description: Date of temperature measurement or, if not known precisely, the latest possible date (e.g. '2019' -> '2019-12-31').
           type: date
           format: '%Y-%m-%d'
-        - name: published_accuracy
-          description: If published, accuracy of original temperature measurement.
+        - name: temperature_accuracy
+          description: Thermistor accuracy or precision (+/- °C) as published or provided by contributors. Understood to typically refer to a standard deviation.
           type: number
+          unit: '°C'
         - name: to_bottom
           description: Indication whether the borehole reached bedrock (TRUE, FALSE, or null).
           type: boolean
@@ -159,12 +161,14 @@ resources:
           type: integer
           constraints:
             required: true
-        - name: temperature_degC
+        - name: temperature
           description: Temperature measurement in degrees celcius.
           type: number
-        - name: depth_m
+          unit: '°C'
+        - name: depth
           description: Depth measurement in meters below the glacier surface.
           type: number
+          unit: 'm'
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
