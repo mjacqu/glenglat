@@ -26,6 +26,12 @@ resources:
     description: All data sources that were considerd in the compilation of this database.
     path: data/sources.csv
     format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
     profile: tabular-data-resource
     schema:
       fields:
@@ -60,6 +66,12 @@ resources:
     description: Metadata about each individual borehole and temperature profile.
     path: data/boreholes.csv
     format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
     profile: tabular-data-resource
     schema:
       fields:
@@ -175,6 +187,12 @@ resources:
     description: Temperature and depth measurements.
     path: data/temperatures.csv
     format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
     profile: tabular-data-resource
     schema:
       fields:
