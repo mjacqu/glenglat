@@ -219,9 +219,6 @@ resources:
           constraints: 
             unique: true 
             required: true
-        - name: source_id
-          description: Source ID.
-          type: integer
         - name: borehole_id
           description: Borehole ID. 
           type: integer
@@ -240,7 +237,7 @@ resources:
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
-        - fields: ['source_id', 'borehole_id']
+        - fields: ['borehole_id']
           reference:
             resource: borehole
-            fields: ['source_id', 'id']
+            fields: ['id']
