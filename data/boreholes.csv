@@ -1,292 +1,292 @@
 source_id,borehole_id,location_source,y_lat,x_lon,epsg,elevation_source,elevation,glacier_name,rgi_id,start_date,end_date,temperature_accuracy,to_bottom,site_description,notes,extraction_method
-1,1,google maps,45.930620000000005,7.8754029999999995,,,4450.0,Grenzgletscher,RGI60-11.02822,1978-01-01,1978-12-31,,False,colle gnifetti,14 km from terminus,plot digitizer
-1,2,google maps,45.973065000000005,7.802683999999999,,,2600.0,Grenzgletscher,RGI60-11.02822,1979-01-01,1979-12-31,,False,ablation area,5 km from terminus,plot digitizer
-1,3,google maps,45.974053000000005,7.774972,,,2500.0,Grenzgletscher,RGI60-11.02822,1980-01-01,1980-12-31,,False,ablation area,2 km from terminus,plot digitizer
-2,4,google maps,79.531432,-91.014641,,,1447.0,White Glacier,RGI60-03.04539,1979-01-01,1979-01-31,0.2,False,accumulation area,,plot digitizer
-2,5,google maps,79.474711,-90.756867,,,625.0,White Glacier,RGI60-03.04539,1980-04-01,1980-04-30,0.2,True,ablation area,,plot digitizer
-2,6,google maps,79.440386,-90.645269,,,230.0,White Glacier,RGI60-03.04539,1979-04-01,1979-04-30,0.2,True,ablation area,,plot digitizer
-5,7,published,-16.65,-67.783333,,,6340.0,Illimani Volcano,RGI60-16.00486,1999-06-04,1999-06-05,0.05,True,summit region,,plot digitizer
-6,8,published,45.842712,6.8437149999999995,,,4300.0,Mont Blanc,RGI60-11.03646,1999-01-01,1999-12-31,0.1,True,summit region,,plot digitizer
-6,9,published,45.842712,6.8437149999999995,,,4300.0,Mont Blanc,RGI60-11.03646,2011-01-01,2011-12-31,0.1,False,summit region,,plot digitizer
-6,10,published,45.842144,6.8467193,,,4245.0,Mont Blanc,RGI60-11.03646,1994-06-01,1994-06-30,0.1,True,summit region,"date from source 16 (Vincent et al., 2007)",plot digitizer
-6,11,published,45.842144,6.8467193,,,4245.0,Mont Blanc,RGI60-11.03646,2005-01-01,2005-04-30,0.1,False,summit region,"date from source 16 (Vincent et al., 2007)",plot digitizer
-6,12,published,45.842144,6.8467193,,,4245.0,Mont Blanc,RGI60-11.03646,2010-01-01,2010-12-31,0.1,False,summit region,,plot digitizer
-6,13,published,45.84037,6.848932700000001,,,4255.0,Mont Blanc,RGI60-11.03646,1999-01-01,1999-12-31,0.3,True,summit region,,plot digitizer
-6,14,published,45.84037,6.848932700000001,,,4255.0,Mont Blanc,RGI60-11.03646,2011-01-01,2011-12-31,0.1,False,summit region,,plot digitizer
-8,15,published,86420.0,633870.0,21781,,4470.0,Grenzgletscher,RGI60-11.02822,1991-10-26,1991-10-26,0.2,False,accumulation area,CG91-B/91,plot digitizer
-8,16,published,86418.0,633872.0,21781,,4470.0,Grenzgletscher,RGI60-11.02822,2007-11-03,2007-11-03,0.2,True,accumulation area,CG07-1/07,plot digitizer
-8,17,published,85900.0,633500.0,21781,,4250.0,Grenzgletscher,RGI60-11.02822,1991-10-26,1991-10-26,0.2,False,accumulation area,GG91-D,plot digitizer
-8,18,published,85911.0,633502.0,21781,,4250.0,Grenzgletscher,RGI60-11.02822,1999-05-01,1999-05-31,0.2,False,accumulation area,GG99-12,plot digitizer
-8,19,published,85900.0,633500.0,21781,,4250.0,Grenzgletscher,RGI60-11.02822,2008-08-25,2008-08-25,0.2,False,accumulation area,GG08-5/08,plot digitizer
-12,20,caltopo,52.20682,-117.23517,,,2065.0,Athabasca Glacier,RGI60-02.12441,1970-09-22,1970-09-22,,False,ablation area,Hole N,plot digitizer
-12,21,caltopo,52.18602,-117.26113000000001,,,2275.0,Athabasca Glacier,RGI60-02.12441,1970-09-22,1970-09-22,,False,ablation area,Hole D,plot digitizer
-12,22,caltopo,52.198370000000004,-117.24918999999998,,,2170.0,Athabasca Glacier,RGI60-02.12441,1970-09-22,1970-09-22,,False,ablation area,Hole L,plot digitizer
-12,23,caltopo,52.175940000000004,-117.30923999999999,,,3200.0,Athabasca Glacier,RGI60-02.12441,1967-08-18,1967-08-18,,False,accumulation area,Hole A,manual
-12,24,caltopo,52.163309999999996,-117.30632,,,2910.0,Athabasca Glacier,RGI60-02.12441,1967-08-18,1967-08-18,,False,accumulation area,Hole B,manual
-12,25,caltopo,52.1631,-117.28074,,,2730.0,Athabasca Glacier,RGI60-02.12441,1967-08-18,1967-08-18,,False,accumulation area,Hole C,manual
-12,26,caltopo,52.1885,-117.25327,,,2235.0,Athabasca Glacier,RGI60-02.12441,1986-04-25,1986-04-25,,False,ablation area,Hole E; only ice temperatures,plot digitizer
-12,27,caltopo,52.192240000000005,-117.25808,,,2230.0,Athabasca Glacier,RGI60-02.12441,1986-04-24,1986-04-24,,False,ablation area,Hole H; only ice temperatures,plot digitizer
-12,28,caltopo,52.20112,-117.24085,,,2115.0,Athabasca Glacier,RGI60-02.12441,1986-04-24,1986-04-24,,False,ablation area,Hole M; only ice temperatures,plot digitizer
-13,29,google maps,60.369155000000006,-139.961054,,,1791.0,Seward Glacier,RGI60-01.13696,1948-07-12,1948-07-12,0.1,False,accumulation area,"firn temps, original depth data in feet",plot digitizer
-15,30,google maps,46.537614000000005,7.971253999999999,,,3540.0,Jungfraufirn,RGI60-11.01450,1991-08-27,1991-08-27,0.1,False,accumulation area,bh 91-3; other measurement dates available,plot digitizer
-15,31,google maps,46.541514,7.9781830000000005,,,3410.0,Jungfraufirn,RGI60-11.01450,1991-08-27,1991-08-27,0.1,False,accumulation area,bh 91-2; other measurement dates available,plot digitizer
-15,32,google maps,46.549684,8.002083,,,3530.0,Jungfraufirn,RGI60-11.01450,1991-08-27,1991-08-27,0.1,False,accumulation area,bh 91-5; other measurement dates available,plot digitizer
-15,33,google maps,45.93033,7.876755999999999,,,4452.0,Grenzgletscher,RGI60-11.02822,1991-08-02,1991-08-02,0.1,False,accumulation area,bh 91-1,plot digitizer
-15,34,google maps,45.923589,7.8717690000000005,,,4300.0,Grenzgletscher,RGI60-11.02822,1994-04-30,1994-04-30,0.1,False,accumulation area,bh 94-1,plot digitizer
-15,35,google maps,45.924076,7.862049000000001,,,4100.0,Grenzgletscher,RGI60-11.02822,1994-06-01,1994-06-01,0.1,False,accumulation area,bh 94-2,plot digitizer
-15,36,google maps,45.922507,7.866534,,,4200.0,Grenzgletscher,RGI60-11.02822,1994-10-31,1994-10-31,0.1,False,accumulation area,bh 94-A,plot digitizer
-18,40,topo svalbard,78.811214,12.881844000000001,,,367.0,Kongsvegen,RGI60-07.01481,1992-01-01,1992-12-31,,False,ablation area,"bh K1; data from Hagen, 1992.",plot digitizer
-18,41,topo svalbard,78.759108,13.335257999999998,,,635.0,Kongsvegen,RGI60-07.01481,1992-01-01,1992-12-31,,True,accumulation area,bh K2; data from Hagen 1992,plot digitizer
-18,42,topo svalbard,78.8878,12.04861,,,180.0,Midtre Lovenbreen,RGI60-07.00493,1992-01-01,1992-12-31,,True,ablation area,bh L3; data from Hagen 1992,plot digitizer
-18,43,topo svalbard,78.87204,11.998660000000001,,,380.0,Midtre Lovenbreen,RGI60-07.00493,1992-01-01,1992-12-31,,True,accumulation area,bh L9; data from Hagen 1992,plot digitizer
-18,44,topo svalbard,78.8955,11.83762,,,175.0,Austre Broggerbreen,RGI60-07.00504,1992-01-01,1992-12-31,,True,ablation area,bh B5; data from Hagen 1992,plot digitizer
-18,45,topo svalbard,78.88008,11.920960000000001,,,375.0,Austre Broggerbreen,RGI60-07.00504,1992-01-01,1992-12-31,,True,accumulation area,bh B11; data from Hagen 1992,plot digitizer
-19,46,google maps,75.89793399999999,-79.111864,,,80.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,ablation area,X1,plot digitizer
-19,47,google maps,75.89683000000001,-79.129082,,,202.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,True,ablation area,X2,plot digitizer
-19,48,google maps,75.89527629999999,-79.14445620000001,,,315.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,around ELA,X3,plot digitizer
-19,49,google maps,75.889619,-79.16328709999999,,,390.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,accumulation area,X4,plot digitizer
-19,50,google maps,75.88171650000001,-79.18014720000001,,,527.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,accumulation area,X5,plot digitizer
-21,51,caltopo guess,61.22458,-140.32565,,"guessed, difference between elevations extracted from plot",2220.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,below surge bulge,#3,plot digitizer
-21,52,caltopo guess,61.22435,-140.32904,,"guessed, difference between elevations extracted from plot",2320.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,at surge bulge,#6,plot digitizer
-21,53,caltopo guess,61.22416,-140.33217,,"guessed, difference between elevations extracted from plot",2420.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,above surge bulge,#9,plot digitizer
-21,54,caltopo guess,61.22379,-140.33531000000002,,"guessed, difference between elevations extracted from plot",2500.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,above surge bulge,#11,plot digitizer
-23,55,google maps,79.7072458,-74.52663390000001,,,1100.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,accumulation area,#1,manual
-23,56,google maps,79.6860756,-74.4592733,,,975.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,accumulation area,#4,manual
-23,57,google maps,79.6800437,-74.4332913,,,900.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,accumulation area,#6,manual
-23,58,google maps,79.64827559999999,-74.2047463,,,575.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,ablation area,#10,manual
-24,59,digitized from plot,7692709.4,623993.5,32606,,1750.0,McCall Glacier,RGI60-01.02228,2008-01-01,2008-12-31,,True,ablation area,JJMC,plot digitizer
-24,60,digitized from plot,7689181.3,625031.95,32606,,2100.0,McCall Glacier,RGI60-01.02228,2008-01-01,2008-12-31,,True,accumulation area,LC,plot digitizer
-24,61,digitized from plot,7690607.0,626602.2,32606,,2400.0,McCall Glacier,RGI60-01.02228,2008-01-01,2008-12-31,,True,accumulation area,UC,plot digitizer
-25,62,google maps,49.793715,87.73221241,,,3450.0,Sofiyskiy Glacier,RGI60-10.01836,2000-07-01,2000-07-31,,False,accumulation area,,plot digitizer
-25,63,google maps,49.793715,87.73221241,,,3440.0,Sofiyskiy Glacier,RGI60-10.01836,2001-07-01,2000-07-31,,False,accumulation area,,plot digitizer
-26,64,google maps,45.8569236,6.817813709,,,3141.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
-26,65,google maps,45.8567718,6.818435414,,,3159.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,False,,,plot digitizer
-26,66,google maps,45.8567264,6.818827044,,,3168.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
-26,67,google maps,45.856787,6.819218674,,,3176.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
-26,68,google maps,45.856724799999995,6.819786487000001,,,3181.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,False,,,plot digitizer
-26,69,google maps,45.8567151,6.8202679360000005,,,3186.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
-26,70,google maps,45.856505,6.820819900000001,,,3207.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
-27,71,google maps,45.8578979,6.840015556,,,3410.0,Taconnaz Glacier,RGI60-11.03647,2012-01-01,2012-12-31,,False,accumulation area,,plot digitizer
-27,72,google maps,45.853420299999996,6.839661853,,,3680.0,Taconnaz Glacier,RGI60-11.03647,2008-01-01,2008-12-31,,False,accumulation area,,plot digitizer
-27,73,google maps,45.8511161,6.836228851,,,3780.0,Taconnaz Glacier,RGI60-11.03647,2008-01-01,2008-12-31,,False,accumulation area,,plot digitizer
-27,74,google maps,45.8468843,6.839641046000001,,,4080.0,Taconnaz Glacier,RGI60-11.03647,2008-01-01,2008-12-31,,True,accumulation area,,plot digitizer
-27,75,google maps,45.8518841,6.84825476,,,4030.0,Taconnaz Glacier,RGI60-11.03647,2013-01-01,2013-12-31,,False,accumulation area,,plot digitizer
-28,76,google maps,61.256405799999996,-140.184505,,guessed,1760.0,Steele Glacier,RGI60-01.16377,1974-09-05,1974-09-05,0.015,False,ablation area,"73-2; post surge (anomalous T5 & T7), estimated elevation",plot digitizer
-28,77,google maps,61.2867816,-140.01457,,guessed,1400.0,Steele Glacier,RGI60-01.16377,1974-09-05,1974-09-05,0.015,False,ablation area,"73-3; post surge (""normal), estimated elevation",plot digitizer
-29,78,google maps,61.202314199999996,-140.297788,,,2295.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,True,,#1,plot digitizer
-29,79,google maps,61.1962048,-140.2932,,,2455.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,False,,#2,plot digitizer
-29,80,google maps,61.19503910000001,-140.284356,,guessed,2550.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,False,,#3,plot digitizer
-29,81,google maps,61.199299800000006,-140.296203,,,2374.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,False,,#4,plot digitizer
-29,82,google maps,61.205127299999994,-140.29904,,,2244.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,True,,#5,plot digitizer
-29,83,google maps,61.2078598,-140.30045800000002,,,2188.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,True,,#6,plot digitizer
-30,84,published,91030.0,627042.0,21781,,2467.0,Gornergletscher,RGI60-11.02822,2006-01-01,2006-12-31,0.05,True,ablation area,BH4,plot digitizer
-30,85,published,91147.0,627506.0,21781,,2492.0,Gornergletscher,RGI60-11.02822,2007-01-01,2007-12-31,0.05,True,ablation area,BHT3,plot digitizer
-30,86,published,90957.0,627748.0,21781,,2501.0,Gornergletscher,RGI60-11.02822,2007-01-01,2007-12-31,0.05,True,ablation area,BHT2,plot digitizer
-30,87,published,90674.0,627557.0,21781,,2496.0,Gornergletscher,RGI60-11.02822,2004-01-01,2004-12-31,0.05,True,ablation area,BH430,plot digitizer
-30,88,published,90579.0,627883.0,21781,,2516.0,Gornergletscher,RGI60-11.02822,2006-01-01,2006-12-31,0.05,True,ablation area,BHC,plot digitizer
-30,89,published,90844.0,628257.0,21781,,2492.0,Gornergletscher,RGI60-11.02822,2006-01-01,2006-12-31,0.05,True,ablation area,BH210,plot digitizer
-31,90,digitized from plot,3189341.0,743648.9,32644,,5600.0,Rikha Samba Glacier,RGI60-15.04847,2014-01-01,2015-12-31,,False,ablation area,,plot digitizer
-7,91,digitized from plot in Luethi 2001,86575.42,633796.06,21781,,4450.0,Grenzgletscher,RGI60-11.02822,1977-01-01,1978-12-31,0.1,True,accumulation area,B82-1,plot digitizer
-32,92,swisstopo,46.4152,9.8211,,,3340.0,Murtèl-Corvatsch,RGI60-11.01962,1999-09-14,1999-09-14,,False,,,plot digitizer
-32,93,swisstopo,46.4152,9.8211,,,3340.0,Murtèl-Corvatsch,RGI60-11.01962,1999-12-01,1999-12-01,,False,,,plot digitizer
-32,94,swisstopo,46.4152,9.8211,,,3340.0,Murtèl-Corvatsch,RGI60-11.01962,2000-04-05,2000-04-05,,False,,,plot digitizer
-32,95,swisstopo,46.4152,9.8211,,,3340.0,Murtèl-Corvatsch,RGI60-11.01962,2000-06-19,2000-06-19,,False,,,plot digitizer
-32,96,swisstopo,46.4152,9.8211,,,3340.0,Murtèl-Corvatsch,RGI60-11.01962,2000-09-20,2000-09-20,,False,,,plot digitizer
-33,97,google maps,63.442926,-146.516929,,,1860.0,Black Rapids Glacier,RGI60-01.00037,1973-04-03,1973-04-03,0.15,False,accumulation area,firn temps; snow temps also available,plot digitizer
-33,98,google maps,63.442926,-146.516929,,,1860.0,Black Rapids Glacier,RGI60-01.00037,1973-07-19,1973-07-19,0.15,False,accumulation area,firn temps; snow temps also available,plot digitizer
-33,99,google maps,63.4833402,-146.406772,,,1550.0,Black Rapids Glacier,RGI60-01.00037,1973-04-03,1973-04-03,0.15,False,ablation area,ice temp; snow temp also available,plot digitizer
-33,100,google maps,63.4833402,-146.406772,,,1550.0,Black Rapids Glacier,RGI60-01.00037,1973-07-20,1973-07-20,0.15,False,ablation area,ice temp; snow temp also available; surface at first datapoint.,plot digitizer
-33,101,google maps,63.45532579999999,-146.14303700000002,,,1140.0,Black Rapids Glacier,RGI60-01.00037,1973-04-04,1973-04-04,0.15,False,ablation area,ice temp; snow temp also available,plot digitizer
-33,102,google maps,63.45532579999999,-146.14303700000002,,,1149.0,Black Rapids Glacier,RGI60-01.00037,1973-07-23,1973-07-23,0.15,False,ablation area,ice temp; snow temp also available. Surface not first datpoint.,plot digitizer
-34,103,google maps guess (significant glacier change),78.11415799999999,15.99040771,,,305.0,Scott Turnerbreen,RGI60-07.01050,1993-05-01,1993-05-31,,True,,surged in 1936,plot digitizer
-34,104,google maps,78.0954428,15.88386431,,,595.0,Scott Turnerbreen,RGI60-07.01050,1995-05-01,1995-05-31,,True,,surged in 1937,plot digitizer
-35,105,google maps,77.0189,15.60193332,,estimated from Fig. 2,100.0,Hansbreen,RGI60-07.00240,1988-09-25,1988-09-25,0.4,False,,site A,manual
-35,106,google maps,77.0275588,15.65626762,,,128.0,Hansbreen,RGI60-07.00240,1994-10-05,1994-10-05,0.4,False,,site B2,plot digitizer
-35,107,google maps,77.09160159999999,15.63406651,,estimated from Fig. 2,325.0,Hansbreen,RGI60-07.00240,1989-04-11,1989-04-11,0.4,False,,site D,plot digitizer
-35,108,google maps,77.09160159999999,15.63406651,,,324.0,Hansbreen,RGI60-07.00240,1994-09-25,1994-09-25,0.4,True,,site D2,plot digitizer
-35,109,google maps,77.1073192,15.53912754,,,405.0,Hansbreen,RGI60-07.00240,1995-10-05,1995-10-05,0.4,True,,site F,plot digitizer
-35,110,google maps,77.0196218,15.59521456,,,100.0,Hansbreen,RGI60-07.00240,1979-08-02,1979-08-02,0.4,False,,site G,plot digitizer
-36,111,Planet basemaps,61.22429,-140.34572,,estimated from google maps,2460.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 1,2, pre surge",plot digitizer
-36,112,Planet basemaps,61.22533000000001,-140.35687,,estimated from google maps,2520.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 3, pre surge",plot digitizer
-36,113,Planet basemaps,61.2234,-140.35467,,estimated from google maps,2520.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 4, pre surge",plot digitizer
-36,114,Planet basemaps,61.2219,-140.34123,,estimated from google maps,2420.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 5, pre surge",plot digitizer
-36,115,Planet basemaps,61.22427,-140.33176,,estimated from google maps,2300.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 6, pre surge",plot digitizer
-36,116,Planet basemaps,61.22578000000001,-140.31965,,estimated from google maps,2140.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 7, pre surge",plot digitizer
-36,117,Planet basemaps,61.21813,-140.35455,,estimated from google maps,2600.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 8, pre surge",plot digitizer
-37,118,google maps,78.68016920000001,12.119033900000002,,estimated from toposvalbard,430.0,Waldemarbreen,RGI60-07.00492,2018-01-01,2019-12-31,0.2,False,accumulation area,,manual
-37,119,google maps,78.68016920000001,12.119033900000002,,estimated from toposvalbard,430.0,Waldemarbreen,RGI60-07.00492,2007-01-01,2008-12-31,0.2,False,accumulation area,,manual
-38,120,published,-29.35,-70.014,,,5161.0,Guanaco Glacier,RGI60-17.14868,2011-04-04,2011-04-04,0.1,True,,,plot digitizer
-38,121,published,-29.35,-70.014,,,5161.0,Guanaco Glacier,RGI60-17.14868,2011-10-23,2011-10-23,0.1,True,,,plot digitizer
-39,122,published,78.81,17.6,,,1000.0,Lomonosovfonna,RGI60-07.00570,1976-01-01,1976-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-39,123,published,79.93,19.52,,,580.0,Vestfonna,RGI60-07.01510,1981-01-01,1981-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-39,124,published,79.97,21.02,,,600.0,Vestfonna,RGI60-07.01499,1995-01-01,1995-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-39,125,published,79.85,24.14,,,750.0,Austfonna,RGI60-07.00551,1987-01-01,1987-12-31,0.1,,,#1; accuracy = minimum accuracy,plot digitizer
-39,126,published,79.28,16.83,,,1200.0,Høghetta,RGI60-07.00844,1987-01-01,1987-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-39,127,published,79.13,13.3,,,1190.0,Snøfjellafonna,RGI60-07.01464,1992-01-01,1992-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-39,128,published,79.45,16.72,,,1140.0,Åsgårdfonna,RGI60-07.00871,1993-01-01,1993-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-39,129,published,79.45,95.35,,,665.0,Vavilova Ice Dome,RGI60-09.00472,1978-01-01,1979-12-31,0.1,,,#1; accuracy = minimum accuracy,plot digitizer
-39,130,published,79.5,95.08,,assumed same as 82a,720.0,Vavilova Ice Dome,RGI60-09.00472,1982-01-01,1982-12-31,0.1,,,#2; accuracy = minimum accuracy,plot digitizer
-39,131,published,79.32,96.02,,,720.0,Vavilova Ice Dome,RGI60-09.00470,1983-01-01,1983-12-31,0.1,,,#4; accuracy = minimum accuracy,plot digitizer
-39,132,published,79.38,95.72,,,680.0,Vavilova Ice Dome,RGI60-09.00468,1984-01-01,1984-12-31,0.1,,,#5; accuracy = minimum accuracy,plot digitizer
-39,133,published,80.5,94.83,,"orig. publ. gives 810, but 781 is highest elevation",780.0,Akademii Nauk Ice Dome,RGI60-09.00920,1986-01-01,1987-12-31,0.1,,,#1; accuracy = minimum accuracy,plot digitizer
-39,134,published,80.52,94.8,,"orig. publ. gives 810, but 781 is highest elevation",780.0,Akademii Nauk Ice Dome,RGI60-09.00920,1999-01-01,2001-12-31,0.1,,,#2; accuracy = minimum accuracy,plot digitizer
-39,135,published,80.78,63.55,,,505.0,Vetreniy Ice Dome,RGI60-09.00986,1997-01-01,1997-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
-40,136,google maps guess from elevation (glacier separation),43.115486600000004,86.81283014,,,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-01-01,1986-12-31,,,,,plot digitizer
-40,137,google maps guess from elevation (glacier separation),43.115486600000004,86.81283014,,,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,2001-01-01,2001-12-31,,,,,plot digitizer
-40,138,google maps guess from elevation (glacier separation),43.115486600000004,86.81283014,,,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,2006-01-01,2006-12-31,,,,,plot digitizer
-41,139,published,48.633,90.95,,,3815.0,Tsambagarav,RGI60-10.02705,2008-06-01,2008-06-30,0.05,,accumulation area,elevation and coords don't match,plot digitizer
-41,140,published,43.05,94.316,,,4512.0,Miaoergou,RGI60-13.48412,2005-08-01,2005-08-31,0.05,,accumulation area,elevation and coords don't match,plot digitizer
-41,141,published,38.7,97.26700000000001,,,5356.0,Shule Nanshan,RGI60-13.32800,2007-06-01,2007-06-30,0.05,,accumulation area,elevation and coords don't match,plot digitizer
-41,142,published,28.17,86.633,,,6303.0,Gyabrag,RGI60-15.10175,2005-10-01,2005-10-31,0.05,,accumulation area,elevation and coords don't match,plot digitizer
-10,143,digitized from plot,86383.68,633922.4,21781,,4480.0,Gornergletscher,RGI60-11.02822,1996-01-01,1997-12-31,0.05,True,accumulation area,b95-1,plot digitizer
-10,144,digitized from plot,86484.805,633744.75,21781,,4450.0,Gornergletscher,RGI60-11.02822,1996-01-01,1997-12-31,0.05,True,accumulation area,b95-2,plot digitizer
-10,297,digitized from plot,86575.84,633796.06,21781,,4450.0,Gornergletscher,RGI60-11.02822,1983-01-01,1983-12-31,0.05,False,,b82-1,
-46,145,google maps guess from elevation (glacier separation),35.221779299999994,81.11527554,,digitized from plot,5800.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S0,plot digitizer
-46,146,google maps guess from elevation (glacier separation),35.2351867,81.11135593,,digitized from plot,5975.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S4,plot digitizer
-46,147,google maps guess from elevation (glacier separation),35.246191100000004,81.10829374,,digitized from plot,6120.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S8,plot digitizer
-46,148,google maps guess from elevation (glacier separation),35.26191,81.10065704,,digitized from plot,6325.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S12,plot digitizer
-46,149,google maps,43.115486600000004,86.81283014,,estimated from plot,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-09-27,1986-09-27,0.1,False,,T1,plot digitizer
-46,150,google maps,43.111059399999995,86.80957723,,estimated from plot,3960.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-09-27,1986-09-27,0.1,False,,T2,plot digitizer
-46,151,google maps,43.106036700000004,86.80647755,,estimated from plot,4050.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-09-27,1986-09-27,0.1,True,,T3,plot digitizer
-47,152,google maps,-31.962010999999997,-70.12193520000001,,,6070.0,Glaciar La Ollada (Mercedario),RGI60-17.14412,,,,,,,plot digitizer
-47,153,google maps,-29.35,-70.014,,,5161.0,Guanaco Glacier,RGI60-17.14868,,,,,,,plot digitizer
-48,154,google maps,-30.140240999999996,-69.931488,,,5536.0,Tapado Glacier,RGI60-17.14647,1992-02-01,1992-02-29,,True,,,plot digitizer
-50,155,google maps,27.9437778,86.81773669,,,4884.0,Khumbu Glacier,RGI60-15.03733,2017-05-01,2017-05-31,0.05,,,,plot digitizer
-50,156,google maps,27.9695686,86.82870764,,,4980.0,Khumbu Glacier,RGI60-15.03733,2017-05-01,2017-05-31,0.05,False,,,plot digitizer
-50,157,google maps,27.991737,86.84700289,,,5206.0,Khumbu Glacier,RGI60-15.03733,2017-05-01,2017-05-31,0.05,False,,,plot digitizer
-51,158,google maps,79.5082542,-90.8441553,,,1024.0,White Glacier,RGI60-03.04539,1974-08-25,1974-08-25,0.2,,,I,plot digitizer
-51,159,google maps,79.48509859999999,-90.7876998,,,717.0,White Glacier,RGI60-03.04539,1974-08-25,1974-08-25,0.2,,,II,plot digitizer
-51,160,google maps,79.4731948,-90.7527512,,,626.0,White Glacier,RGI60-03.04539,1974-08-25,1974-08-25,0.2,,,III,plot digitizer
-52,161,google maps guessed,43.133965100000005,-109.60994099999999,,estimated from google maps,3920.0,Upper Fremont Glacier,RGI60-02.18799,1990-01-01,1990-12-31,0.4,False,,,manual
-54,162,google maps,77.4924878,15.25323517,,,204.0,Finsterwalderbreen,RGI60-07.00231,1994-04-01,1994-04-30,0.05,True,ablation area,,plot digitizer
-54,163,google maps,77.4366271,15.22366244,,,580.0,Finsterwalderbreen,RGI60-07.00231,1995-04-01,1995-04-30,0.05,True,accumulation area,,plot digitizer
-55,164,caltopo,52.19942,-117.24298999999999,,,2140.0,Athabasca Glacier,RGI60-02.12441,1967-04-01,1967-06-30,,False,hole 209,took average of two measurements,plot digitizer
-55,165,caltopo,52.204229999999995,-117.23711000000002,,,2075.0,Athabasca Glacier,RGI60-02.12441,1967-06-30,1969-08-31,,False,hole 72,took average of two measurements,plot digitizer
-55,166,caltopo,52.19258,-117.25908000000001,,,2235.0,Athabasca Glacier,RGI60-02.12441,1968-08-01,1969-08-31,,False,hole 100,took average of two measurements,plot digitizer
-56,167,google maps,67.9036926,18.56956375,,estimated from google maps,1400.0,Storglaciären,RGI60-08.00213,2002-04-01,2002-04-30,0.05,False,,,plot digitizer
-57,168,published,48.655640399999996,90.84707854,,,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,2009-07-01,2007-07-31,,True,,,plot digitizer
-58,169,published,90579.0,627883.0,21781,,2516.0,Grenzgletscher,RGI60-11.02822,2006-05-28,2006-05-28,0.05,True,ablation area,l5,plot digitizer
-58,170,published,91030.0,627042.0,21781,,2468.0,Grenzgletscher,RGI60-11.02822,2005-06-11,2005-06-11,0.05,False,ablation area,ll5,plot digitizer
-58,171,published,91175.0,627434.0,21781,,2485.0,Grenzgletscher,RGI60-11.02822,2010-06-15,2010-06-15,0.05,False,ablation area,f13,plot digitizer
-58,172,published,90957.0,627748.0,21781,,2501.0,Grenzgletscher,RGI60-11.02822,2007-05-27,2007-05-27,0.05,False,ablation area,f9,plot digitizer
-58,173,published,90676.0,627970.0,21781,,2514.0,Grenzgletscher,RGI60-11.02822,2008-06-09,2008-06-09,0.05,False,ablation area,f5,plot digitizer
-58,174,published,90674.0,627557.0,21781,,2497.0,Grenzgletscher,RGI60-11.02822,2004-06-15,2004-06-15,0.05,True,ablation area,ll9,plot digitizer
-58,175,published,90867.0,628073.0,21781,,2506.0,Grenzgletscher,RGI60-11.02822,2006-05-27,2006-05-27,0.05,True,ablation area,r6,plot digitizer
-58,176,published,90938.0,627681.0,21781,,2499.0,Grenzgletscher,RGI60-11.02822,2010-06-13,2010-06-13,0.05,False,ablation area,l9a,plot digitizer
-58,177,published,90474.0,628018.0,21781,,2522.0,Grenzgletscher,RGI60-11.02822,2008-06-10,2008-06-10,0.05,False,ablation area,f1,plot digitizer
-58,178,published,90509.0,627807.0,21781,,2514.0,Grenzgletscher,RGI60-11.02822,2008-06-11,2008-06-11,0.05,False,ablation area,f3,plot digitizer
-59,179,published,-49.278195000000004,-73.35356479999999,,,2600.0,Pio XI glacier,RGI60-17.05181,2006-08-01,2006-08-31,,False,accumulation area,,plot digitizer
-60,180,digitized,56.07338000000001,160.4685,,estimated from plot,3875.0,Blichenok glacier,RGI60-10.04022,1996-01-01,1997-12-31,0.1,False,,BH1 (yearly average),plot digitizer
-60,181,digitized,56.074062,160.4679,,estimated from plot,3875.0,Blichenok glacier,RGI60-10.04022,1998-01-01,1998-12-31,0.1,False,,K2,plot digitizer
-61,182,published,130600.0,582608.0,21781,,2810.0,Glacier du Sex Rouge,RGI60-11.02244,2013-11-17,2013-11-17,,False,,#1,plot digitizer
-61,183,published,130754.0,582582.0,21781,,2780.0,Glacier du Sex Rouge,RGI60-11.02244,2014-09-11,2014-09-11,,False,,#2,plot digitizer
-61,184,published,161213.0,688857.0,21781,,2855.0,St. Annafirn,RGI60-11.01367,2014-09-04,2014-09-04,,False,,#6,manual
-61,185,published,161690.0,689086.0,21781,,2650.0,St. Annafirn,RGI60-11.01367,2013-10-03,2013-10-03,,False,,#9,manual
-62,186,topo svalbard,78.67358,12.13132,,,420.0,Irenebreen,RGI60-07.00490,2008-01-01,2009-12-31,0.2,False,,annual mean,plot digitizer
-63,187,google maps,79.59450129999999,12.56989669,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site1 min,plot digitizer
-63,188,google maps,79.59450129999999,12.56989669,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 1 max,plot digitizer
-63,189,google maps,79.59856429999999,12.60153683,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 2 min,plot digitizer
-63,190,google maps,79.59856429999999,12.60153683,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 2 max,plot digitizer
-63,191,google maps,79.5995375,12.58114652,,digitized from plot,70.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 3 min,plot digitizer
-63,192,google maps,79.5995375,12.58114652,,digitized from plot,70.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 3 max,plot digitizer
-63,193,google maps,79.61868659999999,12.51200694,,digitized from plot,375.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 7 min,plot digitizer
-63,194,google maps,79.61868659999999,12.51200694,,digitized from plot,375.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 7 max,plot digitizer
-63,195,google maps,79.62265579999999,12.42997693,,digitized from plot,540.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 9 min,plot digitizer
-63,196,google maps,79.62265579999999,12.42997693,,digitized from plot,540.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 9 max,plot digitizer
-64,197,google maps,35.8165362,90.75000214,,,5680.0,Malan Glacier,RGI60-13.48935,1999-01-01,1999-12-31,0.01,False,,,plot digitizer
-66,198,google maps,38.105165299999996,96.41680018,,,5325.0,Dunde Ice Cap,RGI60-13.35422,1984-01-01,1984-12-31,,True,summit region,caption and legend do not agree,plot digitizer
-67,199,google maps,35.2308014,81.46574059,,,6200.0,Giuliya Ice Cap,RGI60-13.53249,1992-01-01,1992-12-31,,False,plateau region,caption and legend do not agree,plot digitizer
-67,200,google maps,35.2308014,81.46574059,,,6200.0,Giuliya Ice Cap,RGI60-13.53249,2015-01-01,2015-12-31,,True,plateau region,,plot digitizer
-67,201,google maps,35.275074100000005,81.49244657,,,6710.0,Giuliya Ice Cap,RGI60-13.53249,1991-01-01,1991-12-31,,False,summit region,,plot digitizer
-67,202,google maps,35.275074100000005,81.49244657,,,6710.0,Giuliya Ice Cap,RGI60-13.53249,2015-01-01,2015-12-31,,True,summit region,,plot digitizer
-69,206,google maps,45.8417942,6.846642185,,,4250.0,Col du Dôme-Bossons,RGI60-11.03646,2017-01-01,2017-12-31,0.05,True,accumulation area,,plot digitizer
-70,207,published,33.212778,91.154167,,,5800.0,Geladandong Ice Cap,RGI60-13.49384,2004-04-22,2004-04-22,0.05,False,,geothermal hotspot suspected under drill site,plot digitizer
-71,208,google maps,39.4783238,96.53493886,,,4550.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,site 1,,plot digitizer
-71,209,google maps,39.441861700000004,96.55545016,,,4900.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,site 2,,plot digitizer
-71,210,google maps,39.429247,96.55633645,,,5040.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,site 3,,plot digitizer
-71,211,google maps,39.4355057,96.55583,,,4971.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,deep borehole site,,plot digitizer
-73,212,google maps guess,79.78064,24.680979999999998,,,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,,summit region,digizied deepest measurements (indicated with + in plot),plot digitizer
-73,213,google maps guess,-18.10813679,-68.88302202,,,6548.0,Nevado Sajama,RGI60-16.01587,1997-01-01,1998-12-31,,,summit region,,plot digitizer
-73,214,google maps guess,-15.54037719,-72.66184742,,,6451.0,Coropuna,RGI60-16.01486,2003-01-01,2003-12-31,,,rim,,plot digitizer
-73,215,google maps guess,-15.54586811,-72.66056844,,,6326.0,Coropuna,RGI60-16.01486,2003-01-01,2003-12-31,,,crater,,plot digitizer
-75,216,google maps,69.63971832,-72.14945899,,digitized from plot,685.0,Barnes Ice Cap,RGI60-04.06187,1975-05-17,1975-05-17,0.1,False,,14.3 T; within surge zone,manual
-75,217,google maps,69.5815068,-72.12125013,,digitized from plot,565.0,Barnes Ice Cap,RGI60-04.06187,1975-05-21,1975-05-21,0.1,False,,19.5 T; within surge zone,manual
-75,218,google maps,69.54665509,-72.11040056,,digitized from plot,450.0,Barnes Ice Cap,RGI60-04.06187,1975-05-08,1975-05-08,0.1,False,,24.55 T; within surge zone,manual
-76,219,digitized from plot,69.81379,-72.09318499999999,,Glacier is not surge-type. Ice thickness is ~110m in borehole location. The false precision reported for temperature is a consequence of converting values read out in F to C (!). Supporting information in study 74.,525.0,Barnes Ice Cap,RGI60-04.06187,1975-06-12,1975-06-12,0.05,False,,T0975,plot digitizer
-76,220,digitized from plot,69.80686,-72.10005,,estimated from firgure in Hooke 1980,575.0,Barnes Ice Cap,RGI60-04.06187,1976-07-05,1976-07-05,0.05,False,,T091,plot digitizer
-76,221,digitized from plot,69.79795,-72.110344,,estimated from firgure in Hooke 1980,650.0,Barnes Ice Cap,RGI60-04.06187,1977-06-13,1977-06-13,0.05,False,,T081,plot digitizer
-76,222,digitized from plot,69.78211,-72.12066,,estimated from firgure in Hooke 1980,725.0,Barnes Ice Cap,RGI60-04.06187,1976-07-01,1976-07-01,0.05,False,,T061,plot digitizer
-76,223,digitized from plot,69.74945,-72.154976,,estimated from firgure in Hooke 1980,850.0,Barnes Ice Cap,RGI60-04.06187,1976-07-09,1976-07-09,0.05,False,,T020,plot digitizer
-76,224,digitized from plot,69.78899,-71.9703,,estimated from firgure in Hooke 1980,670.0,Barnes Ice Cap,RGI60-04.06187,1974-06-27,1974-06-27,0.05,True,,C4 (D4 in Hooke 1980),plot digitizer
-76,225,digitized from plot,69.71965,-71.89204000000001,,estimated from firgure in Hooke 1980,670.0,Barnes Ice Cap,RGI60-04.06187,1974-06-14,1974-06-14,0.05,False,,B4,plot digitizer
-78,226,from metadata,76.4113,-68.2873,,from aux data (Tuto_ramp_overview.png),505.0,Tuto Ramp,RGI60-05.07772,1962-08-15,1962-08-15,,True,,D-11,import
-78,227,from metadata,71.306,-26.768,,estimated from position (caltopo),2325.0,Renland Ice Cap,RGI60-05.16072,1988-01-01,1988-12-31,,False,,,import
-78,228,from metadata,78.3897,-80.395,,estimated from position (caltopo),1600.0,Prince of Wales Ice Cap,RGI60-03.01708,2005-05-15,2005-05-15,,True,,,import
-78,229,from metadata,67.3,-65.2,,orig. publication (Fisher 1998),1810.0,Penny Ice Cap,RGI60-04.05688,1996-01-01,1996-12-31,,True,,,import
-78,230,from metadata,79.93,-99.1,,estimated from position (caltopo),250.0,Meighen Ice Cap,RGI60-03.00691,1965-01-01,1965-12-31,,True,,,import
-78,231,from metadata,82.84,-36.67,,estimated from position (caltopo),900.0,Hans Tausen Hare,RGI60-05.10726,1995-01-01,1995-12-31,,True,,,import
-78,232,from metadata,82.51,-37.47,,estimated from position (caltopo),1250.0,Hans Tausen Dome,RGI60-05.10756,1995-01-01,1995-12-31,,True,,,import
-78,233,from metadata,81.2926,-15.7029,,estimated from position (caltopo),690.0,Flade Isblink Ice Cap,RGI60-05.10315,2006-01-01,2006-12-31,,False,,,import
-78,234,orig. publication (Kinnard 2006),75.32,-81.64,,orig. publication (Kinnard 2006),1930.0,Devon Ice Cap,RGI60-03.02467,2000-04-15,2000-04-15,,False,,,import
-78,235,from metadata,75.34,-82.14,,,1800.0,Devon Ice Cap,RGI60-03.02467,1973-01-01,1973-01-01,,True,,,import
-78,236,from metadata,75.3,-82.3,,,1800.0,Devon Ice Cap,RGI60-03.02467,1972-01-01,1972-12-31,,False,,,import
-78,237,from metadata,80.7,-73.1,,estimated from position (caltopo),1770.0,Agassiz ,RGI60-03.00098,1984-01-01,1984-12-31,,,,location within 2 km,import
-78,238,from metadata,80.7,-73.1,,estimated from position (caltopo),1770.0,Agassiz,RGI60-03.00098,1979-01-01,1979-12-31,,,,location within 2 km,import
-78,239,from metadata,80.7,-73.1,,estimated from position (caltopo),1770.0,Agassiz,RGI60-03.00098,1979-01-01,1979-12-31,,,,location within 2 km,import
-78,240,from metadata,80.7,-73.1,,estimated from position (caltopo),1770.0,Agassiz,RGI60-03.00098,1977-01-01,1977-12-31,,,,location within 2 km,import
-74,241,from authors,28.02767227,86.95550508,,,6350.0,East Rongbuk Glacier,RGI60-15.10055,2008-05-04,2008-05-04,,,,,import
-79,242,single-frequency GPS,6754776.0,583859.0,32607,single-frequency gps,1772.0,Little Kluane Glacier,RGI60-01.16198,2019-10-01,2019-10-01,0.2,False,Lower ablation area,Glacier surged vigorously in 2017-2018; measurement accuracy; time-series available from Gwenn Flowers,import
-80,243,single-frequency GPS,6754448.0,600120.0,32607,single-frequency gps,2371.0,North Glacier,RGI60-01.16835,2011-09-08,2011-09-08,0.1,False,central ablation area of small valley glacier,Glacier is not surge-type. Ice thickness is ~110m in borehole location. +/- 0.1 C. The false precision reported for temperature is a consequence of converting values read out in F to C (!). Supporting information in study 74.,import
-81,244,Trimble RTK survey,6744434.951,602248.795,32607,Trimble RTK survey,2395.902,South Glacier,RGI60-01.16195,2011-10-01,2011-10-01,0.1,True,central ablation area of small surge-type valley glacier,"Glacier is surge-type and last surged vigorously in the 1980s. Interpreted to be undergoing a ""slow surge"" (see https://tc.copernicus.org/articles/5/299/2011/) at the time of temperature measurement. Time-series available from Gwenn Flowers. Supporting information in study 74.",import
-82,245,from author,-62.666004,-60.35266,,from authors,126.0,Johnson Glacier,RGI60-19.02059,2016-03-08,2016-03-08,0.05,True,,,import
-82,246,from authors,-62.671643,-60.350249,,from authors,172.0,Johnson Glacier,RGI60-19.02059,2016-03-08,2016-03-08,0.05,True,,,import
-83,247,from authors,28.809917,83.493183,,from authors,5637.0,Rikha Samba Glacier,RGI60-15.04847,2014-12-01,2014-12-15,,False,ablation area,Two-week average; Full time-series (2014-11-09 to 2015-02-08) available from ICIMOD / Tika Gurung. ,import
-83,248,from authors,28.810133,83.495183,,from authors,5617.0,Rikha Samba Glacier,RGI60-15.04847,2014-12-01,2014-12-15,,False,ablation area,Two-week average; Full time-series (2014-11-09 to 2015-10-05) available from ICIMOD / Tika Gurung. ,import
-84,249,from author,76.92008508,-66.9525292,,from authors,691.0,Nunatarssuaq Ice Cap,RGI60-05.08054,2017-08-12,2017-08-19,,False,,"Supporting information in: Abermann, J., Steiner, J., Prinz, R., Wecht, M., & Lisager, P. (2020). The Red Rock ice cliff revisited – six decades of frontal, mass and area changes in the Nunatarssuaq area, Northwest Greenland. Journal of Glaciology, 66(258), 567-576. doi:10.1017/jog.2020.28",import
-84,250,from author,76.91991055,-66.95246654,,from authors,686.0,Nunatarssuaq Ice Cap,RGI60-05.08054,2017-08-12,2017-08-19,,False,~20 m back from a dry-calving ice cliff,"Supporting information: Abermann, J., Steiner, J., Prinz, R., Wecht, M., & Lisager, P. (2020). The Red Rock ice cliff revisited – six decades of frontal, mass and area changes in the Nunatarssuaq area, Northwest Greenland. Journal of Glaciology, 66(258), 567-576. doi:10.1017/jog.2020.28",import
-17,251,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-01-01,1979-01-31,,False,accumulation area,profile 1,plot digitizer
-17,252,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-02-01,1979-02-28,,False,accumulation area,profile 2,plot digitizer
-17,253,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-03-01,1979-03-31,,False,accumulation area,profile 3,plot digitizer
-17,254,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-04-01,1979-04-30,,False,accumulation area,profile 4,plot digitizer
-17,255,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-05-01,1979-05-31,,False,accumulation area,profile 5,plot digitizer
-17,256,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-06-01,1979-06-30,,False,accumulation area,profile 6,plot digitizer
-17,257,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-07-01,1979-07-31,,False,accumulation area,profile 7,plot digitizer
-17,258,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-08-01,1979-08-31,,False,accumulation area,profile 8,plot digitizer
-17,259,google maps,79.440048,95.382408,,,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-09-01,1979-09-30,,False,accumulation area,profile 9,plot digitizer
-2,260,caltopo,79.53638000000001,-91.03409,,,1536.0,White Glacier,RGI60-03.04539,1977-01-01,1977-01-31,0.2,False,accumulation area,,plot digitizer
-2,261,caltopo,79.52396999999999,-90.96165,,caltopo,1310.0,White Glacier,RGI60-03.04539,1979-02-01,1979-02-28,0.2,False,accumulation area,,plot digitizer
-2,262,caltopo,79.51597,-90.89401,,,1172.0,White Glacier,RGI60-03.04539,1981-01-01,1981-01-31,0.2,False,accumulation area,,plot digitizer
-2,263,caltopo,79.50766,-90.85041,,,1045.0,White Glacier,RGI60-03.04539,1981-02-01,1981-02-28,0.2,False,accumulation area,,plot digitizer
-2,264,caltopo,79.4974,-90.83256,,,900.0,White Glacier,RGI60-03.04539,1975-07-01,1975-07-31,0.2,False,accumulation area,,plot digitizer
-2,265,caltopo,79.49401999999999,-90.82123,,,871.0,White Glacier,RGI60-03.04539,1981-03-01,1981-03-31,0.2,False,accumulation area,,plot digitizer
-2,266,caltopo,79.48651,-90.79514,,,750.0,White Glacier,RGI60-03.04539,1979-03-01,1979-03-31,0.2,False,near ELA,,plot digitizer
-2,267,caltopo,79.45313,-90.69436999999999,,,385.0,White Glacier,RGI60-03.04539,1976-01-01,1976-01-31,0.2,True,accumulation area,,plot digitizer
-8,268,published,86418.0,633872.0,21781,,4470.0,Grenzgletscher,RGI60-11.02822,2008-08-27,2008-08-27,0.1,False,accumulation area,CG07-1/08,plot digitizer
-8,269,published,85620.0,633700.0,21781,,4330.0,Grenzgletscher,RGI60-11.02822,1999-05-01,1999-05-31,0.1,False,accumulation area,SJ99-10/99,plot digitizer
-8,270,published,86620.0,633686.0,21781,,4335.0,Grenzgletscher,RGI60-11.02822,2008-08-26,2008-08-26,0.1,False,accumulation area,SJ08-8/08,plot digitizer
-8,271,published,85765.0,633750.0,21781,,4293.0,Grenzgletscher,RGI60-11.02822,1999-09-01,1999-09-01,0.1,False,accumulation area,SJ98-A/99,plot digitizer
-8,272,published,85765.0,633750.0,21781,,4293.0,Grenzgletscher,RGI60-11.02822,2008-08-27,2008-08-27,0.1,False,accumulation area,SJ08-6/08,plot digitizer
-8,273,published,86576.0,633798.0,21781,,4450.0,Grenzgletscher,RGI60-11.02822,1982-01-01,1982-12-31,0.1,False,accumulation area,CG82-1/82,plot digitizer
-8,274,published,86524.0,633847.0,21781,,4454.0,Grenzgletscher,RGI60-11.02822,2003-09-17,2003-09-17,0.1,False,accumulation area,CG03-1/03,plot digitizer
-8,275,published,86554.0,634002.0,21781,,4425.0,Grenzgletscher,RGI60-11.02822,2007-11-03,2007-11-03,0.1,False,accumulation area,CG05-2/07 or CG05-1/07,plot digitizer
-8,276,published,86383.0,633922.0,21781,,4475.0,Grenzgletscher,RGI60-11.02822,1997-10-18,1997-10-18,0.1,False,accumulation area,CG95-1/97,plot digitizer
-8,277,published,86484.0,633746.0,21781,,4448.0,Grenzgletscher,RGI60-11.02822,1997-10-18,1997-10-18,0.1,False,accumulation area,CG95-2/97,plot digitizer
-38,278,published,-29.35,-70.014,,,5161.0,Guanaco Glacier,RGI60-17.14868,2008-11-04,2008-11-04,0.1,True,,,plot digitizer
-38,279,published,-29.35,-70.014,,,5161.0,Guanaco Glacier,RGI60-17.14868,2010-03-13,2010-03-13,0.1,True,,,plot digitizer
-39,280,published,79.8,25.8,,,500.0,Austfonna,RGI60-07.00551,1997-01-01,1997-12-31,0.1,,,#2; accuracy = minimum accuracy,plot digitizer
-39,281,published,79.8,24.0,,,750.0,Austfonna,RGI60-07.00551,1998-01-01,1998-12-31,0.1,,,#3; accuracy = minimum accuracy,plot digitizer
-46,282,caltopo,29.566229999999997,101.84461,,,4540.0,Dagongba Glacier,RGI60-15.07851,1982-09-30,1982-09-30,0.05,False,ablation area,,plot digitizer
-46,283,caltopo,27.106790000000004,100.19538,,,4600.0,Baishuihe Glacier No. 1,RGI60-15.07645,1982-07-11,1982-07-11,0.05,False,,,plot digitizer
-51,284,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1959-01-01,1959-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,285,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1960-01-01,1960-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,286,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1961-01-01,1961-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,287,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1962-01-01,1962-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,288,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1963-01-01,1963-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,289,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1964-01-01,1964-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,290,google maps,79.43863,-90.64459000000001,,,205.0,White Glacier,RGI60-03.04539,1965-01-01,1965-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-58,291,published,91147.0,627506.0,21781,,2490.0,Grenzgletscher,RGI60-11.02822,2007-05-30,2007-05-30,0.05,False,ablation area,f12,plot digitizer
-58,292,published,90891.0,627636.0,21781,,2500.0,Grenzgletscher,RGI60-11.02822,2010-06-14,2010-06-14,0.05,False,ablation area,I9b,plot digitizer
-73,293,google maps guess,79.78064,24.680979999999998,,,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
-73,294,google maps guess,79.78064,24.680979999999998,,,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
-73,295,google maps guess,79.78064,24.680979999999998,,,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
-73,296,google maps guess,79.78064,24.680979999999998,,,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
+1,1,web map service approximation,45.930620000000005,7.8754029999999995,,published,4450.0,Grenzgletscher,RGI60-11.02822,1978-01-01,1978-12-31,,False,colle gnifetti,14 km from terminus,plot digitizer
+1,2,web map service approximation,45.973065000000005,7.802683999999999,,published,2600.0,Grenzgletscher,RGI60-11.02822,1979-01-01,1979-12-31,,False,ablation area,5 km from terminus,plot digitizer
+1,3,web map service approximation,45.974053000000005,7.774972,,published,2500.0,Grenzgletscher,RGI60-11.02822,1980-01-01,1980-12-31,,False,ablation area,2 km from terminus,plot digitizer
+2,4,web map service approximation,79.531432,-91.014641,,published,1447.0,White Glacier,RGI60-03.04539,1979-01-01,1979-01-31,0.2,False,accumulation area,,plot digitizer
+2,5,web map service approximation,79.474711,-90.756867,,published,625.0,White Glacier,RGI60-03.04539,1980-04-01,1980-04-30,0.2,True,ablation area,,plot digitizer
+2,6,web map service approximation,79.440386,-90.645269,,published,230.0,White Glacier,RGI60-03.04539,1979-04-01,1979-04-30,0.2,True,ablation area,,plot digitizer
+5,7,published,-16.65,-67.783333,,published,6340.0,Illimani Volcano,RGI60-16.00486,1999-06-04,1999-06-05,0.05,True,summit region,,plot digitizer
+6,8,published,45.842712,6.8437149999999995,,published,4300.0,Mont Blanc,RGI60-11.03646,1999-01-01,1999-12-31,0.1,True,summit region,,plot digitizer
+6,9,published,45.842712,6.8437149999999995,,published,4300.0,Mont Blanc,RGI60-11.03646,2011-01-01,2011-12-31,0.1,False,summit region,,plot digitizer
+6,10,published,45.842144,6.8467193,,published,4245.0,Mont Blanc,RGI60-11.03646,1994-06-01,1994-06-30,0.1,True,summit region,"date from source 16 (Vincent et al., 2007)",plot digitizer
+6,11,published,45.842144,6.8467193,,published,4245.0,Mont Blanc,RGI60-11.03646,2005-01-01,2005-04-30,0.1,False,summit region,"date from source 16 (Vincent et al., 2007)",plot digitizer
+6,12,published,45.842144,6.8467193,,published,4245.0,Mont Blanc,RGI60-11.03646,2010-01-01,2010-12-31,0.1,False,summit region,,plot digitizer
+6,13,published,45.84037,6.848932700000001,,published,4255.0,Mont Blanc,RGI60-11.03646,1999-01-01,1999-12-31,0.3,True,summit region,,plot digitizer
+6,14,published,45.84037,6.848932700000001,,published,4255.0,Mont Blanc,RGI60-11.03646,2011-01-01,2011-12-31,0.1,False,summit region,,plot digitizer
+8,15,published,86420.0,633870.0,21781,published,4470.0,Grenzgletscher,RGI60-11.02822,1991-10-26,1991-10-26,0.2,False,accumulation area,CG91-B/91,plot digitizer
+8,16,published,86418.0,633872.0,21781,published,4470.0,Grenzgletscher,RGI60-11.02822,2007-11-03,2007-11-03,0.2,True,accumulation area,CG07-1/07,plot digitizer
+8,17,published,85900.0,633500.0,21781,published,4250.0,Grenzgletscher,RGI60-11.02822,1991-10-26,1991-10-26,0.2,False,accumulation area,GG91-D,plot digitizer
+8,18,published,85911.0,633502.0,21781,published,4250.0,Grenzgletscher,RGI60-11.02822,1999-05-01,1999-05-31,0.2,False,accumulation area,GG99-12,plot digitizer
+8,19,published,85900.0,633500.0,21781,published,4250.0,Grenzgletscher,RGI60-11.02822,2008-08-25,2008-08-25,0.2,False,accumulation area,GG08-5/08,plot digitizer
+12,20,web map service approximation,52.20682,-117.23517,,published,2065.0,Athabasca Glacier,RGI60-02.12441,1970-09-22,1970-09-22,,False,ablation area,Hole N,plot digitizer
+12,21,web map service approximation,52.18602,-117.26113000000001,,published,2275.0,Athabasca Glacier,RGI60-02.12441,1970-09-22,1970-09-22,,False,ablation area,Hole D,plot digitizer
+12,22,web map service approximation,52.198370000000004,-117.24918999999998,,published,2170.0,Athabasca Glacier,RGI60-02.12441,1970-09-22,1970-09-22,,False,ablation area,Hole L,plot digitizer
+12,23,web map service approximation,52.175940000000004,-117.30923999999999,,published,3200.0,Athabasca Glacier,RGI60-02.12441,1967-08-18,1967-08-18,,False,accumulation area,Hole A,manual
+12,24,web map service approximation,52.163309999999996,-117.30632,,published,2910.0,Athabasca Glacier,RGI60-02.12441,1967-08-18,1967-08-18,,False,accumulation area,Hole B,manual
+12,25,web map service approximation,52.1631,-117.28074,,published,2730.0,Athabasca Glacier,RGI60-02.12441,1967-08-18,1967-08-18,,False,accumulation area,Hole C,manual
+12,26,web map service approximation,52.1885,-117.25327,,published,2235.0,Athabasca Glacier,RGI60-02.12441,1986-04-25,1986-04-25,,False,ablation area,Hole E; only ice temperatures,plot digitizer
+12,27,web map service approximation,52.192240000000005,-117.25808,,published,2230.0,Athabasca Glacier,RGI60-02.12441,1986-04-24,1986-04-24,,False,ablation area,Hole H; only ice temperatures,plot digitizer
+12,28,web map service approximation,52.20112,-117.24085,,published,2115.0,Athabasca Glacier,RGI60-02.12441,1986-04-24,1986-04-24,,False,ablation area,Hole M; only ice temperatures,plot digitizer
+13,29,web map service approximation,60.369155000000006,-139.961054,,published,1791.0,Seward Glacier,RGI60-01.13696,1948-07-12,1948-07-12,0.1,False,accumulation area,"firn temps, original depth data in feet",plot digitizer
+15,30,web map service approximation,46.537614000000005,7.971253999999999,,published,3540.0,Jungfraufirn,RGI60-11.01450,1991-08-27,1991-08-27,0.1,False,accumulation area,bh 91-3; other measurement dates available,plot digitizer
+15,31,web map service approximation,46.541514,7.9781830000000005,,published,3410.0,Jungfraufirn,RGI60-11.01450,1991-08-27,1991-08-27,0.1,False,accumulation area,bh 91-2; other measurement dates available,plot digitizer
+15,32,web map service approximation,46.549684,8.002083,,published,3530.0,Jungfraufirn,RGI60-11.01450,1991-08-27,1991-08-27,0.1,False,accumulation area,bh 91-5; other measurement dates available,plot digitizer
+15,33,web map service approximation,45.93033,7.876755999999999,,published,4452.0,Grenzgletscher,RGI60-11.02822,1991-08-02,1991-08-02,0.1,False,accumulation area,bh 91-1,plot digitizer
+15,34,web map service approximation,45.923589,7.8717690000000005,,published,4300.0,Grenzgletscher,RGI60-11.02822,1994-04-30,1994-04-30,0.1,False,accumulation area,bh 94-1,plot digitizer
+15,35,web map service approximation,45.924076,7.862049000000001,,published,4100.0,Grenzgletscher,RGI60-11.02822,1994-06-01,1994-06-01,0.1,False,accumulation area,bh 94-2,plot digitizer
+15,36,web map service approximation,45.922507,7.866534,,published,4200.0,Grenzgletscher,RGI60-11.02822,1994-10-31,1994-10-31,0.1,False,accumulation area,bh 94-A,plot digitizer
+18,40,web map service approximation,78.811214,12.881844000000001,,published,367.0,Kongsvegen,RGI60-07.01481,1992-01-01,1992-12-31,,False,ablation area,"bh K1; data from Hagen, 1992.",plot digitizer
+18,41,web map service approximation,78.759108,13.335257999999998,,published,635.0,Kongsvegen,RGI60-07.01481,1992-01-01,1992-12-31,,True,accumulation area,bh K2; data from Hagen 1992,plot digitizer
+18,42,web map service approximation,78.8878,12.04861,,published,180.0,Midtre Lovenbreen,RGI60-07.00493,1992-01-01,1992-12-31,,True,ablation area,bh L3; data from Hagen 1992,plot digitizer
+18,43,web map service approximation,78.87204,11.998660000000001,,published,380.0,Midtre Lovenbreen,RGI60-07.00493,1992-01-01,1992-12-31,,True,accumulation area,bh L9; data from Hagen 1992,plot digitizer
+18,44,web map service approximation,78.8955,11.83762,,published,175.0,Austre Broggerbreen,RGI60-07.00504,1992-01-01,1992-12-31,,True,ablation area,bh B5; data from Hagen 1992,plot digitizer
+18,45,web map service approximation,78.88008,11.920960000000001,,published,375.0,Austre Broggerbreen,RGI60-07.00504,1992-01-01,1992-12-31,,True,accumulation area,bh B11; data from Hagen 1992,plot digitizer
+19,46,web map service approximation,75.89793399999999,-79.111864,,published,80.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,ablation area,X1,plot digitizer
+19,47,web map service approximation,75.89683000000001,-79.129082,,published,202.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,True,ablation area,X2,plot digitizer
+19,48,web map service approximation,75.89527629999999,-79.14445620000001,,published,315.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,around ELA,X3,plot digitizer
+19,49,web map service approximation,75.889619,-79.16328709999999,,published,390.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,accumulation area,X4,plot digitizer
+19,50,web map service approximation,75.88171650000001,-79.18014720000001,,published,527.0,Laika Ice Cap,RGI60-03.01427,1975-08-01,1975-08-31,,False,accumulation area,X5,plot digitizer
+21,51,web map service guess,61.22458,-140.32565,,web map service guess,2220.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,below surge bulge,#3,plot digitizer
+21,52,web map service guess,61.22435,-140.32904,,web map service guess,2320.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,at surge bulge,#6,plot digitizer
+21,53,web map service guess,61.22416,-140.33217,,web map service guess,2420.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,above surge bulge,#9,plot digitizer
+21,54,web map service guess,61.22379,-140.33531000000002,,web map service guess,2500.0,Trapridge Glacier,RGI60-01.16315,1980-01-01,1980-12-31,0.02,True,above surge bulge,#11,plot digitizer
+23,55,web map service approximation,79.7072458,-74.52663390000001,,published,1100.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,accumulation area,#1,manual
+23,56,web map service approximation,79.6860756,-74.4592733,,published,975.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,accumulation area,#4,manual
+23,57,web map service approximation,79.6800437,-74.4332913,,published,900.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,accumulation area,#6,manual
+23,58,web map service approximation,79.64827559999999,-74.2047463,,published,575.0,John Evans Glacier,RGI60-03.00545,1997-01-01,1999-12-31,,False,ablation area,#10,manual
+24,59,digitized from plot,7692709.4,623993.5,32606,published,1750.0,McCall Glacier,RGI60-01.02228,2008-01-01,2008-12-31,,True,ablation area,JJMC,plot digitizer
+24,60,digitized from plot,7689181.3,625031.95,32606,published,2100.0,McCall Glacier,RGI60-01.02228,2008-01-01,2008-12-31,,True,accumulation area,LC,plot digitizer
+24,61,digitized from plot,7690607.0,626602.2,32606,published,2400.0,McCall Glacier,RGI60-01.02228,2008-01-01,2008-12-31,,True,accumulation area,UC,plot digitizer
+25,62,web map service approximation,49.793715,87.73221241,,published,3450.0,Sofiyskiy Glacier,RGI60-10.01836,2000-07-01,2000-07-31,,False,accumulation area,,plot digitizer
+25,63,web map service approximation,49.793715,87.73221241,,published,3440.0,Sofiyskiy Glacier,RGI60-10.01836,2001-07-01,2000-07-31,,False,accumulation area,,plot digitizer
+26,64,web map service approximation,45.8569236,6.817813709,,published,3141.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
+26,65,web map service approximation,45.8567718,6.818435414,,published,3159.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,False,,,plot digitizer
+26,66,web map service approximation,45.8567264,6.818827044,,published,3168.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
+26,67,web map service approximation,45.856787,6.819218674,,published,3176.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
+26,68,web map service approximation,45.856724799999995,6.819786487000001,,published,3181.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,False,,,plot digitizer
+26,69,web map service approximation,45.8567151,6.8202679360000005,,published,3186.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
+26,70,web map service approximation,45.856505,6.820819900000001,,published,3207.0,Glacier de Tête Rousse,RGI60-11.03438,2010-09-01,2010-09-30,0.1,True,,,plot digitizer
+27,71,web map service approximation,45.8578979,6.840015556,,published,3410.0,Taconnaz Glacier,RGI60-11.03647,2012-01-01,2012-12-31,,False,accumulation area,,plot digitizer
+27,72,web map service approximation,45.853420299999996,6.839661853,,published,3680.0,Taconnaz Glacier,RGI60-11.03647,2008-01-01,2008-12-31,,False,accumulation area,,plot digitizer
+27,73,web map service approximation,45.8511161,6.836228851,,published,3780.0,Taconnaz Glacier,RGI60-11.03647,2008-01-01,2008-12-31,,False,accumulation area,,plot digitizer
+27,74,web map service approximation,45.8468843,6.839641046000001,,published,4080.0,Taconnaz Glacier,RGI60-11.03647,2008-01-01,2008-12-31,,True,accumulation area,,plot digitizer
+27,75,web map service approximation,45.8518841,6.84825476,,published,4030.0,Taconnaz Glacier,RGI60-11.03647,2013-01-01,2013-12-31,,False,accumulation area,,plot digitizer
+28,76,web map service approximation,61.256405799999996,-140.184505,,web map service guess,1760.0,Steele Glacier,RGI60-01.16377,1974-09-05,1974-09-05,0.015,False,ablation area,"73-2; post surge (anomalous T5 & T7), estimated elevation",plot digitizer
+28,77,web map service approximation,61.2867816,-140.01457,,web map service guess,1400.0,Steele Glacier,RGI60-01.16377,1974-09-05,1974-09-05,0.015,False,ablation area,"73-3; post surge (""normal), estimated elevation",plot digitizer
+29,78,web map service approximation,61.202314199999996,-140.297788,,published,2295.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,True,,#1,plot digitizer
+29,79,web map service approximation,61.1962048,-140.2932,,published,2455.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,False,,#2,plot digitizer
+29,80,web map service approximation,61.19503910000001,-140.284356,,web map service guess,2550.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,False,,#3,plot digitizer
+29,81,web map service approximation,61.199299800000006,-140.296203,,published,2374.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,False,,#4,plot digitizer
+29,82,web map service approximation,61.205127299999994,-140.29904,,published,2244.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,True,,#5,plot digitizer
+29,83,web map service approximation,61.2078598,-140.30045800000002,,published,2188.0,Fox Glacier,RGI60-01.16374,1969-01-01,1969-12-31,0.03,True,,#6,plot digitizer
+30,84,published,91030.0,627042.0,21781,published,2467.0,Gornergletscher,RGI60-11.02822,2006-01-01,2006-12-31,0.05,True,ablation area,BH4,plot digitizer
+30,85,published,91147.0,627506.0,21781,published,2492.0,Gornergletscher,RGI60-11.02822,2007-01-01,2007-12-31,0.05,True,ablation area,BHT3,plot digitizer
+30,86,published,90957.0,627748.0,21781,published,2501.0,Gornergletscher,RGI60-11.02822,2007-01-01,2007-12-31,0.05,True,ablation area,BHT2,plot digitizer
+30,87,published,90674.0,627557.0,21781,published,2496.0,Gornergletscher,RGI60-11.02822,2004-01-01,2004-12-31,0.05,True,ablation area,BH430,plot digitizer
+30,88,published,90579.0,627883.0,21781,published,2516.0,Gornergletscher,RGI60-11.02822,2006-01-01,2006-12-31,0.05,True,ablation area,BHC,plot digitizer
+30,89,published,90844.0,628257.0,21781,published,2492.0,Gornergletscher,RGI60-11.02822,2006-01-01,2006-12-31,0.05,True,ablation area,BH210,plot digitizer
+31,90,digitized from plot,3189341.0,743648.9,32644,published,5600.0,Rikha Samba Glacier,RGI60-15.04847,2014-01-01,2015-12-31,,False,ablation area,,plot digitizer
+7,91,digitized from plot,86575.42,633796.06,21781,published,4450.0,Grenzgletscher,RGI60-11.02822,1977-01-01,1978-12-31,0.1,True,accumulation area,B82-1,plot digitizer
+32,92,web map service approximation,46.4152,9.8211,,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,1999-09-14,1999-09-14,,False,,,plot digitizer
+32,93,web map service approximation,46.4152,9.8211,,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,1999-12-01,1999-12-01,,False,,,plot digitizer
+32,94,web map service approximation,46.4152,9.8211,,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,2000-04-05,2000-04-05,,False,,,plot digitizer
+32,95,web map service approximation,46.4152,9.8211,,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,2000-06-19,2000-06-19,,False,,,plot digitizer
+32,96,web map service approximation,46.4152,9.8211,,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,2000-09-20,2000-09-20,,False,,,plot digitizer
+33,97,web map service approximation,63.442926,-146.516929,,published,1860.0,Black Rapids Glacier,RGI60-01.00037,1973-04-03,1973-04-03,0.15,False,accumulation area,firn temps; snow temps also available,plot digitizer
+33,98,web map service approximation,63.442926,-146.516929,,published,1860.0,Black Rapids Glacier,RGI60-01.00037,1973-07-19,1973-07-19,0.15,False,accumulation area,firn temps; snow temps also available,plot digitizer
+33,99,web map service approximation,63.4833402,-146.406772,,published,1550.0,Black Rapids Glacier,RGI60-01.00037,1973-04-03,1973-04-03,0.15,False,ablation area,ice temp; snow temp also available,plot digitizer
+33,100,web map service approximation,63.4833402,-146.406772,,published,1550.0,Black Rapids Glacier,RGI60-01.00037,1973-07-20,1973-07-20,0.15,False,ablation area,ice temp; snow temp also available; surface at first datapoint.,plot digitizer
+33,101,web map service approximation,63.45532579999999,-146.14303700000002,,published,1140.0,Black Rapids Glacier,RGI60-01.00037,1973-04-04,1973-04-04,0.15,False,ablation area,ice temp; snow temp also available,plot digitizer
+33,102,web map service approximation,63.45532579999999,-146.14303700000002,,published,1149.0,Black Rapids Glacier,RGI60-01.00037,1973-07-23,1973-07-23,0.15,False,ablation area,ice temp; snow temp also available. Surface not first datpoint.,plot digitizer
+34,103,web map service guess,78.11415799999999,15.99040771,,published,305.0,Scott Turnerbreen,RGI60-07.01050,1993-05-01,1993-05-31,,True,,surged in 1936,plot digitizer
+34,104,web map service approximation,78.0954428,15.88386431,,published,595.0,Scott Turnerbreen,RGI60-07.01050,1995-05-01,1995-05-31,,True,,surged in 1937,plot digitizer
+35,105,web map service approximation,77.0189,15.60193332,,estimated from plot,100.0,Hansbreen,RGI60-07.00240,1988-09-25,1988-09-25,0.4,False,,site A,manual
+35,106,web map service approximation,77.0275588,15.65626762,,estimated from plot,128.0,Hansbreen,RGI60-07.00240,1994-10-05,1994-10-05,0.4,False,,site B2,plot digitizer
+35,107,web map service approximation,77.09160159999999,15.63406651,,estimated from plot,325.0,Hansbreen,RGI60-07.00240,1989-04-11,1989-04-11,0.4,False,,site D,plot digitizer
+35,108,web map service approximation,77.09160159999999,15.63406651,,estimated from plot,324.0,Hansbreen,RGI60-07.00240,1994-09-25,1994-09-25,0.4,True,,site D2,plot digitizer
+35,109,web map service approximation,77.1073192,15.53912754,,estimated from plot,405.0,Hansbreen,RGI60-07.00240,1995-10-05,1995-10-05,0.4,True,,site F,plot digitizer
+35,110,web map service approximation,77.0196218,15.59521456,,estimated from plot,100.0,Hansbreen,RGI60-07.00240,1979-08-02,1979-08-02,0.4,False,,site G,plot digitizer
+36,111,web map service approximation,61.22429,-140.34572,,web map service guess,2460.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 1,2, pre surge",plot digitizer
+36,112,web map service approximation,61.22533000000001,-140.35687,,web map service guess,2520.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 3, pre surge",plot digitizer
+36,113,web map service approximation,61.2234,-140.35467,,web map service guess,2520.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 4, pre surge",plot digitizer
+36,114,web map service approximation,61.2219,-140.34123,,web map service guess,2420.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 5, pre surge",plot digitizer
+36,115,web map service approximation,61.22427,-140.33176,,web map service guess,2300.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 6, pre surge",plot digitizer
+36,116,web map service approximation,61.22578000000001,-140.31965,,web map service guess,2140.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 7, pre surge",plot digitizer
+36,117,web map service approximation,61.21813,-140.35455,,web map service guess,2600.0,Trapridge Glacier,RGI60-01.16315,1972-01-01,1973-12-31,0.02,False,,"hole 8, pre surge",plot digitizer
+37,118,web map service approximation,78.68016920000001,12.119033900000002,,web map service guess,430.0,Waldemarbreen,RGI60-07.00492,2018-01-01,2019-12-31,0.2,False,accumulation area,,manual
+37,119,web map service approximation,78.68016920000001,12.119033900000002,,web map service guess,430.0,Waldemarbreen,RGI60-07.00492,2007-01-01,2008-12-31,0.2,False,accumulation area,,manual
+38,120,published,-29.35,-70.014,,published,5161.0,Guanaco Glacier,RGI60-17.14868,2011-04-04,2011-04-04,0.1,True,,,plot digitizer
+38,121,published,-29.35,-70.014,,published,5161.0,Guanaco Glacier,RGI60-17.14868,2011-10-23,2011-10-23,0.1,True,,,plot digitizer
+39,122,published,78.81,17.6,,published,1000.0,Lomonosovfonna,RGI60-07.00570,1976-01-01,1976-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
+39,123,published,79.93,19.52,,published,580.0,Vestfonna,RGI60-07.01510,1981-01-01,1981-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
+39,124,published,79.97,21.02,,published,600.0,Vestfonna,RGI60-07.01499,1995-01-01,1995-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
+39,125,published,79.85,24.14,,published,750.0,Austfonna,RGI60-07.00551,1987-01-01,1987-12-31,0.1,,,#1; accuracy = minimum accuracy,plot digitizer
+39,126,published,79.28,16.83,,published,1200.0,Høghetta,RGI60-07.00844,1987-01-01,1987-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
+39,127,published,79.13,13.3,,published,1190.0,Snøfjellafonna,RGI60-07.01464,1992-01-01,1992-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
+39,128,published,79.45,16.72,,published,1140.0,Åsgårdfonna,RGI60-07.00871,1993-01-01,1993-12-31,0.1,,,accuracy = minimum accuracy,plot digitizer
+39,129,published,79.45,95.35,,published,665.0,Vavilova Ice Dome,RGI60-09.00472,1978-01-01,1979-12-31,0.1,,,#1,plot digitizer
+39,130,published,79.5,95.08,,published,720.0,Vavilova Ice Dome,RGI60-09.00472,1982-01-01,1982-12-31,0.1,,,#2; Elevation assumed same as Nr. 131,plot digitizer
+39,131,published,79.32,96.02,,published,720.0,Vavilova Ice Dome,RGI60-09.00470,1983-01-01,1983-12-31,0.1,,,#4,plot digitizer
+39,132,published,79.38,95.72,,published,680.0,Vavilova Ice Dome,RGI60-09.00468,1984-01-01,1984-12-31,0.1,,,#5,plot digitizer
+39,133,published,80.5,94.83,,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,1986-01-01,1987-12-31,0.1,,,#1; orig. publ. gives elevation as 810,plot digitizer
+39,134,published,80.52,94.8,,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,1999-01-01,2001-12-31,0.1,,,#2; orig. publ. gives elevation as 810,plot digitizer
+39,135,published,80.78,63.55,,published,505.0,Vetreniy Ice Dome,RGI60-09.00986,1997-01-01,1997-12-31,0.1,,,,plot digitizer
+40,136,web map service guess,43.115486600000004,86.81283014,,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-01-01,1986-12-31,,,,,plot digitizer
+40,137,web map service guess,43.115486600000004,86.81283014,,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,2001-01-01,2001-12-31,,,,,plot digitizer
+40,138,web map service guess,43.115486600000004,86.81283014,,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,2006-01-01,2006-12-31,,,,,plot digitizer
+41,139,published,48.633,90.95,,published,3815.0,Tsambagarav,RGI60-10.02705,2008-06-01,2008-06-30,0.05,,accumulation area,elevation and coords don't match,plot digitizer
+41,140,published,43.05,94.316,,published,4512.0,Miaoergou,RGI60-13.48412,2005-08-01,2005-08-31,0.05,,accumulation area,elevation and coords don't match,plot digitizer
+41,141,published,38.7,97.26700000000001,,published,5356.0,Shule Nanshan,RGI60-13.32800,2007-06-01,2007-06-30,0.05,,accumulation area,elevation and coords don't match,plot digitizer
+41,142,published,28.17,86.633,,published,6303.0,Gyabrag,RGI60-15.10175,2005-10-01,2005-10-31,0.05,,accumulation area,elevation and coords don't match,plot digitizer
+10,143,digitized from plot,86383.68,633922.4,21781,published,4480.0,Gornergletscher,RGI60-11.02822,1996-01-01,1997-12-31,0.05,True,accumulation area,b95-1,plot digitizer
+10,144,digitized from plot,86484.805,633744.75,21781,published,4450.0,Gornergletscher,RGI60-11.02822,1996-01-01,1997-12-31,0.05,True,accumulation area,b95-2,plot digitizer
+10,297,digitized from plot,86575.84,633796.06,21781,published,4450.0,Gornergletscher,RGI60-11.02822,1983-01-01,1983-12-31,0.05,False,,b82-1,
+46,145,web map service guess,35.221779299999994,81.11527554,,digitized from plot,5800.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S0,plot digitizer
+46,146,web map service guess,35.2351867,81.11135593,,digitized from plot,5975.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S4,plot digitizer
+46,147,web map service guess,35.246191100000004,81.10829374,,digitized from plot,6120.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S8,plot digitizer
+46,148,web map service guess,35.26191,81.10065704,,digitized from plot,6325.0,Chongce Ice Cap,RGI60-13.53222,1987-01-01,1987-12-31,0.1,,,S12,plot digitizer
+46,149,web map service approximation,43.115486600000004,86.81283014,,estimated from plot,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-09-27,1986-09-27,0.1,False,,T1,plot digitizer
+46,150,web map service approximation,43.111059399999995,86.80957723,,estimated from plot,3960.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-09-27,1986-09-27,0.1,False,,T2,plot digitizer
+46,151,web map service approximation,43.106036700000004,86.80647755,,estimated from plot,4050.0,Urumqi Glacier No. 1,RGI60-13.45335,1986-09-27,1986-09-27,0.1,True,,T3,plot digitizer
+47,152,web map service approximation,-31.962010999999997,-70.12193520000001,,published,6070.0,Glaciar La Ollada (Mercedario),RGI60-17.14412,,,,,,,plot digitizer
+47,153,web map service approximation,-29.35,-70.014,,published,5161.0,Guanaco Glacier,RGI60-17.14868,,,,,,,plot digitizer
+48,154,web map service approximation,-30.140240999999996,-69.931488,,published,5536.0,Tapado Glacier,RGI60-17.14647,1992-02-01,1992-02-29,,True,,,plot digitizer
+50,155,web map service approximation,27.9437778,86.81773669,,published,4884.0,Khumbu Glacier,RGI60-15.03733,2017-05-01,2017-05-31,0.05,,,,plot digitizer
+50,156,web map service approximation,27.9695686,86.82870764,,published,4980.0,Khumbu Glacier,RGI60-15.03733,2017-05-01,2017-05-31,0.05,False,,,plot digitizer
+50,157,web map service approximation,27.991737,86.84700289,,published,5206.0,Khumbu Glacier,RGI60-15.03733,2017-05-01,2017-05-31,0.05,False,,,plot digitizer
+51,158,web map service approximation,79.5082542,-90.8441553,,published,1024.0,White Glacier,RGI60-03.04539,1974-08-25,1974-08-25,0.2,,,I,plot digitizer
+51,159,web map service approximation,79.48509859999999,-90.7876998,,published,717.0,White Glacier,RGI60-03.04539,1974-08-25,1974-08-25,0.2,,,II,plot digitizer
+51,160,web map service approximation,79.4731948,-90.7527512,,published,626.0,White Glacier,RGI60-03.04539,1974-08-25,1974-08-25,0.2,,,III,plot digitizer
+52,161,web map service guess,43.133965100000005,-109.60994099999999,,web map service guess,3920.0,Upper Fremont Glacier,RGI60-02.18799,1990-01-01,1990-12-31,0.4,False,,,manual
+54,162,web map service approximation,77.4924878,15.25323517,,published,204.0,Finsterwalderbreen,RGI60-07.00231,1994-04-01,1994-04-30,0.05,True,ablation area,,plot digitizer
+54,163,web map service approximation,77.4366271,15.22366244,,published,580.0,Finsterwalderbreen,RGI60-07.00231,1995-04-01,1995-04-30,0.05,True,accumulation area,,plot digitizer
+55,164,web map service approximation,52.19942,-117.24298999999999,,published,2140.0,Athabasca Glacier,RGI60-02.12441,1967-04-01,1967-06-30,,False,hole 209,took average of two measurements,plot digitizer
+55,165,web map service approximation,52.204229999999995,-117.23711000000002,,published,2075.0,Athabasca Glacier,RGI60-02.12441,1967-06-30,1969-08-31,,False,hole 72,took average of two measurements,plot digitizer
+55,166,web map service approximation,52.19258,-117.25908000000001,,published,2235.0,Athabasca Glacier,RGI60-02.12441,1968-08-01,1969-08-31,,False,hole 100,took average of two measurements,plot digitizer
+56,167,web map service approximation,67.9036926,18.56956375,,web map service guess,1400.0,Storglaciären,RGI60-08.00213,2002-04-01,2002-04-30,0.05,False,,,plot digitizer
+57,168,published,48.655640399999996,90.84707854,,published,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,2009-07-01,2007-07-31,,True,,,plot digitizer
+58,169,published,90579.0,627883.0,21781,published,2516.0,Grenzgletscher,RGI60-11.02822,2006-05-28,2006-05-28,0.05,True,ablation area,l5,plot digitizer
+58,170,published,91030.0,627042.0,21781,published,2468.0,Grenzgletscher,RGI60-11.02822,2005-06-11,2005-06-11,0.05,False,ablation area,ll5,plot digitizer
+58,171,published,91175.0,627434.0,21781,published,2485.0,Grenzgletscher,RGI60-11.02822,2010-06-15,2010-06-15,0.05,False,ablation area,f13,plot digitizer
+58,172,published,90957.0,627748.0,21781,published,2501.0,Grenzgletscher,RGI60-11.02822,2007-05-27,2007-05-27,0.05,False,ablation area,f9,plot digitizer
+58,173,published,90676.0,627970.0,21781,published,2514.0,Grenzgletscher,RGI60-11.02822,2008-06-09,2008-06-09,0.05,False,ablation area,f5,plot digitizer
+58,174,published,90674.0,627557.0,21781,published,2497.0,Grenzgletscher,RGI60-11.02822,2004-06-15,2004-06-15,0.05,True,ablation area,ll9,plot digitizer
+58,175,published,90867.0,628073.0,21781,published,2506.0,Grenzgletscher,RGI60-11.02822,2006-05-27,2006-05-27,0.05,True,ablation area,r6,plot digitizer
+58,176,published,90938.0,627681.0,21781,published,2499.0,Grenzgletscher,RGI60-11.02822,2010-06-13,2010-06-13,0.05,False,ablation area,l9a,plot digitizer
+58,177,published,90474.0,628018.0,21781,published,2522.0,Grenzgletscher,RGI60-11.02822,2008-06-10,2008-06-10,0.05,False,ablation area,f1,plot digitizer
+58,178,published,90509.0,627807.0,21781,published,2514.0,Grenzgletscher,RGI60-11.02822,2008-06-11,2008-06-11,0.05,False,ablation area,f3,plot digitizer
+59,179,published,-49.278195000000004,-73.35356479999999,,published,2600.0,Pio XI glacier,RGI60-17.05181,2006-08-01,2006-08-31,,False,accumulation area,,plot digitizer
+60,180,digitized from plot,56.07338000000001,160.4685,,estimated from plot,3870.0,Blichenok glacier,RGI60-10.04022,1996-01-01,1997-12-31,0.1,False,,BH1 (yearly average),plot digitizer
+60,181,digitized from plot,56.074062,160.4679,,estimated from plot,3870.0,Blichenok glacier,RGI60-10.04022,1998-01-01,1998-12-31,0.1,False,,K2,plot digitizer
+61,182,published,130600.0,582608.0,21781,published,2810.0,Glacier du Sex Rouge,RGI60-11.02244,2013-11-17,2013-11-17,,False,,#1,plot digitizer
+61,183,published,130754.0,582582.0,21781,published,2780.0,Glacier du Sex Rouge,RGI60-11.02244,2014-09-11,2014-09-11,,False,,#2,plot digitizer
+61,184,published,161213.0,688857.0,21781,published,2855.0,St. Annafirn,RGI60-11.01367,2014-09-04,2014-09-04,,False,,#6,manual
+61,185,published,161690.0,689086.0,21781,published,2650.0,St. Annafirn,RGI60-11.01367,2013-10-03,2013-10-03,,False,,#9,manual
+62,186,web map service approximation,78.67358,12.13132,,published,420.0,Irenebreen,RGI60-07.00490,2008-01-01,2009-12-31,0.2,False,,annual mean,plot digitizer
+63,187,web map service approximation,79.59450129999999,12.56989669,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site1 min,plot digitizer
+63,188,web map service approximation,79.59450129999999,12.56989669,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 1 max,plot digitizer
+63,189,web map service approximation,79.59856429999999,12.60153683,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 2 min,plot digitizer
+63,190,web map service approximation,79.59856429999999,12.60153683,,digitized from plot,25.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 2 max,plot digitizer
+63,191,web map service approximation,79.5995375,12.58114652,,digitized from plot,70.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 3 min,plot digitizer
+63,192,web map service approximation,79.5995375,12.58114652,,digitized from plot,70.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 3 max,plot digitizer
+63,193,web map service approximation,79.61868659999999,12.51200694,,digitized from plot,375.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 7 min,plot digitizer
+63,194,web map service approximation,79.61868659999999,12.51200694,,digitized from plot,375.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 7 max,plot digitizer
+63,195,web map service approximation,79.62265579999999,12.42997693,,digitized from plot,540.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 9 min,plot digitizer
+63,196,web map service approximation,79.62265579999999,12.42997693,,digitized from plot,540.0,Erikbreen,RGI60-07.00768,1990-01-01,1992-12-31,0.1,False,,site 9 max,plot digitizer
+64,197,web map service approximation,35.8165362,90.75000214,,published,5680.0,Malan Glacier,RGI60-13.48935,1999-01-01,1999-12-31,0.01,False,,,plot digitizer
+66,198,web map service approximation,38.105165299999996,96.41680018,,published,5325.0,Dunde Ice Cap,RGI60-13.35422,1984-01-01,1984-12-31,,True,summit region,caption and legend do not agree,plot digitizer
+67,199,web map service approximation,35.2308014,81.46574059,,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,1992-01-01,1992-12-31,,False,plateau region,caption and legend do not agree,plot digitizer
+67,200,web map service approximation,35.2308014,81.46574059,,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,2015-01-01,2015-12-31,,True,plateau region,,plot digitizer
+67,201,web map service approximation,35.275074100000005,81.49244657,,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,1991-01-01,1991-12-31,,False,summit region,,plot digitizer
+67,202,web map service approximation,35.275074100000005,81.49244657,,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,2015-01-01,2015-12-31,,True,summit region,,plot digitizer
+69,206,web map service approximation,45.8417942,6.846642185,,published,4250.0,Col du Dôme-Bossons,RGI60-11.03646,2017-01-01,2017-12-31,0.05,True,accumulation area,,plot digitizer
+70,207,published,33.212778,91.154167,,published,5800.0,Geladandong Ice Cap,RGI60-13.49384,2004-04-22,2004-04-22,0.05,False,,geothermal hotspot suspected under drill site,plot digitizer
+71,208,web map service approximation,39.4783238,96.53493886,,published,4550.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,site 1,,plot digitizer
+71,209,web map service approximation,39.441861700000004,96.55545016,,published,4900.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,site 2,,plot digitizer
+71,210,web map service approximation,39.429247,96.55633645,,published,5040.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,site 3,,plot digitizer
+71,211,web map service approximation,39.4355057,96.55583,,published,4971.0,Laohugou Glacier,RGI60-13.33006,2010-01-01,2011-12-31,0.05,False,deep borehole site,,plot digitizer
+73,212,web map service guess,79.78064,24.680979999999998,,published,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,,summit region,digizied deepest measurements (indicated with + in plot),plot digitizer
+73,213,web map service guess,-18.10813679,-68.88302202,,published,6548.0,Nevado Sajama,RGI60-16.01587,1997-01-01,1998-12-31,,,summit region,,plot digitizer
+73,214,web map service guess,-15.54037719,-72.66184742,,published,6451.0,Coropuna,RGI60-16.01486,2003-01-01,2003-12-31,,,rim,,plot digitizer
+73,215,web map service guess,-15.54586811,-72.66056844,,published,6326.0,Coropuna,RGI60-16.01486,2003-01-01,2003-12-31,,,crater,,plot digitizer
+75,216,web map service approximation,69.63971832,-72.14945899,,digitized from plot,685.0,Barnes Ice Cap,RGI60-04.06187,1975-05-17,1975-05-17,0.1,False,,14.3 T; within surge zone,manual
+75,217,web map service approximation,69.5815068,-72.12125013,,digitized from plot,565.0,Barnes Ice Cap,RGI60-04.06187,1975-05-21,1975-05-21,0.1,False,,19.5 T; within surge zone,manual
+75,218,web map service approximation,69.54665509,-72.11040056,,digitized from plot,450.0,Barnes Ice Cap,RGI60-04.06187,1975-05-08,1975-05-08,0.1,False,,24.55 T; within surge zone,manual
+76,219,digitized from plot,69.81379,-72.09318499999999,,estimated from plot,525.0,Barnes Ice Cap,RGI60-04.06187,1975-06-12,1975-06-12,0.05,False,,T0975; elevation data fro Hooke 1980,plot digitizer
+76,220,digitized from plot,69.80686,-72.10005,,estimated from plot,575.0,Barnes Ice Cap,RGI60-04.06187,1976-07-05,1976-07-05,0.05,False,,T091; elevation data fro Hooke 1980,plot digitizer
+76,221,digitized from plot,69.79795,-72.110344,,estimated from plot,650.0,Barnes Ice Cap,RGI60-04.06187,1977-06-13,1977-06-13,0.05,False,,T081; elevation data fro Hooke 1980,plot digitizer
+76,222,digitized from plot,69.78211,-72.12066,,estimated from plot,725.0,Barnes Ice Cap,RGI60-04.06187,1976-07-01,1976-07-01,0.05,False,,T061; elevation data fro Hooke 1980,plot digitizer
+76,223,digitized from plot,69.74945,-72.154976,,estimated from plot,850.0,Barnes Ice Cap,RGI60-04.06187,1976-07-09,1976-07-09,0.05,False,,T020; elevation data fro Hooke 1980,plot digitizer
+76,224,digitized from plot,69.78899,-71.9703,,estimated from plot,670.0,Barnes Ice Cap,RGI60-04.06187,1974-06-27,1974-06-27,0.05,True,,C4 (D4 in Hooke 1980); elevation data fro Hooke 1980,plot digitizer
+76,225,digitized from plot,69.71965,-71.89204000000001,,estimated from plot,670.0,Barnes Ice Cap,RGI60-04.06187,1974-06-14,1974-06-14,0.05,False,,B4; elevation data fro Hooke 1980,plot digitizer
+78,226,from metadata,76.4113,-68.2873,,estimated from plot,505.0,Tuto Ramp,RGI60-05.07772,1962-08-15,1962-08-15,,True,,D-11; elevation data fro Hooke 1980,import
+78,227,from metadata,71.306,-26.768,,web map service guess,2325.0,Renland Ice Cap,RGI60-05.16072,1988-01-01,1988-12-31,,False,,,import
+78,228,from metadata,78.3897,-80.395,,web map service guess,1600.0,Prince of Wales Ice Cap,RGI60-03.01708,2005-05-15,2005-05-15,,True,,,import
+78,229,from metadata,67.3,-65.2,,published,1810.0,Penny Ice Cap,RGI60-04.05688,1996-01-01,1996-12-31,,True,,,import
+78,230,from metadata,79.93,-99.1,,web map service guess,250.0,Meighen Ice Cap,RGI60-03.00691,1965-01-01,1965-12-31,,True,,,import
+78,231,from metadata,82.84,-36.67,,web map service guess,900.0,Hans Tausen Hare,RGI60-05.10726,1995-01-01,1995-12-31,,True,,,import
+78,232,from metadata,82.51,-37.47,,web map service guess,1250.0,Hans Tausen Dome,RGI60-05.10756,1995-01-01,1995-12-31,,True,,,import
+78,233,from metadata,81.2926,-15.7029,,web map service guess,690.0,Flade Isblink Ice Cap,RGI60-05.10315,2006-01-01,2006-12-31,,False,,,import
+78,234,published,75.32,-81.64,,published,1930.0,Devon Ice Cap,RGI60-03.02467,2000-04-15,2000-04-15,,False,,Location data from Kinndard 2006 (10.3189/172756406781811349),import
+78,235,from metadata,75.34,-82.14,,published,1800.0,Devon Ice Cap,RGI60-03.02467,1973-01-01,1973-01-01,,True,,,import
+78,236,from metadata,75.3,-82.3,,published,1800.0,Devon Ice Cap,RGI60-03.02467,1972-01-01,1972-12-31,,False,,,import
+78,237,from metadata,80.7,-73.1,,web map service guess,1770.0,Agassiz ,RGI60-03.00098,1984-01-01,1984-12-31,,,,location within 2 km,import
+78,238,from metadata,80.7,-73.1,,web map service guess,1770.0,Agassiz,RGI60-03.00098,1979-01-01,1979-12-31,,,,location within 2 km,import
+78,239,from metadata,80.7,-73.1,,web map service guess,1770.0,Agassiz,RGI60-03.00098,1979-01-01,1979-12-31,,,,location within 2 km,import
+78,240,from metadata,80.7,-73.1,,web map service guess,1770.0,Agassiz,RGI60-03.00098,1977-01-01,1977-12-31,,,,location within 2 km,import
+74,241,from metadata,28.02767227,86.95550508,,published,6350.0,East Rongbuk Glacier,RGI60-15.10055,2008-05-04,2008-05-04,,,,,import
+79,242,from metadata,6754776.0,583859.0,32607,from metadata,1772.0,Little Kluane Glacier,RGI60-01.16198,2019-10-01,2019-10-01,0.2,False,Lower ablation area,Glacier surged vigorously in 2017-2018; measurement accuracy; time-series available from Gwenn Flowers. Location data from single-frequency GPS,import
+80,243,from metadata,6754448.0,600120.0,32607,from metadata,2371.0,North Glacier,RGI60-01.16835,2011-09-08,2011-09-08,0.1,False,central ablation area of small valley glacier,Glacier is not surge-type. Ice thickness is ~110m in borehole location. The false precision reported for temperature is a consequence of converting values read out in F to C (!). Supporting information in study 74. Location data from single-frequency GPS,import
+81,244,from metadata,6744434.951,602248.795,32607,from metadata,2395.902,South Glacier,RGI60-01.16195,2011-10-01,2011-10-01,0.1,True,central ablation area of small surge-type valley glacier,"Glacier is surge-type and last surged vigorously in the 1980s. Interpreted to be undergoing a ""slow surge"" (see https://tc.copernicus.org/articles/5/299/2011/) at the time of temperature measurement. Time-series available from Gwenn Flowers. Supporting information in study 74. Location data from Trimble RTK survey",import
+82,245,from metadata,-62.666004,-60.35266,,from metadata,126.0,Johnson Glacier,RGI60-19.02059,2016-03-08,2016-03-08,0.05,True,,,import
+82,246,from metadata,-62.671643,-60.350249,,from metadata,172.0,Johnson Glacier,RGI60-19.02059,2016-03-08,2016-03-08,0.05,True,,,import
+83,247,from metadata,28.809917,83.493183,,from metadata,5637.0,Rikha Samba Glacier,RGI60-15.04847,2014-12-01,2014-12-15,,False,ablation area,Two-week average; Full time-series (2014-11-09 to 2015-02-08) available from ICIMOD / Tika Gurung. ,import
+83,248,from metadata,28.810133,83.495183,,from metadata,5617.0,Rikha Samba Glacier,RGI60-15.04847,2014-12-01,2014-12-15,,False,ablation area,Two-week average; Full time-series (2014-11-09 to 2015-10-05) available from ICIMOD / Tika Gurung. ,import
+84,249,from metadata,76.92008508,-66.9525292,,from metadata,691.0,Nunatarssuaq Ice Cap,RGI60-05.08054,2017-08-12,2017-08-19,,False,,"Supporting information in: Abermann, J., Steiner, J., Prinz, R., Wecht, M., & Lisager, P. (2020). The Red Rock ice cliff revisited – six decades of frontal, mass and area changes in the Nunatarssuaq area, Northwest Greenland. Journal of Glaciology, 66(258), 567-576. doi:10.1017/jog.2020.28",import
+84,250,from metadata,76.91991055,-66.95246654,,from metadata,686.0,Nunatarssuaq Ice Cap,RGI60-05.08054,2017-08-12,2017-08-19,,False,~20 m back from a dry-calving ice cliff,"Supporting information: Abermann, J., Steiner, J., Prinz, R., Wecht, M., & Lisager, P. (2020). The Red Rock ice cliff revisited – six decades of frontal, mass and area changes in the Nunatarssuaq area, Northwest Greenland. Journal of Glaciology, 66(258), 567-576. doi:10.1017/jog.2020.28",import
+17,251,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-01-01,1979-01-31,,False,accumulation area,profile 1,plot digitizer
+17,252,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-02-01,1979-02-28,,False,accumulation area,profile 2,plot digitizer
+17,253,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-03-01,1979-03-31,,False,accumulation area,profile 3,plot digitizer
+17,254,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-04-01,1979-04-30,,False,accumulation area,profile 4,plot digitizer
+17,255,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-05-01,1979-05-31,,False,accumulation area,profile 5,plot digitizer
+17,256,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-06-01,1979-06-30,,False,accumulation area,profile 6,plot digitizer
+17,257,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-07-01,1979-07-31,,False,accumulation area,profile 7,plot digitizer
+17,258,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-08-01,1979-08-31,,False,accumulation area,profile 8,plot digitizer
+17,259,web map service approximation,79.440048,95.382408,,published,650.0,Vavilov Ice Cap,RGI60-09.00468,1979-09-01,1979-09-30,,False,accumulation area,profile 9,plot digitizer
+2,260,web map service approximation,79.53638000000001,-91.03409,,published,1536.0,White Glacier,RGI60-03.04539,1977-01-01,1977-01-31,0.2,False,accumulation area,,plot digitizer
+2,261,web map service approximation,79.52396999999999,-90.96165,,web map service guess,1310.0,White Glacier,RGI60-03.04539,1979-02-01,1979-02-28,0.2,False,accumulation area,,plot digitizer
+2,262,web map service approximation,79.51597,-90.89401,,published,1172.0,White Glacier,RGI60-03.04539,1981-01-01,1981-01-31,0.2,False,accumulation area,,plot digitizer
+2,263,web map service approximation,79.50766,-90.85041,,published,1045.0,White Glacier,RGI60-03.04539,1981-02-01,1981-02-28,0.2,False,accumulation area,,plot digitizer
+2,264,web map service approximation,79.4974,-90.83256,,published,900.0,White Glacier,RGI60-03.04539,1975-07-01,1975-07-31,0.2,False,accumulation area,,plot digitizer
+2,265,web map service approximation,79.49401999999999,-90.82123,,published,871.0,White Glacier,RGI60-03.04539,1981-03-01,1981-03-31,0.2,False,accumulation area,,plot digitizer
+2,266,web map service approximation,79.48651,-90.79514,,published,750.0,White Glacier,RGI60-03.04539,1979-03-01,1979-03-31,0.2,False,near ELA,,plot digitizer
+2,267,web map service approximation,79.45313,-90.69436999999999,,published,385.0,White Glacier,RGI60-03.04539,1976-01-01,1976-01-31,0.2,True,accumulation area,,plot digitizer
+8,268,published,86418.0,633872.0,21781,published,4470.0,Grenzgletscher,RGI60-11.02822,2008-08-27,2008-08-27,0.1,False,accumulation area,CG07-1/08,plot digitizer
+8,269,published,85620.0,633700.0,21781,published,4330.0,Grenzgletscher,RGI60-11.02822,1999-05-01,1999-05-31,0.1,False,accumulation area,SJ99-10/99,plot digitizer
+8,270,published,86620.0,633686.0,21781,published,4335.0,Grenzgletscher,RGI60-11.02822,2008-08-26,2008-08-26,0.1,False,accumulation area,SJ08-8/08,plot digitizer
+8,271,published,85765.0,633750.0,21781,published,4293.0,Grenzgletscher,RGI60-11.02822,1999-09-01,1999-09-01,0.1,False,accumulation area,SJ98-A/99,plot digitizer
+8,272,published,85765.0,633750.0,21781,published,4293.0,Grenzgletscher,RGI60-11.02822,2008-08-27,2008-08-27,0.1,False,accumulation area,SJ08-6/08,plot digitizer
+8,273,published,86576.0,633798.0,21781,published,4450.0,Grenzgletscher,RGI60-11.02822,1982-01-01,1982-12-31,0.1,False,accumulation area,CG82-1/82,plot digitizer
+8,274,published,86524.0,633847.0,21781,published,4454.0,Grenzgletscher,RGI60-11.02822,2003-09-17,2003-09-17,0.1,False,accumulation area,CG03-1/03,plot digitizer
+8,275,published,86554.0,634002.0,21781,published,4425.0,Grenzgletscher,RGI60-11.02822,2007-11-03,2007-11-03,0.1,False,accumulation area,CG05-2/07 or CG05-1/07,plot digitizer
+8,276,published,86383.0,633922.0,21781,published,4475.0,Grenzgletscher,RGI60-11.02822,1997-10-18,1997-10-18,0.1,False,accumulation area,CG95-1/97,plot digitizer
+8,277,published,86484.0,633746.0,21781,published,4448.0,Grenzgletscher,RGI60-11.02822,1997-10-18,1997-10-18,0.1,False,accumulation area,CG95-2/97,plot digitizer
+38,278,published,-29.35,-70.014,,published,5161.0,Guanaco Glacier,RGI60-17.14868,2008-11-04,2008-11-04,0.1,True,,,plot digitizer
+38,279,published,-29.35,-70.014,,published,5161.0,Guanaco Glacier,RGI60-17.14868,2010-03-13,2010-03-13,0.1,True,,,plot digitizer
+39,280,published,79.8,25.8,,published,500.0,Austfonna,RGI60-07.00551,1997-01-01,1997-12-31,0.1,,,#2; accuracy = minimum accuracy,plot digitizer
+39,281,published,79.8,24.0,,published,750.0,Austfonna,RGI60-07.00551,1998-01-01,1998-12-31,0.1,,,#3; accuracy = minimum accuracy,plot digitizer
+46,282,web map service approximation,29.566229999999997,101.84461,,published,4540.0,Dagongba Glacier,RGI60-15.07851,1982-09-30,1982-09-30,0.05,False,ablation area,,plot digitizer
+46,283,web map service approximation,27.106790000000004,100.19538,,published,4600.0,Baishuihe Glacier No. 1,RGI60-15.07645,1982-07-11,1982-07-11,0.05,False,,,plot digitizer
+51,284,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1959-01-01,1959-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,285,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1960-01-01,1960-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,286,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1961-01-01,1961-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,287,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1962-01-01,1962-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,288,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1963-01-01,1963-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,289,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1964-01-01,1964-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,290,web map service approximation,79.43863,-90.64459000000001,,published,205.0,White Glacier,RGI60-03.04539,1965-01-01,1965-12-31,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+58,291,published,91147.0,627506.0,21781,published,2490.0,Grenzgletscher,RGI60-11.02822,2007-05-30,2007-05-30,0.05,False,ablation area,f12,plot digitizer
+58,292,published,90891.0,627636.0,21781,published,2500.0,Grenzgletscher,RGI60-11.02822,2010-06-14,2010-06-14,0.05,False,ablation area,I9b,plot digitizer
+73,293,web map service guess,79.78064,24.680979999999998,,published,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
+73,294,web map service guess,79.78064,24.680979999999998,,published,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
+73,295,web map service guess,79.78064,24.680979999999998,,published,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
+73,296,web map service guess,79.78064,24.680979999999998,,published,750.0,Austfonna,RGI60-07.00027,1978-01-01,1978-12-31,,False,summit region,,plot digitizer
