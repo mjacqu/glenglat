@@ -153,6 +153,9 @@ resources:
         - name: id
           description: Unique identifier.
           type: integer
+          constraints: 
+            unique: true 
+            required: true
         - name: source_id
           description: Source ID.
           type: integer
@@ -169,6 +172,8 @@ resources:
           description: Depth measurement in meters below the glacier surface.
           type: number
           unit: 'm'
+          constraints: 
+            required: true
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
