@@ -82,6 +82,7 @@ resources:
             - web map service guess: Comparison against published plot was hard, largely relied on elevation to find probably location
           type: string
           constraints:
+            required: true
             enum: ['published', 'digitized from plot', 'from metadata', 'web map service approximation', 'web map service guess']
         - name: y_lat
           description: Latitude or Y (north-south) coordinate.
@@ -107,6 +108,7 @@ resources:
             - web map service guess: Comparison against location and modern elevation dataset embedded in web map service (e.g., caltopo, google maps)
           type: string
           constraints:
+            required: true
             enum: ['published', 'digitized from plot', 'estimated from plot', 'from metadata', 'web map service guess']
         - name: elevation
           description: Elevation of borehole drill site in meters above sea-level (masl).
