@@ -46,6 +46,7 @@ resources:
           type: string
           constraints:
             required: true
+            pattern: '[^\s]+( [^\s]+)*'
         - name: year
           description: Year of study publication or data submission.
           type: year
@@ -54,12 +55,16 @@ resources:
         - name: title
           description: Full publication title or "personal communication" if data was submitted but not published anyhwere in the submitted form.
           type: string
+          constraints: 
+            pattern: '[^\s]+( [^\s]+)*'
         - name: included
           description: Indicator of whether any data from the given study was included in the database.
           type: boolean
         - name: url
           description: DOI url for published studies if available, null if data was submitted directly.
           type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
       primaryKey: ['source_id']
       missingValues: ['']
   - name: boreholes
@@ -99,6 +104,7 @@ resources:
           type: string
           constraints:
             required: true
+            pattern: '[^\s]+( [^\s]+)*'
             enum: ['published', 'digitized from plot', 'from metadata', 'web map service approximation', 'web map service guess']
         - name: y_lat
           description: Latitude or Y (north-south) coordinate.
@@ -125,6 +131,7 @@ resources:
           type: string
           constraints:
             required: true
+            pattern: '[^\s]+( [^\s]+)*'
             enum: ['published', 'digitized from plot', 'estimated from plot', 'from metadata', 'web map service guess']
         - name: elevation
           description: Elevation of borehole drill site in meters above sea-level (masl).
@@ -138,6 +145,7 @@ resources:
           type: string
           constraints:
             required: true
+            pattern: '[^\s]+( [^\s]+)*'
         - name: rgi_id
           description: Randolph Glacier Inventory ID from RGI 6.0. 
           type: string
@@ -163,9 +171,13 @@ resources:
         - name: site_description
           description: Description of site area (e.g. accumulation or ablation area, summit region etc.).
           type: string
+          constraints: 
+            pattern: '[^\s]+( [^\s]+)*'
         - name: notes
           description: Any additional notes about borehole location or measurement.
           type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
         - name: extraction_method
           description: |-
             Specification of data extraction method.
@@ -175,6 +187,7 @@ resources:
             - import: direct data import from source
           type: string
           constraints:
+            pattern: '[^\s]+( [^\s]+)*'
             enum: ['plot digitizer', 'manual', 'import']
       missingValues: ['']
       primaryKey: ['borehole_id']
