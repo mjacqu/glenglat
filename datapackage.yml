@@ -60,6 +60,8 @@ resources:
         - name: included
           description: Indicator of whether any data from the given study was included in the database.
           type: boolean
+          trueValues: ['true', 'True', 'TRUE']
+          falseValues: ['false', 'False', 'FALSE']
         - name: url
           description: DOI url for published studies if available, null if data was submitted directly.
           type: string
@@ -168,6 +170,8 @@ resources:
         - name: to_bottom
           description: Indication whether the borehole reached bedrock (TRUE, FALSE, or null).
           type: boolean
+          trueValues: ['true', 'True', 'TRUE']
+          falseValues: ['false', 'False', 'FALSE']
         - name: site_description
           description: Description of site area (e.g. accumulation or ablation area, summit region etc.).
           type: string
