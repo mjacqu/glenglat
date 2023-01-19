@@ -241,3 +241,47 @@ resources:
           reference:
             resource: borehole
             fields: ['id']
+        - fields: ['time_id']
+          reference:
+            resource: measurement_times
+            fields: ['id']
+  - name: measurement_times
+    description: Date or datetimes of individual profile measurements.
+    path: data/measurement_times.csv
+    format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id
+          description: Unique identifier.
+          type: integer
+          constraints: 
+            unique: true 
+            required: true
+        - name: borehole_id
+          description: Borehole ID. 
+          type: integer
+          constraints:
+            required: true
+        - name: start_datetime
+          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
+          type: date
+          format: '%Y-%m-%d'
+        - name: end_datetime
+          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
+          type: date
+          format: '%Y-%m-%d'
+      missingValues: ['']
+      primaryKey: ['id']
+      foreignKeys:
+        - fields: ['borehole_id']
+          reference:
+            resource: borehole
+            fields: ['id']
+  
