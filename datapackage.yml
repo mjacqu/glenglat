@@ -155,14 +155,6 @@ resources:
             required: true
             maxLength: 14
             pattern: 'RGI60-\d{2}.\d{5}'
-        - name: start_date
-          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
-          type: date
-          format: '%Y-%m-%d'
-        - name: end_date
-          description: Date of temperature measurement or, if not known precisely, the latest possible date (e.g. '2019' -> '2019-12-31').
-          type: date
-          format: '%Y-%m-%d'
         - name: temperature_accuracy
           description: Thermistor accuracy or precision (+/- °C) as published or provided by contributors. Understood to typically refer to a standard deviation.
           type: number
@@ -221,6 +213,11 @@ resources:
             required: true
         - name: borehole_id
           description: Borehole ID. 
+          type: integer
+          constraints:
+            required: true
+        - name: time_id
+          description: Time ID. 
           type: integer
           constraints:
             required: true
