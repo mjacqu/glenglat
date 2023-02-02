@@ -274,6 +274,10 @@ resources:
           description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
           type: date
           format: '%Y-%m-%d'
+        - name: timestamp
+          description: Timestamp of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes. 
+          type: time
+          format: "%H:%M:%S"
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
