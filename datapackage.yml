@@ -216,8 +216,8 @@ resources:
           type: integer
           constraints:
             required: true
-        - name: time_id
-          description: Time ID. 
+        - name: timestamp_id
+          description: Timestamp ID. 
           type: integer
           constraints:
             required: true
@@ -238,13 +238,13 @@ resources:
           reference:
             resource: borehole
             fields: ['id']
-        - fields: ['time_id']
+        - fields: ['timestamp_id']
           reference:
-            resource: measurement_times
+            resource: timestamp
             fields: ['id']
-  - name: measurement_times
-    description: Date or datetimes of individual profile measurements.
-    path: data/measurement_times.csv
+  - name: timestamp
+    description: Date range and timestamp (if available) of individual profile measurements.
+    path: data/timestamp.csv
     format: csv
     dialect:
       header: true
@@ -266,16 +266,16 @@ resources:
           type: integer
           constraints:
             required: true
-        - name: start_datetime
+        - name: date_min
           description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
           type: date
           format: '%Y-%m-%d'
-        - name: end_datetime
+        - name: date_max
           description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
           type: date
           format: '%Y-%m-%d'
-        - name: timestamp
-          description: Timestamp of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes. 
+        - name: time
+          description: Time of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes. 
           type: time
           format: "%H:%M:%S"
       missingValues: ['']

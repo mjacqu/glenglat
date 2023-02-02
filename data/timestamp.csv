@@ -1,4 +1,4 @@
-id,borehole_id,start_datetime,end_datetime,timestamp
+id,borehole_id,date_min,date_max,time
 1,1,1978-01-01,1978-12-31,
 2,2,1979-01-01,1979-12-31,
 3,3,1980-01-01,1980-12-31,

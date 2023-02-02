@@ -1,4 +1,4 @@
-id,borehole_id,time_id,temperature,depth
+id,borehole_id,timestamp_id,temperature,depth
 1,1,1,-14.924528,9.248555
 2,1,1,-14.669811,12.716763
 3,1,1,-14.443397,17.34104
