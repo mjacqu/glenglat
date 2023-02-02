@@ -155,14 +155,6 @@ resources:
             required: true
             maxLength: 14
             pattern: 'RGI60-\d{2}.\d{5}'
-        - name: start_date
-          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
-          type: date
-          format: '%Y-%m-%d'
-        - name: end_date
-          description: Date of temperature measurement or, if not known precisely, the latest possible date (e.g. '2019' -> '2019-12-31').
-          type: date
-          format: '%Y-%m-%d'
         - name: temperature_accuracy
           description: Thermistor accuracy or precision (+/- °C) as published or provided by contributors. Understood to typically refer to a standard deviation.
           type: number
@@ -224,6 +216,11 @@ resources:
           type: integer
           constraints:
             required: true
+        - name: timestamp_id
+          description: Timestamp ID. 
+          type: integer
+          constraints:
+            required: true
         - name: temperature
           description: Temperature measurement in degrees celcius.
           type: number
@@ -241,3 +238,51 @@ resources:
           reference:
             resource: borehole
             fields: ['id']
+        - fields: ['timestamp_id']
+          reference:
+            resource: timestamp
+            fields: ['id']
+  - name: timestamp
+    description: Date range and timestamp (if available) of individual profile measurements.
+    path: data/timestamp.csv
+    format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id
+          description: Unique identifier.
+          type: integer
+          constraints: 
+            unique: true 
+            required: true
+        - name: borehole_id
+          description: Borehole ID. 
+          type: integer
+          constraints:
+            required: true
+        - name: date_min
+          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
+          type: date
+          format: '%Y-%m-%d'
+        - name: date_max
+          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
+          type: date
+          format: '%Y-%m-%d'
+        - name: time
+          description: Time of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes. 
+          type: time
+          format: "%H:%M:%S"
+      missingValues: ['']
+      primaryKey: ['id']
+      foreignKeys:
+        - fields: ['borehole_id']
+          reference:
+            resource: borehole
+            fields: ['id']
+  
