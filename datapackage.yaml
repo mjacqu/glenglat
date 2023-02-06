@@ -1,7 +1,7 @@
 name: glenglat
 version: 0.1.0
 created: '2022-10-27T15:17:45Z'
-title: Global englacial temperature database (glenglat)
+title: Global englacial temperature database
 profile: tabular-data-package
 description: Measured englacial temperatures digitized from published studies or submitted by the authors.
 languages:
