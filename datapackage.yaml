@@ -278,7 +278,7 @@ resources:
         - name: time
           description: Time of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes.
           type: time
-          format: "%H:%M:%S"
+          format: '%H:%M:%S'
       missingValues: ['']
       primaryKey: ['id']
       foreignKeys:
