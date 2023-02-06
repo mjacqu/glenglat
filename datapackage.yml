@@ -55,7 +55,7 @@ resources:
         - name: title
           description: Full publication title or "personal communication" if data was submitted but not published anyhwere in the submitted form.
           type: string
-          constraints: 
+          constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: included
           description: Indicator of whether any data from the given study was included in the database.
@@ -123,7 +123,7 @@ resources:
           type: integer
         - name: elevation_source
           description: |-
-            Data source used to determine borehole elevation. 
+            Data source used to determine borehole elevation.
 
             - published: Elevation published in original publication
             - digitized from plot: Elevation could be retrieved by digitizing a location plot and its axes
@@ -149,7 +149,7 @@ resources:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: rgi_id
-          description: Randolph Glacier Inventory ID from RGI 6.0. 
+          description: Randolph Glacier Inventory ID from RGI 6.0.
           type: string
           constraints:
             required: true
@@ -167,7 +167,7 @@ resources:
         - name: site_description
           description: Description of site area (e.g. accumulation or ablation area, summit region etc.).
           type: string
-          constraints: 
+          constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: notes
           description: Any additional notes about borehole location or measurement.
@@ -208,16 +208,16 @@ resources:
         - name: id
           description: Unique identifier.
           type: integer
-          constraints: 
-            unique: true 
+          constraints:
+            unique: true
             required: true
         - name: borehole_id
-          description: Borehole ID. 
+          description: Borehole ID.
           type: integer
           constraints:
             required: true
         - name: timestamp_id
-          description: Timestamp ID. 
+          description: Timestamp ID.
           type: integer
           constraints:
             required: true
@@ -229,7 +229,7 @@ resources:
           description: Depth measurement in meters below the glacier surface.
           type: number
           unit: 'm'
-          constraints: 
+          constraints:
             required: true
       missingValues: ['']
       primaryKey: ['id']
@@ -258,11 +258,11 @@ resources:
         - name: id
           description: Unique identifier.
           type: integer
-          constraints: 
-            unique: true 
+          constraints:
+            unique: true
             required: true
         - name: borehole_id
-          description: Borehole ID. 
+          description: Borehole ID.
           type: integer
           constraints:
             required: true
@@ -275,7 +275,7 @@ resources:
           type: date
           format: '%Y-%m-%d'
         - name: time
-          description: Time of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes. 
+          description: Time of the temperature measurement; in local time zone unless otherwise indicated in borehole.notes.
           type: time
           format: "%H:%M:%S"
       missingValues: ['']
@@ -285,4 +285,4 @@ resources:
           reference:
             resource: borehole
             fields: ['id']
-  
+
