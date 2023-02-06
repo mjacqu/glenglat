@@ -59,10 +59,10 @@ resources:
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: included
-          description: Indicator of whether any data from the given study was included in the database.
+          description: Whether data from the given study was included in the database.
           type: boolean
-          trueValues: ['true', 'True', 'TRUE']
-          falseValues: ['false', 'False', 'FALSE']
+          trueValues: ['True']
+          falseValues: ['False']
         - name: url
           description: DOI url for published studies if available, null if data was submitted directly.
           type: string
@@ -161,10 +161,10 @@ resources:
           type: number
           unit: '°C'
         - name: to_bottom
-          description: Indication whether the borehole reached bedrock (TRUE, FALSE, or null).
+          description: Whether the borehole reached the glacier bed.
           type: boolean
-          trueValues: ['true', 'True', 'TRUE']
-          falseValues: ['false', 'False', 'FALSE']
+          trueValues: ['True']
+          falseValues: ['False']
         - name: site_description
           description: Description of site area (e.g. accumulation or ablation area, summit region etc.).
           type: string
