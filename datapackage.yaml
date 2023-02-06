@@ -102,8 +102,8 @@ resources:
             - published: Coordinates published in original publication
             - digitized from plot: Coordinates could be retrieved by digitizing a location plot and its axes
             - from metadata: Coordinates were provided as metadata with data submission
-            - web map service approximation: Through comparison against a published plot, coordinates could be easily approximated using e.g., google maps, caltopo etc.
-            - web map service guess: Comparison against published plot was hard, largely relied on elevation to find probably location
+            - web map service approximation: Through comparison against a published plot, coordinates could be easily approximated using e.g., Google Maps, CalTopo, etc.
+            - web map service guess: Comparison against published plot was hard, largely relied on elevation to find probable location
           type: string
           constraints:
             required: true
@@ -128,9 +128,9 @@ resources:
 
             - published: Elevation published in original publication
             - digitized from plot: Elevation could be retrieved by digitizing a location plot and its axes
-            - estimated from plot: Elevation estimated from countrline plot
+            - estimated from plot: Elevation estimated from centerline plot
             - from metadata: Elevation was provided as metadata with data submission
-            - web map service guess: Comparison against location and modern elevation dataset embedded in web map service (e.g., caltopo, google maps)
+            - web map service guess: Comparison against location and modern elevation dataset embedded in web map service (e.g., CalTopo, Google Maps)
           type: string
           constraints:
             required: true
@@ -144,7 +144,7 @@ resources:
             required: true
             maximum: 9999.0
         - name: glacier_name
-          description: Formal or informal glacier or icecap name as provided by authors or data provider.
+          description: Formal or informal glacier or ice cap name as provided by authors or data provider.
           type: string
           constraints:
             required: true
@@ -272,7 +272,7 @@ resources:
           type: date
           format: '%Y-%m-%d'
         - name: date_max
-          description: Date of temperature measurement or, if not known precisely, the earliest possible date (e.g. '2019' -> '2019-01-01').
+          description: Date of temperature measurement or, if not known precisely, the latest possible date (e.g. '2019' -> '2019-12-31').
           type: date
           format: '%Y-%m-%d'
         - name: time
