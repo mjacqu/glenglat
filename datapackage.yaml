@@ -3,8 +3,7 @@ version: 0.1.0
 created: '2022-10-27T15:17:45Z'
 title: Global englacial temperature database (glenglat)
 profile: tabular-data-package
-description: |-
-  Englacial temperature database compiled from digitized and imported englacial temperature measurements.
+description: Englacial temperature database compiled from digitized and imported englacial temperature measurements.
 languages:
   - en
 licenses:
@@ -13,14 +12,14 @@ licenses:
     path: https://creativecommons.org/licenses/by/4.0
 contributors:
   - title: Mylène Jacquemart
-    organization: 'Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland'
+    organization: Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland
     email: jacquemart@vaw.baug.ethz.ch
     role: author
   - title: Guillem Carcanade
-    organization: 'Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland'
+    organization: Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland
     role: author
   - title: Ethan Welty
-    organization: 'World Glacier Monitoring Service (WGMS)'
+    organization: World Glacier Monitoring Service (WGMS)
     role: author
 resources:
   - name: source
@@ -68,7 +67,7 @@ resources:
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
-      primaryKey: ['id']
+      primaryKey: [id]
       missingValues: ['']
   - name: borehole
     description: Metadata about each individual borehole and temperature profile.
@@ -108,7 +107,7 @@ resources:
           constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
-            enum: ['published', 'digitized from plot', 'from metadata', 'web map service approximation', 'web map service guess']
+            enum: [published, digitized from plot, from metadata, web map service approximation, web map service guess]
         - name: y_lat
           description: Latitude or Y (north-south) coordinate.
           type: number
@@ -135,11 +134,11 @@ resources:
           constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
-            enum: ['published', 'digitized from plot', 'estimated from plot', 'from metadata', 'web map service guess']
+            enum: [published, digitized from plot, estimated from plot, from metadata, web map service guess]
         - name: elevation
           description: Elevation of borehole drill site in meters above sea-level (masl).
           type: number
-          unit: 'm'
+          unit: m
           constraints:
             required: true
             maximum: 9999.0
@@ -159,7 +158,7 @@ resources:
         - name: temperature_accuracy
           description: Thermistor accuracy or precision (+/- °C) as published or provided by contributors. Understood to typically refer to a standard deviation.
           type: number
-          unit: '°C'
+          unit: °C
         - name: to_bottom
           description: Whether the borehole reached the glacier bed.
           type: boolean
@@ -185,14 +184,14 @@ resources:
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
-            enum: ['plot digitizer', 'manual', 'import']
+            enum: [plot digitizer, manual, import]
       missingValues: ['']
-      primaryKey: ['id']
+      primaryKey: [id]
       foreignKeys:
-        - fields: ['source_id']
+        - fields: [source_id]
           reference:
             resource: source
-            fields: ['id']
+            fields: [id]
   - name: temperature
     description: Temperature and depth measurements.
     path: data/temperature.csv
@@ -225,24 +224,24 @@ resources:
         - name: temperature
           description: Temperature measurement in degrees celcius.
           type: number
-          unit: '°C'
+          unit: °C
         - name: depth
           description: Depth measurement in meters below the glacier surface.
           type: number
-          unit: 'm'
+          unit: m
           constraints:
             required: true
       missingValues: ['']
-      primaryKey: ['id']
+      primaryKey: [id]
       foreignKeys:
-        - fields: ['borehole_id']
+        - fields: [borehole_id]
           reference:
             resource: borehole
-            fields: ['id']
-        - fields: ['timestamp_id']
+            fields: [id]
+        - fields: [timestamp_id]
           reference:
             resource: timestamp
-            fields: ['id']
+            fields: [id]
   - name: timestamp
     description: Date range and timestamp (if available) of individual profile measurements.
     path: data/timestamp.csv
@@ -280,10 +279,10 @@ resources:
           type: time
           format: '%H:%M:%S'
       missingValues: ['']
-      primaryKey: ['id']
+      primaryKey: [id]
       foreignKeys:
-        - fields: ['borehole_id']
+        - fields: [borehole_id]
           reference:
             resource: borehole
-            fields: ['id']
+            fields: [id]
 
