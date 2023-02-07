@@ -63,10 +63,10 @@ resources:
           trueValues: ['True']
           falseValues: ['False']
         - name: url
-          description: Study DOI URL.
+          description: Study URL (DOI if available).
           type: string
           constraints:
-            pattern: '[^\s]+( [^\s]+)*'
+            pattern: 'https?:\/\/.+'
       primaryKey: [id]
       missingValues: ['']
   - name: borehole
