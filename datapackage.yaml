@@ -127,7 +127,7 @@ resources:
 
             - published: Reported as number in original publication
             - digitized from plot: Digitized from published plot with complete axes
-            - estimated from plot: Estimated from published centerline plot
+            - estimated from plot: Estimated from elevation contours in published map
             - from metadata: Provided in data submission
             - web map service guess: Estimated with difficulty, for example by comparing location (`y_lat`, `x_lon`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
           type: string
@@ -179,7 +179,7 @@ resources:
             Source of temperature profiles (`temperature.depth`, `temperature.temperature`):
 
             - plot digitizer: Digitized from published plot with complete axes (with Plot Digitizer)
-            - manual: Estimated from plot manually
+            - manual: Numbers read from plot manually
             - import: Published or submitted as numbers
           type: string
           constraints:
