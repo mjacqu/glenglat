@@ -89,9 +89,9 @@ resources:
           constraints:
             required: true
             unique: false
-        - name: location_source
+        - name: location_origin
           description: |-
-            Source of borehole location (`latitude`, `longitude`):
+            Origin of location (`latitude`, `longitude`):
 
             - submitted: Provided in data submission
             - published: Reported as coordinates in original publication
@@ -119,9 +119,9 @@ resources:
             required: true
             minimum: -180
             maximum: 180
-        - name: elevation_source
+        - name: elevation_origin
           description: |-
-            Source of borehole elevation (`elevation`):
+            Origin of elevation (`elevation`):
 
             - submitted: Provided in data submission
             - published: Reported as number in original publication
@@ -171,9 +171,9 @@ resources:
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
-        - name: extraction_method
+        - name: measurement_origin
           description: |-
-            Source of measurements (`measurement.depth`, `measurement.temperature`):
+            Origin of measurements (`measurement.depth`, `measurement.temperature`):
 
             - submitted: Provided as numbers in data submission
             - published: Numbers read from original publication

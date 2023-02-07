@@ -1,4 +1,4 @@
-id,source_id,location_source,latitude,longitude,elevation_source,elevation,glacier_name,rgi_id,temperature_accuracy,to_bottom,site_description,notes,extraction_method
+id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glacier_name,rgi_id,temperature_accuracy,to_bottom,site_description,notes,measurement_origin
 1,1,map approximation,45.93062,7.875403,published,4450.0,Grenzgletscher,RGI60-11.02822,,False,colle gnifetti,14 km from terminus,digitized
 2,1,map approximation,45.973065,7.802684,published,2600.0,Grenzgletscher,RGI60-11.02822,,False,ablation area,5 km from terminus,digitized
 3,1,map approximation,45.974053,7.774972,published,2500.0,Grenzgletscher,RGI60-11.02822,,False,ablation area,2 km from terminus,digitized
