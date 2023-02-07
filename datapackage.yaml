@@ -277,12 +277,7 @@ resources:
       missingValues: ['']
       primaryKey: [id]
       foreignKeys:
-        - fields: [borehole_id]
-          reference:
-            resource: borehole
-            fields: [id]
-        - fields: [profile_id]
+        - fields: [borehole_id, profile_id]
           reference:
             resource: profile
-            fields: [id]
-
+            fields: [borehole_id, id]
