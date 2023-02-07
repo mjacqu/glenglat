@@ -277,13 +277,13 @@ source_id,id,location_source,y_lat,x_lon,epsg,elevation_source,elevation,glacier
 39,281,published,79.8,24.0,,published,750.0,Austfonna,RGI60-07.00551,0.1,,,#3; accuracy = minimum accuracy,plot digitizer
 46,282,web map service approximation,29.56623,101.84461,,published,4540.0,Dagongba Glacier,RGI60-15.07851,0.05,False,ablation area,,plot digitizer
 46,283,web map service approximation,27.10679,100.19538,,published,4600.0,Baishuihe Glacier No. 1,RGI60-15.07645,0.05,False,,,plot digitizer
-51,284,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,285,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,286,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,287,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,288,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,289,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
-51,290,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,"""Lower Ice"" site",plot digitizer
+51,284,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
+51,285,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
+51,286,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
+51,287,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
+51,288,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
+51,289,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
+51,290,web map service approximation,79.43863,-90.64459,,published,205.0,White Glacier,RGI60-03.04539,0.2,False,ablation area,'Lower Ice' site,plot digitizer
 58,291,published,91147.0,627506.0,21781,published,2490.0,Grenzgletscher,RGI60-11.02822,0.05,False,ablation area,f12,plot digitizer
 58,292,published,90891.0,627636.0,21781,published,2500.0,Grenzgletscher,RGI60-11.02822,0.05,False,ablation area,I9b,plot digitizer
 73,293,web map service guess,79.78064,24.68098,,published,750.0,Austfonna,RGI60-07.00027,,False,summit region,,plot digitizer
