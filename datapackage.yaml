@@ -93,16 +93,16 @@ resources:
           description: |-
             Source of borehole location (`latitude`, `longitude`):
 
+            - submitted: Provided in data submission
             - published: Reported as coordinates in original publication
-            - digitized from plot: Digitized from published map with complete axes
-            - from metadata: Provided in data submission
-            - web map service approximation: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
-            - web map service guess: Estimated with difficulty, for example by comparing `elevation` to a map (e.g. Google Maps, CalTopo)
+            - digitized: Digitized from published map with complete axes
+            - map approximation: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
+            - map guess: Estimated with difficulty, for example by comparing `elevation` to a map (e.g. Google Maps, CalTopo)
           type: string
           constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
-            enum: [published, digitized from plot, from metadata, web map service approximation, web map service guess]
+            enum: [submitted, published, digitized, map approximation, map guess]
         - name: latitude
           description: Latitude (EPSG 4326).
           type: number
@@ -123,16 +123,16 @@ resources:
           description: |-
             Source of borehole elevation (`elevation`):
 
+            - submitted: Provided in data submission
             - published: Reported as number in original publication
-            - digitized from plot: Digitized from published plot with complete axes
-            - estimated from plot: Estimated from elevation contours in published map
-            - from metadata: Provided in data submission
-            - web map service guess: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
+            - digitized: Digitized from published plot with complete axes
+            - map approximation: Estimated from elevation contours in published map
+            - map guess: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
           type: string
           constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
-            enum: [published, digitized from plot, estimated from plot, from metadata, web map service guess]
+            enum: [submitted, published, digitized, map approximation, map guess]
         - name: elevation
           description: Elevation of borehole drill site above sea level.
           type: number
@@ -175,13 +175,13 @@ resources:
           description: |-
             Source of measurements (`measurement.depth`, `measurement.temperature`):
 
-            - plot digitizer: Digitized from published plot with complete axes (with Plot Digitizer)
-            - manual: Numbers read from plot manually
-            - import: Published or submitted as numbers
+            - submitted: Provided as numbers in data submission
+            - published: Numbers read from original publication
+            - digitized: Digitized from published plot with complete axes (with Plot Digitizer)
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
-            enum: [plot digitizer, manual, import]
+            enum: [submitted, published, digitized]
       missingValues: ['']
       primaryKey: [id]
       foreignKeys:
