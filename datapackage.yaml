@@ -57,11 +57,6 @@ resources:
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
-        - name: included
-          description: Whether data from this study was included in the database.
-          type: boolean
-          trueValues: ['True']
-          falseValues: ['False']
         - name: url
           description: Study URL (DOI if available).
           type: string
