@@ -153,7 +153,6 @@ resources:
           type: string
           constraints:
             required: true
-            maxLength: 14
             pattern: 'RGI60-\d{2}.\d{5}'
         - name: temperature_accuracy
           description: Thermistor accuracy or precision in degrees Celsius (as reported). Typically understood to represent one standard deviation.
