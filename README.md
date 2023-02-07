@@ -10,11 +10,11 @@ Open-access database of englacial temperature measurements compiled from publish
 - [`data/borehole.csv`](data/borehole.csv):
 Metadata about each individual borehole, linked to data in `source.csv`via `source_id`.
 
-- [`data/timestamp.csv`](data/timestamp.csv):
+- [`data/profile.csv`](data/profile.csv):
 Date, date range or date and time of each measurement, linked to the data in `borehole.csv` via `borehole_id`.
 
-- [`data/temperature.csv`](data/temperature.csv):
-Depth vs. temperature data linked to the data in `borehole.csv` and `timestamp.csv` via `borehole_id` and `timestamp_id`, respectively.
+- [`data/measurement.csv`](data/measurement.csv):
+Depth vs. temperature data linked to the data in `borehole.csv` and `profile.csv` via `borehole_id` and `profile_id`, respectively.
 
 ## How to contribute
 If you would like to contribute data, please send an email to jacquemart@vaw.baug.ethz.ch

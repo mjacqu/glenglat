@@ -176,7 +176,7 @@ resources:
             pattern: '[^\s]+( [^\s]+)*'
         - name: extraction_method
           description: |-
-            Source of temperature profiles (`temperature.depth`, `temperature.temperature`):
+            Source of measurements (`measurement.depth`, `measurement.temperature`):
 
             - plot digitizer: Digitized from published plot with complete axes (with Plot Digitizer)
             - manual: Numbers read from plot manually
@@ -192,9 +192,9 @@ resources:
           reference:
             resource: source
             fields: [id]
-  - name: temperature
+  - name: measurement
     description: Temperature measurements with depth.
-    path: data/temperature.csv
+    path: data/measurement.csv
     format: csv
     dialect:
       header: true
@@ -216,8 +216,8 @@ resources:
           type: integer
           constraints:
             required: true
-        - name: timestamp_id
-          description: Timestamp identifier.
+        - name: profile_id
+          description: Profile identifier.
           type: integer
           constraints:
             required: true
@@ -238,13 +238,13 @@ resources:
           reference:
             resource: borehole
             fields: [id]
-        - fields: [timestamp_id]
+        - fields: [profile_id]
           reference:
-            resource: timestamp
+            resource: profile
             fields: [id]
-  - name: timestamp
+  - name: profile
     description: Date and time of each measurement profile.
-    path: data/timestamp.csv
+    path: data/profile.csv
     format: csv
     dialect:
       header: true
