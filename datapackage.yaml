@@ -91,7 +91,7 @@ resources:
             unique: false
         - name: location_source
           description: |-
-            Source of borehole location (`y_lat`, `x_lon`):
+            Source of borehole location (`latitude`, `longitude`):
 
             - published: Reported as coordinates in original publication
             - digitized from plot: Digitized from published map with complete axes
@@ -103,19 +103,22 @@ resources:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
             enum: [published, digitized from plot, from metadata, web map service approximation, web map service guess]
-        - name: y_lat
-          description: Latitude or Y (north-south) coordinate.
+        - name: latitude
+          description: Latitude (EPSG 4326).
           type: number
+          unit: degree
           constraints:
             required: true
-        - name: x_lon
-          description: Longitude or X (east-west) coordinate.
+            minimum: -90
+            maximum: 90
+        - name: longitude
+          description: Longitude (EPSG 4326).
           type: number
+          unit: degree
           constraints:
             required: true
-        - name: epsg
-          description: EPSG code of `y_lat`, `x_lon` if not latitude, longitude (EPSG 4326).
-          type: integer
+            minimum: -180
+            maximum: 180
         - name: elevation_source
           description: |-
             Source of borehole elevation (`elevation`):
@@ -124,7 +127,7 @@ resources:
             - digitized from plot: Digitized from published plot with complete axes
             - estimated from plot: Estimated from elevation contours in published map
             - from metadata: Provided in data submission
-            - web map service guess: Estimated with difficulty, for example by comparing location (`y_lat`, `x_lon`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
+            - web map service guess: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
           type: string
           constraints:
             required: true
