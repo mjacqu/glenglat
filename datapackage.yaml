@@ -248,12 +248,6 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: id
-          description: Unique identifier.
-          type: integer
-          constraints:
-            unique: true
-            required: true
         - name: borehole_id
           description: Borehole identifier.
           type: integer
@@ -264,18 +258,18 @@ resources:
           type: integer
           constraints:
             required: true
-        - name: temperature
-          description: Temperature in degrees Celcius.
-          type: number
-          unit: °C
         - name: depth
           description: Depth in meters below the glacier surface.
           type: number
           unit: m
           constraints:
             required: true
+        - name: temperature
+          description: Temperature in degrees Celcius.
+          type: number
+          unit: °C
       missingValues: ['']
-      primaryKey: [id]
+      primaryKey: [borehole_id, profile_id, depth]
       foreignKeys:
         - fields: [borehole_id, profile_id]
           reference:
