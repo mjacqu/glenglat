@@ -82,18 +82,18 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: source_id
-          type: integer
-          description: Source identifier.
-          constraints:
-            required: true
-            unique: false
         - name: id
           description: Unique identifier.
           type: integer
           constraints:
             required: true
             unique: true
+        - name: source_id
+          type: integer
+          description: Source identifier.
+          constraints:
+            required: true
+            unique: false
         - name: location_source
           description: |-
             Source of borehole location (`y_lat`, `x_lon`):
