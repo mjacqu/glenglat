@@ -192,6 +192,49 @@ resources:
           reference:
             resource: source
             fields: [id]
+  - name: profile
+    description: Date and time of each measurement profile.
+    path: data/profile.csv
+    format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id
+          description: Unique identifier.
+          type: integer
+          constraints:
+            unique: true
+            required: true
+        - name: borehole_id
+          description: Borehole identifier.
+          type: integer
+          constraints:
+            required: true
+        - name: date_min
+          description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
+          type: date
+          format: '%Y-%m-%d'
+        - name: date_max
+          description: Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
+          type: date
+          format: '%Y-%m-%d'
+        - name: time
+          description: Measurement time (in the local time zone unless indicated otherwise in `borehole.notes`).
+          type: time
+          format: '%H:%M:%S'
+      missingValues: ['']
+      primaryKey: [id]
+      foreignKeys:
+        - fields: [borehole_id]
+          reference:
+            resource: borehole
+            fields: [id]
   - name: measurement
     description: Temperature measurements with depth.
     path: data/measurement.csv
@@ -241,48 +284,5 @@ resources:
         - fields: [profile_id]
           reference:
             resource: profile
-            fields: [id]
-  - name: profile
-    description: Date and time of each measurement profile.
-    path: data/profile.csv
-    format: csv
-    dialect:
-      header: true
-      delimiter: ','
-      lineTerminator: "\n"
-      quoteChar: '"'
-      doubleQuote: true
-    profile: tabular-data-resource
-    schema:
-      fields:
-        - name: id
-          description: Unique identifier.
-          type: integer
-          constraints:
-            unique: true
-            required: true
-        - name: borehole_id
-          description: Borehole identifier.
-          type: integer
-          constraints:
-            required: true
-        - name: date_min
-          description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
-          type: date
-          format: '%Y-%m-%d'
-        - name: date_max
-          description: Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
-          type: date
-          format: '%Y-%m-%d'
-        - name: time
-          description: Measurement time (in the local time zone unless indicated otherwise in `borehole.notes`).
-          type: time
-          format: '%H:%M:%S'
-      missingValues: ['']
-      primaryKey: [id]
-      foreignKeys:
-        - fields: [borehole_id]
-          reference:
-            resource: borehole
             fields: [id]
 
