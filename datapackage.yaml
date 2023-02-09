@@ -167,7 +167,8 @@ resources:
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: notes
-          description: Additional notes about the borehole.
+          description: |-
+            Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `author ({year}): {title} ({url})`.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
