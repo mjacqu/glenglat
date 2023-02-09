@@ -161,6 +161,9 @@ resources:
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
+        - name: label
+          description: Borehole name (e.g. as labeled on a plot).
+          type: string
         - name: notes
           description: |-
             Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `author ({year}): {title} ({url})`.

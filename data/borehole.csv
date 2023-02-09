@@ -1,292 +1,292 @@
-id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glacier_name,rgi_id,temperature_accuracy,to_bottom,notes,measurement_origin
-1,1,map approximation,45.93062,7.875403,published,4450.0,Grenzgletscher,RGI60-11.02822,,False,14 km from terminus | Colle Gnifetti,digitized
-2,1,map approximation,45.973065,7.802684,published,2600.0,Grenzgletscher,RGI60-11.02822,,False,5 km from terminus | Ablation area,digitized
-3,1,map approximation,45.974053,7.774972,published,2500.0,Grenzgletscher,RGI60-11.02822,,False,2 km from terminus | Ablation area,digitized
-4,2,map approximation,79.531432,-91.014641,published,1447.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-5,2,map approximation,79.474711,-90.756867,published,625.0,White Glacier,RGI60-03.04539,0.2,True,Ablation area,digitized
-6,2,map approximation,79.440386,-90.645269,published,230.0,White Glacier,RGI60-03.04539,0.2,True,Ablation area,digitized
-7,5,published,-16.65,-67.783333,published,6340.0,Illimani Volcano,RGI60-16.00486,0.05,True,Summit region,digitized
-8,6,published,45.842712,6.843715,published,4300.0,Mont Blanc,RGI60-11.03646,0.1,True,Summit region,digitized
-9,6,published,45.842712,6.843715,published,4300.0,Mont Blanc,RGI60-11.03646,0.1,False,Summit region,digitized
-10,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,True,profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933 | Summit region,digitized
-11,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,False,profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933 | Summit region,digitized
-12,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,False,Summit region,digitized
-13,6,published,45.84037,6.8489327,published,4255.0,Mont Blanc,RGI60-11.03646,0.3,True,Summit region,digitized
-14,6,published,45.84037,6.8489327,published,4255.0,Mont Blanc,RGI60-11.03646,0.1,False,Summit region,digitized
-15,8,published,45.928529,7.875257,published,4470.0,Grenzgletscher,RGI60-11.02822,0.2,False,CG91-B/91 | Accumulation area,digitized
-16,8,published,45.928511,7.875283,published,4470.0,Grenzgletscher,RGI60-11.02822,0.2,True,CG07-1/07 | Accumulation area,digitized
-17,8,published,45.92387,7.870451,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,False,GG91-D | Accumulation area,digitized
-18,8,published,45.923969,7.870477,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,False,GG99-12 | Accumulation area,digitized
-19,8,published,45.92387,7.870451,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,False,GG08-5/08 | Accumulation area,digitized
-20,12,map approximation,52.20682,-117.23517,published,2065.0,Athabasca Glacier,RGI60-02.12441,,False,Hole N | Ablation area,digitized
-21,12,map approximation,52.18602,-117.26113,published,2275.0,Athabasca Glacier,RGI60-02.12441,,False,Hole D | Ablation area,digitized
-22,12,map approximation,52.19837,-117.24919,published,2170.0,Athabasca Glacier,RGI60-02.12441,,False,Hole L | Ablation area,digitized
-23,12,map approximation,52.17594,-117.30924,published,3200.0,Athabasca Glacier,RGI60-02.12441,,False,Hole A | Accumulation area,published
-24,12,map approximation,52.16331,-117.30632,published,2910.0,Athabasca Glacier,RGI60-02.12441,,False,Hole B | Accumulation area,published
-25,12,map approximation,52.1631,-117.28074,published,2730.0,Athabasca Glacier,RGI60-02.12441,,False,Hole C | Accumulation area,published
-26,12,map approximation,52.1885,-117.25327,published,2235.0,Athabasca Glacier,RGI60-02.12441,,False,Hole E | Only ice temperatures | Ablation area,digitized
-27,12,map approximation,52.19224,-117.25808,published,2230.0,Athabasca Glacier,RGI60-02.12441,,False,Hole H | Only ice temperatures | Ablation area,digitized
-28,12,map approximation,52.20112,-117.24085,published,2115.0,Athabasca Glacier,RGI60-02.12441,,False,Hole M | Only ice temperatures | Ablation area,digitized
-29,13,map approximation,60.369155,-139.961054,published,1791.0,Seward Glacier,RGI60-01.13696,0.1,False,measurement.temperature: Firn temperatures only | measurement.depth: Reported in feet | Accumulation area,digitized
-30,15,map approximation,46.537614,7.971254,published,3540.0,Jungfraufirn,RGI60-11.01450,0.1,False,bh 91-3 | Other measurement dates available | Accumulation area,digitized
-31,15,map approximation,46.541514,7.978183,published,3410.0,Jungfraufirn,RGI60-11.01450,0.1,False,bh 91-2 | Other measurement dates available | Accumulation area,digitized
-32,15,map approximation,46.549684,8.002083,published,3530.0,Jungfraufirn,RGI60-11.01450,0.1,False,bh 91-5 | Other measurement dates available | Accumulation area,digitized
-33,15,map approximation,45.93033,7.876756,published,4452.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 91-1 | Accumulation area,digitized
-34,15,map approximation,45.923589,7.871769,published,4300.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 94-1 | Accumulation area,digitized
-35,15,map approximation,45.924076,7.862049,published,4100.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 94-2 | Accumulation area,digitized
-36,15,map approximation,45.922507,7.866534,published,4200.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 94-A | Accumulation area,digitized
-40,18,map approximation,78.811214,12.881844,published,367.0,Kongsvegen,RGI60-07.01481,,False,bh K1 | Ablation area,digitized
-41,18,map approximation,78.759108,13.335258,published,635.0,Kongsvegen,RGI60-07.01481,,True,bh K2 | Accumulation area,digitized
-42,18,map approximation,78.8878,12.04861,published,180.0,Midtre Lovenbreen,RGI60-07.00493,,True,bh L3 | Ablation area,digitized
-43,18,map approximation,78.87204,11.99866,published,380.0,Midtre Lovenbreen,RGI60-07.00493,,True,bh L9 | Accumulation area,digitized
-44,18,map approximation,78.8955,11.83762,published,175.0,Austre Broggerbreen,RGI60-07.00504,,True,bh B5 | Ablation area,digitized
-45,18,map approximation,78.88008,11.92096,published,375.0,Austre Broggerbreen,RGI60-07.00504,,True,bh B11 | Accumulation area,digitized
-46,19,map approximation,75.897934,-79.111864,published,80.0,Laika Ice Cap,RGI60-03.01427,,False,X1 | Ablation area,digitized
-47,19,map approximation,75.89683,-79.129082,published,202.0,Laika Ice Cap,RGI60-03.01427,,True,X2 | Ablation area,digitized
-48,19,map approximation,75.8952763,-79.1444562,published,315.0,Laika Ice Cap,RGI60-03.01427,,False,X3 | Around ELA,digitized
-49,19,map approximation,75.889619,-79.1632871,published,390.0,Laika Ice Cap,RGI60-03.01427,,False,X4 | Accumulation area,digitized
-50,19,map approximation,75.8817165,-79.1801472,published,527.0,Laika Ice Cap,RGI60-03.01427,,False,X5 | Accumulation area,digitized
-51,21,map guess,61.22458,-140.32565,map guess,2220.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#3 | Below surge bulge,digitized
-52,21,map guess,61.22435,-140.32904,map guess,2320.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#6 | At surge bulge,digitized
-53,21,map guess,61.22416,-140.33217,map guess,2420.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#9 | Above surge bulge,digitized
-54,21,map guess,61.22379,-140.33531,map guess,2500.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#11 | Above surge bulge,digitized
-55,23,map approximation,79.7072458,-74.5266339,published,1100.0,John Evans Glacier,RGI60-03.00545,,False,#1 | Accumulation area,published
-56,23,map approximation,79.6860756,-74.4592733,published,975.0,John Evans Glacier,RGI60-03.00545,,False,#4 | Accumulation area,published
-57,23,map approximation,79.6800437,-74.4332913,published,900.0,John Evans Glacier,RGI60-03.00545,,False,#6 | Accumulation area,published
-58,23,map approximation,79.6482756,-74.2047463,published,575.0,John Evans Glacier,RGI60-03.00545,,False,#10 | Ablation area,published
-59,24,digitized,69.315327,-143.853423,published,1750.0,McCall Glacier,RGI60-01.02228,,True,JJMC | Ablation area,digitized
-60,24,digitized,69.283255,-143.831748,published,2100.0,McCall Glacier,RGI60-01.02228,,True,LC | Accumulation area,digitized
-61,24,digitized,69.295288,-143.790144,published,2400.0,McCall Glacier,RGI60-01.02228,,True,UC | Accumulation area,digitized
-62,25,map approximation,49.793715,87.73221241,published,3450.0,Sofiyskiy Glacier,RGI60-10.01836,,False,Accumulation area,digitized
-63,25,map approximation,49.793715,87.73221241,published,3440.0,Sofiyskiy Glacier,RGI60-10.01836,,False,Accumulation area,digitized
-64,26,map approximation,45.8569236,6.817813709,published,3141.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,digitized
-65,26,map approximation,45.8567718,6.818435414,published,3159.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,False,,digitized
-66,26,map approximation,45.8567264,6.818827044,published,3168.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,digitized
-67,26,map approximation,45.856787,6.819218674,published,3176.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,digitized
-68,26,map approximation,45.8567248,6.819786487,published,3181.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,False,,digitized
-69,26,map approximation,45.8567151,6.820267936,published,3186.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,digitized
-70,26,map approximation,45.856505,6.8208199,published,3207.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,digitized
-71,27,map approximation,45.8578979,6.840015556,published,3410.0,Taconnaz Glacier,RGI60-11.03647,,False,Accumulation area,digitized
-72,27,map approximation,45.8534203,6.839661853,published,3680.0,Taconnaz Glacier,RGI60-11.03647,,False,Accumulation area,digitized
-73,27,map approximation,45.8511161,6.836228851,published,3780.0,Taconnaz Glacier,RGI60-11.03647,,False,Accumulation area,digitized
-74,27,map approximation,45.8468843,6.839641046,published,4080.0,Taconnaz Glacier,RGI60-11.03647,,True,Accumulation area,digitized
-75,27,map approximation,45.8518841,6.84825476,published,4030.0,Taconnaz Glacier,RGI60-11.03647,,False,Accumulation area,digitized
-76,28,map approximation,61.2564058,-140.184505,map guess,1760.0,Steele Glacier,RGI60-01.16377,0.015,False,73-2 | Post surge (anomalous T5 & T7) | Ablation area,digitized
-77,28,map approximation,61.2867816,-140.01457,map guess,1400.0,Steele Glacier,RGI60-01.16377,0.015,False,73-3 | Post surge ('normal') | Ablation area,digitized
-78,29,map approximation,61.2023142,-140.297788,published,2295.0,Fox Glacier,RGI60-01.16374,0.03,True,#1,digitized
-79,29,map approximation,61.1962048,-140.2932,published,2455.0,Fox Glacier,RGI60-01.16374,0.03,False,#2,digitized
-80,29,map approximation,61.1950391,-140.284356,map guess,2550.0,Fox Glacier,RGI60-01.16374,0.03,False,#3,digitized
-81,29,map approximation,61.1992998,-140.296203,published,2374.0,Fox Glacier,RGI60-01.16374,0.03,False,#4,digitized
-82,29,map approximation,61.2051273,-140.29904,published,2244.0,Fox Glacier,RGI60-01.16374,0.03,True,#5,digitized
-83,29,map approximation,61.2078598,-140.300458,published,2188.0,Fox Glacier,RGI60-01.16374,0.03,True,#6,digitized
-84,30,published,45.970304,7.787504,published,2467.0,Gornergletscher,RGI60-11.02822,0.05,True,BH4 | Ablation area,digitized
-85,30,published,45.971338,7.793497,published,2492.0,Gornergletscher,RGI60-11.02822,0.05,True,BHT3 | Ablation area,digitized
-86,30,published,45.969619,7.796608,published,2501.0,Gornergletscher,RGI60-11.02822,0.05,True,BHT2 | Ablation area,digitized
-87,30,published,45.967081,7.794127,published,2496.0,Gornergletscher,RGI60-11.02822,0.05,True,BH430 | Ablation area,digitized
-88,30,published,45.966213,7.798327,published,2516.0,Gornergletscher,RGI60-11.02822,0.05,True,BHC | Ablation area,digitized
-89,30,published,45.968581,7.803167,published,2492.0,Gornergletscher,RGI60-11.02822,0.05,True,BH210 | Ablation area,digitized
-90,31,digitized,28.808614,83.496519,published,5600.0,Rikha Samba Glacier,RGI60-15.04847,,False,Ablation area,digitized
-91,7,digitized,45.929931,7.874315,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,True,B82-1 | Accumulation area,digitized
-92,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,digitized
-93,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,digitized
-94,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,digitized
-95,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,digitized
-96,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,digitized
-97,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
-98,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,firn temps; snow temps also available | Accumulation area,digitized
-99,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,ice temp; snow temp also available | Ablation area,digitized
-100,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,ice temp; snow temp also available; surface at first datapoint. | Ablation area,digitized
-101,33,map approximation,63.4553258,-146.143037,published,1140.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,Ice temperatures | Snow temperatures also available | Ablation area,digitized
-102,33,map approximation,63.4553258,-146.143037,published,1149.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,Ice temperatures | Snow temperatures are also available | Surface not first datapoint | Ablation area,digitized
-103,34,map guess,78.114158,15.99040771,published,305.0,Scott Turnerbreen,RGI60-07.01050,,True,Surged in 1936,digitized
-104,34,map approximation,78.0954428,15.88386431,published,595.0,Scott Turnerbreen,RGI60-07.01050,,True,Surged in 1937,digitized
-105,35,map approximation,77.0189,15.60193332,map approximation,100.0,Hansbreen,RGI60-07.00240,0.4,False,site A,published
-106,35,map approximation,77.0275588,15.65626762,map approximation,128.0,Hansbreen,RGI60-07.00240,0.4,False,site B2,digitized
-107,35,map approximation,77.0916016,15.63406651,map approximation,325.0,Hansbreen,RGI60-07.00240,0.4,False,site D,digitized
-108,35,map approximation,77.0916016,15.63406651,map approximation,324.0,Hansbreen,RGI60-07.00240,0.4,True,site D2,digitized
-109,35,map approximation,77.1073192,15.53912754,map approximation,405.0,Hansbreen,RGI60-07.00240,0.4,True,site F,digitized
-110,35,map approximation,77.0196218,15.59521456,map approximation,100.0,Hansbreen,RGI60-07.00240,0.4,False,site G,digitized
-111,36,map approximation,61.22429,-140.34572,map guess,2460.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 1 and 2 | Pre surge,digitized
-112,36,map approximation,61.22533,-140.35687,map guess,2520.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 3 | Pre surge,digitized
-113,36,map approximation,61.2234,-140.35467,map guess,2520.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 4 | Pre surge,digitized
-114,36,map approximation,61.2219,-140.34123,map guess,2420.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 5 | Pre surge,digitized
-115,36,map approximation,61.22427,-140.33176,map guess,2300.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 6 | Pre surge,digitized
-116,36,map approximation,61.22578,-140.31965,map guess,2140.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 7 | Pre surge,digitized
-117,36,map approximation,61.21813,-140.35455,map guess,2600.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 8 | Pre surge,digitized
-118,37,map approximation,78.6801692,12.1190339,map guess,430.0,Waldemarbreen,RGI60-07.00492,0.2,False,Accumulation area,published
-119,37,map approximation,78.6801692,12.1190339,map guess,430.0,Waldemarbreen,RGI60-07.00492,0.2,False,Accumulation area,published
-120,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,digitized
-121,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,digitized
-122,39,published,78.81,17.6,published,1000.0,Lomonosovfonna,RGI60-07.00570,0.1,,temperature_accuracy: Minimum accuracy,digitized
-123,39,published,79.93,19.52,published,580.0,Vestfonna,RGI60-07.01510,0.1,,temperature_accuracy: Minimum accuracy,digitized
-124,39,published,79.97,21.02,published,600.0,Vestfonna,RGI60-07.01499,0.1,,temperature_accuracy: Minimum accuracy,digitized
-125,39,published,79.85,24.14,published,750.0,Austfonna,RGI60-07.00551,0.1,,Measurement #1 | temperature_accuracy: Minimum accuracy,digitized
-126,39,published,79.28,16.83,published,1200.0,Høghetta,RGI60-07.00844,0.1,,temperature_accuracy: Minimum accuracy,digitized
-127,39,published,79.13,13.3,published,1190.0,Snøfjellafonna,RGI60-07.01464,0.1,,temperature_accuracy: Minimum accuracy,digitized
-128,39,published,79.45,16.72,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.1,,temperature_accuracy: Minimum accuracy,digitized
-129,39,published,79.45,95.35,published,665.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,Measurement #1,digitized
-130,39,published,79.5,95.08,published,720.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,Measurement #2 | elevation: Assumed same as borehole 131,digitized
-131,39,published,79.32,96.02,published,720.0,Vavilova Ice Dome,RGI60-09.00470,0.1,,Measurement #4,digitized
-132,39,published,79.38,95.72,published,680.0,Vavilova Ice Dome,RGI60-09.00468,0.1,,Measurement #5,digitized
-133,39,published,80.5,94.83,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.1,,Measurement #1 | elevation: Originally reported as 810,digitized
-134,39,published,80.52,94.8,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.1,,Measurement #2 | elevation: Originally reported as 810,digitized
-135,39,published,80.78,63.55,published,505.0,Vetreniy Ice Dome,RGI60-09.00986,0.1,,,digitized
-136,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,digitized
-137,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,digitized
-138,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,digitized
-139,41,published,48.633,90.95,published,3815.0,Tsambagarav,RGI60-10.02705,0.05,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-140,41,published,43.05,94.316,published,4512.0,Miaoergou,RGI60-13.48412,0.05,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-141,41,published,38.7,97.267,published,5356.0,Shule Nanshan,RGI60-13.32800,0.05,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-142,41,published,28.17,86.633,published,6303.0,Gyabrag,RGI60-15.10175,0.05,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-143,10,digitized,45.9282,7.87593,published,4480.0,Gornergletscher,RGI60-11.02822,0.05,True,b95-1 | Accumulation area,digitized
-144,10,digitized,45.929118,7.873647,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,True,b95-2 | Accumulation area,digitized
-297,10,digitized,45.929934,7.874315,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,False,b82-1,
-145,46,map guess,35.2217793,81.11527554,digitized,5800.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S0,digitized
-146,46,map guess,35.2351867,81.11135593,digitized,5975.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S4,digitized
-147,46,map guess,35.2461911,81.10829374,digitized,6120.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S8,digitized
-148,46,map guess,35.26191,81.10065704,digitized,6325.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S12,digitized
-149,46,map approximation,43.1154866,86.81283014,map approximation,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,False,T1,digitized
-150,46,map approximation,43.1110594,86.80957723,map approximation,3960.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,False,T2,digitized
-151,46,map approximation,43.1060367,86.80647755,map approximation,4050.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,True,T3,digitized
-152,47,map approximation,-31.962011,-70.1219352,published,6070.0,Glaciar La Ollada (Mercedario),RGI60-17.14412,,,,digitized
-153,47,map approximation,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,,,,digitized
-154,48,map approximation,-30.140241,-69.931488,published,5536.0,Tapado Glacier,RGI60-17.14647,,True,,digitized
-155,50,map approximation,27.9437778,86.81773669,published,4884.0,Khumbu Glacier,RGI60-15.03733,0.05,,,digitized
-156,50,map approximation,27.9695686,86.82870764,published,4980.0,Khumbu Glacier,RGI60-15.03733,0.05,False,,digitized
-157,50,map approximation,27.991737,86.84700289,published,5206.0,Khumbu Glacier,RGI60-15.03733,0.05,False,,digitized
-158,51,map approximation,79.5082542,-90.8441553,published,1024.0,White Glacier,RGI60-03.04539,0.2,,I,digitized
-159,51,map approximation,79.4850986,-90.7876998,published,717.0,White Glacier,RGI60-03.04539,0.2,,II,digitized
-160,51,map approximation,79.4731948,-90.7527512,published,626.0,White Glacier,RGI60-03.04539,0.2,,III,digitized
-161,52,map guess,43.1339651,-109.609941,map guess,3920.0,Upper Fremont Glacier,RGI60-02.18799,0.4,False,,published
-162,54,map approximation,77.4924878,15.25323517,published,204.0,Finsterwalderbreen,RGI60-07.00231,0.05,True,Ablation area,digitized
-163,54,map approximation,77.4366271,15.22366244,published,580.0,Finsterwalderbreen,RGI60-07.00231,0.05,True,Accumulation area,digitized
-164,55,map approximation,52.19942,-117.24299,published,2140.0,Athabasca Glacier,RGI60-02.12441,,False,took average of two measurements | Hole 209,digitized
-165,55,map approximation,52.20423,-117.23711,published,2075.0,Athabasca Glacier,RGI60-02.12441,,False,took average of two measurements | Hole 72,digitized
-166,55,map approximation,52.19258,-117.25908,published,2235.0,Athabasca Glacier,RGI60-02.12441,,False,took average of two measurements | Hole 100,digitized
-167,56,map approximation,67.9036926,18.56956375,map guess,1400.0,Storglaciären,RGI60-08.00213,0.05,False,,digitized
-168,57,published,48.6556404,90.84707854,published,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,,True,,digitized
-169,58,published,45.966213,7.798327,published,2516.0,Grenzgletscher,RGI60-11.02822,0.05,True,l5 | Ablation area,digitized
-170,58,published,45.970304,7.787504,published,2468.0,Grenzgletscher,RGI60-11.02822,0.05,False,ll5 | Ablation area,digitized
-171,58,published,45.971593,7.79257,published,2485.0,Grenzgletscher,RGI60-11.02822,0.05,False,f13 | Ablation area,digitized
-172,58,published,45.969619,7.796608,published,2501.0,Grenzgletscher,RGI60-11.02822,0.05,False,f9 | Ablation area,digitized
-173,58,published,45.967082,7.799455,published,2514.0,Grenzgletscher,RGI60-11.02822,0.05,False,f5 | Ablation area,digitized
-174,58,published,45.967081,7.794127,published,2497.0,Grenzgletscher,RGI60-11.02822,0.05,True,ll9 | Ablation area,digitized
-175,58,published,45.968796,7.800795,published,2506.0,Grenzgletscher,RGI60-11.02822,0.05,True,r6 | Ablation area,digitized
-176,58,published,45.969451,7.795742,published,2499.0,Grenzgletscher,RGI60-11.02822,0.05,False,l9a | Ablation area,digitized
-177,58,published,45.965263,7.800062,published,2522.0,Grenzgletscher,RGI60-11.02822,0.05,False,f1 | Ablation area,digitized
-178,58,published,45.965586,7.797343,published,2514.0,Grenzgletscher,RGI60-11.02822,0.05,False,f3 | Ablation area,digitized
-179,59,published,-49.278195,-73.3535648,published,2600.0,Pio XI glacier,RGI60-17.05181,,False,Accumulation area,digitized
-180,60,digitized,56.07338,160.4685,map approximation,3870.0,Blichenok glacier,RGI60-10.04022,0.1,False,BH1 (yearly average),digitized
-181,60,digitized,56.074062,160.4679,map approximation,3870.0,Blichenok glacier,RGI60-10.04022,0.1,False,K2,digitized
-182,61,published,46.326569,7.212807,published,2810.0,Glacier du Sex Rouge,RGI60-11.02244,,False,#1,digitized
-183,61,published,46.327953,7.212463,published,2780.0,Glacier du Sex Rouge,RGI60-11.02244,,False,#2,digitized
-184,61,published,46.596277,8.598254,published,2855.0,St. Annafirn,RGI60-11.01367,,False,#6,published
-185,61,published,46.600537,8.601335,published,2650.0,St. Annafirn,RGI60-11.01367,,False,#9,published
-186,62,map approximation,78.67358,12.13132,published,420.0,Irenebreen,RGI60-07.00490,0.2,False,Annual mean,digitized
-187,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 1 min,digitized
-188,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 1 max,digitized
-189,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 2 min,digitized
-190,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 2 max,digitized
-191,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,False,site 3 min,digitized
-192,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,False,site 3 max,digitized
-193,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,False,site 7 min,digitized
-194,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,False,site 7 max,digitized
-195,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,False,site 9 min,digitized
-196,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,False,site 9 max,digitized
-197,64,map approximation,35.8165362,90.75000214,published,5680.0,Malan Glacier,RGI60-13.48935,0.01,False,,digitized
-198,66,map approximation,38.1051653,96.41680018,published,5325.0,Dunde Ice Cap,RGI60-13.35422,,True,Caption and legend do not agree | Summit region,digitized
-199,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,False,Caption and legend do not agree | Plateau region,digitized
-200,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,True,Plateau region,digitized
-201,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,False,Summit region,digitized
-202,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,True,Summit region,digitized
-206,69,map approximation,45.8417942,6.846642185,published,4250.0,Col du Dôme-Bossons,RGI60-11.03646,0.05,True,Accumulation area,digitized
-207,70,published,33.212778,91.154167,published,5800.0,Geladandong Ice Cap,RGI60-13.49384,0.05,False,Geothermal hotspot suspected under drill site,digitized
-208,71,map approximation,39.4783238,96.53493886,published,4550.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Site 1,digitized
-209,71,map approximation,39.4418617,96.55545016,published,4900.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Site 2,digitized
-210,71,map approximation,39.429247,96.55633645,published,5040.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Site 3,digitized
-211,71,map approximation,39.4355057,96.55583,published,4971.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Deep borehole site,digitized
-212,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,Digitized deepest measurements (indicated with + in plot) | Summit region,digitized
-213,73,map guess,-18.10813679,-68.88302202,published,6548.0,Nevado Sajama,RGI60-16.01587,,,Summit region,digitized
-214,73,map guess,-15.54037719,-72.66184742,published,6451.0,Coropuna,RGI60-16.01486,,,Rim,digitized
-215,73,map guess,-15.54586811,-72.66056844,published,6326.0,Coropuna,RGI60-16.01486,,,Crater,digitized
-216,75,map approximation,69.63971832,-72.14945899,digitized,685.0,Barnes Ice Cap,RGI60-04.06187,0.1,False,14.3 T | Within surge zone,published
-217,75,map approximation,69.5815068,-72.12125013,digitized,565.0,Barnes Ice Cap,RGI60-04.06187,0.1,False,19.5 T | Within surge zone,published
-218,75,map approximation,69.54665509,-72.11040056,digitized,450.0,Barnes Ice Cap,RGI60-04.06187,0.1,False,24.55 T | Within surge zone,published
-219,76,digitized,69.81379,-72.093185,map approximation,525.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T0975 | elevation: From https://doi.org/10.1139/e80-124,digitized
-220,76,digitized,69.80686,-72.10005,map approximation,575.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T091 | elevation: From https://doi.org/10.1139/e80-124,digitized
-221,76,digitized,69.79795,-72.110344,map approximation,650.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T081 | elevation: From https://doi.org/10.1139/e80-124,digitized
-222,76,digitized,69.78211,-72.12066,map approximation,725.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T061 | elevation: From https://doi.org/10.1139/e80-124,digitized
-223,76,digitized,69.74945,-72.154976,map approximation,850.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T020 | elevation: From https://doi.org/10.1139/e80-124,digitized
-224,76,digitized,69.78899,-71.9703,map approximation,670.0,Barnes Ice Cap,RGI60-04.06187,0.05,True,C4 (D4 in https://doi.org/10.1139/e80-124) | elevation: From https://doi.org/10.1139/e80-124,digitized
-225,76,digitized,69.71965,-71.89204,map approximation,670.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,B4 | elevation: From https://doi.org/10.1139/e80-124,digitized
-226,78,submitted,76.4113,-68.2873,map approximation,505.0,Tuto Ramp,RGI60-05.07772,,True,D-11 | elevation: From https://doi.org/10.1139/e80-124,submitted
-227,78,submitted,71.306,-26.768,map guess,2325.0,Renland Ice Cap,RGI60-05.16072,,False,,submitted
-228,78,submitted,78.3897,-80.395,map guess,1600.0,Prince of Wales Ice Cap,RGI60-03.01708,,True,,submitted
-229,78,submitted,67.3,-65.2,published,1810.0,Penny Ice Cap,RGI60-04.05688,,True,,submitted
-230,78,submitted,79.93,-99.1,map guess,250.0,Meighen Ice Cap,RGI60-03.00691,,True,,submitted
-231,78,submitted,82.84,-36.67,map guess,900.0,Hans Tausen Hare,RGI60-05.10726,,True,,submitted
-232,78,submitted,82.51,-37.47,map guess,1250.0,Hans Tausen Dome,RGI60-05.10756,,True,,submitted
-233,78,submitted,81.2926,-15.7029,map guess,690.0,Flade Isblink Ice Cap,RGI60-05.10315,,False,,submitted
-234,78,published,75.32,-81.64,published,1930.0,Devon Ice Cap,RGI60-03.02467,,False,latitude/longitude: From https://doi.org/10.3189/172756406781811349,submitted
-235,78,submitted,75.34,-82.14,published,1800.0,Devon Ice Cap,RGI60-03.02467,,True,,submitted
-236,78,submitted,75.3,-82.3,published,1800.0,Devon Ice Cap,RGI60-03.02467,,False,,submitted
-237,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,latitude/longitude: Within 2 km,submitted
-238,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,latitude/longitude: Within 2 km,submitted
-239,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,latitude/longitude: Within 2 km,submitted
-240,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,latitude/longitude: Within 2 km,submitted
-241,74,submitted,28.02767227,86.95550508,published,6350.0,East Rongbuk Glacier,RGI60-15.10055,,,,submitted
-242,79,submitted,60.919193,-139.453348,submitted,1772.0,Little Kluane Glacier,RGI60-01.16198,0.2,False,Glacier surged vigorously in 2017-2018 | Time-series available from Gwenn Flowers | latitude/longitude: Measured with single-frequency GPS | Lower ablation area,submitted
-243,80,submitted,60.912472,-139.153777,submitted,2371.0,North Glacier,RGI60-01.16835,0.1,False,Glacier is not surge-type. Ice thickness is ~110 m at borehole location | The false precision reported for temperature is a consequence of converting values read out in F to C (!) | Supporting information in study 74 | latitude/longitude: Measured with single-frequency GPS | Central ablation area of small valley glacier,submitted
-244,81,submitted,60.822079,-139.119838,submitted,2395.902,South Glacier,RGI60-01.16195,0.1,True,Glacier is surge-type and last surged vigorously in the 1980s. Interpreted to be undergoing a 'slow surge' (see https://doi.org/10.5194/tc-5-299-2011) at the time of temperature measurement | Time-series available from Gwenn Flowers | Supporting information in study 74 | latitude/longitude: Measured with Trimble RTK survey | Central ablation area of small surge-type valley glacier,submitted
-245,82,submitted,-62.666004,-60.35266,submitted,126.0,Johnson Glacier,RGI60-19.02059,0.05,True,,submitted
-246,82,submitted,-62.671643,-60.350249,submitted,172.0,Johnson Glacier,RGI60-19.02059,0.05,True,,submitted
-247,83,submitted,28.809917,83.493183,submitted,5637.0,Rikha Samba Glacier,RGI60-15.04847,,False,Two-week average; Full time-series (2014-11-09 to 2015-02-08) available from ICIMOD / Tika Gurung. | Ablation area,submitted
-248,83,submitted,28.810133,83.495183,submitted,5617.0,Rikha Samba Glacier,RGI60-15.04847,,False,Two-week average | Full time-series (2014-11-09 to 2015-10-05) available from ICIMOD / Tika Gurung | Ablation area,submitted
-249,84,submitted,76.92008508,-66.9525292,submitted,691.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,False,Supporting information in https://doi.org/10.1017/jog.2020.28,submitted
-250,84,submitted,76.91991055,-66.95246654,submitted,686.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,False,Supporting information in https://doi.org/10.1017/jog.2020.28 | ~20 m back from a dry-calving ice cliff,submitted
-251,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 1 | Accumulation area,digitized
-252,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 2 | Accumulation area,digitized
-253,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 3 | Accumulation area,digitized
-254,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 4 | Accumulation area,digitized
-255,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 5 | Accumulation area,digitized
-256,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 6 | Accumulation area,digitized
-257,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 7 | Accumulation area,digitized
-258,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 8 | Accumulation area,digitized
-259,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 9 | Accumulation area,digitized
-260,2,map approximation,79.53638,-91.03409,published,1536.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-261,2,map approximation,79.52397,-90.96165,map guess,1310.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-262,2,map approximation,79.51597,-90.89401,published,1172.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-263,2,map approximation,79.50766,-90.85041,published,1045.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-264,2,map approximation,79.4974,-90.83256,published,900.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-265,2,map approximation,79.49402,-90.82123,published,871.0,White Glacier,RGI60-03.04539,0.2,False,Accumulation area,digitized
-266,2,map approximation,79.48651,-90.79514,published,750.0,White Glacier,RGI60-03.04539,0.2,False,Near ELA,digitized
-267,2,map approximation,79.45313,-90.69437,published,385.0,White Glacier,RGI60-03.04539,0.2,True,Accumulation area,digitized
-268,8,published,45.928511,7.875283,published,4470.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG07-1/08 | Accumulation area,digitized
-269,8,published,45.921341,7.873008,published,4330.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ99-10/99 | Accumulation area,digitized
-270,8,published,45.930337,7.872899,published,4335.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ08-8/08 | Accumulation area,digitized
-271,8,published,45.922643,7.873663,published,4293.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ98-A/99 | Accumulation area,digitized
-272,8,published,45.922643,7.873663,published,4293.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ08-6/08 | Accumulation area,digitized
-273,8,published,45.929936,7.87434,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG82-1/82 | Accumulation area,digitized
-274,8,published,45.929465,7.874968,published,4454.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG03-1/03 | Accumulation area,digitized
-275,8,published,45.929728,7.876968,published,4425.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG05-2/07 or CG05-1/07 | Accumulation area,digitized
-276,8,published,45.928193,7.875925,published,4475.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG95-1/97 | Accumulation area,digitized
-277,8,published,45.929111,7.873663,published,4448.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG95-2/97 | Accumulation area,digitized
-278,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,digitized
-279,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,digitized
-280,39,published,79.8,25.8,published,500.0,Austfonna,RGI60-07.00551,0.1,,#2 | temperature_accuracy: Minimum accuracy,digitized
-281,39,published,79.8,24.0,published,750.0,Austfonna,RGI60-07.00551,0.1,,#3 | temperature_accuracy: Minimum accuracy,digitized
-282,46,map approximation,29.56623,101.84461,published,4540.0,Dagongba Glacier,RGI60-15.07851,0.05,False,Ablation area,digitized
-283,46,map approximation,27.10679,100.19538,published,4600.0,Baishuihe Glacier No. 1,RGI60-15.07645,0.05,False,,digitized
-284,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-285,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-286,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-287,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-288,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-289,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-290,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,'Lower Ice' site | Ablation area,digitized
-291,58,published,45.971338,7.793497,published,2490.0,Grenzgletscher,RGI60-11.02822,0.05,False,f12 | Ablation area,digitized
-292,58,published,45.96903,7.795159,published,2500.0,Grenzgletscher,RGI60-11.02822,0.05,False,I9b | Ablation area,digitized
-293,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,Summit region,digitized
-294,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,Summit region,digitized
-295,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,Summit region,digitized
-296,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,Summit region,digitized
+id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glacier_name,rgi_id,temperature_accuracy,to_bottom,label,notes,measurement_origin
+1,1,map approximation,45.93062,7.875403,published,4450.0,Grenzgletscher,RGI60-11.02822,,False,,14 km from terminus | Colle Gnifetti,digitized
+2,1,map approximation,45.973065,7.802684,published,2600.0,Grenzgletscher,RGI60-11.02822,,False,,5 km from terminus | Ablation area,digitized
+3,1,map approximation,45.974053,7.774972,published,2500.0,Grenzgletscher,RGI60-11.02822,,False,,2 km from terminus | Ablation area,digitized
+4,2,map approximation,79.531432,-91.014641,published,1447.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+5,2,map approximation,79.474711,-90.756867,published,625.0,White Glacier,RGI60-03.04539,0.2,True,,Ablation area,digitized
+6,2,map approximation,79.440386,-90.645269,published,230.0,White Glacier,RGI60-03.04539,0.2,True,,Ablation area,digitized
+7,5,published,-16.65,-67.783333,published,6340.0,Illimani Volcano,RGI60-16.00486,0.05,True,,Summit region,digitized
+8,6,published,45.842712,6.843715,published,4300.0,Mont Blanc,RGI60-11.03646,0.1,True,,Summit region,digitized
+9,6,published,45.842712,6.843715,published,4300.0,Mont Blanc,RGI60-11.03646,0.1,False,,Summit region,digitized
+10,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,True,,profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933 | Summit region,digitized
+11,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,False,,profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933 | Summit region,digitized
+12,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,False,,Summit region,digitized
+13,6,published,45.84037,6.8489327,published,4255.0,Mont Blanc,RGI60-11.03646,0.3,True,,Summit region,digitized
+14,6,published,45.84037,6.8489327,published,4255.0,Mont Blanc,RGI60-11.03646,0.1,False,,Summit region,digitized
+15,8,published,45.928529,7.875257,published,4470.0,Grenzgletscher,RGI60-11.02822,0.2,False,CG91-B/91,Accumulation area,digitized
+16,8,published,45.928511,7.875283,published,4470.0,Grenzgletscher,RGI60-11.02822,0.2,True,CG07-1/07,Accumulation area,digitized
+17,8,published,45.92387,7.870451,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,False,GG91-D,Accumulation area,digitized
+18,8,published,45.923969,7.870477,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,False,GG99-12,Accumulation area,digitized
+19,8,published,45.92387,7.870451,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,False,GG08-5/08,Accumulation area,digitized
+20,12,map approximation,52.20682,-117.23517,published,2065.0,Athabasca Glacier,RGI60-02.12441,,False,Hole N,Ablation area,digitized
+21,12,map approximation,52.18602,-117.26113,published,2275.0,Athabasca Glacier,RGI60-02.12441,,False,Hole D,Ablation area,digitized
+22,12,map approximation,52.19837,-117.24919,published,2170.0,Athabasca Glacier,RGI60-02.12441,,False,Hole L,Ablation area,digitized
+23,12,map approximation,52.17594,-117.30924,published,3200.0,Athabasca Glacier,RGI60-02.12441,,False,Hole A,Accumulation area,published
+24,12,map approximation,52.16331,-117.30632,published,2910.0,Athabasca Glacier,RGI60-02.12441,,False,Hole B,Accumulation area,published
+25,12,map approximation,52.1631,-117.28074,published,2730.0,Athabasca Glacier,RGI60-02.12441,,False,Hole C,Accumulation area,published
+26,12,map approximation,52.1885,-117.25327,published,2235.0,Athabasca Glacier,RGI60-02.12441,,False,Hole E,Only ice temperatures | Ablation area,digitized
+27,12,map approximation,52.19224,-117.25808,published,2230.0,Athabasca Glacier,RGI60-02.12441,,False,Hole H,Only ice temperatures | Ablation area,digitized
+28,12,map approximation,52.20112,-117.24085,published,2115.0,Athabasca Glacier,RGI60-02.12441,,False,Hole M,Only ice temperatures | Ablation area,digitized
+29,13,map approximation,60.369155,-139.961054,published,1791.0,Seward Glacier,RGI60-01.13696,0.1,False,,measurement.temperature: Firn temperatures only | measurement.depth: Reported in feet | Accumulation area,digitized
+30,15,map approximation,46.537614,7.971254,published,3540.0,Jungfraufirn,RGI60-11.01450,0.1,False,bh 91-3,Other measurement dates available | Accumulation area,digitized
+31,15,map approximation,46.541514,7.978183,published,3410.0,Jungfraufirn,RGI60-11.01450,0.1,False,bh 91-2,Other measurement dates available | Accumulation area,digitized
+32,15,map approximation,46.549684,8.002083,published,3530.0,Jungfraufirn,RGI60-11.01450,0.1,False,bh 91-5,Other measurement dates available | Accumulation area,digitized
+33,15,map approximation,45.93033,7.876756,published,4452.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 91-1,Accumulation area,digitized
+34,15,map approximation,45.923589,7.871769,published,4300.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 94-1,Accumulation area,digitized
+35,15,map approximation,45.924076,7.862049,published,4100.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 94-2,Accumulation area,digitized
+36,15,map approximation,45.922507,7.866534,published,4200.0,Grenzgletscher,RGI60-11.02822,0.1,False,bh 94-A,Accumulation area,digitized
+40,18,map approximation,78.811214,12.881844,published,367.0,Kongsvegen,RGI60-07.01481,,False,bh K1,Ablation area,digitized
+41,18,map approximation,78.759108,13.335258,published,635.0,Kongsvegen,RGI60-07.01481,,True,bh K2,Accumulation area,digitized
+42,18,map approximation,78.8878,12.04861,published,180.0,Midtre Lovenbreen,RGI60-07.00493,,True,bh L3,Ablation area,digitized
+43,18,map approximation,78.87204,11.99866,published,380.0,Midtre Lovenbreen,RGI60-07.00493,,True,bh L9,Accumulation area,digitized
+44,18,map approximation,78.8955,11.83762,published,175.0,Austre Broggerbreen,RGI60-07.00504,,True,bh B5,Ablation area,digitized
+45,18,map approximation,78.88008,11.92096,published,375.0,Austre Broggerbreen,RGI60-07.00504,,True,bh B11,Accumulation area,digitized
+46,19,map approximation,75.897934,-79.111864,published,80.0,Laika Ice Cap,RGI60-03.01427,,False,X1,Ablation area,digitized
+47,19,map approximation,75.89683,-79.129082,published,202.0,Laika Ice Cap,RGI60-03.01427,,True,X2,Ablation area,digitized
+48,19,map approximation,75.8952763,-79.1444562,published,315.0,Laika Ice Cap,RGI60-03.01427,,False,X3,Around ELA,digitized
+49,19,map approximation,75.889619,-79.1632871,published,390.0,Laika Ice Cap,RGI60-03.01427,,False,X4,Accumulation area,digitized
+50,19,map approximation,75.8817165,-79.1801472,published,527.0,Laika Ice Cap,RGI60-03.01427,,False,X5,Accumulation area,digitized
+51,21,map guess,61.22458,-140.32565,map guess,2220.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#3,Below surge bulge,digitized
+52,21,map guess,61.22435,-140.32904,map guess,2320.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#6,At surge bulge,digitized
+53,21,map guess,61.22416,-140.33217,map guess,2420.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#9,Above surge bulge,digitized
+54,21,map guess,61.22379,-140.33531,map guess,2500.0,Trapridge Glacier,RGI60-01.16315,0.02,True,#11,Above surge bulge,digitized
+55,23,map approximation,79.7072458,-74.5266339,published,1100.0,John Evans Glacier,RGI60-03.00545,,False,#1,Accumulation area,published
+56,23,map approximation,79.6860756,-74.4592733,published,975.0,John Evans Glacier,RGI60-03.00545,,False,#4,Accumulation area,published
+57,23,map approximation,79.6800437,-74.4332913,published,900.0,John Evans Glacier,RGI60-03.00545,,False,#6,Accumulation area,published
+58,23,map approximation,79.6482756,-74.2047463,published,575.0,John Evans Glacier,RGI60-03.00545,,False,#10,Ablation area,published
+59,24,digitized,69.315327,-143.853423,published,1750.0,McCall Glacier,RGI60-01.02228,,True,JJMC,Ablation area,digitized
+60,24,digitized,69.283255,-143.831748,published,2100.0,McCall Glacier,RGI60-01.02228,,True,LC,Accumulation area,digitized
+61,24,digitized,69.295288,-143.790144,published,2400.0,McCall Glacier,RGI60-01.02228,,True,UC,Accumulation area,digitized
+62,25,map approximation,49.793715,87.73221241,published,3450.0,Sofiyskiy Glacier,RGI60-10.01836,,False,,Accumulation area,digitized
+63,25,map approximation,49.793715,87.73221241,published,3440.0,Sofiyskiy Glacier,RGI60-10.01836,,False,,Accumulation area,digitized
+64,26,map approximation,45.8569236,6.817813709,published,3141.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,,digitized
+65,26,map approximation,45.8567718,6.818435414,published,3159.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,False,,,digitized
+66,26,map approximation,45.8567264,6.818827044,published,3168.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,,digitized
+67,26,map approximation,45.856787,6.819218674,published,3176.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,,digitized
+68,26,map approximation,45.8567248,6.819786487,published,3181.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,False,,,digitized
+69,26,map approximation,45.8567151,6.820267936,published,3186.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,,digitized
+70,26,map approximation,45.856505,6.8208199,published,3207.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,True,,,digitized
+71,27,map approximation,45.8578979,6.840015556,published,3410.0,Taconnaz Glacier,RGI60-11.03647,,False,,Accumulation area,digitized
+72,27,map approximation,45.8534203,6.839661853,published,3680.0,Taconnaz Glacier,RGI60-11.03647,,False,,Accumulation area,digitized
+73,27,map approximation,45.8511161,6.836228851,published,3780.0,Taconnaz Glacier,RGI60-11.03647,,False,,Accumulation area,digitized
+74,27,map approximation,45.8468843,6.839641046,published,4080.0,Taconnaz Glacier,RGI60-11.03647,,True,,Accumulation area,digitized
+75,27,map approximation,45.8518841,6.84825476,published,4030.0,Taconnaz Glacier,RGI60-11.03647,,False,,Accumulation area,digitized
+76,28,map approximation,61.2564058,-140.184505,map guess,1760.0,Steele Glacier,RGI60-01.16377,0.015,False,73-2,Post surge (anomalous T5 & T7) | Ablation area,digitized
+77,28,map approximation,61.2867816,-140.01457,map guess,1400.0,Steele Glacier,RGI60-01.16377,0.015,False,73-3,Post surge ('normal') | Ablation area,digitized
+78,29,map approximation,61.2023142,-140.297788,published,2295.0,Fox Glacier,RGI60-01.16374,0.03,True,#1,,digitized
+79,29,map approximation,61.1962048,-140.2932,published,2455.0,Fox Glacier,RGI60-01.16374,0.03,False,#2,,digitized
+80,29,map approximation,61.1950391,-140.284356,map guess,2550.0,Fox Glacier,RGI60-01.16374,0.03,False,#3,,digitized
+81,29,map approximation,61.1992998,-140.296203,published,2374.0,Fox Glacier,RGI60-01.16374,0.03,False,#4,,digitized
+82,29,map approximation,61.2051273,-140.29904,published,2244.0,Fox Glacier,RGI60-01.16374,0.03,True,#5,,digitized
+83,29,map approximation,61.2078598,-140.300458,published,2188.0,Fox Glacier,RGI60-01.16374,0.03,True,#6,,digitized
+84,30,published,45.970304,7.787504,published,2467.0,Gornergletscher,RGI60-11.02822,0.05,True,BH4,Ablation area,digitized
+85,30,published,45.971338,7.793497,published,2492.0,Gornergletscher,RGI60-11.02822,0.05,True,BHT3,Ablation area,digitized
+86,30,published,45.969619,7.796608,published,2501.0,Gornergletscher,RGI60-11.02822,0.05,True,BHT2,Ablation area,digitized
+87,30,published,45.967081,7.794127,published,2496.0,Gornergletscher,RGI60-11.02822,0.05,True,BH430,Ablation area,digitized
+88,30,published,45.966213,7.798327,published,2516.0,Gornergletscher,RGI60-11.02822,0.05,True,BHC,Ablation area,digitized
+89,30,published,45.968581,7.803167,published,2492.0,Gornergletscher,RGI60-11.02822,0.05,True,BH210,Ablation area,digitized
+90,31,digitized,28.808614,83.496519,published,5600.0,Rikha Samba Glacier,RGI60-15.04847,,False,,Ablation area,digitized
+91,7,digitized,45.929931,7.874315,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,True,B82-1,Accumulation area,digitized
+92,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,,digitized
+93,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,,digitized
+94,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,,digitized
+95,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,,digitized
+96,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,False,,,digitized
+97,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
+98,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
+99,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,,Ice temperatures | Snow temperatures also available | Ablation area,digitized
+100,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,,Ice temperatures | Snow temperatures also available | Surface at first datapoint | Ablation area,digitized
+101,33,map approximation,63.4553258,-146.143037,published,1140.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,,Ice temperatures | Snow temperatures also available | Ablation area,digitized
+102,33,map approximation,63.4553258,-146.143037,published,1149.0,Black Rapids Glacier,RGI60-01.00037,0.15,False,,Ice temperatures | Snow temperatures are also available | Surface not first datapoint | Ablation area,digitized
+103,34,map guess,78.114158,15.99040771,published,305.0,Scott Turnerbreen,RGI60-07.01050,,True,,Surged in 1936,digitized
+104,34,map approximation,78.0954428,15.88386431,published,595.0,Scott Turnerbreen,RGI60-07.01050,,True,,Surged in 1937,digitized
+105,35,map approximation,77.0189,15.60193332,map approximation,100.0,Hansbreen,RGI60-07.00240,0.4,False,site A,,published
+106,35,map approximation,77.0275588,15.65626762,map approximation,128.0,Hansbreen,RGI60-07.00240,0.4,False,site B2,,digitized
+107,35,map approximation,77.0916016,15.63406651,map approximation,325.0,Hansbreen,RGI60-07.00240,0.4,False,site D,,digitized
+108,35,map approximation,77.0916016,15.63406651,map approximation,324.0,Hansbreen,RGI60-07.00240,0.4,True,site D2,,digitized
+109,35,map approximation,77.1073192,15.53912754,map approximation,405.0,Hansbreen,RGI60-07.00240,0.4,True,site F,,digitized
+110,35,map approximation,77.0196218,15.59521456,map approximation,100.0,Hansbreen,RGI60-07.00240,0.4,False,site G,,digitized
+111,36,map approximation,61.22429,-140.34572,map guess,2460.0,Trapridge Glacier,RGI60-01.16315,0.02,False,"hole 1,2",Pre surge,digitized
+112,36,map approximation,61.22533,-140.35687,map guess,2520.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 3,Pre surge,digitized
+113,36,map approximation,61.2234,-140.35467,map guess,2520.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 4,Pre surge,digitized
+114,36,map approximation,61.2219,-140.34123,map guess,2420.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 5,Pre surge,digitized
+115,36,map approximation,61.22427,-140.33176,map guess,2300.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 6,Pre surge,digitized
+116,36,map approximation,61.22578,-140.31965,map guess,2140.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 7,Pre surge,digitized
+117,36,map approximation,61.21813,-140.35455,map guess,2600.0,Trapridge Glacier,RGI60-01.16315,0.02,False,hole 8,Pre surge,digitized
+118,37,map approximation,78.6801692,12.1190339,map guess,430.0,Waldemarbreen,RGI60-07.00492,0.2,False,,Accumulation area,published
+119,37,map approximation,78.6801692,12.1190339,map guess,430.0,Waldemarbreen,RGI60-07.00492,0.2,False,,Accumulation area,published
+120,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,,digitized
+121,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,,digitized
+122,39,published,78.81,17.6,published,1000.0,Lomonosovfonna,RGI60-07.00570,0.1,,,temperature_accuracy: Minimum accuracy,digitized
+123,39,published,79.93,19.52,published,580.0,Vestfonna,RGI60-07.01510,0.1,,,temperature_accuracy: Minimum accuracy,digitized
+124,39,published,79.97,21.02,published,600.0,Vestfonna,RGI60-07.01499,0.1,,,temperature_accuracy: Minimum accuracy,digitized
+125,39,published,79.85,24.14,published,750.0,Austfonna,RGI60-07.00551,0.1,,Measurement #1,temperature_accuracy: Minimum accuracy,digitized
+126,39,published,79.28,16.83,published,1200.0,Høghetta,RGI60-07.00844,0.1,,,temperature_accuracy: Minimum accuracy,digitized
+127,39,published,79.13,13.3,published,1190.0,Snøfjellafonna,RGI60-07.01464,0.1,,,temperature_accuracy: Minimum accuracy,digitized
+128,39,published,79.45,16.72,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.1,,,temperature_accuracy: Minimum accuracy,digitized
+129,39,published,79.45,95.35,published,665.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,Measurement #1,,digitized
+130,39,published,79.5,95.08,published,720.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,Measurement #2,elevation: Assumed same as borehole 131,digitized
+131,39,published,79.32,96.02,published,720.0,Vavilova Ice Dome,RGI60-09.00470,0.1,,Measurement #4,,digitized
+132,39,published,79.38,95.72,published,680.0,Vavilova Ice Dome,RGI60-09.00468,0.1,,Measurement #5,,digitized
+133,39,published,80.5,94.83,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.1,,Measurement #1,elevation: Originally reported as 810,digitized
+134,39,published,80.52,94.8,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.1,,Measurement #2,elevation: Originally reported as 810,digitized
+135,39,published,80.78,63.55,published,505.0,Vetreniy Ice Dome,RGI60-09.00986,0.1,,,,digitized
+136,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,digitized
+137,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,digitized
+138,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,digitized
+139,41,published,48.633,90.95,published,3815.0,Tsambagarav,RGI60-10.02705,0.05,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
+140,41,published,43.05,94.316,published,4512.0,Miaoergou,RGI60-13.48412,0.05,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
+141,41,published,38.7,97.267,published,5356.0,Shule Nanshan,RGI60-13.32800,0.05,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
+142,41,published,28.17,86.633,published,6303.0,Gyabrag,RGI60-15.10175,0.05,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
+143,10,digitized,45.9282,7.87593,published,4480.0,Gornergletscher,RGI60-11.02822,0.05,True,b95-1,Accumulation area,digitized
+144,10,digitized,45.929118,7.873647,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,True,b95-2,Accumulation area,digitized
+297,10,digitized,45.929934,7.874315,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,False,b82-1,,
+145,46,map guess,35.2217793,81.11527554,digitized,5800.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S0,,digitized
+146,46,map guess,35.2351867,81.11135593,digitized,5975.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S4,,digitized
+147,46,map guess,35.2461911,81.10829374,digitized,6120.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S8,,digitized
+148,46,map guess,35.26191,81.10065704,digitized,6325.0,Chongce Ice Cap,RGI60-13.53222,0.1,,S12,,digitized
+149,46,map approximation,43.1154866,86.81283014,map approximation,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,False,T1,,digitized
+150,46,map approximation,43.1110594,86.80957723,map approximation,3960.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,False,T2,,digitized
+151,46,map approximation,43.1060367,86.80647755,map approximation,4050.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,True,T3,,digitized
+152,47,map approximation,-31.962011,-70.1219352,published,6070.0,Glaciar La Ollada (Mercedario),RGI60-17.14412,,,,,digitized
+153,47,map approximation,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,,,,,digitized
+154,48,map approximation,-30.140241,-69.931488,published,5536.0,Tapado Glacier,RGI60-17.14647,,True,,,digitized
+155,50,map approximation,27.9437778,86.81773669,published,4884.0,Khumbu Glacier,RGI60-15.03733,0.05,,,,digitized
+156,50,map approximation,27.9695686,86.82870764,published,4980.0,Khumbu Glacier,RGI60-15.03733,0.05,False,,,digitized
+157,50,map approximation,27.991737,86.84700289,published,5206.0,Khumbu Glacier,RGI60-15.03733,0.05,False,,,digitized
+158,51,map approximation,79.5082542,-90.8441553,published,1024.0,White Glacier,RGI60-03.04539,0.2,,I,,digitized
+159,51,map approximation,79.4850986,-90.7876998,published,717.0,White Glacier,RGI60-03.04539,0.2,,II,,digitized
+160,51,map approximation,79.4731948,-90.7527512,published,626.0,White Glacier,RGI60-03.04539,0.2,,III,,digitized
+161,52,map guess,43.1339651,-109.609941,map guess,3920.0,Upper Fremont Glacier,RGI60-02.18799,0.4,False,,,published
+162,54,map approximation,77.4924878,15.25323517,published,204.0,Finsterwalderbreen,RGI60-07.00231,0.05,True,,Ablation area,digitized
+163,54,map approximation,77.4366271,15.22366244,published,580.0,Finsterwalderbreen,RGI60-07.00231,0.05,True,,Accumulation area,digitized
+164,55,map approximation,52.19942,-117.24299,published,2140.0,Athabasca Glacier,RGI60-02.12441,,False,Hole 209,Took average of two measurements,digitized
+165,55,map approximation,52.20423,-117.23711,published,2075.0,Athabasca Glacier,RGI60-02.12441,,False,Hole 72,Took average of two measurements,digitized
+166,55,map approximation,52.19258,-117.25908,published,2235.0,Athabasca Glacier,RGI60-02.12441,,False,Hole 100,Took average of two measurements,digitized
+167,56,map approximation,67.9036926,18.56956375,map guess,1400.0,Storglaciären,RGI60-08.00213,0.05,False,,,digitized
+168,57,published,48.6556404,90.84707854,published,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,,True,,,digitized
+169,58,published,45.966213,7.798327,published,2516.0,Grenzgletscher,RGI60-11.02822,0.05,True,l5,Ablation area,digitized
+170,58,published,45.970304,7.787504,published,2468.0,Grenzgletscher,RGI60-11.02822,0.05,False,ll5,Ablation area,digitized
+171,58,published,45.971593,7.79257,published,2485.0,Grenzgletscher,RGI60-11.02822,0.05,False,f13,Ablation area,digitized
+172,58,published,45.969619,7.796608,published,2501.0,Grenzgletscher,RGI60-11.02822,0.05,False,f9,Ablation area,digitized
+173,58,published,45.967082,7.799455,published,2514.0,Grenzgletscher,RGI60-11.02822,0.05,False,f5,Ablation area,digitized
+174,58,published,45.967081,7.794127,published,2497.0,Grenzgletscher,RGI60-11.02822,0.05,True,ll9,Ablation area,digitized
+175,58,published,45.968796,7.800795,published,2506.0,Grenzgletscher,RGI60-11.02822,0.05,True,r6,Ablation area,digitized
+176,58,published,45.969451,7.795742,published,2499.0,Grenzgletscher,RGI60-11.02822,0.05,False,l9a,Ablation area,digitized
+177,58,published,45.965263,7.800062,published,2522.0,Grenzgletscher,RGI60-11.02822,0.05,False,f1,Ablation area,digitized
+178,58,published,45.965586,7.797343,published,2514.0,Grenzgletscher,RGI60-11.02822,0.05,False,f3,Ablation area,digitized
+179,59,published,-49.278195,-73.3535648,published,2600.0,Pio XI glacier,RGI60-17.05181,,False,,Accumulation area,digitized
+180,60,digitized,56.07338,160.4685,map approximation,3870.0,Blichenok glacier,RGI60-10.04022,0.1,False,BH1,Yearly average,digitized
+181,60,digitized,56.074062,160.4679,map approximation,3870.0,Blichenok glacier,RGI60-10.04022,0.1,False,K2,,digitized
+182,61,published,46.326569,7.212807,published,2810.0,Glacier du Sex Rouge,RGI60-11.02244,,False,#1,,digitized
+183,61,published,46.327953,7.212463,published,2780.0,Glacier du Sex Rouge,RGI60-11.02244,,False,#2,,digitized
+184,61,published,46.596277,8.598254,published,2855.0,St. Annafirn,RGI60-11.01367,,False,#6,,published
+185,61,published,46.600537,8.601335,published,2650.0,St. Annafirn,RGI60-11.01367,,False,#9,,published
+186,62,map approximation,78.67358,12.13132,published,420.0,Irenebreen,RGI60-07.00490,0.2,False,,Annual mean,digitized
+187,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 1,measurement.temperature: Minimum,digitized
+188,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 1,measurement.temperature: Maximum,digitized
+189,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 2,measurement.temperature: Minimum,digitized
+190,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,False,site 2,measurement.temperature: Maximum,digitized
+191,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,False,site 3,measurement.temperature: Minimum,digitized
+192,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,False,site 3,measurement.temperature: Maximum,digitized
+193,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,False,site 7,measurement.temperature: Minimum,digitized
+194,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,False,site 7,measurement.temperature: Maximum,digitized
+195,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,False,site 9,measurement.temperature: Minimum,digitized
+196,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,False,site 9,measurement.temperature: Maximum,digitized
+197,64,map approximation,35.8165362,90.75000214,published,5680.0,Malan Glacier,RGI60-13.48935,0.01,False,,,digitized
+198,66,map approximation,38.1051653,96.41680018,published,5325.0,Dunde Ice Cap,RGI60-13.35422,,True,,Caption and legend do not agree | Summit region,digitized
+199,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,False,,Caption and legend do not agree | Plateau region,digitized
+200,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,True,,Plateau region,digitized
+201,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,False,,Summit region,digitized
+202,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,True,,Summit region,digitized
+206,69,map approximation,45.8417942,6.846642185,published,4250.0,Col du Dôme-Bossons,RGI60-11.03646,0.05,True,,Accumulation area,digitized
+207,70,published,33.212778,91.154167,published,5800.0,Geladandong Ice Cap,RGI60-13.49384,0.05,False,,Geothermal hotspot suspected under drill site,digitized
+208,71,map approximation,39.4783238,96.53493886,published,4550.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Site 1,,digitized
+209,71,map approximation,39.4418617,96.55545016,published,4900.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Site 2,,digitized
+210,71,map approximation,39.429247,96.55633645,published,5040.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Site 3,,digitized
+211,71,map approximation,39.4355057,96.55583,published,4971.0,Laohugou Glacier,RGI60-13.33006,0.05,False,Deep borehole site,,digitized
+212,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,,Digitized deepest measurements (indicated with + in plot) | Summit region,digitized
+213,73,map guess,-18.10813679,-68.88302202,published,6548.0,Nevado Sajama,RGI60-16.01587,,,,Summit region,digitized
+214,73,map guess,-15.54037719,-72.66184742,published,6451.0,Coropuna,RGI60-16.01486,,,,Rim,digitized
+215,73,map guess,-15.54586811,-72.66056844,published,6326.0,Coropuna,RGI60-16.01486,,,,Crater,digitized
+216,75,map approximation,69.63971832,-72.14945899,digitized,685.0,Barnes Ice Cap,RGI60-04.06187,0.1,False,14.3 T,Within surge zone,published
+217,75,map approximation,69.5815068,-72.12125013,digitized,565.0,Barnes Ice Cap,RGI60-04.06187,0.1,False,19.5 T,Within surge zone,published
+218,75,map approximation,69.54665509,-72.11040056,digitized,450.0,Barnes Ice Cap,RGI60-04.06187,0.1,False,24.55 T,Within surge zone,published
+219,76,digitized,69.81379,-72.093185,map approximation,525.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T0975,elevation: From https://doi.org/10.1139/e80-124,digitized
+220,76,digitized,69.80686,-72.10005,map approximation,575.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T091,elevation: From https://doi.org/10.1139/e80-124,digitized
+221,76,digitized,69.79795,-72.110344,map approximation,650.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T081,elevation: From https://doi.org/10.1139/e80-124,digitized
+222,76,digitized,69.78211,-72.12066,map approximation,725.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T061,elevation: From https://doi.org/10.1139/e80-124,digitized
+223,76,digitized,69.74945,-72.154976,map approximation,850.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,T020,elevation: From https://doi.org/10.1139/e80-124,digitized
+224,76,digitized,69.78899,-71.9703,map approximation,670.0,Barnes Ice Cap,RGI60-04.06187,0.05,True,C4,label: D4 in https://doi.org/10.1139/e80-124) | elevation: From https://doi.org/10.1139/e80-124,digitized
+225,76,digitized,69.71965,-71.89204,map approximation,670.0,Barnes Ice Cap,RGI60-04.06187,0.05,False,B4,elevation: From https://doi.org/10.1139/e80-124,digitized
+226,78,submitted,76.4113,-68.2873,map approximation,505.0,Tuto Ramp,RGI60-05.07772,,True,D-11,elevation: From https://doi.org/10.1139/e80-124,submitted
+227,78,submitted,71.306,-26.768,map guess,2325.0,Renland Ice Cap,RGI60-05.16072,,False,,,submitted
+228,78,submitted,78.3897,-80.395,map guess,1600.0,Prince of Wales Ice Cap,RGI60-03.01708,,True,,,submitted
+229,78,submitted,67.3,-65.2,published,1810.0,Penny Ice Cap,RGI60-04.05688,,True,,,submitted
+230,78,submitted,79.93,-99.1,map guess,250.0,Meighen Ice Cap,RGI60-03.00691,,True,,,submitted
+231,78,submitted,82.84,-36.67,map guess,900.0,Hans Tausen Hare,RGI60-05.10726,,True,,,submitted
+232,78,submitted,82.51,-37.47,map guess,1250.0,Hans Tausen Dome,RGI60-05.10756,,True,,,submitted
+233,78,submitted,81.2926,-15.7029,map guess,690.0,Flade Isblink Ice Cap,RGI60-05.10315,,False,,,submitted
+234,78,published,75.32,-81.64,published,1930.0,Devon Ice Cap,RGI60-03.02467,,False,,latitude/longitude: From https://doi.org/10.3189/172756406781811349,submitted
+235,78,submitted,75.34,-82.14,published,1800.0,Devon Ice Cap,RGI60-03.02467,,True,,,submitted
+236,78,submitted,75.3,-82.3,published,1800.0,Devon Ice Cap,RGI60-03.02467,,False,,,submitted
+237,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,,latitude/longitude: Within 2 km,submitted
+238,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,,latitude/longitude: Within 2 km,submitted
+239,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,,latitude/longitude: Within 2 km,submitted
+240,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,,latitude/longitude: Within 2 km,submitted
+241,74,submitted,28.02767227,86.95550508,published,6350.0,East Rongbuk Glacier,RGI60-15.10055,,,,,submitted
+242,79,submitted,60.919193,-139.453348,submitted,1772.0,Little Kluane Glacier,RGI60-01.16198,0.2,False,,Glacier surged vigorously in 2017-2018 | Time-series available from Gwenn Flowers | latitude/longitude: Measured with single-frequency GPS | Lower ablation area,submitted
+243,80,submitted,60.912472,-139.153777,submitted,2371.0,North Glacier,RGI60-01.16835,0.1,False,,Glacier is not surge-type. Ice thickness is ~110 m at borehole location | The false precision reported for temperature is a consequence of converting values read out in F to C (!) | Supporting information in study 74 | latitude/longitude: Measured with single-frequency GPS | Central ablation area of small valley glacier,submitted
+244,81,submitted,60.822079,-139.119838,submitted,2395.902,South Glacier,RGI60-01.16195,0.1,True,,Glacier is surge-type and last surged vigorously in the 1980s. Interpreted to be undergoing a 'slow surge' (see https://doi.org/10.5194/tc-5-299-2011) at the time of temperature measurement | Time-series available from Gwenn Flowers | Supporting information in study 74 | latitude/longitude: Measured with Trimble RTK survey | Central ablation area of small surge-type valley glacier,submitted
+245,82,submitted,-62.666004,-60.35266,submitted,126.0,Johnson Glacier,RGI60-19.02059,0.05,True,,,submitted
+246,82,submitted,-62.671643,-60.350249,submitted,172.0,Johnson Glacier,RGI60-19.02059,0.05,True,,,submitted
+247,83,submitted,28.809917,83.493183,submitted,5637.0,Rikha Samba Glacier,RGI60-15.04847,,False,,Two-week average | Full time-series (2014-11-09 to 2015-02-08) available from ICIMOD / Tika Gurung. | Ablation area,submitted
+248,83,submitted,28.810133,83.495183,submitted,5617.0,Rikha Samba Glacier,RGI60-15.04847,,False,,Two-week average | Full time-series (2014-11-09 to 2015-10-05) available from ICIMOD / Tika Gurung | Ablation area,submitted
+249,84,submitted,76.92008508,-66.9525292,submitted,691.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,False,,Supporting information in https://doi.org/10.1017/jog.2020.28,submitted
+250,84,submitted,76.91991055,-66.95246654,submitted,686.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,False,,Supporting information in https://doi.org/10.1017/jog.2020.28 | ~20 m back from a dry-calving ice cliff,submitted
+251,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 1,Accumulation area,digitized
+252,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 2,Accumulation area,digitized
+253,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 3,Accumulation area,digitized
+254,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 4,Accumulation area,digitized
+255,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 5,Accumulation area,digitized
+256,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 6,Accumulation area,digitized
+257,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 7,Accumulation area,digitized
+258,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 8,Accumulation area,digitized
+259,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,False,profile 9,Accumulation area,digitized
+260,2,map approximation,79.53638,-91.03409,published,1536.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+261,2,map approximation,79.52397,-90.96165,map guess,1310.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+262,2,map approximation,79.51597,-90.89401,published,1172.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+263,2,map approximation,79.50766,-90.85041,published,1045.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+264,2,map approximation,79.4974,-90.83256,published,900.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+265,2,map approximation,79.49402,-90.82123,published,871.0,White Glacier,RGI60-03.04539,0.2,False,,Accumulation area,digitized
+266,2,map approximation,79.48651,-90.79514,published,750.0,White Glacier,RGI60-03.04539,0.2,False,,Near ELA,digitized
+267,2,map approximation,79.45313,-90.69437,published,385.0,White Glacier,RGI60-03.04539,0.2,True,,Accumulation area,digitized
+268,8,published,45.928511,7.875283,published,4470.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG07-1/08,Accumulation area,digitized
+269,8,published,45.921341,7.873008,published,4330.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ99-10/99,Accumulation area,digitized
+270,8,published,45.930337,7.872899,published,4335.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ08-8/08,Accumulation area,digitized
+271,8,published,45.922643,7.873663,published,4293.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ98-A/99,Accumulation area,digitized
+272,8,published,45.922643,7.873663,published,4293.0,Grenzgletscher,RGI60-11.02822,0.1,False,SJ08-6/08,Accumulation area,digitized
+273,8,published,45.929936,7.87434,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG82-1/82,Accumulation area,digitized
+274,8,published,45.929465,7.874968,published,4454.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG03-1/03,Accumulation area,digitized
+275,8,published,45.929728,7.876968,published,4425.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG05-2/07,label: Or CG05-1/07 | Accumulation area,digitized
+276,8,published,45.928193,7.875925,published,4475.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG95-1/97,Accumulation area,digitized
+277,8,published,45.929111,7.873663,published,4448.0,Grenzgletscher,RGI60-11.02822,0.1,False,CG95-2/97,Accumulation area,digitized
+278,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,,digitized
+279,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,True,,,digitized
+280,39,published,79.8,25.8,published,500.0,Austfonna,RGI60-07.00551,0.1,,#2,temperature_accuracy: Minimum accuracy,digitized
+281,39,published,79.8,24.0,published,750.0,Austfonna,RGI60-07.00551,0.1,,#3,temperature_accuracy: Minimum accuracy,digitized
+282,46,map approximation,29.56623,101.84461,published,4540.0,Dagongba Glacier,RGI60-15.07851,0.05,False,,Ablation area,digitized
+283,46,map approximation,27.10679,100.19538,published,4600.0,Baishuihe Glacier No. 1,RGI60-15.07645,0.05,False,,,digitized
+284,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+285,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+286,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+287,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+288,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+289,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+290,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,False,Lower Ice,Ablation area,digitized
+291,58,published,45.971338,7.793497,published,2490.0,Grenzgletscher,RGI60-11.02822,0.05,False,f12,Ablation area,digitized
+292,58,published,45.96903,7.795159,published,2500.0,Grenzgletscher,RGI60-11.02822,0.05,False,I9b,Ablation area,digitized
+293,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,,Summit region,digitized
+294,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,,Summit region,digitized
+295,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,,Summit region,digitized
+296,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,False,,Summit region,digitized
