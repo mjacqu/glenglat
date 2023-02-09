@@ -42,18 +42,18 @@ resources:
             required: true
             unique: true
         - name: first_author
-          description: First author of published study or person who submitted the data.
+          description: Name of first study author.
           type: string
           constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: year
-          description: Year of study publication or data submission.
+          description: Year of study publication.
           type: year
           constraints:
             required: true
         - name: title
-          description: Study title or "personal communication" for submitted but unpublished data.
+          description: Study title.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
@@ -134,7 +134,7 @@ resources:
             pattern: '[^\s]+( [^\s]+)*'
             enum: [submitted, published, digitized, map approximation, map guess]
         - name: elevation
-          description: Elevation of borehole drill site above sea level.
+          description: Elevation above sea level.
           type: number
           unit: m
           constraints:
