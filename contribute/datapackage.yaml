@@ -1,0 +1,161 @@
+name: glenglat-submission
+version: 0.1.0
+created: '2023-02-13T09:32:42Z'
+profile: tabular-data-package
+description: Submission format for the global englacial temperature database.
+resources:
+  - name: borehole
+    description: Metadata about each borehole.
+    path: borehole.csv
+    format: csv
+    dialect:
+      delimiter: ','
+      lineTerminator: '
+
+        '
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: id
+          description: Unique identifier.
+          type: integer
+          constraints:
+            required: true
+            unique: true
+        - name: latitude
+          description: Latitude (EPSG 4326).
+          type: number
+          unit: degree
+          constraints:
+            required: true
+            minimum: -90
+            maximum: 90
+        - name: longitude
+          description: Longitude (EPSG 4326).
+          type: number
+          unit: degree
+          constraints:
+            required: true
+            minimum: -180
+            maximum: 180
+        - name: elevation
+          description: Elevation above sea level.
+          type: number
+          unit: m
+          constraints:
+            required: true
+            maximum: 9999.0
+        - name: glacier_name
+          description: Glacier or ice cap name (as reported).
+          type: string
+          constraints:
+            required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: rgi_id
+          description: Randolph Glacier Inventory (RGI) 6.0 identifier.
+          type: string
+          constraints:
+            required: true
+            pattern: RGI60-\d{2}\.\d{5}
+        - name: temperature_accuracy
+          description: Thermistor accuracy or precision (as reported). Typically understood
+            to represent one standard deviation.
+          type: number
+          unit: °C
+        - name: to_bottom
+          description: Whether the borehole reached the glacier bed.
+          type: boolean
+          trueValues:
+            - 'True'
+          falseValues:
+            - 'False'
+        - name: label
+          description: Borehole name (e.g. as labeled on a plot).
+          type: string
+        - name: notes
+          description: 'Additional remarks about the study site, the borehole, or
+            the measurements therein. Literature references should be formatted as
+            `{url}` or `author ({year}): {title} ({url})`.'
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: first_author
+          description: Name of first study author.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: year
+          description: Year of study publication.
+          type: year
+          constraints: {}
+        - name: title
+          description: Study title.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: url
+          description: Study URL (DOI if available).
+          type: string
+          constraints:
+            pattern: https?:\/\/.+
+      missingValues:
+        - ''
+      primaryKey:
+        - id
+  - name: measurement
+    description: Temperature measurements with depth.
+    path: measurement.csv
+    format: csv
+    dialect:
+      delimiter: ','
+      lineTerminator: '
+
+        '
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: borehole_id
+          description: Borehole identifier.
+          type: integer
+          constraints:
+            required: true
+        - name: depth
+          description: Depth below the glacier surface.
+          type: number
+          unit: m
+          constraints:
+            required: true
+        - name: temperature
+          description: Temperature.
+          type: number
+          unit: °C
+          constraints:
+            required: true
+        - name: date_min
+          description: Measurement date, or if not known precisely, the first possible
+            date (e.g. 2019 → 2019-01-01).
+          type: date
+          format: '%Y-%m-%d'
+          constraints:
+            required: true
+        - name: date_max
+          description: Measurement date, or if not known precisely, the last possible
+            date (e.g. 2019 → 2019-12-31).
+          type: date
+          format: '%Y-%m-%d'
+          constraints:
+            required: true
+        - name: time
+          description: Measurement time.
+          type: time
+          format: '%H:%M:%S'
+        - name: utc
+          description: Whether `time` is in Coordinated Universal Time (True), in
+            another (but unknown) timezone (False), or in an unknown timezone (NULL).
+          type: boolean
+      missingValues:
+        - ''

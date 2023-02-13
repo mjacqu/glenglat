@@ -14,7 +14,7 @@ The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the
 
 ## How to contribute
 
-To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below. Consider using our handy Excel template: [`contribute/template.xlsx`](contribute/template.xlsx)!
+To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below and in the submission metadata: [`contribute/datapackage.yaml`](contribute/datapackage.yaml). Consider using our handy Excel template: [`contribute/template.xlsx`](contribute/template.xlsx)!
 
 *Note: We also welcome submissions of data that have already been digitized, as they allow us to assess the accuracy of the digitization process.*
 
