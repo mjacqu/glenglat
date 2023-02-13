@@ -1,5 +1,7 @@
 # `glenglat`: Global englacial temperature database
 
+[![Frictionless](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=mjacqu&repo=glenglat&flow=frictionless)
+
 Open-access database of englacial temperature measurements compiled from published literature and submitted entries.
 
 ## Data structure
