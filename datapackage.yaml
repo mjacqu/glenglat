@@ -155,7 +155,11 @@ resources:
           type: number
           unit: °C
         - name: drill_method
-          description: Describes the drill method as 'mechanical', 'thermal' (hot water or steam drill), 'NULL' (method unknown) to indicate whether thermal equilibration ('profile.equilibrated') is a concern or not.
+          description: |-
+            Drilling method:
+
+            - mechanical
+            - thermal: Hot water or steam (see `profile.equilibrated`)
           type: string
           constraints:
             enum: [mechanical, thermal]
@@ -236,7 +240,7 @@ resources:
           trueValues: ['True']
           falseValues: ['False']
         - name: equilibrated
-          description: Describes whether the measured temperatures for a profile are known to be in thermal equilibrium (True), or not (False), or unknown (NULL).
+          description: Whether the profile is in thermal equilibrium following drilling.
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
