@@ -156,6 +156,12 @@ resources:
           description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
           type: number
           unit: °C
+        - name: drill_method
+          description: Describes the drill method as 'mechanical', 'thermal' (hot water or steam drill), 'NULL' (method unknown) to indicate whether thermal equilibration ('profile.equilibrated') is a concern or not.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+            enum: [mechanical, thermal]
         - name: to_bottom
           description: Whether the borehole reached the glacier bed.
           type: boolean
@@ -231,6 +237,13 @@ resources:
         - name: utc
           description: Whether `time` is in Coordinated Universal Time (True), in another (but unknown) timezone (False), or in an unknown timezone (NULL).
           type: boolean
+          trueValues: ['True']
+          falseValues: ['False']
+        - name: equilibrated
+          description: Describes whether the measured temperatures for a profile are known to be in thermal equilibrium (True), or not (False), or unknown (NULL).
+          type: boolean
+          trueValues: ['True']
+          falseValues: ['False']
       missingValues: ['']
       primaryKey: [id]
       foreignKeys:
