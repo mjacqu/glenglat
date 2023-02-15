@@ -101,7 +101,6 @@ resources:
           type: string
           constraints:
             required: true
-            pattern: '[^\s]+( [^\s]+)*'
             enum: [submitted, published, digitized, map approximation, map guess]
         - name: latitude
           description: Latitude (EPSG 4326).
@@ -131,7 +130,6 @@ resources:
           type: string
           constraints:
             required: true
-            pattern: '[^\s]+( [^\s]+)*'
             enum: [submitted, published, digitized, map approximation, map guess]
         - name: elevation
           description: Elevation above sea level.
@@ -160,7 +158,6 @@ resources:
           description: Describes the drill method as 'mechanical', 'thermal' (hot water or steam drill), 'NULL' (method unknown) to indicate whether thermal equilibration ('profile.equilibrated') is a concern or not.
           type: string
           constraints:
-            pattern: '[^\s]+( [^\s]+)*'
             enum: [mechanical, thermal]
         - name: to_bottom
           description: Whether the borehole reached the glacier bed.
@@ -185,7 +182,6 @@ resources:
             - digitized: Digitized from published plot with complete axes (with Plot Digitizer)
           type: string
           constraints:
-            pattern: '[^\s]+( [^\s]+)*'
             enum: [submitted, published, digitized]
       missingValues: ['']
       primaryKey: [id]
