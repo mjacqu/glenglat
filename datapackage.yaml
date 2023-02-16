@@ -41,7 +41,7 @@ resources:
           constraints:
             required: true
             unique: true
-        - name: first_author
+        - name: author
           description: Name of first study author.
           type: string
           constraints:

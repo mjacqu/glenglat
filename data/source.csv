@@ -1,4 +1,4 @@
-id,first_author,year,title,url
+id,author,year,title,url
 1,Heinz Blatter,1984,Modelling Temperature Distribution in Alpine Glaciers,https://doi.org/10.3189/1984AoG5-1-18-22
 2,Heinz Blatter,1987,"On the Thermal Regime of an Arctic Valley Glacier: A Study of White Glacier, Axel Heiberg Island, N.W.T., Canada",https://doi.org/10.3189/S0022143000008704
 5,Adrien Gilbert,2010,"Atmospheric warming at a high-elevation tropical site revealed by englacial temperatures at Illimani, Bolivia (6340 m above sea level, 16°S, 67°W)",https://doi.org/10.1029/2009JD012961
@@ -60,10 +60,10 @@ id,first_author,year,title,url
 74,Tong Zhang,2013,"Observed and modelled ice temperature and velocity along the main flowline of East Rongbuk Glacier, Qomolangma (Mount Everest), Himalaya",https://doi.org/10.3189/2013JoG12J202
 75,David F. Classen,1977,Temperature profiles for the Barnes Ice Cap surge zone,https://doi.org/10.3189/S0022143000021079
 76,Adrien Gilbert,2016,"Sensitivity of Barnes Ice Cap, Baffin Island, Canada, to climate state and internal dynamics",https://doi.org/10.1002/2016JF003839
-78,GEUS | William Colgan,2022,GEUS Greenland Temperature Project,
+78,William Colgan (GEUS),2022,GEUS Greenland Temperature Project,
 79,Gwenn Flowers,2022,Personal communication,
 80,Gwenn Flowers,2022,Personal communication,
 81,Gwenn Flowers,2022,Personal communication,
 82,Shin Sugiyama,2019,"Subglacial water pressure and ice speed variations at Johnsons Glacier, Livingston Island, Antarctic Peninsula",https://doi.org/10.1017/jog.2019.45
-83,ICIMOD | Tika Gurung,2022,Personal communication,
+83,Tika Gurung (ICIMOD),2022,Personal communication,
 84,Rainer Prinz,2022,Personal communication,
