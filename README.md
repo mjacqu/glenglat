@@ -32,13 +32,10 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
 | `rgi_id` | Randolph Glacier Inventory (RGI) 6.0 identifier. | string | required: True<br>pattern: `RGI60-\d{2}\.\d{5}` |
 | `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
+| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam | string | enum: ['mechanical', 'thermal'] |
 | `to_bottom` | Whether the borehole reached the glacier bed. | boolean |  |
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
 | `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `author ({year}): {title} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
-| `first_author` | Name of first study author. | string | pattern: `[^\s]+( [^\s]+)*` |
-| `year` | Year of study publication. | year |  |
-| `title` | Study title. | string | pattern: `[^\s]+( [^\s]+)*` |
-| `url` | Study URL (DOI if available). | string | pattern: `https?:\/\/.+` |
 
 ### `measurement`
 
@@ -50,5 +47,6 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date | required: True |
 | `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date | required: True |
 | `time` | Measurement time.<br>`%H:%M:%S` | time |  |
-| `utc` | Whether `time` is in Coordinated Universal Time (True), in another (but unknown) timezone (False), or in an unknown timezone (NULL). | boolean |  |
+| `utc` | Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False). | boolean |  |
+| `equilibrated` | Whether the profile is in thermal equilibrium following drilling. | boolean |  |
 <!-- </contributor-format> -->
