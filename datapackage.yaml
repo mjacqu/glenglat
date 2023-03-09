@@ -41,24 +41,30 @@ resources:
           constraints:
             required: true
             unique: true
+        - name: contributor
+          description: Person who contributed the data to the database. For data drawn from published studies, this is the person who digitized the data. For data submissions, the person who submitted the data (ORCID in parenthesis if available). 
+          type: string
+          contraints: 
+            required: true 
+            pattern: '[^\s]+( [^\s]+)*'
         - name: author
-          description: Name of first study author.
+          description: Name of first study author if data is sourced from a publication.
           type: string
           constraints:
-            required: true
+            required: false
             pattern: '[^\s]+( [^\s]+)*'
-        - name: year
-          description: Year of study publication.
+        - name: publication_year
+          description: Publication year for data sourced from publications.
           type: year
           constraints:
-            required: true
+            required: false
         - name: title
-          description: Study title.
+          description: Publication title for data sourced from publications.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: url
-          description: Study URL (DOI if available).
+          description: URL (DOI if available) of publication for data sourced from a published study or link to public repository if data is also archived elsewhere.
           type: string
           constraints:
             pattern: 'https?:\/\/.+'
