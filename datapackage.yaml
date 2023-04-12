@@ -78,6 +78,7 @@ resources:
       - data/borehole.csv
       - data/rainer-prinz-nunatarssuaq/borehole.csv
       - data/gwenn-flowers-little-kluane/borehole.csv
+      - data/gwenn-flowers-south-glacier/borehole.csv
     format: csv
     dialect:
       header: true
@@ -211,6 +212,7 @@ resources:
       - data/profile.csv
       - data/rainer-prinz-nunatarssuaq/profile.csv
       - data/gwenn-flowers-little-kluane/profile.csv
+      - data/gwenn-flowers-south-glacier/profile.csv
     format: csv
     dialect:
       header: true
@@ -271,6 +273,7 @@ resources:
       - data/measurement.csv
       - data/rainer-prinz-nunatarssuaq/measurement.csv
       - data/gwenn-flowers-little-kluane/measurement.csv
+      - data/gwenn-flowers-south-glacier/measurement.csv
     format: csv
     dialect:
       header: true
