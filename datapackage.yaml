@@ -77,6 +77,7 @@ resources:
     path:
       - data/borehole.csv
       - data/rainer-prinz-nunatarssuaq/borehole.csv
+      - data/gwenn-flowers-little-kluane/borehole.csv
     format: csv
     dialect:
       header: true
@@ -209,6 +210,7 @@ resources:
     path:
       - data/profile.csv
       - data/rainer-prinz-nunatarssuaq/profile.csv
+      - data/gwenn-flowers-little-kluane/profile.csv
     format: csv
     dialect:
       header: true
@@ -268,6 +270,7 @@ resources:
     path:
       - data/measurement.csv
       - data/rainer-prinz-nunatarssuaq/measurement.csv
+      - data/gwenn-flowers-little-kluane/measurement.csv
     format: csv
     dialect:
       header: true
