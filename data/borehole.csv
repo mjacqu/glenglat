@@ -242,8 +242,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 246,82,submitted,-62.671643,-60.350249,submitted,172.0,Johnson Glacier,RGI60-19.02059,0.05,,True,,Supporting information in https://doi.org/10.1017/jog.2019.45,submitted
 247,83,submitted,28.809917,83.493183,submitted,5637.0,Rikha Samba Glacier,RGI60-15.04847,,,False,,Two-week average | Full time-series (2014-11-09 to 2015-02-08) available from ICIMOD / Tika Gurung | Ablation area,submitted
 248,83,submitted,28.810133,83.495183,submitted,5617.0,Rikha Samba Glacier,RGI60-15.04847,,,False,,Two-week average | Full time-series (2014-11-09 to 2015-10-05) available from ICIMOD / Tika Gurung | Ablation area,submitted
-249,84,submitted,76.92008508,-66.9525292,submitted,691.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,,False,,Supporting information in https://doi.org/10.1017/jog.2020.28,submitted
-250,84,submitted,76.91991055,-66.95246654,submitted,686.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,,False,,Supporting information in https://doi.org/10.1017/jog.2020.28 | ~20 m back from a dry-calving ice cliff,submitted
 251,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 1,Accumulation area,digitized
 252,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 2,Accumulation area,digitized
 253,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 3,Accumulation area,digitized

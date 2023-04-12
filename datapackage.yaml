@@ -24,7 +24,9 @@ contributors:
 resources:
   - name: source
     description: Data sources considerd in the compilation of this database.
-    path: data/source.csv
+    path:
+      - data/source.csv
+      - data/rainer-prinz-nunatarssuaq/source.csv
     format: csv
     dialect:
       header: true
@@ -42,10 +44,10 @@ resources:
             required: true
             unique: true
         - name: contributor
-          description: Person who contributed the data to the database. For data drawn from published studies, this is the person who digitized the data. For data submissions, the person who submitted the data (ORCID in parenthesis if available). 
+          description: Person who contributed the data to the database. For data drawn from published studies, this is the person who digitized the data. For data submissions, the person who submitted the data (ORCID in parenthesis if available).
           type: string
-          contraints: 
-            required: true 
+          contraints:
+            required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: author
           description: Name of first study author if data is sourced from a publication.
@@ -72,7 +74,9 @@ resources:
       missingValues: ['']
   - name: borehole
     description: Metadata about each borehole.
-    path: data/borehole.csv
+    path:
+      - data/borehole.csv
+      - data/rainer-prinz-nunatarssuaq/borehole.csv
     format: csv
     dialect:
       header: true
@@ -202,7 +206,9 @@ resources:
             fields: [id]
   - name: profile
     description: Date and time of each measurement profile.
-    path: data/profile.csv
+    path:
+      - data/profile.csv
+      - data/rainer-prinz-nunatarssuaq/profile.csv
     format: csv
     dialect:
       header: true
@@ -259,7 +265,9 @@ resources:
             fields: [id]
   - name: measurement
     description: Temperature measurements with depth.
-    path: data/measurement.csv
+    path:
+      - data/measurement.csv
+      - data/rainer-prinz-nunatarssuaq/measurement.csv
     format: csv
     dialect:
       header: true
