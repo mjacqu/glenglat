@@ -236,8 +236,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 240,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz,RGI60-03.00098,,,,,latitude/longitude: Within 2 km,submitted
 241,74,submitted,28.02767227,86.95550508,published,6350.0,East Rongbuk Glacier,RGI60-15.10055,,,,,,submitted
 243,79,submitted,60.912472,-139.153777,submitted,2371.0,North Glacier,RGI60-01.16835,0.1,,False,,Glacier is not surge-type | Ice thickness is ~110 m at borehole location | Supporting information in https://summit.sfu.ca/item/12553 and https://doi.org/10.1002/jgrf.20096 | latitude/longitude/elevation: Measured with single-frequency GPS on 2011-08-02 | measurement.depth: Measured at time of installation (2011-08) | Central ablation area of small valley glacier,submitted
-245,82,submitted,-62.666004,-60.35266,submitted,126.0,Johnson Glacier,RGI60-19.02059,0.05,,True,,Supporting information in https://doi.org/10.1017/jog.2019.45,submitted
-246,82,submitted,-62.671643,-60.350249,submitted,172.0,Johnson Glacier,RGI60-19.02059,0.05,,True,,Supporting information in https://doi.org/10.1017/jog.2019.45,submitted
+245,82,submitted,-62.666004,-60.35266,submitted,126.0,Johnsons Glacier,RGI60-19.02059,0.05,thermal,True,Site 1,Supporting information in https://doi.org/10.1017/jog.2019.45,submitted
+246,82,submitted,-62.671643,-60.350249,submitted,172.0,Johnsons Glacier,RGI60-19.02059,0.05,thermal,True,Site 2,Supporting information in https://doi.org/10.1017/jog.2019.45,submitted
 247,83,submitted,28.809917,83.493183,submitted,5637.0,Rikha Samba Glacier,RGI60-15.04847,,,False,,Two-week average | Full time-series (2014-11-09 to 2015-02-08) available from ICIMOD / Tika Gurung | Ablation area,submitted
 248,83,submitted,28.810133,83.495183,submitted,5617.0,Rikha Samba Glacier,RGI60-15.04847,,,False,,Two-week average | Full time-series (2014-11-09 to 2015-10-05) available from ICIMOD / Tika Gurung | Ablation area,submitted
 251,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 1,Accumulation area,digitized
