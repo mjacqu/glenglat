@@ -27,6 +27,7 @@ resources:
     path:
       - data/source.csv
       - data/rainer-prinz-nunatarssuaq/source.csv
+      - data/tika-gurung-rikha-samba/source.csv
     format: csv
     dialect:
       header: true
@@ -79,6 +80,7 @@ resources:
       - data/rainer-prinz-nunatarssuaq/borehole.csv
       - data/gwenn-flowers-little-kluane/borehole.csv
       - data/gwenn-flowers-south-glacier/borehole.csv
+      - data/tika-gurung-rikha-samba/borehole.csv
     format: csv
     dialect:
       header: true
@@ -213,6 +215,7 @@ resources:
       - data/rainer-prinz-nunatarssuaq/profile.csv
       - data/gwenn-flowers-little-kluane/profile.csv
       - data/gwenn-flowers-south-glacier/profile.csv
+      - data/tika-gurung-rikha-samba/profile.csv
     format: csv
     dialect:
       header: true
@@ -274,6 +277,7 @@ resources:
       - data/rainer-prinz-nunatarssuaq/measurement.csv
       - data/gwenn-flowers-little-kluane/measurement.csv
       - data/gwenn-flowers-south-glacier/measurement.csv
+      - data/tika-gurung-rikha-samba/measurement.csv
     format: csv
     dialect:
       header: true

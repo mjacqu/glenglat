@@ -1,0 +1,3 @@
+id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glacier_name,rgi_id,temperature_accuracy,drill_method,to_bottom,label,notes,measurement_origin
+247,83,submitted,28.809917,83.493183,submitted,5637.0,Rikha Samba Glacier,RGI60-15.04847,,,False,Thermistor241,Ablation area,submitted
+248,83,submitted,28.810133,83.495183,submitted,5617.0,Rikha Samba Glacier,RGI60-15.04847,,,False,Thermistor242,Ablation area,submitted
