@@ -140,7 +140,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 142,41,published,28.17,86.633,published,6303.0,Gyabrag,RGI60-15.10175,0.05,,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
 143,10,digitized,45.9282,7.87593,published,4480.0,Gornergletscher,RGI60-11.02822,0.05,,True,b95-1,Accumulation area,digitized
 144,10,digitized,45.929118,7.873647,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,,True,b95-2,Accumulation area,digitized
-297,10,digitized,45.929934,7.874315,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,,False,b82-1,,
 145,46,map guess,35.2217793,81.11527554,digitized,5800.0,Chongce Ice Cap,RGI60-13.53222,0.1,,,S0,,digitized
 146,46,map guess,35.2351867,81.11135593,digitized,5975.0,Chongce Ice Cap,RGI60-13.53222,0.1,,,S4,,digitized
 147,46,map guess,35.2461911,81.10829374,digitized,6120.0,Chongce Ice Cap,RGI60-13.53222,0.1,,,S8,,digitized
@@ -290,3 +289,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 294,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
 295,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
 296,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
+297,10,digitized,45.929934,7.874315,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,,False,b82-1,,
