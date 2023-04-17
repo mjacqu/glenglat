@@ -244,14 +244,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 249,84,submitted,76.92008508370,-66.95252920240,submitted,691.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,,False,,Cooling and settling of temperatures after insertion of the sensors not excluded from dataset | Upper sensors affected by radiative heating | Supporting information in https://doi.org/10.1017/jog.2020.28 | Near an automatic weather station | Measured with PT940 resistance temperature probes on Pace Scientific XR440 data loggers,submitted
 250,84,submitted,76.91991055120,-66.95246653560,submitted,686.0,Nunatarssuaq Ice Cap,RGI60-05.08054,,,False,,Cooling and settling of temperatures after insertion of the sensors not excluded from dataset | Upper sensors affected by radiative heating | Supporting information in https://doi.org/10.1017/jog.2020.28 | ~20 m back from a dry-calving ice cliff | Measured with PT940 resistance temperature probes on Pace Scientific XR440 data loggers,submitted
 251,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 1,Accumulation area,digitized
-252,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 2,Accumulation area,digitized
-253,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 3,Accumulation area,digitized
-254,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 4,Accumulation area,digitized
-255,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 5,Accumulation area,digitized
-256,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 6,Accumulation area,digitized
-257,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 7,Accumulation area,digitized
-258,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 8,Accumulation area,digitized
-259,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,RGI60-09.00468,,,False,profile 9,Accumulation area,digitized
 260,2,map approximation,79.53638,-91.03409,published,1536.0,White Glacier,RGI60-03.04539,0.2,,False,,Accumulation area,digitized
 261,2,map approximation,79.52397,-90.96165,map guess,1310.0,White Glacier,RGI60-03.04539,0.2,,False,,Accumulation area,digitized
 262,2,map approximation,79.51597,-90.89401,published,1172.0,White Glacier,RGI60-03.04539,0.2,,False,,Accumulation area,digitized
