@@ -24,10 +24,7 @@ contributors:
 resources:
   - name: source
     description: Data sources considerd in the compilation of this database.
-    path:
-      - data/source.csv
-      - data/rainer-prinz-nunatarssuaq/source.csv
-      - data/tika-gurung-rikha-samba/source.csv
+    path: data/source.csv
     format: csv
     dialect:
       header: true
@@ -75,12 +72,7 @@ resources:
       missingValues: ['']
   - name: borehole
     description: Metadata about each borehole.
-    path:
-      - data/borehole.csv
-      - data/rainer-prinz-nunatarssuaq/borehole.csv
-      - data/gwenn-flowers-little-kluane/borehole.csv
-      - data/gwenn-flowers-south-glacier/borehole.csv
-      - data/tika-gurung-rikha-samba/borehole.csv
+    path: data/borehole.csv
     format: csv
     dialect:
       header: true

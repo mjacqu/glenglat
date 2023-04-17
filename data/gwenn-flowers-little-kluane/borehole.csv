@@ -1,2 +1,0 @@
-id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glacier_name,rgi_id,temperature_accuracy,drill_method,to_bottom,label,notes,measurement_origin
-242,79,submitted,60.919193,-139.453348,submitted,1772.0,Little Kluane Glacier,RGI60-01.16198,0.2,,False,,Glacier surged vigorously in 2017-2018 | latitude/longitude/elevation: Measured with single-frequency GPS | Lower ablation area | measurement.depth: Measured at time of installation (2019-07-04) and decreased over time due to glacier thinning,submitted
