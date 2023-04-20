@@ -88,12 +88,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 90,31,digitized,28.808614,83.496519,published,5600.0,Rikha Samba Glacier,RGI60-15.04847,,,False,,Ablation area,digitized
 91,7,digitized,45.929931,7.874315,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,,True,B82-1,Accumulation area,digitized
 92,32,map approximation,46.4152,9.8211,published,3340.0,Vadret dal Corvatsch,RGI60-11.01962,,,False,,,digitized
-97,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
-98,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
-99,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | Ablation area,digitized
-100,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | Surface at first datapoint | Ablation area,digitized
-101,33,map approximation,63.4553258,-146.143037,published,1140.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | Ablation area,digitized
-102,33,map approximation,63.4553258,-146.143037,published,1149.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | Surface not first datapoint | Ablation area,digitized
+97,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Firn temperatures | Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Accumulation area,digitized
+99,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Surface at shallowest depth in July 1973 profile | Ablation area,digitized
+101,33,map approximation,63.4553258,-146.143037,published,1140.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Surface at shallowest depth in July 1973 profile | Ablation area,digitized
 103,34,map guess,78.114158,15.99040771,published,305.0,Scott Turnerbreen,RGI60-07.01050,,,True,,Surged in 1936,digitized
 104,34,map approximation,78.0954428,15.88386431,published,595.0,Scott Turnerbreen,RGI60-07.01050,,,True,,Surged in 1937,digitized
 105,35,map approximation,77.0189,15.60193332,map approximation,100.0,Hansbreen,RGI60-07.00240,0.4,,False,site A,,published
