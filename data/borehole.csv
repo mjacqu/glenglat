@@ -257,12 +257,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 282,46,map approximation,29.56623,101.84461,published,4540.0,Dagongba Glacier,RGI60-15.07851,0.05,,False,,Ablation area,digitized
 283,46,map approximation,27.10679,100.19538,published,4600.0,Baishuihe Glacier No. 1,RGI60-15.07645,0.05,,False,,,digitized
 284,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-285,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-286,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-287,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-288,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-289,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-290,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
 291,58,published,45.971338,7.793497,published,2490.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f12,Ablation area,digitized
 292,58,published,45.96903,7.795159,published,2500.0,Grenzgletscher,RGI60-11.02822,0.05,,False,I9b,Ablation area,digitized
 293,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
