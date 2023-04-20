@@ -57,8 +57,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 59,24,digitized,69.315327,-143.853423,published,1750.0,McCall Glacier,RGI60-01.02228,,,True,JJMC,Ablation area,digitized
 60,24,digitized,69.283255,-143.831748,published,2100.0,McCall Glacier,RGI60-01.02228,,,True,LC,Accumulation area,digitized
 61,24,digitized,69.295288,-143.790144,published,2400.0,McCall Glacier,RGI60-01.02228,,,True,UC,Accumulation area,digitized
-62,25,map approximation,49.793715,87.73221241,published,3450.0,Sofiyskiy Glacier,RGI60-10.01836,,,False,,Accumulation area,digitized
-63,25,map approximation,49.793715,87.73221241,published,3440.0,Sofiyskiy Glacier,RGI60-10.01836,,,False,,Accumulation area,digitized
+62,25,digitized,49.78691,87.730675,published,3450.0,Sofiyskiy Glacier,RGI60-10.01836,,,False,,Accumulation area,digitized
+63,25,digitized,49.786858,87.732346,published,3440.0,Sofiyskiy Glacier,RGI60-10.01836,,,False,,Accumulation area,digitized
 64,26,map approximation,45.8569236,6.817813709,published,3141.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,,,digitized
 65,26,map approximation,45.8567718,6.818435414,published,3159.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,,False,,,digitized
 66,26,map approximation,45.8567264,6.818827044,published,3168.0,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,,,digitized
