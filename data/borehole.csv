@@ -6,13 +6,13 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 5,2,map approximation,79.474711,-90.756867,published,625.0,White Glacier,RGI60-03.04539,0.2,,True,,Ablation area,digitized
 6,2,map approximation,79.440386,-90.645269,published,230.0,White Glacier,RGI60-03.04539,0.2,,True,,Ablation area,digitized
 7,5,published,-16.65,-67.783333,published,6340.0,Illimani Volcano,RGI60-16.00486,0.05,,True,,Summit region,digitized
-8,6,published,45.842712,6.843715,published,4300.0,Mont Blanc,RGI60-11.03646,0.1,,True,,Summit region,digitized
-9,6,published,45.842712,6.843715,published,4300.0,Mont Blanc,RGI60-11.03646,0.1,,False,,Summit region,digitized
-10,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,,True,,profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933 | Summit region,digitized
-11,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,,False,,profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933 | Summit region,digitized
-12,6,published,45.842144,6.8467193,published,4245.0,Mont Blanc,RGI60-11.03646,0.1,,False,,Summit region,digitized
-13,6,published,45.84037,6.8489327,published,4255.0,Mont Blanc,RGI60-11.03646,0.3,,True,,Summit region,digitized
-14,6,published,45.84037,6.8489327,published,4255.0,Mont Blanc,RGI60-11.03646,0.1,,False,,Summit region,digitized
+8,6,published,45.842712,6.843715,published,4300.0,Glacier des Bossons,RGI60-11.03646,0.1,,True,,Dôme du Goûter | Summit region,digitized
+9,6,published,45.842712,6.843715,published,4300.0,Glacier des Bossons,RGI60-11.03646,0.1,,False,,Dôme du Goûter | Summit region,digitized
+10,6,published,45.842144,6.8467193,published,4245.0,Glacier des Bossons,RGI60-11.03646,0.1,,True,,Col du Dôme | Summit region | profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933,digitized
+11,6,published,45.842144,6.8467193,published,4245.0,Glacier des Bossons,RGI60-11.03646,0.1,,False,,Col du Dôme | Summit region | profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933,digitized
+12,6,published,45.842144,6.8467193,published,4245.0,Glacier des Bossons,RGI60-11.03646,0.1,,False,,Col du Dôme | Summit region,digitized
+13,6,published,45.84037,6.8489327,published,4255.0,Glacier des Bossons,RGI60-11.03646,0.3,,True,,Summit region,digitized
+14,6,published,45.84037,6.8489327,published,4255.0,Glacier des Bossons,RGI60-11.03646,0.1,,False,,Summit region,digitized
 15,8,published,45.928529,7.875257,published,4470.0,Grenzgletscher,RGI60-11.02822,0.2,,False,CG91-B/91,Accumulation area,digitized
 16,8,published,45.928511,7.875283,published,4470.0,Grenzgletscher,RGI60-11.02822,0.2,,True,CG07-1/07,Accumulation area,digitized
 17,8,published,45.92387,7.870451,published,4250.0,Grenzgletscher,RGI60-11.02822,0.2,,False,GG91-D,Accumulation area,digitized
@@ -198,7 +198,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 200,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,,True,,Plateau region,digitized
 201,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,,False,,Summit region,digitized
 202,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,,True,,Summit region,digitized
-206,69,map approximation,45.8417942,6.846642185,published,4250.0,Col du Dôme-Bossons,RGI60-11.03646,0.05,,True,,Accumulation area,digitized
+206,69,map approximation,45.8417942,6.846642185,published,4250.0,Glacier des Bossons,RGI60-11.03646,0.05,,True,,Col du Dôme | Summit region,digitized
 207,70,published,33.212778,91.154167,published,5800.0,Geladandong Ice Cap,RGI60-13.49384,0.05,,False,,Geothermal hotspot suspected under drill site,digitized
 208,71,map approximation,39.4783238,96.53493886,published,4550.0,Laohugou Glacier,RGI60-13.33006,0.05,,False,Site 1,,digitized
 209,71,map approximation,39.4418617,96.55545016,published,4900.0,Laohugou Glacier,RGI60-13.33006,0.05,,False,Site 2,,digitized
