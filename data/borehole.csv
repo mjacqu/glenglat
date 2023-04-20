@@ -266,3 +266,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 297,10,digitized,45.929934,7.874315,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,,False,b82-1,,
 298,85,map guess,41.977,77.916,published,4660,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,digitized
 299,86,published,41.975833,77.913333,published,4563,Grigoriev ice cap,RGI60-13.06741,,mechanical,True,,to_bottom: 86.87 m,digitized
+300,87,map approximation,46.54778,7.99004,map approximation,3455,Jungfraufirn,RGI60-11.01450,,,False,Shaft,,digitized
+301,87,map approximation,46.54765,7.99011,map approximation,3455,Jungfraufirn,RGI60-11.01450,,,False,Auxiliary Pit No. 1,,digitized
+302,87,map approximation,46.54776,7.99019,map approximation,3455,Jungfraufirn,RGI60-11.01450,,,False,Bore No. 1,,digitized
+303,87,map approximation,46.54701,7.99302,map approximation,3460,Jungfraufirn,RGI60-11.01450,,,False,Bore No. 2,,digitized
+304,87,map approximation,46.54937,7.99514,map approximation,3500,Jungfraufirn,RGI60-11.01450,,,False,Bore No. 3,,digitized
