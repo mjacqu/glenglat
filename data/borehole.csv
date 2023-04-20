@@ -283,3 +283,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 296,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
 297,10,digitized,45.929934,7.874315,published,4450.0,Gornergletscher,RGI60-11.02822,0.05,,False,b82-1,,
 298,85,map guess,41.977,77.916,published,4660,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,digitized
+299,86,published,41.975833,77.913333,published,4563,Grigoriev ice cap,RGI60-13.06741,,mechanical,True,,to_bottom: 86.87 m,digitized
