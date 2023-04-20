@@ -182,16 +182,11 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 184,61,published,46.596277,8.598254,published,2855.0,St. Annafirn,RGI60-11.01367,,,False,#6,,published
 185,61,published,46.600537,8.601335,published,2650.0,St. Annafirn,RGI60-11.01367,,,False,#9,,published
 186,62,map approximation,78.67358,12.13132,published,420.0,Irenebreen,RGI60-07.00490,0.2,,False,,Annual mean,digitized
-187,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,,False,site 1,measurement.temperature: Minimum,digitized
-188,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,,False,site 1,measurement.temperature: Maximum,digitized
-189,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,,False,site 2,measurement.temperature: Minimum,digitized
-190,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,,False,site 2,measurement.temperature: Maximum,digitized
-191,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,,False,site 3,measurement.temperature: Minimum,digitized
-192,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,,False,site 3,measurement.temperature: Maximum,digitized
-193,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,,False,site 7,measurement.temperature: Minimum,digitized
-194,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,,False,site 7,measurement.temperature: Maximum,digitized
-195,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,,False,site 9,measurement.temperature: Minimum,digitized
-196,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,,False,site 9,measurement.temperature: Maximum,digitized
+187,63,map approximation,79.5945013,12.56989669,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,,False,site 1,Digitized as minimum and maximum temperature profiles,digitized
+189,63,map approximation,79.5985643,12.60153683,digitized,25.0,Erikbreen,RGI60-07.00768,0.1,,False,site 2,Digitized as minimum and maximum temperature profiles,digitized
+191,63,map approximation,79.5995375,12.58114652,digitized,70.0,Erikbreen,RGI60-07.00768,0.1,,False,site 3,Digitized as minimum and maximum temperature profiles,digitized
+193,63,map approximation,79.6186866,12.51200694,digitized,375.0,Erikbreen,RGI60-07.00768,0.1,,False,site 7,Digitized as minimum and maximum temperature profiles,digitized
+195,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,,False,site 9,Digitized as minimum and maximum temperature profiles,digitized
 197,64,map approximation,35.8165362,90.75000214,published,5680.0,Malan Glacier,RGI60-13.48935,0.01,,False,,,digitized
 198,66,map approximation,38.1051653,96.41680018,published,5325.0,Dunde Ice Cap,RGI60-13.35422,,,True,,Caption and legend do not agree | Summit region,digitized
 199,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,,False,,Caption and legend do not agree | Plateau region,digitized
