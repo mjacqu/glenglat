@@ -87,11 +87,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 89,30,published,45.968581,7.803167,published,2492.0,Gornergletscher,RGI60-11.02822,0.05,,True,BH210,Ablation area,digitized
 90,31,digitized,28.808614,83.496519,published,5600.0,Rikha Samba Glacier,RGI60-15.04847,,,False,,Ablation area,digitized
 91,7,digitized,45.929931,7.874315,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,,True,B82-1,Accumulation area,digitized
-92,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,,False,,,digitized
-93,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,,False,,,digitized
-94,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,,False,,,digitized
-95,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,,False,,,digitized
-96,32,map approximation,46.4152,9.8211,published,3340.0,Murtèl-Corvatsch,RGI60-11.01962,,,False,,,digitized
+92,32,map approximation,46.4152,9.8211,published,3340.0,Vadret dal Corvatsch,RGI60-11.01962,,,False,,,digitized
 97,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
 98,33,map approximation,63.442926,-146.516929,published,1860.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Firn temperatures | Snow temperatures also available | Accumulation area,digitized
 99,33,map approximation,63.4833402,-146.406772,published,1550.0,Black Rapids Glacier,RGI60-01.00037,0.15,,False,,Ice temperatures | Snow temperatures also available | Ablation area,digitized
