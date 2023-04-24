@@ -192,6 +192,7 @@ resources:
             - digitized: Digitized from published plot with complete axes (with Plot Digitizer)
           type: string
           constraints:
+            required: true
             enum: [submitted, published, digitized]
       missingValues: ['']
       primaryKey: [id]
