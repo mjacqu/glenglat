@@ -140,7 +140,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 149,46,map approximation,43.1154866,86.81283014,map approximation,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,,False,T1,,digitized
 150,46,map approximation,43.1110594,86.80957723,map approximation,3960.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,,False,T2,,digitized
 151,46,map approximation,43.1060367,86.80647755,map approximation,4050.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,,True,T3,,digitized
-152,47,map approximation,-31.962011,-70.1219352,published,6070.0,Glaciar La Ollada (Mercedario),RGI60-17.14412,,,,,,digitized
 153,47,map approximation,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,,,,,,digitized
 154,48,map approximation,-30.140241,-69.931488,published,5536.0,Tapado Glacier,RGI60-17.14647,,,True,,,digitized
 155,50,map approximation,27.9437778,86.81773669,published,4884.0,Khumbu Glacier,RGI60-15.03733,0.05,,,,,digitized
@@ -246,7 +245,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 271,8,published,45.922643,7.873663,published,4293.0,Grenzgletscher,RGI60-11.02822,0.1,,False,SJ98-A/99,Accumulation area,digitized
 272,8,published,45.922643,7.873663,published,4293.0,Grenzgletscher,RGI60-11.02822,0.1,,False,SJ08-6/08,Accumulation area,digitized
 273,8,published,45.929936,7.87434,published,4450.0,Grenzgletscher,RGI60-11.02822,0.1,,False,CG82-1/82,Accumulation area,digitized
-274,8,published,45.929465,7.874968,published,4454.0,Grenzgletscher,RGI60-11.02822,0.1,,False,CG03-1/03,Accumulation area,digitized
 275,8,published,45.929728,7.876968,published,4425.0,Grenzgletscher,RGI60-11.02822,0.1,,False,CG05-2/07,label: Or CG05-1/07 | Accumulation area,digitized
 276,8,published,45.928193,7.875925,published,4475.0,Grenzgletscher,RGI60-11.02822,0.1,,False,CG95-1/97,Accumulation area,digitized
 277,8,published,45.929111,7.873663,published,4448.0,Grenzgletscher,RGI60-11.02822,0.1,,False,CG95-2/97,Accumulation area,digitized
@@ -271,3 +269,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 302,87,map approximation,46.54776,7.99019,map approximation,3455,Jungfraufirn,RGI60-11.01450,,,False,Bore No. 1,,digitized
 303,87,map approximation,46.54701,7.99302,map approximation,3460,Jungfraufirn,RGI60-11.01450,,,False,Bore No. 2,,digitized
 304,87,map approximation,46.54937,7.99514,map approximation,3500,Jungfraufirn,RGI60-11.01450,,,False,Bore No. 3,,digitized
+305,88,published,9.92757,46.36736,published,3853,Vadret da Morteratsch,RGI60-11.01946,0.05,mechanical,False,PZ02,Fuorcla dal Zupô,published
+306,88,published,8.06730,46.55150,published,3893,Fieschergletscher,RGI60-11.01478,0.05,thermal,True,hole 13,"Fiescherhorn | See also https://doi.org/10.1029/2005JF000283 | Temperature at depth 70.7 m average of two measurements (-5.68 °C, -5.61 °C)",published
+307,88,published,8.06798,46.55081,published,3889,Fieschergletscher,RGI60-11.01478,0.05,thermal,True,hole 23,"Fiescherhorn | See also https://doi.org/10.1029/2005JF000283 | Temperature at depth 73 m average of two measurements (-4.534 °C, -4.526 °C)",published
+308,88,published,8.06889,46.54988,published,3890,Fieschergletscher,RGI60-11.01478,0.05,thermal,True,hole 33,"Fiescherhorn | See also https://doi.org/10.1029/2005JF000283 | Temperature at depth 73 m average of two measurements (-5.935 °C, -5.297 °C). The spread suggests the accuracy is worse than reported (0.05 °C)",published
+309,88,published,7.87497,45.92947,published,4454.51,Grenzgletscher,RGI60-11.02822,0.05,mechanical,True,CG03-1,"Colle Gnifetti | to_bottom: 82 m | Temperature at depth 40 m (2003 profile) average of two measurements (-13.31 °C, -13.35 °C)",published
+310,88,published,-31.9666,-70.1166,published,6075,Glaciar La Ollada,RGI60-17.14412,0.05,mechanical,True,,name: Also spelled Glaciar La Hoyada | Cerro Mercedario | to_bottom: 103 m,published
