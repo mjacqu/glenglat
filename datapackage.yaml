@@ -42,7 +42,7 @@ resources:
             required: true
             unique: true
         - name: contributor
-          description: Person who contributed the data to the database. For data drawn from published studies, this is the person who digitized the data. For data submissions, the person who submitted the data (ORCID in parenthesis if available).
+          description: Names of people – and their ORCID in parenthesis if available – who contributed the data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade'). For data drawn from published studies, these people digitized the data. For data submissions, these people submitted the data.
           type: string
           contraints:
             required: true
