@@ -275,3 +275,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 308,88,published,8.06889,46.54988,published,3890,Fieschergletscher,RGI60-11.01478,0.05,thermal,True,hole 33,"Fiescherhorn | See also https://doi.org/10.1029/2005JF000283 | Temperature at depth 73 m average of two measurements (-5.935 °C, -5.297 °C). The spread suggests the accuracy is worse than reported (0.05 °C)",published
 309,88,published,7.87497,45.92947,published,4454.51,Grenzgletscher,RGI60-11.02822,0.05,mechanical,True,CG03-1,"Colle Gnifetti | to_bottom: 82 m | Temperature at depth 40 m (2003 profile) average of two measurements (-13.31 °C, -13.35 °C)",published
 310,88,published,-31.9666,-70.1166,published,6075,Glaciar La Ollada,RGI60-17.14412,0.05,mechanical,True,,name: Also spelled Glaciar La Hoyada | Cerro Mercedario | to_bottom: 103 m,published
+311,89,map guess,41.94673,77.92159,published,4170,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
+312,89,map guess,41.95054,77.92077,published,4250,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
+313,89,map guess,41.95308,77.91983,published,4293,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
+314,89,map guess,41.95457,77.91949,published,4305,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
+315,89,map guess,41.96407,77.91683,published,4420,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
