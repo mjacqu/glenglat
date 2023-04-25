@@ -54,3 +54,33 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `utc` | Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False). | boolean |  |
 | `equilibrated` | Whether the profile is in thermal equilibrium following drilling. | boolean |  |
 <!-- </contributor-format> -->
+
+### Validation
+
+You can validate your CSV files (`borehole.csv` and `measurement.csv`) before submitting them using the [frictionless](https://github.com/frictionlessdata/framework) Python package.
+
+1. Clone this repository.
+
+   ```sh
+   git clone https://github.com/mjacqu/glenglat.git
+   cd glenglat
+   ```
+
+2. Either install the `glenglat` Python environment (with `conda`):
+
+   ```sh
+   conda env create --file scripts/environment.yaml
+   conda activate glenglat
+   ```
+
+   Or install `frictionless` into an existing environment (with `pip`):
+
+   ```sh
+   pip install "frictionless~=5.8"
+   ```
+
+3. Validate, fix any reported issues, and rejoice! (`path/to/csvs` is the folder containing your CSV files)
+
+   ```sh
+   python scripts/validate_submission.py path/to/csvs
+   ```

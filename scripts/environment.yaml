@@ -1,0 +1,8 @@
+name: glenglat
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9.15
+  - frictionless=5.8.3
