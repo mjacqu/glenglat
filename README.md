@@ -2,7 +2,7 @@
 
 [![Frictionless](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=mjacqu&repo=glenglat&flow=frictionless)
 
-Open-access database of englacial temperature measurements compiled from published literature and submitted entries.
+Open-access database of englacial temperature measurements compiled from published literature and submissions.
 
 ## Data structure
 
@@ -13,6 +13,10 @@ The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the
 - [`data/borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id`.
 - [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id`.
 - [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `borehole.csv` and `profile.csv` via `borehole_id` and `profile_id`, respectively.
+
+### Supporting information
+
+In folder [`sources`](sources) are subfolders, named `{source_id}_{author_code}{year}` (see column `source.path`), with files that document how the data was digitized from the original publication. Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using PlotDigitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}.xml` and internally use `temperature` and `depth` as axis names.
 
 ## How to contribute
 

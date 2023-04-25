@@ -68,6 +68,11 @@ resources:
           type: string
           constraints:
             pattern: 'https?:\/\/.+'
+        - name: path
+          description: Path (relative to the datapackage root directory) to a folder with files that document how the data was digitized, named as `sources/{source_id}_{author_code}{year}` (where `author_code` is the first author's lowercase, romanized, family name). Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using PlotDigitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}.xml` and internally use `temperature` and `depth` as axis names.
+          type: string
+          constraints:
+            pattern: '([A-z-_]+\/)*[0-9]+_[a-z-]+[0-9]{4}'
       primaryKey: [id]
       missingValues: ['']
   - name: borehole
