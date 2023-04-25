@@ -41,6 +41,7 @@ resources:
           constraints:
             required: true
             unique: true
+            minimum: 1
         - name: contributor
           description: Names of people (and their ORCID in parentheses if available) who contributed the data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade'). For data drawn from published studies, these people digitized the data. For data submissions, these people submitted the data.
           type: string
@@ -94,6 +95,7 @@ resources:
           constraints:
             required: true
             unique: true
+            minimum: 1
         - name: source_id
           type: integer
           description: Source identifier.
@@ -224,17 +226,17 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: id
-          description: Unique identifier.
-          type: integer
-          constraints:
-            unique: true
-            required: true
         - name: borehole_id
           description: Borehole identifier.
           type: integer
           constraints:
             required: true
+        - name: id
+          description: Borehole profile identifier (starting from 1 for each borehole).
+          type: integer
+          constraints:
+            required: true
+            minimum: 1
         - name: date_min
           description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           type: date
@@ -262,7 +264,7 @@ resources:
           trueValues: ['True']
           falseValues: ['False']
       missingValues: ['']
-      primaryKey: [id]
+      primaryKey: [borehole_id, id]
       foreignKeys:
         - fields: [borehole_id]
           reference:
@@ -292,7 +294,7 @@ resources:
           constraints:
             required: true
         - name: profile_id
-          description: Profile identifier.
+          description: Borehole profile identifier.
           type: integer
           constraints:
             required: true

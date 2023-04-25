@@ -12,7 +12,7 @@ The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the
 - [`data/source.csv`](data/source.csv): Description of each data source (either a direct contribution or the reference to a published study).
 - [`data/borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id`.
 - [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id`.
-- [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `borehole.csv` and `profile.csv` via `borehole_id` and `profile_id`, respectively.
+- [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
 ### Supporting information
 
