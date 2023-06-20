@@ -205,7 +205,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 223,76,digitized,69.74945,-72.154976,map approximation,850.0,Barnes Ice Cap,RGI60-04.06187,0.05,,False,T020,elevation: From https://doi.org/10.1139/e80-124,digitized
 224,76,digitized,69.78899,-71.9703,map approximation,670.0,Barnes Ice Cap,RGI60-04.06187,0.05,,True,C4,label: D4 in https://doi.org/10.1139/e80-124 | elevation: From https://doi.org/10.1139/e80-124,digitized
 225,76,digitized,69.71965,-71.89204,map approximation,670.0,Barnes Ice Cap,RGI60-04.06187,0.05,,False,B4,elevation: From https://doi.org/10.1139/e80-124,digitized
-226,78,submitted,76.4113,-68.2873,map approximation,505.0,Tuto Ramp,RGI60-05.07772,,,True,D-11,elevation: From https://doi.org/10.1139/e80-124,submitted
+226,91,digitized,76.4113,-68.2873,map approximation,505.0,Tuto Ramp,RGI60-05.07772,,,True,D-11,"elevation: From https://doi.org/10.1139/e80-124 | location: From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/blob/main/boreholes/Tuto_D-11/README.org | depth: Ice surface interpreted to be at a depth of 44 feet, above which the thermocouple string was exposed and thus why positive temperatures were measured in the summer",digitized
 227,78,submitted,71.306,-26.768,map guess,2325.0,Renland Ice Cap,RGI60-05.16072,,,False,,,submitted
 228,78,submitted,78.3897,-80.395,map guess,1600.0,Prince of Wales Ice Cap,RGI60-03.01708,,,True,,,submitted
 229,78,submitted,67.3,-65.2,published,1810.0,Penny Ice Cap,RGI60-04.05688,,,True,,,submitted
