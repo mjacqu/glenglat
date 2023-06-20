@@ -107,7 +107,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 116,36,map approximation,61.22578,-140.31965,map guess,2140.0,Trapridge Glacier,RGI60-01.16315,0.02,,False,hole 7,Pre surge,digitized
 117,36,map approximation,61.21813,-140.35455,map guess,2600.0,Trapridge Glacier,RGI60-01.16315,0.02,,False,hole 8,Pre surge,digitized
 118,37,map approximation,78.6801692,12.1190339,map guess,430.0,Waldemarbreen,RGI60-07.00492,0.2,,False,,Accumulation area,published
-119,37,map approximation,78.6801692,12.1190339,map guess,430.0,Waldemarbreen,RGI60-07.00492,0.2,,False,,Accumulation area,published
+119,92,map approximation,78.6801692,12.1190339,map approximation,430.0,Waldemarbreen,RGI60-07.00492,0.2,,False,T2,Accumulation area | Mean over measurement period,published
 120,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
 121,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
 122,39,published,78.81,17.6,published,1000.0,Lomonosovfonna,RGI60-07.00570,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
@@ -281,3 +281,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 314,89,map guess,41.95457,77.91949,published,4305.0,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
 315,89,map guess,41.96407,77.91683,published,4420.0,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,published
 316,90,published,41.979,77.916,published,4625.0,Grigoriev ice cap,RGI60-13.06741,,mechanical,False,,,digitized
+317,92,map approximation,78.67592,12.02321,map approximation,190.0,Waldemarbreen,RGI60-07.00492,0.2,,False,T1,Ablation area | Mean over measurement period,published
