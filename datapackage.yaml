@@ -161,7 +161,6 @@ resources:
           description: Randolph Glacier Inventory (RGI) 6.0 identifier.
           type: string
           constraints:
-            required: true
             pattern: 'RGI60-\d{2}\.\d{5}'
         - name: temperature_accuracy
           description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
