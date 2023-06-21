@@ -289,3 +289,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 322,94,published,-70.5833,-60.9333,published,398,Dolleman Island,,0.02,mechanical,False,Site 1,,digitized
 323,94,published,-70.5,-65.0167,published,1970,Dyer Plateau,,0.02,mechanical,False,Site 2,,digitized
 324,95,published,-73.8517,163.6870,published,1623.0,Styx Glacier,,0.1,,False,,,published
+325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,RGI60-07.00570,0.05,,False,,,digitized
