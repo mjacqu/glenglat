@@ -292,3 +292,12 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,RGI60-07.00570,0.05,,False,,,digitized
 326,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.08,mechanical,False,JAGE '93 site 2,,digitized
 327,99,published,49.8073,86.5786,published,4062.0,Belukha Glacier,RGI60-10.01115,0.07,,False,,,published
+328,100,digitized,77.88601,14.384267,published,422.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,1,Accumulation area,digitized
+329,100,digitized,77.893875,14.375851,published,368.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,3,Accumulation area,digitized
+330,100,digitized,77.898476,14.365024,published,323.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,4,Ablation area,digitized
+331,100,digitized,77.903015,14.376923,published,268.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,5,Ablation area,digitized
+332,100,digitized,77.914185,14.371156,published,192.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,6,Ablation area,digitized
+333,100,digitized,77.91656,14.362903,published,171.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,6a,Ablation area,digitized
+334,100,digitized,77.908264,14.354504,published,225.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,7,Ablation area",digitized
+335,100,digitized,77.90918,14.388607,published,226.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,11,,digitized
+336,100,digitized,77.882965,14.4427,published,440.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,12,,digitized

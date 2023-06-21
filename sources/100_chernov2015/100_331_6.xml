@@ -1,0 +1,12 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Wed Jun 21 17:49:50 CEST 2023 -->
+<data>
+<image file='figure-3.png' />
+<axesnames x='temperature'  y='depth' />
+<calibpoints minXaxisX='2003.0' minXaxisY='82.0' maxXaxisX='1406.0' maxXaxisY='82.0' minYaxisX='2003.0' minYaxisY='82.0' maxYaxisX='2004.0' maxYaxisY='1059.0' aX1='0.0' aX2='-10.0' aY1='0.0' aY2='20.0' isXLog='false' isYLog='false' />
+<point n='0' x='2003.0' y='178.0' dx='7.105427357601002E-15' dy='1.9651995905834183' />
+<point n='1' x='1989.0' y='230.0' dx='-0.23450586264655726' dy='3.029682702149437' />
+<point n='2' x='1962.0' y='280.0' dx='-0.6867671691792196' dy='4.0532241555783015' />
+<point n='3' x='1917.0' y='326.0' dx='-1.440536013400326' dy='4.994882292732856' />
+<point n='4' x='1859.0' y='376.0' dx='-2.4120603015075304' dy='6.018423746161719' />
+</data>
