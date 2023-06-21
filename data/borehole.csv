@@ -116,7 +116,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 125,39,published,79.85,24.14,published,750.0,Austfonna,RGI60-07.00551,0.1,,,Measurement #1,temperature_accuracy: Minimum accuracy,digitized
 126,39,published,79.28,16.83,published,1200.0,Høghetta,RGI60-07.00844,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
 127,39,published,79.13,13.3,published,1190.0,Snøfjellafonna,RGI60-07.01464,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
-128,39,published,79.45,16.72,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
+128,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.08,mechanical,False,JAGE '93 site 1,,digitized
 129,39,published,79.45,95.35,published,665.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,,Measurement #1,,digitized
 130,39,published,79.5,95.08,published,720.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,,Measurement #2,elevation: Assumed same as borehole 131,digitized
 131,39,published,79.32,96.02,published,720.0,Vavilova Ice Dome,RGI60-09.00470,0.1,,,Measurement #4,,digitized
@@ -290,3 +290,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 323,94,published,-70.5,-65.0167,published,1970,Dyer Plateau,,0.02,mechanical,False,Site 2,,digitized
 324,95,published,-73.8517,163.6870,published,1623.0,Styx Glacier,,0.1,,False,,,published
 325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,RGI60-07.00570,0.05,,False,,,digitized
+326,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.08,mechanical,False,JAGE '93 site 2,,digitized
