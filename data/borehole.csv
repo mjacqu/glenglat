@@ -291,3 +291,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 324,95,published,-73.8517,163.6870,published,1623.0,Styx Glacier,,0.1,,False,,,published
 325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,RGI60-07.00570,0.05,,False,,,digitized
 326,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.08,mechanical,False,JAGE '93 site 2,,digitized
+327,99,published,49.8073,86.5786,published,4062.0,Belukha Glacier,RGI60-10.01115,0.07,,False,,,published
