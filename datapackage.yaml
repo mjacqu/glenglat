@@ -241,8 +241,6 @@ resources:
           description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           type: date
           format: '%Y-%m-%d'
-          constraints:
-            required: true
         - name: date_max
           description: Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
           type: date
