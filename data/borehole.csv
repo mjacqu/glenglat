@@ -284,5 +284,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 317,92,map approximation,78.67592,12.02321,map approximation,190.0,Waldemarbreen,RGI60-07.00492,0.2,,False,T1,Ablation area,published
 318,89,map guess,42.0462,78.174,published,4175.0,ледник Ашу-Тор [Ashu-Tor Glacier],RGI60-13.06424,,,,,"location: Based only on the glacier name in Table 3 (Ашу-Тор), which could refer to USSR glacier catalogue No. 324 (https://doi.org/10.1017/jog.2020.104, https://doi.org/10.15356/2076-6734-2012-1-5-14) or to either 326 to the west or 249 to the northwest (https://nakarte.me/#m=14/42.06051/78.15310&l=T/Mt)",published
 319,89,map guess,43.0427,77.078,map guess,3750.0,ледник Туюк-Су [Tuyuksu Glacier],RGI60-13.08624,,,,,"location/elevation: Based only on the glacier name in Table 3 (Туюк-Су)",published
-320,93,published,-66.333,-64.666,published,1975.5,Bruce Plateau,,0.1,mechanical,False,L-Ba,"depth: Relative to early February 2008, so not adjusted for 3.8 m of snow accumulation through June 2008",published
-321,93,published,-66.333,-64.666,published,1975.5,Bruce Plateau,,0.1,thermal,True,L-Bb,,published
+320,93,published,-66.3333,-64.6667,published,1975.5,Bruce Plateau,,0.1,mechanical,False,L-Ba,"depth: Relative to early February 2008, so not adjusted for 3.8 m of snow accumulation through June 2008",published
+321,93,published,-66.3333,-64.6667,published,1975.5,Bruce Plateau,,0.1,thermal,True,L-Bb,,published
+322,94,published,-70.5833,-60.9333,published,398,Dolleman Island,,0.02,mechanical,False,Site 1,,digitized
+323,94,published,-70.5,-65.0167,published,1970,Dyer Plateau,,0.02,mechanical,False,Site 2,,digitized
