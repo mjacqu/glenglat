@@ -114,7 +114,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 123,39,published,79.93,19.52,published,580.0,Vestfonna,RGI60-07.01510,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
 124,39,published,79.97,21.02,published,600.0,Vestfonna,RGI60-07.01499,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
 125,39,published,79.85,24.14,published,750.0,Austfonna,RGI60-07.00551,0.1,,,Measurement #1,temperature_accuracy: Minimum accuracy,digitized
-126,39,published,79.28,16.83,published,1200.0,Høghetta,RGI60-07.00844,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
+126,98,published,79.2833,16.8333,published,1200.0,Høghetta,RGI60-07.00844,,,True,,,digitized
 127,39,published,79.13,13.3,published,1190.0,Snøfjellafonna,RGI60-07.01464,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
 128,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.08,mechanical,False,JAGE '93 site 1,,digitized
 129,39,published,79.45,95.35,published,665.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,,Measurement #1,,digitized
