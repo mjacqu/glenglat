@@ -16,7 +16,7 @@ The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the
 
 ### Supporting information
 
-In folder [`sources`](sources) are subfolders, named `{source_id}_{author_code}{year}` (see column `source.path`), with files that document how the data was digitized from the original publication. Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using PlotDigitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}.xml` and internally use `temperature` and `depth` as axis names.
+In folder [`sources`](sources) are subfolders, named `{source_id}_{author_code}{year}` (see column `source.path`), with files that document how the data was digitized from the original publication. Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Binary files with `.tif` extension are georeferenced maps from the publication saved as GeoTIFF, and text files with `.geojson` extension are spatial features extracted from these and saved as GeoJSON. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using PlotDigitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}.xml` and internally use `temperature` and `depth` as axis names.
 
 ## How to contribute
 

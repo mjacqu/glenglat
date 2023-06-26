@@ -305,3 +305,14 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 338,102,published,43.34831,42.42667,published,5115.0,Mount Elbrus,RGI60-12.00080,0.1,mechanical,True,,"Original reference (not found): Mikhalenko, V. N. (2010). Glubokoe burenie l’la bliz vershiny Elbrusa (Deep ice core drilling near summit of Mt. Elbrus). Лёд и Снег, 1, 123–126",digitized
 339,102,published,43.34831,42.42667,published,5115.0,Mount Elbrus,RGI60-12.00080,,mechanical,False,,,digitized
 340,103,published,43.34804,42.45606,published,5565.0,Mount Elbrus,RGI60-12.00730,0.1,mechanical,True,,"Transition from firn to ice at 20 m depth",digitized
+341,104,map approximation,50.067178,87.767048,map approximation,2250.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,1,,digitized
+342,104,map approximation,50.065806,87.770736,map approximation,2275.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,2,,digitized
+343,104,map approximation,50.065355,87.768951,map approximation,2275.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,3,,digitized
+344,104,map approximation,50.065036,87.768044,map approximation,2275.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,4,,digitized
+345,104,map approximation,50.064754,87.767224,map approximation,2275.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,5,,digitized
+346,104,map approximation,50.064059,87.769010,map approximation,2325.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,6,,digitized
+347,104,map approximation,50.059126,87.769273,map approximation,2550.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,7,,digitized
+348,104,map approximation,50.050312,87.759175,map approximation,3225.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,8,,digitized
+349,104,map approximation,50.047925,87.750686,map approximation,3325.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,9,,digitized
+350,104,map approximation,50.051834,87.737865,map approximation,3450.0,ледник Малый Актру [Maliy Aktru Glacier],RGI60-10.01732,,thermal,False,10,,digitized
+351,104,map approximation,50.0602,87.7894,published,3100.0,ледник Водопадный [Vodopadniy Glacier],RGI60-10.01706,,thermal,False,,,digitized
