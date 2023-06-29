@@ -328,3 +328,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 361,107,map guess,38.2849,75.0772,published,6350.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,False,Core 2: B1,"depth: Upper layer is mainly granular snow",digitized
 362,107,map guess,38.2866,75.0735,published,6250.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,False,Core 3: A3,"depth: Upper layer is mainly granular snow",digitized
 363,107,map guess,38.2866,75.0735,published,6250.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,False,Core 3: B1,"depth: Upper layer is mainly granular snow",digitized
+364,108,map guess,38.2795,75.0985,published,7010.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,0.01,mechanical,True,Core 3,"depth: Ice begins at 34 m depth, with mainly granular snow in the upper part",digitized
