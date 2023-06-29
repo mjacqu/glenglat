@@ -324,3 +324,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 357,106,digitized,78.88196,12.1444235,published,210.0,Austre Lovénbreen,RGI60-07.00496,0.01,mechanical,False,B2,"depth: Relative to ice surface (seasonal snow is neglected)",digitized
 358,106,digitized,78.863396,12.176186,published,410.0,Austre Lovénbreen,RGI60-07.00496,0.01,mechanical,False,E2,"depth: Relative to ice surface (seasonal snow is neglected)",digitized
 359,106,digitized,78.86125,12.185525,published,473.0,Austre Lovénbreen,RGI60-07.00496,0.01,mechanical,False,F,"depth: Relative to ice surface (seasonal snow is neglected)",digitized
+360,107,map guess,38.2849,75.0772,published,6350.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,True,Core 2: A3,"depth: Upper layer is mainly granular snow",digitized
+361,107,map guess,38.2849,75.0772,published,6350.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,False,Core 2: B1,"depth: Upper layer is mainly granular snow",digitized
+362,107,map guess,38.2866,75.0735,published,6250.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,False,Core 3: A3,"depth: Upper layer is mainly granular snow",digitized
+363,107,map guess,38.2866,75.0735,published,6250.0,慕士塔格冰川 [Muztagh Glacier],RGI60-13.41898,,,False,Core 3: B1,"depth: Upper layer is mainly granular snow",digitized
