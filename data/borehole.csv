@@ -181,10 +181,10 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 195,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,RGI60-07.00768,0.1,,False,site 9,Digitized as minimum and maximum temperature profiles,digitized
 197,64,map approximation,35.8165362,90.75000214,published,5680.0,Malan Glacier,RGI60-13.48935,0.01,,False,,,digitized
 198,66,map approximation,38.1051653,96.41680018,published,5325.0,Dunde Ice Cap,RGI60-13.35422,,,True,,Caption and legend do not agree | Summit region,digitized
-199,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,,False,,Caption and legend do not agree | Plateau region,digitized
-200,67,map approximation,35.2308014,81.46574059,published,6200.0,Giuliya Ice Cap,RGI60-13.53249,,,True,,Plateau region,digitized
-201,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,,False,,Summit region,digitized
-202,67,map approximation,35.2750741,81.49244657,published,6710.0,Giuliya Ice Cap,RGI60-13.53249,,,True,,Summit region,digitized
+199,115,map approximation,35.2308,81.4657,published,6200.0,Guliya Ice Cap,RGI60-13.53249,,thermal,True,Site 2,"drill_method: Mechanical to 200 m, thermal beyond | to_bottom: Bedrock at 308.6 m",digitized
+200,67,map approximation,35.2308014,81.46574059,published,6200.0,Guliya Ice Cap,RGI60-13.53249,,,True,,Plateau region,digitized
+201,115,map approximation,35.2931,81.4916,published,6710.0,Guliya Ice Cap,RGI60-13.53249,,mechanical,False,Summit,,digitized
+202,67,map approximation,35.2931,81.4916,published,6710.0,Guliya Ice Cap,RGI60-13.53249,,,True,,Summit region,digitized
 206,69,map approximation,45.8417942,6.846642185,published,4250.0,Glacier des Bossons,RGI60-11.03646,0.05,,True,,Col du Dôme | Summit region,digitized
 207,70,published,33.212778,91.154167,published,5800.0,Geladandong Ice Cap,RGI60-13.49384,0.05,,False,,Geothermal hotspot suspected under drill site,digitized
 208,71,map approximation,39.4783238,96.53493886,published,4550.0,Laohugou Glacier,RGI60-13.33006,0.05,,False,Site 1,,digitized
@@ -357,3 +357,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 390,113,map approximation,43.1087,86.8082,published,3975.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,0.1,thermal,False,F2',Only deepest temperature reported,published
 391,113,map approximation,43.1084,86.8092,published,3973.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,0.1,thermal,False,F3',Only deepest temperature reported,published
 392,114,map approximation,43.1059,86.8067,published,4050.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,,mechanical,True,H1,depth: Includes 3 m of snow and firn,digitized
+393,115,map approximation,35.2219,81.4891,published,6040.0,Guliya Ice Cap,RGI60-13.53249,,mechanical,False,Site 1,,digitized
