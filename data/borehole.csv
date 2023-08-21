@@ -356,3 +356,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 389,113,map approximation,43.1092,86.8074,published,3972.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,0.1,thermal,False,F1',Only deepest temperature reported,published
 390,113,map approximation,43.1087,86.8082,published,3975.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,0.1,thermal,False,F2',Only deepest temperature reported,published
 391,113,map approximation,43.1084,86.8092,published,3973.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,0.1,thermal,False,F3',Only deepest temperature reported,published
+392,114,map approximation,43.1059,86.8067,published,4050.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],RGI60-13.45335,,mechanical,True,H1,depth: Includes 3 m of snow and firn,digitized
