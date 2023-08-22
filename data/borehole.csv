@@ -368,3 +368,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 401,119,map approximation,35.2359,81.1161,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,False,Core 3,,published
 402,120,digitized,27.9187,86.5453,published,5860.0,Trambau Glacier,RGI60-15.03448,,mechanical,False,,temperature: Measured over two hours (with increasing depth) immediately after drilling | The 10 m depth temperature (-0.82) is significantly warmer than the annual mean temperature (-8.7). Melting and refreezing may have increased the ice temperature at the drilling site,digitized
 403,121,map guess,47.8095,-123.6873,map guess,1675.0,Blue Glacier,RGI60-02.14017,0.03,thermal,False,R1,Water-filled borehole near the glacier equilibrium line | temperature: Inferred from measured borehole closure rates,digitized
+404,122,digitized,-62.2511,-59.0144,published,90.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,I,,published
+405,122,digitized,-62.2579,-59.0424,published,140.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,II,,published
+406,122,digitized,-62.2717,-59.0537,published,160.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,III,,published
+407,122,digitized,-62.1421,-58.8405,published,150.0,King George Island Ice Cap,RGI60-19.01920,0.1,,False,,,published
