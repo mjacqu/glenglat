@@ -366,3 +366,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 399,119,map approximation,35.2374,81.1286,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,True,Core 1,to_bottom: Bedrock at 133.8 m,published
 400,119,map approximation,35.2373,81.1155,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,True,Core 2,to_bottom: Bedrock at 135.8 m,published
 401,119,map approximation,35.2359,81.1161,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,False,Core 3,,published
+402,120,digitized,27.9187,86.5453,published,5860.0,Trambau Glacier,RGI60-15.03448,,mechanical,False,,temperature: Measured over two hours (with increasing depth) immediately after drilling | The 10 m depth temperature (-0.82) is significantly warmer than the annual mean temperature (-8.7). Melting and refreezing may have increased the ice temperature at the drilling site,digitized
