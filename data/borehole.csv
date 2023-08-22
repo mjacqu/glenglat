@@ -363,3 +363,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 396,117,published,28.3833,85.7166,published,7200.0,Dasuopu Glacier,RGI60-15.10255,,mechanical,True,C3,location: Confirmed by figure 1 in Yao et al. 2002 (https://doi.org/10.3189/172756402781816997) | to_bottom: Bedrock at 167.7 m,published
 397,74,map approximation,28.0890,86.9145,published,5710.0,East Rongbuk Glacier,RGI60-15.10055,,,,BH3,,digitized
 398,118,map approximation,28.01883,86.96125,published,6518.0,East Rongbuk Glacier,RGI60-15.10055,,mechanical,True,core 2002,to_bottom: Bedrock at 108.83 m | temperature: Minimum measured at 20 m | location: Refined based on figure 1 in Hou et al. 2007 (https://doi.org/10.5194/cp-3-89-2007) | date_min/date_max: From Zhang et al. 2013 (https://doi.org/10.3189/2013JoG12J202),published
+399,119,map approximation,35.2374,81.1286,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,True,Core 1,to_bottom: Bedrock at 133.8 m,published
+400,119,map approximation,35.2373,81.1155,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,True,Core 2,to_bottom: Bedrock at 135.8 m,published
+401,119,map approximation,35.2359,81.1161,published,6010.0,Chongce Ice Cap,RGI60-13.53222,,mechanical,False,Core 3,,published
