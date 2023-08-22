@@ -372,3 +372,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 405,122,digitized,-62.2579,-59.0424,published,140.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,II,,published
 406,122,digitized,-62.2717,-59.0537,published,160.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,III,,published
 407,122,digitized,-62.1421,-58.8405,published,150.0,King George Island Ice Cap,RGI60-19.01920,0.1,,False,,,published
+408,123,published,33.9158,89.1164,published,6000.0,Puruogangri Ice Cap,RGI60-13.53885,,,False,,Only first and last profiles digitized as intermediate profiles are difficult to resolve in figure 2,digitized
