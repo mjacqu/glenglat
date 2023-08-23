@@ -373,3 +373,10 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 406,122,digitized,-62.2717,-59.0537,published,160.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,III,,published
 407,122,digitized,-62.1421,-58.8405,published,150.0,King George Island Ice Cap,RGI60-19.01920,0.1,,False,,,published
 408,123,published,33.9158,89.1164,published,6000.0,Puruogangri Ice Cap,RGI60-13.53885,,,False,,Only first and last profiles digitized as intermediate profiles are difficult to resolve in figure 2,digitized
+409,124,digitized,-62.1265,-58.6405,published,702.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDT,Accumulation area,digitized
+410,124,digitized,-62.1294,-58.6919,published,610.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDA,Accumulation area,digitized
+411,124,digitized,-62.1316,-58.7327,published,510.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDB,Accumulation area,digitized
+412,124,digitized,-62.1344,-58.7948,published,380.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDC,Accumulation area,digitized
+413,124,digitized,-62.1622,-58.8952,published,252.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD6,Accumulation area | Profiles 3 and 4 in figure 3c are indistinguishable and have been combined,digitized
+414,124,digitized,-62.1704,-58.9125,published,180.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD8,Accumulation area,digitized
+415,124,digitized,-62.1731,-58.9199,published,110.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD9,Ablation area,digitized
