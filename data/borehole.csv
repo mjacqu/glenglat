@@ -380,3 +380,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 413,124,digitized,-62.1622,-58.8952,published,252.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD6,Accumulation area | Profiles 3 and 4 in figure 3c are indistinguishable and have been combined,digitized
 414,124,digitized,-62.1704,-58.9125,published,180.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD8,Accumulation area,digitized
 415,124,digitized,-62.1731,-58.9199,published,110.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD9,Ablation area,digitized
+416,125,map guess,43.3112,42.4643,published,3950.0,Ледник Гарабаши [Garabashi Glacier],RGI60-12.00161,,mechanical,True,,Accumulation area | to_bottom: Bedrock at 76 m | temperature: Only reported for active layer (0-12 m),digitized
