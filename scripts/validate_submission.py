@@ -19,5 +19,5 @@ for resource in package.resources:
   resource.detector = detector
 
 # Validate and report
-report = frictionless.validate(package)
+report = package.validate()
 print(report.to_summary())

@@ -76,7 +76,7 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
    Or install `frictionless` into an existing environment (with `pip`):
 
    ```sh
-   pip install "frictionless~=5.8"
+   pip install "frictionless~=5.13"
    ```
 
 3. Validate, fix any reported issues, and rejoice! (`path/to/csvs` is the folder containing your CSV files)
