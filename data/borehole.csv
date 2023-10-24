@@ -298,7 +298,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 331,100,digitized,77.903015,14.376923,published,268.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,5,Ablation area,digitized
 332,100,digitized,77.914185,14.371156,published,192.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,6,Ablation area,digitized
 333,100,digitized,77.91656,14.362903,published,171.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,6a,Ablation area,digitized
-334,100,digitized,77.908264,14.354504,published,225.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,7,Ablation area",digitized
+334,100,digitized,77.908264,14.354504,published,225.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,7,Ablation area,digitized
 335,100,digitized,77.90918,14.388607,published,226.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,11,,digitized
 336,100,digitized,77.882965,14.4427,published,440.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,12,,digitized
 337,126,published,43.34831,42.42667,published,5115.0,Mount Elbrus,RGI60-12.00080,0.1,mechanical,False,,"location: Published in Mikhalenko et al. 2015 (https://doi.org/10.5194/tc-9-2253-2015) | elevation: Originally published as 5150 m, but later (likely after being resurveyed) as 5115 m in Mikhalenko et al. 2015 (https://doi.org/10.5194/tc-9-2253-2015)",digitized
