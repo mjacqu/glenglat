@@ -155,7 +155,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 165,55,map approximation,52.20423,-117.23711,published,2075.0,Athabasca Glacier,RGI60-02.12441,,,False,Hole 72,Took average of two measurements,digitized
 166,55,map approximation,52.19258,-117.25908,published,2235.0,Athabasca Glacier,RGI60-02.12441,,,False,Hole 100,Took average of two measurements,digitized
 167,56,map approximation,67.9036926,18.56956375,map guess,1400.0,Storglaciären,RGI60-08.00213,0.05,,False,,,digitized
-168,57,published,48.6556404,90.84707854,published,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,,,True,,,digitized
+168,57,published,48.6556404,90.84707854,published,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,,,True,,to_bottom: Bedrock at 72 m,digitized
 169,58,published,45.966213,7.798327,published,2516.0,Grenzgletscher,RGI60-11.02822,0.05,,True,l5,Ablation area,digitized
 170,58,published,45.970304,7.787504,published,2468.0,Grenzgletscher,RGI60-11.02822,0.05,,False,ll5,Ablation area,digitized
 171,58,published,45.971593,7.79257,published,2485.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f13,Ablation area,digitized
