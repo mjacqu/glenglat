@@ -1,0 +1,8 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Fri Nov 10 12:52:53 CET 2023 -->
+<data>
+<image file='goel2017-figure-1.png' />
+<axesnames x='longitude'  y='latitude' />
+<calibpoints minXaxisX='623.5' minXaxisY='297.5' maxXaxisX='801.5' maxXaxisY='288.0' minYaxisX='623.3333333333334' minYaxisY='297.3333333333333' maxYaxisX='610.6666666666666' maxYaxisY='84.33333333333333' aX1='-3.3' aX2='-2.8' aY1='-70.5' aY2='-70.3' isXLog='false' isYLog='false' />
+<point n='0' x='712.3333333333334' y='181.66666666666666' dx='-3.0338607520240433' dy='-70.39618239660658' />
+</data>
