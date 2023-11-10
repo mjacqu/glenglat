@@ -381,3 +381,5 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 414,124,digitized,-62.1704,-58.9125,published,180.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD8,Accumulation area,digitized
 415,124,digitized,-62.1731,-58.9199,published,110.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD9,Ablation area,digitized
 416,125,map guess,43.3112,42.4643,published,3950.0,Ледник Гарабаши [Garabashi Glacier],RGI60-12.00161,,mechanical,True,,Accumulation area | to_bottom: Bedrock at 76 m | temperature: Only reported for active layer (0-12 m),digitized
+417,127,published,63.4750,-145.6753,published,1621,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JA,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 80 m,published
+418,127,published,63.4743,-145.6766,published,1625,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JE,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 18 m,published

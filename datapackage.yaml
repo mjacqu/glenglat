@@ -215,6 +215,7 @@ resources:
       - data/gwenn-flowers-little-kluane/profile.csv
       - data/gwenn-flowers-south-glacier/profile.csv
       - data/tika-gurung-rikha-samba/profile.csv
+      - data/ian-lee-jarvis-glacier/profile.csv
     format: csv
     dialect:
       header: true
@@ -275,6 +276,7 @@ resources:
       - data/gwenn-flowers-little-kluane/measurement.csv
       - data/gwenn-flowers-south-glacier/measurement.csv
       - data/tika-gurung-rikha-samba/measurement.csv
+      - data/ian-lee-jarvis-glacier/measurement.csv
     format: csv
     dialect:
       header: true
