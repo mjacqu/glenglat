@@ -142,9 +142,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 151,46,map approximation,43.1060367,86.80647755,map approximation,4050.0,Urumqi Glacier No. 1,RGI60-13.45335,0.1,,True,T3,,digitized
 153,47,map approximation,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,,,,,,digitized
 154,48,map approximation,-30.140241,-69.931488,published,5536.0,Tapado Glacier,RGI60-17.14647,,,True,,,digitized
-155,50,map approximation,27.9437778,86.81773669,published,4884.0,Khumbu Glacier,RGI60-15.03733,0.05,,,,,digitized
-156,50,map approximation,27.9695686,86.82870764,published,4980.0,Khumbu Glacier,RGI60-15.03733,0.05,,False,,,digitized
-157,50,map approximation,27.991737,86.84700289,published,5206.0,Khumbu Glacier,RGI60-15.03733,0.05,,False,,,digitized
+155,50,map approximation,27.9437778,86.81773669,published,4887.0,Khumbu Glacier,RGI60-15.03733,0.05,,,Site 1,elevation: From table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-02 (ED2017_BH2) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but are difficult to interpret,digitized
+156,50,map approximation,27.9695686,86.82870764,published,4981.0,Khumbu Glacier,RGI60-15.03733,0.05,,False,Site 2,elevation: From table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-11 (ED2017_BH11) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but are difficult to interpret,digitized
+157,50,map approximation,27.991737,86.84700289,published,5207.0,Khumbu Glacier,RGI60-15.03733,0.05,,False,Site 3,elevation: From table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-13 (ED2017_BH13) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but are difficult to interpret,digitized
 158,51,map approximation,79.5082542,-90.8441553,published,1024.0,White Glacier,RGI60-03.04539,0.2,,,I,,digitized
 159,51,map approximation,79.4850986,-90.7876998,published,717.0,White Glacier,RGI60-03.04539,0.2,,,II,,digitized
 160,51,map approximation,79.4731948,-90.7527512,published,626.0,White Glacier,RGI60-03.04539,0.2,,,III,,digitized
