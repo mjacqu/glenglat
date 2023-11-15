@@ -286,7 +286,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 319,89,map guess,43.0427,77.078,map guess,3750.0,ледник Туюк-Су [Tuyuksu Glacier],RGI60-13.08624,,,,,"location/elevation: Based only on the glacier name in Table 3 (Туюк-Су)",published
 320,93,published,-66.3333,-64.6667,published,1975.5,Bruce Plateau,,0.1,mechanical,False,L-Ba,"depth: Relative to early February 2008, so not adjusted for 3.8 m of snow accumulation through June 2008",published
 321,93,published,-66.3333,-64.6667,published,1975.5,Bruce Plateau,,0.1,thermal,True,L-Bb,,published
-322,94,published,-70.5833,-60.9333,published,398,Dolleman Island,,0.02,mechanical,False,Site 1,,digitized
+322,94,published,-70.5833,-60.9333,published,398,Dolleman Island,RGI60-19.00534,0.02,mechanical,False,Site 1,,digitized
 323,94,published,-70.5,-65.0167,published,1970,Dyer Plateau,,0.02,mechanical,False,Site 2,,digitized
 324,95,published,-73.8517,163.6870,published,1623.0,Styx Glacier,,0.1,,False,,,published
 325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,RGI60-07.00570,0.05,,False,,,digitized
@@ -320,7 +320,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 353,105,map guess,80.33466,52.95135,map guess,100.0,ледник Седова [Sedov Glacier],RGI60-09.00592,,,False,,"Original reference (not found): Разумейко Н. Г. (1960). Температура снега и льда. Стационарные наблюдения на леднике Седова. Маршрутное термозондирование льда на куполах Чурляниса и Джэксона и леднике Седова. Материалы гляциологических исследований. Земля Франца-Иосифа. Вып. 2, 118 с. | location/elevation: Based only on the glacier name (Sedov Glacier, Hooker Island, Franz Josef Land) | temperature: Monthly means within a two year window",digitized
 354,105,map guess,76.11596,62.70996,published,290.0,Ледник Шокальского [Shokalsky Glacier],RGI60-09.00081,,,False,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area | depth: Snow-ice transition at 0.74 m on 1959-04-16 | temperature: Profiles 2-6 are monthly means within a two year window",digitized
 355,105,map guess,76.15939,62.62276,published,170.0,Ледник Шокальского [Shokalsky Glacier],RGI60-09.00081,,,False,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area | depth: Snow-ice transition at 0.45 m",digitized
-356,105,map guess,75.89360,62.98834,published,795.0,Ледник Шокальского [Shokalsky Glacier],,,,False,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area | depth: Snow-ice transition at 1.15 m",digitized
+356,105,map guess,75.89360,62.98834,published,795.0,Ледник Шокальского [Shokalsky Glacier],RGI60-09.00059,,,False,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area | depth: Snow-ice transition at 1.15 m",digitized
 357,106,digitized,78.88196,12.1444235,published,210.0,Austre Lovénbreen,RGI60-07.00496,0.01,mechanical,False,B2,"depth: Relative to ice surface (seasonal snow is neglected)",digitized
 358,106,digitized,78.863396,12.176186,published,410.0,Austre Lovénbreen,RGI60-07.00496,0.01,mechanical,False,E2,"depth: Relative to ice surface (seasonal snow is neglected)",digitized
 359,106,digitized,78.86125,12.185525,published,473.0,Austre Lovénbreen,RGI60-07.00496,0.01,mechanical,False,F,"depth: Relative to ice surface (seasonal snow is neglected)",digitized
@@ -370,7 +370,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 403,121,map guess,47.8095,-123.6873,map guess,1675.0,Blue Glacier,RGI60-02.14017,0.03,thermal,False,R1,Water-filled borehole near the glacier equilibrium line | temperature: Inferred from measured borehole closure rates,digitized
 404,122,digitized,-62.2511,-59.0144,published,90.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,I,,published
 405,122,digitized,-62.2579,-59.0424,published,140.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,II,,published
-406,122,digitized,-62.2717,-59.0537,published,160.0,Nelson Island Ice Cap,RGI60-19.01993,0.1,,False,III,,published
+406,122,digitized,-62.2717,-59.0537,published,160.0,Nelson Island Ice Cap,RGI60-19.01997,0.1,,False,III,,published
 407,122,digitized,-62.1421,-58.8405,published,150.0,King George Island Ice Cap,RGI60-19.01920,0.1,,False,,,published
 408,123,published,33.9158,89.1164,published,6000.0,Puruogangri Ice Cap,RGI60-13.53885,,,False,,Only first and last profiles digitized as intermediate profiles are difficult to resolve in figure 2,digitized
 409,124,digitized,-62.1265,-58.6405,published,702.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDT,Accumulation area,digitized
@@ -384,4 +384,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 417,127,published,63.4750,-145.6753,published,1621,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JA,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 80 m,published
 418,127,published,63.4743,-145.6766,published,1625,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JE,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 18 m,published
 419,128,digitized,-70.3962,-3.0339,published,410,Blåskimen Island Ice Rise,RGI60-19.00791,0.1,mechanical,False,,Only the the last temperature profile (of 1496 profiles measured over 25 hours) are recorded here | location: From figure 1 in Goel et al. 2017 (https://doi.org/10.5194/tc-11-2883-2017),published
-420,129,published,79.8333,24.0167,published,750.0,Austfonna,RGI60-07.00551,,mechanical,False,Austfonna99,,digitized
+420,129,published,79.8333,24.0167,published,750.0,Austfonna,RGI60-07.00552,,mechanical,False,Austfonna99,,digitized
