@@ -59,13 +59,13 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 61,24,digitized,69.295288,-143.790144,published,2400.0,McCall Glacier,RGI60-01.02228,,,True,UC,Accumulation area,digitized
 62,25,digitized,49.78691,87.730675,published,3450.0,Sofiyskiy Glacier,RGI60-10.01836,,,False,,Accumulation area,digitized
 63,25,digitized,49.786858,87.732346,published,3440.0,Sofiyskiy Glacier,RGI60-10.01836,,,False,,Accumulation area,digitized
-64,131,submitted,45.85657836,6.818206197,submitted,3138.059,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,18,label: 1 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
-65,131,submitted,45.85644136,6.818831078,submitted,3158.317,Glacier de Tête Rousse,RGI60-11.03438,0.1,,False,4,label: 2 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
-66,131,submitted,45.85645065,6.819286995,submitted,3165.342,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,13,label: 3 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
-67,131,submitted,45.85644926,6.819698234,submitted,3172.414,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,2,label: 4 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
-68,131,submitted,45.8561983,6.820000228,submitted,3177.15,Glacier de Tête Rousse,RGI60-11.03438,0.1,,False,5,label: 5 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
-69,131,submitted,45.85600995,6.820386764,submitted,3182.034,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,10,label: 6 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
-70,131,submitted,45.85604917,6.821582267,submitted,3206.436,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,17,label: 7 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+64,131,submitted,45.85657836,6.818206197,submitted,3138.059,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,18,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 1 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+65,131,submitted,45.85644136,6.818831078,submitted,3158.317,Glacier de Tête Rousse,RGI60-11.03438,0.1,,False,4,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 2 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+66,131,submitted,45.85645065,6.819286995,submitted,3165.342,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,13,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 3 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+67,131,submitted,45.85644926,6.819698234,submitted,3172.414,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,2,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 4 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+68,131,submitted,45.8561983,6.820000228,submitted,3177.15,Glacier de Tête Rousse,RGI60-11.03438,0.1,,False,5,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 5 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+69,131,submitted,45.85600995,6.820386764,submitted,3182.034,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,10,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 6 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
+70,131,submitted,45.85604917,6.821582267,submitted,3206.436,Glacier de Tête Rousse,RGI60-11.03438,0.1,,True,17,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 7 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08,submitted
 71,27,map approximation,45.8578979,6.840015556,published,3410.0,Taconnaz Glacier,RGI60-11.03647,,,False,,Accumulation area,digitized
 72,27,map approximation,45.8534203,6.839661853,published,3680.0,Taconnaz Glacier,RGI60-11.03647,,,False,,Accumulation area,digitized
 73,27,map approximation,45.8511161,6.836228851,published,3780.0,Taconnaz Glacier,RGI60-11.03647,,,False,,Accumulation area,digitized
@@ -387,16 +387,16 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 420,129,published,79.8333,24.0167,published,750.0,Austfonna,RGI60-07.00552,,mechanical,False,Austfonna99,,digitized
 421,130,submitted,41.794233,77.749041,submitted,4030,Batysh Sook Glacier,RGI60-13.06974,0.25,thermal,False,BS_res,Ice temperatures,submitted
 422,130,submitted,39.59632,71.555761,submitted,4380,Ледник Абрамова [Abramov Glacier],RGI60-13.18096,0.25,thermal,False,Abra_res_1,Firn temperatures,submitted
-423,132,submitted,45.85629825,6.820794613,submitted,3189.346,Glacier de Tête Rousse,RGI60-11.03438,,,,70,elevation: Measured on 2015-11-06,submitted
-424,132,submitted,45.85655904,6.820649356,submitted,3188.739,Glacier de Tête Rousse,RGI60-11.03438,,,,71,elevation: Measured on 2015-11-06,submitted
-425,132,submitted,45.85624493,6.821504615,submitted,3205.465,Glacier de Tête Rousse,RGI60-11.03438,,,,72,elevation: Measured on 2015-11-06 | Follows borehole 70,submitted
-426,132,submitted,45.85657104,6.818209798,submitted,3134.253,Glacier de Tête Rousse,RGI60-11.03438,,,,2201,elevation: Measured on 2022-07-13 | Follows borehole 64,submitted
-427,132,submitted,45.85644799,6.818844085,submitted,3149.6,Glacier de Tête Rousse,RGI60-11.03438,,,,2202,elevation: Measured on 2022-07-11 | Folllows borehole 65,submitted
-428,132,submitted,45.85645155,6.819288038,submitted,3158.877,Glacier de Tête Rousse,RGI60-11.03438,,,,2203,elevation: Measured on 2022-07-10 | Folllows borehole 66,submitted
-429,132,submitted,45.85637825,6.819860871,submitted,3169.811,Glacier de Tête Rousse,RGI60-11.03438,,,,2204,elevation: Measured on 2022-07-13 | Folllows borehole 67,submitted
-430,132,submitted,45.8561985,6.820004401,submitted,3173.692,Glacier de Tête Rousse,RGI60-11.03438,,,,2205,elevation: Measured on 2022-07-07 | Folllows borehole 68,submitted
-431,132,submitted,45.85600945,6.820390892,submitted,3178.982,Glacier de Tête Rousse,RGI60-11.03438,,,,2206,elevation: Measured on 2022-07-07 | Folllows borehole 69,submitted
-432,132,submitted,45.85662403,6.820444057,submitted,3180.783,Glacier de Tête Rousse,RGI60-11.03438,,,,2207,elevation: Measured on 2022-07-07 | Follows borehole 424,submitted
-433,132,submitted,45.85629562,6.820800498,submitted,3185.906,Glacier de Tête Rousse,RGI60-11.03438,,,,2208,elevation: Measured on 2022-07-06 | Folllows borehole 423,submitted
-434,132,submitted,45.85650829,6.821189669,submitted,3195.312,Glacier de Tête Rousse,RGI60-11.03438,,,,2209,elevation: Measured on 2022-07-06,submitted
-435,132,submitted,45.85605748,6.8215824,submitted,3200.716,Glacier de Tête Rousse,RGI60-11.03438,,,,2210,elevation: Measured on 2022-07-06 | Folllows borehole 425,submitted
+423,131,submitted,45.85629825,6.820794613,submitted,3189.346,Glacier de Tête Rousse,RGI60-11.03438,,,,70,elevation: Measured on 2015-11-06,submitted
+424,131,submitted,45.85655904,6.820649356,submitted,3188.739,Glacier de Tête Rousse,RGI60-11.03438,,,,71,elevation: Measured on 2015-11-06,submitted
+425,131,submitted,45.85624493,6.821504615,submitted,3205.465,Glacier de Tête Rousse,RGI60-11.03438,,,,72,elevation: Measured on 2015-11-06 | Follows borehole 70,submitted
+426,131,submitted,45.85657104,6.818209798,submitted,3134.253,Glacier de Tête Rousse,RGI60-11.03438,,,,2201,elevation: Measured on 2022-07-13 | Follows borehole 64,submitted
+427,131,submitted,45.85644799,6.818844085,submitted,3149.6,Glacier de Tête Rousse,RGI60-11.03438,,,,2202,elevation: Measured on 2022-07-11 | Folllows borehole 65,submitted
+428,131,submitted,45.85645155,6.819288038,submitted,3158.877,Glacier de Tête Rousse,RGI60-11.03438,,,,2203,elevation: Measured on 2022-07-10 | Folllows borehole 66,submitted
+429,131,submitted,45.85637825,6.819860871,submitted,3169.811,Glacier de Tête Rousse,RGI60-11.03438,,,,2204,elevation: Measured on 2022-07-13 | Folllows borehole 67,submitted
+430,131,submitted,45.8561985,6.820004401,submitted,3173.692,Glacier de Tête Rousse,RGI60-11.03438,,,,2205,elevation: Measured on 2022-07-07 | Folllows borehole 68,submitted
+431,131,submitted,45.85600945,6.820390892,submitted,3178.982,Glacier de Tête Rousse,RGI60-11.03438,,,,2206,elevation: Measured on 2022-07-07 | Folllows borehole 69,submitted
+432,131,submitted,45.85662403,6.820444057,submitted,3180.783,Glacier de Tête Rousse,RGI60-11.03438,,,,2207,elevation: Measured on 2022-07-07 | Follows borehole 424,submitted
+433,131,submitted,45.85629562,6.820800498,submitted,3185.906,Glacier de Tête Rousse,RGI60-11.03438,,,,2208,elevation: Measured on 2022-07-06 | Folllows borehole 423,submitted
+434,131,submitted,45.85650829,6.821189669,submitted,3195.312,Glacier de Tête Rousse,RGI60-11.03438,,,,2209,elevation: Measured on 2022-07-06,submitted
+435,131,submitted,45.85605748,6.8215824,submitted,3200.716,Glacier de Tête Rousse,RGI60-11.03438,,,,2210,elevation: Measured on 2022-07-06 | Folllows borehole 425,submitted
