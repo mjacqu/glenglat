@@ -111,7 +111,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 120,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
 121,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
 122,39,published,78.81,17.6,published,1000.0,Lomonosovfonna,RGI60-07.00570,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
-123,39,published,79.93,19.52,published,580.0,Vestfonna,RGI60-07.01510,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
+123,133,published,79.93,19.52,published,580.0,Vestfonna,RGI60-07.01510,0.1,,,,location_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013),digitized
 124,129,published,79.9667,21.0167,published,600.0,Vestfonna,RGI60-07.01499,,mechanical,False,Vestfonna95,,digitized
 125,39,published,79.85,24.14,published,750.0,Austfonna,RGI60-07.00551,0.1,,,Measurement #1,temperature_accuracy: Minimum accuracy,digitized
 126,98,published,79.2833,16.8333,published,1200.0,Høghetta,RGI60-07.00844,,,True,,,digitized
