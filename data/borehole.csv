@@ -400,3 +400,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 433,131,submitted,45.85629562,6.820800498,submitted,3185.906,Glacier de Tête Rousse,RGI60-11.03438,,,,2208,elevation: Measured on 2022-07-06 | Folllows borehole 423,submitted
 434,131,submitted,45.85650829,6.821189669,submitted,3195.312,Glacier de Tête Rousse,RGI60-11.03438,,,,2209,elevation: Measured on 2022-07-06,submitted
 435,131,submitted,45.85605748,6.8215824,submitted,3200.716,Glacier de Tête Rousse,RGI60-11.03438,,,,2210,elevation: Measured on 2022-07-06 | Folllows borehole 425,submitted
+436,65,map approximation,45.84093,6.84703,map approximation,4236.7,Glacier des Bossons,RGI60-11.03646,,thermal,,borehole 5,Col du Dôme, digitized
+437,65,map approximation,45.8427,6.84357,map approximation,4300,Glacier des Bossons,RGI60-11.03646,,mechanical,True,borehole 99-B,Dôme du Gouter, digitized
+438,65,map approximation,45.93033,7.87493,map approximation,4450,Grenzgletscher,RGI60-11.02822,,thermal,,borehole 00A,Colle Gnifetti, digitized
