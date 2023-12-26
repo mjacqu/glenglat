@@ -387,3 +387,16 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 420,129,published,79.8333,24.0167,published,750.0,Austfonna,RGI60-07.00552,,mechanical,False,Austfonna99,,digitized
 421,130,submitted,41.794233,77.749041,submitted,4030,Batysh Sook Glacier,RGI60-13.06974,0.25,thermal,False,BS_res,Ice temperatures,submitted
 422,130,submitted,39.59632,71.555761,submitted,4380,Ледник Абрамова [Abramov Glacier],RGI60-13.18096,0.25,thermal,False,Abra_res_1,Firn temperatures,submitted
+423,132,submitted,45.85629825,6.820794613,submitted,3189.346,Glacier de Tête Rousse,RGI60-11.03438,,,,70,elevation: Measured on 2015-11-06,submitted
+424,132,submitted,45.85655904,6.820649356,submitted,3188.739,Glacier de Tête Rousse,RGI60-11.03438,,,,71,elevation: Measured on 2015-11-06,submitted
+425,132,submitted,45.85624493,6.821504615,submitted,3205.465,Glacier de Tête Rousse,RGI60-11.03438,,,,72,elevation: Measured on 2015-11-06 | Follows borehole 70,submitted
+426,132,submitted,45.85657104,6.818209798,submitted,3134.253,Glacier de Tête Rousse,RGI60-11.03438,,,,2201,elevation: Measured on 2022-07-13 | Follows borehole 64,submitted
+427,132,submitted,45.85644799,6.818844085,submitted,3149.6,Glacier de Tête Rousse,RGI60-11.03438,,,,2202,elevation: Measured on 2022-07-11 | Folllows borehole 65,submitted
+428,132,submitted,45.85645155,6.819288038,submitted,3158.877,Glacier de Tête Rousse,RGI60-11.03438,,,,2203,elevation: Measured on 2022-07-10 | Folllows borehole 66,submitted
+429,132,submitted,45.85637825,6.819860871,submitted,3169.811,Glacier de Tête Rousse,RGI60-11.03438,,,,2204,elevation: Measured on 2022-07-13 | Folllows borehole 67,submitted
+430,132,submitted,45.8561985,6.820004401,submitted,3173.692,Glacier de Tête Rousse,RGI60-11.03438,,,,2205,elevation: Measured on 2022-07-07 | Folllows borehole 68,submitted
+431,132,submitted,45.85600945,6.820390892,submitted,3178.982,Glacier de Tête Rousse,RGI60-11.03438,,,,2206,elevation: Measured on 2022-07-07 | Folllows borehole 69,submitted
+432,132,submitted,45.85662403,6.820444057,submitted,3180.783,Glacier de Tête Rousse,RGI60-11.03438,,,,2207,elevation: Measured on 2022-07-07 | Follows borehole 424,submitted
+433,132,submitted,45.85629562,6.820800498,submitted,3185.906,Glacier de Tête Rousse,RGI60-11.03438,,,,2208,elevation: Measured on 2022-07-06 | Folllows borehole 423,submitted
+434,132,submitted,45.85650829,6.821189669,submitted,3195.312,Glacier de Tête Rousse,RGI60-11.03438,,,,2209,elevation: Measured on 2022-07-06,submitted
+435,132,submitted,45.85605748,6.8215824,submitted,3200.716,Glacier de Tête Rousse,RGI60-11.03438,,,,2210,elevation: Measured on 2022-07-06 | Folllows borehole 425,submitted
