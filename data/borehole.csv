@@ -156,12 +156,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 166,55,map approximation,52.19258,-117.25908,published,2235.0,Athabasca Glacier,RGI60-02.12441,,,False,Hole 100,Took average of two measurements,digitized
 167,56,map approximation,67.9036926,18.56956375,map guess,1400.0,Storglaciären,RGI60-08.00213,0.05,,False,,,digitized
 168,57,published,48.6556404,90.84707854,published,4130.0,Khukh Nuru Uul glacier,RGI60-10.02656,,,True,,to_bottom: Bedrock at 72 m,digitized
-169,58,published,45.966213,7.798327,published,2516.0,Grenzgletscher,RGI60-11.02822,0.05,,True,l5,Ablation area,digitized
-170,58,published,45.970304,7.787504,published,2468.0,Grenzgletscher,RGI60-11.02822,0.05,,False,ll5,Ablation area,digitized
 171,58,published,45.971593,7.79257,published,2485.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f13,Ablation area,digitized
-172,58,published,45.969619,7.796608,published,2501.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f9,Ablation area,digitized
 173,58,published,45.967082,7.799455,published,2514.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f5,Ablation area,digitized
-174,58,published,45.967081,7.794127,published,2497.0,Grenzgletscher,RGI60-11.02822,0.05,,True,ll9,Ablation area,digitized
 175,58,published,45.968796,7.800795,published,2506.0,Grenzgletscher,RGI60-11.02822,0.05,,True,r6,Ablation area,digitized
 176,58,published,45.969451,7.795742,published,2499.0,Grenzgletscher,RGI60-11.02822,0.05,,False,l9a,Ablation area,digitized
 177,58,published,45.965263,7.800062,published,2522.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f1,Ablation area,digitized
@@ -255,7 +251,6 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 282,46,map approximation,29.56623,101.84461,published,4540.0,Dagongba Glacier,RGI60-15.07851,0.05,,False,,Ablation area,digitized
 283,46,map approximation,27.10679,100.19538,published,4600.0,Baishui Glacier No. 1,RGI60-15.07645,0.05,,False,,,digitized
 284,51,map approximation,79.43863,-90.64459,published,205.0,White Glacier,RGI60-03.04539,0.2,,False,Lower Ice,Ablation area,digitized
-291,58,published,45.971338,7.793497,published,2490.0,Grenzgletscher,RGI60-11.02822,0.05,,False,f12,Ablation area,digitized
 292,58,published,45.96903,7.795159,published,2500.0,Grenzgletscher,RGI60-11.02822,0.05,,False,I9b,Ablation area,digitized
 293,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
 294,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,False,,Summit region,digitized
@@ -400,6 +395,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 433,131,submitted,45.85629562,6.820800498,submitted,3185.906,Glacier de Tête Rousse,RGI60-11.03438,,,,2208,elevation: Measured on 2022-07-06 | Folllows borehole 423,submitted
 434,131,submitted,45.85650829,6.821189669,submitted,3195.312,Glacier de Tête Rousse,RGI60-11.03438,,,,2209,elevation: Measured on 2022-07-06,submitted
 435,131,submitted,45.85605748,6.8215824,submitted,3200.716,Glacier de Tête Rousse,RGI60-11.03438,,,,2210,elevation: Measured on 2022-07-06 | Folllows borehole 425,submitted
+436,65,map approximation,45.84093,6.84703,map approximation,4236.7,Glacier des Bossons,RGI60-11.03646,,thermal,,borehole 5,Col du Dôme,digitized
+437,65,map approximation,45.8427,6.84357,map approximation,4300,Glacier des Bossons,RGI60-11.03646,,mechanical,True,borehole 99-B,Dôme du Gouter,digitized
+438,65,map approximation,45.93033,7.87493,map approximation,4450,Grenzgletscher,RGI60-11.02822,,thermal,,borehole 00A,Colle Gnifetti,digitized
 439,132,map approximation,78.70055,16.25359,map approximation,475,Bertilbreen,RGI60-07.00593,0.1,thermal,True,1,to_bottom: Bed at 107.5 m | equilibrated: Temperature measured 2 months after installation | measurement_origin: Temperature at bed published separately in text | glacier_name: Written Ледник Бертиль in source,digitized
 440,132,map approximation,78.68885,16.27431,map approximation,440,Bertilbreen,RGI60-07.00593,,thermal,False,2,glacier_name: Written Ледник Бертиль in source,digitized
 441,132,map approximation,78.66816,16.27756,map approximation,120,Bertilbreen,RGI60-07.00593,,,False,,Natural cavity | Bed at about 40 m | glacier_name: Written Ледник Бертиль in source,published
