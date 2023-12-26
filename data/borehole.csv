@@ -385,3 +385,5 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 418,127,published,63.4743,-145.6766,published,1625,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JE,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 18 m,published
 419,128,digitized,-70.3962,-3.0339,published,410,Blåskimen Island Ice Rise,RGI60-19.00791,0.1,mechanical,False,,Only the the last temperature profile (of 1496 profiles measured over 25 hours) are recorded here | location: From figure 1 in Goel et al. 2017 (https://doi.org/10.5194/tc-11-2883-2017),published
 420,129,published,79.8333,24.0167,published,750.0,Austfonna,RGI60-07.00552,,mechanical,False,Austfonna99,,digitized
+421,130,submitted,41.794233,77.749041,submitted,4030,Batysh Sook Glacier,RGI60-13.06974,0.25,thermal,False,BS_res,Ice temperatures,submitted
+422,130,submitted,39.59632,71.555761,submitted,4380,Ледник Абрамова [Abramov Glacier],RGI60-13.18096,0.25,thermal,False,Abra_res_1,Firn temperatures,submitted
