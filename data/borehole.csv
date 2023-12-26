@@ -121,7 +121,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 130,39,published,79.5,95.08,published,720.0,Vavilova Ice Dome,RGI60-09.00472,0.1,,,Measurement #2,elevation: Assumed same as borehole 131,digitized
 131,39,published,79.32,96.02,published,720.0,Vavilova Ice Dome,RGI60-09.00470,0.1,,,Measurement #4,,digitized
 132,39,published,79.38,95.72,published,680.0,Vavilova Ice Dome,RGI60-09.00468,0.1,,,Measurement #5,,digitized
-133,39,published,80.5,94.83,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.1,,,Measurement #1,elevation: Originally reported as 810,digitized
+133,134,published,80.5,94.83,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.2,mechanical,False,,elevation: Originally reported as 810 m in Savatyugin & Zagorodnov 1988 (http://geolibrary.ru/sites/default/files/2020-12/61.pdf#page=229) | location_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | profile.date_min/profile.date_max: Savatyugin & Zagorodnov 1988 (http://geolibrary.ru/sites/default/files/2020-12/61.pdf#page=229),digitized
 134,39,published,80.52,94.8,published,780.0,Akademii Nauk Ice Dome,RGI60-09.00920,0.1,,,Measurement #2,elevation: Originally reported as 810,digitized
 135,39,published,80.78,63.55,published,505.0,Vetreniy Ice Dome,RGI60-09.00986,0.1,,,,,digitized
 136,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,,digitized
