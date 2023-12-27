@@ -188,8 +188,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 211,71,map approximation,39.4355057,96.55583,published,4971.0,Laohugou Glacier,RGI60-13.33006,0.05,,False,Deep borehole site,,digitized
 212,73,map guess,79.78064,24.68098,published,750.0,Austfonna,RGI60-07.00027,,,,,Digitized deepest measurements (indicated with + in plot) | Summit region,digitized
 213,73,map guess,-18.10813679,-68.88302202,published,6548.0,Nevado Sajama,RGI60-16.01587,,,,,Summit region,digitized
-214,73,map guess,-15.54037719,-72.66184742,published,6451.0,Coropuna,RGI60-16.01486,,,,,Rim,digitized
-215,73,map guess,-15.54586811,-72.66056844,published,6326.0,Coropuna,RGI60-16.01486,,,,,Crater,digitized
+214,73,map guess,-15.54597514,-72.66058519,published,6451.0,Volcán Coropuna,RGI60-16.01486,,,,,Rim,digitized
+215,73,map guess,-15.55002714,-72.66097867,published,6326.0,Volcán Coropuna,RGI60-16.01486,,,,,Crater,digitized
 216,75,map approximation,69.63971832,-72.14945899,digitized,685.0,Barnes Ice Cap,RGI60-04.06187,0.1,,False,14.3 T,Within surge zone,published
 217,75,map approximation,69.5815068,-72.12125013,digitized,565.0,Barnes Ice Cap,RGI60-04.06187,0.1,,False,19.5 T,Within surge zone,published
 218,75,map approximation,69.54665509,-72.11040056,digitized,450.0,Barnes Ice Cap,RGI60-04.06187,0.1,,False,24.55 T,Within surge zone,published
