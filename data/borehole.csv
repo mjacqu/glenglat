@@ -109,7 +109,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 119,92,map approximation,78.6801692,12.1190339,map approximation,430.0,Waldemarbreen,RGI60-07.00492,0.2,,False,T2,Accumulation area,published
 120,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
 121,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
-122,39,published,78.81,17.6,published,1000.0,Lomonosovfonna,RGI60-07.00570,0.1,,,,temperature_accuracy: Minimum accuracy,digitized
+122,137,published,78.81,17.6,published,1120.0,Lomonosovfonna,RGI60-07.00570,0.1,thermal,False,,"location_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | depth: Snow and firn for the first 27 m, ice afterwards",digitized
 123,133,published,79.93,19.52,published,580.0,Vestfonna,RGI60-07.01510,0.1,,,,location_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013),digitized
 124,129,published,79.9667,21.0167,published,600.0,Vestfonna,RGI60-07.01499,,mechanical,False,Vestfonna95,,digitized
 125,135,published,79.8272,24.1357,published,750.0,Austfonna,RGI60-07.00551,0.2,mechanical,True,,"location_origin: 1.7 km south of camp at 79.84333, 24.13367 | elevation: > 750 m since camp is 750 m and borehole was drilled on the ice divide | to_bottom: Bed at 566.7 m | Temperatures in the lowest 70 m are unstable due to influx of basal water",digitized
