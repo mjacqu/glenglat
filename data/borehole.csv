@@ -243,7 +243,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 275,8,published,45.929728,7.876968,published,4425.0,Grenzgletscher,RGI60-11.02822,0.1,mechanical,False,CG05-1/07,label: Or CG05-2/07 | Accumulation area,digitized
 278,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
 279,38,published,-29.35,-70.014,published,5161.0,Guanaco Glacier,RGI60-17.14868,0.1,,True,,,digitized
-280,39,published,79.8,25.8,published,500.0,Austfonna,RGI60-07.00551,0.1,,,#2,temperature_accuracy: Minimum accuracy,digitized
+280,136,map guess,79.731,25.586,map guess,500.0,Austfonna,RGI60-07.00551,,,,,"Original reference is 'M. Vallon, pers. comm.'",published
 281,129,published,79.8,24.0,published,750.0,Austfonna,RGI60-07.00551,,mechanical,False,Austfonna98,,digitized
 282,46,map approximation,29.56623,101.84461,published,4540.0,Dagongba Glacier,RGI60-15.07851,0.05,,False,,Ablation area,digitized
 283,46,map approximation,27.10679,100.19538,published,4600.0,Baishui Glacier No. 1,RGI60-15.07645,0.05,,False,,,digitized
