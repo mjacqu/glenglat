@@ -282,7 +282,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 324,95,published,-73.8517,163.6870,published,1623.0,Styx Glacier,,0.1,,False,,,published
 325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,RGI60-07.00570,0.05,,False,,,digitized
 326,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,RGI60-07.00871,0.08,mechanical,False,JAGE '93 site 2,,digitized
-327,99,published,49.8073,86.5786,published,4062.0,Belukha Glacier,RGI60-10.01115,0.07,,False,,,published
+327,99,published,49.8073,86.5786,published,4062.0,Belukha Glacier,RGI60-10.01115,0.07,,True,,to_bottom: Bed at 140 m,published
 328,100,digitized,77.88601,14.384267,published,422.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,1,Accumulation area,digitized
 329,100,digitized,77.893875,14.375851,published,368.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,3,Accumulation area,digitized
 330,100,digitized,77.898476,14.365024,published,323.0,Austre Grønfjordbreen,RGI60-07.01416,0.3,mechanical,False,4,Ablation area,digitized
@@ -408,3 +408,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 450,139,map guess,-3.059,37.348,map guess,5780,Mount Kilimanjaro,RGI60-16.01655,,,True,NIF1,"See Thompson 2002 (https://doi.org/10.1126/science.1073198) | to_bottom: Bed at 50.9 m",submitted
 451,139,map guess,30.449,81.329,published,6050,Naimona'nyi Gacier,RGI60-15.09026,,,,,elevation_origin: Table 1 in Thompson 2018 (https://doi.org/10.1016/j.quascirev.2018.03.003),submitted
 452,139,digitized,42.2087,80.2038,published,5100,South Inylchek Glacier,RGI60-13.05000,0.4,mechanical,False,Borehole 1,See Aizen 2000 (https://doi.org/10.2172/794067) | depth: Ice thickness estimated as 285-300 m by radio echo sounding | temperature: Temperature at 1 m fluctuated between -10.5 and -12.2°C over the observation period (2000-08-04 to 2008-08-07),submitted
+453,140,map approximation,49.807,86.563,published,4125,Western Belukha Plateau,RGI60-10.01106,,mechanical,True,,to_bottom: Bed at 171.3 m | elevation: Published as 4100-4150 m,digitized
