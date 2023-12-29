@@ -364,13 +364,13 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 406,122,digitized,-62.2717,-59.0537,published,160.0,Nelson Island Ice Cap,RGI60-19.01997,0.1,,False,III,,published
 407,122,digitized,-62.1421,-58.8405,published,150.0,King George Island Ice Cap,RGI60-19.01920,0.1,,False,,,published
 408,123,published,33.9158,89.1164,published,6000.0,Puruogangri Ice Cap,RGI60-13.53885,,,False,,Only first and last profiles digitized as intermediate profiles are difficult to resolve in figure 2,digitized
-409,124,digitized,-62.1265,-58.6405,published,702.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDT,Accumulation area,digitized
-410,124,digitized,-62.1294,-58.6919,published,610.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDA,Accumulation area,digitized
-411,124,digitized,-62.1316,-58.7327,published,510.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDB,Accumulation area,digitized
-412,124,digitized,-62.1344,-58.7948,published,380.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDC,Accumulation area,digitized
-413,124,digitized,-62.1622,-58.8952,published,252.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD6,Accumulation area | Profiles 3 and 4 in figure 3c are indistinguishable and have been combined,digitized
-414,124,digitized,-62.1704,-58.9125,published,180.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD8,Accumulation area,digitized
-415,124,digitized,-62.1731,-58.9199,published,110.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD9,Ablation area,digitized
+409,124,digitized,-62.1278,-58.6291,published,702.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDT,Accumulation area,digitized
+410,124,digitized,-62.1302,-58.6828,published,610.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDA,Accumulation area,digitized
+411,124,digitized,-62.1320,-58.7253,published,510.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDB,Accumulation area,digitized
+412,124,digitized,-62.1342,-58.7905,published,380.0,Collins Ice Cap,RGI60-19.01991,0.1,mechanical,False,BDC,Accumulation area,digitized
+413,124,digitized,-62.1604,-58.8931,published,252.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD6,Accumulation area | Profiles 3 and 4 in figure 3c are indistinguishable and have been combined,digitized
+414,124,digitized,-62.1682,-58.9102,published,180.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD8,Accumulation area,digitized
+415,124,digitized,-62.1706,-58.9168,published,110.0,Collins Ice Cap,RGI60-19.01992,0.1,mechanical,False,SD9,Ablation area,digitized
 416,125,map guess,43.3112,42.4643,published,3950.0,Ледник Гарабаши [Garabashi Glacier],RGI60-12.00161,,mechanical,True,,Accumulation area | to_bottom: Bedrock at 76 m | temperature: Only reported for active layer (0-12 m),digitized
 417,127,published,63.4750,-145.6753,published,1621,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JA,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 80 m,published
 418,127,published,63.4743,-145.6766,published,1625,Jarvis Glacier,RGI60-01.00560,,mechanical,True,JE,elevation: From Lee et al. 2020 (https://doi.org/10.1017/jog.2019.84) | to_bottom: Bedrock at 18 m,published
