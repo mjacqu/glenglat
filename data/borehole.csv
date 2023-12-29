@@ -92,7 +92,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 101,33,map approximation,63.4553258,-146.143037,published,1140.0,Black Rapids Glacier,G213683E63392N,0.15,,False,,Ice temperatures | Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Surface at shallowest depth in July 1973 profile | Ablation area,digitized
 103,34,map guess,78.114158,15.99040771,published,305.0,Scott Turnerbreen,G015894E78097N,,,True,,Surged in 1936,digitized
 104,34,map approximation,78.0954428,15.88386431,published,595.0,Scott Turnerbreen,G015894E78097N,,,True,,Surged in 1937,digitized
-105,35,map approximation,77.0189,15.60193332,map approximation,100.0,Hansbreen,G015592E77097N,0.4,,False,site A,,published
+105,35,map approximation,77.0189,15.60193332,map approximation,100.0,Hansbreen,G015592E77097N,0.4,,False,site A,,digitized
 106,35,map approximation,77.0275588,15.65626762,map approximation,128.0,Hansbreen,G015592E77097N,0.4,,False,site B2,,digitized
 107,35,map approximation,77.0916016,15.63406651,map approximation,325.0,Hansbreen,G015592E77097N,0.4,,False,site D,,digitized
 108,35,map approximation,77.0916016,15.63406651,map approximation,324.0,Hansbreen,G015592E77097N,0.4,,True,site D2,,digitized
@@ -354,9 +354,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 396,139,published,28.3833,85.7166,published,7200.0,Dasuopu Glacier,G085752E28395N,,mechanical,True,C3,See Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916) | location: Confirmed by figure 1 in Yao 2002 (https://doi.org/10.3189/172756402781816997) | to_bottom: Bedrock at 167.7 m | Submitted temperature at 10 m (-13.6°C) does not match -16°C published in Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916),submitted
 397,74,map approximation,28.0890,86.9145,published,5710.0,East Rongbuk Glacier,G086939E28060N,,,,BH3,,digitized
 398,118,map approximation,28.01883,86.96125,published,6518.0,East Rongbuk Glacier,G086939E28060N,,mechanical,True,core 2002,to_bottom: Bedrock at 108.83 m | temperature: Minimum measured at 20 m | location: Refined based on figure 1 in Hou et al. 2007 (https://doi.org/10.5194/cp-3-89-2007) | date_min/date_max: From Zhang et al. 2013 (https://doi.org/10.3189/2013JoG12J202),published
-399,119,map approximation,35.2374,81.1286,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,True,Core 1,to_bottom: Bedrock at 133.8 m,published
-400,119,map approximation,35.2373,81.1155,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,True,Core 2,to_bottom: Bedrock at 135.8 m,published
-401,119,map approximation,35.2359,81.1161,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,False,Core 3,,published
+399,119,map approximation,35.2374,81.1286,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,True,Core 1,to_bottom: Bedrock at 133.8 m,digitized
+400,119,map approximation,35.2373,81.1155,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,True,Core 2,to_bottom: Bedrock at 135.8 m,digitized
+401,119,map approximation,35.2359,81.1161,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,False,Core 3,,digitized
 402,120,digitized,27.9187,86.5453,published,5860.0,Trambau Glacier,G086537E27874N,,mechanical,False,,temperature: Measured over two hours (with increasing depth) immediately after drilling | The 10 m depth temperature (-0.82) is significantly warmer than the annual mean temperature (-8.7). Melting and refreezing may have increased the ice temperature at the drilling site,digitized
 403,121,map guess,47.8095,-123.6873,map guess,1675.0,Blue Glacier,G236316E47813N,0.03,thermal,False,R1,Water-filled borehole near the glacier equilibrium line | temperature: Inferred from measured borehole closure rates,digitized
 404,122,digitized,-62.2511,-59.0144,published,90.0,Nelson Island Ice Cap,G301002E62274S,0.1,,False,I,,published
