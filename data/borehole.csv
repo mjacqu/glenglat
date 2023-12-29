@@ -126,10 +126,10 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 136,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,,digitized
 137,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,,digitized
 138,40,map guess,43.1154866,86.81283014,published,3840.0,Urumqi Glacier No. 1,RGI60-13.45335,,,,,,digitized
-139,41,published,48.633,90.95,published,3815.0,Tsambagarav,RGI60-10.02705,0.05,,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-140,41,published,43.05,94.316,published,4512.0,Miaoergou,RGI60-13.48412,0.05,,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-141,41,published,38.7,97.267,published,5356.0,Shule Nanshan,RGI60-13.32800,0.05,,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
-142,41,published,28.17,86.633,published,6303.0,Gyabrag,RGI60-15.10175,0.05,,,,elevation: Inconsistent with location (latitude/longitude) | Accumulation area,digitized
+139,41,map approximation,48.597,90.856,published,3815.0,Tsambagarav Glacier,RGI60-10.02716,0.05,,,,"location: Coordinates in Table 1 are approximate, so refined based on name, elevation, Figure 1 in Khalzan 2022 (https://doi.org/10.3389/feart.2021.785306) and slide 10 in Davaa 2016 (https://globalcryospherewatch.org/meetings/salekhard2016/presentations/3.1.3.e-G.Davaa-Mongolia%20cryospheric%20activities.pdf#page=10) | Accumulation area",digitized
+140,41,map approximation,43.055,94.323,published,4512.0,Miaoergou Glacier,RGI60-13.48412,0.05,,,,"location: Coordinates in Table 1 are approximate, so refined based on name, elevation, Figure 2 in Jiao 2023 (https://doi.org/10.1029/2023JF007227), and Figure 3 in Takeuchi 2008 (https://web.seppyo.org/bgr/pdf/26/BGR26P33.pdf) | Accumulation area",digitized
+141,41,map guess,38.705,97.262,published,5356.0,Shule Nanshan Glacier,RGI60-13.32800,0.05,,,,"location: Coordinates in Table 1 are approximate, so guessed the nearby summit dome based on elevation | Accumulation area",digitized
+142,41,map guess,28.110,86.626,published,6303.0,加布拉冰川 [Gyabrag Glacier],RGI60-15.10175,0.05,,,,"location: Coordinates in Table 1 are approximate, so guessed based on name and elevation | Accumulation area",digitized
 143,10,published,45.928193,7.875925,published,4475.0,Grenzgletscher,RGI60-11.02822,0.05,mechanical,True,b95-1,Accumulation area | location and elevation from https://doi.org/10.5194/tc-5-231-2011,digitized
 144,10,published,45.929111,7.873663,published,4448.0,Grenzgletscher,RGI60-11.02822,0.05,mechanical,True,b95-2,Accumulation area | location and elevation from https://doi.org/10.5194/tc-5-231-2011,digitized
 145,46,map guess,35.2217793,81.11527554,digitized,5800.0,Chongce Ice Cap,RGI60-13.53222,0.1,,,S0,,digitized
