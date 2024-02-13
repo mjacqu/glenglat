@@ -216,6 +216,7 @@ resources:
       - data/gwenn-flowers-south-glacier/profile.csv
       - data/tika-gurung-rikha-samba/profile.csv
       - data/ian-lee-jarvis-glacier/profile.csv
+      - data/carturan2023-ortles/profile.csv
     format: csv
     dialect:
       header: true
@@ -277,6 +278,7 @@ resources:
       - data/gwenn-flowers-south-glacier/measurement.csv
       - data/tika-gurung-rikha-samba/measurement.csv
       - data/ian-lee-jarvis-glacier/measurement.csv
+      - data/carturan2023-ortles/measurement.csv
     format: csv
     dialect:
       header: true
