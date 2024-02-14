@@ -283,15 +283,15 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 325,96,published,78.86472,17.425,published,1230.0,Lomonosovfonna,G018391E78924N,0.05,,False,,,digitized
 326,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,G017048E79443N,0.08,mechanical,False,JAGE '93 site 2,,digitized
 327,99,published,49.8073,86.5786,published,4062.0,Belukha Glacier,G086577E49799N,0.07,,True,,to_bottom: Bed at 140 m,published
-328,100,digitized,77.88601,14.384267,published,422.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,1,Accumulation area,digitized
-329,100,digitized,77.893875,14.375851,published,368.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,3,Accumulation area,digitized
-330,100,digitized,77.898476,14.365024,published,323.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,4,Ablation area,digitized
-331,100,digitized,77.903015,14.376923,published,268.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,5,Ablation area,digitized
-332,100,digitized,77.914185,14.371156,published,192.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,6,Ablation area,digitized
-333,100,digitized,77.91656,14.362903,published,171.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,6a,Ablation area,digitized
-334,100,digitized,77.908264,14.354504,published,225.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,7,Ablation area,digitized
-335,100,digitized,77.90918,14.388607,published,226.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,11,,digitized
-336,100,digitized,77.882965,14.4427,published,440.0,Austre Grønfjordbreen,G014474E77889N,0.3,mechanical,False,12,,digitized
+328,100,map approximation,77.88749,14.358547,published,422.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,1,Accumulation area,digitized
+329,100,map approximation,77.894613,14.354201,published,368.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,3,Accumulation area,digitized
+330,100,map approximation,77.898244,14.345511,published,323.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,4,Ablation area,digitized
+331,100,map approximation,77.903198,14.358004,published,268.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,5,Ablation area,digitized
+332,100,map approximation,77.913417,14.349587,published,192.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,6,Ablation area,digitized
+333,100,map approximation,77.915626,14.341255,published,171.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,6a,Ablation area,digitized
+334,100,map approximation,77.908715,14.329011,published,225.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,7,Ablation area,digitized
+335,100,map approximation,77.908935,14.365414,published,226.0,Austre Grønfjordbreen,G014342E77910N,0.3,mechanical,False,11,,digitized
+336,100,map approximation,77.884241,14.416763,published,440.0,Austre Grønfjordbreen,G014474E77889N,0.3,mechanical,False,12,,digitized
 337,126,published,43.34831,42.42667,published,5115.0,Mount Elbrus,G042429E43293N,0.1,mechanical,False,,"location: Published in Mikhalenko et al. 2015 (https://doi.org/10.5194/tc-9-2253-2015) | elevation: Originally published as 5150 m, but later (likely after being resurveyed) as 5115 m in Mikhalenko et al. 2015 (https://doi.org/10.5194/tc-9-2253-2015)",digitized
 338,102,published,43.34831,42.42667,published,5115.0,Mount Elbrus,G042429E43293N,0.1,mechanical,True,,"Original reference (not found): Mikhalenko, V. N. (2010). Glubokoe burenie l’la bliz vershiny Elbrusa (Deep ice core drilling near summit of Mt. Elbrus). Лёд и Снег, 1, 123–126",digitized
 339,102,published,43.34831,42.42667,published,5115.0,Mount Elbrus,G042429E43293N,,mechanical,False,,,digitized
