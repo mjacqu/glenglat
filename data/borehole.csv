@@ -436,3 +436,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 479,150,map approximation,69.293365,-143.785913,digitized,2374,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
 480,150,map approximation,69.293365,-143.785913,digitized,2375,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
 481,150,map approximation,69.293365,-143.785913,digitized,2374,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
+482,151,map approximation,77.08128,15.23203,published,50,Werenskioldbreen,G015442E77070N,,,False,,Ablation area | depth: Ice,published
+483,151,map approximation,77.07746,15.32502,published,225,Werenskioldbreen,G015442E77070N,,,False,,Ablation area | depth: Ice,published
+484,151,map approximation,77.06944,15.44134,published,380,Werenskioldbreen,G015442E77070N,,,False,,Near equilibrium line | depth: Ice,published
+485,151,map guess,77.0978,15.4663,published,550,Werenskioldbreen,G015442E77070N,,,False,,Accumulation area | Snow pit | elevation: Average of multiple snow pits dug at '500-600 m' | date: 'towards the end of the polar summer' | depth: Firn,published
