@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "location",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "elevation": "1500-1600" }, "geometry": { "type": "Point", "coordinates": [ -143.840895, 69.329583 ] } },
+{ "type": "Feature", "properties": { "elevation": "1600-1700" }, "geometry": { "type": "Point", "coordinates": [ -143.851349, 69.321055 ] } },
+{ "type": "Feature", "properties": { "elevation": "1700-1800" }, "geometry": { "type": "Point", "coordinates": [ -143.852117, 69.314715 ] } },
+{ "type": "Feature", "properties": { "elevation": "2000-2100" }, "geometry": { "type": "Point", "coordinates": [ -143.837565, 69.292241 ] } },
+{ "type": "Feature", "properties": { "elevation": "2100-below" }, "geometry": { "type": "Point", "coordinates": [ -143.825677, 69.292132 ] } },
+{ "type": "Feature", "properties": { "elevation": "2100-above" }, "geometry": { "type": "Point", "coordinates": [ -143.833158, 69.286582 ] } },
+{ "type": "Feature", "properties": { "elevation": "2100-2200" }, "geometry": { "type": "Point", "coordinates": [ -143.831416, 69.281575 ] } },
+{ "type": "Feature", "properties": { "elevation": "2200-2300-below" }, "geometry": { "type": "Point", "coordinates": [ -143.798724, 69.297825 ] } },
+{ "type": "Feature", "properties": { "elevation": "2200-2300-above" }, "geometry": { "type": "Point", "coordinates": [ -143.797904, 69.295903 ] } },
+{ "type": "Feature", "properties": { "elevation": "2300" }, "geometry": { "type": "Point", "coordinates": [ -143.799749, 69.29079 ] } },
+{ "type": "Feature", "properties": { "elevation": "2300-2400-single" }, "geometry": { "type": "Point", "coordinates": [ -143.791345, 69.294816 ] } },
+{ "type": "Feature", "properties": { "elevation": "2300-2400-cluster" }, "geometry": { "type": "Point", "coordinates": [ -143.785913, 69.293365 ] } }
+]
+}

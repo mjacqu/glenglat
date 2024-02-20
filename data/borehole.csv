@@ -421,3 +421,18 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 464,148,map approximation,45.8411,6.8471,published,4240,Glacier des Bossons,G006865E45868N,,mechanical,False,Deuxième puits,Snow pit | depth: Snow and firn | location_origin: Based on description 'Col du Dôme',published
 465,149,map approximation,45.8387,6.8503,published,4280,Glacier des Bossons,G006865E45868N,0.05,,False,4250 m,depth: Snow and firn including regelation ice,published
 466,149,map approximation,45.8445,6.8605,published,3960,Glacier des Bossons,G006865E45868N,,,False,3960 m,depth: Snow and maybe firn,digitized
+467,150,map approximation,69.314715,-143.852117,published,1730,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line,digitized
+468,150,map approximation,69.329583,-143.840895,digitized,1544,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line,digitized
+469,150,map approximation,69.321055,-143.851349,digitized,1665,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line,digitized
+470,150,map approximation,69.292241,-143.837565,digitized,2028,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line,digitized
+471,150,map approximation,69.292132,-143.825677,digitized,2099,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line,digitized
+472,150,map approximation,69.286582,-143.833158,digitized,2097,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Above firn line,digitized
+473,150,map approximation,69.281575,-143.831416,digitized,2138,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Above firn line,digitized
+474,150,map approximation,69.297825,-143.798724,digitized,2276,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line,digitized
+475,150,map approximation,69.295903,-143.797904,digitized,2275,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Above firn line,digitized
+476,150,map approximation,69.29079,-143.799749,digitized,2306,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Above firn line,digitized
+477,150,map approximation,69.294816,-143.791345,digitized,2330,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Above firn line,digitized
+478,150,map approximation,69.293365,-143.785913,digitized,2374,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
+479,150,map approximation,69.293365,-143.785913,digitized,2374,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
+480,150,map approximation,69.293365,-143.785913,digitized,2375,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
+481,150,map approximation,69.293365,-143.785913,digitized,2374,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line,digitized
