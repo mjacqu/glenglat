@@ -1,0 +1,13 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Wed Feb 21 10:09:32 CET 2024 -->
+<data>
+<image file='figure-4.png' />
+<axesnames x='elevation'  y='temperature' />
+<calibpoints minXaxisX='156.0' minXaxisY='612.0' maxXaxisX='571.0' maxXaxisY='611.0' minYaxisX='156.0' minYaxisY='612.0' maxYaxisX='154.0' maxYaxisY='48.0' aX1='1400.0' aX2='2200.0' aY1='-10.0' aY2='-5.0' isXLog='false' isYLog='false' />
+<point n='0' x='203.0' y='137.0' dx='1492.8082867859673' dy='-5.790047081542498' />
+<point n='1' x='269.0' y='202.0' dx='1619.7345348553645' dy='-6.3676931753125245' />
+<point n='2' x='317.0' y='287.0' dx='1711.8692880285207' dy='-7.122258205090959' />
+<point n='3' x='421.0' y='420.0' dx='1911.7322587762592' dy='-8.303547777939178' />
+<point n='4' x='503.0' y='330.0' dx='2070.221685459803' dy='-7.5074339277627296' />
+<point n='5' x='517.3821068916258' y='453.0' dx='2097.3747255816183' dy='-8.598157370843872' />
+</data>

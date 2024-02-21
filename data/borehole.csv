@@ -440,3 +440,11 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 483,151,map approximation,77.07746,15.32502,published,225,Werenskioldbreen,G015442E77070N,,,False,,Ablation area | depth: Ice,published
 484,151,map approximation,77.06944,15.44134,published,380,Werenskioldbreen,G015442E77070N,,,False,,Near equilibrium line | depth: Ice,published
 485,151,map guess,77.0978,15.4663,published,550,Werenskioldbreen,G015442E77070N,,,False,,Accumulation area | Snow pit | elevation: Average of multiple snow pits dug at '500-600 m' | date: 'towards the end of the polar summer' | depth: Firn,published
+486,152,map approximation,69.314715,-143.852117,published,1730,McCall Glacier,G216152E69302N,,,False,,drill_method: Either coring auger or steam drill | Below firn line | At the same location and elevation (and maybe the same hole) as borehole 467 | depth: Relative to glacier surface in August 1971,digitized
+487,152,map approximation,69.329583,-143.840895,digitized,1493,McCall Glacier,G216152E69302N,,,False,TC2.2,location_origin: At the same location as borehole 468,digitized
+488,152,map approximation,69.321055,-143.851349,digitized,1620,McCall Glacier,G216152E69302N,,,False,TC4,location_origin: At the same location as borehole 469,digitized
+489,152,map approximation,69.314715,-143.852117,digitized,1712,McCall Glacier,G216152E69302N,,,False,TC2.5,location_origin: At the same location as borehole 467,digitized
+490,152,map approximation,69.30157,-143.84974,digitized,1912,McCall Glacier,G216152E69302N,,,False,TC9,,digitized
+491,152,map approximation,69.292241,-143.837565,map approximation,2028,McCall Glacier,G216152E69302N,,,False,TC11,location_origin: Apparently at the same location as borehole 470 (although Figure 1 suggests a position higher upglacier) | elevation_origin: Assumed at the same elevation as borehole 470,digitized
+492,152,map approximation,69.286582,-143.833158,digitized,2070,McCall Glacier,G216152E69302N,,,False,TC11.5,location_origin: At the same location as borehole 472,digitized
+493,150,map approximation,69.292132,-143.825677,digitized,2097,McCall Glacier,G216152E69302N,,,False,TC20.4,location_origin: At the same location as borehole 471,digitized
