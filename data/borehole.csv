@@ -209,8 +209,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 232,78,submitted,82.51,-37.47,map guess,1250.0,Hans Tausen Dome,G323085E82488N,,,True,,,submitted
 233,78,submitted,81.2926,-15.7029,map guess,690.0,Flade Isblink Ice Cap,G344790E81287N,,,False,,,submitted
 234,78,published,75.32,-81.64,published,1930.0,Devon Ice Cap,G278488E75058N,,,False,,latitude/longitude: From https://doi.org/10.3189/172756406781811349,submitted
-235,78,submitted,75.34,-82.14,published,1800.0,Devon Ice Cap,G278488E75058N,,,True,,,submitted
-236,78,submitted,75.3,-82.3,published,1800.0,Devon Ice Cap,G278488E75058N,,,False,,,submitted
+235,157,digitized,75.377,-82.4125,published,1825,Devon Ice Cap,G278488E75058N,0.01,,True,Hole 72,to_bottom: 299 m,digitized
+236,157,digitized,75.372,-82.4155,published,1825,Devon Ice Cap,G278488E75058N,0.01,,False,Hole 71,,digitized
 237,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
 238,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
 239,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
