@@ -5,7 +5,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 4,2,map approximation,79.531432,-91.014641,published,1447.0,White Glacier,G269329E79672N,0.2,,False,,Accumulation area,digitized
 5,2,map approximation,79.474711,-90.756867,published,625.0,White Glacier,G269329E79672N,0.2,,True,,Ablation area,digitized
 6,2,map approximation,79.440386,-90.645269,published,230.0,White Glacier,G269329E79672N,0.2,,True,,Ablation area,digitized
-7,5,published,-16.65,-67.783333,published,6340.0,Illimani Volcano,G292220E16653S,0.05,,True,,Summit region,digitized
+7,5,published,-16.65,-67.783333,published,6340.0,Illimani Volcano,G292220E16653S,0.05,,True,mechanical,Summit region,digitized
 8,6,published,45.842712,6.843715,published,4300.0,Glacier des Bossons,G006844E45863N,0.1,,True,,Dôme du Goûter | Summit region,digitized
 9,6,published,45.842712,6.843715,published,4300.0,Glacier des Bossons,G006844E45863N,0.1,,False,,Dôme du Goûter | Summit region,digitized
 10,6,published,45.842144,6.8467193,published,4245.0,Glacier des Bossons,G006865E45868N,0.1,,True,,Col du Dôme | Summit region | profile.date_min/profile.date_max: From https://doi.org/10.1029/2007GL029933,digitized
