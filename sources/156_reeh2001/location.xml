@@ -1,0 +1,12 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Fri Mar 01 16:00:41 CET 2024 -->
+<data>
+<image file='thomsen1995-figure-2.png' />
+<axesnames x='longitude'  y='latitude' />
+<calibpoints minXaxisX='304.6666666666667' minXaxisY='679.3333333333334' maxXaxisX='750.6666666666666' maxXaxisY='679.3333333333334' minYaxisX='14.0' minYaxisY='607.3333333333334' maxYaxisX='14.666666666666666' maxYaxisY='311.3333333333333' aX1='-37.0' aX2='-36.0' aY1='82.75' aY2='82.83333' isXLog='false' isYLog='false' />
+<point n='0' x='650.0' y='346.0' dx='-36.22571001494769' dy='82.82357063063064' />
+<point n='1' x='551.0' y='296.0' dx='-36.44768310911809' dy='82.83764664414416' />
+<point n='2' x='511.5' y='257.5' dx='-36.536248131539615' dy='82.84848517454957' />
+<point n='3' x='446.0' y='208.5' dx='-36.6831091180867' dy='82.8622796677928' />
+<point n='4' x='314.5' y='461.5' dx='-36.97795216741405' dy='82.79105503941443' />
+</data>

@@ -448,3 +448,8 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 491,152,map approximation,69.292241,-143.837565,map approximation,2028,McCall Glacier,G216152E69302N,,,False,TC11,location_origin: Apparently at the same location as borehole 470 (although Figure 1 suggests a position higher upglacier) | elevation_origin: Assumed at the same elevation as borehole 470,digitized
 492,152,map approximation,69.286582,-143.833158,digitized,2070,McCall Glacier,G216152E69302N,,,False,TC11.5,location_origin: At the same location as borehole 472,digitized
 493,150,map approximation,69.292132,-143.825677,digitized,2097,McCall Glacier,G216152E69302N,,,False,TC20.4,location_origin: At the same location as borehole 471,digitized
+494,156,digitized,82.8236,-36.2257,published,574,Hare Glacier,G323403E82808N,,,False,61,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749),published
+495,156,digitized,82.8377,-36.4477,published,776,Hare Glacier,G323403E82808N,,,False,75,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749),published
+496,156,digitized,82.8485,-36.5362,published,883,Hare Glacier,G323403E82808N,,,False,85,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749),published
+497,156,digitized,82.8623,-36.6831,published,1035,Hare Glacier,G323403E82808N,,,False,105,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749),published
+498,156,digitized,82.7911,-36.9780,published,1318,Hare Glacier,G322065E82674N,,,False,13,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749),published
