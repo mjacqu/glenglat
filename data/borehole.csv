@@ -211,10 +211,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 234,78,published,75.32,-81.64,published,1930.0,Devon Ice Cap,G278488E75058N,,,False,,latitude/longitude: From https://doi.org/10.3189/172756406781811349,submitted
 235,157,digitized,75.377,-82.4125,published,1825,Devon Ice Cap,G278488E75058N,0.01,,True,Hole 72,to_bottom: 299 m,digitized
 236,157,digitized,75.372,-82.4155,published,1825,Devon Ice Cap,G278488E75058N,0.01,,False,Hole 71,,digitized
-237,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
-238,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
-239,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
-240,78,submitted,80.7,-73.1,map guess,1770.0,Agassiz Ice Cap,G287781E80651N,,,True,,latitude/longitude: Within 2 km,submitted
+237,158,map approximation,80.815,-72.892,published,1730,Agassiz Ice Cap,G287781E80651N,,,True,A84,to_bottom: 128 m in Table 1 of Vinther 2008 (https://doi.org/10.1029/2007JD009143),digitized
+238,158,map approximation,80.806,-72.905,published,1700,Agassiz Ice Cap,G287781E80651N,,,True,A79,to_bottom: 139 m in Table 1 of Vinther 2008 (https://doi.org/10.1029/2007JD009143),digitized
+240,158,map approximation,80.798,-72.85,published,1670,Agassiz Ice Cap,G287781E80651N,,,True,A77,to_bottom: 336 m in Table 1 of Vinther 2008 (https://doi.org/10.1029/2007JD009143),digitized
 241,74,submitted,28.02767227,86.95550508,published,6350.0,East Rongbuk Glacier,G086939E28060N,,,,BH2,,submitted
 242,79,submitted,60.919193,-139.453348,submitted,1772.0,Little Kluane Glacier,G220578E60873N,0.2,,False,,Glacier surged vigorously in 2017-2018 | latitude/longitude/elevation: Measured with single-frequency GPS | Lower ablation area | measurement.depth: Measured at time of installation (2019-07-04) and decreased over time due to glacier thinning,submitted
 243,79,submitted,60.912472,-139.153777,submitted,2371.0,North Glacier,G220859E60905N,0.1,,False,,Glacier is not surge-type | Ice thickness is ~110 m at borehole location | Supporting information in https://summit.sfu.ca/item/12553 and https://doi.org/10.1002/jgrf.20096 | latitude/longitude/elevation: Measured with single-frequency GPS on 2011-08-02 | measurement.depth: Measured at time of installation (2011-08) | Central ablation area of small valley glacier,submitted
