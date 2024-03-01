@@ -205,7 +205,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 228,78,submitted,78.3897,-80.395,map guess,1600.0,Prince of Wales Ice Cap,G279351E78361N,,,True,,,submitted
 229,78,submitted,67.3,-65.2,published,1810.0,Penny Ice Cap,G294456E67304N,,,True,,,submitted
 230,154,map approximation,79.943,-99.121,published,268,Meighen Ice Cap,G260810E79982N,0.01,thermal,True,,to_bottom: 121.2 m | location_origin: Estimated from Figure 1 in Koerner 1968 (https://doi.org/10.3189/S0022143000020621),published
-231,78,submitted,82.84,-36.67,map guess,900.0,Hans Tausen Hare,G323403E82808N,,,True,,,submitted
+231,155,digitized,82.8425,-36.1958,map aproximation,500.0,Hans Tausen Iskappe,G323403E82808N,,thermal,True,,to_bottom: 288 m,digitized
 232,78,submitted,82.51,-37.47,map guess,1250.0,Hans Tausen Dome,G323085E82488N,,,True,,,submitted
 233,78,submitted,81.2926,-15.7029,map guess,690.0,Flade Isblink Ice Cap,G344790E81287N,,,False,,,submitted
 234,78,published,75.32,-81.64,published,1930.0,Devon Ice Cap,G278488E75058N,,,False,,latitude/longitude: From https://doi.org/10.3189/172756406781811349,submitted
