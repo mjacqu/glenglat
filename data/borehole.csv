@@ -461,7 +461,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 505,160,map approximation,61.2154,-140.1719,map guess,1840,Steele Glacier,G219819E61242N,0.2,thermal,False,,equilibrated: A short wait time of 10 days was compensated for by correcting the measured ice temperatures with cooling curves | label: 72-1 in Clarke 1976 (https://doi.org/10.3189/S0022143000031580)
 506,161,map approximation,46.16652,7.98871,published,3300,Grubengletscher,G007996E46168N,0.1,thermal,False,1,,published
 507,161,map approximation,46.16632,7.98603,published,3200,Grubengletscher,G007996E46168N,0.1,thermal,False,2,,published
-508,161,map approximation,46.16632,7.98603,published,2900,Grubengletscher,G007996E46168N,0.1,thermal,False,3,,published
+508,161,map approximation,46.17237,7.97555,published,2900,Grubengletscher,G007996E46168N,0.1,thermal,False,3,,published
 509,161,map approximation,46.17273,7.97377,published,2880,Grubengletscher,G007996E46168N,0.1,thermal,True,4,to_bottom: 45.5 m,published
 510,161,map approximation,46.17276,7.97295,published,2870,Grubengletscher,G007996E46168N,0.1,thermal,False,5,,published
 511,161,map approximation,46.17426,7.97352,published,2880,Grubengletscher,G007996E46168N,0.1,thermal,False,6,,published
