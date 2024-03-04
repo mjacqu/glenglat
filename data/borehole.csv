@@ -465,3 +465,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 509,161,map approximation,46.17273,7.97377,published,2880,Grubengletscher,G007996E46168N,0.1,thermal,True,4,to_bottom: 45.5 m,published
 510,161,map approximation,46.17276,7.97295,published,2870,Grubengletscher,G007996E46168N,0.1,thermal,False,5,,published
 511,161,map approximation,46.17426,7.97352,published,2880,Grubengletscher,G007996E46168N,0.1,thermal,False,6,,published
+512,161,map approximation,45.97301,7.78775,published,2600,Grenzgletscher,G007800E45965N,0.2,thermal,False,,,published
