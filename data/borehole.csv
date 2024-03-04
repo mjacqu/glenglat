@@ -193,13 +193,13 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 216,75,map approximation,69.63971832,-72.14945899,digitized,685.0,Barnes Ice Cap,G287731E69650N,0.1,,False,14.3 T,Within surge zone,published
 217,75,map approximation,69.5815068,-72.12125013,digitized,565.0,Barnes Ice Cap,G287731E69650N,0.1,,False,19.5 T,Within surge zone,published
 218,75,map approximation,69.54665509,-72.11040056,digitized,450.0,Barnes Ice Cap,G287731E69650N,0.1,,False,24.55 T,Within surge zone,published
-219,76,digitized,69.81379,-72.093185,map approximation,525.0,Barnes Ice Cap,G287718E69797N,0.05,,False,T0975,elevation: From https://doi.org/10.1139/e80-124,digitized
-220,76,digitized,69.80686,-72.10005,map approximation,575.0,Barnes Ice Cap,G287718E69797N,0.05,,False,T091,elevation: From https://doi.org/10.1139/e80-124,digitized
-221,76,digitized,69.79795,-72.110344,map approximation,650.0,Barnes Ice Cap,G287718E69797N,0.05,,False,T081,elevation: From https://doi.org/10.1139/e80-124,digitized
-222,76,digitized,69.78211,-72.12066,map approximation,725.0,Barnes Ice Cap,G287718E69797N,0.05,,False,T061,elevation: From https://doi.org/10.1139/e80-124,digitized
-223,76,digitized,69.74945,-72.154976,map approximation,850.0,Barnes Ice Cap,G287718E69797N,0.05,,False,T020,elevation: From https://doi.org/10.1139/e80-124,digitized
-224,76,digitized,69.78899,-71.9703,map approximation,670.0,Barnes Ice Cap,G287718E69797N,0.05,,True,C4,label: D4 in https://doi.org/10.1139/e80-124 | elevation: From https://doi.org/10.1139/e80-124,digitized
-225,76,digitized,69.71965,-71.89204,map approximation,670.0,Barnes Ice Cap,G288059E69709N,0.05,,False,B4,elevation: From https://doi.org/10.1139/e80-124,digitized
+219,76,digitized,69.81379,-72.093185,map approximation,525.0,Barnes Ice Cap,G287718E69797N,0.05,thermal,False,T0975,elevation: From https://doi.org/10.1139/e80-124,digitized
+220,76,digitized,69.80686,-72.10005,map approximation,575.0,Barnes Ice Cap,G287718E69797N,0.05,thermal,False,T091,elevation: From https://doi.org/10.1139/e80-124,digitized
+221,76,digitized,69.79795,-72.110344,map approximation,650.0,Barnes Ice Cap,G287718E69797N,0.05,thermal,False,T081,elevation: From https://doi.org/10.1139/e80-124,digitized
+222,76,digitized,69.78211,-72.12066,map approximation,725.0,Barnes Ice Cap,G287718E69797N,0.05,thermal,False,T061,elevation: From https://doi.org/10.1139/e80-124,digitized
+223,76,digitized,69.74945,-72.154976,map approximation,850.0,Barnes Ice Cap,G287718E69797N,0.05,thermal,False,T020,elevation: From https://doi.org/10.1139/e80-124,digitized
+224,76,digitized,69.78899,-71.9703,map approximation,670.0,Barnes Ice Cap,G287718E69797N,0.05,thermal,False,C4,label: D4 in https://doi.org/10.1139/e80-124 | elevation: From https://doi.org/10.1139/e80-124,digitized
+225,76,digitized,69.71965,-71.89204,map approximation,670.0,Barnes Ice Cap,G288059E69709N,0.05,thermal,True,B4,elevation: From https://doi.org/10.1139/e80-124 | to_bottom: 110 m,digitized
 226,91,digitized,76.4113,-68.2873,map approximation,505.0,Tuto Ramp,G291955E76463N,,,True,D-11,"elevation: From https://doi.org/10.1139/e80-124 | location: From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/blob/main/boreholes/Tuto_D-11/README.org | depth: Ice surface interpreted to be at a depth of 44 feet, above which the thermocouple string was exposed and thus why positive temperatures were measured in the summer. It is unclear why the temperatures above this surface (negative depth) are not all equal, but are assumed to be a result of seasonal snow, air, and partial burial",digitized
 227,78,submitted,71.306,-26.768,map guess,2325.0,Renland Ice Cap,G333444E71216N,,,False,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/Renland88,submitted
 228,78,submitted,78.3897,-80.395,map guess,1600.0,Prince of Wales Ice Cap,G279351E78361N,,,True,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/PrinceWales05,submitted
