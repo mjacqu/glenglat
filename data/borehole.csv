@@ -466,4 +466,10 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 510,161,map approximation,46.17276,7.97295,published,2870,Grubengletscher,G007996E46168N,0.1,thermal,False,5,,published
 511,161,map approximation,46.17426,7.97352,published,2880,Grubengletscher,G007996E46168N,0.1,thermal,False,6,,published
 512,161,map approximation,45.97301,7.78775,published,2600,Grenzgletscher,G007800E45965N,0.2,thermal,False,,,published
-513,162,map approximation,46.56830,8.18595,map approximation,2425,Unteraargletscher,G008187E46569N,,mechanical,False,,location_origin: 'a' on 1842 map by Jean Wild (https://doi.org/10.3931/e-rara-35661),published
+513,162,map approximation,46.56830,8.18595,map approximation,2425,Unteraargletscher,G008187E46569N,,mechanical,False,,location_origin: 'a' on 1842 map by Jean Wild (https://doi.org/10.3931/e-rara-35661),publishe
+514,163,digitized,46.8052,10.7739,published,2800,Hintereisferner,G010752E46802N,,,False,Station 28,,digitized
+515,163,digitized,46.7963,10.7442,published,3150,Hintereisferner,G010752E46802N,0.5,,False,M1,temperature_accuracy: Digitized from 1 °C contours,digitized
+516,163,digitized,46.7915,10.7493,published,3060,Hintereisferner,G010752E46802N,0.5,,False,M2,temperature_accuracy: Digitized from 1 °C contours,digitized
+517,163,digitized,46.7933,10.7592,published,2950,Hintereisferner,G010752E46802N,0.5,,False,M3,temperature_accuracy: Digitized from 1 °C contours,digitized
+518,163,digitized,46.8153,10.7923,published,2610,Hintereisferner,G010752E46802N,0.25,,False,M4,temperature_accuracy: Digitized from contours that are at most 0.5 °C apart,digitized
+519,163,digitized,46.8181,10.7976,published,2550,Hintereisferner,G010752E46802N,0.25,,False,M5,temperature_accuracy: Digitized from contours that are at most 0.5 °C apart,digitized
