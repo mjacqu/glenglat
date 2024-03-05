@@ -466,3 +466,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 510,161,map approximation,46.17276,7.97295,published,2870,Grubengletscher,G007996E46168N,0.1,thermal,False,5,,published
 511,161,map approximation,46.17426,7.97352,published,2880,Grubengletscher,G007996E46168N,0.1,thermal,False,6,,published
 512,161,map approximation,45.97301,7.78775,published,2600,Grenzgletscher,G007800E45965N,0.2,thermal,False,,,published
+513,162,map approximation,46.56830,8.18595,map approximation,2425,Unteraargletscher,G008187E46569N,,mechanical,False,,location_origin: 'a' on 1842 map by Jean Wild (https://doi.org/10.3931/e-rara-35661),published
