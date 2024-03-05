@@ -34,7 +34,7 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `longitude` | Longitude (EPSG 4326). | number | required: True<br>minimum: -180<br>maximum: 180 |
 | `elevation` | Elevation above sea level. | number | required: True<br>maximum: 9999.0 |
 | `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
-| `rgi_id` | Randolph Glacier Inventory (RGI) 6.0 identifier. | string | required: True<br>pattern: `RGI60-\d{2}\.\d{5}` |
+| `glims_id` | Global Land Ice Measurements from Space (GLIMS) glacier identifier. | string | pattern: `G[0-9]{6}E[0-9]{5}[NS]` |
 | `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
 | `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam | string | enum: ['mechanical', 'thermal'] |
 | `to_bottom` | Whether the borehole reached the glacier bed. | boolean |  |

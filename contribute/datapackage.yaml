@@ -53,12 +53,11 @@ resources:
           constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
-        - name: rgi_id
-          description: Randolph Glacier Inventory (RGI) 6.0 identifier.
+        - name: glims_id
+          description: Global Land Ice Measurements from Space (GLIMS) glacier identifier.
           type: string
           constraints:
-            required: true
-            pattern: RGI60-\d{2}\.\d{5}
+            pattern: 'G[0-9]{6}E[0-9]{5}[NS]'
         - name: temperature_accuracy
           description: Thermistor accuracy or precision (as reported). Typically understood
             to represent one standard deviation.
