@@ -49,7 +49,7 @@ contributors:
     role: contributor
 resources:
   - name: source
-    description: Data sources considerd in the compilation of this database.
+    description: Data sources considered in the compilation of this database.
     path: data/source.csv
     format: csv
     dialect:
@@ -69,34 +69,34 @@ resources:
             unique: true
             minimum: 1
         - name: contributor
-          description: Names of people (and their ORCID in parentheses if available) who contributed the data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade'). For data drawn from published studies, these people digitized the data. For data submissions, these people submitted the data.
+          description: Names of people (and their ORCID in parentheses if available) who contributed data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade'). For data sourced from publications, these people extracted the data. For data submissions, these people submitted the data.
           type: string
           contraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: author
-          description: Name of first study author (and their ORCID in parentheses if available) if data is sourced from a publication.
+          description: Publication first author (and their ORCID in parentheses, if available).
           type: string
           constraints:
             required: false
             pattern: '[^\s]+( [^\s]+)*'
         - name: publication_year
-          description: Publication year for data sourced from publications.
+          description: Publication year.
           type: year
           constraints:
             required: false
         - name: title
-          description: Publication title for data sourced from publications.
+          description: Publication title.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: url
-          description: URL (DOI if available) of publication for data sourced from a published study or link to public repository if data is also archived elsewhere.
+          description: Publication URL (DOI if available).
           type: string
           constraints:
             pattern: 'https?:\/\/.+'
         - name: path
-          description: Path (relative to the datapackage root directory) to a folder with files that document how the data was digitized, named as either `sources/{source_id}_{submitter_code}` or `sources/{source_id}_{author_code}{year}` (where `submitter_code` or `author_code` is the submitter or first author's lowercase, romanized, family name). Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Text files with `.pgw` and `.png.aux.xml` georeference `.png` images. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using PlotDigitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}.xml` and internally use `temperature` and `depth` as axis names.
+          description: Path (relative to the datapackage root directory) to a folder with files that document how and from where the data was extracted, named as either `sources/{source_id}_{submitter_code}` or `sources/{source_id}_{author_code}{year}` (where `submitter_code` or `author_code` is the submitter or first author's lowercase, romanized, family name). Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Text files with `.pgw` and `.png.aux.xml` georeference `.png` images. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using Plot Digitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}{prefix}.xml`. Those without a `prefix` use `temperature` and `depth` as axis names. Those with a `prefix` are unusual cases and may contain data for a range of profiles (denoted as `{first_profile_id}-{last_profile_id}`) and/or non-standard axes (e.g. with axes `temperature` and `date`, denoted as `_date`).
           type: string
           constraints:
             pattern: 'sources\/[0-9]+_[a-z-]+([0-9]{4})?'
