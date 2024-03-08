@@ -1,0 +1,67 @@
+{
+  "upload_type": "dataset",
+  "title": "glenglat: Global englacial temperature database",
+  "description": "Measured englacial temperatures digitized from published studies or submitted by the authors.",
+  "keywords": ["glacier", "temperature", "ice", "firn", "borehole", "global"],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Jacquemart, Mylène",
+      "orcid": "0000-0003-2501-7645",
+      "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland"
+    },
+    {
+      "name": "Welty, Ethan",
+      "orcid": "0000-0001-8046-2210",
+      "affiliation": "World Glacier Monitoring Service (WGMS), University of Zurich (UZH), Switzerland"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Carcanade, Guillem",
+      "type": "DataCurator",
+      "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland"
+    },
+    {
+      "name": "Van Tricht, Lander",
+      "orcid": "0000-0001-7619-8955",
+      "type": "DataCurator"
+    },
+    {
+      "name": "Flowers, Gwenn",
+      "orcid": "0000-0002-3574-9324",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Sugiyama, Shin",
+      "orcid": "0000-0001-5323-9558",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Gurung, Tika",
+      "orcid": "0000-0003-4287-6150",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Prinz, Rainer",
+      "orcid": "0000-0003-4032-773X",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Barandun, Martina",
+      "orcid": "0000-0003-1820-7600",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Gagliardini, Olivier",
+      "orcid": "0000-0001-9162-3518",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Thompson, Lonnie G.",
+      "orcid": "0000-0001-5371-2579",
+      "type": "DataCollector"
+    }
+  ]
+}
