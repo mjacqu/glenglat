@@ -1,6 +1,7 @@
 {
   "upload_type": "dataset",
   "title": "glenglat: Global englacial temperature database",
+  "language": "eng",
   "description": "Measured englacial temperatures digitized from published studies or submitted by the authors.",
   "keywords": ["glacier", "temperature", "ice", "firn", "borehole", "global"],
   "access_right": "open",
