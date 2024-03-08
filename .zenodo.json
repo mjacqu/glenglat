@@ -2,7 +2,7 @@
   "upload_type": "dataset",
   "title": "glenglat: Global englacial temperature database",
   "language": "eng",
-  "description": "Measured englacial temperatures digitized from published studies or submitted by the authors.",
+  "description": "<p>Measured englacial temperatures digitized from published studies or submitted by the authors.</p><b>Data structure</b><p>The dataset adheres to the Frictionless Data <a href=\"https://specs.frictionlessdata.io/tabular-data-package\">Tabular Data Package</a> specification. The metadata in <code>datapackage.yaml</code> describes, in detail, the contents of the tabular data files:</p><ul><li><code>data/source.csv</code>: Description of each data source (either a direct contribution or the reference to a published study).</li><li><code>data/borehole.csv</code>: Description of each borehole (location, elevation, etc), linked to <code>source.csv</code> via <code>source_id</code>.</li><li><code>data/profile.csv</code>: Description of each profile (date and time), linked to <code>borehole.csv</code> via <code>borehole_id</code>.</li><li><code>data/measurement.csv</code>: Description of each measurement (depth and temperature), linked to <code>profile.csv</code> via <code>borehole_id</code> and <code>profile_id</code>.</ul>",
   "keywords": ["glacier", "temperature", "ice", "firn", "borehole", "global"],
   "access_right": "open",
   "license": "cc-by-4.0",
