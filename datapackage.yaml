@@ -12,15 +12,41 @@ licenses:
     path: https://creativecommons.org/licenses/by/4.0
 contributors:
   - title: Mylène Jacquemart
-    organization: Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland
+    path: https://orcid.org/0000-0003-2501-7645
+    organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
     email: jacquemart@vaw.baug.ethz.ch
-    role: author
-  - title: Guillem Carcanade
-    organization: Laboratory of Hydraulics, Hydrology, and Glaciology (VAW), ETH Zurich, Switzerland
-    role: author
+    role: author | wrangler
   - title: Ethan Welty
-    organization: World Glacier Monitoring Service (WGMS)
-    role: author
+    path: https://orcid.org/0000-0001-8046-2210
+    organization: World Glacier Monitoring Service (WGMS), University of Zurich (UZH), Switzerland
+    role: author | wrangler
+  - title: Guillem Carcanade
+    organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
+    role: wrangler
+  - title: Lander Van Tricht
+    path: https://orcid.org/0000-0001-7619-8955
+    role: wrangler
+  - title: Gwenn Flowers
+    path: https://orcid.org/0000-0002-3574-9324
+    role: contributor
+  - title: Shin Sugiyama
+    path: https://orcid.org/0000-0001-5323-9558
+    role: contributor
+  - title: Tika Gurung
+    path: https://orcid.org/0000-0003-4287-6150
+    role: contributor
+  - title: Rainer Prinz
+    path: https://orcid.org/0000-0003-4032-773X
+    role: contributor
+  - title: Martina Barandun
+    path: https://orcid.org/0000-0003-1820-7600
+    role: contributor
+  - title: Olivier Gagliardini
+    path: https://orcid.org/0000-0001-9162-3518
+    role: contributor
+  - title: Lonnie G. Thompson
+    path: https://orcid.org/0000-0001-5371-2579
+    role: contributor
 resources:
   - name: source
     description: Data sources considerd in the compilation of this database.
