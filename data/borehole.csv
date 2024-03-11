@@ -473,3 +473,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 517,163,digitized,46.7933,10.7592,published,2950,Hintereisferner,G010752E46802N,0.5,,False,M3,temperature_accuracy: Digitized from 1 °C contours,digitized
 518,163,digitized,46.8153,10.7923,published,2610,Hintereisferner,G010752E46802N,0.25,,False,M4,temperature_accuracy: Digitized from contours that are at most 0.5 °C apart,digitized
 519,163,digitized,46.8181,10.7976,published,2550,Hintereisferner,G010752E46802N,0.25,,False,M5,temperature_accuracy: Digitized from contours that are at most 0.5 °C apart,digitized
+520,164,map approximation,35.213,81.051,published,5700,郭扎冰川 [Guozha Glacier],G081064E35246N,0.1,thermal,False,1,elevation: Inconsistent with the elevation at location in Figure 1 | Drilled on 1987-08-08,published
