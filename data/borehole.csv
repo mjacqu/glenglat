@@ -132,10 +132,10 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 142,41,map guess,28.110,86.626,published,6303.0,加布拉冰川 [Gyabrag Glacier],G086633E28122N,0.05,,,,"location: Coordinates in Table 1 are approximate, so guessed based on name and elevation | Accumulation area",digitized
 143,10,published,45.928193,7.875925,published,4475.0,Grenzgletscher,G007800E45965N,0.05,mechanical,True,b95-1,Accumulation area | location_origin/elevation_origin: Hoelzel 2011 (https://doi.org/10.5194/tc-5-231-2011),digitized
 144,10,published,45.929111,7.873663,published,4448.0,Grenzgletscher,G007800E45965N,0.05,mechanical,True,b95-2,Accumulation area | location_origin/elevation_origin: Hoelzel 2011 (https://doi.org/10.5194/tc-5-231-2011),digitized
-145,153,map guess,35.2217793,81.11527554,published,5800.0,Chongce Ice Cap,G081119E35239N,,,,S0,measurement_origin: Digitized from Figure 1 via the better reproduction as Figure 2 in Huang 1990 (https://doi.org/10.3189/S002214300000945X),digitized
-146,153,map guess,35.2351867,81.11135593,published,5975.0,Chongce Ice Cap,G081119E35239N,,,,S4,,digitized
-147,153,map guess,35.2461911,81.10829374,published,6118.0,Chongce Ice Cap,G081119E35239N,,,,S8,,digitized
-148,153,map guess,35.26191,81.10065704,published,6328.0,Chongce Ice Cap,G081119E35239N,,,,S12,,digitized
+145,164,map approximation,35.2217793,81.11527554,published,5805,崇测冰帽 [Chongce Ice Cap],G081119E35239N,0.1,thermal,False,2,Drilled on 1987-07-17 | label: S0 in Zhou 1990 (https://www.cqvip.com/qk/94252x/199003/312949.html),published
+146,164,map approximation,35.2351867,81.11135593,published,5974,崇测冰帽 [Chongce Ice Cap],G081119E35239N,0.1,thermal,False,3,Drilled on 1987-07-16 | label: S4 in Zhou 1990 (https://www.cqvip.com/qk/94252x/199003/312949.html),published
+147,153,map guess,35.2461911,81.10829374,published,6118,崇测冰帽 [Chongce Ice Cap],G081119E35239N,,,False,S8,measurement_origin: Digitized from Figure 1 via the better reproduction as Figure 2 in Huang 1990 (https://doi.org/10.3189/S002214300000945X),digitized
+148,164,map approximation,35.26191,81.10065704,published,6327,崇测冰帽 [Chongce Ice Cap],G081119E35239N,0.1,mechanical,False,4,Drilled on 1987-08-16 | label: S12 in Zhou 1990 (https://www.cqvip.com/qk/94252x/199003/312949.html),published
 149,46,map approximation,43.1154866,86.81283014,map approximation,3840.0,Urumqi Glacier No. 1,G086810E43111N,0.1,,False,T1,,digitized
 150,46,map approximation,43.1110594,86.80957723,map approximation,3960.0,Urumqi Glacier No. 1,G086810E43111N,0.1,,False,T2,,digitized
 151,46,map approximation,43.1060367,86.80647755,map approximation,4050.0,Urumqi Glacier No. 1,G086810E43111N,0.1,,True,T3,,digitized
@@ -353,9 +353,9 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 396,139,published,28.3833,85.7166,published,7200.0,Dasuopu Glacier,G085752E28395N,,mechanical,True,C3,See Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916) | location: Confirmed by figure 1 in Yao 2002 (https://doi.org/10.3189/172756402781816997) | to_bottom: Bedrock at 167.7 m | Submitted temperature at 10 m (-13.6°C) does not match -16°C published in Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916),submitted
 397,74,map approximation,28.0890,86.9145,published,5710.0,East Rongbuk Glacier,G086939E28060N,,,,BH3,,digitized
 398,118,map approximation,28.01883,86.96125,published,6518.0,East Rongbuk Glacier,G086939E28060N,,mechanical,True,core 2002,to_bottom: Bedrock at 108.83 m | temperature: Minimum measured at 20 m | location: Refined based on figure 1 in Hou 2007 (https://doi.org/10.5194/cp-3-89-2007) | date_min/date_max: From Zhang 2013 (https://doi.org/10.3189/2013JoG12J202),published
-399,119,map approximation,35.2374,81.1286,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,True,Core 1,to_bottom: Bedrock at 133.8 m,digitized
-400,119,map approximation,35.2373,81.1155,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,True,Core 2,to_bottom: Bedrock at 135.8 m,digitized
-401,119,map approximation,35.2359,81.1161,published,6010.0,Chongce Ice Cap,G081119E35239N,,mechanical,False,Core 3,,digitized
+399,119,map approximation,35.2374,81.1286,published,6010.0,崇测冰帽 [Chongce Ice Cap],G081119E35239N,,mechanical,True,Core 1,to_bottom: Bedrock at 133.8 m,digitized
+400,119,map approximation,35.2373,81.1155,published,6010.0,崇测冰帽 [Chongce Ice Cap],G081119E35239N,,mechanical,True,Core 2,to_bottom: Bedrock at 135.8 m,digitized
+401,119,map approximation,35.2359,81.1161,published,6010.0,崇测冰帽 [Chongce Ice Cap],G081119E35239N,,mechanical,False,Core 3,,digitized
 402,120,digitized,27.9187,86.5453,published,5860.0,Trambau Glacier,G086537E27874N,,mechanical,False,,temperature: Measured over two hours (with increasing depth) immediately after drilling | The 10 m depth temperature (-0.82) is significantly warmer than the annual mean temperature (-8.7). Melting and refreezing may have increased the ice temperature at the drilling site,digitized
 403,121,map guess,47.8095,-123.6873,map guess,1675.0,Blue Glacier,G236316E47813N,0.03,thermal,False,R1,Water-filled borehole near the glacier equilibrium line | temperature: Inferred from measured borehole closure rates,digitized
 404,122,digitized,-62.2511,-59.0144,published,90.0,Nelson Island Ice Cap,G301002E62274S,0.1,,False,I,,published
