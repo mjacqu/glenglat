@@ -176,10 +176,10 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 195,63,map approximation,79.6226558,12.42997693,digitized,540.0,Erikbreen,G012478E79621N,0.1,,False,site 9,Digitized as minimum and maximum temperature profiles,digitized
 197,64,map approximation,35.8165362,90.75000214,published,5680.0,Malan Glacier,G090770E35803N,0.01,,False,,,digitized
 198,66,map approximation,38.1051653,96.41680018,published,5325.0,Dunde Ice Cap,G096414E38091N,,,True,,Caption and legend do not agree | Summit region,digitized
-199,115,map approximation,35.2308,81.4657,published,6200.0,Guliya Ice Cap,G081455E35226N,,thermal,True,Site 2,"drill_method: Mechanical to 200 m, thermal beyond | to_bottom: Bedrock at 308.6 m",digitized
-200,67,map approximation,35.2308014,81.46574059,published,6200.0,Guliya Ice Cap,G081455E35226N,,,True,,Plateau region,digitized
-201,115,map approximation,35.2931,81.4916,published,6710.0,Guliya Ice Cap,G081480E35252N,,mechanical,False,Summit,,digitized
-202,67,map approximation,35.2931,81.4916,published,6710.0,Guliya Ice Cap,G081480E35252N,,,True,,Summit region,digitized
+199,115,map approximation,35.2308,81.4657,published,6200.0,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,,thermal,True,Site 2,"drill_method: Mechanical to 200 m, thermal beyond | to_bottom: Bedrock at 308.6 m",digitized
+200,67,map approximation,35.2308014,81.46574059,published,6200.0,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,,,True,,Plateau region,digitized
+201,115,map approximation,35.2931,81.4916,published,6710.0,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,,mechanical,False,Summit,,digitized
+202,67,map approximation,35.2931,81.4916,published,6710.0,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,,,True,,Summit region,digitized
 206,69,map approximation,45.8417942,6.846642185,published,4250.0,Glacier des Bossons,G006865E45868N,0.05,,True,,Col du Dôme | Summit region,digitized
 207,70,published,33.212778,91.154167,published,5800.0,Geladandong Ice Cap,G091151E33199N,0.05,,False,,Geothermal hotspot suspected under drill site,digitized
 208,71,map approximation,39.4783238,96.53493886,published,4550.0,Laohugou Glacier,G096524E39457N,0.05,,False,Site 1,,digitized
@@ -347,7 +347,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 390,113,map approximation,43.1087,86.8082,published,3975.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,0.1,thermal,False,F2',Only deepest temperature reported,published
 391,113,map approximation,43.1084,86.8092,published,3973.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,0.1,thermal,False,F3',Only deepest temperature reported,published
 392,114,map approximation,43.1059,86.8067,published,4050.0,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,,mechanical,True,H1,depth: Includes 3 m of snow and firn,digitized
-393,115,map approximation,35.2219,81.4891,published,6040.0,Guliya Ice Cap,G081480E35252N,,mechanical,False,Site 1,,digitized
+393,115,map approximation,35.2219,81.4891,published,6040.0,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,,mechanical,False,Site 1,,digitized
 394,116,digitized,33.91203,89.11842,published,5961.0,Puruogangri Ice Cap,G089122E33894N,,mechanical,True,C1 | Dome B,location: From figure 1 in Liu 2016 (https://doi.org/10.3390/w8110496). May be swapped with C2 | to_bottom: Bedrock at 118.4 m | depth: Relative to ice surface (no firn present),digitized
 395,116,digitized,33.92259,89.12193,published,5980.0,Puruogangri Ice Cap,G089122E33894N,,mechanical,False,C2 | Dome A,location: From figure 1 in Liu 2016 (https://doi.org/10.3390/w8110496). May be swapped with C1 | depth: Relative to ice surface (no firn present),digitized
 396,139,published,28.3833,85.7166,published,7200.0,Dasuopu Glacier,G085752E28395N,,mechanical,True,C3,See Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916) | location: Confirmed by figure 1 in Yao 2002 (https://doi.org/10.3189/172756402781816997) | to_bottom: Bedrock at 167.7 m | Submitted temperature at 10 m (-13.6°C) does not match -16°C published in Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916),submitted
@@ -474,3 +474,5 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 518,163,digitized,46.8153,10.7923,published,2610,Hintereisferner,G010752E46802N,0.25,,False,M4,temperature_accuracy: Digitized from contours that are at most 0.5 °C apart,digitized
 519,163,digitized,46.8181,10.7976,published,2550,Hintereisferner,G010752E46802N,0.25,,False,M5,temperature_accuracy: Digitized from contours that are at most 0.5 °C apart,digitized
 520,164,map approximation,35.213,81.051,published,5700,郭扎冰川 [Guozha Glacier],G081064E35246N,0.1,thermal,False,1,elevation: Inconsistent with the elevation at location in Figure 1 | Drilled on 1987-08-08,published
+521,115,map approximation,35.2308,81.4657,published,6180,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,0.01,mechanical,False,,Site 2 shallow core in Thompson 1995 (https://doi.org/10.3189/S0260305500015780) | location_origin: At the same location as borehole 199,published
+522,115,map approximation,35.2931,81.4916,published,6700,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,0.01,mechanical,False,,Summit shallow core in Thompson 1995 (https://doi.org/10.3189/S0260305500015780) | location_origin: At the same location as borehole 201,published
