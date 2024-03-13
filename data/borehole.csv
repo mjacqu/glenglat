@@ -489,3 +489,4 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 533,169,map approximation,28.2343,85.6128,published,5180,Yala Glacier,G085612E28242N,,mechanical,True,81B,Ablation area | to_bottom: Bedrock at 30 m | measurement_origin: Text in Iida 1984 (https://web.seppyo.org/bgr/pdf/2/BGR2P25.PDF),published
 534,169,map approximation,28.2346,85.6217,published,5405,Yala Glacier,G085612E28242N,,mechanical,True,82B,Accumulation area | to_bottom: Bedrock at 60 m | depth: Firn-ice boundary at 17 m,published
 535,170,map approximation,61.67931,7.03945,published,1960,Nigardsbreen,G007099E61715N,,,True,,to_bottom: Bedrock at 46.9 m,digitized
+536,171,map approximation,-46.9243,-73.3225,published,1500,Glaciar Nef,G286668E46885S,0.1,mechanical,False,,Accumulation area | depth: Snow and firn (ice at 13 m) | measurement_origin: Boundaries of wet (0 °C) and frozen (-0.1 °C) snow/firn in Figure 4,published
