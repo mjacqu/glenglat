@@ -486,3 +486,5 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 530,168,digitized,41.758644,79.886154,published,3950,Qingbingtan Glacier No. 72,G079894E41774N,0.1,thermal,False,T1,bare ice | Drilled end of July 2008,digitized
 531,168,digitized,41.773857,79.889114,published,4200,Qingbingtan Glacier No. 72,G079894E41774N,0.1,thermal,False,T2,bare ice | Drilled end of July 2008,digitized
 532,168,digitized,41.758575,79.88738,published,3950,Qingbingtan Glacier No. 72,G079894E41774N,0.1,thermal,False,T3,Ice covered by 13 cm debris (unclear whether this is included in the depth) | Drilled end of July 2008,digitized
+533,169,map approximation,28.2343,85.6128,published,5180,Yala Glacier,G085612E28242N,,mechanical,True,81B,Ablation area | to_bottom: Bedrock at 30 m | measurement_origin: Text in Iida 1984 (https://web.seppyo.org/bgr/pdf/2/BGR2P25.PDF),published
+534,169,map approximation,28.2346,85.6217,published,5405,Yala Glacier,G085612E28242N,,mechanical,True,82B,Accumulation area | to_bottom: Bedrock at 60 m | depth: Firn-ice boundary at 17 m,published
