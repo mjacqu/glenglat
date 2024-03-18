@@ -116,7 +116,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 126,98,published,79.2833,16.8333,published,1200.0,Høghetta,G016639E79309N,,,True,,,digitized
 127,101,published,79.1361,13.2917,published,1190.0,Snøfjellafonna,G013542E78988N,0.07,mechanical,False,Site A,Transition from firn layers to ice at 30 m depth,digitized
 128,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,G017048E79443N,0.08,mechanical,False,JAGE '93 site 1,,digitized
-129,174,published,79.45,95.35,published,665.0,Леднике Вавилова [Vavilov Glacier],G095294E79482N,0.03,thermal,True,,Drilled in December 1978 | to_bottom: Bed at 460 m | location_origin/elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013),published
+129,174,published,79.45,95.35,published,665,Ледник Вавилова [Vavilov Glacier],G095294E79482N,0.03,thermal,True,,Drilled in December 1978 | to_bottom: Bed at 460 m | location_origin/elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013),published
 130,39,published,79.5,95.08,published,720.0,Vavilova Ice Dome,G095294E79482N,0.1,,,Measurement #2,elevation: Assumed same as borehole 131,digitized
 131,39,published,79.32,96.02,published,720.0,Vavilova Ice Dome,G096481E79287N,0.1,,,Measurement #4,,digitized
 132,39,published,79.38,95.72,published,680.0,Vavilova Ice Dome,G095612E79448N,0.1,,,Measurement #5,,digitized
@@ -224,7 +224,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 248,83,submitted,28.810133,83.495183,submitted,5617.0,Rikha Samba Glacier,G083488E28819N,,,False,Thermistor242,Ablation area,submitted
 249,84,submitted,76.9200850837,-66.9525292024,submitted,691.0,Nunatarssuaq Ice Cap,G292408E76864N,,,False,,Cooling and settling of temperatures after insertion of the sensors not excluded from dataset | Upper sensors affected by radiative heating | Supporting information in Abermann 2020 (https://doi.org/10.1017/jog.2020.28) | Near an automatic weather station | Measured with PT940 resistance temperature probes on Pace Scientific XR440 data loggers,submitted
 250,84,submitted,76.9199105512,-66.9524665356,submitted,686.0,Nunatarssuaq Ice Cap,G292408E76864N,,,False,,Cooling and settling of temperatures after insertion of the sensors not excluded from dataset | Upper sensors affected by radiative heating | Supporting information in Abermann 2020 (https://doi.org/10.1017/jog.2020.28) | ~20 m back from a dry-calving ice cliff | Measured with PT940 resistance temperature probes on Pace Scientific XR440 data loggers,submitted
-251,17,map approximation,79.440048,95.382408,published,650.0,Vavilov Ice Cap,G095612E79448N,,,False,Vavilov Station,Accumulation area,digitized
+251,174,published,79.45,95.35,published,665,Ледник Вавилова [Vavilov Glacier],G095294E79482N,,thermal,False,,Accumulation area | Drilled in October 1978 | Total depth 80 m | location_origin/elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013),digitized
 260,2,map approximation,79.53638,-91.03409,published,1536.0,White Glacier,G269329E79672N,0.2,,False,,Accumulation area,digitized
 261,2,map approximation,79.52397,-90.96165,map guess,1310.0,White Glacier,G269329E79672N,0.2,,False,,Accumulation area,digitized
 262,2,map approximation,79.51597,-90.89401,published,1172.0,White Glacier,G269329E79672N,0.2,,False,,Accumulation area,digitized
