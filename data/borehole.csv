@@ -116,7 +116,7 @@ id,source_id,location_origin,latitude,longitude,elevation_origin,elevation,glaci
 126,98,published,79.2833,16.8333,published,1200.0,Høghetta,G016639E79309N,,,True,,,digitized
 127,101,published,79.1361,13.2917,published,1190.0,Snøfjellafonna,G013542E78988N,0.07,mechanical,False,Site A,Transition from firn layers to ice at 30 m depth,digitized
 128,97,published,79.443889,16.710833,published,1140.0,Åsgårdfonna,G017048E79443N,0.08,mechanical,False,JAGE '93 site 1,,digitized
-129,39,published,79.45,95.35,published,665.0,Vavilova Ice Dome,G095294E79482N,0.1,,,Measurement #1,,digitized
+129,174,published,79.45,95.35,published,665.0,Леднике Вавилова [Vavilov Glacier],G095294E79482N,0.03,thermal,True,,Drilled in December 1978 | to_bottom: Bed at 460 m | location_origin/elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013),published
 130,39,published,79.5,95.08,published,720.0,Vavilova Ice Dome,G095294E79482N,0.1,,,Measurement #2,elevation: Assumed same as borehole 131,digitized
 131,39,published,79.32,96.02,published,720.0,Vavilova Ice Dome,G096481E79287N,0.1,,,Measurement #4,,digitized
 132,39,published,79.38,95.72,published,680.0,Vavilova Ice Dome,G095612E79448N,0.1,,,Measurement #5,,digitized
