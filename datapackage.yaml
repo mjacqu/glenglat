@@ -128,6 +128,17 @@ resources:
           constraints:
             required: true
             unique: false
+        - name: glacier_name
+          description: Glacier or ice cap name (as reported).
+          type: string
+          constraints:
+            required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: glims_id
+          description: Global Land Ice Measurements from Space (GLIMS) glacier identifier.
+          type: string
+          constraints:
+            pattern: 'G[0-9]{6}E[0-9]{5}[NS]'
         - name: location_origin
           description: |-
             Origin of location (`latitude`, `longitude`):
@@ -177,44 +188,40 @@ resources:
           constraints:
             required: true
             maximum: 9999.0
-        - name: glacier_name
-          description: Glacier or ice cap name (as reported).
+        - name: label
+          description: Borehole name (e.g. as labeled on a plot).
           type: string
-          constraints:
-            required: true
-            pattern: '[^\s]+( [^\s]+)*'
-        - name: glims_id
-          description: Global Land Ice Measurements from Space (GLIMS) glacier identifier.
-          type: string
-          constraints:
-            pattern: 'G[0-9]{6}E[0-9]{5}[NS]'
-        - name: temperature_accuracy
-          description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
-          type: number
-          unit: °C
+        - name: date_min
+          description: Drilling date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
+          type: date
+          format: '%Y-%m-%d'
+        - name: date_max
+          description: Drilling date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
+          type: date
+          format: '%Y-%m-%d'
         - name: drill_method
           description: |-
             Drilling method:
 
             - mechanical
             - thermal: Hot water or steam
+            - combined: Mechanical and thermal
           type: string
           constraints:
-            enum: [mechanical, thermal]
-        - name: to_bottom
+            enum: [mechanical, thermal, combined]
+        - name: ice_depth
+          description: Starting depth of ice. Infinity (INF) indicates that ice was not reached.
+          type: number
+          unit: m
+        - name: depth
+          description: Total borehole depth.
+          type: number
+          unit: m
+        - name: to_bed
           description: Whether the borehole reached the glacier bed.
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
-        - name: label
-          description: Borehole name (e.g. as labeled on a plot).
-          type: string
-        - name: notes
-          description: |-
-            Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`.
-          type: string
-          constraints:
-            pattern: '[^\s]+( [^\s]+)*'
         - name: measurement_origin
           description: |-
             Origin of measurements (`measurement.depth`, `measurement.temperature`):
@@ -226,6 +233,16 @@ resources:
           constraints:
             required: true
             enum: [submitted, published, digitized]
+        - name: temperature_accuracy
+          description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
+          type: number
+          unit: °C
+        - name: notes
+          description: |-
+            Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
       missingValues: ['']
       primaryKey: [id]
       foreignKeys:
