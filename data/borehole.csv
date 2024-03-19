@@ -162,7 +162,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 177,58,Grenzgletscher,G007800E45965N,published,45.965263,7.800062,published,2522.0,f1,,,,,,False,digitized,0.05,Ablation area
 178,58,Grenzgletscher,G007800E45965N,published,45.965586,7.797343,published,2514.0,f3,,,,,,False,digitized,0.05,Ablation area
 179,59,Pio XI glacier,G286372E49263S,published,-49.278195,-73.3535648,published,2600.0,,,,,,,False,digitized,,Accumulation area
-180,60,Blichenok glacier,G160474E56097N,digitized,56.07338,160.4685,map approximation,3870.0,BH1,,,,,,False,digitized,0.1,Yearly average
+180,60,Blichenok glacier,G160474E56097N,digitized,56.07338,160.4685,map approximation,3870.0,BH1,,,,,,False,digitized,0.1,measurement_origin: Monthly profiles are difficult to differentiate in Figure 4 and may be slightly incorrect below 5 m depth
 181,60,Blichenok glacier,G160474E56097N,digitized,56.074062,160.4679,map approximation,3870.0,K2,,,,,,False,digitized,0.1,
 182,61,Glacier du Sex Rouge,G007212E46327N,published,46.326569,7.212807,published,2810.0,#1,,,,,,False,digitized,,
 183,61,Glacier du Sex Rouge,G007212E46327N,published,46.327953,7.212463,published,2780.0,#2,,,,,,False,digitized,,
