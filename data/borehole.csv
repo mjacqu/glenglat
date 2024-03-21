@@ -168,7 +168,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 183,61,Glacier du Sex Rouge,G007212E46327N,published,46.327953,7.212463,published,2780.0,#2,,,,,,False,digitized,,
 184,61,St. Annafirn,G008601E46597N,published,46.596277,8.598254,published,2855.0,#6,,,,,,False,published,,
 185,61,St. Annafirn,G008601E46597N,published,46.600537,8.601335,published,2650.0,#9,,,,,,False,published,,
-186,62,Irenebreen,G012138E78665N,map approximation,78.67358,12.13132,published,420.0,,,,,,,False,digitized,0.2,Annual mean
+186,62,Irenebreen,G012138E78665N,map approximation,78.67358,12.13132,published,420.0,,,,,,,False,digitized,0.2,
 187,63,Erikbreen,G012478E79621N,map approximation,79.5945013,12.56989669,digitized,25.0,site 1,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
 189,63,Erikbreen,G012478E79621N,map approximation,79.5985643,12.60153683,digitized,25.0,site 2,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
 191,63,Erikbreen,G012478E79621N,map approximation,79.5995375,12.58114652,digitized,70.0,site 3,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
