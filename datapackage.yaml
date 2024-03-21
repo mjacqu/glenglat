@@ -214,7 +214,7 @@ resources:
           type: number
           unit: m
         - name: depth
-          description: Total borehole depth.
+          description: Total borehole depth (not including drilling in the underlying bed).
           type: number
           unit: m
         - name: to_bed
