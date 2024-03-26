@@ -29,17 +29,21 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 
 | name | description | type | constraints |
 | - | - | - | - |
-| `id` | Unique identifier. | integer | required: True<br>unique: True |
+| `id` | Unique identifier. | integer | required: True<br>unique: True<br>minimum: 1 |
+| `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
+| `glims_id` | Global Land Ice Measurements from Space (GLIMS) glacier identifier. | string | pattern: `G[0-9]{6}E[0-9]{5}[NS]` |
 | `latitude` | Latitude (EPSG 4326). | number | required: True<br>minimum: -90<br>maximum: 90 |
 | `longitude` | Longitude (EPSG 4326). | number | required: True<br>minimum: -180<br>maximum: 180 |
 | `elevation` | Elevation above sea level. | number | required: True<br>maximum: 9999.0 |
-| `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
-| `glims_id` | Global Land Ice Measurements from Space (GLIMS) glacier identifier. | string | pattern: `G[0-9]{6}E[0-9]{5}[NS]` |
-| `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
-| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam | string | enum: ['mechanical', 'thermal'] |
-| `to_bottom` | Whether the borehole reached the glacier bed. | boolean |  |
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
-| `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `author ({year}): {title} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
+| `date_min` | Drilling date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
+| `date_max` | Drilling date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date |  |
+| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
+| `ice_depth` | Starting depth of ice. Infinity (`INF`) indicates that ice was not reached. | number |  |
+| `depth` | Total borehole depth (not including drilling in the underlying bed). | number |  |
+| `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
+| `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
+| `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`
 
@@ -48,7 +52,7 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `borehole_id` | Borehole identifier. | integer | required: True |
 | `depth` | Depth below the glacier surface. | number | required: True |
 | `temperature` | Temperature. | number | required: True |
-| `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date | required: True |
+| `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
 | `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date | required: True |
 | `time` | Measurement time.<br>`%H:%M:%S` | time |  |
 | `utc` | Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False). | boolean |  |
