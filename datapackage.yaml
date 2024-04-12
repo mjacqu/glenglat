@@ -146,12 +146,12 @@ resources:
             - submitted: Provided in data submission
             - published: Reported as coordinates in original publication
             - digitized: Digitized from published map with complete axes
-            - map approximation: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
-            - map guess: Estimated with difficulty, for example by comparing `elevation` to a map (e.g. Google Maps, CalTopo)
+            - estimated: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
+            - guessed: Estimated with difficulty, for example by comparing `elevation` to a map (e.g. Google Maps, CalTopo)
           type: string
           constraints:
             required: true
-            enum: [submitted, published, digitized, map approximation, map guess]
+            enum: [submitted, published, digitized, estimated, guessed]
         - name: latitude
           description: Latitude (EPSG 4326).
           type: number
@@ -175,12 +175,12 @@ resources:
             - submitted: Provided in data submission
             - published: Reported as number in original publication
             - digitized: Digitized from published plot with complete axes
-            - map approximation: Estimated from elevation contours in published map
-            - map guess: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
+            - estimated: Estimated from elevation contours in published map
+            - guessed: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
           type: string
           constraints:
             required: true
-            enum: [submitted, published, digitized, map approximation, map guess]
+            enum: [submitted, published, digitized, estimated, guessed]
         - name: elevation
           description: Elevation above sea level.
           type: number

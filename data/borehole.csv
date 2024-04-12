@@ -1,10 +1,10 @@
 id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_origin,elevation,label,date_min,date_max,drill_method,ice_depth,depth,to_bed,measurement_origin,temperature_accuracy,notes
-1,1,Grenzgletscher,G007908E45948N,map approximation,45.93062,7.875403,published,4450.0,,,,,,,False,digitized,,14 km from terminus | Colle Gnifetti
-2,1,Grenzgletscher,G007800E45965N,map approximation,45.973065,7.802684,published,2600.0,,,,,,,False,digitized,,5 km from terminus | Ablation area
-3,1,Grenzgletscher,G007800E45965N,map approximation,45.974053,7.774972,published,2500.0,,,,,,,False,digitized,,2 km from terminus | Ablation area
-4,2,White Glacier,G269329E79672N,map approximation,79.531432,-91.014641,published,1447.0,,,,,,,False,digitized,0.2,Accumulation area
-5,2,White Glacier,G269329E79672N,map approximation,79.474711,-90.756867,published,625.0,,,,,,,True,digitized,0.2,Ablation area
-6,2,White Glacier,G269329E79672N,map approximation,79.440386,-90.645269,published,230.0,,,,,,,True,digitized,0.2,Ablation area
+1,1,Grenzgletscher,G007908E45948N,estimated,45.93062,7.875403,published,4450.0,,,,,,,False,digitized,,14 km from terminus | Colle Gnifetti
+2,1,Grenzgletscher,G007800E45965N,estimated,45.973065,7.802684,published,2600.0,,,,,,,False,digitized,,5 km from terminus | Ablation area
+3,1,Grenzgletscher,G007800E45965N,estimated,45.974053,7.774972,published,2500.0,,,,,,,False,digitized,,2 km from terminus | Ablation area
+4,2,White Glacier,G269329E79672N,estimated,79.531432,-91.014641,published,1447.0,,,,,,,False,digitized,0.2,Accumulation area
+5,2,White Glacier,G269329E79672N,estimated,79.474711,-90.756867,published,625.0,,,,,,,True,digitized,0.2,Ablation area
+6,2,White Glacier,G269329E79672N,estimated,79.440386,-90.645269,published,230.0,,,,,,,True,digitized,0.2,Ablation area
 7,5,Illimani Volcano,G292220E16653S,published,-16.65,-67.783333,published,6340.0,,,,mechanical,,,True,digitized,0.05,Summit region
 8,6,Glacier des Bossons,G006844E45863N,published,45.842712,6.843715,published,4300.0,,,,,,,True,digitized,0.1,Dôme du Goûter | Summit region
 9,6,Glacier des Bossons,G006844E45863N,published,45.842712,6.843715,published,4300.0,,,,,,,False,digitized,0.1,Dôme du Goûter | Summit region
@@ -18,42 +18,42 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 17,8,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250.0,GG91-D,,,thermal,,,False,digitized,0.2,Accumulation area
 18,8,Grenzgletscher,G007800E45965N,published,45.923969,7.870477,published,4250.0,GG99-12,,,thermal,,,False,digitized,0.2,Accumulation area
 19,8,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250.0,GG08-5/08,,,thermal,,,False,digitized,0.2,Accumulation area
-20,12,Athabasca Glacier,G242719E52168N,map approximation,52.20682,-117.23517,published,2065.0,Hole N,,,,,,False,digitized,,Ablation area
-21,12,Athabasca Glacier,G242719E52168N,map approximation,52.18602,-117.26113,published,2275.0,Hole D,,,,,,False,digitized,,Ablation area
-22,12,Athabasca Glacier,G242719E52168N,map approximation,52.19837,-117.24919,published,2170.0,Hole L,,,,,,False,digitized,,Ablation area
-23,12,Athabasca Glacier,G242719E52168N,map approximation,52.17594,-117.30924,published,3200.0,Hole A,,,,,,False,published,,Accumulation area
-24,12,Athabasca Glacier,G242719E52168N,map approximation,52.16331,-117.30632,published,2910.0,Hole B,,,,,,False,published,,Accumulation area
-25,12,Athabasca Glacier,G242719E52168N,map approximation,52.1631,-117.28074,published,2730.0,Hole C,,,,,,False,published,,Accumulation area
-26,12,Athabasca Glacier,G242719E52168N,map approximation,52.1885,-117.25327,published,2235.0,Hole E,,,,0,,False,digitized,,Ablation area
-27,12,Athabasca Glacier,G242719E52168N,map approximation,52.19224,-117.25808,published,2230.0,Hole H,,,,0,,False,digitized,,Ablation area
-28,12,Athabasca Glacier,G242719E52168N,map approximation,52.20112,-117.24085,published,2115.0,Hole M,,,,0,,False,digitized,,Ablation area
-29,13,Seward Glacier,G219787E60289N,map approximation,60.369155,-139.961054,published,1791.0,,,,,INF,,False,digitized,0.1,Accumulation area
-30,15,Jungfraufirn,G008032E46504N,map approximation,46.537614,7.971254,published,3540.0,bh 91-3,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area
-31,15,Jungfraufirn,G008032E46504N,map approximation,46.541514,7.978183,published,3410.0,bh 91-2,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area
-32,15,Jungfraufirn,G008032E46504N,map approximation,46.549684,8.002083,published,3530.0,bh 91-5,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area
-33,15,Grenzgletscher,G007908E45948N,map approximation,45.93033,7.876756,published,4452.0,bh 91-1,,,,,,False,digitized,0.1,Accumulation area
-34,15,Grenzgletscher,G007800E45965N,map approximation,45.923589,7.871769,published,4300.0,bh 94-1,,,,,,False,digitized,0.1,Accumulation area
-35,15,Grenzgletscher,G007800E45965N,map approximation,45.924076,7.862049,published,4100.0,bh 94-2,,,,,,False,digitized,0.1,Accumulation area
-36,15,Grenzgletscher,G007800E45965N,map approximation,45.922507,7.866534,published,4200.0,bh 94-A,,,,,,False,digitized,0.1,Accumulation area
-40,18,Kongsvegen,G013044E78792N,map approximation,78.811214,12.881844,published,367.0,bh K1,,,,,,False,digitized,,Ablation area
-41,18,Kongsvegen,G013044E78792N,map approximation,78.759108,13.335258,published,635.0,bh K2,,,,,,True,digitized,,Accumulation area
-42,18,Midtre Lovenbreen,G012039E78878N,map approximation,78.8878,12.04861,published,180.0,bh L3,,,,,,True,digitized,,Ablation area
-43,18,Midtre Lovenbreen,G012039E78878N,map approximation,78.87204,11.99866,published,380.0,bh L9,,,,,,True,digitized,,Accumulation area
-44,18,Austre Broggerbreen,G011895E78886N,map approximation,78.8955,11.83762,published,175.0,bh B5,,,,,,True,digitized,,Ablation area
-45,18,Austre Broggerbreen,G011895E78886N,map approximation,78.88008,11.92096,published,375.0,bh B11,,,,,,True,digitized,,Accumulation area
-46,19,Laika Ice Cap,G280856E75887N,map approximation,75.897934,-79.111864,published,80.0,X1,,,,,,False,digitized,,Ablation area
-47,19,Laika Ice Cap,G280856E75887N,map approximation,75.89683,-79.129082,published,202.0,X2,,,,,,True,digitized,,Ablation area
-48,19,Laika Ice Cap,G280856E75887N,map approximation,75.8952763,-79.1444562,published,315.0,X3,,,,,,False,digitized,,Around ELA
-49,19,Laika Ice Cap,G280856E75887N,map approximation,75.889619,-79.1632871,published,390.0,X4,,,,,,False,digitized,,Accumulation area
-50,19,Laika Ice Cap,G280856E75887N,map approximation,75.8817165,-79.1801472,published,527.0,X5,,,,,,False,digitized,,Accumulation area
-51,21,Trapridge Glacier,G219646E61222N,map guess,61.22458,-140.32565,map guess,2220.0,#3,,,,,,True,digitized,0.02,Below surge bulge
-52,21,Trapridge Glacier,G219646E61222N,map guess,61.22435,-140.32904,map guess,2320.0,#6,,,,,,True,digitized,0.02,At surge bulge
-53,21,Trapridge Glacier,G219646E61222N,map guess,61.22416,-140.33217,map guess,2420.0,#9,,,,,,True,digitized,0.02,Above surge bulge
-54,21,Trapridge Glacier,G219646E61222N,map guess,61.22379,-140.33531,map guess,2500.0,#11,,,,,,True,digitized,0.02,Above surge bulge
-55,23,John Evans Glacier,G285646E79663N,map approximation,79.7072458,-74.5266339,published,1100.0,#1,,,,,,False,published,,Accumulation area
-56,23,John Evans Glacier,G285646E79663N,map approximation,79.6860756,-74.4592733,published,975.0,#4,,,,,,False,published,,Accumulation area
-57,23,John Evans Glacier,G285646E79663N,map approximation,79.6800437,-74.4332913,published,900.0,#6,,,,,,False,published,,Accumulation area
-58,23,John Evans Glacier,G285646E79663N,map approximation,79.6482756,-74.2047463,published,575.0,#10,,,,,,False,published,,Ablation area
+20,12,Athabasca Glacier,G242719E52168N,estimated,52.20682,-117.23517,published,2065.0,Hole N,,,,,,False,digitized,,Ablation area
+21,12,Athabasca Glacier,G242719E52168N,estimated,52.18602,-117.26113,published,2275.0,Hole D,,,,,,False,digitized,,Ablation area
+22,12,Athabasca Glacier,G242719E52168N,estimated,52.19837,-117.24919,published,2170.0,Hole L,,,,,,False,digitized,,Ablation area
+23,12,Athabasca Glacier,G242719E52168N,estimated,52.17594,-117.30924,published,3200.0,Hole A,,,,,,False,published,,Accumulation area
+24,12,Athabasca Glacier,G242719E52168N,estimated,52.16331,-117.30632,published,2910.0,Hole B,,,,,,False,published,,Accumulation area
+25,12,Athabasca Glacier,G242719E52168N,estimated,52.1631,-117.28074,published,2730.0,Hole C,,,,,,False,published,,Accumulation area
+26,12,Athabasca Glacier,G242719E52168N,estimated,52.1885,-117.25327,published,2235.0,Hole E,,,,0,,False,digitized,,Ablation area
+27,12,Athabasca Glacier,G242719E52168N,estimated,52.19224,-117.25808,published,2230.0,Hole H,,,,0,,False,digitized,,Ablation area
+28,12,Athabasca Glacier,G242719E52168N,estimated,52.20112,-117.24085,published,2115.0,Hole M,,,,0,,False,digitized,,Ablation area
+29,13,Seward Glacier,G219787E60289N,estimated,60.369155,-139.961054,published,1791.0,,,,,INF,,False,digitized,0.1,Accumulation area
+30,15,Jungfraufirn,G008032E46504N,estimated,46.537614,7.971254,published,3540.0,bh 91-3,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area
+31,15,Jungfraufirn,G008032E46504N,estimated,46.541514,7.978183,published,3410.0,bh 91-2,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area
+32,15,Jungfraufirn,G008032E46504N,estimated,46.549684,8.002083,published,3530.0,bh 91-5,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area
+33,15,Grenzgletscher,G007908E45948N,estimated,45.93033,7.876756,published,4452.0,bh 91-1,,,,,,False,digitized,0.1,Accumulation area
+34,15,Grenzgletscher,G007800E45965N,estimated,45.923589,7.871769,published,4300.0,bh 94-1,,,,,,False,digitized,0.1,Accumulation area
+35,15,Grenzgletscher,G007800E45965N,estimated,45.924076,7.862049,published,4100.0,bh 94-2,,,,,,False,digitized,0.1,Accumulation area
+36,15,Grenzgletscher,G007800E45965N,estimated,45.922507,7.866534,published,4200.0,bh 94-A,,,,,,False,digitized,0.1,Accumulation area
+40,18,Kongsvegen,G013044E78792N,estimated,78.811214,12.881844,published,367.0,bh K1,,,,,,False,digitized,,Ablation area
+41,18,Kongsvegen,G013044E78792N,estimated,78.759108,13.335258,published,635.0,bh K2,,,,,,True,digitized,,Accumulation area
+42,18,Midtre Lovenbreen,G012039E78878N,estimated,78.8878,12.04861,published,180.0,bh L3,,,,,,True,digitized,,Ablation area
+43,18,Midtre Lovenbreen,G012039E78878N,estimated,78.87204,11.99866,published,380.0,bh L9,,,,,,True,digitized,,Accumulation area
+44,18,Austre Broggerbreen,G011895E78886N,estimated,78.8955,11.83762,published,175.0,bh B5,,,,,,True,digitized,,Ablation area
+45,18,Austre Broggerbreen,G011895E78886N,estimated,78.88008,11.92096,published,375.0,bh B11,,,,,,True,digitized,,Accumulation area
+46,19,Laika Ice Cap,G280856E75887N,estimated,75.897934,-79.111864,published,80.0,X1,,,,,,False,digitized,,Ablation area
+47,19,Laika Ice Cap,G280856E75887N,estimated,75.89683,-79.129082,published,202.0,X2,,,,,,True,digitized,,Ablation area
+48,19,Laika Ice Cap,G280856E75887N,estimated,75.8952763,-79.1444562,published,315.0,X3,,,,,,False,digitized,,Around ELA
+49,19,Laika Ice Cap,G280856E75887N,estimated,75.889619,-79.1632871,published,390.0,X4,,,,,,False,digitized,,Accumulation area
+50,19,Laika Ice Cap,G280856E75887N,estimated,75.8817165,-79.1801472,published,527.0,X5,,,,,,False,digitized,,Accumulation area
+51,21,Trapridge Glacier,G219646E61222N,guessed,61.22458,-140.32565,guessed,2220.0,#3,,,,,,True,digitized,0.02,Below surge bulge
+52,21,Trapridge Glacier,G219646E61222N,guessed,61.22435,-140.32904,guessed,2320.0,#6,,,,,,True,digitized,0.02,At surge bulge
+53,21,Trapridge Glacier,G219646E61222N,guessed,61.22416,-140.33217,guessed,2420.0,#9,,,,,,True,digitized,0.02,Above surge bulge
+54,21,Trapridge Glacier,G219646E61222N,guessed,61.22379,-140.33531,guessed,2500.0,#11,,,,,,True,digitized,0.02,Above surge bulge
+55,23,John Evans Glacier,G285646E79663N,estimated,79.7072458,-74.5266339,published,1100.0,#1,,,,,,False,published,,Accumulation area
+56,23,John Evans Glacier,G285646E79663N,estimated,79.6860756,-74.4592733,published,975.0,#4,,,,,,False,published,,Accumulation area
+57,23,John Evans Glacier,G285646E79663N,estimated,79.6800437,-74.4332913,published,900.0,#6,,,,,,False,published,,Accumulation area
+58,23,John Evans Glacier,G285646E79663N,estimated,79.6482756,-74.2047463,published,575.0,#10,,,,,,False,published,,Ablation area
 59,24,McCall Glacier,G216152E69302N,digitized,69.315327,-143.853423,published,1750.0,JJMC,,,,,,True,digitized,,Ablation area
 60,24,McCall Glacier,G216152E69302N,digitized,69.283255,-143.831748,published,2100.0,LC,,,,,,True,digitized,,Accumulation area
 61,24,McCall Glacier,G216152E69302N,digitized,69.295288,-143.790144,published,2400.0,UC,,,,,,True,digitized,,Accumulation area
@@ -66,19 +66,19 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 68,131,Glacier de Tête Rousse,G006819E45856N,submitted,45.8561983,6.820000228,submitted,3177.15,5,,,,,,False,submitted,0.1,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 5 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08
 69,131,Glacier de Tête Rousse,G006819E45856N,submitted,45.85600995,6.820386764,submitted,3182.034,10,,,,,,True,submitted,0.1,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 6 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08
 70,131,Glacier de Tête Rousse,G006819E45856N,submitted,45.85604917,6.821582267,submitted,3206.436,17,,,,,,True,submitted,0.1,See Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | label: 7 in Gilbert 2012 (https://doi.org/10.1029/2011JF002258) | elevation: Measured 2010-07-08
-71,27,Taconnaz Glacier,G006844E45863N,map approximation,45.8578979,6.840015556,published,3410.0,,,,,,,False,digitized,,Accumulation area
-72,27,Taconnaz Glacier,G006844E45863N,map approximation,45.8534203,6.839661853,published,3680.0,,,,,,,False,digitized,,Accumulation area
-73,27,Taconnaz Glacier,G006844E45863N,map approximation,45.8511161,6.836228851,published,3780.0,,,,,,,False,digitized,,Accumulation area
-74,27,Taconnaz Glacier,G006844E45863N,map approximation,45.8468843,6.839641046,published,4080.0,,,,,,,True,digitized,,Accumulation area
-75,27,Taconnaz Glacier,G006844E45863N,map approximation,45.8518841,6.84825476,published,4030.0,,,,,,,False,digitized,,Accumulation area
-76,28,Steele Glacier,G219819E61242N,map approximation,61.2564058,-140.184505,map guess,1760.0,73-2,,,,,,False,digitized,0.015,Post surge (anomalous T5 & T7) | Ablation area
-77,28,Steele Glacier,G219819E61242N,map approximation,61.2867816,-140.01457,map guess,1400.0,73-3,,,,,,False,digitized,0.015,Post surge ('normal') | Ablation area
-78,29,Fox Glacier,G219698E61200N,map approximation,61.2023142,-140.297788,published,2295.0,#1,,,,,,True,digitized,0.03,
-79,29,Fox Glacier,G219698E61200N,map approximation,61.1962048,-140.2932,published,2455.0,#2,,,,,,False,digitized,0.03,
-80,29,Fox Glacier,G219698E61200N,map approximation,61.1950391,-140.284356,map guess,2550.0,#3,,,,,,False,digitized,0.03,
-81,29,Fox Glacier,G219698E61200N,map approximation,61.1992998,-140.296203,published,2374.0,#4,,,,,,False,digitized,0.03,
-82,29,Fox Glacier,G219698E61200N,map approximation,61.2051273,-140.29904,published,2244.0,#5,,,,,,True,digitized,0.03,
-83,29,Fox Glacier,G219698E61200N,map approximation,61.2078598,-140.300458,published,2188.0,#6,,,,,,True,digitized,0.03,
+71,27,Taconnaz Glacier,G006844E45863N,estimated,45.8578979,6.840015556,published,3410.0,,,,,,,False,digitized,,Accumulation area
+72,27,Taconnaz Glacier,G006844E45863N,estimated,45.8534203,6.839661853,published,3680.0,,,,,,,False,digitized,,Accumulation area
+73,27,Taconnaz Glacier,G006844E45863N,estimated,45.8511161,6.836228851,published,3780.0,,,,,,,False,digitized,,Accumulation area
+74,27,Taconnaz Glacier,G006844E45863N,estimated,45.8468843,6.839641046,published,4080.0,,,,,,,True,digitized,,Accumulation area
+75,27,Taconnaz Glacier,G006844E45863N,estimated,45.8518841,6.84825476,published,4030.0,,,,,,,False,digitized,,Accumulation area
+76,28,Steele Glacier,G219819E61242N,estimated,61.2564058,-140.184505,guessed,1760.0,73-2,,,,,,False,digitized,0.015,Post surge (anomalous T5 & T7) | Ablation area
+77,28,Steele Glacier,G219819E61242N,estimated,61.2867816,-140.01457,guessed,1400.0,73-3,,,,,,False,digitized,0.015,Post surge ('normal') | Ablation area
+78,29,Fox Glacier,G219698E61200N,estimated,61.2023142,-140.297788,published,2295.0,#1,,,,,,True,digitized,0.03,
+79,29,Fox Glacier,G219698E61200N,estimated,61.1962048,-140.2932,published,2455.0,#2,,,,,,False,digitized,0.03,
+80,29,Fox Glacier,G219698E61200N,estimated,61.1950391,-140.284356,guessed,2550.0,#3,,,,,,False,digitized,0.03,
+81,29,Fox Glacier,G219698E61200N,estimated,61.1992998,-140.296203,published,2374.0,#4,,,,,,False,digitized,0.03,
+82,29,Fox Glacier,G219698E61200N,estimated,61.2051273,-140.29904,published,2244.0,#5,,,,,,True,digitized,0.03,
+83,29,Fox Glacier,G219698E61200N,estimated,61.2078598,-140.300458,published,2188.0,#6,,,,,,True,digitized,0.03,
 84,30,Gornergletscher,G007800E45965N,published,45.970304,7.787504,published,2467.0,BH4,,,,,,True,digitized,0.05,Ablation area
 85,30,Gornergletscher,G007800E45965N,published,45.971338,7.793497,published,2492.0,BHT3,,,,,,True,digitized,0.05,Ablation area
 86,30,Gornergletscher,G007800E45965N,published,45.969619,7.796608,published,2501.0,BHT2,,,,,,True,digitized,0.05,Ablation area
@@ -86,27 +86,27 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 88,30,Gornergletscher,G007800E45965N,published,45.966213,7.798327,published,2516.0,BHC,,,,,,True,digitized,0.05,Ablation area
 89,30,Gornergletscher,G007800E45965N,published,45.968581,7.803167,published,2492.0,BH210,,,,,,True,digitized,0.05,Ablation area
 90,31,Rikha Samba Glacier,G083488E28819N,digitized,28.808614,83.496519,published,5600.0,,,,,,,False,digitized,,Ablation area
-92,32,Vadret dal Corvatsch,G009822E46416N,map approximation,46.4152,9.8211,published,3340.0,,,,,,,False,digitized,,
-97,33,Black Rapids Glacier,G213683E63392N,map approximation,63.442926,-146.516929,published,1860.0,,,,,INF,,False,digitized,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Accumulation area
-99,33,Black Rapids Glacier,G213683E63392N,map approximation,63.4833402,-146.406772,published,1550.0,,,,,0,,False,digitized,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Ablation area
-101,33,Black Rapids Glacier,G213683E63392N,map approximation,63.4553258,-146.143037,published,1140.0,,,,,0,,False,digitized,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Ablation area
-103,34,Scott Turnerbreen,G015894E78097N,map guess,78.114158,15.99040771,published,305.0,,,,,,,True,digitized,,Surged in 1936
-104,34,Scott Turnerbreen,G015894E78097N,map approximation,78.0954428,15.88386431,published,595.0,,,,,,,True,digitized,,Surged in 1937
-105,35,Hansbreen,G015592E77097N,map approximation,77.0189,15.60193332,map approximation,100.0,site A,,,,,,False,digitized,0.4,
-106,35,Hansbreen,G015592E77097N,map approximation,77.0275588,15.65626762,map approximation,128.0,site B2,,,,,,False,digitized,0.4,
-107,35,Hansbreen,G015592E77097N,map approximation,77.0916016,15.63406651,map approximation,325.0,site D,,,,,,False,digitized,0.4,
-108,35,Hansbreen,G015592E77097N,map approximation,77.0916016,15.63406651,map approximation,324.0,site D2,,,,,,True,digitized,0.4,
-109,35,Hansbreen,G015592E77097N,map approximation,77.1073192,15.53912754,map approximation,405.0,site F,,,,,,True,digitized,0.4,
-110,35,Hansbreen,G015592E77097N,map approximation,77.0196218,15.59521456,map approximation,100.0,site G,,,,,,False,digitized,0.4,
-111,36,Trapridge Glacier,G219646E61222N,map approximation,61.22429,-140.34572,map guess,2460.0,"hole 1,2",,,,,,False,digitized,0.02,Pre surge
-112,36,Trapridge Glacier,G219646E61222N,map approximation,61.22533,-140.35687,map guess,2520.0,hole 3,,,,,,False,digitized,0.02,Pre surge
-113,36,Trapridge Glacier,G219646E61222N,map approximation,61.2234,-140.35467,map guess,2520.0,hole 4,,,,,,False,digitized,0.02,Pre surge
-114,36,Trapridge Glacier,G219646E61222N,map approximation,61.2219,-140.34123,map guess,2420.0,hole 5,,,,,,False,digitized,0.02,Pre surge
-115,36,Trapridge Glacier,G219646E61222N,map approximation,61.22427,-140.33176,map guess,2300.0,hole 6,,,,,,False,digitized,0.02,Pre surge
-116,36,Trapridge Glacier,G219646E61222N,map approximation,61.22578,-140.31965,map guess,2140.0,hole 7,,,,,,False,digitized,0.02,Pre surge
-117,36,Trapridge Glacier,G219646E61222N,map approximation,61.21813,-140.35455,map guess,2600.0,hole 8,,,,,,False,digitized,0.02,Pre surge
-118,37,Waldemarbreen,G012079E78681N,map approximation,78.6801692,12.1190339,map guess,430.0,,,,,,,False,published,0.2,Accumulation area
-119,92,Waldemarbreen,G012079E78681N,map approximation,78.6801692,12.1190339,map approximation,430.0,T2,,,,,,False,published,0.2,Accumulation area
+92,32,Vadret dal Corvatsch,G009822E46416N,estimated,46.4152,9.8211,published,3340.0,,,,,,,False,digitized,,
+97,33,Black Rapids Glacier,G213683E63392N,estimated,63.442926,-146.516929,published,1860.0,,,,,INF,,False,digitized,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Accumulation area
+99,33,Black Rapids Glacier,G213683E63392N,estimated,63.4833402,-146.406772,published,1550.0,,,,,0,,False,digitized,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Ablation area
+101,33,Black Rapids Glacier,G213683E63392N,estimated,63.4553258,-146.143037,published,1140.0,,,,,0,,False,digitized,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Ablation area
+103,34,Scott Turnerbreen,G015894E78097N,guessed,78.114158,15.99040771,published,305.0,,,,,,,True,digitized,,Surged in 1936
+104,34,Scott Turnerbreen,G015894E78097N,estimated,78.0954428,15.88386431,published,595.0,,,,,,,True,digitized,,Surged in 1937
+105,35,Hansbreen,G015592E77097N,estimated,77.0189,15.60193332,estimated,100.0,site A,,,,,,False,digitized,0.4,
+106,35,Hansbreen,G015592E77097N,estimated,77.0275588,15.65626762,estimated,128.0,site B2,,,,,,False,digitized,0.4,
+107,35,Hansbreen,G015592E77097N,estimated,77.0916016,15.63406651,estimated,325.0,site D,,,,,,False,digitized,0.4,
+108,35,Hansbreen,G015592E77097N,estimated,77.0916016,15.63406651,estimated,324.0,site D2,,,,,,True,digitized,0.4,
+109,35,Hansbreen,G015592E77097N,estimated,77.1073192,15.53912754,estimated,405.0,site F,,,,,,True,digitized,0.4,
+110,35,Hansbreen,G015592E77097N,estimated,77.0196218,15.59521456,estimated,100.0,site G,,,,,,False,digitized,0.4,
+111,36,Trapridge Glacier,G219646E61222N,estimated,61.22429,-140.34572,guessed,2460.0,"hole 1,2",,,,,,False,digitized,0.02,Pre surge
+112,36,Trapridge Glacier,G219646E61222N,estimated,61.22533,-140.35687,guessed,2520.0,hole 3,,,,,,False,digitized,0.02,Pre surge
+113,36,Trapridge Glacier,G219646E61222N,estimated,61.2234,-140.35467,guessed,2520.0,hole 4,,,,,,False,digitized,0.02,Pre surge
+114,36,Trapridge Glacier,G219646E61222N,estimated,61.2219,-140.34123,guessed,2420.0,hole 5,,,,,,False,digitized,0.02,Pre surge
+115,36,Trapridge Glacier,G219646E61222N,estimated,61.22427,-140.33176,guessed,2300.0,hole 6,,,,,,False,digitized,0.02,Pre surge
+116,36,Trapridge Glacier,G219646E61222N,estimated,61.22578,-140.31965,guessed,2140.0,hole 7,,,,,,False,digitized,0.02,Pre surge
+117,36,Trapridge Glacier,G219646E61222N,estimated,61.21813,-140.35455,guessed,2600.0,hole 8,,,,,,False,digitized,0.02,Pre surge
+118,37,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,guessed,430.0,,,,,,,False,published,0.2,Accumulation area
+119,92,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,estimated,430.0,T2,,,,,,False,published,0.2,Accumulation area
 120,38,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,digitized,0.1,
 121,38,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,digitized,0.1,
 122,137,Lomonosovfonna,G018042E78675N,published,78.81,17.6,published,1120.0,,,,thermal,27,,False,digitized,0.1,location_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
@@ -117,43 +117,43 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 127,101,Snøfjellafonna,G013542E78988N,published,79.1361,13.2917,published,1190.0,Site A,,,mechanical,30,,False,digitized,0.07,
 128,97,Åsgårdfonna,G017048E79443N,published,79.443889,16.710833,published,1140.0,JAGE '93 site 1,,,mechanical,,,False,digitized,0.08,
 129,174,Ледник Вавилова [Vavilov Glacier],G095294E79482N,published,79.45,95.35,published,665,,1978-12-01,1978-12-31,thermal,,460,True,published,0.03,location_origin/elevation_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
-130,175,Ледник Вавилова [Vavilov Glacier],G095294E79482N,published,79.5,95.08,map guess,365,4A,1981-01-01,1982-12-31,thermal,,146,True,published,,location_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | elevation_origin: Based on location
+130,175,Ледник Вавилова [Vavilov Glacier],G095294E79482N,published,79.5,95.08,guessed,365,4A,1981-01-01,1982-12-31,thermal,,146,True,published,,location_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | elevation_origin: Based on location
 131,175,Ледник Вавилова [Vavilov Glacier],G096481E79287N,published,79.32,96.02,published,720,5A,1983-01-01,1983-12-31,thermal,,467,True,published,,location_origin/elevation_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
 132,175,Ледник Вавилова [Vavilov Glacier],G095612E79448N,published,79.38,95.72,published,680,6A,1983-03-01,1983-05-31,thermal,,110,False,published,,location_origin/elevation_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
 133,176,Ледник Академии Наук [Academy of Sciences Glacier],G096063E80433N,published,80.5,94.83,published,780,1,1986-06-01,1986-08-31,thermal,,,False,digitized,0.2,location_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | elevation_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) but reported as 810 m in Savatyugin 1988 (http://geolibrary.ru/sites/default/files/2020-12/61.pdf#page=229) | measurement_origin: Digitized from the more curated Figure 3 in Zagorodnov 1990 (https://web.seppyo.org/bgr/pdf/8/BGR8P19.PDF)
 134,39,Akademii Nauk Ice Dome,G096063E80433N,published,80.5167,94.8167,published,780.0,,,,mechanical,,723.91,True,digitized,0.2,location_origin: Fritzche 2002 (https://doi.org/10.3189/172756402781816645) | measurement_origin: First 504.77 m of ice temperatures (from 2000 drilling campaign) are reported in Savatyugin 2001 (http://geolibrary.ru/sites/default/files/2021-01/91.pdf#page=152) but temperatures to the bottom (2001 drilling campaign) could only be found in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
 135,39,Vetreniy Ice Dome,G063846E80729N,published,80.78,63.55,published,505.0,,,,,,,,digitized,0.1,
-136,40,Urumqi Glacier No. 1,G086810E43111N,map guess,43.1154866,86.81283014,published,3840.0,,,,,,,,digitized,,
-137,40,Urumqi Glacier No. 1,G086810E43111N,map guess,43.1154866,86.81283014,published,3840.0,,,,,,,,digitized,,
-138,40,Urumqi Glacier No. 1,G086810E43111N,map guess,43.1154866,86.81283014,published,3840.0,,,,,,,,digitized,,
-139,41,Tsambagarav Glacier,G090847E48595N,map approximation,48.597,90.856,published,3815.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so refined based on name, elevation, Figure 1 in Khalzan 2022 (https://doi.org/10.3389/feart.2021.785306) and slide 10 in Davaa 2016 (https://globalcryospherewatch.org/meetings/salekhard2016/presentations/3.1.3.e-G.Davaa-Mongolia%20cryospheric%20activities.pdf#page=10) | Accumulation area"
-140,41,Miaoergou Glacier,G094316E43053N,map approximation,43.055,94.323,published,4512.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so refined based on name, elevation, Figure 2 in Jiao 2023 (https://doi.org/10.1029/2023JF007227), and Figure 3 in Takeuchi 2008 (https://web.seppyo.org/bgr/pdf/26/BGR26P33.pdf) | Accumulation area"
-141,41,Shule Nanshan Glacier,G097261E38695N,map guess,38.705,97.262,published,5356.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so guessed the nearby summit dome based on elevation | Accumulation area"
-142,41,加布拉冰川 [Gyabrag Glacier],G086633E28122N,map guess,28.110,86.626,published,6303.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so guessed based on name and elevation | Accumulation area"
+136,40,Urumqi Glacier No. 1,G086810E43111N,guessed,43.1154866,86.81283014,published,3840.0,,,,,,,,digitized,,
+137,40,Urumqi Glacier No. 1,G086810E43111N,guessed,43.1154866,86.81283014,published,3840.0,,,,,,,,digitized,,
+138,40,Urumqi Glacier No. 1,G086810E43111N,guessed,43.1154866,86.81283014,published,3840.0,,,,,,,,digitized,,
+139,41,Tsambagarav Glacier,G090847E48595N,estimated,48.597,90.856,published,3815.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so refined based on name, elevation, Figure 1 in Khalzan 2022 (https://doi.org/10.3389/feart.2021.785306) and slide 10 in Davaa 2016 (https://globalcryospherewatch.org/meetings/salekhard2016/presentations/3.1.3.e-G.Davaa-Mongolia%20cryospheric%20activities.pdf#page=10) | Accumulation area"
+140,41,Miaoergou Glacier,G094316E43053N,estimated,43.055,94.323,published,4512.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so refined based on name, elevation, Figure 2 in Jiao 2023 (https://doi.org/10.1029/2023JF007227), and Figure 3 in Takeuchi 2008 (https://web.seppyo.org/bgr/pdf/26/BGR26P33.pdf) | Accumulation area"
+141,41,Shule Nanshan Glacier,G097261E38695N,guessed,38.705,97.262,published,5356.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so guessed the nearby summit dome based on elevation | Accumulation area"
+142,41,加布拉冰川 [Gyabrag Glacier],G086633E28122N,guessed,28.110,86.626,published,6303.0,,,,,,,,digitized,0.05,"location_origin: Coordinates in Table 1 are approximate, so guessed based on name and elevation | Accumulation area"
 143,10,Grenzgletscher,G007800E45965N,published,45.928193,7.875925,published,4475.0,b95-1,,,mechanical,,,True,digitized,0.05,Accumulation area | location_origin/elevation_origin: Hoelzle 2011 (https://doi.org/10.5194/tc-5-231-2011)
 144,10,Grenzgletscher,G007800E45965N,published,45.929111,7.873663,published,4448.0,b95-2,,,mechanical,,,True,digitized,0.05,Accumulation area | location_origin/elevation_origin: Hoelzle 2011 (https://doi.org/10.5194/tc-5-231-2011)
-145,164,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map approximation,35.2217793,81.11527554,published,5805,2,1987-07-17,1987-07-17,thermal,,,False,published,0.1,label: S0 in Zhou 1990 (https://doi.org/10.1360/csb1990-35-3-212)
-146,164,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map approximation,35.2351867,81.11135593,published,5974,3,1987-07-16,1987-07-16,thermal,,,False,published,0.1,label: S4 in Zhou 1990 (https://doi.org/10.1360/csb1990-35-3-212)
-147,153,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map guess,35.2461911,81.10829374,published,6118,S8,,,,,,False,digitized,,measurement_origin: Digitized from Figure 1 via the better reproduction as Figure 2 in Huang 1990 (https://doi.org/10.3189/S002214300000945X)
-148,164,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map approximation,35.26191,81.10065704,published,6327,4,1987-08-16,1987-08-16,mechanical,,,False,published,0.1,label: S12 in Zhou 1990 (https://doi.org/10.1360/csb1990-35-3-212)
-149,46,Urumqi Glacier No. 1,G086810E43111N,map approximation,43.1154866,86.81283014,map approximation,3840.0,T1,,,,,,False,digitized,0.1,
-150,46,Urumqi Glacier No. 1,G086810E43111N,map approximation,43.1110594,86.80957723,map approximation,3960.0,T2,,,,,,False,digitized,0.1,
-151,46,Urumqi Glacier No. 1,G086810E43111N,map approximation,43.1060367,86.80647755,map approximation,4050.0,T3,,,,,,True,digitized,0.1,
-153,47,Guanaco Glacier,G289989E29347S,map approximation,-29.35,-70.014,published,5161.0,,,,,,,,digitized,,
-154,48,Tapado Glacier,G290072E30145S,map approximation,-30.140241,-69.931488,published,5536.0,,,,,,,True,digitized,,
-155,50,Khumbu Glacier,G086820E27978N,map approximation,27.9437778,86.81773669,published,4887.0,Site 1,,,,,,,digitized,0.05,elevation_origin: Table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-02 (ED2017_BH2) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but difficult to interpret
-156,50,Khumbu Glacier,G086820E27978N,map approximation,27.9695686,86.82870764,published,4981.0,Site 2,,,,,,False,digitized,0.05,elevation_origin: Table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-11 (ED2017_BH11) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but difficult to interpret
-157,50,Khumbu Glacier,G086820E27978N,map approximation,27.991737,86.84700289,published,5207.0,Site 3,,,,,,False,digitized,0.05,elevation_origin: Table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-13 (ED2017_BH13) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but difficult to interpret
-158,51,White Glacier,G269329E79672N,map approximation,79.5082542,-90.8441553,published,1024.0,I,,,,,,,digitized,0.2,
-159,51,White Glacier,G269329E79672N,map approximation,79.4850986,-90.7876998,published,717.0,II,,,,,,,digitized,0.2,
-160,51,White Glacier,G269329E79672N,map approximation,79.4731948,-90.7527512,published,626.0,III,,,,,,,digitized,0.2,
-161,52,Upper Fremont Glacier,G250390E43132N,map guess,43.1339651,-109.609941,map guess,3920.0,,,,,,,False,published,0.4,
-162,54,Finsterwalderbreen,G015235E77463N,map approximation,77.4924878,15.25323517,published,204.0,,,,,,,True,digitized,0.05,Ablation area
-163,54,Finsterwalderbreen,G015235E77463N,map approximation,77.4366271,15.22366244,published,580.0,,,,,,,True,digitized,0.05,Accumulation area
-164,55,Athabasca Glacier,G242719E52168N,map approximation,52.19942,-117.24299,published,2140.0,Hole 209,,,,,,False,digitized,,Took average of two measurements
-165,55,Athabasca Glacier,G242719E52168N,map approximation,52.20423,-117.23711,published,2075.0,Hole 72,,,,,,False,digitized,,Took average of two measurements
-166,55,Athabasca Glacier,G242719E52168N,map approximation,52.19258,-117.25908,published,2235.0,Hole 100,,,,,,False,digitized,,Took average of two measurements
-167,56,Storglaciären,G018569E67903N,map approximation,67.9036926,18.56956375,map guess,1400.0,,,,,,,False,digitized,0.05,
+145,164,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.2217793,81.11527554,published,5805,2,1987-07-17,1987-07-17,thermal,,,False,published,0.1,label: S0 in Zhou 1990 (https://doi.org/10.1360/csb1990-35-3-212)
+146,164,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.2351867,81.11135593,published,5974,3,1987-07-16,1987-07-16,thermal,,,False,published,0.1,label: S4 in Zhou 1990 (https://doi.org/10.1360/csb1990-35-3-212)
+147,153,崇测冰帽 [Chongce Ice Cap],G081119E35239N,guessed,35.2461911,81.10829374,published,6118,S8,,,,,,False,digitized,,measurement_origin: Digitized from Figure 1 via the better reproduction as Figure 2 in Huang 1990 (https://doi.org/10.3189/S002214300000945X)
+148,164,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.26191,81.10065704,published,6327,4,1987-08-16,1987-08-16,mechanical,,,False,published,0.1,label: S12 in Zhou 1990 (https://doi.org/10.1360/csb1990-35-3-212)
+149,46,Urumqi Glacier No. 1,G086810E43111N,estimated,43.1154866,86.81283014,estimated,3840.0,T1,,,,,,False,digitized,0.1,
+150,46,Urumqi Glacier No. 1,G086810E43111N,estimated,43.1110594,86.80957723,estimated,3960.0,T2,,,,,,False,digitized,0.1,
+151,46,Urumqi Glacier No. 1,G086810E43111N,estimated,43.1060367,86.80647755,estimated,4050.0,T3,,,,,,True,digitized,0.1,
+153,47,Guanaco Glacier,G289989E29347S,estimated,-29.35,-70.014,published,5161.0,,,,,,,,digitized,,
+154,48,Tapado Glacier,G290072E30145S,estimated,-30.140241,-69.931488,published,5536.0,,,,,,,True,digitized,,
+155,50,Khumbu Glacier,G086820E27978N,estimated,27.9437778,86.81773669,published,4887.0,Site 1,,,,,,,digitized,0.05,elevation_origin: Table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-02 (ED2017_BH2) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but difficult to interpret
+156,50,Khumbu Glacier,G086820E27978N,estimated,27.9695686,86.82870764,published,4981.0,Site 2,,,,,,False,digitized,0.05,elevation_origin: Table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-11 (ED2017_BH11) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but difficult to interpret
+157,50,Khumbu Glacier,G086820E27978N,estimated,27.991737,86.84700289,published,5207.0,Site 3,,,,,,False,digitized,0.05,elevation_origin: Table 1 in Miles et al. 2019 (https://doi.org/10.1017/jog.2019.49) | label: Also known as BH17-13 (ED2017_BH13) | Raw temperature measurements are available (https://doi.org/10.5285/32ecd5f4-1f00-4eeb-bd1e-5eaffb60f556) but difficult to interpret
+158,51,White Glacier,G269329E79672N,estimated,79.5082542,-90.8441553,published,1024.0,I,,,,,,,digitized,0.2,
+159,51,White Glacier,G269329E79672N,estimated,79.4850986,-90.7876998,published,717.0,II,,,,,,,digitized,0.2,
+160,51,White Glacier,G269329E79672N,estimated,79.4731948,-90.7527512,published,626.0,III,,,,,,,digitized,0.2,
+161,52,Upper Fremont Glacier,G250390E43132N,guessed,43.1339651,-109.609941,guessed,3920.0,,,,,,,False,published,0.4,
+162,54,Finsterwalderbreen,G015235E77463N,estimated,77.4924878,15.25323517,published,204.0,,,,,,,True,digitized,0.05,Ablation area
+163,54,Finsterwalderbreen,G015235E77463N,estimated,77.4366271,15.22366244,published,580.0,,,,,,,True,digitized,0.05,Accumulation area
+164,55,Athabasca Glacier,G242719E52168N,estimated,52.19942,-117.24299,published,2140.0,Hole 209,,,,,,False,digitized,,Took average of two measurements
+165,55,Athabasca Glacier,G242719E52168N,estimated,52.20423,-117.23711,published,2075.0,Hole 72,,,,,,False,digitized,,Took average of two measurements
+166,55,Athabasca Glacier,G242719E52168N,estimated,52.19258,-117.25908,published,2235.0,Hole 100,,,,,,False,digitized,,Took average of two measurements
+167,56,Storglaciären,G018569E67903N,estimated,67.9036926,18.56956375,guessed,1400.0,,,,,,,False,digitized,0.05,
 168,57,Khukh Nuru Uul glacier,G090853E48651N,published,48.6556404,90.84707854,published,4130.0,,,,,,72,True,digitized,,
 171,58,Grenzgletscher,G007800E45965N,published,45.971593,7.79257,published,2485.0,f13,,,,,,False,digitized,0.05,Ablation area
 173,58,Grenzgletscher,G007800E45965N,published,45.967082,7.799455,published,2514.0,f5,,,,,,False,digitized,0.05,Ablation area
@@ -162,58 +162,58 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 177,58,Grenzgletscher,G007800E45965N,published,45.965263,7.800062,published,2522.0,f1,,,,,,False,digitized,0.05,Ablation area
 178,58,Grenzgletscher,G007800E45965N,published,45.965586,7.797343,published,2514.0,f3,,,,,,False,digitized,0.05,Ablation area
 179,59,Pio XI glacier,G286372E49263S,published,-49.278195,-73.3535648,published,2600.0,,,,,,,False,digitized,,Accumulation area
-180,60,Blichenok glacier,G160474E56097N,digitized,56.07338,160.4685,map approximation,3870.0,BH1,,,,,,False,digitized,0.1,measurement_origin: Monthly profiles are difficult to differentiate in Figure 4 and may be slightly incorrect below 5 m depth
-181,60,Blichenok glacier,G160474E56097N,digitized,56.074062,160.4679,map approximation,3870.0,K2,,,,,,False,digitized,0.1,
+180,60,Blichenok glacier,G160474E56097N,digitized,56.07338,160.4685,estimated,3870.0,BH1,,,,,,False,digitized,0.1,measurement_origin: Monthly profiles are difficult to differentiate in Figure 4 and may be slightly incorrect below 5 m depth
+181,60,Blichenok glacier,G160474E56097N,digitized,56.074062,160.4679,estimated,3870.0,K2,,,,,,False,digitized,0.1,
 182,61,Glacier du Sex Rouge,G007212E46327N,published,46.326569,7.212807,published,2810.0,#1,,,,,,False,digitized,,
 183,61,Glacier du Sex Rouge,G007212E46327N,published,46.327953,7.212463,published,2780.0,#2,,,,,,False,digitized,,
 184,61,St. Annafirn,G008601E46597N,published,46.596277,8.598254,published,2855.0,#6,,,,,,False,published,,
 185,61,St. Annafirn,G008601E46597N,published,46.600537,8.601335,published,2650.0,#9,,,,,,False,published,,
-186,62,Irenebreen,G012138E78665N,map approximation,78.67358,12.13132,published,420.0,,,,,,,False,digitized,0.2,
-187,63,Erikbreen,G012478E79621N,map approximation,79.5945013,12.56989669,digitized,25.0,site 1,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
-189,63,Erikbreen,G012478E79621N,map approximation,79.5985643,12.60153683,digitized,25.0,site 2,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
-191,63,Erikbreen,G012478E79621N,map approximation,79.5995375,12.58114652,digitized,70.0,site 3,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
-193,63,Erikbreen,G012478E79621N,map approximation,79.6186866,12.51200694,digitized,375.0,site 7,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
-195,63,Erikbreen,G012478E79621N,map approximation,79.6226558,12.42997693,digitized,540.0,site 9,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
-197,64,Malan Glacier,G090770E35803N,map approximation,35.8165362,90.75000214,published,5680.0,,,,,,,False,digitized,0.01,
-198,66,Dunde Ice Cap,G096414E38091N,map approximation,38.1051653,96.41680018,published,5325.0,,,,,,,True,digitized,,Caption and legend do not agree | Summit region
-199,115,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,map approximation,35.2308,81.4657,published,6200.0,Site 2,,,combined,,308.6,True,digitized,,drill_method: Mechanical to 200 m and thermal beyond
-200,67,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,map approximation,35.2308014,81.46574059,published,6200.0,,,,,,,True,digitized,,Plateau region
-201,115,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,map approximation,35.2931,81.4916,published,6710.0,Summit,,,mechanical,,,False,digitized,,
-202,67,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,map approximation,35.2931,81.4916,published,6710.0,,,,,,,True,digitized,,Summit region
-206,69,Glacier des Bossons,G006865E45868N,map approximation,45.8417942,6.846642185,published,4250.0,,,,,,,True,digitized,0.05,Col du Dôme | Summit region
+186,62,Irenebreen,G012138E78665N,estimated,78.67358,12.13132,published,420.0,,,,,,,False,digitized,0.2,
+187,63,Erikbreen,G012478E79621N,estimated,79.5945013,12.56989669,digitized,25.0,site 1,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
+189,63,Erikbreen,G012478E79621N,estimated,79.5985643,12.60153683,digitized,25.0,site 2,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
+191,63,Erikbreen,G012478E79621N,estimated,79.5995375,12.58114652,digitized,70.0,site 3,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
+193,63,Erikbreen,G012478E79621N,estimated,79.6186866,12.51200694,digitized,375.0,site 7,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
+195,63,Erikbreen,G012478E79621N,estimated,79.6226558,12.42997693,digitized,540.0,site 9,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles
+197,64,Malan Glacier,G090770E35803N,estimated,35.8165362,90.75000214,published,5680.0,,,,,,,False,digitized,0.01,
+198,66,Dunde Ice Cap,G096414E38091N,estimated,38.1051653,96.41680018,published,5325.0,,,,,,,True,digitized,,Caption and legend do not agree | Summit region
+199,115,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,estimated,35.2308,81.4657,published,6200.0,Site 2,,,combined,,308.6,True,digitized,,drill_method: Mechanical to 200 m and thermal beyond
+200,67,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,estimated,35.2308014,81.46574059,published,6200.0,,,,,,,True,digitized,,Plateau region
+201,115,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2931,81.4916,published,6710.0,Summit,,,mechanical,,,False,digitized,,
+202,67,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2931,81.4916,published,6710.0,,,,,,,True,digitized,,Summit region
+206,69,Glacier des Bossons,G006865E45868N,estimated,45.8417942,6.846642185,published,4250.0,,,,,,,True,digitized,0.05,Col du Dôme | Summit region
 207,70,Geladandong Ice Cap,G091151E33199N,published,33.212778,91.154167,published,5800.0,,,,,,,False,digitized,0.05,Geothermal hotspot suspected under drill site
-208,71,Laohugou Glacier,G096524E39457N,map approximation,39.4783238,96.53493886,published,4550.0,Site 1,,,,,,False,digitized,0.05,
-209,71,Laohugou Glacier,G096524E39457N,map approximation,39.4418617,96.55545016,published,4900.0,Site 2,,,,,,False,digitized,0.05,
-210,71,Laohugou Glacier,G096524E39457N,map approximation,39.429247,96.55633645,published,5040.0,Site 3,,,,,,False,digitized,0.05,
-211,71,Laohugou Glacier,G096524E39457N,map approximation,39.4355057,96.55583,published,4971.0,Deep borehole site,,,,,,False,digitized,0.05,
-212,73,Austfonna,G024340E79634N,map guess,79.78064,24.68098,published,750.0,,,,,,,,digitized,,Digitized deepest measurements (indicated with + in plot) | Summit region
-213,139,Nevado Sajama,G291113E18113S,map guess,-18.10813679,-68.88302202,published,6548.0,,,,,,,,submitted,,Summit region | elevation_origin: Table 1 in Zagorodnov 2006 (https://doi.org/10.3189/172756406781812203)
-214,139,Volcán Coropuna,G287357E15537S,map guess,-15.54597514,-72.66058519,published,6451.0,,,,mechanical,,,,submitted,,Rim | elevation_origin: Table 1 in Zagorodnov 2006 (https://doi.org/10.3189/172756406781812203) | drill_method: Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269)
-215,139,Volcán Coropuna,G287357E15537S,map guess,-15.55002714,-72.66097867,published,6326.0,,,,mechanical,,,,submitted,,Crater | elevation_origin: Table 1 in Zagorodnov 2006 (https://doi.org/10.3189/172756406781812203) | drill_method: Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269)
-216,75,Barnes Ice Cap,G287731E69650N,map approximation,69.63971832,-72.14945899,digitized,685.0,14.3 T,,,,,,False,published,0.1,Within surge zone
-217,75,Barnes Ice Cap,G287731E69650N,map approximation,69.5815068,-72.12125013,digitized,565.0,19.5 T,,,,,,False,published,0.1,Within surge zone
-218,75,Barnes Ice Cap,G287731E69650N,map approximation,69.54665509,-72.11040056,digitized,450.0,24.55 T,,,,,,False,published,0.1,Within surge zone
-219,76,Barnes Ice Cap,G287718E69797N,digitized,69.81379,-72.093185,map approximation,525.0,T0975,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-220,76,Barnes Ice Cap,G287718E69797N,digitized,69.80686,-72.10005,map approximation,575.0,T091,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-221,76,Barnes Ice Cap,G287718E69797N,digitized,69.79795,-72.110344,map approximation,650.0,T081,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-222,76,Barnes Ice Cap,G287718E69797N,digitized,69.78211,-72.12066,map approximation,725.0,T061,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-223,76,Barnes Ice Cap,G287718E69797N,digitized,69.74945,-72.154976,map approximation,850.0,T020,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-224,76,Barnes Ice Cap,G287718E69797N,digitized,69.78899,-71.9703,map approximation,670.0,C4,,,thermal,,,False,digitized,0.05,label: D4 in Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-225,76,Barnes Ice Cap,G288059E69709N,digitized,69.71965,-71.89204,map approximation,670.0,B4,,,thermal,,110,True,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
-226,91,Tuto Ramp,G291955E76463N,digitized,76.4147,-68.2741,map approximation,506,D-11,,,,0,47.5,True,digitized,,temperature_accuracy: 'It is probable that the measured temperatures did not exactly correspond to the true ice temperatures because of the effect of the black plastic tube but the gradient is approximately correct' | measurement.depth: Negative depths correspond to four thermistors lying on the ice. The first thermistor in the ice was at 1.8 m depth. | depth: Borehole continued 12.2 m into the bed (for a total depth of 59.7 m)
-227,78,Renland Ice Cap,G333444E71216N,submitted,71.306,-26.768,map guess,2325.0,,,,,,,False,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/Renland88
-228,78,Prince of Wales Ice Cap,G279351E78361N,submitted,78.3897,-80.395,map guess,1600.0,,,,,,,True,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/PrinceWales05
+208,71,Laohugou Glacier,G096524E39457N,estimated,39.4783238,96.53493886,published,4550.0,Site 1,,,,,,False,digitized,0.05,
+209,71,Laohugou Glacier,G096524E39457N,estimated,39.4418617,96.55545016,published,4900.0,Site 2,,,,,,False,digitized,0.05,
+210,71,Laohugou Glacier,G096524E39457N,estimated,39.429247,96.55633645,published,5040.0,Site 3,,,,,,False,digitized,0.05,
+211,71,Laohugou Glacier,G096524E39457N,estimated,39.4355057,96.55583,published,4971.0,Deep borehole site,,,,,,False,digitized,0.05,
+212,73,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,,digitized,,Digitized deepest measurements (indicated with + in plot) | Summit region
+213,139,Nevado Sajama,G291113E18113S,guessed,-18.10813679,-68.88302202,published,6548.0,,,,,,,,submitted,,Summit region | elevation_origin: Table 1 in Zagorodnov 2006 (https://doi.org/10.3189/172756406781812203)
+214,139,Volcán Coropuna,G287357E15537S,guessed,-15.54597514,-72.66058519,published,6451.0,,,,mechanical,,,,submitted,,Rim | elevation_origin: Table 1 in Zagorodnov 2006 (https://doi.org/10.3189/172756406781812203) | drill_method: Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269)
+215,139,Volcán Coropuna,G287357E15537S,guessed,-15.55002714,-72.66097867,published,6326.0,,,,mechanical,,,,submitted,,Crater | elevation_origin: Table 1 in Zagorodnov 2006 (https://doi.org/10.3189/172756406781812203) | drill_method: Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269)
+216,75,Barnes Ice Cap,G287731E69650N,estimated,69.63971832,-72.14945899,digitized,685.0,14.3 T,,,,,,False,published,0.1,Within surge zone
+217,75,Barnes Ice Cap,G287731E69650N,estimated,69.5815068,-72.12125013,digitized,565.0,19.5 T,,,,,,False,published,0.1,Within surge zone
+218,75,Barnes Ice Cap,G287731E69650N,estimated,69.54665509,-72.11040056,digitized,450.0,24.55 T,,,,,,False,published,0.1,Within surge zone
+219,76,Barnes Ice Cap,G287718E69797N,digitized,69.81379,-72.093185,estimated,525.0,T0975,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+220,76,Barnes Ice Cap,G287718E69797N,digitized,69.80686,-72.10005,estimated,575.0,T091,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+221,76,Barnes Ice Cap,G287718E69797N,digitized,69.79795,-72.110344,estimated,650.0,T081,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+222,76,Barnes Ice Cap,G287718E69797N,digitized,69.78211,-72.12066,estimated,725.0,T061,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+223,76,Barnes Ice Cap,G287718E69797N,digitized,69.74945,-72.154976,estimated,850.0,T020,,,thermal,,,False,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+224,76,Barnes Ice Cap,G287718E69797N,digitized,69.78899,-71.9703,estimated,670.0,C4,,,thermal,,,False,digitized,0.05,label: D4 in Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+225,76,Barnes Ice Cap,G288059E69709N,digitized,69.71965,-71.89204,estimated,670.0,B4,,,thermal,,110,True,digitized,0.05,elevation_origin: Hooke 1980 (https://doi.org/10.1139/e80-124)
+226,91,Tuto Ramp,G291955E76463N,digitized,76.4147,-68.2741,estimated,506,D-11,,,,0,47.5,True,digitized,,temperature_accuracy: 'It is probable that the measured temperatures did not exactly correspond to the true ice temperatures because of the effect of the black plastic tube but the gradient is approximately correct' | measurement.depth: Negative depths correspond to four thermistors lying on the ice. The first thermistor in the ice was at 1.8 m depth. | depth: Borehole continued 12.2 m into the bed (for a total depth of 59.7 m)
+227,78,Renland Ice Cap,G333444E71216N,submitted,71.306,-26.768,guessed,2325.0,,,,,,,False,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/Renland88
+228,78,Prince of Wales Ice Cap,G279351E78361N,submitted,78.3897,-80.395,guessed,1600.0,,,,,,,True,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/PrinceWales05
 229,78,Penny Ice Cap,G294456E67304N,submitted,67.3,-65.2,published,1810.0,,,,,,,True,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/Penny96
-230,154,Meighen Ice Cap,G260810E79982N,map approximation,79.943,-99.121,published,268,,,,thermal,,121.2,True,published,0.01,location_origin: Figure 1 in Koerner 1968 (https://doi.org/10.3189/S0022143000020621)
+230,154,Meighen Ice Cap,G260810E79982N,estimated,79.943,-99.121,published,268,,,,thermal,,121.2,True,published,0.01,location_origin: Figure 1 in Koerner 1968 (https://doi.org/10.3189/S0022143000020621)
 231,155,Hare Glacier,G323403E82808N,digitized,82.8425,-36.1958,published,507,451,,,thermal,,288,True,digitized,,elevation_origin: Table 2 in Reeh 2001 (https://doi.org/10.7146/moggeosci.v39i.140219)
 232,78,Hans Tausen Ice Cap,G323085E82488N,published,82.50,-37.467,published,1271,HT95,1995-05-29,1995-06-20,mechanical,,344.86,True,digitized,,location_origin/elevation_origin: Steffensen 2001 (https://doi.org/10.7146/moggeosci.v39i.140228)
-233,78,Flade Isblink Ice Cap,G344790E81287N,published,81.2926,-15.7029,map guess,690.0,,,,mechanical,,,False,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/FladeIsblink06 and Section 1.2 in Lemark 2010 (https://nbi.ku.dk/english/theses/masters-theses/andreas-lemark)
+233,78,Flade Isblink Ice Cap,G344790E81287N,published,81.2926,-15.7029,guessed,690.0,,,,mechanical,,,False,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/FladeIsblink06 and Section 1.2 in Lemark 2010 (https://nbi.ku.dk/english/theses/masters-theses/andreas-lemark)
 234,78,Devon Ice Cap,G278488E75058N,published,75.32,-81.64,published,1930.0,,,,,,302,True,submitted,,From https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/8b28d0e7333426426ac377615663ba735e5623f9/boreholes/Devon98 and Kinnard 2006 (https://doi.org/10.3189/172756406781811349)
 235,157,Devon Ice Cap,G278488E75058N,digitized,75.377,-82.4125,published,1825,Hole 72,,,,,299,True,digitized,0.01,
 236,157,Devon Ice Cap,G278488E75058N,digitized,75.372,-82.4155,published,1825,Hole 71,,,,,,False,digitized,0.01,
-237,158,Agassiz Ice Cap,G288743E80950N,map approximation,80.815,-72.892,published,1730,A84,1984-01-01,1984-12-31,,,128,True,digitized,,depth: Table 1 in Vinther 2008 (https://doi.org/10.1029/2007JD009143)
-238,158,Agassiz Ice Cap,G288743E80950N,map approximation,80.806,-72.905,published,1700,A79,1979-01-01,1979-12-31,,,139,True,digitized,,depth: Table 1 in Vinther 2008 (https://doi.org/10.1029/2007JD009143)
-240,158,Agassiz Ice Cap,G288743E80950N,map approximation,80.798,-72.85,published,1670,A77,1977-01-01,1977-12-31,,,336,True,digitized,,depth: Table 1 in Vinther 2008 (https://doi.org/10.1029/2007JD009143)
+237,158,Agassiz Ice Cap,G288743E80950N,estimated,80.815,-72.892,published,1730,A84,1984-01-01,1984-12-31,,,128,True,digitized,,depth: Table 1 in Vinther 2008 (https://doi.org/10.1029/2007JD009143)
+238,158,Agassiz Ice Cap,G288743E80950N,estimated,80.806,-72.905,published,1700,A79,1979-01-01,1979-12-31,,,139,True,digitized,,depth: Table 1 in Vinther 2008 (https://doi.org/10.1029/2007JD009143)
+240,158,Agassiz Ice Cap,G288743E80950N,estimated,80.798,-72.85,published,1670,A77,1977-01-01,1977-12-31,,,336,True,digitized,,depth: Table 1 in Vinther 2008 (https://doi.org/10.1029/2007JD009143)
 241,74,East Rongbuk Glacier,G086939E28060N,submitted,28.02767227,86.95550508,published,6350.0,BH2,,,,,,,submitted,,
 242,79,Little Kluane Glacier,G220578E60873N,submitted,60.919193,-139.453348,submitted,1772.0,,,,,,,False,submitted,0.2,Glacier surged vigorously in 2017-2018 | latitude/longitude/elevation: Measured with single-frequency GPS | Lower ablation area | measurement.depth: Relative to ice surface on 2019-07-04
 243,79,North Glacier,G220859E60905N,submitted,60.912472,-139.153777,submitted,2371.0,,,,,,,False,submitted,0.1,Glacier is not surge-type | Ice thickness is ~110 m at borehole location | See Wilson 2012 (https://summit.sfu.ca/item/12553) and Wilson 2013 (https://doi.org/10.1002/jgrf.20096) | latitude/longitude/elevation: Measured with single-frequency GPS on 2011-08-02 | measurement.depth: Relative to ice surface on 2011-08 | Central ablation area of small valley glacier
@@ -225,14 +225,14 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 249,84,Nunatarssuaq Ice Cap,G292408E76864N,submitted,76.9200850837,-66.9525292024,submitted,691.0,,,,,,,False,submitted,,Cooling and settling of temperatures after insertion of the sensors not excluded from dataset | Upper sensors affected by radiative heating | See Abermann 2020 (https://doi.org/10.1017/jog.2020.28) | Near an automatic weather station | Measured with PT940 resistance temperature probes on Pace Scientific XR440 data loggers
 250,84,Nunatarssuaq Ice Cap,G292408E76864N,submitted,76.9199105512,-66.9524665356,submitted,686.0,,,,,,,False,submitted,,Cooling and settling of temperatures after insertion of the sensors not excluded from dataset | Upper sensors affected by radiative heating | See Abermann 2020 (https://doi.org/10.1017/jog.2020.28) | ~20 m back from a dry-calving ice cliff | Measured with PT940 resistance temperature probes on Pace Scientific XR440 data loggers
 251,174,Ледник Вавилова [Vavilov Glacier],G095294E79482N,published,79.45,95.35,published,665,,1978-10-01,1978-10-31,thermal,,80,False,digitized,,Accumulation area | location_origin/elevation_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
-260,2,White Glacier,G269329E79672N,map approximation,79.53638,-91.03409,published,1536.0,,,,,,,False,digitized,0.2,Accumulation area
-261,2,White Glacier,G269329E79672N,map approximation,79.52397,-90.96165,map guess,1310.0,,,,,,,False,digitized,0.2,Accumulation area
-262,2,White Glacier,G269329E79672N,map approximation,79.51597,-90.89401,published,1172.0,,,,,,,False,digitized,0.2,Accumulation area
-263,2,White Glacier,G269329E79672N,map approximation,79.50766,-90.85041,published,1045.0,,,,,,,False,digitized,0.2,Accumulation area
-264,2,White Glacier,G269329E79672N,map approximation,79.4974,-90.83256,published,900.0,,,,,,,False,digitized,0.2,Accumulation area
-265,2,White Glacier,G269329E79672N,map approximation,79.49402,-90.82123,published,871.0,,,,,,,False,digitized,0.2,Accumulation area
-266,2,White Glacier,G269329E79672N,map approximation,79.48651,-90.79514,published,750.0,,,,,,,False,digitized,0.2,Near ELA
-267,2,White Glacier,G269329E79672N,map approximation,79.45313,-90.69437,published,385.0,,,,,,,True,digitized,0.2,Accumulation area
+260,2,White Glacier,G269329E79672N,estimated,79.53638,-91.03409,published,1536.0,,,,,,,False,digitized,0.2,Accumulation area
+261,2,White Glacier,G269329E79672N,estimated,79.52397,-90.96165,guessed,1310.0,,,,,,,False,digitized,0.2,Accumulation area
+262,2,White Glacier,G269329E79672N,estimated,79.51597,-90.89401,published,1172.0,,,,,,,False,digitized,0.2,Accumulation area
+263,2,White Glacier,G269329E79672N,estimated,79.50766,-90.85041,published,1045.0,,,,,,,False,digitized,0.2,Accumulation area
+264,2,White Glacier,G269329E79672N,estimated,79.4974,-90.83256,published,900.0,,,,,,,False,digitized,0.2,Accumulation area
+265,2,White Glacier,G269329E79672N,estimated,79.49402,-90.82123,published,871.0,,,,,,,False,digitized,0.2,Accumulation area
+266,2,White Glacier,G269329E79672N,estimated,79.48651,-90.79514,published,750.0,,,,,,,False,digitized,0.2,Near ELA
+267,2,White Glacier,G269329E79672N,estimated,79.45313,-90.69437,published,385.0,,,,,,,True,digitized,0.2,Accumulation area
 268,8,Grenzgletscher,G007800E45965N,published,45.928511,7.875283,published,4470.0,CG07-1/08,,,thermal,,,False,digitized,0.1,Accumulation area
 269,8,Grenzgletscher,G007800E45965N,published,45.921341,7.873008,published,4330.0,SJ99-10/99,,,thermal,,,False,digitized,0.1,Accumulation area
 270,8,Grenzgletscher,G007800E45965N,published,45.930337,7.872899,published,4335.0,SJ08-8/08,,,thermal,,,False,digitized,0.1,Accumulation area
@@ -242,37 +242,37 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 275,8,Grenzgletscher,G007908E45948N,published,45.929728,7.876968,published,4425.0,CG05-1/07,,,mechanical,,,False,digitized,0.1,label: Or CG05-2/07 | Accumulation area
 278,38,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,digitized,0.1,
 279,38,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,digitized,0.1,
-280,136,Austfonna,G025297E79771N,map guess,79.731,25.586,map guess,500.0,,,,,,,,published,,"Original reference is 'M. Vallon, pers. comm.'"
+280,136,Austfonna,G025297E79771N,guessed,79.731,25.586,guessed,500.0,,,,,,,,published,,"Original reference is 'M. Vallon, pers. comm.'"
 281,129,Austfonna,G024340E79634N,published,79.8,24.0,published,750.0,Austfonna98,,,mechanical,,,False,digitized,,
-282,46,Dagongba Glacier,G101855E29563N,map approximation,29.56623,101.84461,published,4540.0,,,,,,,False,digitized,0.05,Ablation area
-283,46,Baishui Glacier No. 1,G100187E27104N,map approximation,27.10679,100.19538,published,4600.0,,,,,,,False,digitized,0.05,
-284,51,White Glacier,G269329E79672N,map approximation,79.43863,-90.64459,published,205.0,Lower Ice,,,,,,False,digitized,0.2,Ablation area
+282,46,Dagongba Glacier,G101855E29563N,estimated,29.56623,101.84461,published,4540.0,,,,,,,False,digitized,0.05,Ablation area
+283,46,Baishui Glacier No. 1,G100187E27104N,estimated,27.10679,100.19538,published,4600.0,,,,,,,False,digitized,0.05,
+284,51,White Glacier,G269329E79672N,estimated,79.43863,-90.64459,published,205.0,Lower Ice,,,,,,False,digitized,0.2,Ablation area
 292,58,Grenzgletscher,G007800E45965N,published,45.96903,7.795159,published,2500.0,I9b,,,,,,False,digitized,0.05,Ablation area
-293,73,Austfonna,G024340E79634N,map guess,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
-294,73,Austfonna,G024340E79634N,map guess,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
-295,73,Austfonna,G024340E79634N,map guess,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
-296,73,Austfonna,G024340E79634N,map guess,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
-298,85,Grigoriev Ice Cap,G077894E41995N,map guess,41.977,77.916,published,4660.0,,,,mechanical,,,False,digitized,,
+293,73,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
+294,73,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
+295,73,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
+296,73,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,digitized,,Summit region
+298,85,Grigoriev Ice Cap,G077894E41995N,guessed,41.977,77.916,published,4660.0,,,,mechanical,,,False,digitized,,
 299,86,Grigoriev Ice Cap,G077923E41963N,published,41.975833,77.913333,published,4563.0,,,,mechanical,,86.87,True,digitized,,
-300,87,Jungfraufirn,G008032E46504N,map approximation,46.54778,7.99004,map approximation,3455.0,Shaft,,,,,,False,digitized,,
-301,87,Jungfraufirn,G008032E46504N,map approximation,46.54765,7.99011,map approximation,3455.0,Auxiliary Pit No. 1,,,,,,False,digitized,,
-302,87,Jungfraufirn,G008032E46504N,map approximation,46.54776,7.99019,map approximation,3455.0,Bore No. 1,,,,,,False,digitized,,
-303,87,Jungfraufirn,G008032E46504N,map approximation,46.54701,7.99302,map approximation,3460.0,Bore No. 2,,,,,,False,digitized,,
-304,87,Jungfraufirn,G008032E46504N,map approximation,46.54937,7.99514,map approximation,3500.0,Bore No. 3,,,,,,False,digitized,,
+300,87,Jungfraufirn,G008032E46504N,estimated,46.54778,7.99004,estimated,3455.0,Shaft,,,,,,False,digitized,,
+301,87,Jungfraufirn,G008032E46504N,estimated,46.54765,7.99011,estimated,3455.0,Auxiliary Pit No. 1,,,,,,False,digitized,,
+302,87,Jungfraufirn,G008032E46504N,estimated,46.54776,7.99019,estimated,3455.0,Bore No. 1,,,,,,False,digitized,,
+303,87,Jungfraufirn,G008032E46504N,estimated,46.54701,7.99302,estimated,3460.0,Bore No. 2,,,,,,False,digitized,,
+304,87,Jungfraufirn,G008032E46504N,estimated,46.54937,7.99514,estimated,3500.0,Bore No. 3,,,,,,False,digitized,,
 305,88,Vadret da Morteratsch,G009927E46382N,published,46.36736,9.92757,published,3853.0,PZ02,,,mechanical,,,False,published,0.05,Fuorcla dal Zupô
 306,88,Fieschergletscher,G008144E46504N,published,46.5515,8.0673,published,3893.0,hole 13,,,thermal,,,True,published,0.05,"Fiescherhorn | See Schwerzmann 2006 (https://doi.org/10.1029/2005JF000283) | Temperature at depth 70.7 m average of two measurements (-5.68 °C, -5.61 °C)"
 307,88,Fieschergletscher,G008144E46504N,published,46.55081,8.06798,published,3889.0,hole 23,,,thermal,,,True,published,0.05,"Fiescherhorn | See Schwerzmann 2006 (https://doi.org/10.1029/2005JF000283) | Temperature at depth 73 m average of two measurements (-4.534 °C, -4.526 °C)"
 308,88,Fieschergletscher,G008144E46504N,published,46.54988,8.06889,published,3890.0,hole 33,,,thermal,,,True,published,0.05,"Fiescherhorn | See Schwerzmann 2006 (https://doi.org/10.1029/2005JF000283) | Temperature at depth 73 m average of two measurements (-5.935 °C, -5.297 °C). The spread suggests the accuracy is worse than reported (0.05 °C)"
 309,88,Grenzgletscher,G007800E45965N,published,45.92947,7.87497,published,4454.51,CG03-1,,,mechanical,,82,True,published,0.05,"Colle Gnifetti | Temperature at depth 40 m (2003 profile) average of two measurements (-13.31 °C, -13.35 °C)"
 310,88,Glaciar La Ollada,G289889E31964S,published,-31.9666,-70.1166,published,6075.0,,,,mechanical,,103,True,published,0.05,glacier_name: Also spelled 'Glaciar La Hoyada' | Cerro Mercedario
-311,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,map guess,41.94673,77.92159,published,4170.0,,,,mechanical,,,False,published,,
-312,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,map guess,41.95054,77.92077,published,4250.0,,,,mechanical,,,False,published,,
-313,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,map guess,41.95308,77.91983,published,4293.0,,,,mechanical,,,False,published,,
-314,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,map guess,41.95457,77.91949,published,4305.0,,,,mechanical,,,False,published,,
-315,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,map guess,41.96407,77.91683,published,4420.0,,,,mechanical,,,False,published,,
+311,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.94673,77.92159,published,4170.0,,,,mechanical,,,False,published,,
+312,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.95054,77.92077,published,4250.0,,,,mechanical,,,False,published,,
+313,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.95308,77.91983,published,4293.0,,,,mechanical,,,False,published,,
+314,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.95457,77.91949,published,4305.0,,,,mechanical,,,False,published,,
+315,89,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.96407,77.91683,published,4420.0,,,,mechanical,,,False,published,,
 316,90,Ледник Григорьева [Grigoriev Ice Cap],G077894E41995N,published,41.979,77.916,published,4625.0,,,,mechanical,,,False,digitized,,
-317,92,Waldemarbreen,G012079E78681N,map approximation,78.67592,12.02321,map approximation,190.0,T1,,,,,,False,published,0.2,Ablation area
-318,89,ледник Ашу-Тор [Ashu-Tor Glacier],G078182E42041N,map guess,42.0462,78.174,published,4175.0,,,,,,,,published,,"location_origin: Based only on the glacier name in Table 3 (Ашу-Тор), which could refer to USSR glacier catalogue No. 324 (https://doi.org/10.1017/jog.2020.104, https://doi.org/10.15356/2076-6734-2012-1-5-14) or to either 326 to the west or 249 to the northwest (http://map.g-utka.ru/#14/42.0495/78.1643)"
+317,92,Waldemarbreen,G012079E78681N,estimated,78.67592,12.02321,estimated,190.0,T1,,,,,,False,published,0.2,Ablation area
+318,89,ледник Ашу-Тор [Ashu-Tor Glacier],G078182E42041N,guessed,42.0462,78.174,published,4175.0,,,,,,,,published,,"location_origin: Based only on the glacier name in Table 3 (Ашу-Тор), which could refer to USSR glacier catalogue No. 324 (https://doi.org/10.1017/jog.2020.104, https://doi.org/10.15356/2076-6734-2012-1-5-14) or to either 326 to the west or 249 to the northwest (http://map.g-utka.ru/#14/42.0495/78.1643)"
 320,93,Bruce Plateau,G295038E66311S,published,-66.0333,-64.0667,published,1975.5,L-Ba,2009-12-01,2010-01-03,mechanical,,143.18,False,published,0.1,"measurement.depth: Relative to early February 2010, so not adjusted for 3.8 m of snow accumulation through June 2010"
 321,93,Bruce Plateau,G295038E66311S,published,-66.0333,-64.0667,published,1975.5,L-Bb,2010-01-03,2010-02-01,combined,,447.73,True,published,0.1,
 322,94,Dolleman Island,G299288E70606S,published,-70.5833,-60.9333,published,398,Site 1,,,mechanical,,,False,digitized,0.02,
@@ -281,82 +281,82 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 325,96,Lomonosovfonna,G018391E78924N,published,78.86472,17.425,published,1230.0,,,,,,,False,digitized,0.05,
 326,97,Åsgårdfonna,G017048E79443N,published,79.443889,16.710833,published,1140.0,JAGE '93 site 2,,,mechanical,,,False,digitized,0.08,
 327,99,Belukha Glacier,G086577E49799N,published,49.8073,86.5786,published,4062.0,,,,,,140,True,published,0.07,
-328,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.88749,14.358547,published,422.0,1,,,mechanical,,,False,digitized,0.3,Accumulation area
-329,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.894613,14.354201,published,368.0,3,,,mechanical,,,False,digitized,0.3,Accumulation area
-330,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.898244,14.345511,published,323.0,4,,,mechanical,,,False,digitized,0.3,Ablation area
-331,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.903198,14.358004,published,268.0,5,,,mechanical,,,False,digitized,0.3,Ablation area
-332,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.913417,14.349587,published,192.0,6,,,mechanical,,,False,digitized,0.3,Ablation area
-333,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.915626,14.341255,published,171.0,6a,,,mechanical,,,False,digitized,0.3,Ablation area
-334,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.908715,14.329011,published,225.0,7,,,mechanical,,,False,digitized,0.3,Ablation area
-335,100,Austre Grønfjordbreen,G014342E77910N,map approximation,77.908935,14.365414,published,226.0,11,,,mechanical,,,False,digitized,0.3,
-336,100,Austre Grønfjordbreen,G014474E77889N,map approximation,77.884241,14.416763,published,440.0,12,,,mechanical,,,False,digitized,0.3,
+328,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.88749,14.358547,published,422.0,1,,,mechanical,,,False,digitized,0.3,Accumulation area
+329,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.894613,14.354201,published,368.0,3,,,mechanical,,,False,digitized,0.3,Accumulation area
+330,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.898244,14.345511,published,323.0,4,,,mechanical,,,False,digitized,0.3,Ablation area
+331,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.903198,14.358004,published,268.0,5,,,mechanical,,,False,digitized,0.3,Ablation area
+332,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.913417,14.349587,published,192.0,6,,,mechanical,,,False,digitized,0.3,Ablation area
+333,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.915626,14.341255,published,171.0,6a,,,mechanical,,,False,digitized,0.3,Ablation area
+334,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.908715,14.329011,published,225.0,7,,,mechanical,,,False,digitized,0.3,Ablation area
+335,100,Austre Grønfjordbreen,G014342E77910N,estimated,77.908935,14.365414,published,226.0,11,,,mechanical,,,False,digitized,0.3,
+336,100,Austre Grønfjordbreen,G014474E77889N,estimated,77.884241,14.416763,published,440.0,12,,,mechanical,,,False,digitized,0.3,
 337,126,Mount Elbrus,G042429E43293N,published,43.34831,42.42667,published,5115.0,,,,mechanical,,,False,digitized,0.1,"location_origin: Mikhalenko 2015 (https://doi.org/10.5194/tc-9-2253-2015) | elevation: Originally published as 5150 m, but later (likely after being resurveyed) as 5115 m in Mikhalenko 2015 (https://doi.org/10.5194/tc-9-2253-2015)"
 338,102,Mount Elbrus,G042429E43293N,published,43.34831,42.42667,published,5115.0,,,,mechanical,,,True,digitized,0.1,
 339,102,Mount Elbrus,G042429E43293N,published,43.34831,42.42667,published,5115.0,,,,mechanical,,,False,digitized,,
 340,103,Mount Elbrus,G042488E43308N,published,43.34804,42.45606,published,5565.0,,,,mechanical,20,,True,digitized,0.1,
-341,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.067178,87.767048,map approximation,2250.0,1,,,thermal,,,False,digitized,,
-342,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.065806,87.770736,map approximation,2275.0,2,,,thermal,,,False,digitized,,
-343,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.065355,87.768951,map approximation,2275.0,3,,,thermal,,,False,digitized,,
-344,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.065036,87.768044,map approximation,2275.0,4,,,thermal,,,False,digitized,,
-345,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.064754,87.767224,map approximation,2275.0,5,,,thermal,,,False,digitized,,
-346,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.064059,87.769010,map approximation,2325.0,6,,,thermal,,,False,digitized,,
-347,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.059126,87.769273,map approximation,2550.0,7,,,thermal,,,False,digitized,,
-348,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.050312,87.759175,map approximation,3225.0,8,,,thermal,,,False,digitized,,
-349,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,map approximation,50.047925,87.750686,map approximation,3325.0,9,,,thermal,,,False,digitized,,
-350,104,ледник Малый Актру [Maliy Aktru Glacier],G087720E50060N,map approximation,50.051834,87.737865,map approximation,3450.0,10,,,thermal,,,False,digitized,,
-351,104,ледник Водопадный [Vodopadniy Glacier],G087789E50050N,map approximation,50.0602,87.7894,published,3100.0,,,,thermal,,,False,digitized,,
-352,105,ледник Остров Сальм [Salm Island Glacier],G059273E79977N,map guess,79.95103,59.32068,map guess,100.0,,,,,,,False,digitized,,"location_origin/elevation_origin: Based only on the glacier name ('Salm Island, Franz Josef Land') and description ('near the glacier front'), which is ambiguous for a round ice cap"
-353,105,ледник Седова [Sedov Glacier],G053047E80333N,map guess,80.33466,52.95135,map guess,100.0,,,,,,,False,digitized,,"Original reference (not found): Разумейко Н. Г. (1960). Температура снега и льда. Стационарные наблюдения на леднике Седова. Маршрутное термозондирование льда на куполах Чурляниса и Джэксона и леднике Седова. Материалы гляциологических исследований. Земля Франца-Иосифа. Вып. 2, 118 с. | location_origin/elevation_origin: Based only on the glacier name ('Sedov Glacier, Hooker Island, Franz Josef Land') | temperature: Monthly means within a two year window"
-354,105,Ледник Шокальского [Shokalsky Glacier],G062675E76121N,map guess,76.11596,62.70996,published,290.0,,,,,0.74,,False,digitized,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area | measurement.depth: Relative to snow surface on 1959-04-16 | temperature: Profiles 2-6 are monthly means within a two year window"
-355,105,Ледник Шокальского [Shokalsky Glacier],G062675E76121N,map guess,76.15939,62.62276,published,170.0,,,,,0.45,,False,digitized,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area"
-356,105,Ледник Шокальского [Shokalsky Glacier],G062464E75974N,map guess,75.89360,62.98834,published,795.0,,,,,1.15,,False,digitized,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area"
+341,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.067178,87.767048,estimated,2250.0,1,,,thermal,,,False,digitized,,
+342,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.065806,87.770736,estimated,2275.0,2,,,thermal,,,False,digitized,,
+343,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.065355,87.768951,estimated,2275.0,3,,,thermal,,,False,digitized,,
+344,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.065036,87.768044,estimated,2275.0,4,,,thermal,,,False,digitized,,
+345,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.064754,87.767224,estimated,2275.0,5,,,thermal,,,False,digitized,,
+346,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.064059,87.769010,estimated,2325.0,6,,,thermal,,,False,digitized,,
+347,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.059126,87.769273,estimated,2550.0,7,,,thermal,,,False,digitized,,
+348,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.050312,87.759175,estimated,3225.0,8,,,thermal,,,False,digitized,,
+349,104,ледник Малый Актру [Maliy Aktru Glacier],G087761E50048N,estimated,50.047925,87.750686,estimated,3325.0,9,,,thermal,,,False,digitized,,
+350,104,ледник Малый Актру [Maliy Aktru Glacier],G087720E50060N,estimated,50.051834,87.737865,estimated,3450.0,10,,,thermal,,,False,digitized,,
+351,104,ледник Водопадный [Vodopadniy Glacier],G087789E50050N,estimated,50.0602,87.7894,published,3100.0,,,,thermal,,,False,digitized,,
+352,105,ледник Остров Сальм [Salm Island Glacier],G059273E79977N,guessed,79.95103,59.32068,guessed,100.0,,,,,,,False,digitized,,"location_origin/elevation_origin: Based only on the glacier name ('Salm Island, Franz Josef Land') and description ('near the glacier front'), which is ambiguous for a round ice cap"
+353,105,ледник Седова [Sedov Glacier],G053047E80333N,guessed,80.33466,52.95135,guessed,100.0,,,,,,,False,digitized,,"Original reference (not found): Разумейко Н. Г. (1960). Температура снега и льда. Стационарные наблюдения на леднике Седова. Маршрутное термозондирование льда на куполах Чурляниса и Джэксона и леднике Седова. Материалы гляциологических исследований. Земля Франца-Иосифа. Вып. 2, 118 с. | location_origin/elevation_origin: Based only on the glacier name ('Sedov Glacier, Hooker Island, Franz Josef Land') | temperature: Monthly means within a two year window"
+354,105,Ледник Шокальского [Shokalsky Glacier],G062675E76121N,guessed,76.11596,62.70996,published,290.0,,,,,0.74,,False,digitized,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area | measurement.depth: Relative to snow surface on 1959-04-16 | temperature: Profiles 2-6 are monthly means within a two year window"
+355,105,Ледник Шокальского [Shokalsky Glacier],G062675E76121N,guessed,76.15939,62.62276,published,170.0,,,,,0.45,,False,digitized,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area"
+356,105,Ледник Шокальского [Shokalsky Glacier],G062464E75974N,guessed,75.89360,62.98834,published,795.0,,,,,1.15,,False,digitized,,"Original reference (not found): Хмелевской И. Ф. (1963). Температура снега, фирна и льда. Стационарные наблюдения на станции Барьер Сомнений и маршрутные исследования. Материалы гляциологических исследований. Новая Земля. Вып. 2. 92 с. | Ablation area"
 357,106,Austre Lovénbreen,G012161E78870N,digitized,78.88196,12.1444235,published,210.0,B2,,,mechanical,0,,False,digitized,0.01,ice_depth: Seasonal snow is neglected
 358,106,Austre Lovénbreen,G012161E78870N,digitized,78.863396,12.176186,published,410.0,E2,,,mechanical,0,,False,digitized,0.01,ice_depth: Seasonal snow is neglected
 359,106,Austre Lovénbreen,G012161E78870N,digitized,78.86125,12.185525,published,473.0,F,,,mechanical,0,,False,digitized,0.01,ice_depth: Seasonal snow is neglected
-360,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,map guess,38.2849,75.0772,published,6350.0,Core 2: A3,,,,,,True,digitized,,ice_depth: Upper layer is mainly granular snow
-361,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,map guess,38.2849,75.0772,published,6350.0,Core 2: B1,,,,,,False,digitized,,ice_depth: Upper layer is mainly granular snow
-362,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,map guess,38.2866,75.0735,published,6250.0,Core 3: A3,,,,,,False,digitized,,ice_depth: Upper layer is mainly granular snow
-363,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,map guess,38.2866,75.0735,published,6250.0,Core 3: B1,,,,,,False,digitized,,ice_depth: Upper layer is mainly granular snow
-364,108,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,map guess,38.2795,75.0985,published,7010.0,Core 3,,,mechanical,34,,True,digitized,0.01,ice_depth: Mainly granular snow in the upper part
-365,109,羊龙河5号冰川 [Yanglong River Glacier No. 5],G098570E39226N,map guess,39.2337,98.5781,published,4513.0,1,,,,,,False,published,,"Original reference (not found): 祁连山冰雪利用研究队, 1980, 祁连山冰川的近期变化, 地理学报, 35(1), 48-57 | Original reference (not found): 伍光和等, 1980, 祁连山现代冰川基本特征研究, 兰州大学学报(自然科学版), 第三期, 127-134 (https://ir.lzu.edu.cn/handle/262010/146442) | measurement.depth: Relative to ice surface on 1977-06-26"
-366,109,羊龙河5号冰川 [Yanglong River Glacier No. 5],G098570E39226N,map guess,39.2263,98.5713,published,4648.0,2,,,,,,False,published,,"Original reference (not found): 祁连山冰雪利用研究队, 1980, 祁连山冰川的近期变化, 地理学报, 35(1), 48-57 | Original reference (not found): 伍光和等, 1980, 祁连山现代冰川基本特征研究, 兰州大学学报(自然科学版), 第三期, 127-134 (https://ir.lzu.edu.cn/handle/262010/146442) | measurement.depth: Relative to ice surface on 1977-06-26"
-367,109,羊龙河5号冰川 [Yanglong River Glacier No. 5],G098570E39226N,map guess,39.2174,98.5594,published,4835.0,3,,,,,,False,published,,"Original reference (not found): 祁连山冰雪利用研究队, 1980, 祁连山冰川的近期变化, 地理学报, 35(1), 48-57 | Original reference (not found): 伍光和等, 1980, 祁连山现代冰川基本特征研究, 兰州大学学报(自然科学版), 第三期, 127-134 (https://ir.lzu.edu.cn/handle/262010/146442) | measurement.depth: Relative to ice surface on 1977-06-29"
-368,110,Baishui Glacier No. 1,G100187E27104N,map guess,27.1077,100.1945,published,4621.0,T1,,,,,,False,digitized,,temperature: Influenced by meltwater and heat exchange
-369,110,Baishui Glacier No. 1,G100187E27104N,map guess,27.1063,100.1934,published,4668.0,T4,,,,,,False,digitized,,temperature: Influenced by meltwater and heat exchange
-370,110,Baishui Glacier No. 1,G100187E27104N,map guess,27.1046,100.1896,published,4756.0,T5,,,,,,False,digitized,,
-371,111,Bogda Fan-Shaped Diffluence Glacier,G088313E43812N,map guess,43.8154,88.2999,published,3750.0,,,,thermal,0,,False,published,0.1,"location_origin: Based on reported elevation, Chinese Glacier Inventory (CGI) codes 5Y725D5 and 5Y812B10 (https://doi.org/10.3972/glacier.001.2013.db), and Figure 3 in Qiu 1983 (https://doi.org/10.7522/j.issn.1000-0240.1983.0055) | ice_depth: Surface snow was at most 16 cm during temperature measurements"
-372,112,哈拉斯冰川 [Halasi Glacier],G087783E49100N,map approximation,49.1148,87.7665,published,2780.0,I,,,,,,False,published,,"location_origin: Based on Figure 1, reported elevation, and Chinese Glacier Inventory (CGI) code 5A255E21 (https://doi.org/10.3972/glacier.001.2013.db)"
-373,112,哈拉斯冰川 [Halasi Glacier],G087783E49100N,map approximation,49.1152,87.7933,published,2950.0,II,,,,,,False,published,,"location_origin: Based on Figure 1, reported elevation, and Chinese Glacier Inventory (CGI) code 5A255E21 (https://doi.org/10.3972/glacier.001.2013.db)"
-374,112,哈拉斯冰川 [Halasi Glacier],G087783E49100N,map approximation,49.1177,87.8211,published,3180.0,III,,,,,,False,published,,"location_origin: Based on Figure 1, reported elevation, and Chinese Glacier Inventory (CGI) code 5A255E21 (https://doi.org/10.3972/glacier.001.2013.db)"
-375,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1119,86.7979,published,4483.6,,,,mechanical,,,False,published,,measurement.depth: Includes 5.5 m of snow | temperature: Measured by telemetery
-376,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1171,86.8027,published,4075.0,H,,,thermal,,,False,digitized,0.1,
-377,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1169,86.8003,published,4125.0,I,,,thermal,,,False,digitized,0.1,
-378,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1061,86.8068,published,4055.0,H',,,thermal,,,False,digitized,0.1,
-379,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1191,86.8085,published,3967.0,D,,,thermal,,,False,published,0.1,Only deepest temperature reported
-380,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1186,86.8065,published,4000.0,E,,,thermal,,,False,published,0.1,Only deepest temperature reported
-381,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1189,86.8029,published,4031.0,F1,,,thermal,,,False,published,0.1,Only deepest temperature reported
-382,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1180,86.8048,published,4037.0,F2,,,thermal,,,False,published,0.1,Only deepest temperature reported
-383,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1172,86.8054,published,4057.0,F3,,,thermal,,,False,published,0.1,Only deepest temperature reported
-384,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,map approximation,43.1177,86.8010,published,4082.0,G,,,thermal,,,False,published,0.1,Only deepest temperature reported
-385,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1165,86.8144,published,3800.0,B1',,,thermal,,,False,published,0.1,Only deepest temperature reported
-386,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1157,86.8146,published,3810.0,B2',,,thermal,,,False,published,0.1,Only deepest temperature reported
-387,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1138,86.8093,published,3893.0,D1',,,thermal,,,False,published,0.1,Only deepest temperature reported
-388,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1129,86.8102,published,3898.0,D2',,,thermal,,,False,published,0.1,Only deepest temperature reported
-389,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1092,86.8074,published,3972.0,F1',,,thermal,,,False,published,0.1,Only deepest temperature reported
-390,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1087,86.8082,published,3975.0,F2',,,thermal,,,False,published,0.1,Only deepest temperature reported
-391,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1084,86.8092,published,3973.0,F3',,,thermal,,,False,published,0.1,Only deepest temperature reported
-392,114,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,map approximation,43.1059,86.8067,published,4050.0,H1,,,mechanical,3,,True,digitized,,
-393,115,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,map approximation,35.2219,81.4891,published,6040.0,Site 1,,,mechanical,,,False,digitized,,
+360,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,guessed,38.2849,75.0772,published,6350.0,Core 2: A3,,,,,,True,digitized,,ice_depth: Upper layer is mainly granular snow
+361,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,guessed,38.2849,75.0772,published,6350.0,Core 2: B1,,,,,,False,digitized,,ice_depth: Upper layer is mainly granular snow
+362,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,guessed,38.2866,75.0735,published,6250.0,Core 3: A3,,,,,,False,digitized,,ice_depth: Upper layer is mainly granular snow
+363,107,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,guessed,38.2866,75.0735,published,6250.0,Core 3: B1,,,,,,False,digitized,,ice_depth: Upper layer is mainly granular snow
+364,108,慕士塔格冰川 [Muztagh Glacier],G075086E38293N,guessed,38.2795,75.0985,published,7010.0,Core 3,,,mechanical,34,,True,digitized,0.01,ice_depth: Mainly granular snow in the upper part
+365,109,羊龙河5号冰川 [Yanglong River Glacier No. 5],G098570E39226N,guessed,39.2337,98.5781,published,4513.0,1,,,,,,False,published,,"Original reference (not found): 祁连山冰雪利用研究队, 1980, 祁连山冰川的近期变化, 地理学报, 35(1), 48-57 | Original reference (not found): 伍光和等, 1980, 祁连山现代冰川基本特征研究, 兰州大学学报(自然科学版), 第三期, 127-134 (https://ir.lzu.edu.cn/handle/262010/146442) | measurement.depth: Relative to ice surface on 1977-06-26"
+366,109,羊龙河5号冰川 [Yanglong River Glacier No. 5],G098570E39226N,guessed,39.2263,98.5713,published,4648.0,2,,,,,,False,published,,"Original reference (not found): 祁连山冰雪利用研究队, 1980, 祁连山冰川的近期变化, 地理学报, 35(1), 48-57 | Original reference (not found): 伍光和等, 1980, 祁连山现代冰川基本特征研究, 兰州大学学报(自然科学版), 第三期, 127-134 (https://ir.lzu.edu.cn/handle/262010/146442) | measurement.depth: Relative to ice surface on 1977-06-26"
+367,109,羊龙河5号冰川 [Yanglong River Glacier No. 5],G098570E39226N,guessed,39.2174,98.5594,published,4835.0,3,,,,,,False,published,,"Original reference (not found): 祁连山冰雪利用研究队, 1980, 祁连山冰川的近期变化, 地理学报, 35(1), 48-57 | Original reference (not found): 伍光和等, 1980, 祁连山现代冰川基本特征研究, 兰州大学学报(自然科学版), 第三期, 127-134 (https://ir.lzu.edu.cn/handle/262010/146442) | measurement.depth: Relative to ice surface on 1977-06-29"
+368,110,Baishui Glacier No. 1,G100187E27104N,guessed,27.1077,100.1945,published,4621.0,T1,,,,,,False,digitized,,temperature: Influenced by meltwater and heat exchange
+369,110,Baishui Glacier No. 1,G100187E27104N,guessed,27.1063,100.1934,published,4668.0,T4,,,,,,False,digitized,,temperature: Influenced by meltwater and heat exchange
+370,110,Baishui Glacier No. 1,G100187E27104N,guessed,27.1046,100.1896,published,4756.0,T5,,,,,,False,digitized,,
+371,111,Bogda Fan-Shaped Diffluence Glacier,G088313E43812N,guessed,43.8154,88.2999,published,3750.0,,,,thermal,0,,False,published,0.1,"location_origin: Based on reported elevation, Chinese Glacier Inventory (CGI) codes 5Y725D5 and 5Y812B10 (https://doi.org/10.3972/glacier.001.2013.db), and Figure 3 in Qiu 1983 (https://doi.org/10.7522/j.issn.1000-0240.1983.0055) | ice_depth: Surface snow was at most 16 cm during temperature measurements"
+372,112,哈拉斯冰川 [Halasi Glacier],G087783E49100N,estimated,49.1148,87.7665,published,2780.0,I,,,,,,False,published,,"location_origin: Based on Figure 1, reported elevation, and Chinese Glacier Inventory (CGI) code 5A255E21 (https://doi.org/10.3972/glacier.001.2013.db)"
+373,112,哈拉斯冰川 [Halasi Glacier],G087783E49100N,estimated,49.1152,87.7933,published,2950.0,II,,,,,,False,published,,"location_origin: Based on Figure 1, reported elevation, and Chinese Glacier Inventory (CGI) code 5A255E21 (https://doi.org/10.3972/glacier.001.2013.db)"
+374,112,哈拉斯冰川 [Halasi Glacier],G087783E49100N,estimated,49.1177,87.8211,published,3180.0,III,,,,,,False,published,,"location_origin: Based on Figure 1, reported elevation, and Chinese Glacier Inventory (CGI) code 5A255E21 (https://doi.org/10.3972/glacier.001.2013.db)"
+375,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1119,86.7979,published,4483.6,,,,mechanical,,,False,published,,measurement.depth: Includes 5.5 m of snow | temperature: Measured by telemetery
+376,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1171,86.8027,published,4075.0,H,,,thermal,,,False,digitized,0.1,
+377,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1169,86.8003,published,4125.0,I,,,thermal,,,False,digitized,0.1,
+378,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1061,86.8068,published,4055.0,H',,,thermal,,,False,digitized,0.1,
+379,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1191,86.8085,published,3967.0,D,,,thermal,,,False,published,0.1,Only deepest temperature reported
+380,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1186,86.8065,published,4000.0,E,,,thermal,,,False,published,0.1,Only deepest temperature reported
+381,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1189,86.8029,published,4031.0,F1,,,thermal,,,False,published,0.1,Only deepest temperature reported
+382,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1180,86.8048,published,4037.0,F2,,,thermal,,,False,published,0.1,Only deepest temperature reported
+383,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1172,86.8054,published,4057.0,F3,,,thermal,,,False,published,0.1,Only deepest temperature reported
+384,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086801E43117N,estimated,43.1177,86.8010,published,4082.0,G,,,thermal,,,False,published,0.1,Only deepest temperature reported
+385,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1165,86.8144,published,3800.0,B1',,,thermal,,,False,published,0.1,Only deepest temperature reported
+386,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1157,86.8146,published,3810.0,B2',,,thermal,,,False,published,0.1,Only deepest temperature reported
+387,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1138,86.8093,published,3893.0,D1',,,thermal,,,False,published,0.1,Only deepest temperature reported
+388,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1129,86.8102,published,3898.0,D2',,,thermal,,,False,published,0.1,Only deepest temperature reported
+389,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1092,86.8074,published,3972.0,F1',,,thermal,,,False,published,0.1,Only deepest temperature reported
+390,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1087,86.8082,published,3975.0,F2',,,thermal,,,False,published,0.1,Only deepest temperature reported
+391,113,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1084,86.8092,published,3973.0,F3',,,thermal,,,False,published,0.1,Only deepest temperature reported
+392,114,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1059,86.8067,published,4050.0,H1,,,mechanical,3,,True,digitized,,
+393,115,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2219,81.4891,published,6040.0,Site 1,,,mechanical,,,False,digitized,,
 394,116,Puruogangri Ice Cap,G089122E33894N,digitized,33.91203,89.11842,published,5961.0,C1 | Dome B,,,mechanical,0,118.4,True,digitized,,location_origin: Figure 1 in Liu 2016 (https://doi.org/10.3390/w8110496). May be swapped with C2
 395,116,Puruogangri Ice Cap,G089122E33894N,digitized,33.92259,89.12193,published,5980.0,C2 | Dome A,,,mechanical,0,,False,digitized,,location_origin: Figure 1 in Liu 2016 (https://doi.org/10.3390/w8110496). May be swapped with C1
 396,139,Dasuopu Glacier,G085752E28395N,published,28.3833,85.7166,published,7200.0,C3,,,mechanical,,167.7,True,submitted,,See Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916) | location: Confirmed by Figure 1 in Yao 2002 (https://doi.org/10.3189/172756402781816997) | temperature: Submitted temperature at 10 m (-13.6°C) does not match -16°C published in Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916)
-397,74,East Rongbuk Glacier,G086939E28060N,map approximation,28.0890,86.9145,published,5710.0,BH3,,,,,,,digitized,,
-398,118,East Rongbuk Glacier,G086939E28060N,map approximation,28.01883,86.96125,published,6518.0,core 2002,,,mechanical,,108.83,True,published,,temperature: Minimum measured at 20 m | location_origin: Figure 1 in Hou 2007 (https://doi.org/10.5194/cp-3-89-2007) | profile.date_min/date_max: Zhang 2013 (https://doi.org/10.3189/2013JoG12J202)
-399,119,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map approximation,35.2374,81.1286,published,6010.0,Core 1,,,mechanical,,133.8,True,digitized,,
-400,119,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map approximation,35.2373,81.1155,published,6010.0,Core 2,,,mechanical,,135.8,True,digitized,,
-401,119,崇测冰帽 [Chongce Ice Cap],G081119E35239N,map approximation,35.2359,81.1161,published,6010.0,Core 3,,,mechanical,,,False,digitized,,
+397,74,East Rongbuk Glacier,G086939E28060N,estimated,28.0890,86.9145,published,5710.0,BH3,,,,,,,digitized,,
+398,118,East Rongbuk Glacier,G086939E28060N,estimated,28.01883,86.96125,published,6518.0,core 2002,,,mechanical,,108.83,True,published,,temperature: Minimum measured at 20 m | location_origin: Figure 1 in Hou 2007 (https://doi.org/10.5194/cp-3-89-2007) | profile.date_min/date_max: Zhang 2013 (https://doi.org/10.3189/2013JoG12J202)
+399,119,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.2374,81.1286,published,6010.0,Core 1,,,mechanical,,133.8,True,digitized,,
+400,119,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.2373,81.1155,published,6010.0,Core 2,,,mechanical,,135.8,True,digitized,,
+401,119,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.2359,81.1161,published,6010.0,Core 3,,,mechanical,,,False,digitized,,
 402,120,Trambau Glacier,G086537E27874N,digitized,27.9187,86.5453,published,5860.0,,,,mechanical,,,False,digitized,,temperature: Measured over two hours (with increasing depth) immediately after drilling | The 10 m depth temperature (-0.82°C) is significantly warmer than the annual mean temperature (-8.7°C). Melting and refreezing may have increased the ice temperature at the drilling site
-403,121,Blue Glacier,G236316E47813N,map guess,47.8095,-123.6873,map guess,1675.0,R1,,,thermal,,,False,digitized,0.03,Water-filled borehole near the glacier equilibrium line | temperature: Inferred from measured borehole closure rates
+403,121,Blue Glacier,G236316E47813N,guessed,47.8095,-123.6873,guessed,1675.0,R1,,,thermal,,,False,digitized,0.03,Water-filled borehole near the glacier equilibrium line | temperature: Inferred from measured borehole closure rates
 404,122,Nelson Island Ice Cap,G301002E62274S,digitized,-62.2511,-59.0144,published,90.0,I,,,,,,False,published,0.1,
 405,122,Nelson Island Ice Cap,G301002E62274S,digitized,-62.2579,-59.0424,published,140.0,II,,,,,,False,published,0.1,
 406,122,Nelson Island Ice Cap,G300887E62269S,digitized,-62.2717,-59.0537,published,160.0,III,,,,,,False,published,0.1,
@@ -369,7 +369,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 413,124,Collins Ice Cap,G301112E62165S,digitized,-62.1604,-58.8931,published,252.0,SD6,,,mechanical,,,False,digitized,0.1,Accumulation area | Profiles 3 and 4 in figure 3c are indistinguishable and have been combined
 414,124,Collins Ice Cap,G301112E62165S,digitized,-62.1682,-58.9102,published,180.0,SD8,,,mechanical,,,False,digitized,0.1,Accumulation area
 415,124,Collins Ice Cap,G301112E62165S,digitized,-62.1706,-58.9168,published,110.0,SD9,,,mechanical,,,False,digitized,0.1,Ablation area
-416,125,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,map guess,43.3112,42.4643,published,3950.0,,,,mechanical,,76,True,digitized,,Accumulation area | temperature: Only reported for active layer (0-12 m)
+416,125,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,guessed,43.3112,42.4643,published,3950.0,,,,mechanical,,76,True,digitized,,Accumulation area | temperature: Only reported for active layer (0-12 m)
 417,127,Jarvis Glacier,G214333E63481N,published,63.4750,-145.6753,published,1621,JA,,,mechanical,,80,True,published,,elevation_origin: Lee 2020 (https://doi.org/10.1017/jog.2019.84)
 418,127,Jarvis Glacier,G214333E63481N,published,63.4743,-145.6766,published,1625,JE,,,mechanical,,18,True,published,,elevation_origin: Lee 2020 (https://doi.org/10.1017/jog.2019.84)
 419,128,Blåskimen Island Ice Rise,G356949E70424S,digitized,-70.3962,-3.0339,published,410,,,,mechanical,,,False,published,0.1,Only the the last temperature profile (of 1496 profiles measured over 25 hours) are recorded here | location_origin: Figure 1 in Goel 2017 (https://doi.org/10.5194/tc-11-2883-2017)
@@ -388,126 +388,126 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 433,131,Glacier de Tête Rousse,G006819E45856N,submitted,45.85629562,6.820800498,submitted,3185.906,2208,,,,,,,submitted,,elevation: Measured on 2022-07-06 | Folllows borehole 423
 434,131,Glacier de Tête Rousse,G006819E45856N,submitted,45.85650829,6.821189669,submitted,3195.312,2209,,,,,,,submitted,,elevation: Measured on 2022-07-06
 435,131,Glacier de Tête Rousse,G006819E45856N,submitted,45.85605748,6.8215824,submitted,3200.716,2210,,,,,,,submitted,,elevation: Measured on 2022-07-06 | Folllows borehole 425
-436,65,Glacier des Bossons,G006865E45868N,map approximation,45.84093,6.84703,map approximation,4236.7,5,,,thermal,,,,digitized,,Col du Dôme
-437,65,Glacier des Bossons,G006844E45863N,map approximation,45.8427,6.84357,map approximation,4300,99-B,,,mechanical,,,True,digitized,,Dôme du Gouter
-438,65,Grenzgletscher,G007908E45948N,map approximation,45.93033,7.87493,map approximation,4450,00A,,,thermal,,,,digitized,,Colle Gnifetti
-439,132,Ледник Бертиль [Bertilbreen],G016264E78699N,map approximation,78.70055,16.25359,map approximation,475,1,1980-02-01,1980-05-31,thermal,,107.5,True,digitized,0.1,measurement_origin: Temperature at bed published separately in text
-440,132,Ледник Бертиль [Bertilbreen],G016264E78699N,map approximation,78.68885,16.27431,map approximation,440,2,,,thermal,,,False,digitized,,
-441,132,Ледник Бертиль [Bertilbreen],G016264E78699N,map approximation,78.66816,16.27756,map approximation,120,,,,,,,False,published,,Natural cavity | Bed at about 40 m
-442,132,Ледник Багер [Bogerbreen],G015633E78130N,map guess,78.12212,15.63861,published,600,,,,thermal,,16,False,digitized,,Temperatures were only measured to 7 m before surface water flowed into the hole | Low temperatures are assumed at depth due to rapid ice formation on the borehole walls
-443,132,Ледниковогоплато Амундсена [Amundsenisen],G015444E77229N,map guess,77.26422,15.60097,published,700,,,,thermal,24,580,True,digitized,,
-444,137,Austre Grønfjordbreen,G014342E77910N,map guess,77.886,14.363,published,450,,1975-06-01,1975-06-30,thermal,3.78,211.1,True,digitized,,"location_origin: On ice divide between Austre Grønfjordbreen and Fridtjofbreen | elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | temperature: Text gives -0.27°C at 17 m, -0.16°C at 32.4 m, and -0.38°C at 83 m (which do not exactly match Figure 4)"
-445,138,Austre Grønfjordbreen,G014342E77910N,map approximation,77.886,14.363,map approximation,450,1,1975-01-01,1975-12-31,thermal,,213,True,published,,Maybe the same as borehole 444 (if 1979 expedition read the same 1975 thermistor chain read by 1976 expedition)
-446,138,Fridtjofbreen,G014442E77835N,map approximation,77.868,14.387,map approximation,380,2,1979-01-01,1979-12-31,thermal,,,False,published,,
+436,65,Glacier des Bossons,G006865E45868N,estimated,45.84093,6.84703,estimated,4236.7,5,,,thermal,,,,digitized,,Col du Dôme
+437,65,Glacier des Bossons,G006844E45863N,estimated,45.8427,6.84357,estimated,4300,99-B,,,mechanical,,,True,digitized,,Dôme du Gouter
+438,65,Grenzgletscher,G007908E45948N,estimated,45.93033,7.87493,estimated,4450,00A,,,thermal,,,,digitized,,Colle Gnifetti
+439,132,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.70055,16.25359,estimated,475,1,1980-02-01,1980-05-31,thermal,,107.5,True,digitized,0.1,measurement_origin: Temperature at bed published separately in text
+440,132,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.68885,16.27431,estimated,440,2,,,thermal,,,False,digitized,,
+441,132,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.66816,16.27756,estimated,120,,,,,,,False,published,,Natural cavity | Bed at about 40 m
+442,132,Ледник Багер [Bogerbreen],G015633E78130N,guessed,78.12212,15.63861,published,600,,,,thermal,,16,False,digitized,,Temperatures were only measured to 7 m before surface water flowed into the hole | Low temperatures are assumed at depth due to rapid ice formation on the borehole walls
+443,132,Ледниковогоплато Амундсена [Amundsenisen],G015444E77229N,guessed,77.26422,15.60097,published,700,,,,thermal,24,580,True,digitized,,
+444,137,Austre Grønfjordbreen,G014342E77910N,guessed,77.886,14.363,published,450,,1975-06-01,1975-06-30,thermal,3.78,211.1,True,digitized,,"location_origin: On ice divide between Austre Grønfjordbreen and Fridtjofbreen | elevation_origin: Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013) | temperature: Text gives -0.27°C at 17 m, -0.16°C at 32.4 m, and -0.38°C at 83 m (which do not exactly match Figure 4)"
+445,138,Austre Grønfjordbreen,G014342E77910N,estimated,77.886,14.363,estimated,450,1,1975-01-01,1975-12-31,thermal,,213,True,published,,Maybe the same as borehole 444 (if 1979 expedition read the same 1975 thermistor chain read by 1976 expedition)
+446,138,Fridtjofbreen,G014442E77835N,estimated,77.868,14.387,estimated,380,2,1979-01-01,1979-12-31,thermal,,,False,published,,
 447,139,Nevado Huascarán,G282414E09082S,published,-9.111389,-77.61472,published,6048,,,,thermal,,160.4,True,submitted,,See Thompson 1995 (https://doi.org/10.1126/science.269.5220.46) | depth: Either 160.4 m (core 1) or 166.1 m (core 2)
-448,139,Quelccaya Ice Cap,G289183E13941S,map guess,-13.930,-70.823,published,5670,,,,mechanical,26,,,submitted,1,See Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269) | profile.date_min/date_max: https://research.bpcrc.osu.edu/Icecore/vitae/lgt_cv_old_format_2015.pdf | drill_method: mechanical down to 100-124 m and thermal beyond
+448,139,Quelccaya Ice Cap,G289183E13941S,guessed,-13.930,-70.823,published,5670,,,,mechanical,26,,,submitted,1,See Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269) | profile.date_min/date_max: https://research.bpcrc.osu.edu/Icecore/vitae/lgt_cv_old_format_2015.pdf | drill_method: mechanical down to 100-124 m and thermal beyond
 449,139,Dasuopu Glacier,G085752E28395N,published,28.3832,85.7156,published,7200,C2,,,mechanical,,149.2,True,submitted,,See Thompson 2000 (https://doi.org/10.1126/science.289.5486.1916) | location: Confirmed by Figure 1 in Yao et al. 2002 (https://doi.org/10.3189/172756402781816997)
-450,139,Mount Kilimanjaro,G037352E03058S,map guess,-3.059,37.348,map guess,5780,NIF1,,,,,50.9,True,submitted,,See Thompson 2002 (https://doi.org/10.1126/science.1073198)
-451,139,Naimona'nyi Gacier,G081317E30454N,map guess,30.449,81.329,published,6050,,,,,,,,submitted,,elevation_origin: Table 1 in Thompson 2018 (https://doi.org/10.1016/j.quascirev.2018.03.003)
+450,139,Mount Kilimanjaro,G037352E03058S,guessed,-3.059,37.348,guessed,5780,NIF1,,,,,50.9,True,submitted,,See Thompson 2002 (https://doi.org/10.1126/science.1073198)
+451,139,Naimona'nyi Gacier,G081317E30454N,guessed,30.449,81.329,published,6050,,,,,,,,submitted,,elevation_origin: Table 1 in Thompson 2018 (https://doi.org/10.1016/j.quascirev.2018.03.003)
 452,139,South Inylchek Glacier,G079787E42137N,digitized,42.2087,80.2038,published,5100,Borehole 1,,,mechanical,,,False,submitted,0.4,See Aizen 2000 (https://doi.org/10.2172/794067) | Ice thickness estimated as 285-300 m by radio echo sounding | temperature: Temperature at 1 m fluctuated between -10.5 and -12.2°C over the observation period (2000-08-04 to 2008-08-07)
-453,140,Western Belukha Plateau,G086544E49802N,map approximation,49.807,86.563,published,4125,,,,mechanical,,171.3,True,digitized,,elevation_origin: Published as 4100-4150 m
+453,140,Western Belukha Plateau,G086544E49802N,estimated,49.807,86.563,published,4125,,,,mechanical,,171.3,True,digitized,,elevation_origin: Published as 4100-4150 m
 454,141,Quelccaya Ice Cap,G289167E13923S,digitized,-13.925459,-70.82232,published,5650,1,,,mechanical,INF,,False,digitized,,
 455,142,Russell Glacier,G218192E61498N,published,61.4,-141.7,published,4420,,2002-04-30,2002-06-10,combined,,460,True,published,,location_origin: Col between Mount Bona and Mount Churchill | drill_method: Mechanical to 180 m and thermal beyond. See Zagorodnov 2005 (https://doi.org/10.3189/172756505781829269) | Field logistics described at https://byrd.osu.edu/research/groups/ice-core-paleoclimatology/projects/bona-churchill-alaska
 456,143,Zangser Kangri Glacier,G085843E34297N,published,34.301611,85.853944,published,6226,,,,,,127.7,True,published,,depth: Either 127.7 m (core 1) or 126.7 m (core 2) | temperature: Mean -11.7°C and min -15.2°C (depth not given)
-457,144,Vedretta Alta dell’Ortles,G010536E46513N,map approximation,46.5075,10.5411,published,3830,Shallow core,,,mechanical,INF,,False,digitized,,
-458,144,Vedretta Alta dell’Ortles,G010536E46513N,map approximation,46.5075,10.5413,published,3830,Snow pit,,,mechanical,INF,,False,digitized,,
+457,144,Vedretta Alta dell’Ortles,G010536E46513N,estimated,46.5075,10.5411,published,3830,Shallow core,,,mechanical,INF,,False,digitized,,
+458,144,Vedretta Alta dell’Ortles,G010536E46513N,estimated,46.5075,10.5413,published,3830,Snow pit,,,mechanical,INF,,False,digitized,,
 459,145,Vedretta Alta dell’Ortles,G010536E46513N,published,46.50775,10.54144,published,3830,AWS site,,,thermal,INF,,False,published,0.5,Upper accumulation area | measurement.depth: Relative to surface on 2012-06-18 (installation) but increased up to 6 m due to snow accumulation | temperature_accuracy: Table 1 in Carturan 2023 (https://doi.org/10.5194/essd-15-4661-2023)
 460,145,Vedretta Alta dell’Ortles,G010536E46513N,published,46.50699,10.54289,published,3859,Borehole drilling site (no. 3),,,mechanical,,74.83,True,published,0.1,Upper accumulation area | measurement.depth: Relative to surface on 2011-10-05 (installation) | ice_depth: See Gabrielli 2016 (https://doi.org/10.5194/tc-10-2779-2016) | See Gabrielli 2012 (https://doi.org/10.4461/GFDQ.2012.35.10) | temperature_accuracy: Table 1 in Carturan 2023 (https://doi.org/10.5194/essd-15-4661-2023) | Borehole was equipped with two thermistor strings: long (profile_id 1-12236) and short (profile_id 12237-43885)
 461,145,Hintergrat Glacier,G010554E46507N,published,46.50553,10.55669,published,3476,,,,thermal,30,,False,published,0.1,Ablation area | measurement.depth: Relative to surface on 2011-10-14 (installation). Sensor at 1.5 m reached the surface by summer 2013 | ice_depth: See Gabrielli 2016 (https://doi.org/10.5194/tc-10-2779-2016) | temperature_accuracy: Table 1 in Carturan 2023 (https://doi.org/10.5194/essd-15-4661-2023)
-462,146,Austre Grønfjordbreen,G014342E77910N,map guess,77.8862,14.3553,published,450,,,,,INF,,False,published,,location_origin: On ice divide between Austre Grønfjordbreen and Fridtjofbreen | ice_depth: Firn with ice layers
+462,146,Austre Grønfjordbreen,G014342E77910N,guessed,77.8862,14.3553,published,450,,,,,INF,,False,published,,location_origin: On ice divide between Austre Grønfjordbreen and Fridtjofbreen | ice_depth: Firn with ice layers
 463,147,McCall Glacier,G216152E69302N,digitized,69.2925,-143.7844,published,2298,,,,thermal,,,False,digitized,0.1,location_origin: IGY camp digitized from Figure 1 in Weller 2007 (https://doi.org/10.14430/arctic280)
-464,148,Glacier des Bossons,G006865E45868N,map approximation,45.8411,6.8471,published,4240,Deuxième puits,,,mechanical,INF,,False,published,,Snow pit | location_origin: Col du Dôme
-465,149,Glacier des Bossons,G006865E45868N,map approximation,45.8387,6.8503,published,4280,4250 m,,,,INF,,False,published,0.05,ice_depth: Snow and firn with regelation ice
-466,149,Glacier des Bossons,G006865E45868N,map approximation,45.8445,6.8605,published,3960,3960 m,,,,INF,,False,digitized,,ice_depth: Snow and maybe firn
-467,150,McCall Glacier,G216152E69302N,map approximation,69.314715,-143.852117,published,1730,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
-468,150,McCall Glacier,G216152E69302N,map approximation,69.329583,-143.840895,digitized,1544,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
-469,150,McCall Glacier,G216152E69302N,map approximation,69.321055,-143.851349,digitized,1665,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
-470,150,McCall Glacier,G216152E69302N,map approximation,69.292241,-143.837565,digitized,2028,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
-471,150,McCall Glacier,G216152E69302N,map approximation,69.292132,-143.825677,digitized,2099,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
-472,150,McCall Glacier,G216152E69302N,map approximation,69.286582,-143.833158,digitized,2097,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
-473,150,McCall Glacier,G216152E69302N,map approximation,69.281575,-143.831416,digitized,2138,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
-474,150,McCall Glacier,G216152E69302N,map approximation,69.297825,-143.798724,digitized,2276,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
-475,150,McCall Glacier,G216152E69302N,map approximation,69.295903,-143.797904,digitized,2275,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
-476,150,McCall Glacier,G216152E69302N,map approximation,69.29079,-143.799749,digitized,2306,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
-477,150,McCall Glacier,G216152E69302N,map approximation,69.294816,-143.791345,digitized,2330,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
-478,150,McCall Glacier,G216152E69302N,map approximation,69.293365,-143.785913,digitized,2374,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
-479,150,McCall Glacier,G216152E69302N,map approximation,69.293365,-143.785913,digitized,2374,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
-480,150,McCall Glacier,G216152E69302N,map approximation,69.293365,-143.785913,digitized,2375,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
-481,150,McCall Glacier,G216152E69302N,map approximation,69.293365,-143.785913,digitized,2374,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
-482,151,Werenskioldbreen,G015442E77070N,map approximation,77.08128,15.23203,published,50,,,,,0,,False,published,,Ablation area
-483,151,Werenskioldbreen,G015442E77070N,map approximation,77.07746,15.32502,published,225,,,,,0,,False,published,,Ablation area
-484,151,Werenskioldbreen,G015442E77070N,map approximation,77.06944,15.44134,published,380,,,,,0,,False,published,,Near equilibrium line
-485,151,Werenskioldbreen,G015442E77070N,map guess,77.0978,15.4663,published,550,,,,,INF,,False,published,,Accumulation area | Snow pit | elevation_origin: Average of multiple snow pits dug at '500-600 m' | profile.date_min/date_max: 'towards the end of the polar summer' | ice_depth: Firn only
-486,152,McCall Glacier,G216152E69302N,map approximation,69.314715,-143.852117,published,1730,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line | location_origin/elevation_origin: Same as borehole 467 (and maybe the same hole) | measurement.depth: Relative to glacier surface on 1971-08
-487,152,McCall Glacier,G216152E69302N,map approximation,69.329583,-143.840895,digitized,1493,TC2.2,,,,,,False,digitized,,location_origin: Same as borehole 468
-488,152,McCall Glacier,G216152E69302N,map approximation,69.321055,-143.851349,digitized,1620,TC4,,,,,,False,digitized,,location_origin: Same as borehole 469
-489,152,McCall Glacier,G216152E69302N,map approximation,69.314715,-143.852117,digitized,1712,TC2.5,,,,,,False,digitized,,location_origin: Same as borehole 467
-490,152,McCall Glacier,G216152E69302N,map approximation,69.30157,-143.84974,digitized,1912,TC9,,,,,,False,digitized,,
-491,152,McCall Glacier,G216152E69302N,map approximation,69.292241,-143.837565,map approximation,2028,TC11,,,,,,False,digitized,,location_origin: Apparently at the same location as borehole 470 (although Figure 1 suggests a position higher upglacier) | elevation_origin: Assumed same as borehole 470
-492,152,McCall Glacier,G216152E69302N,map approximation,69.286582,-143.833158,digitized,2070,TC11.5,,,,,,False,digitized,,location_origin: Same as borehole 472
-493,150,McCall Glacier,G216152E69302N,map approximation,69.292132,-143.825677,digitized,2097,TC20.4,,,,,,False,digitized,,location_origin: Same as borehole 471
+464,148,Glacier des Bossons,G006865E45868N,estimated,45.8411,6.8471,published,4240,Deuxième puits,,,mechanical,INF,,False,published,,Snow pit | location_origin: Col du Dôme
+465,149,Glacier des Bossons,G006865E45868N,estimated,45.8387,6.8503,published,4280,4250 m,,,,INF,,False,published,0.05,ice_depth: Snow and firn with regelation ice
+466,149,Glacier des Bossons,G006865E45868N,estimated,45.8445,6.8605,published,3960,3960 m,,,,INF,,False,digitized,,ice_depth: Snow and maybe firn
+467,150,McCall Glacier,G216152E69302N,estimated,69.314715,-143.852117,published,1730,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
+468,150,McCall Glacier,G216152E69302N,estimated,69.329583,-143.840895,digitized,1544,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
+469,150,McCall Glacier,G216152E69302N,estimated,69.321055,-143.851349,digitized,1665,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
+470,150,McCall Glacier,G216152E69302N,estimated,69.292241,-143.837565,digitized,2028,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
+471,150,McCall Glacier,G216152E69302N,estimated,69.292132,-143.825677,digitized,2099,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
+472,150,McCall Glacier,G216152E69302N,estimated,69.286582,-143.833158,digitized,2097,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
+473,150,McCall Glacier,G216152E69302N,estimated,69.281575,-143.831416,digitized,2138,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
+474,150,McCall Glacier,G216152E69302N,estimated,69.297825,-143.798724,digitized,2276,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line
+475,150,McCall Glacier,G216152E69302N,estimated,69.295903,-143.797904,digitized,2275,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
+476,150,McCall Glacier,G216152E69302N,estimated,69.29079,-143.799749,digitized,2306,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
+477,150,McCall Glacier,G216152E69302N,estimated,69.294816,-143.791345,digitized,2330,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Above firn line
+478,150,McCall Glacier,G216152E69302N,estimated,69.293365,-143.785913,digitized,2374,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
+479,150,McCall Glacier,G216152E69302N,estimated,69.293365,-143.785913,digitized,2374,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
+480,150,McCall Glacier,G216152E69302N,estimated,69.293365,-143.785913,digitized,2375,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
+481,150,McCall Glacier,G216152E69302N,estimated,69.293365,-143.785913,digitized,2374,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | location_origin: Center point of cluster in Figure 1 | Above firn line
+482,151,Werenskioldbreen,G015442E77070N,estimated,77.08128,15.23203,published,50,,,,,0,,False,published,,Ablation area
+483,151,Werenskioldbreen,G015442E77070N,estimated,77.07746,15.32502,published,225,,,,,0,,False,published,,Ablation area
+484,151,Werenskioldbreen,G015442E77070N,estimated,77.06944,15.44134,published,380,,,,,0,,False,published,,Near equilibrium line
+485,151,Werenskioldbreen,G015442E77070N,guessed,77.0978,15.4663,published,550,,,,,INF,,False,published,,Accumulation area | Snow pit | elevation_origin: Average of multiple snow pits dug at '500-600 m' | profile.date_min/date_max: 'towards the end of the polar summer' | ice_depth: Firn only
+486,152,McCall Glacier,G216152E69302N,estimated,69.314715,-143.852117,published,1730,,,,,,,False,digitized,,drill_method: Either coring auger or steam drill | Below firn line | location_origin/elevation_origin: Same as borehole 467 (and maybe the same hole) | measurement.depth: Relative to glacier surface on 1971-08
+487,152,McCall Glacier,G216152E69302N,estimated,69.329583,-143.840895,digitized,1493,TC2.2,,,,,,False,digitized,,location_origin: Same as borehole 468
+488,152,McCall Glacier,G216152E69302N,estimated,69.321055,-143.851349,digitized,1620,TC4,,,,,,False,digitized,,location_origin: Same as borehole 469
+489,152,McCall Glacier,G216152E69302N,estimated,69.314715,-143.852117,digitized,1712,TC2.5,,,,,,False,digitized,,location_origin: Same as borehole 467
+490,152,McCall Glacier,G216152E69302N,estimated,69.30157,-143.84974,digitized,1912,TC9,,,,,,False,digitized,,
+491,152,McCall Glacier,G216152E69302N,estimated,69.292241,-143.837565,estimated,2028,TC11,,,,,,False,digitized,,location_origin: Apparently at the same location as borehole 470 (although Figure 1 suggests a position higher upglacier) | elevation_origin: Assumed same as borehole 470
+492,152,McCall Glacier,G216152E69302N,estimated,69.286582,-143.833158,digitized,2070,TC11.5,,,,,,False,digitized,,location_origin: Same as borehole 472
+493,150,McCall Glacier,G216152E69302N,estimated,69.292132,-143.825677,digitized,2097,TC20.4,,,,,,False,digitized,,location_origin: Same as borehole 471
 494,156,Hare Glacier,G323403E82808N,digitized,82.8236,-36.2257,published,574,61,,,,,,False,published,,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749)
 495,156,Hare Glacier,G323403E82808N,digitized,82.8377,-36.4477,published,776,75,,,,,,False,published,,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749)
 496,156,Hare Glacier,G323403E82808N,digitized,82.8485,-36.5362,published,883,85,,,,,,False,published,,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749)
 497,156,Hare Glacier,G323403E82808N,digitized,82.8623,-36.6831,published,1035,105,,,,,,False,published,,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749)
 498,156,Hare Glacier,G322065E82674N,digitized,82.7911,-36.9780,published,1318,13,,,,,,False,published,,location_origin: Figure 2 in Thomsen 1995 (https://doi.org/10.34194/bullggu.v172.6749)
-499,159,Barnes Ice Cap,G287718E69797N,map approximation,69.7397,-72.1658,digitized,903,,,,,,,False,published,,location_origin: Assumed to be at T000 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
-500,159,Barnes Ice Cap,G287718E69797N,map approximation,69.74945,-72.154976,digitized,876,,,,,,,False,published,,location_origin: Assumed to be at T020 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
-501,159,Barnes Ice Cap,G287718E69797N,map approximation,69.7664,-72.1342,digitized,818,,,,,,,False,published,,location_origin: Assumed to be at T040 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
-502,159,Barnes Ice Cap,G287718E69797N,map approximation,69.78211,-72.12066,digitized,757,,,,,,,False,published,,location_origin: Assumed to be at T061 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
-503,159,Barnes Ice Cap,G287718E69797N,map approximation,69.79795,-72.110344,digitized,672,,,,,,,False,published,,location_origin: Assumed to be at T081 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
-504,159,Barnes Ice Cap,G287718E69797N,map approximation,69.81379,-72.093185,digitized,514,,,,,,,False,published,,location_origin: Assumed to be at T0975 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
-505,160,Steele Glacier,G219819E61242N,map approximation,61.2154,-140.1719,map guess,1840,,1972-07-01,1972-07-21,thermal,,,False,published,0.2,equilibrated: 10-day wait time was compensated for by correcting the measured ice temperatures with cooling curves | label: 72-1 in Clarke 1976 (https://doi.org/10.3189/S0022143000031580)
-506,161,Grubengletscher,G007996E46168N,map approximation,46.16652,7.98871,published,3300,1,,,thermal,,,False,published,0.1,
-507,161,Grubengletscher,G007996E46168N,map approximation,46.16632,7.98603,published,3200,2,,,thermal,,,False,published,0.1,
-508,161,Grubengletscher,G007996E46168N,map approximation,46.17237,7.97555,published,2900,3,,,thermal,,,False,published,0.1,
-509,161,Grubengletscher,G007996E46168N,map approximation,46.17273,7.97377,published,2880,4,,,thermal,,45.5,True,published,0.1,
-510,161,Grubengletscher,G007996E46168N,map approximation,46.17276,7.97295,published,2870,5,,,thermal,,,False,published,0.1,
-511,161,Grubengletscher,G007996E46168N,map approximation,46.17426,7.97352,published,2880,6,,,thermal,,,False,published,0.1,
-512,161,Grenzgletscher,G007800E45965N,map approximation,45.97301,7.78775,published,2600,,,,thermal,,,False,published,0.2,
-513,162,Unteraargletscher,G008187E46569N,map approximation,46.56830,8.18595,map approximation,2425,,,,mechanical,,,False,published,,location_origin: 'a' on 1842 map by Jean Wild (https://doi.org/10.3931/e-rara-35661)
+499,159,Barnes Ice Cap,G287718E69797N,estimated,69.7397,-72.1658,digitized,903,,,,,,,False,published,,location_origin: Assumed to be at T000 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
+500,159,Barnes Ice Cap,G287718E69797N,estimated,69.74945,-72.154976,digitized,876,,,,,,,False,published,,location_origin: Assumed to be at T020 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
+501,159,Barnes Ice Cap,G287718E69797N,estimated,69.7664,-72.1342,digitized,818,,,,,,,False,published,,location_origin: Assumed to be at T040 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
+502,159,Barnes Ice Cap,G287718E69797N,estimated,69.78211,-72.12066,digitized,757,,,,,,,False,published,,location_origin: Assumed to be at T061 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
+503,159,Barnes Ice Cap,G287718E69797N,estimated,69.79795,-72.110344,digitized,672,,,,,,,False,published,,location_origin: Assumed to be at T081 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
+504,159,Barnes Ice Cap,G287718E69797N,estimated,69.81379,-72.093185,digitized,514,,,,,,,False,published,,location_origin: Assumed to be at T0975 in Figure 1 of Hooke 1980 (https://doi.org/10.1139/e80-124) | elevation_origin: Assumed Figure 6 baseline is 400 m
+505,160,Steele Glacier,G219819E61242N,estimated,61.2154,-140.1719,guessed,1840,,1972-07-01,1972-07-21,thermal,,,False,published,0.2,equilibrated: 10-day wait time was compensated for by correcting the measured ice temperatures with cooling curves | label: 72-1 in Clarke 1976 (https://doi.org/10.3189/S0022143000031580)
+506,161,Grubengletscher,G007996E46168N,estimated,46.16652,7.98871,published,3300,1,,,thermal,,,False,published,0.1,
+507,161,Grubengletscher,G007996E46168N,estimated,46.16632,7.98603,published,3200,2,,,thermal,,,False,published,0.1,
+508,161,Grubengletscher,G007996E46168N,estimated,46.17237,7.97555,published,2900,3,,,thermal,,,False,published,0.1,
+509,161,Grubengletscher,G007996E46168N,estimated,46.17273,7.97377,published,2880,4,,,thermal,,45.5,True,published,0.1,
+510,161,Grubengletscher,G007996E46168N,estimated,46.17276,7.97295,published,2870,5,,,thermal,,,False,published,0.1,
+511,161,Grubengletscher,G007996E46168N,estimated,46.17426,7.97352,published,2880,6,,,thermal,,,False,published,0.1,
+512,161,Grenzgletscher,G007800E45965N,estimated,45.97301,7.78775,published,2600,,,,thermal,,,False,published,0.2,
+513,162,Unteraargletscher,G008187E46569N,estimated,46.56830,8.18595,estimated,2425,,,,mechanical,,,False,published,,location_origin: 'a' on 1842 map by Jean Wild (https://doi.org/10.3931/e-rara-35661)
 514,163,Hintereisferner,G010752E46802N,digitized,46.8052,10.7739,published,2800,Station 28,,,,,,False,digitized,,
 515,163,Hintereisferner,G010752E46802N,digitized,46.7963,10.7442,published,3150,M1,,,,,,False,digitized,0.5,temperature_accuracy: Digitized from 1°C contours
 516,163,Hintereisferner,G010752E46802N,digitized,46.7915,10.7493,published,3060,M2,,,,,,False,digitized,0.5,temperature_accuracy: Digitized from 1°C contours
 517,163,Hintereisferner,G010752E46802N,digitized,46.7933,10.7592,published,2950,M3,,,,,,False,digitized,0.5,temperature_accuracy: Digitized from 1°C contours
 518,163,Hintereisferner,G010752E46802N,digitized,46.8153,10.7923,published,2610,M4,,,,,,False,digitized,0.25,temperature_accuracy: Digitized from contours that are at most 0.5°C apart
 519,163,Hintereisferner,G010752E46802N,digitized,46.8181,10.7976,published,2550,M5,,,,,,False,digitized,0.25,temperature_accuracy: Digitized from contours that are at most 0.5°C apart
-520,164,郭扎冰川 [Guozha Glacier],G081064E35246N,map approximation,35.213,81.051,published,5700,1,1987-08-08,1987-08-08,thermal,,,False,published,0.1,elevation: Inconsistent with the elevation at location in Figure 1
-521,115,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,map approximation,35.2308,81.4657,published,6180,,,,mechanical,,,False,published,0.01,label: Site 2 shallow core in Thompson 1995 (https://doi.org/10.3189/S0260305500015780) | location_origin: Same as borehole 199
-522,115,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,map approximation,35.2931,81.4916,published,6700,,,,mechanical,,,False,published,0.01,label: Summit shallow core in Thompson 1995 (https://doi.org/10.3189/S0260305500015780) | location_origin: At the same location as borehole 201
-523,166,月牙河15号冰川 [Crescent River Glacier No. 15],G087444E36402N,map guess,36.3985,87.4925,published,5470,,,,,,,,published,0.01,location_origin: Based on elevation and description '中昆仑山木孜塔格峰东坡的' (on the east slope of Muztagh Peak in the Central Kunlun Mountains)
-524,166,月牙河15号冰川 [Crescent River Glacier No. 15],G087444E36402N,map guess,36.3982,87.4790,published,5540,,,,,,,,published,0.01,"location_origin: Based on elevation, description '中昆仑山木孜塔格峰东坡的' (on the east slope of Muztagh Peak in the Central Kunlun Mountains), the downstream river name ('月牙河', confirmed on OpenStreetMap), and glacier number '0015' in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db)"
-525,166,煤矿冰川 [Meikuang Glacier],G094184E35669N,map guess,35.6688,94.185,published,5100,,,,,,,,published,0.01,"location_origin: Based on elevation, the glacier name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and description '东昆仑山西大滩的' (West Dadan, East Kunlun Mountains)"
-526,183,哈龙冰川 [Halong Glacier],G099492E34764N,map guess,34.7979,99.5283,published,4500,,1981-01-01,1981-12-31,thermal,,10,False,digitized,,"location_origin: Based on regional bounds '34°-35°N, 99°-101°E', northeast-facing glacier with matching name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and elevation | profile.date: Su 1998 (https://book.sciencereading.cn/shop/book/Booksimple/onlineRead.do?id=B828976A04419443DB3FE50FBA719BB38000&bookPageNum=74)"
-527,183,哈龙冰川 [Halong Glacier],G099492E34764N,map guess,34.7782,99.4972,published,4900,,1981-01-01,1981-12-31,thermal,,7.3,False,digitized,,"location_origin: Based on description '阿尼玛卿山' (Amne Machine Mountains), northeast-facing glacier with matching name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and elevation on the northern branch where other measurements are shown in Figure 2 | profile.date: Su 1998 (https://book.sciencereading.cn/shop/book/Booksimple/onlineRead.do?id=B828976A04419443DB3FE50FBA719BB38000&bookPageNum=74)"
-528,166,特拉木坎力冰川 [Singhi Glacier],G077054E35619N,map guess,35.7306,76.9727,published,4580,,,,,,,,published,,"location_origin: Based on description '气喀喇昆仑山' (Karakoram Mountains), glacier with matching name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and elevation | Original reference (full text not found): 张祥松, 施维林, 钱嵩林, 李刚 (1991). 中国喀喇昆仑山冰川发育及若千物理化学特征, 喀喇昆仑山叶尔羌河冰川与环境, 科学出版社, 26-42 (https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=B085827F662664C25989E66539E575527000)"
-529,167,小冬克玛底冰川 [Xiao Dongkemadi Glacier],G092063E33082N,map guess,33.0704,92.0815,published,5630,,,,,,,,digitized,,
+520,164,郭扎冰川 [Guozha Glacier],G081064E35246N,estimated,35.213,81.051,published,5700,1,1987-08-08,1987-08-08,thermal,,,False,published,0.1,elevation: Inconsistent with the elevation at location in Figure 1
+521,115,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,estimated,35.2308,81.4657,published,6180,,,,mechanical,,,False,published,0.01,label: Site 2 shallow core in Thompson 1995 (https://doi.org/10.3189/S0260305500015780) | location_origin: Same as borehole 199
+522,115,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2931,81.4916,published,6700,,,,mechanical,,,False,published,0.01,label: Summit shallow core in Thompson 1995 (https://doi.org/10.3189/S0260305500015780) | location_origin: At the same location as borehole 201
+523,166,月牙河15号冰川 [Crescent River Glacier No. 15],G087444E36402N,guessed,36.3985,87.4925,published,5470,,,,,,,,published,0.01,location_origin: Based on elevation and description '中昆仑山木孜塔格峰东坡的' (on the east slope of Muztagh Peak in the Central Kunlun Mountains)
+524,166,月牙河15号冰川 [Crescent River Glacier No. 15],G087444E36402N,guessed,36.3982,87.4790,published,5540,,,,,,,,published,0.01,"location_origin: Based on elevation, description '中昆仑山木孜塔格峰东坡的' (on the east slope of Muztagh Peak in the Central Kunlun Mountains), the downstream river name ('月牙河', confirmed on OpenStreetMap), and glacier number '0015' in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db)"
+525,166,煤矿冰川 [Meikuang Glacier],G094184E35669N,guessed,35.6688,94.185,published,5100,,,,,,,,published,0.01,"location_origin: Based on elevation, the glacier name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and description '东昆仑山西大滩的' (West Dadan, East Kunlun Mountains)"
+526,183,哈龙冰川 [Halong Glacier],G099492E34764N,guessed,34.7979,99.5283,published,4500,,1981-01-01,1981-12-31,thermal,,10,False,digitized,,"location_origin: Based on regional bounds '34°-35°N, 99°-101°E', northeast-facing glacier with matching name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and elevation | profile.date: Su 1998 (https://book.sciencereading.cn/shop/book/Booksimple/onlineRead.do?id=B828976A04419443DB3FE50FBA719BB38000&bookPageNum=74)"
+527,183,哈龙冰川 [Halong Glacier],G099492E34764N,guessed,34.7782,99.4972,published,4900,,1981-01-01,1981-12-31,thermal,,7.3,False,digitized,,"location_origin: Based on description '阿尼玛卿山' (Amne Machine Mountains), northeast-facing glacier with matching name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and elevation on the northern branch where other measurements are shown in Figure 2 | profile.date: Su 1998 (https://book.sciencereading.cn/shop/book/Booksimple/onlineRead.do?id=B828976A04419443DB3FE50FBA719BB38000&bookPageNum=74)"
+528,166,特拉木坎力冰川 [Singhi Glacier],G077054E35619N,guessed,35.7306,76.9727,published,4580,,,,,,,,published,,"location_origin: Based on description '气喀喇昆仑山' (Karakoram Mountains), glacier with matching name in the Chinese glacier inventory (https://doi.org/10.3972/glacier.001.2013.db), and elevation | Original reference (full text not found): 张祥松, 施维林, 钱嵩林, 李刚 (1991). 中国喀喇昆仑山冰川发育及若千物理化学特征, 喀喇昆仑山叶尔羌河冰川与环境, 科学出版社, 26-42 (https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=B085827F662664C25989E66539E575527000)"
+529,167,小冬克玛底冰川 [Xiao Dongkemadi Glacier],G092063E33082N,guessed,33.0704,92.0815,published,5630,,,,,,,,digitized,,
 530,168,Qingbingtan Glacier No. 72,G079894E41774N,digitized,41.758644,79.886154,published,3950,T1,2008-07-15,2008-07-31,thermal,0,,False,digitized,0.1,
 531,168,Qingbingtan Glacier No. 72,G079894E41774N,digitized,41.773857,79.889114,published,4200,T2,2008-07-15,2008-07-31,thermal,0,,False,digitized,0.1,
 532,168,Qingbingtan Glacier No. 72,G079894E41774N,digitized,41.758575,79.88738,published,3950,T3,2008-07-15,2008-07-31,thermal,,,False,digitized,0.1,Ice covered by 13 cm debris (unclear whether this is included in the depth)
-533,169,Yala Glacier,G085612E28242N,map approximation,28.2343,85.6128,published,5180,81B,,,mechanical,,320,True,published,,Ablation area | measurement_origin: Text in Iida 1984 (https://web.seppyo.org/bgr/pdf/2/BGR2P25.PDF)
-534,169,Yala Glacier,G085612E28242N,map approximation,28.2346,85.6217,published,5405,82B,,,mechanical,17,60,True,published,,Accumulation area
-535,170,Nigardsbreen,G007099E61715N,map approximation,61.67931,7.03945,published,1960,,,,,,46.9,True,digitized,,
-536,171,Glaciar Nef,G286668E46885S,map approximation,-46.9243,-73.3225,published,1500,,,,mechanical,INF,,False,published,0.1,Accumulation area | measurement_origin: Boundaries of wet (0°C) and frozen (-0.1°C) snow/firn in Figure 4
-537,172,ледник Туюк-Су [Tuyuksu Glacier],G077080E43049N,map approximation,43.0574,77.0828,published,3480,1,1957-07-01,1957-07-31,mechanical,,,,published,0.1,Ablation area | 600 m from glacier terminus | Temperature was measured 1-4 times per day but only monthly means are included here
-538,173,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,map approximation,43.3013,42.4736,map approximation,3645,1,,,mechanical,,,,published,0.2,Ablation area | Temperature was measured every two days but only monthly means are included here
-539,173,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,map approximation,43.3061,42.4774,map approximation,3760,2,,,mechanical,,,,published,0.2,Accumulation area | Temperature was measured every two days but only monthly means are included here
-540,173,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,map approximation,43.3031,42.4812,map approximation,3685,3,,,mechanical,,,,published,0.2,Ablation area | Temperature was measured edaily but only monthly means are included here
+533,169,Yala Glacier,G085612E28242N,estimated,28.2343,85.6128,published,5180,81B,,,mechanical,,320,True,published,,Ablation area | measurement_origin: Text in Iida 1984 (https://web.seppyo.org/bgr/pdf/2/BGR2P25.PDF)
+534,169,Yala Glacier,G085612E28242N,estimated,28.2346,85.6217,published,5405,82B,,,mechanical,17,60,True,published,,Accumulation area
+535,170,Nigardsbreen,G007099E61715N,estimated,61.67931,7.03945,published,1960,,,,,,46.9,True,digitized,,
+536,171,Glaciar Nef,G286668E46885S,estimated,-46.9243,-73.3225,published,1500,,,,mechanical,INF,,False,published,0.1,Accumulation area | measurement_origin: Boundaries of wet (0°C) and frozen (-0.1°C) snow/firn in Figure 4
+537,172,ледник Туюк-Су [Tuyuksu Glacier],G077080E43049N,estimated,43.0574,77.0828,published,3480,1,1957-07-01,1957-07-31,mechanical,,,,published,0.1,Ablation area | 600 m from glacier terminus | Temperature was measured 1-4 times per day but only monthly means are included here
+538,173,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,estimated,43.3013,42.4736,estimated,3645,1,,,mechanical,,,,published,0.2,Ablation area | Temperature was measured every two days but only monthly means are included here
+539,173,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,estimated,43.3061,42.4774,estimated,3760,2,,,mechanical,,,,published,0.2,Accumulation area | Temperature was measured every two days but only monthly means are included here
+540,173,Ледник Гарабаши [Garabashi Glacier],G042470E43307N,estimated,43.3031,42.4812,estimated,3685,3,,,mechanical,,,,published,0.2,Ablation area | Temperature was measured edaily but only monthly means are included here
 541,175,Ледник Вавилова [Vavilov Glacier],G096481E79287N,published,79.32,96.02,published,720,3A,1982-01-15,1982-02-15,thermal,,468.5,True,published,0.1,location_origin/elevation_origin: Table 1 in Kotlyakov 2004 (https://doi.org/10.1016/j.quascirev.2003.12.013)
 542,176,Ледник Академии Наук [Academy of Sciences Glacier],G096063E80433N,published,80.5,94.83,published,780,2,1986-06-01,1986-07-10,thermal,,,False,digitized,0.2,location_origin/elevation_origin: Same as borehole 133 which was 30 m away
-543,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,map approximation,43.0504,77.0801,published,3625,2,1957-07-01,1957-09-30,,,,False,published,0.1,Ablation area | Measured 1-3 times per day but only the annual average is reported
-544,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,map approximation,43.0426,77.0771,published,3730,3,1957-07-01,1957-09-30,,,,False,published,0.1,Firn line | Measured 1-3 times per day but only the annual average is reported
-545,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,map approximation,43.0396,77.0772,published,3775,4,1957-07-01,1957-09-30,,,,False,published,0.1,Accumulation area | Measured 1-3 times per day but only the annual average is reported
-546,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,map approximation,43.0574,77.0828,published,3480,5,1958-08-01,1958-08-31,,,52.5,True,published,0.1,Ablation area | Measured 1-3 times per day but only an average is reported
-547,178,Ледник Безенги [Bezengi Glacier],G043100E43030N,map guess,43.07225,43.09204,published,2700,,1966-06-01,1966-08-31,mechanical,0,150,,digitized,,"Ablation area | location_origin: Based on the glacier name in the Russian glacier inventory (https://www.glacru.ru), elevation, and description 'пробурена несколько ближе к левому борту ледника' (drilled somewhat closer to the left side of the glacier) | to_bed: Either reached the bed or a rock"
-548,179,Ледник Давыдова [Davydov Glacier],G078204E41844N,map guess,41.8502,78.1878,map approximation,3960,,1985-07-15,1985-07-21,thermal,0,109,,published,0.1,to_bed: Ice thickness estimated to be 110 m based on radar measurements and increase in large sediment at the bottom of the borehole | measurement.depth: Water filling the hole up to 40 m depth prevented measurements but lack of freezing suggests temperate ice at depth
-549,180,Купол Чурляниса [Churlyenis Ice Cap],G053047E80333N,map guess,80.315,52.9944,map guess,280,,1958-01-01,1959-08-31,,,80,False,digitized,,location_origin: Figure 1 in Suzhodrovsky 1961 (http://geolibrary.ru/sites/default/files/2020-11/IslLedLegnR_1.pdf#page=55). The choice of borehole was based on the description '2 км от центра купола' (2 km from the center of the dome) | elevation_origin: Elevation of Copernicus DEM (https://doi.org/10.5270/ESA-c5d3d65) at location
-550,181,James Ross Island Ice Cap,G302228E64270S,map guess,-64.2106,-57.6269,published,1620,,1976-01-01,1976-01-31,,INF,,False,published,,"Firn core with melt layers | measurement_origin: 'unpublished work by R. E. Dalinger, P. Skvarca, and A. J. Aristarain' | location_origin: Figure 1 and elevation | Melt layers present"
-551,181,James Ross Island Ice Cap,G302228E64270S,map guess,-64.2099,-57.7431,published,1500,,1977-12-01,1977-12-31,,INF,10,False,published,0.1,"Firn core with no melt layers | location_origin: Figure 1, elevation, and description '3 km west of the summit'"
+543,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,estimated,43.0504,77.0801,published,3625,2,1957-07-01,1957-09-30,,,,False,published,0.1,Ablation area | Measured 1-3 times per day but only the annual average is reported
+544,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,estimated,43.0426,77.0771,published,3730,3,1957-07-01,1957-09-30,,,,False,published,0.1,Firn line | Measured 1-3 times per day but only the annual average is reported
+545,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,estimated,43.0396,77.0772,published,3775,4,1957-07-01,1957-09-30,,,,False,published,0.1,Accumulation area | Measured 1-3 times per day but only the annual average is reported
+546,177,Ледник Туюксу Центральный [Central Tuyuksu Glacier],G077080E43049N,estimated,43.0574,77.0828,published,3480,5,1958-08-01,1958-08-31,,,52.5,True,published,0.1,Ablation area | Measured 1-3 times per day but only an average is reported
+547,178,Ледник Безенги [Bezengi Glacier],G043100E43030N,guessed,43.07225,43.09204,published,2700,,1966-06-01,1966-08-31,mechanical,0,150,,digitized,,"Ablation area | location_origin: Based on the glacier name in the Russian glacier inventory (https://www.glacru.ru), elevation, and description 'пробурена несколько ближе к левому борту ледника' (drilled somewhat closer to the left side of the glacier) | to_bed: Either reached the bed or a rock"
+548,179,Ледник Давыдова [Davydov Glacier],G078204E41844N,guessed,41.8502,78.1878,estimated,3960,,1985-07-15,1985-07-21,thermal,0,109,,published,0.1,to_bed: Ice thickness estimated to be 110 m based on radar measurements and increase in large sediment at the bottom of the borehole | measurement.depth: Water filling the hole up to 40 m depth prevented measurements but lack of freezing suggests temperate ice at depth
+549,180,Купол Чурляниса [Churlyenis Ice Cap],G053047E80333N,guessed,80.315,52.9944,guessed,280,,1958-01-01,1959-08-31,,,80,False,digitized,,location_origin: Figure 1 in Suzhodrovsky 1961 (http://geolibrary.ru/sites/default/files/2020-11/IslLedLegnR_1.pdf#page=55). The choice of borehole was based on the description '2 км от центра купола' (2 km from the center of the dome) | elevation_origin: Elevation of Copernicus DEM (https://doi.org/10.5270/ESA-c5d3d65) at location
+550,181,James Ross Island Ice Cap,G302228E64270S,guessed,-64.2106,-57.6269,published,1620,,1976-01-01,1976-01-31,,INF,,False,published,,"Firn core with melt layers | measurement_origin: 'unpublished work by R. E. Dalinger, P. Skvarca, and A. J. Aristarain' | location_origin: Figure 1 and elevation | Melt layers present"
+551,181,James Ross Island Ice Cap,G302228E64270S,guessed,-64.2099,-57.7431,published,1500,,1977-12-01,1977-12-31,,INF,10,False,published,0.1,"Firn core with no melt layers | location_origin: Figure 1, elevation, and description '3 km west of the summit'"
 552,182,Lomonosovfonna,,published,78.824,17.432,published,1200,,2012-04-01,2012-04-30,mechanical,INF,,False,digitized,0.2,Accumulation area | Snow and firn | Unclear whether all measurements were made in the same borehole | measurement.depth: Relative to glacier surface in April 2012 (for 2012 profiles) and April 2013 (for 2013 profiles)
-553,185,Ледник Григорьева [Grigoriev Ice Cap],G077923E41963N,map guess,41.96407,77.91683,published,4440,,2003-01-01,2003-12-31,,17,30,False,digitized,,location_origin: Same location as 1962 borehole at 4440 m (interpreted as borehole 315 at 4420 m) | ice_depth: Mostly ice from 4 m but firn transition complete at 17 m
-554,186,Ледниковое Плато Ломоносова [Lomonosovfonna],G018042E78675N,map guess,78.7275,17.586,published,1050,,1965-06-23,1965-06-25,,INF,24,False,digitized,,Accumulation area | Unclear whether the different profiles where from one or multiple boreholes at the same location
-555,186,Ледник Норденлельдв [Nordenskiöldbreen],G017371E78745N,map guess,78.7302,17.3435,published,670,,1965-06-23,1965-07-04,,5,,False,digitized,,
-556,186,Ледник Норденлельдв [Nordenskiöldbreen],G017371E78745N,map guess,78.7014,17.2775,published,590,,1965-06-23,1965-06-16,,1,,False,digitized,,
-557,187,Купол Вавилова [Vavilov Ice Cap],G096481E79287N,map guess,79.3058,95.915,map guess,720,,1974-05-01,1974-05-17,thermal,,,False,digitized,,location_origin/elevation_origin: Based only on description 'на вершине купола Вавилова' (on the summit of Vavilov Ice Cap). Cannot be matched to a borehole in Table 1 in Morev 1981 because the first measurement date (1974-05-17) precedes the onset of drilling.
-558,187,Купол Вавилова [Vavilov Ice Cap],G095294E79482N,map guess,79.4284,95.3454,map guess,670,,1976-05-06,1976-05-18,thermal,,180,False,digitized,,location_origin/elevation_origin: Based on the description for borehole 9 in Table 1 in Morev 1981 as '18-й вехи на северном склоне купола Вавнлова' (18th milestone on the northern slope of the Vavilov Ice Cap) interpreted as 18 km northward from the summit along the summit ridge | depth: Borehole length was 310 m but only 180 m deep due to a strong inclination
+553,185,Ледник Григорьева [Grigoriev Ice Cap],G077923E41963N,guessed,41.96407,77.91683,published,4440,,2003-01-01,2003-12-31,,17,30,False,digitized,,location_origin: Same location as 1962 borehole at 4440 m (interpreted as borehole 315 at 4420 m) | ice_depth: Mostly ice from 4 m but firn transition complete at 17 m
+554,186,Ледниковое Плато Ломоносова [Lomonosovfonna],G018042E78675N,guessed,78.7275,17.586,published,1050,,1965-06-23,1965-06-25,,INF,24,False,digitized,,Accumulation area | Unclear whether the different profiles where from one or multiple boreholes at the same location
+555,186,Ледник Норденлельдв [Nordenskiöldbreen],G017371E78745N,guessed,78.7302,17.3435,published,670,,1965-06-23,1965-07-04,,5,,False,digitized,,
+556,186,Ледник Норденлельдв [Nordenskiöldbreen],G017371E78745N,guessed,78.7014,17.2775,published,590,,1965-06-23,1965-06-16,,1,,False,digitized,,
+557,187,Купол Вавилова [Vavilov Ice Cap],G096481E79287N,guessed,79.3058,95.915,guessed,720,,1974-05-01,1974-05-17,thermal,,,False,digitized,,location_origin/elevation_origin: Based only on description 'на вершине купола Вавилова' (on the summit of Vavilov Ice Cap). Cannot be matched to a borehole in Table 1 in Morev 1981 because the first measurement date (1974-05-17) precedes the onset of drilling.
+558,187,Купол Вавилова [Vavilov Ice Cap],G095294E79482N,guessed,79.4284,95.3454,guessed,670,,1976-05-06,1976-05-18,thermal,,180,False,digitized,,location_origin/elevation_origin: Based on the description for borehole 9 in Table 1 in Morev 1981 as '18-й вехи на северном склоне купола Вавнлова' (18th milestone on the northern slope of the Vavilov Ice Cap) interpreted as 18 km northward from the summit along the summit ridge | depth: Borehole length was 310 m but only 180 m deep due to a strong inclination
