@@ -47,6 +47,9 @@ contributors:
   - title: Lonnie G. Thompson
     path: https://orcid.org/0000-0001-5371-2579
     role: contributor
+  - title: Tong Zhang
+    email: tzhang@bnu.edu.cn
+    role: contributor
 resources:
   - name: source
     description: Data sources considered in the compilation of this database.
