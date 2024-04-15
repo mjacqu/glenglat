@@ -93,6 +93,7 @@ resources:
 
               - article-journal: Journal article.
               - chapter: Book section.
+              - document: Document not fitting into any other category.
               - dataset: Collection of data.
               - map: Geographic map.
               - paper-conference: Paper published in conference proceedings.
@@ -100,6 +101,7 @@ resources:
               - speech: Presentation (talk, poster) at a conference.
               - report: Report distributed by an institution.
               - thesis: Thesis written to satisfy degree requirements.
+              - webpage: Website or page on a website.
           type: string
           constraints:
             required: true
@@ -107,12 +109,14 @@ resources:
               - article-journal
               - chapter
               - dataset
+              - document
               - map
               - paper-conference
               - personal-communication
               - speech
               - report
               - thesis
+              - webpage
         - name: title
           description: Item title.
           type: string
@@ -130,6 +134,7 @@ resources:
               - de: German
               - en: English
               - fr: French
+              - ko: Korean
               - ru: Russian
               - zh: Chinese
           type: string
@@ -139,6 +144,7 @@ resources:
               - de
               - en
               - fr
+              - ko
               - ru
               - zh
         - name: container_title
@@ -320,7 +326,7 @@ resources:
           unit: °C
         - name: notes
           description: |-
-            Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`.
+            Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
