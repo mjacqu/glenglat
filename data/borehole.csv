@@ -400,7 +400,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 445,macheret1985,Austre Grønfjordbreen,G014342E77910N,estimated,77.886,14.363,estimated,450,1,1975-01-01,1975-12-31,thermal,,213,True,published,,Maybe the same as borehole 444 (if 1979 expedition read the same 1975 thermistor chain read by 1976 expedition)
 446,macheret1985,Fridtjofbreen,G014442E77835N,estimated,77.868,14.387,estimated,380,2,1979-01-01,1979-12-31,thermal,,,False,published,,
 447,thompson2022,Nevado Huascarán,G282414E09082S,published,-9.111389,-77.61472,published,6048,,,,thermal,,160.4,True,submitted,,See thompson1995a | depth: Either 160.4 m (core 1) or 166.1 m (core 2)
-448,thompson2022,Quelccaya Ice Cap,G289183E13941S,guessed,-13.930,-70.823,published,5670,,,,mechanical,26,,,submitted,1,See zagorodnov2005 | profile.date_min/date_max: thompson2015 | drill_method: mechanical down to 100-124 m and thermal beyond
+448,thompson2022,Quelccaya Ice Cap,G289183E13941S,guessed,-13.930,-70.823,published,5670,,,,combined,26,,,submitted,1,See zagorodnov2005 | profile.date_min/date_max: thompson2015 | drill_method: mechanical down to 100-124 m and thermal beyond
 449,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3832,85.7156,published,7200,C2,,,mechanical,,149.2,True,submitted,,See thompson2000 | location: Confirmed by Figure 1 in yao2002
 450,thompson2022,Mount Kilimanjaro,G037352E03058S,guessed,-3.059,37.348,guessed,5780,NIF1,,,,,50.9,True,submitted,,See thompson2002
 451,thompson2022,Naimona'nyi Gacier,G081317E30454N,guessed,30.449,81.329,published,6050,,,,,,,,submitted,,elevation_origin: Table 1 in thompson2018
