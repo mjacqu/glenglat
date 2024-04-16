@@ -1,0 +1,13 @@
+From: Lonnie Thompson <thompson.3@osu.edu>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2022-02-02 23:32
+Subject: Borehole temperature records
+
+Dear Jacquemart,
+
+Please find attached a couple of tables with borehole temperatures from glaciers that we have drilled. Our temperature measurements were more to determine whether a given glacier was frozen to the bed at our drill sites. The accuracy of the borehole temperatures depends in part on whether the ice cores were drilled using a thermal or electromechanical drill. The Guliya borehole records should already be available (I believe on the NOAA paleoclimate data files for both 1992 cores and the 2015 cores, but if not let me know and I can send those to you. We should have a new borehole temperature data set form our 2019 Huascaran boreholes from both the 6050 m asl col cores as well as the summit cores from 6768 m asl) published later this year.
+
+Hope these are useful.
+
+Best wishes,
+Lonnie

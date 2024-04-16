@@ -1,0 +1,58 @@
+!DATASET DESCRIPTION
+Name: Rikha Samba Thermistor242
+Description: The thermistor chain was manufactured by Stump Bohr AG.
+Project Name: Cryosphere Monitoring Project (CMP)
+Contact person: Cryosphere Anayst at ICIMOD 
+Email: tika.gurung@icimod.org
+Accesibility: ICIMOD (International Centre for Integrated Mountain Development)/DHM (Department of Hydrology and Meteorology)/KU (Kathmandu University)
+Publication status: published
+
+!--------------------------------------------------------------------
+TERMS AND CONDITIONS
+-All partners have full access to temperature data in processed and raw format. 
+-In collecting, acquiring, managing, and sharing data, CMP partners respect and abide by the related international and national laws, third party intellectual property rights, confidentiality obligations, and contractual terms and conditions of use as imposed by the provider of the data.
+-Users will acknowledge CMP when using the data in reports or publications: "The data have been collected under the Cryosphere Monitoring Programme (CMP) jointly by ICIMOD, the Department of Hydrology an Meteorology and Kathmandu University, Nepal, in collaboration with the University of Utrecht, the Netherlands."
+-Should any of the partners wish to use the data for scientific publications, contribution to the manuscript/ data analysis and co-authorship shall be discussed with the other partners. 
+-CMP does not guarantee the quality, accuracy or veracity of the data, and data are shared on an ‘as is’ basis. CMP partners will not be responsible for errors or omissions in the data. (Reference: ICIMOD Data Policy). However, CMP partners endeavor to ensure that only high-quality data are shared and disseminated.
+-CMP will not be held liable for the consequences arising out of improper or incorrect use of the data.
+-Third party sharing of unpublished data should be agreed with CMP partners and other data owners. The permission to use the data shall not be considered the waiver of copyright or proprietary right of CMP and other data owners, wherever applicable.
+
+
+!--------------------------------------------------------------------
+!DATASET PROPERTIES	
+Latitude: 28.810133
+Longitude: 83.495183
+Altitude: 5617 m a.s.l.
+Start date: 2014-11-09
+End date: 2015-10-05
+Timestep: 1 hour
+No Data value: NA
+
+!--------------------------------------------------------------------
+!PARAMETERS
+Battery_Volts,battery voltage,V	
+Panel_Temp, mean temperature of data logger, degrees Celsius
+TK145_0005cm, ice temperature below surface at 995 cm (1000-5 cm),degrees Celsius
+TK145_0010cm, ice temperature below surface at 990 cm (1000-10 cm),degrees Celsius
+TK145_0030cm, ice temperature below surface at 970 cm (1000-30 cm),degrees Celsius
+TK145_0050cm, ice temperature below surface at 950 cm (1000-50 cm),degrees Celsius
+TK145_0100cm, ice temperature below surface at 900 cm (1000-100 cm),degrees Celsius
+TK145_0150cm, ice temperature below surface at 850 cm (1000-150 cm),degrees Celsius
+TK145_0200cm, ice temperature below surface at 800 cm (1000-200 cm),degrees Celsius
+TK145_0400cm, ice temperature below surface at 600 cm (1000-400 cm),degrees Celsius
+TK145_0600cm, ice temperature below surface at 400 cm (1000-600 cm),degrees Celsius
+TK145_0800cm, ice temperature below surface at 200 cm (1000-800 cm),degrees Celsius
+TK145_1000cm, ice temperature below surface at ice surface cm (1000-1000 cm),degrees Celsius
+
+!--------------------------------------------------------------------
+AWS Visit
+2014-11-09
+2015-10-05 
+
+
+!-------------------------------------------------------------
+Remarks
+Station was installed at the ablation zone near mass balance statke no 3 of Rikha Samba Glacier.
+During second field visit, the station was upright and later in 2016 visit found fallen.
+
+
