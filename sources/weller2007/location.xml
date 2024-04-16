@@ -1,7 +1,7 @@
 <?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
 <!-- PlotDigitizer data file: created on Wed Feb 14 22:58:38 CET 2024 -->
 <data>
-<image file='weller2007-figure-1.png' />
+<image file='figure-1.png' />
 <axesnames x='longitude'  y='latitude' />
 <calibpoints minXaxisX='63.333333333333336' minXaxisY='890.0' maxXaxisX='502.6666666666667' maxXaxisY='890.0' minYaxisX='60.666666666666664' minYaxisY='764.0' maxYaxisX='60.666666666666664' maxYaxisY='142.0' aX1='-143.8666' aX2='-143.76666' aY1='69.28333' aY2='69.333333' isXLog='false' isYLog='false' />
 <point n='0' x='424.5' y='650.0' dx='-143.7844414339909' dy='69.2924945369775' />
