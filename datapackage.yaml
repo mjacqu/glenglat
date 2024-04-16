@@ -71,7 +71,7 @@ resources:
             required: true
             unique: true
         - name: author
-          description: Author names as a pipe-delimited list.
+          description: Author names (optionally followed by their ORCID in parentheses) as a pipe-delimited list.
           type: string
           constraints:
             required: true
