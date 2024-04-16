@@ -15,17 +15,17 @@ contributors:
     path: https://orcid.org/0000-0003-2501-7645
     organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
     email: jacquemart@vaw.baug.ethz.ch
-    role: author | wrangler
+    role: author | curator
   - title: Ethan Welty
     path: https://orcid.org/0000-0001-8046-2210
     organization: World Glacier Monitoring Service (WGMS), University of Zurich (UZH), Switzerland
-    role: author | wrangler
+    role: author | curator
   - title: Guillem Carcanade
     organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
-    role: wrangler
+    role: curator
   - title: Lander Van Tricht
     path: https://orcid.org/0000-0001-7619-8955
-    role: wrangler
+    role: curator
   - title: Gwenn Flowers
     path: https://orcid.org/0000-0002-3574-9324
     role: contributor
@@ -70,12 +70,6 @@ resources:
           constraints:
             required: true
             unique: true
-        - name: contributor
-          description: Names of people (and their ORCID in parentheses if available) who added the data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade').
-          type: string
-          contraints:
-            required: true
-            pattern: '[^\s]+( [^\s]+)*'
         - name: author
           description: Author names as a pipe-delimited list.
           type: string
@@ -212,7 +206,7 @@ resources:
             minimum: 1
         - name: source_id
           type: string
-          description: Source identifier.
+          description: Identifier of the primary source (origin of temperature measurements).
           constraints:
             required: true
         - name: glacier_name
@@ -325,10 +319,15 @@ resources:
           type: number
           unit: °C
         - name: notes
-          description: |-
-            Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
+          description: Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
           type: string
           constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: curator
+          description: Names of people (and their ORCID in parentheses if available) who added the data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade').
+          type: string
+          contraints:
+            required: true
             pattern: '[^\s]+( [^\s]+)*'
       missingValues: ['']
       primaryKey: [id]
