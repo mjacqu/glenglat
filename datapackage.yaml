@@ -324,7 +324,7 @@ resources:
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: curator
-          description: Names of people (and their ORCID in parentheses if available) who added the data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade').
+          description: Names of people who added the data to the database, as a pipe-delimited list. Additional details about each can be found under `contributors`.
           type: string
           contraints:
             required: true
