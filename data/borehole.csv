@@ -161,7 +161,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 176,ryser2013,Grenzgletscher,G007800E45965N,published,45.969451,7.795742,published,2499.0,l9a,,,,,,False,digitized,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
 177,ryser2013,Grenzgletscher,G007800E45965N,published,45.965263,7.800062,published,2522.0,f1,,,,,,False,digitized,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
 178,ryser2013,Grenzgletscher,G007800E45965N,published,45.965586,7.797343,published,2514.0,f3,,,,,,False,digitized,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
-179,schwikowski2013,Pio XI glacier,G286372E49263S,published,-49.278195,-73.3535648,published,2600.0,,,,,,,False,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+179,schwikowski2013,Pío XI glacier,G286372E49263S,published,-49.278195,-73.3535648,published,2600.0,,,,,,,False,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 180,shiraiwa2001,Blichenok glacier,G160474E56097N,digitized,56.07338,160.4685,estimated,3870.0,BH1,,,,,,False,digitized,0.1,measurement_origin: Monthly profiles are difficult to differentiate in Figure 4 and may be slightly incorrect below 5 m depth,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 181,shiraiwa2001,Blichenok glacier,G160474E56097N,digitized,56.074062,160.4679,estimated,3870.0,K2,,,,,,False,digitized,0.1,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 182,signer2014,Glacier du Sex Rouge,G007212E46327N,published,46.326569,7.212807,published,2810.0,#1,,,,,,False,digitized,,,Mylène Jacquemart | Guillem Carcanade
