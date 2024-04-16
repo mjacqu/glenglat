@@ -340,11 +340,11 @@ resources:
     description: Date and time of each measurement profile.
     path:
       - data/profile.csv
-      - data/rainer-prinz-nunatarssuaq/profile.csv
-      - data/gwenn-flowers-little-kluane/profile.csv
-      - data/gwenn-flowers-south-glacier/profile.csv
-      - data/tika-gurung-rikha-samba/profile.csv
-      - data/ian-lee-jarvis-glacier/profile.csv
+      - data/prinz2022-nunatarssuaq/profile.csv
+      - data/flowers2022-little-kluane/profile.csv
+      - data/flowers2022-south/profile.csv
+      - data/gurung2022-rikha-samba/profile.csv
+      - data/lee2019-jarvis/profile.csv
       - data/carturan2023-ortles/profile.csv
     format: csv
     dialect:
@@ -402,11 +402,11 @@ resources:
     description: Temperature measurements with depth.
     path:
       - data/measurement.csv
-      - data/rainer-prinz-nunatarssuaq/measurement.csv
-      - data/gwenn-flowers-little-kluane/measurement.csv
-      - data/gwenn-flowers-south-glacier/measurement.csv
-      - data/tika-gurung-rikha-samba/measurement.csv
-      - data/ian-lee-jarvis-glacier/measurement.csv
+      - data/prinz2022-nunatarssuaq/measurement.csv
+      - data/flowers2022-little-kluane/measurement.csv
+      - data/flowers2022-south/measurement.csv
+      - data/gurung2022-rikha-samba/measurement.csv
+      - data/lee2019-jarvis/measurement.csv
       - data/carturan2023-ortles/measurement.csv
     format: csv
     dialect:
