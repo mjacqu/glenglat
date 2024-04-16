@@ -176,10 +176,10 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 195,odegard1992,Erikbreen,G012478E79621N,estimated,79.6226558,12.42997693,digitized,540.0,site 9,,,,,,False,digitized,0.1,Digitized as minimum and maximum temperature profiles,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 197,sun2021,Malan Glacier,G090770E35803N,estimated,35.8165362,90.75000214,published,5680.0,,,,,,,False,digitized,0.01,,Mylène Jacquemart | Guillem Carcanade
 198,thompson1990,Dunde Ice Cap,G096414E38091N,estimated,38.1051653,96.41680018,published,5325.0,,,,,,,True,digitized,,Caption and legend do not agree | Summit region,Mylène Jacquemart | Guillem Carcanade
-199,thompson1995,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,estimated,35.2308,81.4657,published,6200.0,Site 2,,,combined,,308.6,True,digitized,,drill_method: Mechanical to 200 m and thermal beyond,Ethan Welty
-200,thompson2018,古里雅冰帽 [Guliya Ice Cap],G081455E35226N,estimated,35.2308014,81.46574059,published,6200.0,,,,,,,True,digitized,,Plateau region,Mylène Jacquemart | Guillem Carcanade
-201,thompson1995,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2931,81.4916,published,6710.0,Summit,,,mechanical,,,False,digitized,,,Ethan Welty
-202,thompson2018,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2931,81.4916,published,6710.0,,,,,,,True,digitized,,Summit region,Mylène Jacquemart | Guillem Carcanade
+199,thompson1995,Guliya Ice Cap,G081455E35226N,estimated,35.2308,81.4657,published,6200.0,Site 2,,,combined,,308.6,True,digitized,,drill_method: Mechanical to 200 m and thermal beyond,Ethan Welty
+200,thompson2018,Guliya Ice Cap,G081455E35226N,estimated,35.2308014,81.46574059,published,6200.0,,,,,,,True,digitized,,Plateau region,Mylène Jacquemart | Guillem Carcanade
+201,thompson1995,Guliya Ice Cap,G081480E35252N,estimated,35.2931,81.4916,published,6710.0,Summit,,,mechanical,,,False,digitized,,,Ethan Welty
+202,thompson2018,Guliya Ice Cap,G081480E35252N,estimated,35.2931,81.4916,published,6710.0,,,,,,,True,digitized,,Summit region,Mylène Jacquemart | Guillem Carcanade
 206,vincent2020,Glacier des Bossons,G006865E45868N,estimated,45.8417942,6.846642185,published,4250.0,,,,,,,True,digitized,0.05,Col du Dôme | Summit region,Mylène Jacquemart | Guillem Carcanade
 207,wang2005,Geladandong Ice Cap,G091151E33199N,published,33.212778,91.154167,published,5800.0,,,,,,,False,digitized,0.05,Geothermal hotspot suspected under drill site,Mylène Jacquemart | Guillem Carcanade
 208,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.4783238,96.53493886,published,4550.0,Site 1,,,,,,False,digitized,0.05,,Mylène Jacquemart | Guillem Carcanade
@@ -346,7 +346,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 390,ren1985,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1087,86.8082,published,3975.0,F2',,,thermal,,,False,published,0.1,Only deepest temperature reported,Ethan Welty
 391,ren1985,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1084,86.8092,published,3973.0,F3',,,thermal,,,False,published,0.1,Only deepest temperature reported,Ethan Welty
 392,zhang1993,乌鲁木齐1号冰川 [Urumqi Glacier No. 1],G086810E43111N,estimated,43.1059,86.8067,published,4050.0,H1,,,mechanical,3,,True,digitized,,,Ethan Welty
-393,thompson1995,古里雅冰帽 [Guliya Ice Cap],G081480E35252N,estimated,35.2219,81.4891,published,6040.0,Site 1,,,mechanical,,,False,digitized,,,Ethan Welty
+393,thompson1995,Guliya Ice Cap,G081480E35252N,estimated,35.2219,81.4891,published,6040.0,Site 1,,,mechanical,,,False,digitized,,,Ethan Welty
 394,thompson2006,Puruogangri Ice Cap,G089122E33894N,digitized,33.91203,89.11842,published,5961.0,C1 | Dome B,,,mechanical,0,118.4,True,digitized,,location_origin: Figure 1 in liu2016. May be swapped with C2,Ethan Welty
 395,thompson2006,Puruogangri Ice Cap,G089122E33894N,digitized,33.92259,89.12193,published,5980.0,C2 | Dome A,,,mechanical,0,,False,digitized,,location_origin: Figure 1 in liu2016. May be swapped with C1,Ethan Welty
 396,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3833,85.7166,published,7200.0,C3,,,mechanical,,167.7,True,submitted,,See thompson2000 | location: Confirmed by Figure 1 in yao2002 | temperature: Submitted temperature at 10 m (-13.6°C) does not match -16°C published in thompson2000,Ethan Welty
