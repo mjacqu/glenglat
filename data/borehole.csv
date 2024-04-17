@@ -114,7 +114,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 124,watanabe2001,Vestfonna,G020879E79901N,published,79.9667,21.0167,published,600.0,Vestfonna95,,,mechanical,,,False,digitized,,,Ethan Welty
 125,zagorodnov1990a,Austfonna,G024340E79634N,published,79.8272,24.1357,published,750.0,,,,mechanical,,566.7,True,digitized,0.2,"location_origin: 1.7 km south of camp at 79.84333, 24.13367 | elevation: > 750 m since camp is 750 m and borehole was drilled on the ice divide | Temperatures in the lowest 70 m are unstable due to influx of basal water",Ethan Welty
 126,kawamura1991,Høghetta,G016639E79309N,published,79.2833,16.8333,published,1200.0,,,,,,,True,digitized,,,Ethan Welty
-127,kameda1993,Snøfjellafonna,G013542E78988N,published,79.1361,13.2917,published,1190.0,Site A,,,mechanical,30,,False,digitized,0.07,,Ethan Welty
+127,kameda1993,Snøfjellafonna,G013542E78988N,published,79.1361,13.2917,published,1190.0,Site A,,,mechanical,30,,False,published,0.07,,Ethan Welty
 128,uchida1996,Åsgårdfonna,G017048E79443N,published,79.443889,16.710833,published,1140.0,JAGE '93 site 1,,,mechanical,,,False,digitized,0.08,,Ethan Welty
 129,barkov1988,Ледник Вавилова [Vavilov Glacier],G095294E79482N,published,79.45,95.35,published,665,,1978-12-01,1978-12-31,thermal,,460,True,published,0.03,location_origin/elevation_origin: Table 1 in kotlyakov2004,Ethan Welty
 130,morev1988,Ледник Вавилова [Vavilov Glacier],G095294E79482N,published,79.5,95.08,guessed,365,4A,1981-01-01,1982-12-31,thermal,,146,True,published,,location_origin: Table 1 in kotlyakov2004 | elevation_origin: Based on location,Ethan Welty
@@ -445,7 +445,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 490,rabus2002,McCall Glacier,G216152E69302N,estimated,69.30157,-143.84974,digitized,1912,TC9,,,,,,False,digitized,,,Ethan Welty
 491,rabus2002,McCall Glacier,G216152E69302N,estimated,69.292241,-143.837565,estimated,2028,TC11,,,,,,False,digitized,,location_origin: Apparently at the same location as borehole 470 (although Figure 1 suggests a position higher upglacier) | elevation_origin: Assumed same as borehole 470,Ethan Welty
 492,rabus2002,McCall Glacier,G216152E69302N,estimated,69.286582,-143.833158,digitized,2070,TC11.5,,,,,,False,digitized,,location_origin: Same as borehole 472,Ethan Welty
-493,trabant1975,McCall Glacier,G216152E69302N,estimated,69.292132,-143.825677,digitized,2097,TC20.4,,,,,,False,digitized,,location_origin: Same as borehole 471,Ethan Welty
+493,rabus2002,McCall Glacier,G216152E69302N,estimated,69.292132,-143.825677,digitized,2097,TC20.4,,,,,,False,digitized,,location_origin: Same as borehole 471,Ethan Welty
 494,reeh2001,Hare Glacier,G323403E82808N,digitized,82.8236,-36.2257,published,574,61,,,,,,False,published,,location_origin: Figure 2 in thomsen1996,Ethan Welty
 495,reeh2001,Hare Glacier,G323403E82808N,digitized,82.8377,-36.4477,published,776,75,,,,,,False,published,,location_origin: Figure 2 in thomsen1996,Ethan Welty
 496,reeh2001,Hare Glacier,G323403E82808N,digitized,82.8485,-36.5362,published,883,85,,,,,,False,published,,location_origin: Figure 2 in thomsen1996,Ethan Welty
