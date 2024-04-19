@@ -1,0 +1,33 @@
+From: Gwenn Flowers <gflowers@sfu.ca>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2022-08-10 14:43
+Subject: Call for non-icesheet englacial temperature datasets (submission 1 of 3)
+
+Hi Mylène,
+
+[...]
+
+This batch is just for one site where we have a single temperature cable that did not reach the bed but documents temperate ice over ~200m of the ice column (see pdf). Boring. I have a lot more metadata on this, some of which I've included in the comments. The most important is probably that the accuracy of each sensor is no better than +/- 0.2 C.
+
+Let me know if there is anything that makes these data unusable for you.
+
+Next, onto "North" and "South" Glaciers where the temperatures are more interesting...
+
+Best,
+Gwenn
+
+----------
+
+From: Gwenn Flowers <gflowers@sfu.ca>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2022-08-11 01:10:50
+Subject: Call for non-icesheet englacial temperature datasets (submissions 2 and 3 of 3)
+
+Hi again Mylène,
+
+Attached are spreadsheets for data from two more of our pet glaciers in Yukon. These are the data you have seen in Wilson et al (2013): https://agupubs-onlinelibrary-wiley-com.proxy.lib.sfu.ca/doi/full/10.1002/jgrf.20096 so should be easier to make sense of given the documentation.
+
+Please let me know if you have questions, and if there is anything that would inhibit the use of these data in your project or by others.
+
+Thanks again,
+Gwenn

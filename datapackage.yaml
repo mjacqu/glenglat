@@ -15,24 +15,24 @@ contributors:
     path: https://orcid.org/0000-0003-2501-7645
     organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
     email: jacquemart@vaw.baug.ethz.ch
-    role: author | wrangler
+    role: author | curator
   - title: Ethan Welty
     path: https://orcid.org/0000-0001-8046-2210
     organization: World Glacier Monitoring Service (WGMS), University of Zurich (UZH), Switzerland
-    role: author | wrangler
+    role: author | curator
   - title: Guillem Carcanade
     organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
-    role: wrangler
+    role: curator
   - title: Lander Van Tricht
     path: https://orcid.org/0000-0001-7619-8955
-    role: wrangler
+    role: curator
   - title: Gwenn Flowers
     path: https://orcid.org/0000-0002-3574-9324
     role: contributor
   - title: Shin Sugiyama
     path: https://orcid.org/0000-0001-5323-9558
     role: contributor
-  - title: Tika Gurung
+  - title: Tika Ram Gurung
     path: https://orcid.org/0000-0003-4287-6150
     role: contributor
   - title: Rainer Prinz
@@ -47,9 +47,12 @@ contributors:
   - title: Lonnie G. Thompson
     path: https://orcid.org/0000-0001-5371-2579
     role: contributor
+  - title: Tong Zhang
+    email: tzhang@bnu.edu.cn
+    role: contributor
 resources:
   - name: source
-    description: Data sources considered in the compilation of this database.
+    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. `В. С. Загороднов [V. S. Zagorodnov]`) and non-English titles are followed by a translation in square brackets.
     path: data/source.csv
     format: csv
     dialect:
@@ -62,44 +65,123 @@ resources:
     schema:
       fields:
         - name: id
-          description: Unique identifier.
-          type: integer
+          description: Unique identifier constructed from the first author's lowercase, latinized, family name and the publication year, followed as needed by a lowercase letter to ensure uniqueness (e.g. `Загороднов 1981` → `zagorodnov1981a`).
+          type: string
           constraints:
             required: true
             unique: true
-            minimum: 1
-        - name: contributor
-          description: Names of people (and their ORCID in parentheses if available) who contributed data to the database, as a pipe-delimited list (e.g. 'Mylène Jacquemart (0000-0003-2501-7645) | Guillem Carcanade'). For data sourced from publications, these people extracted the data. For data submissions, these people submitted the data.
+        - name: author
+          description: Author names (optionally followed by their ORCID in parentheses) as a pipe-delimited list.
           type: string
-          contraints:
+          constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
-        - name: author
-          description: Publication first author (and their ORCID in parentheses, if available).
-          type: string
-          constraints:
-            required: false
-            pattern: '[^\s]+( [^\s]+)*'
-        - name: publication_year
-          description: Publication year.
+        - name: year
+          description: Year of publication.
           type: year
           constraints:
-            required: false
+            required: true
+        - name: type
+          description: |-
+            Item type:
+
+              - article-journal: Journal article.
+              - chapter: Book section.
+              - document: Document not fitting into any other category.
+              - dataset: Collection of data.
+              - map: Geographic map.
+              - paper-conference: Paper published in conference proceedings.
+              - personal-communication: Personal communication between individuals.
+              - speech: Presentation (talk, poster) at a conference.
+              - report: Report distributed by an institution.
+              - thesis: Thesis written to satisfy degree requirements.
+              - webpage: Website or page on a website.
+          type: string
+          constraints:
+            required: true
+            enum:
+              - article-journal
+              - chapter
+              - dataset
+              - document
+              - map
+              - paper-conference
+              - personal-communication
+              - speech
+              - report
+              - thesis
+              - webpage
         - name: title
-          description: Publication title.
+          description: Item title.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: url
-          description: Publication URL (DOI if available).
+          description: URL (DOI if available).
           type: string
           constraints:
             pattern: 'https?:\/\/.+'
-        - name: path
-          description: Path (relative to the datapackage root directory) to a folder with files that document how and from where the data was extracted, named either `sources/{source_id}_{submitter_code}` or `sources/{source_id}_{author_code}{year}` (where `submitter_code` or `author_code` is the submitter or first author's lowercase, romanized, family name). Files with a `.png` or `.pdf` extension are figures, tables, maps, or text from the publication. Pairs of files with `.pgw` and `.png.aux.xml` extensions georeference a `.png` image, and files with `.geojson` extension are the subsequently-extracted spatial coordinates. Files with an `.xml` extension document how numeric values were extracted from maps and figures using Plot Digitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}{suffix}`. Those without the optional `suffix` use `temperature` and `depth` as axis names. Those with a `suffix` are unusual cases which contain data for a range of profiles (suffix `-{last_profile_id}`) and/or a non-standard axis (suffix `_{axis}`), for example `163_515_1-8_date`. Files with content from a publication other than the one corresponding to the `source_id` are prefixed with `{author_code}{year}-` and correspond either to another publication listed in the `source` table or a publication cited in `borehole.notes`.
+        - name: language
+          description: |-
+            Language as ISO 639-1 two-letter language code.
+
+              - de: German
+              - en: English
+              - fr: French
+              - ko: Korean
+              - ru: Russian
+              - zh: Chinese
           type: string
           constraints:
-            pattern: 'sources\/[0-9]+_[a-z-]+([0-9]{4})?'
+            required: true
+            enum:
+              - de
+              - en
+              - fr
+              - ko
+              - ru
+              - zh
+        - name: container_title
+          description: Title of the container (e.g. journal, book).
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: volume
+          description: Volume number of the item or container.
+          type: integer
+        - name: issue
+          description: Issue of the item or container.
+          type: string
+          constraints:
+            pattern: '\S+'
+        - name: page
+          description: Page (e.g. `3`) or page range (e.g. `3-5`) of the item in the container.
+          type: string
+          constraints:
+            pattern: '[0-9]+(-[0-9]+)?'
+        - name: version
+          description: Version of the item.
+          type: string
+          constraints:
+            pattern: '[0-9]+(\.[0-9]+)*'
+        - name: editor
+          description: Editor names (e.g. of the containing book) as a pipe-delimited list.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: collection_title
+          description: Title of the collection (e.g. book series).
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: collection_number
+          description: Number in the collection (e.g. book series volume).
+          type: integer
+        - name: publisher
+          description: Publisher name.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
       primaryKey: [id]
       missingValues: ['']
   - name: borehole
@@ -123,11 +205,10 @@ resources:
             unique: true
             minimum: 1
         - name: source_id
-          type: integer
-          description: Source identifier.
+          type: string
+          description: Identifier of the primary source (origin of temperature measurements).
           constraints:
             required: true
-            unique: false
         - name: glacier_name
           description: Glacier or ice cap name (as reported).
           type: string
@@ -146,12 +227,12 @@ resources:
             - submitted: Provided in data submission
             - published: Reported as coordinates in original publication
             - digitized: Digitized from published map with complete axes
-            - map approximation: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
-            - map guess: Estimated with difficulty, for example by comparing `elevation` to a map (e.g. Google Maps, CalTopo)
+            - estimated: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
+            - guessed: Estimated with difficulty, for example by comparing `elevation` to a map (e.g. Google Maps, CalTopo)
           type: string
           constraints:
             required: true
-            enum: [submitted, published, digitized, map approximation, map guess]
+            enum: [submitted, published, digitized, estimated, guessed]
         - name: latitude
           description: Latitude (EPSG 4326).
           type: number
@@ -175,12 +256,12 @@ resources:
             - submitted: Provided in data submission
             - published: Reported as number in original publication
             - digitized: Digitized from published plot with complete axes
-            - map approximation: Estimated from elevation contours in published map
-            - map guess: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
+            - estimated: Estimated from elevation contours in published map
+            - guessed: Estimated with difficulty, for example by comparing location (`latitude`, `longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
           type: string
           constraints:
             required: true
-            enum: [submitted, published, digitized, map approximation, map guess]
+            enum: [submitted, published, digitized, estimated, guessed]
         - name: elevation
           description: Elevation above sea level.
           type: number
@@ -238,10 +319,15 @@ resources:
           type: number
           unit: °C
         - name: notes
-          description: |-
-            Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`.
+          description: Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
           type: string
           constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: curator
+          description: Names of people who added the data to the database, as a pipe-delimited list. Additional details about each can be found under `contributors`.
+          type: string
+          contraints:
+            required: true
             pattern: '[^\s]+( [^\s]+)*'
       missingValues: ['']
       primaryKey: [id]
@@ -254,11 +340,11 @@ resources:
     description: Date and time of each measurement profile.
     path:
       - data/profile.csv
-      - data/rainer-prinz-nunatarssuaq/profile.csv
-      - data/gwenn-flowers-little-kluane/profile.csv
-      - data/gwenn-flowers-south-glacier/profile.csv
-      - data/tika-gurung-rikha-samba/profile.csv
-      - data/ian-lee-jarvis-glacier/profile.csv
+      - data/prinz2022-nunatarssuaq/profile.csv
+      - data/flowers2022-little-kluane/profile.csv
+      - data/flowers2022-south/profile.csv
+      - data/gurung2022-rikha-samba/profile.csv
+      - data/lee2019-jarvis/profile.csv
       - data/carturan2023-ortles/profile.csv
     format: csv
     dialect:
@@ -316,11 +402,11 @@ resources:
     description: Temperature measurements with depth.
     path:
       - data/measurement.csv
-      - data/rainer-prinz-nunatarssuaq/measurement.csv
-      - data/gwenn-flowers-little-kluane/measurement.csv
-      - data/gwenn-flowers-south-glacier/measurement.csv
-      - data/tika-gurung-rikha-samba/measurement.csv
-      - data/ian-lee-jarvis-glacier/measurement.csv
+      - data/prinz2022-nunatarssuaq/measurement.csv
+      - data/flowers2022-little-kluane/measurement.csv
+      - data/flowers2022-south/measurement.csv
+      - data/gurung2022-rikha-samba/measurement.csv
+      - data/lee2019-jarvis/measurement.csv
       - data/carturan2023-ortles/measurement.csv
     format: csv
     dialect:

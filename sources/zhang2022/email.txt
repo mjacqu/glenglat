@@ -1,0 +1,48 @@
+From: Tong Zhang <tzhang@bnu.edu.cn>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>; William Colgan <wic@geus.dk>
+Sent: 2022-02-05 07:57
+Subject: East Rongbuk Glacier temperatures
+
+Hi Mylène,
+
+Please see attached for the ice temperature data.
+
+The location lat and lon is 28.02767227 °N and 86.95550508 °E. The 1st and 2ed column in the txt data are the ice depth and ice temperature, respectively.
+
+The log date is May 4, 2008.
+
+Best,
+Tong
+
+----------
+
+From: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+To: Tong Zhang <tzhang@bnu.edu.cn>; William Colgan <wic@geus.dk>
+Sent: 2022-02-08 16:54
+Subject: East Rongbuk Glacier temperatures
+
+Hi Tong and Liam,
+
+Tong, many thanks for sharing your data. Just to confirm, the data you shared is that from borehole 2 mentioned in your 2013 paper?
+
+[...]
+
+cheers,
+Mylène
+
+----------
+
+From: Tong Zhang <tzhang@bnu.edu.cn>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>; William Colgan <wic@geus.dk>
+Sent: 2022-02-08 10:04
+Subject: East Rongbuk Glacier temperatures
+
+Hi Mylène,
+
+Yes, it is for BH2.
+
+I forgot to mention that for BH3 I only have a single data at the bottom of the borehole and you can get it from the paper.
+
+[...]
+
+Tong
