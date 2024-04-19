@@ -14,6 +14,8 @@ The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the
 - [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id`.
 - [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
+For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+
 ### Supporting information
 
 Folder [`sources`](sources) contains subfolders (with names matching column `source.id`) with files that document how and from where the data was extracted. Files with a `.png` or `.pdf` extension are figures, tables, maps, or text from the publication. Pairs of files with `.pgw` and `.png.aux.xml` extensions georeference a `.png` image, and files with `.geojson` extension are the subsequently-extracted spatial coordinates. Files with an `.xml` extension document how numeric values were extracted from maps and figures using Plot Digitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{borehole.id}_{profile.id}{suffix}` where `borehole.id` and `profile.id` are either a single value or a hyphenated range (e.g. `1-8`). Those without the optional `suffix` use `temperature` and `depth` as axis names. Those with a `suffix` are unusual cases which, for example, may be part of a series (e.g. `_lower`) or use a non-standard axis (e.g. `_date`).

@@ -75,3 +75,6 @@ DIGITIZER_FILE_REGEX = (
   r'(_(?P<suffix>.+))?\.xml$'
 )
 """Regular expression for digitizer file paths."""
+
+DATA_SUBDIR_REGEX = r'^[a-z]+[0-9]{4}[a-z]?(?:-[a-z0-9]+)*$'
+"""Regular expression for data subdirectory names."""
