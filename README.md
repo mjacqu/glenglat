@@ -70,10 +70,10 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
    cd glenglat
    ```
 
-2. Either install the `glenglat` Python environment (with `conda`):
+2. Either install the `glenglat-contribute` Python environment (with `conda`):
 
    ```sh
-   conda env create --file scripts/environment.yaml
+   conda env create --file contribute/environment.yaml
    conda activate glenglat
    ```
 
@@ -86,5 +86,5 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
 3. Validate, fix any reported issues, and rejoice! (`path/to/csvs` is the folder containing your CSV files)
 
    ```sh
-   python scripts/validate_submission.py path/to/csvs
+   python contribute/validate_submission.py path/to/csvs
    ```

@@ -1,4 +1,4 @@
-name: glenglat
+name: glenglat-contribute
 
 channels:
   - conda-forge
