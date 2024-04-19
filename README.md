@@ -88,3 +88,40 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
    ```sh
    python contribute/validate_submission.py path/to/csvs
    ```
+
+## Testing
+
+Follow the instructions below to run a full test of the data package.
+
+1. Clone this repository.
+
+   ```sh
+   git clone https://github.com/mjacqu/glenglat.git
+   cd glenglat
+   ```
+
+2. Install the `glenglat` Python environment (with `conda`):
+
+   ```sh
+   conda env create --file tests/environment.yaml
+   conda activate glenglat
+   ```
+
+3. Run the basic (`frictionless`) tests.
+
+   ```sh
+   frictionless validate datapackage.yaml
+   ```
+
+4. Run the custom (`pytest`) tests.
+
+   ```sh
+   pytest tests
+   ```
+
+5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. This requires a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id). To run, first install `geopandas` and `pyarrow`, then set the `GLIMS_PATH` environment variable before calling `pytest`.
+
+   ```sh
+   conda install -c conda-forge geopandas=0.13 pyarrow
+   GLIMS_PATH=/path/to/parquet pytest tests
+   ```

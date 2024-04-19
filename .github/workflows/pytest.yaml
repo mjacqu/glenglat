@@ -1,0 +1,23 @@
+name: pytest
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install conda environment
+        uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: tests/environment.yaml
+          cache-environment: true
+      - name: Run tests
+        run: pytest tests -v
