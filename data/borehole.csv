@@ -27,7 +27,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 26,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1885,-117.25327,published,2235.0,Hole E,,,,0,,False,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
 27,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19224,-117.25808,published,2230.0,Hole H,,,,0,,False,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
 28,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20112,-117.24085,published,2115.0,Hole M,,,,0,,False,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-29,sharp1951,Seward Glacier,G219787E60289N,estimated,60.369155,-139.961054,published,1791.0,,,,,INF,,False,digitized,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+29,sharp1951,Seward Glacier,G219787E60289N,estimated,60.369155,-139.961054,published,1791.0,,,,,INF,,False,digitized,0.5,Accumulation area | Measured in wall of freshly-dug pit | measurement_origin: Figure 6 was chosen over Table 1 because it matches the 'probably more accurate' mercury thermometer readings of Table 1 but extends deeper,Mylène Jacquemart | Guillem Carcanade
 30,suter2001,Jungfraufirn,G008032E46504N,estimated,46.537614,7.971254,published,3540.0,bh 91-3,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
 31,suter2001,Jungfraufirn,G008032E46504N,estimated,46.541514,7.978183,published,3410.0,bh 91-2,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
 32,suter2001,Jungfraufirn,G008032E46504N,estimated,46.549684,8.002083,published,3530.0,bh 91-5,,,,,,False,digitized,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
@@ -35,28 +35,28 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 34,suter2001,Grenzgletscher,G007800E45965N,estimated,45.923589,7.871769,published,4300.0,bh 94-1,,,,,,False,digitized,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 35,suter2001,Grenzgletscher,G007800E45965N,estimated,45.924076,7.862049,published,4100.0,bh 94-2,,,,,,False,digitized,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 36,suter2001,Grenzgletscher,G007800E45965N,estimated,45.922507,7.866534,published,4200.0,bh 94-A,,,,,,False,digitized,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-40,bjornsson1996,Kongsvegen,G013044E78792N,estimated,78.811214,12.881844,published,367.0,bh K1,,,,,,False,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-41,bjornsson1996,Kongsvegen,G013044E78792N,estimated,78.759108,13.335258,published,635.0,bh K2,,,,,,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-42,bjornsson1996,Midtre Lovenbreen,G012039E78878N,estimated,78.8878,12.04861,published,180.0,bh L3,,,,,,True,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-43,bjornsson1996,Midtre Lovenbreen,G012039E78878N,estimated,78.87204,11.99866,published,380.0,bh L9,,,,,,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-44,bjornsson1996,Austre Broggerbreen,G011895E78886N,estimated,78.8955,11.83762,published,175.0,bh B5,,,,,,True,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-45,bjornsson1996,Austre Broggerbreen,G011895E78886N,estimated,78.88008,11.92096,published,375.0,bh B11,,,,,,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+40,bjornsson1996,Kongsvegen,G013044E78792N,estimated,78.811214,12.881844,published,367.0,K1,,,,,,False,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
+41,bjornsson1996,Kongsvegen,G013044E78792N,estimated,78.759108,13.335258,published,635.0,K2,,,,,325,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+42,bjornsson1996,Midtre Lovenbreen,G012039E78878N,estimated,78.8878,12.04861,published,180.0,L3,,,,,123,True,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
+43,bjornsson1996,Midtre Lovenbreen,G012039E78878N,estimated,78.87204,11.99866,published,380.0,L9,,,,,133,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+44,bjornsson1996,Austre Broggerbreen,G011895E78886N,estimated,78.8955,11.83762,published,175.0,B5,,,,,108,True,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
+45,bjornsson1996,Austre Broggerbreen,G011895E78886N,estimated,78.88008,11.92096,published,375.0,B11,,,,,108,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 46,blatter1988,Laika Ice Cap,G280856E75887N,estimated,75.897934,-79.111864,published,80.0,X1,,,,,,False,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
 47,blatter1988,Laika Ice Cap,G280856E75887N,estimated,75.89683,-79.129082,published,202.0,X2,,,,,,True,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
 48,blatter1988,Laika Ice Cap,G280856E75887N,estimated,75.8952763,-79.1444562,published,315.0,X3,,,,,,False,digitized,,Around ELA,Mylène Jacquemart | Guillem Carcanade
 49,blatter1988,Laika Ice Cap,G280856E75887N,estimated,75.889619,-79.1632871,published,390.0,X4,,,,,,False,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 50,blatter1988,Laika Ice Cap,G280856E75887N,estimated,75.8817165,-79.1801472,published,527.0,X5,,,,,,False,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-51,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22458,-140.32565,guessed,2220.0,#3,,,,,,True,digitized,0.02,Below surge bulge,Mylène Jacquemart | Guillem Carcanade
-52,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22435,-140.32904,guessed,2320.0,#6,,,,,,True,digitized,0.02,At surge bulge,Mylène Jacquemart | Guillem Carcanade
-53,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22416,-140.33217,guessed,2420.0,#9,,,,,,True,digitized,0.02,Above surge bulge,Mylène Jacquemart | Guillem Carcanade
-54,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22379,-140.33531,guessed,2500.0,#11,,,,,,True,digitized,0.02,Above surge bulge,Mylène Jacquemart | Guillem Carcanade
+51,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22458,-140.32565,guessed,2220.0,3,,,,,22,True,digitized,0.02,Below surge bulge,Mylène Jacquemart | Guillem Carcanade
+52,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22435,-140.32904,guessed,2320.0,6,,,,,30,True,digitized,0.02,At surge bulge,Mylène Jacquemart | Guillem Carcanade
+53,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22416,-140.33217,guessed,2420.0,9,,,,,50,True,digitized,0.02,Above surge bulge,Mylène Jacquemart | Guillem Carcanade
+54,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22379,-140.33531,guessed,2500.0,11,,,,,65,True,digitized,0.02,Above surge bulge,Mylène Jacquemart | Guillem Carcanade
 55,copland2003,John Evans Glacier,G285646E79663N,estimated,79.7072458,-74.5266339,published,1100.0,#1,,,,,,False,published,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 56,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6860756,-74.4592733,published,975.0,#4,,,,,,False,published,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 57,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6800437,-74.4332913,published,900.0,#6,,,,,,False,published,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 58,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6482756,-74.2047463,published,575.0,#10,,,,,,False,published,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-59,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.315327,-143.853423,published,1750.0,JJMC,,,,,,True,digitized,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-60,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.283255,-143.831748,published,2100.0,LC,,,,,,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-61,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.295288,-143.790144,published,2400.0,UC,,,,,,True,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+59,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.315327,-143.853423,published,1750.0,JJMC,,,,,,True,digitized,,Ablation area | measurement.depth: First measurement in Figure 2 assumed to be at 0 m,Mylène Jacquemart | Guillem Carcanade
+60,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.283255,-143.831748,published,2100.0,LC,,,,,,True,digitized,,Accumulation area | measurement.depth: First measurement in Figure 2 assumed to be at 0 m,Mylène Jacquemart | Guillem Carcanade
+61,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.295288,-143.790144,published,2400.0,UC,,,,,,True,digitized,,Accumulation area | measurement.depth: First measurement in Figure 2 assumed to be at 0 m,Mylène Jacquemart | Guillem Carcanade
 62,fujii2002,Sofiyskiy Glacier,G087759E49791N,digitized,49.78691,87.730675,published,3450.0,,,,,,,False,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 63,fujii2002,Sofiyskiy Glacier,G087759E49791N,digitized,49.786858,87.732346,published,3440.0,,,,,,,False,digitized,,Accumulation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 64,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85657836,6.818206197,submitted,3138.059,18,,,,,,True,submitted,0.1,See gilbert2012 | label: 1 in gilbert2012 | elevation: Measured 2010-07-08,Ethan Welty

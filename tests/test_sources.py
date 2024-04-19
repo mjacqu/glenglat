@@ -1,7 +1,9 @@
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import re
+import warnings
 
+import numpy as np
 import pandas as pd
 import pytest
 
@@ -32,13 +34,15 @@ for path in Path('sources').glob('**/*.xml'):
   if not match:
     continue
   parsed = match.groupdict()
-  digitizer_paths.append((path, parsed['suffix']))
-  parsed['max_borehole_id'] = parsed['max_borehole_id'] or parsed['borehole_id']
-  parsed['max_profile_id'] = parsed['max_profile_id'] or parsed['profile_id']
-  borehole_ids = range(int(parsed['borehole_id']), int(parsed['max_borehole_id']) + 1)
+  parsed['borehole_id'] = int(parsed['borehole_id'])
+  parsed['profile_id'] = int(parsed['profile_id'])
+  parsed['max_borehole_id'] = int(parsed['max_borehole_id'] or parsed['borehole_id'])
+  parsed['max_profile_id'] = int(parsed['max_profile_id'] or parsed['profile_id'])
+  digitizer_paths.append((path, parsed))
+  borehole_ids = range(parsed['borehole_id'], parsed['max_borehole_id'] + 1)
   for borehole_id in borehole_ids:
-    profile_ids = range(int(parsed['profile_id']), int(parsed['max_profile_id']) + 1)
-    for profile_id in range(int(parsed['profile_id']), int(parsed['max_profile_id']) + 1):
+    profile_ids = range(parsed['profile_id'], parsed['max_profile_id'] + 1)
+    for profile_id in range(parsed['profile_id'], parsed['max_profile_id'] + 1):
       results.append({
         'source_id': parsed['source_id'],
         'borehole_id': borehole_id,
@@ -100,8 +104,14 @@ def test_digitized_profiles_match_digitizer_files() -> None:
   pd.testing.assert_index_equal(files, profiles)
 
 
-@pytest.mark.parametrize('path, suffix', digitizer_paths)
-def test_digitizer_file_is_valid(path: Path, suffix: str) -> None:
+# Indexed measurements (for speed)
+indexed_measurements = (
+  dfs['measurement'].set_index(['borehole_id', 'profile_id'])
+)
+
+
+@pytest.mark.parametrize('path, parsed', digitizer_paths)
+def test_digitizer_file_is_valid(path: Path, parsed: dict) -> None:
   """Digitizer file is valid."""
   tree = ET.parse(path)
   root = tree.getroot()
@@ -120,6 +130,39 @@ def test_digitizer_file_is_valid(path: Path, suffix: str) -> None:
   assert 'y' in axes.attrib, 'Missing <axisnames.y>'
   names = {axes.attrib['x'], axes.attrib['y']}
   valid_names = DEFAULT_AXIS_NAMES
-  if suffix:
+  if parsed['suffix']:
     valid_names = valid_names.union(SPECIAL_AXIS_NAMES)
   assert not (names - valid_names), f'Unexpected axes names: {names}'
+  # Profile
+  if (
+    parsed['max_borehole_id'] != parsed['borehole_id'] or
+    parsed['max_profile_id'] != parsed['profile_id'] or
+    parsed['suffix']
+  ):
+    return None
+  points = root.findall('point')
+  df = pd.DataFrame([point.attrib for point in points]).astype(float)
+  assert not df.empty, 'No points found'
+  assert (df['n'].sort_values() == df['n']).all(), 'Points are not sorted'
+  assert df[['dx', 'dy']].notnull().all(axis=None), 'Points contain null values'
+  columns = ['dx', 'dy']
+  if axes.attrib['x'] == 'temperature':
+    columns = columns[::-1]
+  xml_data = df[columns]
+  # Ignore performance warning due to unsorted index
+  with warnings.catch_warnings():
+    warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)
+    csv_data = (
+      indexed_measurements
+      .loc[(parsed['borehole_id'], parsed['profile_id']), ['depth', 'temperature']]
+    )
+  # Determine rounding level from CSV data
+  for index in range(2):
+    decimals = (
+      csv_data.iloc[:, index].astype(str)
+      .str.replace(r'^[^\.]+\.0?', '', regex=True)
+      .str.len()
+      .max()
+    )
+    xml_data.iloc[:, index] = xml_data.iloc[:, index].round(decimals)
+  np.testing.assert_array_almost_equal(csv_data, xml_data, decimal=0)
