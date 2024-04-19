@@ -20,4 +20,5 @@ jobs:
           environment-file: tests/environment.yaml
           cache-environment: true
       - name: Run tests
+        shell: bash -l {0}
         run: pytest tests -v
