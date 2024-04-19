@@ -14,9 +14,11 @@ The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the
 - [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id`.
 - [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
+For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+
 ### Supporting information
 
-Folder [`sources`](sources) contains subfolders (with names matching column `source.id`) with files that document how and from where the data was extracted. Files with a `.png` or `.pdf` extension are figures, tables, maps, or text from the publication. Pairs of files with `.pgw` and `.png.aux.xml` extensions georeference a `.png` image, and files with `.geojson` extension are the subsequently-extracted spatial coordinates. Files with an `.xml` extension document how numeric values were extracted from maps and figures using Plot Digitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{borehole.id}_{profile.id}{suffix}`. Those without the optional `suffix` use `temperature` and `depth` as axis names. Those with a `suffix` are unusual cases which contain data for a range of profiles (suffix `-{last_profile_id}`) and/or a non-standard axis (suffix `_{axis}`), for example `515_1-8_date`.
+Folder [`sources`](sources) contains subfolders (with names matching column `source.id`) with files that document how and from where the data was extracted. Files with a `.png` or `.pdf` extension are figures, tables, maps, or text from the publication. Pairs of files with `.pgw` and `.png.aux.xml` extensions georeference a `.png` image, and files with `.geojson` extension are the subsequently-extracted spatial coordinates. Files with an `.xml` extension document how numeric values were extracted from maps and figures using Plot Digitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{borehole.id}_{profile.id}{suffix}` where `borehole.id` and `profile.id` are either a single value or a hyphenated range (e.g. `1-8`). Those without the optional `suffix` use `temperature` and `depth` as axis names. Those with a `suffix` are unusual cases which, for example, may be part of a series (e.g. `_lower`) or use a non-standard axis (e.g. `_date`).
 
 ## How to contribute
 
@@ -70,10 +72,10 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
    cd glenglat
    ```
 
-2. Either install the `glenglat` Python environment (with `conda`):
+2. Either install the `glenglat-contribute` Python environment (with `conda`):
 
    ```sh
-   conda env create --file scripts/environment.yaml
+   conda env create --file contribute/environment.yaml
    conda activate glenglat
    ```
 
@@ -86,5 +88,42 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
 3. Validate, fix any reported issues, and rejoice! (`path/to/csvs` is the folder containing your CSV files)
 
    ```sh
-   python scripts/validate_submission.py path/to/csvs
+   python contribute/validate_submission.py path/to/csvs
+   ```
+
+## Testing
+
+Follow the instructions below to run a full test of the data package.
+
+1. Clone this repository.
+
+   ```sh
+   git clone https://github.com/mjacqu/glenglat.git
+   cd glenglat
+   ```
+
+2. Install the `glenglat` Python environment (with `conda`):
+
+   ```sh
+   conda env create --file tests/environment.yaml
+   conda activate glenglat
+   ```
+
+3. Run the basic (`frictionless`) tests.
+
+   ```sh
+   frictionless validate datapackage.yaml
+   ```
+
+4. Run the custom (`pytest`) tests.
+
+   ```sh
+   pytest tests
+   ```
+
+5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. This requires a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id). To run, first install `geopandas` and `pyarrow`, then set the `GLIMS_PATH` environment variable before calling `pytest`.
+
+   ```sh
+   conda install -c conda-forge geopandas=0.13 pyarrow
+   GLIMS_PATH=/path/to/parquet pytest tests
    ```

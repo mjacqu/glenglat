@@ -1,0 +1,10 @@
+name: glenglat
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.9
+  - frictionless=5.13
+  - pandas=2.2
+  - pytest=7.3

@@ -438,6 +438,8 @@ resources:
           description: Temperature.
           type: number
           unit: °C
+          constraints:
+            required: true
       missingValues: ['']
       primaryKey: [borehole_id, profile_id, depth]
       foreignKeys:
