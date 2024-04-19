@@ -165,4 +165,4 @@ def test_digitizer_file_is_valid(path: Path, parsed: dict) -> None:
       .max()
     )
     xml_data.iloc[:, index] = xml_data.iloc[:, index].round(decimals)
-  np.testing.assert_array_almost_equal(csv_data, xml_data, decimal=1)
+  np.testing.assert_array_almost_equal(csv_data, xml_data, decimal=2)
