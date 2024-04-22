@@ -14,7 +14,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 13,gilbert2013,Glacier des Bossons,G006865E45868N,published,45.84037,6.8489327,published,4255.0,,,,,,,True,0.3,Summit region,Mylène Jacquemart | Guillem Carcanade
 14,gilbert2013,Glacier des Bossons,G006865E45868N,published,45.84037,6.8489327,published,4255.0,,,,,,,False,0.1,Summit region,Mylène Jacquemart | Guillem Carcanade
 15,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.928529,7.875257,published,4470.0,CG91-B/91,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-16,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.928511,7.875283,published,4470.0,CG07-1/07,,,thermal,,,True,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+16,hoelzle2014,Grenzgletscher,G007800E45965N,published,45.928511,7.875283,published,4470.0,B07-1,2007-11-03,2007-11-03,thermal,,35,False,0.2,Accumulation area | label: CG07-1 in hoelzle2011 | date_min/date_max: gastaldello2024,Ethan Welty
 17,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250.0,GG91-D,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 18,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.923969,7.870477,published,4250.0,GG99-12,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 19,darms2009,Grenzgletscher,G007800E45965N,published,45.9238697,7.8704506,published,4250,B08-5,2008-08-24,2008-08-25,thermal,INF,25,False,0.1,label: CG08-5 in hoelzle2011 | Accumulation area,Ethan Welty
@@ -233,7 +233,6 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 265,blatter1987,White Glacier,G269329E79672N,estimated,79.49402,-90.82123,published,871.0,,,,,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 266,blatter1987,White Glacier,G269329E79672N,estimated,79.48651,-90.79514,published,750.0,,,,,,,False,0.2,Near ELA,Mylène Jacquemart | Guillem Carcanade
 267,blatter1987,White Glacier,G269329E79672N,estimated,79.45313,-90.69437,published,385.0,,,,,,,True,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-268,darms2009,Grenzgletscher,G007800E45965N,published,45.9285107,7.8752825,published,4470,B08-9,,,thermal,,35,False,0.1,label: CG07-1/08 in hoelzle2011 | Accumulation area | elevation_origin: hoelzle2011 (Table 1) rather than 4480 m in darms20009 (Appendix C),Ethan Welty
 269,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.921341,7.873008,published,4330.0,SJ99-10/99,,,thermal,,,False,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 270,darms2009,Grenzgletscher,G007800E45965N,published,45.9213418,7.872828,published,4334.8,B08-8,2008-08-25,2008-08-26,thermal,INF,29,False,0.1,label: SJ08-8 in hoelzle2011 | Accumulation area,Ethan Welty
 271,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.922643,7.873663,published,4293.0,SJ98-A/99,,,thermal,,,False,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade

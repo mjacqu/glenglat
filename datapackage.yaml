@@ -50,6 +50,9 @@ contributors:
   - title: Tong Zhang
     email: tzhang@bnu.edu.cn
     role: contributor
+  - title: Marcus Gastaldello
+    email: marcus.gastaldello@unifr.ch
+    role: contributor
 resources:
   - name: source
     description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. `В. С. Загороднов [V. S. Zagorodnov]`) and non-English titles are followed by a translation in square brackets.
