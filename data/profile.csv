@@ -796,8 +796,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 523,1,su1998,published,1988-07-17,1988-07-17,,,,
 524,1,su1998,published,1988-07-17,1988-07-17,,,,
 525,1,su1998,published,1989-09-13,1989-09-13,,,,
-526,1,wang1987,digitized,1981-06-26,1981-06-26,,,,profile.date: su1998
-527,1,wang1987,digitized,1981-06-26,1981-06-26,,,,profile.date: su1998
+526,1,wang1987,digitized,1981-06-26,1981-06-26,,,,date_min/date_max: su1998
+527,1,wang1987,digitized,1981-06-26,1981-06-26,,,,date_min/date_max: su1998
 528,1,su1998,published,1987-08-22,1987-08-22,,,,
 529,1,pu1995,digitized,1992-10-01,1992-10-01,,,,
 529,2,pu1995,digitized,1993-05-22,1993-05-22,,,,
