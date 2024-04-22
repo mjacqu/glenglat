@@ -10,8 +10,8 @@ The dataset adheres to the Frictionless Data [Tabular Data Package](https://spec
 The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files:
 
 - [`data/source.csv`](data/source.csv): Description of each data source (either a direct contribution or the reference to a published study).
-- [`data/borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id`.
-- [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id`.
+- [`data/borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
+- [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id` and to `source.csv` via `source_id`.
 - [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
 For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).

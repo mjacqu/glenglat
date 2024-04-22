@@ -208,7 +208,7 @@ resources:
             minimum: 1
         - name: source_id
           type: string
-          description: Identifier of the primary source (origin of temperature measurements).
+          description: Identifier of the source of the earliest temperature measurements. This is also the source of the borehole attributes unless otherwise stated in `notes`.
           constraints:
             required: true
         - name: glacier_name
@@ -305,17 +305,6 @@ resources:
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
-        - name: measurement_origin
-          description: |-
-            Origin of measurements (`measurement.depth`, `measurement.temperature`):
-
-            - submitted: Provided as numbers in data submission
-            - published: Numbers read from original publication
-            - digitized: Digitized from published plot with complete axes (with Plot Digitizer)
-          type: string
-          constraints:
-            required: true
-            enum: [submitted, published, digitized]
         - name: temperature_accuracy
           description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
           type: number
@@ -369,6 +358,22 @@ resources:
           constraints:
             required: true
             minimum: 1
+        - name: source_id
+          description: Source identifier.
+          type: string
+          constraints:
+            required: true
+        - name: measurement_origin
+          description: |-
+            Origin of measurements (`measurement.depth`, `measurement.temperature`):
+
+            - submitted: Provided as numbers in data submission
+            - published: Numbers read from original publication
+            - digitized: Digitized from published plot(s) with Plot Digitizer
+          type: string
+          constraints:
+            required: true
+            enum: [submitted, published, digitized]
         - name: date_min
           description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           type: date
@@ -393,12 +398,21 @@ resources:
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
+        - name: notes
+          description: Additional remarks about the profile or the measurements therein. Souces are referenced by their `id`.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
       missingValues: ['']
       primaryKey: [borehole_id, id]
       foreignKeys:
         - fields: [borehole_id]
           reference:
             resource: borehole
+            fields: [id]
+        - fields: [source_id]
+          reference:
+            resource: source
             fields: [id]
   - name: measurement
     description: Temperature measurements with depth.

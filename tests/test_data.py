@@ -74,7 +74,7 @@ def test_profile_id_in_measurement_table() -> None:
 
 
 def test_measurement_origin_submitted_only_for_submission() -> None:
-  df = dfs['borehole'].merge(
+  df = dfs['profile'].merge(
     dfs['source'][['id', 'type']].rename(columns={'id': 'source_id'}),
     how='left'
   )
@@ -88,7 +88,7 @@ def test_measurement_origin_submitted_only_for_submission() -> None:
       df['measurement_origin'].ne('submitted')
     )
   )
-  assert valid.all(), df.loc[~valid, ['id', 'source_id', 'type', 'measurement_origin']]
+  assert valid.all(), df.loc[~valid, ['borehole_id', 'source_id', 'type', 'measurement_origin']]
 
 
 def test_ice_depth_less_than_borehole_depth() -> None:
@@ -143,3 +143,15 @@ def test_people_have_correct_format(table: str, column: str) -> None:
   s = dfs[table].set_index('id')[column]
   valid = s.str.match(PEOPLE_REGEX)
   assert valid.all(), s[~valid]
+
+
+def test_borehole_source_id_matches_first_profile() -> None:
+  """Borehole source id matches the first profile's source id."""
+  df = dfs['borehole'].set_index('id')
+  df['profile_source_id'] = (
+    dfs['profile']
+    .groupby('borehole_id')['source_id']
+    .first()
+  )
+  valid = df['source_id'].eq(df['profile_source_id'])
+  assert valid.all(), df.loc[~valid, ['borehole_id', 'source_id', 'profile_source_id']]

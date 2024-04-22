@@ -21,7 +21,10 @@ from load import (
 # All source ids
 source_ids = set(dfs['source']['id'])
 # Source ids used as measurement origin
-primary_source_ids = set(dfs['borehole']['source_id'])
+primary_source_ids = (
+  set(dfs['borehole']['source_id']) |
+  set(dfs['profile']['source_id'])
+)
 # Source ids cited in borehole notes
 secondary_source_ids = set(dfs['borehole']['notes'].str.extractall(SOURCE_ID_REGEX)[0])
 
@@ -52,12 +55,7 @@ for path in Path('sources').glob('**/*.xml'):
 
 # All digitizer files
 digitizer_files = pd.DataFrame(results)
-temp = (
-  dfs['profile'][['borehole_id', 'id']]
-  .rename(columns={'id': 'profile_id'})
-  .merge(dfs['borehole'][['source_id', 'id', 'measurement_origin']]
-  .rename(columns={'id': 'borehole_id'}), how='left')
-)
+temp = dfs['profile'].rename(columns={'id': 'profile_id'})
 temp = temp[temp['measurement_origin'].eq('digitized')]
 
 # All digitized profiles
@@ -67,7 +65,7 @@ digitized_profiles = temp[['source_id', 'borehole_id', 'profile_id']].drop_dupli
 # ---- Tests ----
 
 def test_sources_are_used() -> None:
-  """All sources are used in borehole.source_id or borehole.notes."""
+  """All sources are used in *.source_id or borehole.notes."""
   invalid = source_ids - (primary_source_ids.union(secondary_source_ids))
   assert not invalid, invalid
 
