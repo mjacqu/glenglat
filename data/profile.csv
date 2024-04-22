@@ -14,8 +14,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 13,1,gilbert2013,digitized,1999-01-01,1999-12-31,,,,
 14,1,gilbert2013,digitized,2011-01-01,2011-12-31,,,,
 15,1,hoelzle2011,digitized,1991-10-26,1991-10-26,,,,
-16,1,hoelzle2014,published,2007-11-04,2007-11-04,07:24:00,True,True,label: B07-1 | equilibrated: Achieved by extrapolation (hoelzle2011) | time: gastaldello2024
-16,2,darms2009,published,2008-08-27,2008-08-27,08:45:00,True,True,label: B08-9 | measurement_origin: Also published in hoelzle2014 (Table 6.2) | time: gastaldello2024
+16,1,hoelzle2014,published,2007-11-04,2007-11-04,,,True,label: B07-1 | equilibrated: Achieved by extrapolation (hoelzle2011)
+16,2,darms2009,published,2008-08-27,2008-08-27,,,True,label: B08-9 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 17,1,hoelzle2011,digitized,1991-10-26,1991-10-26,,,,
 18,1,hoelzle2011,digitized,1999-05-01,1999-05-31,,,,
 19,1,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-5 | equilibrated: Achieved by extrapolation
@@ -309,8 +309,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 271,1,hoelzle2011,digitized,1999-09-01,1999-09-01,,,,
 272,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-6 | equilibrated: Achieved by extrapolation
 273,1,hoelzle2011,digitized,1982-01-01,1982-12-31,,,,
-275,1,hoelzle2014,published,2007-11-04,2007-11-04,12:00:00,True,True,label: B05-1 | time: gastaldello2024
-275,2,darms2009,published,2008-08-25,2008-08-25,09:00:00,True,True,label: B08-4 | measurement_origin: Also published in hoelzle2014 (Table 6.2) | time: gastaldello2024
+275,1,hoelzle2014,published,2007-11-04,2007-11-04,,,True,label: B05-1
+275,2,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-4 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 275,3,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B05-1
 275,4,hoelzle2017,published,2015-09-25,2015-09-25,,,True,label: B05-1
 278,1,kinnard2020,digitized,2008-11-04,2008-11-04,,,,
