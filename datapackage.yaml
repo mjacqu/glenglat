@@ -150,17 +150,17 @@ resources:
           description: Volume number of the item or container.
           type: integer
         - name: issue
-          description: Issue of the item or container.
+          description: Issue number (e.g. `1`) or range (e.g. `1-2`) of the item or container, with an optional letter prefix (e.g. `F1`).
           type: string
           constraints:
-            pattern: '\S+'
+            pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?'
         - name: page
-          description: Page (e.g. `3`) or page range (e.g. `3-5`) of the item in the container.
+          description: Page number (e.g. `1`) or range (e.g. `1-2`) of the item in the container.
           type: string
           constraints:
             pattern: '[0-9]+(-[0-9]+)?'
         - name: version
-          description: Version of the item.
+          description: Version number (e.g. `1.0`) of the item.
           type: string
           constraints:
             pattern: '[0-9]+(\.[0-9]+)*'
@@ -175,8 +175,10 @@ resources:
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: collection_number
-          description: Number in the collection (e.g. book series volume).
-          type: integer
+          description: Number (e.g. `1`) or range (e.g. `1-2`) in the collection (e.g. book series volume).
+          type: string
+          constraints:
+            pattern: '[0-9]+(-[0-9]+)?'
         - name: publisher
           description: Publisher name.
           type: string
