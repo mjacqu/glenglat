@@ -25,8 +25,11 @@ primary_source_ids = (
   set(dfs['borehole']['source_id']) |
   set(dfs['profile']['source_id'])
 )
-# Source ids cited in borehole notes
-secondary_source_ids = set(dfs['borehole']['notes'].str.extractall(SOURCE_ID_REGEX)[0])
+# Source ids cited in notes
+secondary_source_ids = (
+  set(dfs['borehole']['notes'].str.extractall(SOURCE_ID_REGEX)[0]) |
+  set(dfs['profile']['notes'].str.extractall(SOURCE_ID_REGEX)[0])
+)
 
 # Paths and suffix of all digitized profiles
 digitizer_paths = []
