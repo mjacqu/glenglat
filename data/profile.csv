@@ -897,3 +897,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 562,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-2 | equilibrated: Achieved by extrapolation
 563,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-3 | equilibrated: Achieved by extrapolation
 565,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-7 | equilibrated: Achieved by extrapolation
+566,1,hoelzle2017,published,2013-08-20,2013-08-20,,,,label: B13-1
+566,2,hoelzle2017,published,2014-09-25,2014-09-25,,,True,label: B13-1
+566,3,hoelzle2017,published,2015-09-24,2015-09-24,,,True,label: B13-1
+567,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-2 | equilibrated: Achieved by extrapolation
+568,1,hoelzle2017,published,2013-08-23,2013-08-23,,,True,label: B13-3 | equilibrated: Achieved by extrapolation
+569,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-4 | equilibrated: Achieved by extrapolation
+570,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-5 | equilibrated: Achieved by extrapolation
+571,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-6 | equilibrated: Achieved by extrapolation
+572,1,hoelzle2017,published,2015-09-27,2015-09-27,,,True,label: B15-1

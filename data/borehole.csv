@@ -516,3 +516,10 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 562,darms2009,Grenzgletscher,G007800E45965N,published,45.930025,7.8745082,published,4451.5,CG08-2,2008-08-23,2008-08-24,thermal,INF,28,False,0.1,label: Also B08-2 | Accumulation area,Ethan Welty
 563,darms2009,Grenzgletscher,G007800E45965N,published,45.9281127,7.8758723,published,4482.5,CG08-3,2008-08-23,2008-08-24,thermal,INF,26,False,0.1,label: Also B08-3 | Accumulation area | location_origin: Coordinates from Table 1 in hoelzle2011 (rather than from Appendix C in darms2009) as they match Figure 1.2 in darms2009,Ethan Welty
 565,darms2009,Grenzgletscher,G007875E45922N,published,45.9229715,7.8747744,published,4306.4,SJ08-7,2008-08-25,2008-08-26,thermal,INF,19,False,0.1,label: Also B08-7 | Accumulation area,Ethan Welty
+566,hoelzle2017,Grenzgletscher,G007908E45948N,published,45.9289296,7.8762913,published,4468,CG13-1,2013-08-02,2013-08-13,mechanical,,71.3,False,0.1,label: Also B13-1 / KCC | date_min/date_max: mayewski2014 | Accumulation area,Ethan Welty
+567,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9299442,7.8744689,published,4455,CG13-2,,2013-08-22,thermal,,19,False,0.1,label: Also B13-2 | Accumulation area,Ethan Welty
+568,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9281934,7.8759245,published,4482,CG13-3,,2013-08-23,thermal,,19.7,False,0.1,label: Also B13-3 | Accumulation area,Ethan Welty
+569,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9291287,7.8736761,published,4451,CG13-4,,2013-08-22,thermal,,21.5,False,0.1,label: Also B13-4 | Accumulation area,Ethan Welty
+570,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9238967,7.8704508,published,4253,CG13-5,,2013-08-22,thermal,,20.6,False,0.1,label: Also B13-5 | Accumulation area,Ethan Welty
+571,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9226431,7.8736375,published,4253,SJ13-6,,2013-08-22,thermal,,23.9,False,0.1,label: Also B13-6 | Accumulation area,Ethan Welty
+572,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9293659,7.8751346,published,4253,CG15-1,,2015-09-27,mechanical,,76,True,0.1,label: Also B15-1 | Accumulation area,Ethan Welty
