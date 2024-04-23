@@ -523,3 +523,5 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 570,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9238967,7.8704508,published,4253,CG13-5,,2013-08-22,thermal,,20.6,False,0.1,label: Also B13-5 | Accumulation area,Ethan Welty
 571,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9226431,7.8736375,published,4253,SJ13-6,,2013-08-22,thermal,,23.9,False,0.1,label: Also B13-6 | Accumulation area,Ethan Welty
 572,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9293659,7.8751346,published,4253,CG15-1,,2015-09-27,mechanical,,76,True,0.1,label: Also B15-1 | Accumulation area,Ethan Welty
+573,hoelzle2020,Grenzgletscher,G007800E45965N,published,45.9299355,7.87434,published,4455,CG18-1,,2018-12-14,thermal,,28.5,False,0.1,Accumulation area,Ethan Welty
+574,hoelzle2020,Grenzgletscher,G007800E45965N,published,45.9299537,7.8743272,published,4455,CG19-1,2019-06-25,2019-06-25,mechanical,,5.5,False,0.1,Accumulation area | See mattea2020,Ethan Welty
