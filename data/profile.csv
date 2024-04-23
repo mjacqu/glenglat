@@ -906,6 +906,9 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 570,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-5 | equilibrated: Achieved by extrapolation
 571,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-6 | equilibrated: Achieved by extrapolation
 572,1,hoelzle2017,published,2015-09-27,2015-09-27,,,True,label: B15-1
-573,1,hoelzle2020,published,2018-12-14,2018-12-14,,,,
-573,2,hoelzle2020,published,2019-06-25,2019-06-25,,,,
-574,1,hoelzle2020,published,2019-06-26,2019-06-26,,,,
+573,1,hoelzle2020,published,2018-12-14,2018-12-14,,,,label: CG18-1/18
+573,2,hoelzle2020,published,2019-06-25,2019-06-25,,,True,label: CG18-1/19
+573,3,hoelzle2022,published,2021-03-30,2021-03-30,,,True,label: CG18-1/21a or CG18-1/21
+573,4,hoelzle2022,published,2021-06-10,2021-06-10,,,True,label: CG18-1/21b or CG18-2/21
+574,1,hoelzle2020,published,2019-06-26,2019-06-26,,,,label: CG19-1/19
+575,1,hoelzle2022,published,2021-06-10,2021-06-10,,,,label: CG21-1/21
