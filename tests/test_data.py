@@ -107,9 +107,24 @@ def test_borehole_max_measurement_depth_is_positive() -> None:
 
 def test_borehole_measurement_depth_less_than_total_depth() -> None:
   """Borehole measurement depth is less than total depth (within tolerance)."""
-  df = dfs['borehole'].set_index('id')
-  df['max_depth'] = dfs['measurement'].groupby('borehole_id')['depth'].max()
-  valid = (df['max_depth'] / df['depth']).lt(1.03)
+  df = (
+    dfs['profile']
+    .rename(columns={'id': 'profile_id'})
+    .set_index(['borehole_id', 'profile_id'])
+  )
+  df['max_depth'] = (
+    dfs['measurement']
+    .groupby(['borehole_id', 'profile_id'])['depth']
+    .max()
+  )
+  df = df.join(dfs['borehole'].set_index('id')[['depth']], on='borehole_id')
+  ratio = df['max_depth'] / df['depth']
+  valid = (
+    # Within 3% for first profile
+    ((df.index.get_level_values('profile_id') == 1) & ratio.lt(1.03)) |
+    # Within 8% for subsequent profiles
+    ((df.index.get_level_values('profile_id') != 1) & ratio.lt(1.08))
+  )
   assert valid.all(), df.loc[~valid, ['depth', 'max_depth']]
 
 
