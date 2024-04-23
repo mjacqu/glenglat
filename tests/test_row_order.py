@@ -7,14 +7,14 @@ import pytest
 def test_source_sorted_by_id() -> None:
   """Sources are sorted by ascending id."""
   df = dfs['source']
-  valid = df['id'] == df['id'].sort_values()
+  valid = df['id'].index == df['id'].sort_values().index
   assert valid.all(), df.loc[~valid, ['id']]
 
 
 def test_borehole_sorted_by_id() -> None:
   """Boreholes are sorted by ascending id."""
   df = dfs['borehole']
-  valid = df['id'] == df['id'].sort_values()
+  valid = df['id'].index == df['id'].sort_values().index
   assert valid.all(), df.loc[~valid, ['id']]
 
 
