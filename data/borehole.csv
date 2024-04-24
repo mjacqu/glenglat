@@ -389,7 +389,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 435,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85605748,6.8215824,submitted,3200.716,2210,,,,,,,,elevation: Measured on 2022-07-06 | Folllows borehole 425,Ethan Welty
 436,suter2002,Glacier des Bossons,G006865E45868N,estimated,45.84093,6.84703,estimated,4236.7,5,,,thermal,,,,,Col du Dôme,Mylène Jacquemart | Guillem Carcanade
 437,suter2002,Glacier des Bossons,G006844E45863N,estimated,45.8427,6.84357,estimated,4300,99-B,,,mechanical,,,True,,Dôme du Gouter,Mylène Jacquemart | Guillem Carcanade
-438,suter2002,Grenzgletscher,G007908E45948N,estimated,45.93033,7.87493,estimated,4450,00A,,,thermal,,,,,Colle Gnifetti,Mylène Jacquemart | Guillem Carcanade
+438,suter2002,Grenzgletscher,G007908E45948N,published,45.9301411,7.8747283,published,4454,CG00-A,2000-05-03,2000-08-10,thermal,,40,False,0.1,Colle Gnifetti | location_origin/elevation_origin: hoelzle2011,Mylène Jacquemart | Ethan Welty | Guillem Carcanade
 439,zagorodnov1981,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.70055,16.25359,estimated,475,1,1980-02-01,1980-05-31,thermal,,107.5,True,0.1,,Ethan Welty
 440,zagorodnov1981,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.68885,16.27431,estimated,440,2,,,thermal,,,False,,,Ethan Welty
 441,zagorodnov1981,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.66816,16.27756,estimated,120,,,,,,,False,,Natural cavity | Bed at about 40 m,Ethan Welty

@@ -615,7 +615,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 435,2,gagliardini2023,submitted,2023-07-27,2023-07-27,,,True,
 436,1,suter2002,digitized,1998-06-15,1998-06-29,,,,
 437,1,suter2002,digitized,2000-01-27,2000-01-27,,,,
-438,1,suter2002,digitized,2000-08-26,2000-08-26,,,,
+438,1,suter2002,digitized,2000-08-24,2000-08-26,,,True,depth: Limited to first 25 m since water-filled below | label: CG00-A/00 in hoelzle2011
 439,1,zagorodnov1981,digitized,1980-04-01,1980-07-31,,,True,measurement_origin: Temperature at bed published separately in text
 440,1,zagorodnov1981,digitized,1980-04-01,1980-07-31,,,,
 441,1,zagorodnov1981,published,1980-05-02,1980-05-02,,,True,
