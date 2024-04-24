@@ -17,7 +17,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 16,hoelzle2014,Grenzgletscher,G007800E45965N,published,45.928511,7.875283,published,4470.0,CG07-1,2007-11-03,2007-11-03,thermal,,35,False,0.2,Accumulation area | label: Also B07-1 | date_min/date_max: gastaldello2024,Ethan Welty
 17,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250.0,GG91-D,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 18,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.923969,7.870477,published,4250.0,GG99-12,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-19,darms2009,Grenzgletscher,G007800E45965N,published,45.9238697,7.8704506,published,4250,CG08-5,2008-08-24,2008-08-25,thermal,INF,25,False,0.1,label: Also B08-5 | Accumulation area,Ethan Welty
+19,darms2009,Grenzgletscher,G007800E45965N,published,45.9238697,7.8704506,published,4250,GG08-5,2008-08-24,2008-08-25,thermal,INF,25,False,0.1,label: Also B08-5 | Accumulation area,Ethan Welty
 20,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20682,-117.23517,published,2065.0,Hole N,,,,,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
 21,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.18602,-117.26113,published,2275.0,Hole D,,,,,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
 22,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19837,-117.24919,published,2170.0,Hole L,,,,,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
@@ -520,7 +520,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 567,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9299442,7.8744689,published,4455,CG13-2,,2013-08-22,thermal,,19,False,0.1,label: Also B13-2 | Accumulation area,Ethan Welty
 568,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9281934,7.8759245,published,4482,CG13-3,,2013-08-23,thermal,,19.7,False,0.1,label: Also B13-3 | Accumulation area,Ethan Welty
 569,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9291287,7.8736761,published,4451,CG13-4,,2013-08-22,thermal,,21.5,False,0.1,label: Also B13-4 | Accumulation area,Ethan Welty
-570,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9238967,7.8704508,published,4253,CG13-5,,2013-08-22,thermal,,20.6,False,0.1,label: Also B13-5 | Accumulation area,Ethan Welty
+570,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9238967,7.8704508,published,4253,GG13-5,,2013-08-22,thermal,,20.6,False,0.1,label: Also B13-5 | Accumulation area,Ethan Welty
 571,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9226431,7.8736375,published,4253,SJ13-6,,2013-08-22,thermal,,23.9,False,0.1,label: Also B13-6 | Accumulation area,Ethan Welty
 572,hoelzle2017,Grenzgletscher,G007800E45965N,published,45.9293659,7.8751346,published,4253,CG15-1,,2015-09-27,mechanical,,76,True,0.1,label: Also B15-1 | Accumulation area,Ethan Welty
 573,hoelzle2020,Grenzgletscher,G007800E45965N,published,45.9299355,7.87434,published,4455,CG18-1,,2018-12-14,thermal,,28.5,False,0.1,Accumulation area,Ethan Welty
