@@ -387,8 +387,8 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 433,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85629562,6.820800498,submitted,3185.906,2208,,,,,,,,elevation: Measured on 2022-07-06 | Folllows borehole 423,Ethan Welty
 434,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85650829,6.821189669,submitted,3195.312,2209,,,,,,,,elevation: Measured on 2022-07-06,Ethan Welty
 435,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85605748,6.8215824,submitted,3200.716,2210,,,,,,,,elevation: Measured on 2022-07-06 | Folllows borehole 425,Ethan Welty
-436,suter2002,Glacier des Bossons,G006865E45868N,estimated,45.84093,6.84703,estimated,4236.7,5,,,thermal,,,,,Col du Dôme,Mylène Jacquemart | Guillem Carcanade
-437,suter2002,Glacier des Bossons,G006844E45863N,estimated,45.8427,6.84357,estimated,4300,99-B,,,mechanical,,,True,,Dôme du Gouter,Mylène Jacquemart | Guillem Carcanade
+436,suter2002,Glacier des Bossons,G006865E45868N,published,45.840852,6.847155,published,4245,5,1998-06-15,1998-06-29,thermal,,,False,0.1,Col du Dôme,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+437,suter2002,Glacier des Bossons,G006844E45863N,published,45.842595,6.843455,published,4304,99-B,,2000-01-27,mechanical,,40,True,0.1,Dôme du Gouter | location_origin/elevation_origin: Same as borehole 9 in suter2002,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 438,suter2002,Grenzgletscher,G007908E45948N,published,45.9301411,7.8747283,published,4454,CG00-A,2000-05-03,2000-08-10,thermal,,40,False,0.1,Colle Gnifetti | location_origin/elevation_origin: hoelzle2011,Mylène Jacquemart | Ethan Welty | Guillem Carcanade
 439,zagorodnov1981,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.70055,16.25359,estimated,475,1,1980-02-01,1980-05-31,thermal,,107.5,True,0.1,,Ethan Welty
 440,zagorodnov1981,Ледник Бертиль [Bertilbreen],G016264E78699N,estimated,78.68885,16.27431,estimated,440,2,,,thermal,,,False,,,Ethan Welty
@@ -526,3 +526,24 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 573,hoelzle2020,Grenzgletscher,G007800E45965N,published,45.9299355,7.87434,published,4455,CG18-1,,2018-12-14,thermal,,28.5,False,0.1,Accumulation area,Ethan Welty
 574,hoelzle2020,Grenzgletscher,G007800E45965N,published,45.9299537,7.8743272,published,4455,CG19-1,2019-06-25,2019-06-25,mechanical,,5.5,False,0.1,Accumulation area | date_min/date_max: mattea2020,Ethan Welty
 575,hoelzle2022,Grenzgletscher,G007800E45965N,published,45.9294871,7.8749616,published,4460,CG21-1,,2021-10-06,mechanical,,83,False,0.1,Accumulation area,Ethan Welty
+576,suter2002,Mont Blanc,G006867E45829N,published,45.832491,6.865531,published,4800,1,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+577,suter2002,Glacier des Bossons,G006865E45868N,published,45.836042,6.854517,published,4510,2,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+578,suter2002,Glacier des Bossons,G006865E45868N,published,45.838136,6.852577,published,4380,3,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+579,suter2002,Glacier des Bossons,G006865E45868N,published,45.839375,6.850324,published,4290,4,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+580,suter2002,Glacier des Bossons,G006865E45868N,published,45.841989,6.844491,published,4285,6,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+581,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.841196,6.842466,published,4285,7,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+582,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.842173,6.841967,published,4285,8,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+583,suter2002,Glacier des Bossons,G006865E45868N,published,45.842595,6.843455,published,4304,9,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+584,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.843459,6.843549,published,4290,10,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+585,suter2002,Glacier des Bossons,G006865E45868N,published,45.843375,6.846355,published,4265,11,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+586,suter2002,Glacier des Bossons,G006865E45868N,published,45.843054,6.850220,published,4190,12,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+587,suter2002,Glacier des Bossons,G006865E45868N,published,45.847195,6.845761,published,4210,13,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+588,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.844747,6.842170,published,4215,14,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+589,suter2002,Glacier des Bossons,G006865E45868N,published,45.848540,6.848295,published,4135,15,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+590,suter2002,Glacier des Bossons,G006865E45868N,published,45.843866,6.852451,published,4120,16,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+591,suter2002,Glacier des Bossons,G006865E45868N,published,45.844641,6.856124,published,4010,17,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+592,suter2002,Glacier des Bossons,G006865E45868N,published,45.843108,6.857196,published,4000,18,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+593,suter2002,Glacier des Bossons,G006865E45868N,published,45.849206,6.851905,published,4010,19,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+594,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.846484,6.837170,published,4000,20,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+595,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.849570,6.834047,published,3830,21,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+596,suter2002,Glacier des Bossons,G006865E45868N,published,45.845480,6.860118,published,3930,22,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
