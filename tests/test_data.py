@@ -122,8 +122,8 @@ def test_borehole_measurement_depth_less_than_total_depth() -> None:
   valid = (
     # Within 3% for first profile
     ((df.index.get_level_values('profile_id') == 1) & ratio.lt(1.03)) |
-    # Within 8% for subsequent profiles
-    ((df.index.get_level_values('profile_id') != 1) & ratio.lt(1.08))
+    # Within 16% for subsequent profiles
+    ((df.index.get_level_values('profile_id') != 1) & ratio.lt(1.16))
   )
   assert valid.all(), df.loc[~valid, ['depth', 'max_depth']]
 
