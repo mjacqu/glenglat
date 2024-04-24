@@ -343,8 +343,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 306,1,schwerzmann2006,published,2003-06-07,2003-06-07,,,True,measurement_origin: Temperature at 70.7 m average of -5.68 °C and -5.61 °C
 307,1,schwerzmann2006,published,2003-06-07,2003-06-07,,,True,measurement_origin: Temperature at 73 m average of -4.534 °C and -4.526 °C
 308,1,schwerzmann2006,published,2003-06-07,2003-06-07,,,True,measurement_origin: Temperature at 73 m average of -5.935 °C and -5.297 °C. The spread suggests the accuracy is worse than reported (0.05 °C)
-309,1,schwerzmann2006,published,2003-09-16,2003-09-17,,,True,measurement_origin: Temperature at 40 m average of -13.31 °C and -13.35 °C
-309,2,schwerzmann2006,published,2004-05-14,2004-05-14,,,True,
+309,1,hoelzle2009,published,2003-09-16,2003-09-17,,,True,measurement_origin: hoelzle2009 because higher decimal precision than schwerzmann2006. Temperature at 40 m average of -13.305 °C and -13.350 °C | date_min: schwerzmann2006 (Appendix D.3)
+309,2,hoelzle2009,published,2004-05-14,2004-05-15,,,True,measurement_origin: Depths from hoelzle2009 and temperatures from gastaldello2024 because each has better precision than the other. Both have more depths and temperatures that differ from schwerzmann2006
 310,1,schwerzmann2006,published,2005-02-01,2005-02-28,,,,
 311,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
 312,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,

@@ -262,7 +262,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 306,schwerzmann2006,Fieschergletscher,G008144E46504N,published,46.5515,8.0673,published,3893.0,hole 13,,,thermal,,,True,0.05,Fiescherhorn | See schwerzmann2006a,Mylène Jacquemart | Ethan Welty
 307,schwerzmann2006,Fieschergletscher,G008144E46504N,published,46.55081,8.06798,published,3889.0,hole 23,,,thermal,,,True,0.05,Fiescherhorn | See schwerzmann2006a,Mylène Jacquemart | Ethan Welty
 308,schwerzmann2006,Fieschergletscher,G008144E46504N,published,46.54988,8.06889,published,3890.0,hole 33,,,thermal,,,True,0.05,Fiescherhorn | See schwerzmann2006a,Mylène Jacquemart | Ethan Welty
-309,schwerzmann2006,Grenzgletscher,G007800E45965N,published,45.92947,7.87497,published,4454.51,CG03-1,,,mechanical,,82,True,0.05,Colle Gnifetti,Mylène Jacquemart | Ethan Welty
+309,hoelzle2009,Grenzgletscher,G007800E45965N,published,45.9294871,7.8749616,published,4454.51,CG03-1,2003-09-13,2003-09-17,mechanical,,82,True,0.05,Colle Gnifetti | temperature_accuracy: schwerzmann2006 | date_min: schwerzmann2006 (Table 2.6) | label: Also B03-1,Ethan Welty
 310,schwerzmann2006,Glaciar La Ollada,G289889E31964S,published,-31.9666,-70.1166,published,6075.0,,,,mechanical,,103,True,0.05,glacier_name: Also spelled 'Glaciar La Hoyada' | Cerro Mercedario,Mylène Jacquemart | Ethan Welty
 311,dikikh1965,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.94673,77.92159,published,4170.0,,,,mechanical,,,False,,,Lander Van Tricht
 312,dikikh1965,Ледник Григорьева [Grigoriev Glacier],G077923E41963N,guessed,41.95054,77.92077,published,4250.0,,,,mechanical,,,False,,,Lander Van Tricht
