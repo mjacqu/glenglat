@@ -417,7 +417,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 463,orvig1963,McCall Glacier,G216152E69302N,digitized,69.2925,-143.7844,published,2298,,,,thermal,,,False,0.1,location_origin: IGY camp digitized from Figure 1 in weller2007,Ethan Welty
 464,vallot1913,Glacier des Bossons,G006865E45868N,estimated,45.8411,6.8471,published,4240,Deuxième puits,,,mechanical,INF,,False,,Snow pit | location_origin: Col du Dôme,Ethan Welty
 465,lliboutry1976,Glacier des Bossons,G006865E45868N,estimated,45.8387,6.8503,published,4280,4250 m,,,,INF,,False,0.05,ice_depth: Snow and firn with regelation ice,Ethan Welty
-466,lliboutry1976,Glacier des Bossons,G006865E45868N,estimated,45.8445,6.8605,published,3960,3960 m,,,,INF,,False,,ice_depth: Snow and maybe firn,Ethan Welty
+466,lliboutry1976,Glacier des Bossons,G006865E45868N,estimated,45.8445,6.8605,published,3960,3960 m,,,,INF,,False,,Grand Plateau | ice_depth: Snow and maybe firn | label: P8 in jouzel1984,Ethan Welty
 467,trabant1975,McCall Glacier,G216152E69302N,estimated,69.314715,-143.852117,published,1730,,,,,,,False,,drill_method: Either coring auger or steam drill | Below firn line,Ethan Welty
 468,trabant1975,McCall Glacier,G216152E69302N,estimated,69.329583,-143.840895,digitized,1544,,,,,,,False,,drill_method: Either coring auger or steam drill | Below firn line,Ethan Welty
 469,trabant1975,McCall Glacier,G216152E69302N,estimated,69.321055,-143.851349,digitized,1665,,,,,,,False,,drill_method: Either coring auger or steam drill | Below firn line,Ethan Welty
@@ -547,3 +547,8 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 594,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.846484,6.837170,published,4000,20,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
 595,suter2002,Glacier de Taconnaz,G006844E45863N,published,45.849570,6.834047,published,3830,21,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
 596,suter2002,Glacier des Bossons,G006865E45868N,published,45.845480,6.860118,published,3930,22,1998-06-15,1998-06-29,thermal,,,False,0.1,,Ethan Welty
+597,jouzel1984,Glacier des Bossons,G006865E45868N,estimated,45.83997,6.84987,published,4270,P1,,1976-06-30,,,,,0.05,temperature_accuracy: Halfwidth of the reported temperature range (measurement accuracy may be worse),Ethan Welty
+598,jouzel1984,Glacier des Bossons,G006865E45868N,estimated,45.83997,6.84987,published,4270,P6,,1974-06-30,,,,,0.05,Likely a combination of two boreholes based on dates '06.74 et 06.76' | temperature_accuracy: Halfwidth of the reported temperature range (measurement accuracy may be worse),Ethan Welty
+599,jouzel1984,Mont Blanc,G006867E45829N,estimated,45.83176,6.86684,published,4785,P10,,1983-06-30,,,,,,,Ethan Welty
+600,jouzel1984,Glacier des Bossons,G006865E45868N,estimated,45.84098,6.84763,published,4250,P11,,1980-09-30,,,,,,,Ethan Welty
+601,jouzel1984,Glacier du Pelvoux,G006408E44900N,guessed,44.89603,6.40067,published,3820,Pelvoux,,1983-10-31,,,,,0.15,location_origin: Strongly constrained by elevation in the 'Pelvoux' massif | temperature_accuracy: Halfwidth of the reported temperature range (measurement accuracy may be worse),Ethan Welty

@@ -939,3 +939,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 594,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
 595,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
 596,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
+597,1,jouzel1984,published,1976-06-01,1976-06-30,,,,measurement_origin: Median temperature of range '-14.2 à -14.3'
+598,1,jouzel1984,published,1974-06-01,1976-06-30,,,,measurement_origin: Median temperature of range '-13.6 à -13.7'
+599,1,jouzel1984,published,1983-06-01,1983-06-30,,,,
+600,1,jouzel1984,published,1980-09-01,1980-09-30,,,,
+601,1,jouzel1984,published,1983-10-01,1983-10-31,,,,measurement_origin: Median temperature of range '0 à -0.3'
