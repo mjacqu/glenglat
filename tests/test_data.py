@@ -182,3 +182,48 @@ def test_borehole_source_id_matches_first_profile() -> None:
   )
   valid = df['source_id'].eq(df['profile_source_id'])
   assert valid.all(), df.loc[~valid, ['borehole_id', 'source_id', 'profile_source_id']]
+
+
+def test_profile_ids_are_chronological() -> None:
+  """Borehole profile ids are chronological."""
+  EXCEPTIONS = [
+    354,  # kubyshkin2006: Single profile and then monthly means over two years
+    460,  # carturan2023: Borehole with timeseries from two different thermistor chains
+  ]
+  df = dfs['profile']
+  # By date
+  groupby = df.groupby('borehole_id')
+  valid = (
+    groupby['date_min'].apply(lambda s: s.dropna().is_monotonic_increasing) &
+    groupby['date_max'].apply(lambda s: s.dropna().is_monotonic_increasing)
+  )
+  valid.loc[EXCEPTIONS] = True
+  assert valid.all(), valid.index[~valid]
+  # By datetime
+  mask = (
+    df['date_min'].notnull() &
+    df['date_max'].notnull() &
+    df['date_min'].eq(df['date_max']) &
+    df['time'].notnull()
+  )
+  df = df[mask]
+  datetime = df['date_min'] + 'T' + df['time']
+  valid = datetime.groupby(df['borehole_id']).apply(lambda s: s.is_monotonic_increasing)
+  valid.loc[valid.index.intersection(EXCEPTIONS)] = True
+  assert valid.all(), valid.index[~valid]
+
+
+def test_profile_ids_are_chronological_by_datetime() -> None:
+  """Borehole profile ids are chronological by datetime."""
+  EXCEPTIONS = [
+    354,  # kubyshkin2006: Single profile and then monthly means over two years
+    460,  # carturan2023: Borehole with timeseries from two different thermistor chains
+  ]
+  df = dfs['profile']
+  groupby = df.groupby('borehole_id')
+  valid = (
+    groupby['date_min'].apply(lambda s: s.dropna().is_monotonic_increasing) &
+    groupby['date_max'].apply(lambda s: s.dropna().is_monotonic_increasing)
+  )
+  valid.loc[EXCEPTIONS] = True
+  assert valid.all(), valid.index[~valid]

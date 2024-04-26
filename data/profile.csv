@@ -256,7 +256,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 223,1,gilbert2016,digitized,1976-07-09,1976-07-09,,,True,measurement_origin: Digitized from Figure 10 in gilbert2016 because original Figure 3 in hooke1980 could not be found in sufficient quality
 224,1,gilbert2016,digitized,1974-06-27,1974-06-27,,,False,measurement_origin: Digitized from Figure 10 in gilbert2016 because original Figure 3 in hooke1980 could not be found in sufficient quality
 225,1,gilbert2016,digitized,1974-06-14,1974-06-14,,,True,measurement_origin: Digitized from Figure 10 in gilbert2016 because original Figure 3 in hooke1980 could not be found in sufficient quality
-226,1,davis1967,digitized,1961-09-01,1976-09-30,,,,
+226,1,davis1967,digitized,1961-09-01,1961-09-30,,,,
 226,2,davis1967,digitized,1961-10-01,1961-10-31,,,,
 226,3,davis1967,digitized,1961-11-01,1961-11-30,,,,
 226,4,davis1967,digitized,1961-12-01,1961-12-31,,,,
@@ -866,8 +866,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 547,1,psareva1968,digitized,1966-06-01,1966-08-31,,,,
 548,1,vasilenko1988,published,1985-07-23,1985-07-23,14:00:00,,False,
 548,2,vasilenko1988,published,1985-07-23,1985-07-23,17:00:00,,False,
-548,3,vasilenko1988,published,1985-07-24,1985-07-24,21:00:00,,,
-548,4,vasilenko1988,published,1985-07-24,1985-07-24,10:30:00,,,
+548,3,vasilenko1988,published,1985-07-24,1985-07-24,10:30:00,,,
+548,4,vasilenko1988,published,1985-07-24,1985-07-24,21:00:00,,,
 549,1,zotikov1966,digitized,1958-01-01,1959-08-31,,,,
 550,1,aristarain1981,published,1976-01-01,1976-01-31,,,,"measurement_origin: 'unpublished work by R. E. Dalinger, P. Skvarca, and A. J. Aristarain'"
 551,1,aristarain1981,published,1977-12-01,1977-12-31,,,,
