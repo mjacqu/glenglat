@@ -28,6 +28,18 @@ def test_borehole_date_min_less_than_date_max() -> None:
   assert valid.all(), df.loc[~valid, ['id', 'date_min', 'date_max']]
 
 
+def test_profile_date_after_borehole_date() -> None:
+  """Profile date range is aligned with or after borehole date range."""
+  df = dfs['profile'].set_index('borehole_id').join(
+    dfs['borehole'].set_index('id')[['date_min', 'date_max']], rsuffix='_b'
+  )
+  valid = (
+    df['date_min'].ge(df['date_min_b']) &
+    df['date_max'].ge(df['date_max_b'])
+  )
+  assert valid.all(), df.loc[~valid, ['id', 'date_min_b', 'date_max_b', 'date_min', 'date_max']]
+
+
 def test_title_not_null_unless_submission() -> None:
   """Source title is required (except for submissions)."""
   df = dfs['source']
