@@ -991,3 +991,9 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 612,3,muller1976,digitized,1965-08-01,1965-09-30,,,True,date_min/date_max: 'late summer'
 613,1,muller1976,digitized,1963-08-01,1963-09-30,,,,date_min/date_max: 'late summer'
 613,2,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
+614,1,muller1976,published,1963-08-25,1973-08-25,,,,
+614,2,muller1976,published,1964-08-22,1974-08-22,,,True,
+615,1,muller1976,published,1963-08-19,1973-08-19,,,,
+616,1,muller1976,published,1963-08-19,1973-08-19,,,,
+617,1,muller1976,published,1963-08-19,1973-08-19,,,,
+618,1,muller1976,published,1963-08-19,1973-08-19,,,,

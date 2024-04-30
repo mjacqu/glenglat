@@ -564,3 +564,8 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 611,muller1976,White Glacier,G269329E79672N,estimated,79.45292,-90.68764,published,381,A3,,1963-08-25,mechanical,,,False,0.2,Ablation area,Ethan Welty
 612,muller1976,White Glacier,G269329E79672N,estimated,79.45172,-90.70082,published,389,A6,,1963-08-25,mechanical,,,False,0.2,Ablation area,Ethan Welty
 613,muller1976,White Glacier,G269329E79672N,estimated,79.45062,-90.71432,published,352,A9,,1963-08-25,mechanical,,,False,0.2,Ablation area,Ethan Welty
+614,muller1976,White Glacier,G269329E79672N,estimated,79.4314,-90.63921,published,164,L71,,1963-08-25,mechanical,,,False,0.5,Ablation area | Only 10 m temperatures reported,Ethan Welty
+615,muller1976,White Glacier,G269329E79672N,estimated,79.49634,-90.79972,published,863,M2,,1963-08-19,mechanical,,,False,1.0,Ablation area | Only 10 m temperatures reported,Ethan Welty
+616,muller1976,White Glacier,G269329E79672N,estimated,79.49524,-90.80872,published,866,M4,,1963-08-19,mechanical,,,False,0.7,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
+617,muller1976,White Glacier,G269329E79672N,estimated,79.49403,-90.82073,published,870,M7,,1963-08-19,mechanical,,,False,0.5,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
+618,muller1976,White Glacier,G269329E79672N,estimated,79.49094,-90.82756,published,875,M10,,1963-08-19,mechanical,,,False,0.7,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
