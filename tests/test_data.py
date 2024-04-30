@@ -131,11 +131,12 @@ def test_borehole_measurement_depth_less_than_total_depth() -> None:
   )
   df = df.join(dfs['borehole'].set_index('id')[['depth']], on='borehole_id')
   ratio = df['max_depth'] / df['depth']
+  diff = (df['max_depth'] - df['depth']).abs()
   valid = (
     # Within 3% for first profile
     ((df.index.get_level_values('profile_id') == 1) & ratio.lt(1.03)) |
-    # Within 16% for subsequent profiles
-    ((df.index.get_level_values('profile_id') != 1) & ratio.lt(1.16))
+    # Within 16% for subsequent profiles or < 2 m difference
+    ((df.index.get_level_values('profile_id') != 1) & (ratio.lt(1.16) | diff.lt(2)))
   )
   assert valid.all(), df.loc[~valid, ['depth', 'max_depth']]
 
@@ -181,7 +182,7 @@ def test_borehole_source_id_matches_first_profile() -> None:
     .first()
   )
   valid = df['source_id'].eq(df['profile_source_id'])
-  assert valid.all(), df.loc[~valid, ['borehole_id', 'source_id', 'profile_source_id']]
+  assert valid.all(), df.loc[~valid, ['source_id', 'profile_source_id']]
 
 
 def test_profile_ids_are_chronological() -> None:

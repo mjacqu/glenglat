@@ -325,13 +325,14 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 281,1,watanabe2001,digitized,1998-03-01,1998-04-30,,,,
 282,1,huang1990,digitized,1982-09-30,1982-09-30,,,,
 283,1,huang1990,digitized,1982-07-11,1982-07-11,,,,
-284,1,muller1976,digitized,1959-01-01,1959-12-31,,,,
-284,2,muller1976,digitized,1960-01-01,1960-12-31,,,,
-284,3,muller1976,digitized,1961-01-01,1961-12-31,,,,
-284,4,muller1976,digitized,1962-01-01,1962-12-31,,,,
-284,5,muller1976,digitized,1963-01-01,1963-12-31,,,,
-284,6,muller1976,digitized,1964-01-01,1964-12-31,,,,
-284,7,muller1976,digitized,1965-01-01,1965-12-31,,,,
+284,1,muller1961,digitized,1959-08-19,1959-08-19,,,True,equilibrated: Based on timeseries in Figure 1
+284,2,muller1961,digitized,1960-05-28,1960-05-28,,,True,
+284,3,muller1961,digitized,1960-06-12,1960-06-12,,,True,
+284,4,muller1961,digitized,1960-06-26,1960-06-26,,,True,
+284,5,muller1961,digitized,1960-07-24,1960-07-24,,,True,
+284,6,muller1961,digitized,1960-08-19,1960-08-19,,,True,
+284,7,muller1961,digitized,1960-08-20,1960-08-20,,,True,
+284,8,muller1961,digitized,1960-08-26,1960-08-26,,,True,
 292,1,ryser2013,digitized,2010-06-14,2010-06-14,,,,
 293,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
 294,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
@@ -944,3 +945,49 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 599,1,jouzel1984,published,1983-06-01,1983-06-30,,,,
 600,1,jouzel1984,published,1980-09-01,1980-09-30,,,,
 601,1,jouzel1984,published,1983-10-01,1983-10-31,,,,measurement_origin: Median temperature of range '0 à -0.3'
+602,1,muller1961,digitized,1960-07-05,1960-07-05,,,True,equilibrated: Based on timeseries in Figure 2
+602,2,muller1961,digitized,1960-08-20,1960-08-20,,,True,
+602,3,muller1963,digitized,1961-05-26,1961-05-26,,,True,
+602,4,muller1963,digitized,1961-06-28,1961-06-28,,,True,
+602,5,muller1963,digitized,1961-07-20,1961-07-20,,,True,
+602,6,muller1963,digitized,1961-08-03,1961-08-03,,,True,
+602,7,muller1963,digitized,1962-06-28,1962-06-28,,,True,
+602,8,muller1963,digitized,1962-07-21,1962-07-21,,,True,
+602,9,muller1963,digitized,1962-08-03,1962-08-03,,,True,
+602,10,muller1963,digitized,1962-08-08,1962-08-08,,,True,
+602,11,muller1976,digitized,1963-08-01,1963-09-30,,,True,date_min/date_max: 'late summer'
+602,12,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
+603,1,muller1961,digitized,1960-06-20,1960-06-20,,,True,
+603,2,muller1961,digitized,1960-08-20,1960-08-20,,,True,
+603,3,muller1963,digitized,1961-05-24,1961-05-24,,,True,
+603,4,muller1963,digitized,1961-06-28,1961-06-28,,,True,
+603,5,muller1963,digitized,1961-08-03,1961-08-03,,,True,
+603,6,muller1963,digitized,1962-07-15,1962-07-15,,,True,
+603,7,muller1963,digitized,1962-08-08,1962-08-08,,,True,
+603,8,muller1963,digitized,1962-08-22,1962-08-22,,,True,
+603,9,muller1976,digitized,1963-08-01,1963-09-30,,,True,date_min/date_max: 'late summer'
+603,10,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
+603,11,muller1976,digitized,1965-08-01,1965-09-30,,,True,date_min/date_max: 'late summer'
+604,1,muller1963,digitized,1961-07-13,1961-07-13,18:00:00,,False,equilibrated: Colder than previous profile at 06:00
+605,1,muller1963,digitized,1961-07-13,1961-07-13,18:00:00,,False,equilibrated: Colder than previous profile at 06:00
+606,1,muller1963,digitized,1961-07-13,1961-07-13,18:00:00,,False,equilibrated: Colder than previous profile at 06:00
+607,1,muller1963,digitized,1962-08-08,1962-08-08,,,,
+608,1,muller1963,digitized,1962-08-08,1962-08-08,,,,
+609,1,muller1963,digitized,1961-05-29,1961-05-29,,,,Only shallow measurements available
+609,2,muller1963,digitized,1961-06-27,1961-06-27,,,True,Only shallow measurements available
+609,3,muller1963,digitized,1961-07-25,1961-07-25,,,True,Only shallow measurements available
+609,4,muller1963,digitized,1961-08-18,1961-08-18,,,True,
+609,5,muller1963,digitized,1961-08-24,1961-08-24,,,True,Only shallow measurements available
+609,6,muller1963,digitized,1962-08-08,1962-08-08,,,True,
+609,7,muller1963,digitized,1962-08-18,1962-08-18,,,True,
+609,8,muller1976,digitized,1963-08-01,1963-09-30,,,True,date_min/date_max: 'late summer'
+609,9,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
+609,10,muller1976,digitized,1965-08-01,1965-09-30,,,True,date_min/date_max: 'late summer'
+610,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
+611,1,muller1976,digitized,1963-08-01,1963-09-30,,,,date_min/date_max: 'late summer'
+611,2,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
+612,1,muller1976,digitized,1963-08-01,1963-09-30,,,,date_min/date_max: 'late summer'
+612,2,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
+612,3,muller1976,digitized,1965-08-01,1965-09-30,,,True,date_min/date_max: 'late summer'
+613,1,muller1976,digitized,1963-08-01,1963-09-30,,,,date_min/date_max: 'late summer'
+613,2,muller1976,digitized,1964-08-01,1964-09-30,,,True,date_min/date_max: 'late summer'
