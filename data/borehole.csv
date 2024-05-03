@@ -564,14 +564,14 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 616,muller1976,White Glacier,G269329E79672N,estimated,79.49524,-90.80872,published,866,M4,,1963-08-19,mechanical,,,False,0.7,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
 617,muller1976,White Glacier,G269329E79672N,estimated,79.49403,-90.82073,published,870,M7,,1963-08-19,mechanical,,,False,0.5,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
 618,muller1976,White Glacier,G269329E79672N,estimated,79.49094,-90.82756,published,875,M10,,1963-08-19,mechanical,,,False,0.7,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
-619,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.86612,23.82282,estimated,725,3,1987-01-01,1987-05-12,mechanical,,,False,,Summit region,Ethan Welty
-620,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.85863,24.0863,estimated,740,4,1987-01-01,1987-05-29,mechanical,,,False,,Summit region,Ethan Welty
+619,zagorodnov1990a,Austfonna,G023619E79932N,estimated,79.86612,23.82282,estimated,725,3,1987-01-01,1987-05-12,mechanical,,,False,,Summit region,Ethan Welty
+620,zagorodnov1990a,Austfonna,G024143E79973N,estimated,79.85863,24.0863,estimated,740,4,1987-01-01,1987-05-29,mechanical,,,False,,Summit region,Ethan Welty
 621,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.79821,24.61963,estimated,725,5,1987-01-01,1987-06-14,mechanical,,,False,,Summit region,Ethan Welty
-622,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.77673,24.87248,estimated,700,6,1987-01-01,1987-05-15,mechanical,,,False,,Summit region,Ethan Welty
-623,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.75899,25.08921,estimated,650,7,1987-01-01,1987-04-20,mechanical,,,False,,Summit region,Ethan Welty
-624,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.73705,25.31231,estimated,600,8,1987-01-01,1987-04-21,mechanical,,,False,,Summit region,Ethan Welty
-625,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.83728,24.17342,published,750,19,1987-01-01,1987-04-29,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2),Ethan Welty
-626,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.83728,24.17342,published,750,24,1987-01-01,1987-04-19,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2) | label: Likely includes some measurements from borehole '23',Ethan Welty
+622,zagorodnov1990a,Austfonna,G025297E79771N,estimated,79.77673,24.87248,estimated,700,6,1987-01-01,1987-05-15,mechanical,,,False,,Summit region,Ethan Welty
+623,zagorodnov1990a,Austfonna,G025297E79771N,estimated,79.75899,25.08921,estimated,650,7,1987-01-01,1987-04-20,mechanical,,,False,,Summit region,Ethan Welty
+624,zagorodnov1990a,Austfonna,G025297E79771N,estimated,79.73705,25.31231,estimated,600,8,1987-01-01,1987-04-21,mechanical,,,False,,Summit region,Ethan Welty
+625,zagorodnov1990a,Austfonna,G024143E79973N,estimated,79.83728,24.17342,published,750,19,1987-01-01,1987-04-29,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2),Ethan Welty
+626,zagorodnov1990a,Austfonna,G024143E79973N,estimated,79.83728,24.17342,published,750,24,1987-01-01,1987-04-19,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2) | label: Likely includes some measurements from borehole '23',Ethan Welty
 627,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,published,765,25,1987-01-01,1987-05-08,mechanical,,,False,,Summit region | location_origin/measurement_origin: Assumed same as borehole '2' on ice divide (id: 125) based on 'ледораздел' (ice divide) in Figure 6,Ethan Welty
 628,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,published,765,26,1987-01-01,1987-06-27,mechanical,,,False,,Summit region | location_origin/measurement_origin: Assumed same as borehole '2' on ice divide (id: 125) based on 'ледораздел' (ice divide) in Figure 6,Ethan Welty
 629,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19053,-117.25616,published,2230,G,1967-08-01,1967-08-21,mechanical,0,10,False,0.04,Ablation area,Ethan Welty
