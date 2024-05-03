@@ -150,9 +150,9 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 161,naftz1993,Upper Fremont Glacier,G250390E43132N,guessed,43.1339651,-109.609941,guessed,3920.0,,,,,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
 162,odegard1997,Finsterwalderbreen,G015235E77463N,estimated,77.4924878,15.25323517,published,204.0,,,,,,,True,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
 163,odegard1997,Finsterwalderbreen,G015235E77463N,estimated,77.4366271,15.22366244,published,580.0,,,,,,,True,0.05,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-164,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.19942,-117.24299,published,2140.0,Hole 209,,,,,,False,,Took average of two measurements,Mylène Jacquemart | Guillem Carcanade
-165,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.20423,-117.23711,published,2075.0,Hole 72,,,,,,False,,Took average of two measurements,Mylène Jacquemart | Guillem Carcanade
-166,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.19258,-117.25908,published,2235.0,Hole 100,,,,,,False,,Took average of two measurements,Mylène Jacquemart | Guillem Carcanade
+164,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.19942,-117.24299,published,2140,209,1966-08-01,1966-08-31,thermal,0,209,True,0.03,Ablation area,Ethan Welty | Mylène Jacquemart
+165,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.20423,-117.23711,published,2075,72,1966-08-01,1966-08-31,thermal,0,72,False,0.02,Ablation area,Ethan Welty | Mylène Jacquemart
+166,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.19258,-117.25908,published,2235,100,1967-08-01,1967-08-31,thermal,0,100,False,0.02,Ablation area,Ethan Welty | Mylène Jacquemart
 167,pettersson2003,Storglaciären,G018569E67903N,estimated,67.9036926,18.56956375,guessed,1400.0,,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
 168,herren2013,Khukh Nuru Uul glacier,G090853E48651N,published,48.6556404,90.84707854,published,4130.0,,,,,,72,True,,,Mylène Jacquemart | Guillem Carcanade
 171,ryser2013,Grenzgletscher,G007800E45965N,published,45.971593,7.79257,published,2485.0,f13,,,,,,False,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade

@@ -178,9 +178,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 161,1,naftz1993,published,1990-01-01,1990-12-31,,,,
 162,1,odegard1997,digitized,1994-04-01,1994-04-30,,,,
 163,1,odegard1997,digitized,1995-04-01,1995-04-30,,,,
-164,1,paterson1971,digitized,1967-04-01,1967-06-30,,,,
-165,1,paterson1971,digitized,1967-06-30,1969-08-31,,,,
-166,1,paterson1971,digitized,1968-08-01,1969-08-31,,,,
+164,1,paterson1971,digitized,1967-04-01,1967-06-30,,,True,measurement_origin: Minimum of two thermistors at each depth in Figure 2
+164,2,paterson1971,digitized,1967-04-01,1967-06-30,,,True,measurement_origin: Maximum of two thermistors at each depth in Figure 2
+165,1,paterson1971,digitized,1967-06-01,1969-08-31,,,True,measurement_origin: Minimum of two thermistors at each depth in Figure 2
+165,2,paterson1971,digitized,1967-06-01,1969-08-31,,,True,measurement_origin: Maximum of two thermistors at each depth in Figure 2
+166,1,paterson1971,digitized,1968-08-01,1969-08-31,,,True,measurement_origin: Minimum of two thermistors at each depth in Figure 2
+166,2,paterson1971,digitized,1968-08-01,1969-08-31,,,True,measurement_origin: Maximum of two thermistors at each depth in Figure 2
 167,1,pettersson2003,digitized,2002-04-01,2002-04-30,,,,
 168,1,herren2013,digitized,2009-07-01,2009-07-31,,,,
 171,1,ryser2013,digitized,2010-06-15,2010-06-15,,,,
