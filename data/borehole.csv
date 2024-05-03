@@ -18,15 +18,15 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 17,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250.0,GG91-D,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 18,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.923969,7.870477,published,4250.0,GG99-12,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 19,darms2009,Grenzgletscher,G007800E45965N,published,45.9238697,7.8704506,published,4250,GG08-5,2008-08-24,2008-08-25,thermal,INF,25,False,0.1,label: Also B08-5 | Accumulation area,Ethan Welty
-20,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20682,-117.23517,published,2065.0,Hole N,,,,,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-21,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.18602,-117.26113,published,2275.0,Hole D,,,,,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-22,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19837,-117.24919,published,2170.0,Hole L,,,,,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-23,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.17594,-117.30924,published,3200.0,Hole A,,,,,,False,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-24,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.16331,-117.30632,published,2910.0,Hole B,,,,,,False,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-25,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1631,-117.28074,published,2730.0,Hole C,,,,,,False,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-26,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1885,-117.25327,published,2235.0,Hole E,,,,0,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-27,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19224,-117.25808,published,2230.0,Hole H,,,,0,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
-28,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20112,-117.24085,published,2115.0,Hole M,,,,0,,False,,Ablation area,Mylène Jacquemart | Guillem Carcanade
+20,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20682,-117.23517,published,2065,N,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+21,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.18602,-117.26113,published,2275,D,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+22,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19837,-117.24919,published,2170,L,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+23,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.17594,-117.30924,published,3200,A,1967-08-01,1967-08-18,mechanical,,10,False,0.04,Accumulation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+24,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.16331,-117.30632,published,2910,B,1967-08-01,1967-08-18,mechanical,,10,False,0.04,Accumulation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+25,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1631,-117.28074,published,2730,C,1967-08-01,1967-08-18,mechanical,,10,False,0.04,Accumulation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+26,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1885,-117.25327,published,2235,E,1968-04-01,1968-04-25,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+27,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19224,-117.25808,published,2230,H,1968-04-01,1968-04-24,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+28,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20112,-117.24085,published,2115,M,1968-04-01,1968-04-26,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 29,sharp1951,Seward Glacier,G219787E60289N,estimated,60.369155,-139.961054,published,1791.0,,1950-03-01,1950-03-18,mechanical,INF,3.36,False,0.5,Accumulation area | Snow pit,Mylène Jacquemart | Guillem Carcanade
 30,suter2001,Jungfraufirn,G008032E46504N,estimated,46.537614,7.971254,published,3540.0,bh 91-3,,,,,,False,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
 31,suter2001,Jungfraufirn,G008032E46504N,estimated,46.541514,7.978183,published,3410.0,bh 91-2,,,,,,False,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
@@ -574,3 +574,4 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 626,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.83728,24.17342,published,750,24,1987-01-01,1987-04-19,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2) | label: Likely includes some measurements from borehole '23',Ethan Welty
 627,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,published,765,25,1987-01-01,1987-05-08,mechanical,,,False,,Summit region | location_origin/measurement_origin: Assumed same as borehole '2' on ice divide (id: 125) based on 'ледораздел' (ice divide) in Figure 6,Ethan Welty
 628,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,published,765,26,1987-01-01,1987-06-27,mechanical,,,False,,Summit region | location_origin/measurement_origin: Assumed same as borehole '2' on ice divide (id: 125) based on 'ледораздел' (ice divide) in Figure 6,Ethan Welty
+629,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19053,-117.25616,published,2230,G,1967-08-01,1967-08-21,mechanical,0,10,False,0.04,Ablation area,Ethan Welty

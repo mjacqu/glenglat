@@ -1006,3 +1006,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 626,2,zagorodnov1990a,digitized,1987-06-28,1987-06-28,,,True,label: 3 in Figure 6
 627,1,zagorodnov1990a,digitized,1987-05-08,1987-05-08,,,,label: 7 in Figure 6
 628,1,zagorodnov1990a,digitized,1987-06-27,1987-06-27,,,,label: 8 in Figure 6
+629,1,paterson1972,published,1967-08-21,1967-08-21,,,,
