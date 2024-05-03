@@ -1021,3 +1021,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 630,12,schytt1968,digitized,1967-08-19,1967-08-21,,,True,
 631,1,schytt1968,digitized,1966-06-01,1967-06-01,,,True,Mean of multiple measurements over time period
 632,1,schytt1968,digitized,1966-06-01,1967-06-01,,,True,Mean of multiple measurements over time period
+633,1,rundle1965,digitized,1964-08-09,1964-08-09,,,,
+634,1,rundle1965,digitized,1964-08-13,1964-08-13,,,,
+635,1,rundle1965,digitized,1964-08-16,1964-08-16,,,,
+636,1,rundle1965,digitized,1964-08-20,1964-08-20,,,,
