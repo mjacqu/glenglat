@@ -133,6 +133,7 @@ resources:
               - fr: French
               - ko: Korean
               - ru: Russian
+              - sv: Swedish
               - zh: Chinese
           type: string
           constraints:
@@ -143,6 +144,7 @@ resources:
               - fr
               - ko
               - ru
+              - sv
               - zh
         - name: container_title
           description: Title of the container (e.g. journal, book).
