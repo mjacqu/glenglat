@@ -112,7 +112,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 122,zagorodnov1981a,Lomonosovfonna,G018042E78675N,published,78.81,17.6,published,1120.0,,,,thermal,27,,False,0.1,location_origin: Table 1 in kotlyakov2004,Ethan Welty
 123,kotlyakov1985,Vestfonna,G019951E79875N,published,79.93,19.52,published,580.0,,,,,,,,0.1,location_origin/elevation_origin: Table 1 in kotlyakov2004,Ethan Welty
 124,watanabe2001,Vestfonna,G020879E79901N,published,79.9667,21.0167,published,600.0,Vestfonna95,,,mechanical,,,False,,,Ethan Welty
-125,zagorodnov1990a,Austfonna,G024340E79634N,published,79.8272,24.1357,published,750.0,,,,mechanical,,566.7,True,0.2,"location_origin: 1.7 km south of camp at 79.84333, 24.13367 | elevation: > 750 m since camp is 750 m and borehole was drilled on the ice divide | Temperatures in the lowest 70 m are unstable due to influx of basal water",Ethan Welty
+125,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,estimated,765,2,1987-01-01,1987-06-29,mechanical,,566.7,True,0.2,"Summit region | elevation_origin: > 750 m since camp is 750 m and borehole was drilled on the ice divide | Temperatures in the lowest 70 m are unstable due to influx of basal water",Ethan Welty
 126,kawamura1991,Høghetta,G016639E79309N,published,79.2833,16.8333,published,1200.0,,,,,,,True,,,Ethan Welty
 127,kameda1993,Snøfjellafonna,G013542E78988N,published,79.1361,13.2917,published,1190.0,Site A,,,mechanical,30,,False,0.07,,Ethan Welty
 128,uchida1996,Åsgårdfonna,G017048E79443N,published,79.443889,16.710833,published,1140.0,JAGE '93 site 1,,,mechanical,,,False,0.08,,Ethan Welty
@@ -186,7 +186,6 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 209,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.4418617,96.55545016,published,4900.0,Site 2,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
 210,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.429247,96.55633645,published,5040.0,Site 3,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
 211,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.4355057,96.55583,published,4971.0,Deep borehole site,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
-212,zagorodnov2006,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,,,Summit region,Mylène Jacquemart | Guillem Carcanade
 213,thompson2022,Nevado Sajama,G291113E18113S,guessed,-18.10813679,-68.88302202,published,6548.0,,,,,,,,,Summit region | elevation_origin: Table 1 in zagorodnov2006,Ethan Welty
 214,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.54597514,-72.66058519,published,6451.0,,,,mechanical,,,,,Rim | elevation_origin: Table 1 in zagorodnov2006 | drill_method: zagorodnov2005,Ethan Welty
 215,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.55002714,-72.66097867,published,6326.0,,,,mechanical,,,,,Crater | elevation_origin: Table 1 in zagorodnov2006 | drill_method: zagorodnov2005,Ethan Welty
@@ -247,10 +246,6 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 283,huang1990,Baishui Glacier No. 1,G100187E27104N,estimated,27.10679,100.19538,published,4600.0,,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
 284,muller1961,White Glacier,G269329E79672N,estimated,79.43406,-90.64313,published,200,Lower Ice,1959-08-17,1959-08-17,mechanical,,10,False,0.2,Ablation area | temperature_accuracy: muller1976,Ethan Welty
 292,ryser2013,Grenzgletscher,G007800E45965N,published,45.96903,7.795159,published,2500.0,I9b,,,,,,False,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
-293,zagorodnov2006,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,,Summit region,Mylène Jacquemart | Guillem Carcanade
-294,zagorodnov2006,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,,Summit region,Mylène Jacquemart | Guillem Carcanade
-295,zagorodnov2006,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,,Summit region,Mylène Jacquemart | Guillem Carcanade
-296,zagorodnov2006,Austfonna,G024340E79634N,guessed,79.78064,24.68098,published,750.0,,,,,,,False,,Summit region,Mylène Jacquemart | Guillem Carcanade
 298,thompson1993,Grigoriev Ice Cap,G077894E41995N,guessed,41.977,77.916,published,4660.0,,,,mechanical,,,False,,,Lander Van Tricht | Ethan Welty
 299,takeuchi2014,Grigoriev Ice Cap,G077923E41963N,published,41.975833,77.913333,published,4563.0,,,,mechanical,,86.87,True,,,Lander Van Tricht | Ethan Welty
 300,hughes1939,Jungfraufirn,G008032E46504N,estimated,46.54778,7.99004,estimated,3455.0,Shaft,,,,,,False,,,Mylène Jacquemart | Ethan Welty
@@ -569,3 +564,13 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 616,muller1976,White Glacier,G269329E79672N,estimated,79.49524,-90.80872,published,866,M4,,1963-08-19,mechanical,,,False,0.7,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
 617,muller1976,White Glacier,G269329E79672N,estimated,79.49403,-90.82073,published,870,M7,,1963-08-19,mechanical,,,False,0.5,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
 618,muller1976,White Glacier,G269329E79672N,estimated,79.49094,-90.82756,published,875,M10,,1963-08-19,mechanical,,,False,0.7,Near equilibrium line | Only 10 m temperatures reported,Ethan Welty
+619,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.86612,23.82282,estimated,725,3,1987-01-01,1987-05-12,mechanical,,,False,,Summit region,Ethan Welty
+620,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.85863,24.0863,estimated,740,4,1987-01-01,1987-05-29,mechanical,,,False,,Summit region,Ethan Welty
+621,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.79821,24.61963,estimated,725,5,1987-01-01,1987-06-14,mechanical,,,False,,Summit region,Ethan Welty
+622,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.77673,24.87248,estimated,700,6,1987-01-01,1987-05-15,mechanical,,,False,,Summit region,Ethan Welty
+623,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.75899,25.08921,estimated,650,7,1987-01-01,1987-04-20,mechanical,,,False,,Summit region,Ethan Welty
+624,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.73705,25.31231,estimated,600,8,1987-01-01,1987-04-21,mechanical,,,False,,Summit region,Ethan Welty
+625,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.83728,24.17342,published,750,19,1987-01-01,1987-04-29,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2),Ethan Welty
+626,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.83728,24.17342,published,750,24,1987-01-01,1987-04-19,mechanical,,,False,,Summit region | location_origin: Same as camp (Figure 2) | label: Likely includes some measurements from borehole '23',Ethan Welty
+627,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,published,765,25,1987-01-01,1987-05-08,mechanical,,,False,,Summit region | location_origin/measurement_origin: Assumed same as borehole '2' on ice divide (id: 125) based on 'ледораздел' (ice divide) in Figure 6,Ethan Welty
+628,zagorodnov1990a,Austfonna,G024340E79634N,estimated,79.82232,24.1689,published,765,26,1987-01-01,1987-06-27,mechanical,,,False,,Summit region | location_origin/measurement_origin: Assumed same as borehole '2' on ice divide (id: 125) based on 'ледораздел' (ice divide) in Figure 6,Ethan Welty

@@ -242,7 +242,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 209,1,wang2018,digitized,2010-01-01,2011-12-31,,,,
 210,1,wang2018,digitized,2010-01-01,2011-12-31,,,,
 211,1,wang2018,digitized,2010-01-01,2011-12-31,,,,
-212,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
 213,1,thompson2022,submitted,1997-01-01,1998-12-31,,,,
 214,1,thompson2022,submitted,2003-08-28,2003-08-28,,,,
 215,1,thompson2022,submitted,2003-08-28,2003-08-28,,,,
@@ -334,10 +333,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 284,7,muller1961,digitized,1960-08-20,1960-08-20,,,True,
 284,8,muller1961,digitized,1960-08-26,1960-08-26,,,True,
 292,1,ryser2013,digitized,2010-06-14,2010-06-14,,,,
-293,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
-294,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
-295,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
-296,1,zagorodnov2006,digitized,1987-01-01,1987-12-31,,,,
 298,1,thompson1993,digitized,1990-07-23,1990-07-27,,,True,
 299,1,takeuchi2014,digitized,2007-09-06,2007-09-06,,,True,
 300,1,hughes1939,digitized,1938-05-23,1938-05-23,,,,
@@ -997,3 +992,14 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 616,1,muller1976,published,1963-08-19,1973-08-19,,,,
 617,1,muller1976,published,1963-08-19,1973-08-19,,,,
 618,1,muller1976,published,1963-08-19,1973-08-19,,,,
+619,1,zagorodnov1990a,digitized,1987-05-12,1987-05-12,,,,label: 6 in Figure 6
+620,1,zagorodnov1990a,digitized,1987-05-29,1987-05-29,,,,label: 9 in Figure 6
+621,1,zagorodnov1990a,digitized,1987-06-14,1987-06-14,,,,label: 4 in Figure 6
+622,1,zagorodnov1990a,digitized,1987-05-15,1987-05-15,,,,label: 10 in Figure 6
+623,1,zagorodnov1990a,digitized,1987-04-20,1987-04-20,,,,label: 11 in Figure 6
+624,1,zagorodnov1990a,digitized,1987-04-21,1987-04-21,,,,label: 12 in Figure 6
+625,1,zagorodnov1990a,digitized,1987-04-29,1987-04-29,,,,label: 5 in Figure 6
+626,1,zagorodnov1990a,digitized,1987-04-19,1987-04-19,,,,label: 2 in Figure 6
+626,2,zagorodnov1990a,digitized,1987-06-28,1987-06-28,,,True,label: 3 in Figure 6
+627,1,zagorodnov1990a,digitized,1987-05-08,1987-05-08,,,,label: 7 in Figure 6
+628,1,zagorodnov1990a,digitized,1987-06-27,1987-06-27,,,,label: 8 in Figure 6
