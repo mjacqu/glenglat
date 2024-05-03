@@ -1007,3 +1007,17 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 627,1,zagorodnov1990a,digitized,1987-05-08,1987-05-08,,,,label: 7 in Figure 6
 628,1,zagorodnov1990a,digitized,1987-06-27,1987-06-27,,,,label: 8 in Figure 6
 629,1,paterson1972,published,1967-08-21,1967-08-21,,,,
+630,1,schytt1966,digitized,1965-05-20,1965-05-20,,,True,depth: Does not include 1.4 m snow
+630,2,schytt1966,digitized,1965-11-15,1965-11-15,,,True,depth: Does not include 1.1 m ice surface lowering relative to 1965-05-20
+630,3,schytt1968,digitized,1965-12-31,1966-01-03,,,True,
+630,4,schytt1968,digitized,1966-04-29,1966-05-03,,,True,
+630,5,schytt1968,digitized,1966-06-22,1966-06-23,,,True,
+630,6,schytt1968,digitized,1966-08-25,1966-08-26,,,True,
+630,7,schytt1968,digitized,1966-11-13,1966-11-15,,,True,
+630,8,schytt1968,digitized,1966-12-31,1967-01-02,,,True,
+630,9,schytt1968,digitized,1967-03-30,1967-03-30,,,True,
+630,10,schytt1968,digitized,1967-05-27,1967-06-12,,,True,
+630,11,schytt1968,digitized,1967-07-23,1967-07-26,,,True,
+630,12,schytt1968,digitized,1967-08-19,1967-08-21,,,True,
+631,1,schytt1968,digitized,1966-06-01,1967-06-01,,,True,Mean of multiple measurements over time period
+632,1,schytt1968,digitized,1966-06-01,1967-06-01,,,True,Mean of multiple measurements over time period
