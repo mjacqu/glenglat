@@ -152,8 +152,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 140,1,liu2009,digitized,2005-08-01,2005-08-31,,,,
 141,1,liu2009,digitized,2007-06-01,2007-06-30,,,,
 142,1,liu2009,digitized,2005-10-01,2005-10-31,,,,
-143,1,luthi2001,digitized,1997-10-18,1997-10-18,,,,
-144,1,luthi2001,digitized,1997-10-18,1997-10-18,,,,
+143,1,gastaldello2024,submitted,1996-07-19,1996-07-19,,,True,equilibrated: luthi2001
+143,2,gastaldello2024,submitted,1997-07-19,1997-07-19,,,True,equilibrated: luthi2001
+143,3,gastaldello2024,submitted,1997-10-18,1997-10-18,,,True,equilibrated: luthi2001 | label: CG95-1/97 in hoelzle2011
+144,1,gastaldello2024,submitted,1996-07-19,1996-07-19,,,True,equilibrated: luthi2001
+144,2,gastaldello2024,submitted,1997-07-19,1997-07-19,,,True,equilibrated: luthi2001
+144,3,gastaldello2024,submitted,1997-10-18,1997-10-18,,,True,equilibrated: luthi2001 | label: CG95-2/97 in hoelzle2011
 145,1,shao1990,published,1987-07-22,1987-07-22,,,,
 145,2,shao1990,published,1987-07-29,1987-07-29,,,,
 145,3,shao1990,published,1987-08-15,1987-08-15,,,,
