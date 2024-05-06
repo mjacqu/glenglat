@@ -17,7 +17,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 16,1,hoelzle2014,published,2007-11-04,2007-11-04,,,True,label: B07-1 | equilibrated: Achieved by extrapolation (hoelzle2011)
 16,2,darms2009,published,2008-08-27,2008-08-27,,,True,label: B08-9 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 17,1,hoelzle2011,digitized,1991-10-26,1991-10-26,,,,
-18,1,hoelzle2011,digitized,1999-05-01,1999-05-31,,,,
+18,1,gastaldello2024,submitted,1999-05-27,1999-05-27,07:50:00,True,True,label: GG99-12/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.26)
 19,1,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-5 | equilibrated: Achieved by extrapolation
 20,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
 21,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
@@ -306,7 +306,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 265,1,blatter1987,digitized,1981-03-01,1981-03-31,,,,
 266,1,blatter1987,digitized,1979-03-01,1979-03-31,,,,
 267,1,blatter1987,digitized,1976-01-01,1976-01-31,,,,
-269,1,hoelzle2011,digitized,1999-05-01,1999-05-31,,,,
+269,1,gastaldello2024,submitted,1999-05-26,1999-05-26,07:00:00,True,True,label: SJ99-10/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
 270,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-8 | measurement_origin: First of two 4 m depths in Appendix C assumed to be 3 m based on Figure 3.10 | equilibrated: Achieved by extrapolation
 271,1,suter2002,digitized,1998-10-31,1998-10-31,,,True,
 271,2,suter2002,digitized,1999-01-25,1999-01-25,,,True,Shallowest measurement(s) are missing in suter2002 (Figure 6.22)
@@ -1034,3 +1034,32 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 639,2,palosuo1987,digitized,1958-04-22,1958-04-22,,,,
 640,1,palosuo1987,digitized,1958-07-15,1958-07-15,,,,
 640,2,palosuo1987,digitized,1958-08-05,1958-08-05,,,True,
+641,1,gastaldello2024,submitted,1999-05-28,1999-05-28,04:20:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+642,1,gastaldello2024,submitted,1999-05-28,1999-05-28,04:40:00,True,True,label: CG99-2/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
+643,1,gastaldello2024,submitted,1999-05-28,1999-05-28,05:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+644,1,gastaldello2024,submitted,1999-05-28,1999-05-28,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+645,1,gastaldello2024,submitted,1999-05-28,1999-05-28,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+646,1,gastaldello2024,submitted,1999-05-28,1999-05-28,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+647,1,gastaldello2024,submitted,1999-05-31,1999-05-31,07:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+648,1,gastaldello2024,submitted,1999-05-29,1999-05-29,07:10:00,True,True,label: SJ99-8/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
+649,1,gastaldello2024,submitted,1999-05-26,1999-05-26,09:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+650,1,gastaldello2024,submitted,1999-05-27,1999-05-27,07:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+651,1,gastaldello2024,submitted,1999-05-29,1999-05-29,07:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+652,1,gastaldello2024,submitted,1999-05-29,1999-05-29,07:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+653,1,gastaldello2024,submitted,1999-05-30,1999-05-30,17:10:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+654,1,gastaldello2024,submitted,1999-07-15,1999-07-15,16:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+655,1,gastaldello2024,submitted,1999-05-30,1999-05-30,17:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+656,1,gastaldello2024,submitted,1999-07-16,1999-07-16,15:50:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+657,1,gastaldello2024,submitted,1999-05-31,1999-05-31,10:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+658,1,gastaldello2024,submitted,1999-07-16,1999-07-16,07:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+659,1,gastaldello2024,submitted,1999-07-16,1999-07-16,06:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+660,1,gastaldello2024,submitted,1999-07-15,1999-07-15,17:10:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+661,1,gastaldello2024,submitted,1999-07-15,1999-07-15,12:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+662,1,gastaldello2024,submitted,1999-07-15,1999-07-15,13:20:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+663,1,gastaldello2024,submitted,1999-07-16,1999-07-16,05:50:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+664,1,gastaldello2024,submitted,1999-07-16,1999-07-16,19:50:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+665,1,gastaldello2024,submitted,1999-07-16,1999-07-16,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+666,1,gastaldello2024,submitted,1999-07-17,1999-07-17,03:10:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+667,1,gastaldello2024,submitted,1999-07-17,1999-07-17,10:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+668,1,gastaldello2024,submitted,1999-07-17,1999-07-17,09:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
+669,1,gastaldello2024,submitted,1999-07-17,1999-07-17,13:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
