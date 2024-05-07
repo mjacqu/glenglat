@@ -342,7 +342,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 271,6,suter2002,digitized,2000-09-01,2000-09-01,,,True,
 271,7,suter2002,digitized,2000-10-13,2000-10-13,,,True,
 272,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-6 | equilibrated: Achieved by extrapolation
-273,1,hoelzle2011,digitized,1982-01-01,1982-12-31,,,,
+273,1,haeberli1991,digitized,1982-01-01,1982-12-31,,,,label: CG82-1/82 in hoelzle2011
 275,1,hoelzle2014,published,2007-11-04,2007-11-04,,,True,label: B05-1
 275,2,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-4 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 275,3,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B05-1
