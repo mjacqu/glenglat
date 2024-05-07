@@ -13,9 +13,9 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 12,gilbert2013,Glacier des Bossons,G006865E45868N,published,45.842144,6.8467193,published,4245.0,,,,,,,False,0.1,Col du Dôme | Summit region,Mylène Jacquemart | Guillem Carcanade
 13,gilbert2013,Glacier des Bossons,G006865E45868N,published,45.84037,6.8489327,published,4255.0,,,,,,,True,0.3,Summit region,Mylène Jacquemart | Guillem Carcanade
 14,gilbert2013,Glacier des Bossons,G006865E45868N,published,45.84037,6.8489327,published,4255.0,,,,,,,False,0.1,Summit region,Mylène Jacquemart | Guillem Carcanade
-15,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.928529,7.875257,published,4470.0,CG91-B/91,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+15,laternser1992,Grenzgletscher,G007800E45965N,published,45.9285288,7.8752569,published,4470,CG91-B,1991-08-03,1991-08-03,thermal,,,False,0.2,Accumulation area | label: B (laternser1992),Ethan Welty
 16,hoelzle2014,Grenzgletscher,G007800E45965N,published,45.928511,7.875283,published,4470.0,CG07-1,2007-11-03,2007-11-03,thermal,,35,False,0.2,Accumulation area | label: Also B07-1 | date_min/date_max: gastaldello2024,Ethan Welty
-17,hoelzle2011,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250.0,GG91-D,,,thermal,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+17,laternser1992,Grenzgletscher,G007800E45965N,published,45.92387,7.870451,published,4250,GG91-D,1991-08-04,1991-08-04,thermal,,,False,0.2,Accumulation area | label: D (laternser1992),Ethan Welty
 18,gastaldello2024,Grenzgletscher,G007800E45965N,published,45.923969,7.870477,published,4250,GG99-12,1999-05-25,1999-05-25,thermal,INF,22.0,False,0.1,Accumulation area | label: 12 in suter2002 | temperature_accuracy: suter2002 | location_origin/elevation_origin: suter2002 (Appendix A.2),Ethan Welty
 19,darms2009,Grenzgletscher,G007800E45965N,published,45.9238697,7.8704506,published,4250,GG08-5,2008-08-24,2008-08-25,thermal,INF,25,False,0.1,label: Also B08-5 | Accumulation area,Ethan Welty
 20,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20682,-117.23517,published,2065,N,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
@@ -28,10 +28,10 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 27,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19224,-117.25808,published,2230,H,1968-04-01,1968-04-24,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 28,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20112,-117.24085,published,2115,M,1968-04-01,1968-04-26,mechanical,0,10,False,0.04,Ablation area,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 29,sharp1951,Seward Glacier,G219787E60289N,estimated,60.369155,-139.961054,published,1791.0,,1950-03-01,1950-03-18,mechanical,INF,3.36,False,0.5,Accumulation area | Snow pit,Mylène Jacquemart | Guillem Carcanade
-30,suter2001,Jungfraufirn,G008032E46504N,estimated,46.537614,7.971254,published,3540.0,91-3,,,,,,False,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
-31,suter2001,Jungfraufirn,G008032E46504N,estimated,46.541514,7.978183,published,3410.0,91-2,,,,,,False,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
-32,suter2001,Jungfraufirn,G008032E46504N,estimated,46.549684,8.002083,published,3530.0,91-5,,,,,,False,0.1,Other measurement dates available | Accumulation area,Mylène Jacquemart | Guillem Carcanade
-33,suter2001,Grenzgletscher,G007908E45948N,estimated,45.93033,7.876756,published,4452.0,91-1,,,,,,False,0.1,Accumulation area,Mylène Jacquemart | Guillem Carcanade
+30,laternser1992,Jungfraufirn,G008032E46504N,published,46.5373093,7.9711503,published,3540,3,1991-03-05,1991-03-05,thermal,INF,20,False,0.2,Accumulation area | label: 91-3 in suter2001,Ethan Welty
+31,laternser1992,Jungfraufirn,G008032E46504N,published,46.5412353,7.9779681,published,3410,2,1991-03-02,1991-03-02,thermal,INF,20,False,0.2,Accumulation area | label: 91-2 in suter2001,Ethan Welty
+32,laternser1992,Jungfraufirn,G008032E46504N,published,46.5488545,8.0021656,published,3530,5,1991-03-10,1991-03-10,thermal,INF,20,False,0.2,Accumulation area | label: 91-5 in suter2001 | Directly below a large crevasse,Ethan Welty
+33,laternser1992,Grenzgletscher,G007800E45965N,published,45.9299706,7.8746238,published,4452,CG91-A,1991-08-02,1991-08-02,thermal,,,False,0.2,Accumulation area | label: A (laternser1992) / 91-1 (suter2001),Ethan Welty
 34,suter2001,Grenzgletscher,G007800E45965N,submitted,45.926111,7.869161,published,4300,GG94-1,1994-04-29,1994-04-29,thermal,INF,14.3,False,0.2,Accumulation area | label: 94-1 in suter2001 | location_origin: gastaldello2024,Ethan Welty
 35,suter2001,Grenzgletscher,G007800E45965N,submitted,45.924076,7.862049,published,4100,GG94-2,1994-04-29,1994-04-29,thermal,INF,15.0,False,0.2,Accumulation area | label: 94-2 in suter2001 | location_origin: gastaldello2024,Ethan Welty
 36,gastaldello2024,Grenzgletscher,G007800E45965N,submitted,45.923870,7.867210,published,4200,GG94-A,1994-05-31,1994-05-31,mechanical,,120,False,0.2,Accumulation area | label: 94-A in suter2001 | drill_method: suter2001 | temperature_accuracy: suter2001 | elevation_origin: suter2001,Ethan Welty
@@ -619,3 +619,10 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 671,gastaldello2024,Grenzgletscher,G007800E45965N,submitted,45.926159,7.858857,published,4000,GG94-3,1994-04-29,1994-04-29,thermal,INF,15.0,False,0.2,Accumulation area | label: 94-3 in suter2001 | drill_method: suter2001 | temperature_accuracy: suter2001 | elevation_origin: suter2001,Ethan Welty
 672,gastaldello2024,Grenzgletscher,G007800E45965N,submitted,45.923610,7.866829,published,4200,GG94-4,1994-05-02,1994-05-02,thermal,INF,15.0,False,0.2,Accumulation area | label: 94-4 in suter2001 | drill_method: suter2001 | temperature_accuracy: suter2001,Ethan Welty
 673,gastaldello2024,Grenzgletscher,G007800E45965N,submitted,45.923878,7.867217,published,4200,GG94-B,1994-05-31,1994-05-31,mechanical,INF,28,False,0.2,Accumulation area | label: 94-B in suter2001 | drill_method: suter2001 | temperature_accuracy: suter2001 | elevation_origin: suter2001,Ethan Welty
+674,laternser1992,Grenzgletscher,G007800E45965N,published,45.9292718,7.869204,published,4400,CG91-C,1991-08-04,1991-08-04,thermal,,,False,0.2,Accumulation area | label: C (laternser1992),Ethan Welty
+675,laternser1992,Altelsgletscher,G007671E46431N,published,46.4326168,7.6679131,published,3019.09,A,1991-06-25,1991-06-25,thermal,,11,,0.2,,Ethan Welty
+676,laternser1992,Altelsgletscher,G007671E46431N,published,46.4325217,7.6675977,published,3019.94,B,1991-06-25,1991-06-25,thermal,,21,True,0.2,,Ethan Welty
+677,laternser1992,Altelsgletscher,G007671E46431N,published,46.432659,7.668173,published,3019.28,C,1991-06-25,1991-06-25,thermal,,9,True,0.2,,Ethan Welty
+678,laternser1992,Jungfraufirn,G008032E46504N,published,46.5439302,7.9787772,published,3410,1,1991-03-02,1991-03-02,thermal,INF,20,False,0.2,Accumulation area,Ethan Welty
+679,laternser1992,Jungfraufirn,G008032E46504N,published,46.5366091,7.966972,published,3630,4,1991-03-05,1991-03-05,thermal,INF,20,False,0.2,Accumulation area | 100 m below a bergschrund,Ethan Welty
+680,laternser1992,Breithornplateau,G007800E45965N,published,45.930144,7.7390105,published,3810,,1991-07-30,1991-07-30,thermal,,30,False,0.2,Accumulation area,Ethan Welty
