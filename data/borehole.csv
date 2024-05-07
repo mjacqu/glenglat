@@ -1,7 +1,7 @@
 id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_origin,elevation,label,date_min,date_max,drill_method,ice_depth,depth,to_bed,temperature_accuracy,notes,curator
-1,blatter1984,Grenzgletscher,G007908E45948N,estimated,45.93062,7.875403,published,4450.0,,,,,,,False,,14 km from terminus | Colle Gnifetti,Mylène Jacquemart | Guillem Carcanade
-2,blatter1984,Grenzgletscher,G007800E45965N,estimated,45.973065,7.802684,published,2600.0,,,,,,,False,,5 km from terminus | Ablation area,Mylène Jacquemart | Guillem Carcanade
-3,blatter1984,Grenzgletscher,G007800E45965N,estimated,45.974053,7.774972,published,2500.0,,,,,,,False,,2 km from terminus | Ablation area,Mylène Jacquemart | Guillem Carcanade
+1,haeberli1991,Grenzgletscher,G007908E45948N,published,45.9303289,7.8750134,published,4450,CG77-1,1977-08-01,1977-08-20,mechanical,,65,False,,Accumulation area | label: 1 in blatter1984 | location_origin: gaggeler1983 (Figure 1) | date_min: gaggeler1983,Ethan Welty
+2,blatter1984,Grenzgletscher,G007800E45965N,estimated,45.967331,7.797442,published,2600,2,,1979-12-31,,,,False,,Ablation area | location_origin: elevation and '5 km from terminus',Mylène Jacquemart | Guillem Carcanade
+3,blatter1984,Grenzgletscher,G007800E45965N,estimated,45.973722,7.763328,published,2500,3,,1980-12-31,,,,False,,Ablation area | location_origin: elevation and '2 km from terminus',Mylène Jacquemart | Guillem Carcanade
 4,blatter1987,White Glacier,G269329E79672N,estimated,79.531432,-91.014641,published,1447.0,,,,,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 5,blatter1987,White Glacier,G269329E79672N,estimated,79.474711,-90.756867,published,625.0,,,,,,,True,0.2,Ablation area,Mylène Jacquemart | Guillem Carcanade
 6,blatter1987,White Glacier,G269329E79672N,estimated,79.440386,-90.645269,published,230.0,,,,,,,True,0.2,Ablation area,Mylène Jacquemart | Guillem Carcanade
@@ -626,3 +626,4 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 678,laternser1992,Jungfraufirn,G008032E46504N,published,46.5439302,7.9787772,published,3410,1,1991-03-02,1991-03-02,thermal,INF,20,False,0.2,Accumulation area,Ethan Welty
 679,laternser1992,Jungfraufirn,G008032E46504N,published,46.5366091,7.966972,published,3630,4,1991-03-05,1991-03-05,thermal,INF,20,False,0.2,Accumulation area | 100 m below a bergschrund,Ethan Welty
 680,laternser1992,Breithornplateau,G007800E45965N,published,45.930144,7.7390105,published,3810,,1991-07-30,1991-07-30,thermal,,30,False,0.2,Accumulation area,Ethan Welty
+681,oeschger1977,Grenzgletscher,G007800E45965N,estimated,45.929886,7.875375,published,4450,CG76-1,1976-07-01,1976-09-09,mechanical,,33,False,0.1,Accumulation area | date_min: gaggeler1983 | date_max: haeberli1991 (inconsistent with gaggeler1983) | location_origin: gaggeler1983,Ethan Welty
