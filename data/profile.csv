@@ -1137,3 +1137,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 682,1,haeberli1985,published,1979-01-01,1980-12-31,,,,
 683,1,thompson2023,published,2019-07-26,2019-08-17,,,,
 684,1,thompson2023,published,2019-08-03,2019-08-17,,,,measurement_origin: 'consistently -9 °C from surface to the ice/bedrock interface' - only bottom temperature is reported here since depth of 'surface' is ambiguous
+685,1,haeberli1985,published,1981-01-01,1981-12-31,,,,
