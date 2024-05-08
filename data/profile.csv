@@ -1134,3 +1134,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 680,2,laternser1992,published,1991-12-04,1991-12-04,,,True,Temperatures negative above 4 m but not reported
 680,3,laternser1992,published,1992-04-10,1992-04-10,,,True,Temperatures negative above 10 m but not reported
 681,1,oeschger1977,digitized,1976-09-09,1976-09-09,,,,equilibrated: 15 h after termination of drilling activity and installation of thermistors (haeberli1991) | date_min/date_max: haeberli1991 | Measurements above 2 m from shaft and shallow parallel borehole
+682,1,haeberli1985,published,1979-01-01,1980-12-31,,,,
