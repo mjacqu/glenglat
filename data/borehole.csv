@@ -626,5 +626,5 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 678,laternser1992,Jungfraufirn,G008032E46504N,published,46.5439302,7.9787772,published,3410,1,1991-03-02,1991-03-02,thermal,INF,20,False,0.2,Accumulation area,Ethan Welty
 679,laternser1992,Jungfraufirn,G008032E46504N,published,46.5366091,7.966972,published,3630,4,1991-03-05,1991-03-05,thermal,INF,20,False,0.2,Accumulation area | 100 m below a bergschrund,Ethan Welty
 680,laternser1992,Breithornplateau,G007800E45965N,published,45.930144,7.7390105,published,3810,,1991-07-30,1991-07-30,thermal,,30,False,0.2,Accumulation area,Ethan Welty
-681,oeschger1977,Grenzgletscher,G007800E45965N,estimated,45.929886,7.875375,published,4450,CG76-1,1976-07-01,1976-09-09,mechanical,,33,False,0.1,Accumulation area | date_min: gaggeler1983 | date_max: haeberli1991 (inconsistent with gaggeler1983) | location_origin: gaggeler1983,Ethan Welty
+681,oeschger1977,Grenzgletscher,G007908E45948N,estimated,45.929886,7.875375,published,4450,CG76-1,1976-07-01,1976-09-09,mechanical,,33,False,0.1,Accumulation area | date_min: gaggeler1983 | date_max: haeberli1991 (inconsistent with gaggeler1983) | location_origin: gaggeler1983,Ethan Welty
 682,haeberli1985,Titlis-Gletscher,G008427E46774N,estimated,46.77025422,8.42465289,published,3070,,1979-01-01,1980-12-31,,,22,True,,Chli [Klein] Titlis summit,Ethan Welty
