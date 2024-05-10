@@ -404,7 +404,7 @@ resources:
           trueValues: ['True']
           falseValues: ['False']
         - name: notes
-          description: Additional remarks about the profile or the measurements therein. Souces are referenced by their `id`.
+          description: Additional remarks about the profile or the measurements therein. Sources are referenced by their `id`.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
