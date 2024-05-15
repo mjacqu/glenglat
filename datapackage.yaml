@@ -89,6 +89,7 @@ resources:
             Item type:
 
               - article-journal: Journal article.
+              - book: Book (if the entire book is relevant).
               - chapter: Book section.
               - document: Document not fitting into any other category.
               - dataset: Collection of data.
@@ -104,6 +105,7 @@ resources:
             required: true
             enum:
               - article-journal
+              - book
               - chapter
               - dataset
               - document
