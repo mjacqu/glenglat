@@ -459,10 +459,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 351,1,nikitin1986,digitized,1981-07-22,1981-07-22,,,,
 351,2,nikitin1986,digitized,1982-07-14,1982-07-14,,,,
 352,1,kubyshkin2006,digitized,2005-04-18,2005-04-18,,,,
-353,1,kubyshkin2006,digitized,1957-02-01,1959-02-28,,,,Mean temperatures for February 1957-1959
-353,2,kubyshkin2006,digitized,1957-05-01,1959-05-31,,,,Mean temperatures for May 1957-1959
-353,3,kubyshkin2006,digitized,1957-06-01,1959-06-30,,,,Mean temperatures for June 1957-1959
-353,4,kubyshkin2006,digitized,1957-10-01,1959-10-31,,,,Mean temperatures for October 1957-1959
 354,1,kubyshkin2006,digitized,1959-04-16,1959-04-16,,,,
 354,2,kubyshkin2006,digitized,1957-02-01,1959-02-28,,,,Mean temperatures for February 1957-1959
 354,3,kubyshkin2006,digitized,1957-05-01,1959-05-31,,,,Mean temperatures for May 1957-1959
@@ -990,7 +986,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 548,2,vasilenko1988,published,1985-07-23,1985-07-23,17:00:00,,False,
 548,3,vasilenko1988,published,1985-07-24,1985-07-24,10:30:00,,,
 548,4,vasilenko1988,published,1985-07-24,1985-07-24,21:00:00,,,
-549,1,zotikov1966,digitized,1958-01-01,1959-08-31,,,,
 550,1,aristarain1981,published,1976-01-01,1976-01-31,,,,"measurement_origin: 'unpublished work by R. E. Dalinger, P. Skvarca, and A. J. Aristarain'"
 551,1,aristarain1981,published,1977-12-01,1977-12-31,,,,
 552,1,marchenko2017,digitized,2012-05-10,2012-05-10,,,,measurement.depth: Relative to glacier surface in April 2012
@@ -1231,3 +1226,150 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 683,1,thompson2023,published,2019-07-26,2019-08-17,,,,
 684,1,thompson2023,published,2019-08-03,2019-08-17,,,,measurement_origin: 'consistently -9 °C from surface to the ice/bedrock interface' - only bottom temperature is reported here since depth of 'surface' is ambiguous
 685,1,haeberli1985,published,1981-01-01,1981-12-31,,,,
+686,1,razumeiko1960,published,1958-02-16,1958-02-28,,,True,
+686,2,razumeiko1960,published,1958-03-01,1958-03-31,,,True,
+686,3,razumeiko1960,published,1958-04-01,1958-04-30,,,True,
+686,4,razumeiko1960,published,1958-05-01,1958-05-31,,,True,
+686,5,razumeiko1960,published,1958-06-01,1958-06-30,,,True,
+686,6,razumeiko1960,published,1958-07-01,1958-07-31,,,True,
+686,7,razumeiko1960,published,1958-08-01,1958-08-31,,,True,
+686,8,razumeiko1960,published,1958-09-01,1958-09-30,,,True,
+686,9,razumeiko1960,published,1958-10-01,1958-10-31,,,True,
+686,10,razumeiko1960,published,1958-11-01,1958-11-30,,,True,
+686,11,razumeiko1960,published,1958-12-01,1958-12-31,,,True,
+686,12,razumeiko1960,published,1959-01-01,1959-01-31,,,True,
+686,13,razumeiko1960,published,1959-02-01,1959-02-28,,,True,
+686,14,razumeiko1960,published,1959-03-01,1959-03-31,,,True,
+686,15,razumeiko1960,published,1959-04-01,1959-04-30,,,True,
+686,16,razumeiko1960,published,1959-05-01,1959-05-31,,,True,
+686,17,razumeiko1960,published,1959-06-01,1959-06-30,,,True,
+686,18,razumeiko1960,published,1959-07-01,1959-07-31,,,True,
+687,1,razumeiko1963,published,1958-09-09,1958-09-09,,,,Snow thickness 0.20 m
+687,2,razumeiko1963,published,1958-10-10,1958-10-31,,,True,
+687,3,razumeiko1963,published,1958-11-01,1958-11-30,,,True,
+687,4,razumeiko1963,published,1958-12-01,1958-12-31,,,True,
+687,5,razumeiko1963,published,1959-01-01,1959-01-31,,,True,
+687,6,razumeiko1963,published,1959-02-01,1959-02-28,,,True,
+687,7,razumeiko1963,published,1959-03-01,1959-03-31,,,True,
+687,8,razumeiko1963,published,1959-04-01,1959-04-30,,,True,
+687,9,razumeiko1963,published,1959-05-01,1959-05-31,,,True,
+687,10,razumeiko1963,published,1959-06-01,1959-06-30,,,True,
+688,1,razumeiko1963,published,1958-03-30,1958-03-30,,,,Snow thickness 0.22 m
+688,2,razumeiko1963,published,1958-06-24,1958-06-24,,,,
+688,3,razumeiko1963,published,1958-07-14,1958-07-14,,,,Snow thickness 0.1 m
+688,4,razumeiko1963,published,1958-07-25,1958-07-25,,,,Snow thickness 0.0 m
+688,5,razumeiko1963,published,1958-08-07,1958-08-07,,,,Snow thickness 0.0 m
+688,6,razumeiko1963,published,1958-10-26,1958-10-26,,,,Snow thickness 0.8 m
+688,7,razumeiko1963,published,1958-12-22,1958-12-22,,,,Snow thickness 0.8 m
+688,8,razumeiko1963,published,1959-02-26,1959-02-26,,,,Snow thickness 0.8 m
+688,9,razumeiko1963,published,1959-03-23,1959-03-23,,,,Snow thickness 0.8 m
+688,10,razumeiko1963,published,1959-04-02,1959-04-02,,,,Snow thickness 0.8 m
+688,11,razumeiko1963,published,1959-04-09,1959-04-09,,,,Snow thickness 0.8 m
+688,12,razumeiko1963,published,1959-04-19,1959-04-19,,,,Snow thickness 0.8 m
+688,13,razumeiko1963,published,1959-05-22,1959-05-22,,,,Snow thickness 0.8 m
+688,14,razumeiko1963,published,1959-06-09,1959-06-09,,,,Snow thickness 0.8 m
+688,15,razumeiko1963,published,1959-07-03,1959-07-03,,,,Snow thickness 0.5 m
+688,16,razumeiko1963,published,1959-07-03,1959-07-03,,,,Snow thickness 0.0 m
+689,1,razumeiko1963,published,1958-06-05,1958-06-05,,,,Snow thickness 0.19 m
+689,2,razumeiko1963,published,1958-06-24,1958-06-24,,,,Snow thickness 0.1 m
+689,3,razumeiko1963,published,1958-07-14,1958-07-14,,,,Snow thickness 0.0 m
+689,4,razumeiko1963,published,1958-07-25,1958-07-25,,,,Snow thickness 0.0 m
+689,5,razumeiko1963,published,1958-08-07,1958-08-07,,,,Snow thickness 0.0 m
+689,6,razumeiko1963,published,1958-10-26,1958-10-26,,,,Snow thickness 0.5 m
+689,7,razumeiko1963,published,1958-12-22,1958-12-22,,,,Snow thickness 0.5 m
+689,8,razumeiko1963,published,1959-02-26,1959-02-26,,,,Snow thickness 0.4 m
+689,9,razumeiko1963,published,1959-03-21,1959-03-21,,,,Snow thickness 0.4 m
+689,10,razumeiko1963,published,1959-04-02,1959-04-02,,,,Snow thickness 0.4 m
+689,11,razumeiko1963,published,1959-04-09,1959-04-09,,,,Snow thickness 0.4 m
+689,12,razumeiko1963,published,1959-04-19,1959-04-19,,,,Snow thickness 0.4 m
+689,13,razumeiko1963,published,1959-05-22,1959-05-22,,,,Snow thickness 0.4 m
+689,14,razumeiko1963,published,1959-06-09,1959-06-09,,,,Snow thickness 0.4 m
+689,15,razumeiko1963,published,1959-07-03,1959-07-03,,,,Snow thickness 0.1 m
+689,16,razumeiko1963,published,1959-07-28,1959-07-28,,,,Snow thickness 0.0 m
+690,1,razumeiko1963,published,1958-07-01,1958-07-31,,,,
+690,2,razumeiko1963,published,1958-08-01,1958-08-31,,,,
+690,3,razumeiko1963,published,1958-09-01,1958-09-30,,,,
+690,4,razumeiko1963,published,1958-10-01,1958-10-31,,,,
+690,5,razumeiko1963,published,1958-11-01,1958-11-30,,,,
+690,6,razumeiko1963,published,1958-12-01,1958-12-31,,,,
+690,7,razumeiko1963,published,1959-01-01,1959-01-31,,,,
+690,8,razumeiko1963,published,1959-02-01,1959-02-28,,,,
+690,9,razumeiko1963,published,1959-03-01,1959-03-31,,,,
+690,10,razumeiko1963,published,1959-04-01,1959-04-30,,,,
+690,11,razumeiko1963,published,1959-05-01,1959-05-31,,,,
+690,12,razumeiko1963,published,1959-06-01,1959-06-30,,,,
+690,13,razumeiko1963,published,1959-07-01,1959-07-31,,,,
+691,1,razumeiko1963,published,1958-10-25,1958-10-25,,,,Snow thickness 0.8 m
+691,2,razumeiko1963,published,1958-12-25,1958-12-25,,,,Snow thickness 0.8 m
+691,3,razumeiko1963,published,1959-02-26,1959-02-26,,,,Snow thickness 0.8 m
+691,4,razumeiko1963,published,1959-06-03,1959-06-03,,,,Snow thickness 1.0 m
+692,1,razumeiko1963,published,1959-06-01,1959-06-30,,,,Snow thickness 0.6 m
+692,2,razumeiko1963,published,1959-07-01,1959-07-31,,,,Snow thickness 0.0 m
+693,1,razumeiko1963,published,1958-10-24,1958-10-24,,,,Snow thickness 0.3 m
+693,2,razumeiko1963,published,1958-12-23,1958-12-23,,,,Snow thickness 0.5 m
+693,3,razumeiko1963,published,1959-03-11,1959-03-11,,,,Snow thickness 0.7 m
+693,4,razumeiko1963,published,1959-03-21,1959-03-21,,,,Snow thickness 0.7 m
+693,5,razumeiko1963,published,1959-04-19,1959-04-19,,,,Snow thickness 0.8 m
+693,6,razumeiko1963,published,1959-05-04,1959-05-04,,,,Snow thickness 1.0 m
+693,7,razumeiko1963,published,1959-05-25,1959-05-25,,,,Snow thickness 0.96 m
+693,8,razumeiko1963,published,1959-06-05,1959-06-05,,,,Snow thickness 0.6 m
+693,9,razumeiko1963,published,1959-07-01,1959-07-01,,,,Snow thickness 0.4 m
+693,10,razumeiko1963,published,1959-07-01,1959-07-01,,,,Snow thickness 0.0 m
+694,1,razumeiko1963,published,1958-10-23,1958-10-23,,,,Snow thickness 0.2 m
+694,2,razumeiko1963,published,1958-12-23,1958-12-23,,,,Snow thickness 0.5 m
+694,3,razumeiko1963,published,1959-03-11,1959-03-11,,,,Snow thickness 0.8 m
+694,4,razumeiko1963,published,1959-03-27,1959-03-27,,,,Snow thickness 0.8 m
+694,5,razumeiko1963,published,1959-04-19,1959-04-19,,,,Snow thickness 0.9 m
+694,6,razumeiko1963,published,1959-05-04,1959-05-04,,,,Snow thickness 1.1 m
+694,7,razumeiko1963,published,1959-05-24,1959-05-24,,,,Snow thickness 1.0 m
+694,8,razumeiko1963,published,1959-06-09,1959-06-09,,,,Snow thickness 0.8 m
+694,9,razumeiko1963,published,1959-07-01,1959-07-01,,,,Snow thickness 0.6 m
+694,10,razumeiko1963,published,1959-07-27,1959-07-27,,,,Snow thickness 0.0 m
+695,1,razumeiko1963,published,1958-10-14,1958-10-14,,,,Snow thickness 0.0 m
+695,2,razumeiko1963,published,1959-04-24,1959-04-24,,,,Snow thickness 0.0 m
+695,3,razumeiko1963,published,1959-05-04,1959-05-04,,,,Snow thickness 0.0 m
+695,4,razumeiko1963,published,1959-05-24,1959-05-24,,,,Snow thickness 0.0 m
+695,5,razumeiko1963,published,1959-06-09,1959-06-09,,,,Snow thickness 0.0 m
+695,6,razumeiko1963,published,1959-07-01,1959-07-01,,,,Snow thickness 0.0 m
+695,7,razumeiko1963,published,1959-07-27,1959-07-27,,,,Snow thickness 0.0 m
+696,1,razumeiko1963,published,1958-07-05,1958-07-05,,,,Snow thickness 0.1 m
+696,2,razumeiko1963,published,1958-10-19,1958-10-19,,,,Snow thickness 0.6 m
+696,3,razumeiko1963,published,1959-04-21,1959-04-21,,,,Snow thickness 1.1 m
+696,4,razumeiko1963,published,1959-05-04,1959-05-04,,,,Snow thickness 1.1 m
+696,5,razumeiko1963,published,1959-05-25,1959-05-25,,,,Snow thickness 1.32 m
+696,6,razumeiko1963,published,1959-06-09,1959-06-09,,,,Snow thickness 1.2 m
+696,7,razumeiko1963,published,1959-07-01,1959-07-01,,,,Snow thickness 1.0 m
+696,8,razumeiko1963,published,1959-07-27,1959-07-27,,,,Snow thickness 0.0 m
+697,1,razumeiko1963,published,1959-04-13,1959-04-13,13:00:00,False,,Snow thickness 0.85 m
+697,2,razumeiko1963,published,1959-04-14,1959-04-14,13:00:00,False,,Snow thickness 0.85 m
+697,3,razumeiko1963,published,1959-04-15,1959-04-15,13:00:00,False,,Snow thickness 0.85 m
+697,4,razumeiko1963,published,1959-04-16,1959-04-16,13:00:00,False,,Snow thickness 0.85 m
+697,5,razumeiko1963,published,1959-04-17,1959-04-17,14:00:00,False,,Snow thickness 0.85 m
+697,6,razumeiko1963,published,1959-04-18,1959-04-18,13:00:00,False,,Snow thickness 0.85 m
+697,7,razumeiko1963,published,1959-04-19,1959-04-19,13:00:00,False,,Snow thickness 0.85 m
+697,8,razumeiko1963,published,1959-06-22,1959-06-22,01:00:00,False,,Snow thickness 0.87 m
+697,9,razumeiko1963,published,1959-06-22,1959-06-22,14:00:00,False,,Snow thickness 0.87 m
+697,10,razumeiko1963,published,1959-06-23,1959-06-23,14:00:00,False,,Snow thickness 0.87 m
+697,11,razumeiko1963,published,1959-06-24,1959-06-24,17:00:00,False,,Snow thickness 0.87 m
+697,12,razumeiko1963,published,1959-06-25,1959-06-25,13:00:00,False,,Snow thickness 0.87 m
+697,13,razumeiko1963,published,1959-06-28,1959-06-28,09:00:00,False,,Snow thickness 0.87 m
+698,1,razumeiko1963,published,1958-05-18,1958-05-18,,,,Snow thickness 0.38 m | Firn thickness 0.10 m
+699,1,razumeiko1963,published,1958-05-26,1958-05-26,,,,Snow thickness 0.40 m | Firn thickness 0.00 m
+700,1,razumeiko1963,published,1958-05-30,1958-05-30,,,,Snow thickness 0.22 m | Firn thickness 0.05 m
+701,1,razumeiko1963,published,1958-06-02,1958-06-02,,,,Snow thickness 0.60 m | Firn thickness 0.025 m
+702,1,razumeiko1963,published,1958-06-05,1958-06-05,,,,Snow thickness 0.19 m | Firn thickness 0.01 m
+703,1,razumeiko1963,published,1958-06-08,1958-06-08,,,,Snow thickness 0.20 m | Firn thickness 0.01 m
+704,1,razumeiko1963,published,1958-06-18,1958-06-18,,,,Snow thickness 0.60 m | Firn thickness 0.04 m
+705,1,razumeiko1963,published,1958-06-19,1958-06-19,,,,Snow thickness 1.50 m | First 0.5 m interlayered firn and ice
+706,1,razumeiko1963,published,1958-06-22,1958-06-22,,,,Snow thickness 0.38 m | Firn thickness 0.31 m
+707,1,razumeiko1963,published,1958-07-05,1958-07-05,,,,Snow thickness 0.10 m | Firn thickness 0.00 m
+708,1,razumeiko1963,published,1958-10-14,1958-10-14,,,,Snow thickness 0.00 m | Firn thickness 0.00 m
+709,1,razumeiko1963,published,1958-10-16,1958-10-16,,,,Snow thickness 0.50 m | Firn thickness 0.10 m
+710,1,razumeiko1963,published,1958-10-19,1958-10-19,,,,Snow thickness 0.60 m | Firn thickness 0.00 m
+711,1,razumeiko1963,published,1958-10-22,1958-10-22,,,,Snow thickness 0.70 m | Firn thickness 0.00 m
+712,1,razumeiko1963,published,1958-10-23,1958-10-23,,,,Snow thickness 0.20 m | Firn thickness 0.00 m
+713,1,razumeiko1963,published,1958-10-24,1958-10-24,,,,Snow thickness 0.30 m | Firn thickness 0.00 m
+714,1,razumeiko1963,published,1959-05-18,1959-05-18,,,,Snow thickness 0.85 m | Firn thickness 0.04 m
+715,1,razumeiko1963,published,1959-05-19,1959-05-19,,,,Snow thickness 3.0 m (2.5 m 1959 and 0.5 m 1958) | Remainder is mixture of firn and ice
+716,1,razumeiko1963,published,1959-04-21,1959-04-21,,,,Snow thickness 1.10 m | Firn thickness 0.00 m
+717,1,razumeiko1963,published,1959-04-22,1959-04-22,,,,Snow thickness 0.00 m | Firn thickness 0.00 m
