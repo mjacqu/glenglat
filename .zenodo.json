@@ -2,67 +2,946 @@
   "upload_type": "dataset",
   "title": "glenglat: Global englacial temperature database",
   "language": "eng",
-  "description": "<p>Measured englacial temperatures digitized from published studies or submitted by the authors.</p><b>Data structure</b><p>The dataset adheres to the Frictionless Data <a href=\"https://specs.frictionlessdata.io/tabular-data-package\">Tabular Data Package</a> specification. The metadata in <code>datapackage.yaml</code> describes, in detail, the contents of the tabular data files:</p><ul><li><code>data/source.csv</code>: Description of each data source (either a direct contribution or the reference to a published study).</li><li><code>data/borehole.csv</code>: Description of each borehole (location, elevation, etc), linked to <code>source.csv</code> via <code>source_id</code>.</li><li><code>data/profile.csv</code>: Description of each profile (date and time), linked to <code>borehole.csv</code> via <code>borehole_id</code>.</li><li><code>data/measurement.csv</code>: Description of each measurement (depth and temperature), linked to <code>profile.csv</code> via <code>borehole_id</code> and <code>profile_id</code>.</ul>",
-  "keywords": ["glacier", "temperature", "ice", "firn", "borehole", "global"],
+  "keywords": [
+    "glacier",
+    "temperature",
+    "borehole",
+    "ice",
+    "firn",
+    "englacial",
+    "global",
+    "compilation"
+  ],
   "access_right": "open",
-  "license": "cc-by-4.0",
   "creators": [
     {
-      "name": "Jacquemart, Mylène",
+      "name": "Myl\u00e8ne Jacquemart",
       "orcid": "0000-0003-2501-7645",
       "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland"
     },
     {
-      "name": "Welty, Ethan",
+      "name": "Ethan Welty",
       "orcid": "0000-0001-8046-2210",
       "affiliation": "World Glacier Monitoring Service (WGMS), University of Zurich (UZH), Switzerland"
     }
   ],
   "contributors": [
     {
-      "name": "Carcanade, Guillem",
-      "type": "DataCurator",
-      "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland"
+      "name": "Guillem Carcanade",
+      "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland",
+      "type": "DataCurator"
     },
     {
-      "name": "Van Tricht, Lander",
+      "name": "Lander Van Tricht",
       "orcid": "0000-0001-7619-8955",
       "type": "DataCurator"
     },
     {
-      "name": "Flowers, Gwenn",
+      "name": "Gwenn Flowers",
       "orcid": "0000-0002-3574-9324",
       "type": "DataCollector"
     },
     {
-      "name": "Sugiyama, Shin",
+      "name": "Shin Sugiyama",
       "orcid": "0000-0001-5323-9558",
       "type": "DataCollector"
     },
     {
-      "name": "Gurung, Tika",
+      "name": "Tika Ram Gurung",
       "orcid": "0000-0003-4287-6150",
       "type": "DataCollector"
     },
     {
-      "name": "Prinz, Rainer",
+      "name": "Rainer Prinz",
       "orcid": "0000-0003-4032-773X",
       "type": "DataCollector"
     },
     {
-      "name": "Barandun, Martina",
+      "name": "Martina Barandun",
       "orcid": "0000-0003-1820-7600",
       "type": "DataCollector"
     },
     {
-      "name": "Gagliardini, Olivier",
+      "name": "Olivier Gagliardini",
       "orcid": "0000-0001-9162-3518",
       "type": "DataCollector"
     },
     {
-      "name": "Thompson, Lonnie G.",
+      "name": "Lonnie G. Thompson",
       "orcid": "0000-0001-5371-2579",
       "type": "DataCollector"
+    },
+    {
+      "name": "Tong Zhang",
+      "affiliation": "Beijing Normal University (BNU), China",
+      "type": "DataCollector"
+    },
+    {
+      "name": "Marcus Gastaldello",
+      "affiliation": "University of Fribourg (UniFr), Switzerland",
+      "type": "DataCollector"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.1017/jog.2020.28",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://gallica.bnf.fr/ark:/12148/bpt6k97697182/f454.item",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.2172/794067",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/cp-12-201-2016",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000011412",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2021-01/96.pdf#page=78",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000030495",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/1984AoG5-1-18-22",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000008704",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000009126",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5281/ZENODO.8330289",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/essd-15-4661-2023",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.15356/2076-6734-2015-3-38-46",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000031580",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1139/e84-024",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://iahs.info/uploads/dms/7236.169-180-170-Clarke.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.14288/1.0302225",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000021079",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756503781830511",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://uzb.swisscovery.slsp.ch/discovery/delivery/41SLSP_UZB:UZB/12464857880005508",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://globalcryospherewatch.org/meetings/salekhard2016/presentations/3.1.3.e-G.Davaa-Mongolia%20cryospheric%20activities.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://erdc-library.erdc.dren.mil/jspui/handle/11681/5708",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/2013JoG12J109",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/2013AoG64A200",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1007/s11442-013-1036-4",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756409789097612",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-5-299-2011",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756402781816645",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://kitami-it.repo.nii.ac.jp/records/6854",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/002214310794457263",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://www.glaciologia.it/wp-content/uploads/FullText/full_text_35_1/10_GFDQ_35_1_Gabrielli_101_105.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-10-2779-2016",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000005220",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2009JD012961",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2011JF002258",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1002/grl.50401",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1002/2015GL064838",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1002/2016JF003839",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-14-1273-2020",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/cp-2-21-2006",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.21334/NPOLAR.2017.3845E964",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-11-2883-2017",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/1985AoG6-1-161-163",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000042775",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756504781830330",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://journal.chinare.org.cn/CN/Y1995/V7/I1/62",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.14770/jgsk.2015.51.3.343",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000022450",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=9dbf174017ca2945dec1f6266164b9707cdd33f3",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.quascirev.2013.02.025",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756499781821986",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.glamos.ch/pubs/glrep/glrep_125-126.html",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-5-231-2011",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.18752/glrep_129-130",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.18752/glrep_135-136",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.18752/glrep_139-140",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.18752/glrep_141-142",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000030719",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1139/e80-124",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756504781829981",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/cp-3-89-2007",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-12-2341-2018",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S002214300000945X",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5285/32ECD5F4-1F00-4EEB-BD1E-5EAFFB60F556",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1111/j.1365-246X.1939.tb02922.x",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://web.seppyo.org/bgr/pdf/2/BGR2P25.PDF",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3402/polar.v15i1.6636",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000023054",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000021729",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2023JF007227",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1051/lhb/1984035",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://kitami-it.repo.nii.ac.jp/records/6924",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/jog.2021.125",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.15094/00003576",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://kitami-it.repo.nii.ac.jp/records/6923",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://archiv.ub.uni-heidelberg.de/volltextserver/1837/1/summary.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3389/feart.2021.785306",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://www.glacru.ru",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756406781811349",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3389/feart.2020.00040",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000020621",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-10/Glyatsiologiya_Shpitsbergena1985.pdf#page=71",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.quascirev.2003.12.013",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://onepetro.org/ISOPEIOPEC/proceedings-abstract/ISOPE06/All-ISOPE06/9744",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.15356/2076-6734-2012-1-5-14",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.18739/A2348GG12",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/jog.2019.84",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://nbi.ku.dk/english/theses/masters-theses/andreas-lemark",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.2004.0047",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1007/s12583-011-0194-5",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1007/s11629-009-0254-9",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3972/glacier.001.2013.db",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3390/w8110496",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000031531",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3929/ethz-a-003884174",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/54.pdf#page=121",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://github.com/GEUS-Glaciology-and-Climate/greenland_ice_borehole_temperature_profiles/tree/55c7a0a12f2d925fd3fdb6a70ab82e53bd131b39",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/jog.2016.118",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://www.uibk.ac.at/projects/station-hintereis-opal-data/publications/pdf/markl_wagner_1977_zgg.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3389/feart.2020.00099",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1080/15230430.1999.12003318",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://bigweb.unifr.ch/Science/Geosciences/GeographyTechnical/Secretary/Pub/Publications/Geography/SelectedBachelorMasterThesis/2020/Mattea_E._(2020)_M_Measuring_modelling_changes_Colle_Gnifetti.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://digitalcommons.library.umaine.edu/orsp_reports/29",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2021-01/99.pdf#page=187",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://geolibrary.ru/sites/default/files/2021-01/98.pdf#page=177",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-9-2253-2015",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.31857/S2076673421010078",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1038/s41598-018-34327-5",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/jog.2019.49",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000031476",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1080/02723646.1993.10642488",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1175/1520-0442(1993)006<0141:ETAMRU>2.0.CO;2",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://vital.lib.tsu.ru/vital/access/manager/Repository/vtls:000070022",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3402/polar.v11i2.6718",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0260305500012271",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2003GL018290",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://iahs.info/uploads/dms/061021.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.2307/521356",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://iahs.info/uploads/dms/079041.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000022036",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000022462",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1111/j.1365-246X.1978.tb05931.x",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2003JF000024",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2023-10/%D0%AD%D0%BB%D1%8C%D0%B1%D1%80%D1%83%D1%81.%20%D0%A2%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0%20%D1%81%D0%BD%D0%B5%D0%B3%D0%B0%20%D0%B8%20%D0%BB%D1%8C%D0%B4%D0%B0.%20%D0%A1%D0%BD%D0%B5%D0%B6%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%BE%D0%BA%D1%80%D0%BE%D0%B2_0.pdf#page=5",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-11/14.pdf#page=93",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1995.0018",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.2002.0053",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1983.0055",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756502781831430",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7146/moggeosci.v39i.140219",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1981.0042",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1983.0040",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1985.0019",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://journal.chinare.org.cn/CN/Y1990/V2/I2/22",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://hdl.handle.net/1811/51380",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2012JF002526",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/61.pdf#page=229",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2021-01/91.pdf#page=152",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3929/ethz-a-005114924",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2005JF000283",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-7-1635-2013",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1080/20014422.1964.11881042",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1080/04353676.1966.11879728",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1080/04353676.1968.11879777",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://web.seppyo.org/bgr/pdf/8/BGR8P87.PDF",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000026460",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756501781832061",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://lean-gate.geo.uzh.ch/typo3conf/ext/qfq/Classes/Api/download.php/mastersThesis/262",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://geolibrary.ru/sites/default/files/2020-11/12_0.pdf#page=60",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-11/13.pdf#page=86",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://bibliotekanauki.pl/articles/2051641",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.polar.2011.06.003",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7146/moggeosci.v39i.140228",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://book.sciencereading.cn/shop/book/Booksimple/show.do?id=B828976A04419443DB3FE50FBA719BB38000",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/jog.2019.45",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.13203/j.whugis20150302",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1080/15230430.2021.1974667",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756501781832566",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3929/ethz-a-004288434",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.15094/00002977",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://web.seppyo.org/bgr/pdf/26/BGR26P33.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.quascirev.2014.09.006",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000010297",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0260305500008776",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/0921-8181(93)90046-Q",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0260305500015780",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1126/science.269.5220.46",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1126/science.289.5486.1916",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1126/science.1073198",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://ui.adsabs.harvard.edu/abs/2004AGUFMPP23C..05T",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756406781812357",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://research.bpcrc.osu.edu/Icecore/vitae/lgt_cv_old_format_2015.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.quascirev.2018.03.003",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://byrd.osu.edu/sites/default/files/2023-10/Thompsons%20et%20al.%20-%20Revista%208-3.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.34194/bullggu.v172.6749",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/aog.2021.15",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://map.g-utka.ru",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-11/IslLedLegnR_3.pdf#page=56",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://nipr.repo.nii.ac.jp/records/2300",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=osu1237853800",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://gallica.bnf.fr/ark:/12148/bpt6k3109m/f1577.item",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756402781816979",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1017/jog.2020.104",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/62.pdf#page=209",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2024-02/%D0%97%D0%B0%D0%B8%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9%20%D0%90%D0%BB%D0%B0%D1%82%D0%B0%D1%83.%20%D0%A2%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0%20%D0%BB%D1%8C%D0%B4%D0%B0.%20%D0%92%D1%8B%D0%BF.1.pdf",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2007GL029933",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-14-925-2020",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2007JD009143",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1983.0061",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/S0022143000215207",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.gloplacha.2017.10.006",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-12-851-2018",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://web.seppyo.org/bgr/pdf/2/BGR2P7.PDF",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://kitami-it.repo.nii.ac.jp/records/7220",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2021-01/83.pdf#page=11",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.14430/arctic280",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3931/e-rara-35661",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://summit.sfu.ca/item/12553",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1002/jgrf.20096",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.2003.0119",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1029/2018GL078770",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.7522/j.issn.1000-0240.1992.0037",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756402781816997",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/41.pdf#page=196",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/40.pdf#page=154",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/65.pdf#page=135",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://web.seppyo.org/bgr/pdf/8/BGR8P19.PDF",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/68.pdf#page=134",
+      "relation": "references"
+    },
+    {
+      "identifier": "http://geolibrary.ru/sites/default/files/2020-12/73.pdf#page=110",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756505781829269",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/172756406781812203",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.5194/tc-6-675-2012",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://web.seppyo.org/bgr/pdf/11/BGR11P9.PDF",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.3189/2013JoG12J202",
+      "relation": "references"
+    },
+    {
+      "identifier": "https://doi.org/10.1360/csb1990-35-3-212",
+      "relation": "references"
     }
   ]
 }
