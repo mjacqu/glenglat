@@ -4,6 +4,7 @@ created: '2022-10-27T15:17:45Z'
 title: Global englacial temperature database
 profile: tabular-data-package
 description: Measured englacial temperatures digitized from published studies or submitted by the authors.
+keywords: [glacier, temperature, borehole, ice, firn, englacial, global, compilation]
 languages:
   - en
 licenses:
