@@ -10,13 +10,15 @@ The dataset adheres to the Frictionless Data [Tabular Data Package](https://spec
 The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files:
 
 - [`data/source.csv`](data/source.csv): Description of each data source (either a direct contribution or the reference to a published study).
-- [`data/borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id`.
-- [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id`.
+- [`data/borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
+- [`data/profile.csv`](data/profile.csv): Description of each profile (date and time), linked to `borehole.csv` via `borehole_id` and to `source.csv` via `source_id`.
 - [`data/measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
+
+For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
 
 ### Supporting information
 
-In folder [`sources`](sources) are subfolders, named `{source_id}_{author_code}{year}` (see column `source.path`), with files that document how the data was digitized from the original publication. Binary files with `.png` or `.pdf` extensions are figures, tables, maps, or text from the publication. Binary files with `.tif` extension are georeferenced maps from the publication saved as GeoTIFF, and text files with `.geojson` extension are spatial features extracted from these and saved as GeoJSON. Text files with an `.xml` extension document how numeric values were extracted from maps and figures using PlotDigitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{source_id}_{borehole_id}_{profile_id}.xml` and internally use `temperature` and `depth` as axis names.
+Folder [`sources`](sources) contains subfolders (with names matching column `source.id`) with files that document how and from where the data was extracted. Files with a `.png`, `.jpg`, or `.pdf` extension are figures, tables, maps, or text from the publication. Pairs of files with `.pgw` and `.{png|jpg}.aux.xml` extensions georeference a `.{png|jpg}` image, and files with `.geojson` extension are the subsequently-extracted spatial coordinates. Files with an `.xml` extension document how numeric values were extracted from maps and figures using Plot Digitizer (https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{borehole.id}_{profile.id}{suffix}` where `borehole.id` and `profile.id` are either a single value or a hyphenated range (e.g. `1-8`). Those without the optional `suffix` use `temperature` and `depth` as axis names. Those with a `suffix` are unusual cases which, for example, may be part of a series (e.g. `_lower`) or use a non-standard axis (e.g. `_date`).
 
 ## How to contribute
 
@@ -29,17 +31,21 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 
 | name | description | type | constraints |
 | - | - | - | - |
-| `id` | Unique identifier. | integer | required: True<br>unique: True |
+| `id` | Unique identifier. | integer | required: True<br>unique: True<br>minimum: 1 |
+| `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
+| `glims_id` | Global Land Ice Measurements from Space (GLIMS) glacier identifier. | string | pattern: `G[0-9]{6}E[0-9]{5}[NS]` |
 | `latitude` | Latitude (EPSG 4326). | number | required: True<br>minimum: -90<br>maximum: 90 |
 | `longitude` | Longitude (EPSG 4326). | number | required: True<br>minimum: -180<br>maximum: 180 |
 | `elevation` | Elevation above sea level. | number | required: True<br>maximum: 9999.0 |
-| `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
-| `glims_id` | Global Land Ice Measurements from Space (GLIMS) glacier identifier. | string | pattern: `G[0-9]{6}E[0-9]{5}[NS]` |
-| `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
-| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam | string | enum: ['mechanical', 'thermal'] |
-| `to_bottom` | Whether the borehole reached the glacier bed. | boolean |  |
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
-| `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `author ({year}): {title} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
+| `date_min` | Drilling date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
+| `date_max` | Drilling date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date |  |
+| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
+| `ice_depth` | Starting depth of ice. Infinity (`INF`) indicates that ice was not reached. | number |  |
+| `depth` | Total borehole depth (not including drilling in the underlying bed). | number |  |
+| `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
+| `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
+| `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`
 
@@ -48,7 +54,7 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `borehole_id` | Borehole identifier. | integer | required: True |
 | `depth` | Depth below the glacier surface. | number | required: True |
 | `temperature` | Temperature. | number | required: True |
-| `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date | required: True |
+| `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
 | `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date | required: True |
 | `time` | Measurement time.<br>`%H:%M:%S` | time |  |
 | `utc` | Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False). | boolean |  |
@@ -66,10 +72,10 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
    cd glenglat
    ```
 
-2. Either install the `glenglat` Python environment (with `conda`):
+2. Either install the `glenglat-contribute` Python environment (with `conda`):
 
    ```sh
-   conda env create --file scripts/environment.yaml
+   conda env create --file contribute/environment.yaml
    conda activate glenglat
    ```
 
@@ -82,5 +88,42 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
 3. Validate, fix any reported issues, and rejoice! (`path/to/csvs` is the folder containing your CSV files)
 
    ```sh
-   python scripts/validate_submission.py path/to/csvs
+   python contribute/validate_submission.py path/to/csvs
+   ```
+
+## Testing
+
+Follow the instructions below to run a full test of the data package.
+
+1. Clone this repository.
+
+   ```sh
+   git clone https://github.com/mjacqu/glenglat.git
+   cd glenglat
+   ```
+
+2. Install the `glenglat` Python environment (with `conda`):
+
+   ```sh
+   conda env create --file tests/environment.yaml
+   conda activate glenglat
+   ```
+
+3. Run the basic (`frictionless`) tests.
+
+   ```sh
+   frictionless validate datapackage.yaml
+   ```
+
+4. Run the custom (`pytest`) tests.
+
+   ```sh
+   pytest tests
+   ```
+
+5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. This requires a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id). To run, first install `geopandas` and `pyarrow`, then set the `GLIMS_PATH` environment variable before calling `pytest`.
+
+   ```sh
+   conda install -c conda-forge geopandas=0.13 pyarrow
+   GLIMS_PATH=/path/to/parquet pytest tests
    ```

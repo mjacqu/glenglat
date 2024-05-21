@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "location",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "label": "C: Lower Ice" }, "geometry": { "type": "Point", "coordinates": [ -90.64313, 79.43406 ] } },
+{ "type": "Feature", "properties": { "label": "III" }, "geometry": { "type": "Point", "coordinates": [ -90.75005, 79.47317 ] } },
+{ "type": "Feature", "properties": { "label": "II" }, "geometry": { "type": "Point", "coordinates": [ -90.78791, 79.48403 ] } },
+{ "type": "Feature", "properties": { "label": "I" }, "geometry": { "type": "Point", "coordinates": [ -90.84274, 79.50706 ] } },
+{ "type": "Feature", "properties": { "label": "C: Moraine Camp" }, "geometry": { "type": "Point", "coordinates": [ -90.80029, 79.49447 ] } },
+{ "type": "Feature", "properties": { "label": "Beaver Camp" }, "geometry": { "type": "Point", "coordinates": [ -90.93495, 79.53437 ] } },
+{ "type": "Feature", "properties": { "label": "TH30: Lower Ice" }, "geometry": { "type": "Point", "coordinates": [ -90.64015, 79.4347 ] } },
+{ "type": "Feature", "properties": { "label": "A3" }, "geometry": { "type": "Point", "coordinates": [ -90.68764, 79.45292 ] } },
+{ "type": "Feature", "properties": { "label": "A6" }, "geometry": { "type": "Point", "coordinates": [ -90.70082, 79.45172 ] } },
+{ "type": "Feature", "properties": { "label": "A9" }, "geometry": { "type": "Point", "coordinates": [ -90.71432, 79.45062 ] } },
+{ "type": "Feature", "properties": { "label": "L71" }, "geometry": { "type": "Point", "coordinates": [ -90.63921, 79.4314 ] } },
+{ "type": "Feature", "properties": { "label": "M2" }, "geometry": { "type": "Point", "coordinates": [ -90.79972, 79.49634 ] } },
+{ "type": "Feature", "properties": { "label": "M4" }, "geometry": { "type": "Point", "coordinates": [ -90.80872, 79.49524 ] } },
+{ "type": "Feature", "properties": { "label": "M7" }, "geometry": { "type": "Point", "coordinates": [ -90.82073, 79.49403 ] } },
+{ "type": "Feature", "properties": { "label": "M10" }, "geometry": { "type": "Point", "coordinates": [ -90.82756, 79.49094 ] } }
+]
+}

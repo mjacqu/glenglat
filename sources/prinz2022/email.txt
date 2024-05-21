@@ -1,0 +1,48 @@
+From: Rainer Prinz <rainer.prinz@uibk.ac.at>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Cc: Jakob Abermann <jakob.abermann@uni-graz.at>; Jakob Friedrich Steiner <jakob.steiner@uni-graz.at>
+Sent: 2022-06-01 14:42:33
+Subject: ice temperatures Red rock ice cliff, Northwest Greenland
+
+Dear Mylène,
+
+as suggested by Jakob Steiner, here are shallow ice temperature measurements from Northwest Greenland over just a week in summer 2017.
+
+Kind regards,
+Rainer
+
+----------
+
+From: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+To: Rainer Prinz <rainer.prinz@uibk.ac.at>
+Cc: Jakob Abermann <jakob.abermann@uni-graz.at>; Jakob Friedrich Steiner <jakob.steiner@uni-graz.at>
+Sent: 2022-08-17 16:38
+Subject: ice temperatures Red rock ice cliff, Northwest Greenland
+
+Hi Rainer,
+
+I was just working on incorporating your ice temperature into our database, and I have a few questions. Several of the temperatures are positive... (sometimes by more than 1 degree C). This does not seem realistic... Are they supposed to all be negative, or are they just measurement errors?
+
+How did you make the hole? Did you steam drill? Do you think the temperatures were equilibrated after only one week? It seems like they tend to decrease throughout the time-series...
+
+Thanks,
+Mylène
+
+----------
+
+From: Rainer Prinz <rainer.prinz@uibk.ac.at>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Cc: Jakob Abermann <jakob.abermann@uni-graz.at>; Jakob Friedrich Steiner <jakob.steiner@uni-graz.at>
+Sent: 2022-08-31 17:01
+Subject: ice temperatures Red rock ice cliff, Northwest Greenland
+
+Dear Mylène,
+
+[...]
+
+We drilled with a Kovacs auger, but the first time steps might be influenced from warm air in the drillhole until settling is reached (first ~12 hours].
+The values show a daily cycle due to heat advected from the melting surface into the ice and a general slight increase in the lowest levels, which might be close to a maximum of the seasonal cycle - again from advected surface heat (unfortunately our time series is too short to prove this).
+Positive temperatures at the -0.1 m level occur due to penetrating short wave radiation heating the sensor.
+
+Kind regards,
+Rainer

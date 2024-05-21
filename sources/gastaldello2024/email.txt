@@ -1,0 +1,130 @@
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-03-26 14:41:49
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Mylène,
+
+I apologise it has taken me a while, but I have managed to compile our measurements together into the attached Excel spreadsheet.
+
+There are 91 measurements in total, of which 21 are already in your database. These are marked in orange with the field “New” set to False. The 70 new measurements have new ID values increasing from 1000.
+
+I have tried to adhere to database guidelines as much as possible although the profile times are all in Swiss time. I can try to covert them to UTC but this would a bit complex due to daylight saving and the past irregularity to Central European Time.
+
+Please let me know if you would like me to make any changes.
+
+Many thanks,
+Marcus
+
+----------
+
+From: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+To: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+Cc: Ethan Welty <ethan.welty@geo.uzh.ch>
+Sent: 2024-03-26 16:46
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Marcus,
+
+Many thanks for compiling these data! At first glance it looks great. I have a few questions – partly related to the fact that we've started keeping track of a few new variables that we are trying to populate whenever we have the information.
+
+For instance, we have added a column to keep track of whether the measurements are in firn, ice, or both.
+
+--> Do you happen to which (if any) of the boreholes reached into the ice?
+
+We've also tried to track the drilling vs measurement times. I see that you have included a DateTime in the borehole tab. Are these drilling times or measurement times? I ask because I noticed some discrepancies between the different dates (e.g., the Date column in the borehole tab reads 1991-08-07 00:00, but the measurement tab shows 1991-08-04. Does this mean that the date included in the measurement tab is the drilling time, the time in the borehole tab is the measurement time, or how is this organized?
+
+In the measurement tab, if the time is indicated as 00:00 does this mean that the temperatures were actually measured at midnight or does it mean that the precise measurement time is not known (i.e., only the date)?
+
+Finally, for boreholes that have the same coordinates (e.g., 1014 and 1016), do you know whether the borehole was re-drilled, or was the same thermistor chain read out on two different dates? I ask because we try to make a distinction between repeat measurements that are made in the same borehole vs repeat measurements that are re-drilled at the same (or rather very similar) location.
+
+I look forward to hearing your thoughts!
+
+Mylène
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-03-27 11:10
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Mylène,
+
+Of course, I’ll try and answer your questions as best as I can.
+
+I presume most of the shallow profiles (<30 metres) are probably still retained within the firn, with the deeper ones reaching the ice. I would have to check this with my colleagues though.
+
+The date/time in the borehole tab are the measurement times. The five left hand columns on that sheet were really just for my convenience as I used an XLOOKUP function to match the dates and switch between our ID numbers and yours. But I do have access to the drilling times as well which I could add to the spreadsheet.
+
+With regard to the 00:00 times, I also noticed this after I sent the document. I believe these are likely missing values where the time wasn’t recorded but let me check with Martin Hoelzle.
+
+Yes, this is demarcated in the labelling convention where you have “XX YY-I/yy i” where ‘XX’ is the borehole location (either CG – Colle Gnifetti, SJ – Seserjoch or GG – Lower Grenzgletscher), ‘YY’ is the borehole drilling year, ‘I’ is the borehole identifier, ‘yy’ is the measurement year and ‘i’ is the measurement number.
+
+for example:
+
+CG95-1/96  - borehole 1 drilled in 1995 (CG95-1), (single) measurement in 1996.
+CG95-1/97A - borehole 1 drilled in 1995 (CG95-1), first measurement in 1997.
+CG95-1/97B - borehole 1 drilled in 1995 (CG95-1), second measurement in 1997.
+
+In some instances, new boreholes were drilled in the same position as old ones, but these became inaccessible over time due to closure.
+
+Finally, I was speaking with Martin Hoelzle yesterday and he was saying he recommended also including the sensor product name and its calibration technique into the database. I can provide this information as well.
+
+If you let me know how you would like this information placed in the spreadsheets (i.e. field/column names and allowable entries) , I can update the spreadsheet accordingly and sent it back to you soon.
+
+Many thanks,
+Marcus
+
+----------
+
+From: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+To: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+Cc: Ethan Welty <ethan.welty@geo.uzh.ch>
+Sent: 2024-04-09 16:09
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Marcus,
+
+[...]
+
+If you could give us an estimate at which ice is expected at Colle Gnifetti or indicate in the borehole table which boreholes reached the ice, this would by ideal!
+
+Where you have the information for both measurement and drilling, it would be great if you could add these. My suggestion would be that you put the drilling date into the borehole table (borehole.date) and the measurement time into the measurement table (measurement.date_min and measurement.date_max, plus the time if available. If 00:00 means that the measurement time is not known, you can just leave these fields empty.
+
+> ‘YY’ is the borehole drilling year, ‘I’ is the borehole identifier, ‘yy’ is the measurement year and ‘i’ is the measurement number.
+
+This is helpful, thank you. In cases where the borehole ID (label) is the same (e.g., CG03-1) but the coordinates are slightly different, does this mean that the borehole was re-drilled in approximately the same location? Do you have an explicit record of when a borehole was redrilled or do you simply have the labels? The background is that we would like to indicate when measurements were done in the same borehole by assigning them the same borehole-id. If all you have are the labels, then you can simply leave the information as is in the spreadsheet and we will group them as is. If you want to / have additional information, it would be great if you could indicate which ones were made in the same borehole, and when a borehole was re-drilled (e.g., by assigning some grouping-ID or so). Does this make sense?
+
+> Finally, I was speaking with Martin Hoelzle yesterday and he was saying he recommended also including the sensor product name and its calibration technique into the database. I can provide this information as well.
+
+We don't currently have a specific field for this, but you may add this to the notes, and we can add it in that way.
+
+> If you let me know how you would like this information placed in the spreadsheets (i.e. field/column names and allowable entries), I can update the spreadsheet accordingly and sent it back to you soon.
+
+I noticed that the DOIs in lines 74-83 are not working, I think there is a missing _ and number at the end? Can you investigate?
+
+If you could update the spreadsheet in the suggested ways, that would be really helpful. Many thanks for you help with this!
+
+Mylène
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Cc: Ethan Welty <ethan.welty@geo.uzh.ch>
+Sent: 2024-04-17 15:52
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Mylène,
+
+Please find attached the updated spreadsheet.
+
+Drilling and measurement times have been added, the DOI hyperlink has been corrected and estimates of whether the measurement reaches the ice have also added. I’ve also merged repeat measurements together to have the same ID number if they are in the same borehole. If the co-ordinates are similar but the borehole IDs are different, they are redrillings.
+
+For example, the CG82-1 borehole has a single measurement CG82-1/82 in 1982 under existing ID 273. The CG18-1 borehole was drilled in the exact same place in 2018 with seven measurements between 2018 and 2023 all under ID 1047, marked CG18-1/18, CG18-1/19 etc.
+
+[...]
+
+Many thanks,
+Marcus

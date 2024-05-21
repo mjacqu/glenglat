@@ -1,0 +1,8 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Thu May 02 21:53:52 CEST 2024 -->
+<data>
+<image file='figure-3.png' />
+<axesnames x='longitude'  y='latitude' />
+<calibpoints minXaxisX='328.0' minXaxisY='1000.0' maxXaxisX='646.0' maxXaxisY='1012.0' minYaxisX='124.0' minYaxisY='804.0' maxYaxisX='131.33333333333334' maxYaxisY='550.6666666666666' aX1='-37.6' aX2='-37.45' aY1='82.475' aY2='82.49' isXLog='false' isYLog='false' />
+<point n='0' x='607.3333333333334' y='533.3333333333334' dx='-37.47672117549474' dy='82.49208759051679' />
+</data>
