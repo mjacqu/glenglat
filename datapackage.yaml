@@ -49,9 +49,11 @@ contributors:
     role: contributor
   - title: Tong Zhang
     email: tzhang@bnu.edu.cn
+    organization: Beijing Normal University (BNU), China
     role: contributor
   - title: Marcus Gastaldello
     email: marcus.gastaldello@unifr.ch
+    organization: University of Fribourg (UniFr), Switzerland
     role: contributor
 resources:
   - name: source
