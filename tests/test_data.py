@@ -188,7 +188,6 @@ def test_borehole_source_id_matches_first_profile() -> None:
 def test_profile_ids_are_chronological() -> None:
   """Borehole profile ids are chronological."""
   EXCEPTIONS = [
-    354,  # kubyshkin2006: Single profile and then monthly means over two years
     460,  # carturan2023: Borehole with timeseries from two different thermistor chains
   ]
   df = dfs['profile']
@@ -217,7 +216,6 @@ def test_profile_ids_are_chronological() -> None:
 def test_profile_ids_are_chronological_by_datetime() -> None:
   """Borehole profile ids are chronological by datetime."""
   EXCEPTIONS = [
-    354,  # kubyshkin2006: Single profile and then monthly means over two years
     460,  # carturan2023: Borehole with timeseries from two different thermistor chains
   ]
   df = dfs['profile']

@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "location",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "label": "1", "type": "stationary" }, "geometry": { "type": "Point", "coordinates": [ 62.54077, 75.90889 ] } },
+{ "type": "Feature", "properties": { "label": "2", "type": "stationary" }, "geometry": { "type": "Point", "coordinates": [ 62.69211, 76.10973 ] } },
+{ "type": "Feature", "properties": { "label": "1a", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.52678, 75.90618 ] } },
+{ "type": "Feature", "properties": { "label": "2a", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.64081, 75.94989 ] } },
+{ "type": "Feature", "properties": { "label": "3", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.68805, 75.97474 ] } },
+{ "type": "Feature", "properties": { "label": "4", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.71174, 75.98856 ] } },
+{ "type": "Feature", "properties": { "label": "5", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.7533, 76.01896 ] } },
+{ "type": "Feature", "properties": { "label": "6", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.8025, 76.07412 ] } },
+{ "type": "Feature", "properties": { "label": "7", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.80246, 76.10307 ] } },
+{ "type": "Feature", "properties": { "label": "8", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.78892, 76.12184 ] } },
+{ "type": "Feature", "properties": { "label": "9", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.60204, 76.10844 ] } },
+{ "type": "Feature", "properties": { "label": "10", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.55937, 76.13051 ] } },
+{ "type": "Feature", "properties": { "label": "11", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.65775, 76.13408 ] } },
+{ "type": "Feature", "properties": { "label": "12", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.71195, 76.15086 ] } },
+{ "type": "Feature", "properties": { "label": "13", "type": "route" }, "geometry": { "type": "Point", "coordinates": [ 62.61488, 76.15879 ] } }
+]
+}

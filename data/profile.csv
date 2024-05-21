@@ -459,14 +459,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 351,1,nikitin1986,digitized,1981-07-22,1981-07-22,,,,
 351,2,nikitin1986,digitized,1982-07-14,1982-07-14,,,,
 352,1,kubyshkin2006,digitized,2005-04-18,2005-04-18,,,,
-354,1,kubyshkin2006,digitized,1959-04-16,1959-04-16,,,,
-354,2,kubyshkin2006,digitized,1957-02-01,1959-02-28,,,,Mean temperatures for February 1957-1959
-354,3,kubyshkin2006,digitized,1957-05-01,1959-05-31,,,,Mean temperatures for May 1957-1959
-354,4,kubyshkin2006,digitized,1957-06-01,1959-06-30,,,,Mean temperatures for June 1957-1959
-354,5,kubyshkin2006,digitized,1957-08-01,1959-08-31,,,,Mean temperatures for August 1957-1959
-354,6,kubyshkin2006,digitized,1957-10-01,1959-10-31,,,,Mean temperatures for October 1957-1959
-355,1,kubyshkin2006,digitized,1959-04-16,1959-04-16,,,,
-356,1,kubyshkin2006,digitized,1959-04-01,1959-04-01,,,,
 357,1,sun2016,digitized,2009-05-01,2009-05-31,,,,
 357,2,sun2016,digitized,2009-09-01,2009-09-30,,,,
 357,3,sun2016,digitized,2010-05-01,2010-05-31,,,,
@@ -1373,3 +1365,41 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 715,1,razumeiko1963,published,1959-05-19,1959-05-19,,,,Snow thickness 3.0 m (2.5 m 1959 and 0.5 m 1958) | Remainder is mixture of firn and ice
 716,1,razumeiko1963,published,1959-04-21,1959-04-21,,,,Snow thickness 1.10 m | Firn thickness 0.00 m
 717,1,razumeiko1963,published,1959-04-22,1959-04-22,,,,Snow thickness 0.00 m | Firn thickness 0.00 m
+718,1,khmelevskoy1964,published,1958-01-19,1958-01-31,,,True,Snow thickness 1.0 m
+718,2,khmelevskoy1964,published,1958-02-01,1958-02-28,,,True,Snow thickness 1.05 m
+718,3,khmelevskoy1964,published,1958-03-01,1958-03-31,,,True,Snow thickness 1.19 m
+718,4,khmelevskoy1964,published,1958-04-01,1958-04-30,,,True,Snow thickness 1.34 m
+718,5,khmelevskoy1964,published,1958-05-01,1958-05-31,,,True,Snow thickness 1.47 m
+718,6,khmelevskoy1964,published,1958-06-01,1958-06-30,,,True,Snow thickness 1.70 m
+718,7,khmelevskoy1964,published,1958-07-01,1958-07-31,,,True,Snow thickness 1.50 m
+718,8,khmelevskoy1964,published,1958-08-01,1958-08-31,,,True,Snow thickness 0.18 m
+718,9,khmelevskoy1964,published,1958-09-01,1958-09-21,,,True,Snow thickness 0.33 m
+718,10,khmelevskoy1964,published,1958-11-11,1958-11-30,,,True,Snow thickness 1.20 m
+718,11,khmelevskoy1964,published,1958-12-01,1958-12-31,,,True,Snow thickness 1.23 m
+718,12,khmelevskoy1964,published,1959-01-01,1959-01-31,,,True,Snow thickness 1.20 m
+718,13,khmelevskoy1964,published,1959-02-01,1959-02-28,,,True,Snow thickness 1.20 m
+719,1,khmelevskoy1964,published,1958-06-27,1958-06-27,,,,
+720,1,khmelevskoy1963,published,1958-05-26,1958-05-31,,,True,Snow thickness 0.13 m
+720,2,khmelevskoy1963,published,1958-06-01,1958-06-30,,,True,Snow thickness 0.16 m
+720,3,khmelevskoy1963,published,1958-07-01,1958-07-31,,,True,Snow thickness 0.00 m
+720,4,khmelevskoy1963,published,1958-08-01,1958-08-31,,,True,Snow thickness 0.15 m | measurement.depth: Shifted by 0.9 m to account for ablation during previous month
+720,5,khmelevskoy1963,published,1958-09-01,1958-09-25,,,True,Snow thickness 0.46 m
+720,6,khmelevskoy1963,published,1958-10-09,1958-10-28,,,True,Snow thickness 0.56 m
+720,7,khmelevskoy1963,published,1958-11-01,1958-11-30,,,True,Snow thickness 0.69 m
+720,8,khmelevskoy1963,published,1958-12-01,1958-12-31,,,True,Snow thickness 0.74 m
+720,9,khmelevskoy1963,published,1959-01-01,1959-01-31,,,True,Snow thickness 0.74 m
+720,10,khmelevskoy1963,published,1959-02-01,1959-02-28,,,True,Snow thickness 0.74 m
+720,11,khmelevskoy1963,published,1959-03-01,1959-03-31,,,True,Snow thickness 0.74 m
+721,1,khmelevskoy1963,published,1959-04-01,1959-04-01,13:00:00,,,Snow thickness 1.15 m
+722,1,khmelevskoy1963,published,1959-04-02,1959-04-02,12:30:00,,,Snow thickness 1.30 m
+723,1,khmelevskoy1963,published,1959-04-04,1959-04-04,10:50:00,,,Snow thickness 1.20 m
+724,1,khmelevskoy1963,published,1959-04-05,1959-04-05,11:00:00,,,Snow thickness 0.75 m
+725,1,khmelevskoy1963,published,1959-04-06,1959-04-06,08:30:00,,,Snow thickness 0.70 m
+726,1,khmelevskoy1963,published,1959-04-07,1959-04-07,11:00:00,,,Snow thickness 1.70 m
+727,1,khmelevskoy1963,published,1959-04-08,1959-04-08,12:30:00,,,Snow thickness 0.80 m
+728,1,khmelevskoy1963,published,1959-04-09,1959-04-09,10:50:00,,,Snow thickness 0.40 m
+729,1,khmelevskoy1963,published,1959-04-14,1959-04-14,08:30:00,,,Snow thickness 0.30 m
+730,1,khmelevskoy1963,published,1959-04-15,1959-04-15,10:50:00,,,Snow thickness 0.35 m
+731,1,khmelevskoy1963,published,1959-04-16,1959-04-16,07:30:00,,,Snow thickness 0.20 m
+732,1,khmelevskoy1963,published,1959-04-16,1959-04-16,14:50:00,,,Snow thickness 0.45 m
+733,1,khmelevskoy1963,published,1959-04-18,1959-04-18,11:30:00,,,Snow thickness 0.00 m
