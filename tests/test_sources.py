@@ -102,7 +102,8 @@ def test_digitized_profiles_match_digitizer_files() -> None:
     digitizer_files[digitized_profiles.columns].drop_duplicates().astype('string'),
   ).sort_values()
   profiles = pd.MultiIndex.from_frame(digitized_profiles.astype('string')).sort_values()
-  pd.testing.assert_index_equal(files, profiles)
+  assert files.difference(profiles).empty, files.difference(profiles)
+  assert profiles.difference(files).empty, profiles.difference(files)
 
 
 # Indexed measurements (for speed)
