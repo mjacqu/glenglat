@@ -40,7 +40,7 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
 | `date_min` | Drilling date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
 | `date_max` | Drilling date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date |  |
-| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
+| `drill_method` | Drilling method:<br>- mechanical<br>- thermal<br>- combined (mechanical and thermal) | string | enum: ['mechanical', 'thermal', 'combined'] |
 | `ice_depth` | Starting depth of ice. Infinity (`INF`) indicates that ice was not reached. | number |  |
 | `depth` | Total borehole depth (not including drilling in the underlying bed). | number |  |
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |

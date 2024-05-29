@@ -77,8 +77,8 @@ resources:
           description: 'Drilling method:
 
             - mechanical
-            - thermal: Hot water or steam
-            - combined: Mechanical and thermal'
+            - thermal
+            - combined (mechanical and thermal)'
           name: drill_method
           type: string
         - description: Starting depth of ice. Infinity (INF) indicates that ice was
