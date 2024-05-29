@@ -107,8 +107,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 117,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.21813,-140.35455,guessed,2600.0,hole 8,,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
 118,karuss2022,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,guessed,430.0,,,,,,,False,0.2,Accumulation area,Mylène Jacquemart | Guillem Carcanade
 119,sobota2009,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,estimated,430.0,T2,,,,,,False,0.2,Accumulation area,Ethan Welty
-120,kinnard2020,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,0.1,,Mylène Jacquemart | Guillem Carcanade
-121,kinnard2020,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,0.1,,Mylène Jacquemart | Guillem Carcanade
+120,kinnard2020,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,0.1,"Assumed to be the same borehole as the 'Guanaco' profile in masiokas2020 (Figure 5) which references (not found): Pitte, P. (2014). Fluctuaciones de Los Glaciares, en Los Últimos 50 años, en las Cuencas Amarillo, Turbio, Canito y Potrerillos, San Juan, Argentina (in Spanish). PhD Thesis, Universidad Nacional de Córdoba, Argentina.",Mylène Jacquemart | Guillem Carcanade
 122,zagorodnov1981a,Lomonosovfonna,G018042E78675N,published,78.81,17.6,published,1120.0,,,,thermal,27,,False,0.1,location_origin: Table 1 in kotlyakov2004,Ethan Welty
 123,kotlyakov1985,Vestfonna,G019951E79875N,published,79.93,19.52,published,580.0,,,,,,,,0.1,location_origin/elevation_origin: Table 1 in kotlyakov2004,Ethan Welty
 124,watanabe2001,Vestfonna,G020879E79901N,published,79.9667,21.0167,published,600.0,Vestfonna95,,,mechanical,,,False,,,Ethan Welty
@@ -139,7 +138,6 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 149,huang1990,Urumqi Glacier No. 1,G086810E43111N,estimated,43.1154866,86.81283014,estimated,3840.0,T1,,,,,,False,0.1,,Mylène Jacquemart | Guillem Carcanade
 150,huang1990,Urumqi Glacier No. 1,G086810E43111N,estimated,43.1110594,86.80957723,estimated,3960.0,T2,,,,,,False,0.1,,Mylène Jacquemart | Guillem Carcanade
 151,huang1990,Urumqi Glacier No. 1,G086810E43111N,estimated,43.1060367,86.80647755,estimated,4050.0,T3,,,,,,True,0.1,,Mylène Jacquemart | Guillem Carcanade
-153,masiokas2020,Guanaco Glacier,G289989E29347S,estimated,-29.35,-70.014,published,5161.0,,,,,,,,,,Mylène Jacquemart | Guillem Carcanade
 154,ginot2006,Tapado Glacier,G290072E30145S,estimated,-30.140241,-69.931488,published,5536.0,,,,,,,True,,,Mylène Jacquemart | Guillem Carcanade
 155,miles2018,Khumbu Glacier,G086820E27978N,estimated,27.9437778,86.81773669,published,4887.0,Site 1,,,,,,,0.05,elevation_origin: Table 1 in miles2019 | label: Also known as BH17-02 (ED2017_BH2) | Raw temperature measurements are available from hubbard2021 but difficult to interpret,Mylène Jacquemart | Guillem Carcanade
 156,miles2018,Khumbu Glacier,G086820E27978N,estimated,27.9695686,86.82870764,published,4981.0,Site 2,,,,,,False,0.05,elevation_origin: Table 1 in miles2019 | label: Also known as BH17-11 (ED2017_BH11) | Raw temperature measurements are available from hubbard2021 but difficult to interpret,Mylène Jacquemart | Guillem Carcanade
@@ -238,8 +236,6 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 272,darms2009,Grenzgletscher,G007800E45965N,published,45.922643,7.8736633,published,4293,SJ08-6,2008-08-25,2008-08-26,thermal,INF,24,False,0.1,label: Also B08-6 | Accumulation area | location_origin: Coordinates from Table 1 in hoelzle2011 (rather than from Appendix C in darms2009) as they match Figure 1.2 in darms2009,Ethan Welty
 273,haeberli1991,Grenzgletscher,G007800E45965N,published,45.929936,7.87434,published,4450,CG82-1,1982-01-01,1982-12-31,mechanical,,124,True,0.2,Accumulation area | label: B821 (haeberli1991) / Meteo-Core (luthi1999 Table 2.2) | location_origin: hoelzle2011 | elevation_origin: hoelzle2011 (and consistent with Figure 4),Ethan Welty
 275,hoelzle2014,Grenzgletscher,G007908E45948N,published,45.9297276,7.876968,published,4452,CG05-1,2005-10-01,2005-10-01,mechanical,,62,True,0.1,label: Also B05-1 / KCI (diez2013) | Accumulation area | to_bed: 'drilling stopped when the first dirt inclusions occurred in the ice. It is suggested that the glacier bed is likely to be up to 1 m deeper' (diez2013) | date_min/date_max: gastaldello2024,Ethan Welty
-278,kinnard2020,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,0.1,,Mylène Jacquemart | Guillem Carcanade
-279,kinnard2020,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,True,0.1,,Mylène Jacquemart | Guillem Carcanade
 280,watts1997,Austfonna,G025297E79771N,guessed,79.731,25.586,guessed,500.0,,,,,,,,,"Original reference is 'M. Vallon, pers. comm.'",Ethan Welty
 281,watanabe2001,Austfonna,G024340E79634N,published,79.8,24.0,published,750.0,Austfonna98,,,mechanical,,,False,,,Ethan Welty
 282,huang1990,Dagongba Glacier,G101855E29563N,estimated,29.56623,101.84461,published,4540.0,,,,,,,False,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade

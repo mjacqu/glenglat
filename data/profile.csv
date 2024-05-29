@@ -151,8 +151,10 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 119,10,sobota2009,published,2008-06-01,2008-06-30,,,,
 119,11,sobota2009,published,2008-07-01,2008-07-31,,,,
 119,12,sobota2009,published,2008-08-01,2008-08-31,,,,
-120,1,kinnard2020,digitized,2011-04-04,2011-04-04,,,,
-121,1,kinnard2020,digitized,2011-10-23,2011-10-23,,,,
+120,1,kinnard2020,digitized,2008-11-04,2008-11-04,,,,
+120,2,kinnard2020,digitized,2010-03-13,2010-03-13,,,,
+120,3,kinnard2020,digitized,2011-04-04,2011-04-04,,,,
+120,4,kinnard2020,digitized,2011-10-23,2011-10-23,,,,
 122,1,zagorodnov1981a,digitized,1976-07-06,1976-08-06,,,,
 123,1,kotlyakov1985,digitized,1981-01-01,1981-12-31,,,,
 124,1,watanabe2001,digitized,1995-05-01,1995-06-30,,,,
@@ -197,7 +199,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 149,1,huang1990,digitized,1986-09-27,1986-09-27,,,,
 150,1,huang1990,digitized,1986-09-27,1986-09-27,,,,
 151,1,huang1990,digitized,1986-09-27,1986-09-27,,,,
-153,1,masiokas2020,digitized,1964-01-01,2014-12-31,,,,
 154,1,ginot2006,digitized,1992-02-01,1992-02-29,,,,
 155,1,miles2018,digitized,2017-05-10,2017-05-27,,,False,
 156,1,miles2018,digitized,2017-05-17,2017-10-31,,,True,
@@ -351,8 +352,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 275,2,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-4 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 275,3,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B05-1
 275,4,hoelzle2017,published,2015-09-25,2015-09-25,,,True,label: B05-1
-278,1,kinnard2020,digitized,2008-11-04,2008-11-04,,,,
-279,1,kinnard2020,digitized,2010-03-13,2010-03-13,,,,
 280,1,watts1997,published,,1997-12-31,,,,
 281,1,watanabe2001,digitized,1998-03-01,1998-04-30,,,,
 282,1,huang1990,digitized,1982-09-30,1982-09-30,,,,
