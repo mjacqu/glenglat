@@ -3,9 +3,9 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 1,2,blatter1984,digitized,1978-04-01,1978-04-30,,,True,date_min/date_max: haeberli1991
 2,1,blatter1984,digitized,1979-01-01,1979-12-31,,,True,
 3,1,blatter1984,digitized,1980-01-01,1980-12-31,,,True,
-4,1,blatter1987,digitized,1979-01-01,1979-01-31,,,,
-5,1,blatter1987,digitized,1980-04-01,1980-04-30,,,,
-6,1,blatter1987,digitized,1979-04-01,1979-04-30,,,,
+4,1,blatter1985,published,1979-07-13,1979-08-13,,,True,
+5,1,blatter1985,published,1980-05-20,1980-06-20,,,True,
+6,1,blatter1985,published,1979-07-23,1979-08-23,,,True,Temperatures at 15 m depth average of two thermistors (difference 0.3 °C)
 7,1,gilbert2010,digitized,1999-06-04,1999-06-05,,,True,
 8,1,gilbert2013,digitized,1999-01-01,1999-12-31,,,,
 9,1,gilbert2013,digitized,2011-01-01,2011-12-31,,,,
@@ -65,11 +65,11 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 43,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 44,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 45,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
-46,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-47,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-48,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-49,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-50,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
+46,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+47,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+48,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+49,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+50,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
 51,1,clarke1984,digitized,1980-01-01,1980-12-31,,,,
 52,1,clarke1984,digitized,1980-01-01,1980-12-31,,,,
 53,1,clarke1984,digitized,1980-01-01,1980-12-31,,,,
@@ -203,9 +203,9 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 155,1,miles2018,digitized,2017-05-10,2017-05-27,,,False,
 156,1,miles2018,digitized,2017-05-17,2017-10-31,,,True,
 157,1,miles2018,digitized,2017-05-23,2017-10-31,,,True,
-158,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
-159,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
-160,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
+158,1,muller1976,digitized,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
+159,1,muller1976,digitized,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
+160,1,muller1976,digitized,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
 161,1,naftz1993,published,1990-01-01,1990-12-31,,,,
 162,1,odegard1997,digitized,1994-04-01,1994-04-30,,,,
 163,1,odegard1997,digitized,1995-04-01,1995-04-30,,,,
@@ -329,14 +329,14 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 251,7,barkov1988,digitized,1979-07-03,1979-07-03,,,,
 251,8,barkov1988,digitized,1979-07-30,1979-07-30,,,,
 251,9,barkov1988,digitized,1979-09-03,1979-09-03,,,,
-260,1,blatter1987,digitized,1977-01-01,1977-01-31,,,,
-261,1,blatter1987,digitized,1979-02-01,1979-02-28,,,,
-262,1,blatter1987,digitized,1981-01-01,1981-01-31,,,,
-263,1,blatter1987,digitized,1981-02-01,1981-02-28,,,,
-264,1,blatter1987,digitized,1975-07-01,1975-07-31,,,,
-265,1,blatter1987,digitized,1981-03-01,1981-03-31,,,,
-266,1,blatter1987,digitized,1979-03-01,1979-03-31,,,,
-267,1,blatter1987,digitized,1976-01-01,1976-01-31,,,,
+260,1,blatter1985,published,1977-06-07,1977-07-07,,,True,Temperatures at 40-100 m depth average of two thermistors (maximum difference 0.2 °C)
+261,1,blatter1985,published,1979-07-17,1979-08-17,,,True,
+262,1,blatter1985,published,1981-05-28,1981-06-28,,,True,Temperatures at 50 m depth average of two thermistors (difference 0.2 °C)
+263,1,blatter1985,published,1981-05-30,1981-06-30,,,True,
+264,1,blatter1985,published,1975-07-21,1975-08-21,,,True,
+265,1,blatter1985,published,1981-06-03,1981-07-03,,,True,
+266,1,blatter1985,published,1979-07-21,1979-08-21,,,True,
+267,1,blatter1985,published,1976-06-21,1976-07-21,,,True,
 269,1,gastaldello2024,submitted,1999-05-26,1999-05-26,07:00:00,True,True,label: SJ99-10/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
 270,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-8 | measurement_origin: First of two 4 m depths in Appendix C assumed to be 3 m based on Figure 3.10 | equilibrated: Achieved by extrapolation
 271,1,suter2002,digitized,1998-10-31,1998-10-31,,,True,
@@ -1047,11 +1047,11 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 594,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
 595,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
 596,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
-597,1,jouzel1984,published,1976-06-01,1976-06-30,,,,measurement_origin: Median temperature of range '-14.2 à -14.3'
-598,1,jouzel1984,published,1974-06-01,1976-06-30,,,,measurement_origin: Median temperature of range '-13.6 à -13.7'
+597,1,jouzel1984,published,1976-06-01,1976-06-30,,,,measurement_origin: Median temperature of range -14.2 to -14.3
+598,1,jouzel1984,published,1974-06-01,1976-06-30,,,,measurement_origin: Median temperature of range -13.6 to -13.7
 599,1,jouzel1984,published,1983-06-01,1983-06-30,,,,
 600,1,jouzel1984,published,1980-09-01,1980-09-30,,,,
-601,1,jouzel1984,published,1983-10-01,1983-10-31,,,,measurement_origin: Median temperature of range '0 à -0.3'
+601,1,jouzel1984,published,1983-10-01,1983-10-31,,,,measurement_origin: Median temperature of range 0 to -0.3
 602,1,muller1961,digitized,1960-07-05,1960-07-05,,,True,equilibrated: Based on timeseries in Figure 2
 602,2,muller1961,digitized,1960-08-20,1960-08-20,,,True,
 602,3,muller1963,digitized,1961-05-26,1961-05-26,,,True,
@@ -1402,3 +1402,21 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 731,1,khmelevskoy1963,published,1959-04-16,1959-04-16,07:30:00,,,Snow thickness 0.20 m
 732,1,khmelevskoy1963,published,1959-04-16,1959-04-16,14:50:00,,,Snow thickness 0.45 m
 733,1,khmelevskoy1963,published,1959-04-18,1959-04-18,11:30:00,,,Snow thickness 0.00 m
+734,1,blatter1985,published,1975-06-26,1975-07-26,,,True,
+735,1,blatter1985,published,1975-06-26,1975-07-26,,,True,
+736,1,blatter1985,published,1975-07-07,1975-08-07,,,True,
+737,1,blatter1985,published,1975-07-23,1975-08-23,,,True,
+738,1,blatter1985,published,1975-07-24,1975-08-24,,,True,
+739,1,blatter1985,published,1976-07-03,1976-08-03,,,True,
+740,1,blatter1985,published,1976-07-08,1976-08-08,,,True,Temperatures at 70-100 m depth average of two thermistors (maximum difference 0.4 °C)
+741,1,blatter1985,published,1977-06-12,1977-07-12,,,True,
+742,1,blatter1985,published,1977-06-24,1977-07-24,,,True,
+743,1,blatter1985,published,1977-07-05,1977-08-05,,,True,
+744,1,blatter1985,published,1977-07-15,1977-08-15,,,True,
+745,1,blatter1985,published,1979-07-23,1979-08-23,,,True,
+746,1,blatter1985,published,1980-05-22,1980-06-22,,,True,
+747,1,blatter1985,published,1980-05-28,1980-06-28,,,True,Temperatures at 10 m depth average of two thermistors (difference 0.8 °C)
+748,1,blatter1985,published,1980-05-23,1980-06-23,,,True,
+749,1,blatter1985,published,1980-05-29,1980-06-29,,,True,
+750,1,blatter1985,published,1980-05-26,1980-06-26,,,True,
+751,1,blatter1985,published,1980-05-26,1980-06-26,,,True,

@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "location-laika",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "label": "X1" }, "geometry": { "type": "Point", "coordinates": [ -79.09166, 75.90088 ] } },
+{ "type": "Feature", "properties": { "label": "X2" }, "geometry": { "type": "Point", "coordinates": [ -79.11579, 75.89784 ] } },
+{ "type": "Feature", "properties": { "label": "X3" }, "geometry": { "type": "Point", "coordinates": [ -79.13779, 75.89406 ] } },
+{ "type": "Feature", "properties": { "label": "X4" }, "geometry": { "type": "Point", "coordinates": [ -79.15031, 75.88786 ] } },
+{ "type": "Feature", "properties": { "label": "X5" }, "geometry": { "type": "Point", "coordinates": [ -79.18402, 75.88207 ] } }
+]
+}
