@@ -1,189 +1,202 @@
-created: '2024-03-26T11:49:54Z'
-description: Submission format for the global englacial temperature database.
 name: glenglat-submission
+description: Submission format for the global englacial temperature database.
 profile: tabular-data-package
-resources:
-  - description: Metadata about each borehole.
-    dialect:
-      delimiter: ','
-      doubleQuote: true
-      lineTerminator: "\n"
-      quoteChar: '"'
-    format: csv
-    name: borehole
-    path: borehole.csv
-    profile: tabular-data-resource
-    schema:
-      fields:
-        - constraints:
-            minimum: 1
-            required: true
-            unique: true
-          description: Unique identifier.
-          name: id
-          type: integer
-        - constraints:
-            pattern: '[^\s]+( [^\s]+)*'
-            required: true
-          description: Glacier or ice cap name (as reported).
-          name: glacier_name
-          type: string
-        - constraints:
-            pattern: G[0-9]{6}E[0-9]{5}[NS]
-          description: Global Land Ice Measurements from Space (GLIMS) glacier identifier.
-          name: glims_id
-          type: string
-        - constraints:
-            maximum: 90
-            minimum: -90
-            required: true
-          description: Latitude (EPSG 4326).
-          name: latitude
-          type: number
-          unit: degree
-        - constraints:
-            maximum: 180
-            minimum: -180
-            required: true
-          description: Longitude (EPSG 4326).
-          name: longitude
-          type: number
-          unit: degree
-        - constraints:
-            maximum: 9999.0
-            required: true
-          description: Elevation above sea level.
-          name: elevation
-          type: number
-          unit: m
-        - description: Borehole name (e.g. as labeled on a plot).
-          name: label
-          type: string
-        - description: Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
-          format: '%Y-%m-%d'
-          name: date_min
-          type: date
-        - description: End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
-          format: '%Y-%m-%d'
-          name: date_max
-          type: date
-        - constraints:
-            enum:
-              - mechanical
-              - thermal
-              - combined
-          description: 'Drilling method:
-
-            - mechanical
-            - thermal
-            - combined (mechanical and thermal)'
-          name: drill_method
-          type: string
-        - description: Starting depth of ice. Infinity (INF) indicates that ice was
-            not reached.
-          name: ice_depth
-          type: number
-          unit: m
-        - description: Total borehole depth (not including drilling in the underlying
-            bed).
-          name: depth
-          type: number
-          unit: m
-        - description: Whether the borehole reached the glacier bed.
-          falseValues:
-            - 'False'
-            - 'false'
-            - 'FALSE'
-          name: to_bed
-          trueValues:
-            - 'True'
-            - 'true'
-            - 'TRUE'
-          type: boolean
-        - description: Thermistor accuracy or precision (as reported). Typically understood
-            to represent one standard deviation.
-          name: temperature_accuracy
-          type: number
-          unit: °C
-        - constraints:
-            pattern: '[^\s]+( [^\s]+)*'
-          description: Additional remarks about the study site, the borehole, or the
-            measurements therein. Literature references should be formatted as `{url}`
-            or `{author} {year} ({url})`.
-          name: notes
-          type: string
-      missingValues:
-        - ''
-      primaryKey:
-        - id
-  - description: Temperature measurements with depth.
-    dialect:
-      delimiter: ','
-      doubleQuote: true
-      lineTerminator: "\n"
-      quoteChar: '"'
-    format: csv
-    name: measurement
-    path: measurement.csv
-    profile: tabular-data-resource
-    schema:
-      fields:
-        - constraints:
-            required: true
-          description: Borehole identifier.
-          name: borehole_id
-          type: integer
-        - constraints:
-            required: true
-          description: Depth below the glacier surface.
-          name: depth
-          type: number
-          unit: m
-        - constraints:
-            required: true
-          description: Temperature.
-          name: temperature
-          type: number
-          unit: °C
-        - description: Measurement date, or if not known precisely, the first possible
-            date (e.g. 2019 → 2019-01-01).
-          format: '%Y-%m-%d'
-          name: date_min
-          type: date
-        - constraints:
-            required: true
-          description: Measurement date, or if not known precisely, the last possible
-            date (e.g. 2019 → 2019-12-31).
-          format: '%Y-%m-%d'
-          name: date_max
-          type: date
-        - description: Measurement time.
-          format: '%H:%M:%S'
-          name: time
-          type: time
-        - description: Whether `time` is in Coordinated Universal Time (True) or in
-            another (but unknown) timezone (False).
-          falseValues:
-            - 'False'
-            - 'false'
-            - 'FALSE'
-          name: utc
-          trueValues:
-            - 'True'
-            - 'true'
-            - 'TRUE'
-          type: boolean
-        - description: Whether the profile is in thermal equilibrium following drilling.
-          falseValues:
-            - 'False'
-            - 'false'
-            - 'FALSE'
-          name: equilibrated
-          trueValues:
-            - 'True'
-            - 'true'
-            - 'TRUE'
-          type: boolean
-      missingValues:
-        - ''
 version: 0.1.0
+created: '2024-05-30T15:16:46Z'
+resources:
+- name: borehole
+  type: table
+  description: Metadata about each borehole.
+  profile: tabular-data-resource
+  path: borehole.csv
+  scheme: file
+  format: csv
+  mediatype: text/csv
+  dialect:
+    header: true
+    csv:
+      delimiter: ','
+      lineTerminator: '
+
+        '
+      quoteChar: '"'
+      doubleQuote: true
+  schema:
+    fields:
+    - name: id
+      type: integer
+      description: Unique identifier.
+      constraints:
+        required: true
+        unique: true
+        minimum: 1
+    - name: glacier_name
+      type: string
+      description: Glacier or ice cap name (as reported).
+      constraints:
+        required: true
+        pattern: '[^\s]+( [^\s]+)*'
+    - name: glims_id
+      type: string
+      description: Global Land Ice Measurements from Space (GLIMS) glacier identifier.
+      constraints:
+        pattern: G[0-9]{6}E[0-9]{5}[NS]
+    - name: latitude
+      type: number
+      description: Latitude (EPSG 4326).
+      constraints:
+        required: true
+        minimum: -90
+        maximum: 90
+      unit: degree
+    - name: longitude
+      type: number
+      description: Longitude (EPSG 4326).
+      constraints:
+        required: true
+        minimum: -180
+        maximum: 180
+      unit: degree
+    - name: elevation
+      type: number
+      description: Elevation above sea level.
+      constraints:
+        required: true
+        maximum: 9999.0
+      unit: m
+    - name: label
+      type: string
+      description: Borehole name (e.g. as labeled on a plot).
+    - name: date_min
+      type: date
+      description: Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
+      format: '%Y-%m-%d'
+    - name: date_max
+      type: date
+      description: End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
+      format: '%Y-%m-%d'
+    - name: drill_method
+      type: string
+      description: |-
+        Drilling method:
+
+        - mechanical: Push, percussion, rotary, ...
+        - thermal: Hot point, electrothermal, steam, ...
+        - combined: Mechanical and thermal
+      constraints:
+        enum:
+        - mechanical
+        - thermal
+        - combined
+    - name: ice_depth
+      type: number
+      description: Starting depth of ice. Infinity (INF) indicates that ice was not reached.
+      unit: m
+    - name: depth
+      type: number
+      description: Total borehole depth (not including drilling in the underlying bed).
+      unit: m
+    - name: to_bed
+      type: boolean
+      description: Whether the borehole reached the glacier bed.
+      trueValues:
+      - 'True'
+      - 'true'
+      - 'TRUE'
+      falseValues:
+      - 'False'
+      - 'false'
+      - 'FALSE'
+    - name: temperature_accuracy
+      type: number
+      description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
+      unit: °C
+    - name: notes
+      type: string
+      description: Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
+      constraints:
+        pattern: '[^\s]+( [^\s]+)*'
+    - name: curator
+      type: string
+      description: Names of people who added the data to the database, as a pipe-delimited list. Additional details about each can be found under `contributors`.
+      contraints:
+        required: true
+        pattern: '[^\s]+( [^\s]+)*'
+    missingValues:
+    - ''
+    primaryKey:
+    - id
+- name: measurement
+  type: table
+  description: Temperature measurements with depth.
+  profile: tabular-data-resource
+  path: measurement.csv
+  scheme: multipart
+  format: csv
+  mediatype: text/csv
+  dialect:
+    header: true
+    csv:
+      delimiter: ','
+      lineTerminator: '
+
+        '
+      quoteChar: '"'
+      doubleQuote: true
+  schema:
+    fields:
+    - name: borehole_id
+      type: integer
+      description: Borehole identifier.
+      constraints:
+        required: true
+    - name: depth
+      type: number
+      description: Depth below the glacier surface.
+      constraints:
+        required: true
+      unit: m
+    - name: temperature
+      type: number
+      description: Temperature.
+      constraints:
+        required: true
+      unit: °C
+    - name: date_min
+      type: date
+      description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
+      format: '%Y-%m-%d'
+    - name: date_max
+      type: date
+      description: Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
+      format: '%Y-%m-%d'
+      constraints:
+        required: true
+    - name: time
+      type: time
+      description: Measurement time.
+      format: '%H:%M:%S'
+    - name: utc_offset
+      type: number
+      description: Time offset relative to Coordinated Universal Time (UTC).
+      unit: h
+    - name: equilibrated
+      type: boolean
+      description: Whether temperatures have equilibrated following drilling.
+      trueValues:
+      - 'True'
+      - 'true'
+      - 'TRUE'
+      falseValues:
+      - 'False'
+      - 'false'
+      - 'FALSE'
+    missingValues:
+    - ''
+    foreignKeys:
+    - fields:
+      - borehole_id
+      reference:
+        resource: borehole
+        fields:
+        - id
