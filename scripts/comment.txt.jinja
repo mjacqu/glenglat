@@ -1,0 +1,13 @@
+[{{ type }}{% if unit %}: {{ unit }}{% endif %}] {{ name }}
+
+{{ description }}
+
+{% if format and format != 'default' -%}
+  format: {{ format }}
+{%- endif %}
+{% if constraints -%}
+  constraints:
+  {% for key, value in constraints.items() -%}
+    - {{ key }}: {{ value }}
+  {% endfor %}
+{%- endif -%}

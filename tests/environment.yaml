@@ -8,3 +8,6 @@ dependencies:
   - frictionless=5.13
   - pandas=2.2
   - pytest=7.3
+  - pip=24.0
+  - pip:
+    - 'tablecloth[excel,gsheets] @ git+https://github.com/ezwelty/tablecloth'
