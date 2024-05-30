@@ -296,8 +296,8 @@ resources:
           description: |-
             Drilling method:
 
-            - mechanical: Includes push, percussion, and rotary drills
-            - thermal: Includes contact heat (electrothermal, hot point), intermediate medium (hot water, steam), and thermomechanical drills
+            - mechanical: Push, percussion, rotary, ...
+            - thermal: Hot point, electrothermal, steam, ...
             - combined: Mechanical and thermal
           type: string
           constraints:
