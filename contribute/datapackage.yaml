@@ -59,13 +59,11 @@ resources:
         - description: Borehole name (e.g. as labeled on a plot).
           name: label
           type: string
-        - description: Drilling date, or if not known precisely, the first possible
-            date (e.g. 2019 → 2019-01-01).
+        - description: Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           format: '%Y-%m-%d'
           name: date_min
           type: date
-        - description: Drilling date, or if not known precisely, the last possible
-            date (e.g. 2019 → 2019-12-31).
+        - description: End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).
           format: '%Y-%m-%d'
           name: date_max
           type: date
@@ -77,8 +75,8 @@ resources:
           description: 'Drilling method:
 
             - mechanical
-            - thermal: Hot water or steam
-            - combined: Mechanical and thermal'
+            - thermal
+            - combined (mechanical and thermal)'
           name: drill_method
           type: string
         - description: Starting depth of ice. Infinity (INF) indicates that ice was

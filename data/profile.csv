@@ -1,11 +1,11 @@
-borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibrated,notes
+borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrated,notes
 1,1,haeberli1991,published,1977-08-21,1977-08-21,,,,equilibrated: 25 h after the installation of the thermistor chain | Measurements at 30 and 40 m depth not reported
 1,2,blatter1984,digitized,1978-04-01,1978-04-30,,,True,date_min/date_max: haeberli1991
 2,1,blatter1984,digitized,1979-01-01,1979-12-31,,,True,
 3,1,blatter1984,digitized,1980-01-01,1980-12-31,,,True,
-4,1,blatter1987,digitized,1979-01-01,1979-01-31,,,,
-5,1,blatter1987,digitized,1980-04-01,1980-04-30,,,,
-6,1,blatter1987,digitized,1979-04-01,1979-04-30,,,,
+4,1,blatter1985,published,1979-07-13,1979-08-13,,,True,
+5,1,blatter1985,published,1980-05-20,1980-06-20,,,True,
+6,1,blatter1985,published,1979-07-23,1979-08-23,,,True,Temperatures at 15 m depth average of two thermistors (difference 0.3 °C)
 7,1,gilbert2010,digitized,1999-06-04,1999-06-05,,,True,
 8,1,gilbert2013,digitized,1999-01-01,1999-12-31,,,,
 9,1,gilbert2013,digitized,2011-01-01,2011-12-31,,,,
@@ -20,7 +20,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 16,2,darms2009,published,2008-08-27,2008-08-27,,,True,label: B08-9 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 17,1,laternser1992,published,1991-08-04,1991-08-09,,,True,equilibrated: Achieved by extrapolation
 17,2,laternser1992,published,1991-10-26,1991-10-26,,,True,label: CG91-D/91 in hoelzle2011
-18,1,gastaldello2024,submitted,1999-05-27,1999-05-27,07:50:00,True,True,label: GG99-12/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.26)
+18,1,gastaldello2024,submitted,1999-05-27,1999-05-27,09:50:00,2,True,label: GG99-12/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.26)
 19,1,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-5 | equilibrated: Achieved by extrapolation
 20,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
 21,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
@@ -33,43 +33,43 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 28,1,paterson1972,digitized,1986-04-24,1986-04-24,,,,
 29,1,sharp1951,digitized,1950-03-18,1950-03-20,,,,measurement_origin: Figure 6 was chosen over Table 1 because it matches the 'probably more accurate' mercury thermometer readings of Table 1 but extends deeper
 30,1,laternser1992,published,1991-03-05,1991-03-13,,,True,equilibrated: Achieved by extrapolation
-30,2,laternser1992,published,1991-05-01,1991-05-01,11:00:00,True,True,
-30,3,laternser1992,published,1991-05-01,1991-05-01,11:00:00,True,True,
-30,4,laternser1992,published,1991-07-26,1991-07-26,14:30:00,True,True,
-30,5,laternser1992,published,1991-07-26,1991-07-26,14:30:00,True,True,
+30,2,laternser1992,published,1991-05-01,1991-05-01,13:00:00,2,True,
+30,3,laternser1992,published,1991-05-01,1991-05-01,13:00:00,2,True,
+30,4,laternser1992,published,1991-07-26,1991-07-26,16:30:00,2,True,
+30,5,laternser1992,published,1991-07-26,1991-07-26,16:30:00,2,True,
 31,1,laternser1992,published,1991-03-02,1991-03-13,,,True,equilibrated: Achieved by extrapolation
-31,2,laternser1992,published,1991-05-01,1991-05-01,08:40:00,True,True,
-31,3,laternser1992,published,1991-05-01,1991-05-01,08:40:00,True,True,
-31,4,laternser1992,published,1991-07-26,1991-07-26,13:30:00,True,True,
-31,5,laternser1992,published,1991-07-26,1991-07-26,13:30:00,True,True,
-31,6,laternser1992,published,1991-08-27,1991-08-27,08:15:00,True,True,
-31,7,laternser1992,published,1991-08-27,1991-08-27,08:15:00,True,True,
+31,2,laternser1992,published,1991-05-01,1991-05-01,10:40:00,2,True,
+31,3,laternser1992,published,1991-05-01,1991-05-01,10:40:00,2,True,
+31,4,laternser1992,published,1991-07-26,1991-07-26,15:30:00,2,True,
+31,5,laternser1992,published,1991-07-26,1991-07-26,15:30:00,2,True,
+31,6,laternser1992,published,1991-08-27,1991-08-27,10:15:00,2,True,
+31,7,laternser1992,published,1991-08-27,1991-08-27,10:15:00,2,True,
 32,1,laternser1992,published,1991-03-10,1991-03-13,,,True,equilibrated: Achieved by extrapolation
-32,2,laternser1992,published,1991-05-01,1991-05-01,07:20:00,True,True,
-32,3,laternser1992,published,1991-05-01,1991-05-01,07:20:00,True,True,
-32,4,laternser1992,published,1991-07-26,1991-07-26,12:00:00,True,True,
-32,5,laternser1992,published,1991-07-26,1991-07-26,12:00:00,True,True,
-32,6,laternser1992,published,1991-08-27,1991-08-27,09:15:00,True,True,
-32,7,laternser1992,published,1991-08-27,1991-08-27,09:15:00,True,True,
+32,2,laternser1992,published,1991-05-01,1991-05-01,09:20:00,2,True,
+32,3,laternser1992,published,1991-05-01,1991-05-01,09:20:00,2,True,
+32,4,laternser1992,published,1991-07-26,1991-07-26,14:00:00,2,True,
+32,5,laternser1992,published,1991-07-26,1991-07-26,14:00:00,2,True,
+32,6,laternser1992,published,1991-08-27,1991-08-27,11:15:00,2,True,
+32,7,laternser1992,published,1991-08-27,1991-08-27,11:15:00,2,True,
 33,1,laternser1992,published,1991-08-02,1991-08-07,,,True,equilibrated: Achieved by extrapolation | label: CG91-A/91 in hoelzle2011
 34,1,suter2001,digitized,1994-04-30,1994-05-03,,,True,equilibrated: Achieved by extrapolation
-34,2,gastaldello2024,submitted,1994-06-01,1994-06-01,06:00:00,True,True,measurement_origin: Also reported in suter2001 (Figure 4)
-34,3,gastaldello2024,submitted,1994-09-07,1994-09-07,06:30:00,True,True,measurement_origin: Also reported in suter2001 (Figure 4)
+34,2,gastaldello2024,submitted,1994-06-01,1994-06-01,08:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
+34,3,gastaldello2024,submitted,1994-09-07,1994-09-07,08:30:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
 35,1,suter2001,digitized,1994-04-30,1994-05-03,,,True,equilibrated: Achieved by extrapolation
-35,2,gastaldello2024,submitted,1994-06-01,1994-06-01,18:00:00,True,True,measurement_origin: Also reported in suter2001 (Figure 4)
-35,3,gastaldello2024,submitted,1994-09-05,1994-09-05,15:00:00,True,True,measurement_origin: Also reported in suter2001 (Figure 4)
-36,1,gastaldello2024,submitted,1994-10-31,1994-10-31,11:00:00,True,True,measurement_origin: Also reported in suter2001 (Figure 5)
+35,2,gastaldello2024,submitted,1994-06-01,1994-06-01,20:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
+35,3,gastaldello2024,submitted,1994-09-05,1994-09-05,17:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
+36,1,gastaldello2024,submitted,1994-10-31,1994-10-31,13:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 5) | time: cryomap2023
 40,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 41,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 42,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 43,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 44,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
 45,1,bjornsson1996,digitized,1992-01-01,1992-12-31,,,,
-46,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-47,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-48,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-49,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
-50,1,blatter1988,digitized,1975-08-01,1975-08-31,,,,
+46,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+47,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+48,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+49,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
+50,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
 51,1,clarke1984,digitized,1980-01-01,1980-12-31,,,,
 52,1,clarke1984,digitized,1980-01-01,1980-12-31,,,,
 53,1,clarke1984,digitized,1980-01-01,1980-12-31,,,,
@@ -151,8 +151,10 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 119,10,sobota2009,published,2008-06-01,2008-06-30,,,,
 119,11,sobota2009,published,2008-07-01,2008-07-31,,,,
 119,12,sobota2009,published,2008-08-01,2008-08-31,,,,
-120,1,kinnard2020,digitized,2011-04-04,2011-04-04,,,,
-121,1,kinnard2020,digitized,2011-10-23,2011-10-23,,,,
+120,1,kinnard2020,digitized,2008-11-04,2008-11-04,,,,
+120,2,kinnard2020,digitized,2010-03-13,2010-03-13,,,,
+120,3,kinnard2020,digitized,2011-04-04,2011-04-04,,,,
+120,4,kinnard2020,digitized,2011-10-23,2011-10-23,,,,
 122,1,zagorodnov1981a,digitized,1976-07-06,1976-08-06,,,,
 123,1,kotlyakov1985,digitized,1981-01-01,1981-12-31,,,,
 124,1,watanabe2001,digitized,1995-05-01,1995-06-30,,,,
@@ -197,14 +199,13 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 149,1,huang1990,digitized,1986-09-27,1986-09-27,,,,
 150,1,huang1990,digitized,1986-09-27,1986-09-27,,,,
 151,1,huang1990,digitized,1986-09-27,1986-09-27,,,,
-153,1,masiokas2020,digitized,1964-01-01,2014-12-31,,,,
 154,1,ginot2006,digitized,1992-02-01,1992-02-29,,,,
 155,1,miles2018,digitized,2017-05-10,2017-05-27,,,False,
 156,1,miles2018,digitized,2017-05-17,2017-10-31,,,True,
 157,1,miles2018,digitized,2017-05-23,2017-10-31,,,True,
-158,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
-159,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
-160,1,muller1976,digitized,1974-08-25,1974-08-25,,,,
+158,1,muller1976,digitized,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
+159,1,muller1976,digitized,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
+160,1,muller1976,digitized,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
 161,1,naftz1993,published,1990-01-01,1990-12-31,,,,
 162,1,odegard1997,digitized,1994-04-01,1994-04-30,,,,
 163,1,odegard1997,digitized,1995-04-01,1995-04-30,,,,
@@ -328,15 +329,15 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 251,7,barkov1988,digitized,1979-07-03,1979-07-03,,,,
 251,8,barkov1988,digitized,1979-07-30,1979-07-30,,,,
 251,9,barkov1988,digitized,1979-09-03,1979-09-03,,,,
-260,1,blatter1987,digitized,1977-01-01,1977-01-31,,,,
-261,1,blatter1987,digitized,1979-02-01,1979-02-28,,,,
-262,1,blatter1987,digitized,1981-01-01,1981-01-31,,,,
-263,1,blatter1987,digitized,1981-02-01,1981-02-28,,,,
-264,1,blatter1987,digitized,1975-07-01,1975-07-31,,,,
-265,1,blatter1987,digitized,1981-03-01,1981-03-31,,,,
-266,1,blatter1987,digitized,1979-03-01,1979-03-31,,,,
-267,1,blatter1987,digitized,1976-01-01,1976-01-31,,,,
-269,1,gastaldello2024,submitted,1999-05-26,1999-05-26,07:00:00,True,True,label: SJ99-10/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
+260,1,blatter1985,published,1977-06-07,1977-07-07,,,True,Temperatures at 40-100 m depth average of two thermistors (maximum difference 0.2 °C)
+261,1,blatter1985,published,1979-07-17,1979-08-17,,,True,
+262,1,blatter1985,published,1981-05-28,1981-06-28,,,True,Temperatures at 50 m depth average of two thermistors (difference 0.2 °C)
+263,1,blatter1985,published,1981-05-30,1981-06-30,,,True,
+264,1,blatter1985,published,1975-07-21,1975-08-21,,,True,
+265,1,blatter1985,published,1981-06-03,1981-07-03,,,True,
+266,1,blatter1985,published,1979-07-21,1979-08-21,,,True,
+267,1,blatter1985,published,1976-06-21,1976-07-21,,,True,
+269,1,gastaldello2024,submitted,1999-05-26,1999-05-26,09:00:00,2,True,label: SJ99-10/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
 270,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-8 | measurement_origin: First of two 4 m depths in Appendix C assumed to be 3 m based on Figure 3.10 | equilibrated: Achieved by extrapolation
 271,1,suter2002,digitized,1998-10-31,1998-10-31,,,True,
 271,2,suter2002,digitized,1999-01-25,1999-01-25,,,True,Shallowest measurement(s) are missing in suter2002 (Figure 6.22)
@@ -351,8 +352,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 275,2,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-4 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
 275,3,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B05-1
 275,4,hoelzle2017,published,2015-09-25,2015-09-25,,,True,label: B05-1
-278,1,kinnard2020,digitized,2008-11-04,2008-11-04,,,,
-279,1,kinnard2020,digitized,2010-03-13,2010-03-13,,,,
 280,1,watts1997,published,,1997-12-31,,,,
 281,1,watanabe2001,digitized,1998-03-01,1998-04-30,,,,
 282,1,huang1990,digitized,1982-09-30,1982-09-30,,,,
@@ -598,8 +597,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 416,1,zagorodnov1992,digitized,1987-01-01,1988-12-31,,,,
 419,1,goel2017,published,2012-12-01,2014-02-28,,,True,
 420,1,watanabe2001,digitized,1999-04-01,1999-04-30,,,,
-421,1,barandun2023,submitted,2013-08-26,2013-08-26,09:00:00,True,True,
-421,2,barandun2023,submitted,2014-08-29,2014-08-29,09:20:00,True,True,
+421,1,barandun2023,submitted,2013-08-26,2013-08-26,15:00:00,6,True,
+421,2,barandun2023,submitted,2014-08-29,2014-08-29,15:20:00,6,True,
 421,3,barandun2023,submitted,2015-06-08,2015-06-08,,,True,
 421,4,barandun2023,submitted,2016-07-16,2016-07-16,,,True,
 421,5,barandun2023,submitted,2017-07-09,2017-07-09,,,True,
@@ -1048,11 +1047,11 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 594,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
 595,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
 596,1,suter2002,published,1998-06-15,1998-06-29,,,True,equilibrated: Achieved by extrapolation
-597,1,jouzel1984,published,1976-06-01,1976-06-30,,,,measurement_origin: Median temperature of range '-14.2 à -14.3'
-598,1,jouzel1984,published,1974-06-01,1976-06-30,,,,measurement_origin: Median temperature of range '-13.6 à -13.7'
+597,1,jouzel1984,published,1976-06-01,1976-06-30,,,,measurement_origin: Median temperature of range -14.2 to -14.3
+598,1,jouzel1984,published,1974-06-01,1976-06-30,,,,measurement_origin: Median temperature of range -13.6 to -13.7
 599,1,jouzel1984,published,1983-06-01,1983-06-30,,,,
 600,1,jouzel1984,published,1980-09-01,1980-09-30,,,,
-601,1,jouzel1984,published,1983-10-01,1983-10-31,,,,measurement_origin: Median temperature of range '0 à -0.3'
+601,1,jouzel1984,published,1983-10-01,1983-10-31,,,,measurement_origin: Median temperature of range 0 to -0.3
 602,1,muller1961,digitized,1960-07-05,1960-07-05,,,True,equilibrated: Based on timeseries in Figure 2
 602,2,muller1961,digitized,1960-08-20,1960-08-20,,,True,
 602,3,muller1963,digitized,1961-05-26,1961-05-26,,,True,
@@ -1144,71 +1143,71 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 639,2,palosuo1987,digitized,1958-04-22,1958-04-22,,,,
 640,1,palosuo1987,digitized,1958-07-15,1958-07-15,,,,
 640,2,palosuo1987,digitized,1958-08-05,1958-08-05,,,True,
-641,1,gastaldello2024,submitted,1999-05-28,1999-05-28,04:20:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-642,1,gastaldello2024,submitted,1999-05-28,1999-05-28,04:40:00,True,True,label: CG99-2/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
-643,1,gastaldello2024,submitted,1999-05-28,1999-05-28,05:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-644,1,gastaldello2024,submitted,1999-05-28,1999-05-28,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-645,1,gastaldello2024,submitted,1999-05-28,1999-05-28,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-646,1,gastaldello2024,submitted,1999-05-28,1999-05-28,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-647,1,gastaldello2024,submitted,1999-05-31,1999-05-31,07:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-648,1,gastaldello2024,submitted,1999-05-29,1999-05-29,07:10:00,True,True,label: SJ99-8/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
-649,1,gastaldello2024,submitted,1999-05-26,1999-05-26,09:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-650,1,gastaldello2024,submitted,1999-05-27,1999-05-27,07:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-651,1,gastaldello2024,submitted,1999-05-29,1999-05-29,07:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-652,1,gastaldello2024,submitted,1999-05-29,1999-05-29,07:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-653,1,gastaldello2024,submitted,1999-05-30,1999-05-30,17:10:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-654,1,gastaldello2024,submitted,1999-07-15,1999-07-15,16:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-655,1,gastaldello2024,submitted,1999-05-30,1999-05-30,17:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
-656,1,gastaldello2024,submitted,1999-07-16,1999-07-16,15:50:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
-657,1,gastaldello2024,submitted,1999-05-31,1999-05-31,10:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-658,1,gastaldello2024,submitted,1999-07-16,1999-07-16,07:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-659,1,gastaldello2024,submitted,1999-07-16,1999-07-16,06:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-660,1,gastaldello2024,submitted,1999-07-15,1999-07-15,17:10:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-661,1,gastaldello2024,submitted,1999-07-15,1999-07-15,12:40:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-662,1,gastaldello2024,submitted,1999-07-15,1999-07-15,13:20:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-663,1,gastaldello2024,submitted,1999-07-16,1999-07-16,05:50:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-664,1,gastaldello2024,submitted,1999-07-16,1999-07-16,19:50:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
-665,1,gastaldello2024,submitted,1999-07-16,1999-07-16,17:30:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-666,1,gastaldello2024,submitted,1999-07-17,1999-07-17,03:10:00,True,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
-667,1,gastaldello2024,submitted,1999-07-17,1999-07-17,10:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-668,1,gastaldello2024,submitted,1999-07-17,1999-07-17,09:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-669,1,gastaldello2024,submitted,1999-07-17,1999-07-17,13:00:00,True,True,equilibrated: Achieved by extrapolation (suter2002)
-670,1,gastaldello2024,submitted,1994-06-02,1994-06-02,05:30:00,True,,
-671,1,gastaldello2024,submitted,1994-06-01,1994-06-01,13:07:00,True,,
-671,2,gastaldello2024,submitted,1994-09-06,1994-09-06,10:40:00,True,True,
-672,1,gastaldello2024,submitted,1994-05-31,1994-05-31,15:50:00,True,True,
-673,1,gastaldello2024,submitted,1994-10-31,1994-10-31,13:00:00,True,True,
+641,1,gastaldello2024,submitted,1999-05-28,1999-05-28,06:20:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+642,1,gastaldello2024,submitted,1999-05-28,1999-05-28,06:40:00,2,True,label: CG99-2/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
+643,1,gastaldello2024,submitted,1999-05-28,1999-05-28,07:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+644,1,gastaldello2024,submitted,1999-05-28,1999-05-28,19:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+645,1,gastaldello2024,submitted,1999-05-28,1999-05-28,19:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+646,1,gastaldello2024,submitted,1999-05-28,1999-05-28,19:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+647,1,gastaldello2024,submitted,1999-05-31,1999-05-31,09:40:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+648,1,gastaldello2024,submitted,1999-05-29,1999-05-29,09:10:00,2,True,label: SJ99-8/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
+649,1,gastaldello2024,submitted,1999-05-26,1999-05-26,11:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+650,1,gastaldello2024,submitted,1999-05-27,1999-05-27,09:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+651,1,gastaldello2024,submitted,1999-05-29,1999-05-29,09:40:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+652,1,gastaldello2024,submitted,1999-05-29,1999-05-29,09:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+653,1,gastaldello2024,submitted,1999-05-30,1999-05-30,19:10:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+654,1,gastaldello2024,submitted,1999-07-15,1999-07-15,18:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | time: cryomap2023
+655,1,gastaldello2024,submitted,1999-05-30,1999-05-30,19:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+656,1,gastaldello2024,submitted,1999-07-16,1999-07-16,17:50:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+657,1,gastaldello2024,submitted,1999-05-31,1999-05-31,12:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+658,1,gastaldello2024,submitted,1999-07-16,1999-07-16,09:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+659,1,gastaldello2024,submitted,1999-07-16,1999-07-16,08:40:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+660,1,gastaldello2024,submitted,1999-07-15,1999-07-15,19:10:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+661,1,gastaldello2024,submitted,1999-07-15,1999-07-15,14:40:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+662,1,gastaldello2024,submitted,1999-07-15,1999-07-15,15:20:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+663,1,gastaldello2024,submitted,1999-07-16,1999-07-16,07:50:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+664,1,gastaldello2024,submitted,1999-07-16,1999-07-16,21:50:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+665,1,gastaldello2024,submitted,1999-07-16,1999-07-16,19:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+666,1,gastaldello2024,submitted,1999-07-17,1999-07-17,05:10:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
+667,1,gastaldello2024,submitted,1999-07-17,1999-07-17,12:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+668,1,gastaldello2024,submitted,1999-07-17,1999-07-17,11:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+669,1,gastaldello2024,submitted,1999-07-17,1999-07-17,15:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
+670,1,gastaldello2024,submitted,1994-06-02,1994-06-02,07:30:00,2,,time: cryomap2023
+671,1,gastaldello2024,submitted,1994-06-01,1994-06-01,15:07:00,2,,time: cryomap2023
+671,2,gastaldello2024,submitted,1994-09-06,1994-09-06,12:40:00,2,True,time: cryomap2023
+672,1,gastaldello2024,submitted,1994-05-31,1994-05-31,17:50:00,2,True,time: cryomap2023
+673,1,gastaldello2024,submitted,1994-10-31,1994-10-31,15:00:00,2,True,time: cryomap2023
 674,1,laternser1992,published,1991-08-04,1991-08-09,,,True,equilibrated: Achieved by extrapolation
 674,2,laternser1992,published,1991-10-26,1991-10-26,,,True,
-675,1,laternser1992,published,1991-06-25,1991-06-25,14:00:00,True,False,
-675,2,laternser1992,published,1991-06-25,1991-06-25,17:50:00,True,False,
-675,3,laternser1992,published,1991-06-26,1991-06-26,04:55:00,True,False,
-675,4,laternser1992,published,1991-06-26,1991-06-26,09:25:00,True,False,
-675,5,laternser1992,published,1991-07-10,1991-07-10,09:00:00,True,True,
-675,6,laternser1992,published,1991-07-21,1991-07-21,08:00:00,True,True,
-675,7,laternser1992,published,1991-08-22,1991-08-22,10:00:00,True,True,
+675,1,laternser1992,published,1991-06-25,1991-06-25,16:00:00,2,False,
+675,2,laternser1992,published,1991-06-25,1991-06-25,19:50:00,2,False,
+675,3,laternser1992,published,1991-06-26,1991-06-26,06:55:00,2,False,
+675,4,laternser1992,published,1991-06-26,1991-06-26,11:25:00,2,False,
+675,5,laternser1992,published,1991-07-10,1991-07-10,11:00:00,2,True,
+675,6,laternser1992,published,1991-07-21,1991-07-21,10:00:00,2,True,
+675,7,laternser1992,published,1991-08-22,1991-08-22,12:00:00,2,True,
 676,1,laternser1992,published,1991-06-25,1991-06-26,,,True,equilibrated: Achieved by extrapolation
-676,2,laternser1992,published,1991-07-10,1991-07-10,09:00:00,True,True,
-676,3,laternser1992,published,1991-07-21,1991-07-21,08:00:00,True,True,
-676,4,laternser1992,published,1991-07-21,1991-07-21,08:00:00,True,True,
-676,5,laternser1992,published,1991-08-22,1991-08-22,10:00:00,True,True,
-676,6,laternser1992,published,1991-08-22,1991-08-22,10:00:00,True,True,
-677,1,laternser1992,published,1991-06-25,1991-06-25,13:15:00,True,False,
-677,2,laternser1992,published,1991-06-25,1991-06-25,17:45:00,True,False,
-677,3,laternser1992,published,1991-06-26,1991-06-26,04:50:00,True,False,
-677,4,laternser1992,published,1991-06-26,1991-06-26,09:20:00,True,False,
-677,5,laternser1992,published,1991-07-10,1991-07-10,09:05:00,True,True,
-677,6,laternser1992,published,1991-07-21,1991-07-21,08:00:00,True,True,
-677,7,laternser1992,published,1991-07-21,1991-07-21,08:00:00,True,True,
-677,8,laternser1992,published,1991-08-22,1991-08-22,10:00:00,True,True,
-677,9,laternser1992,published,1991-08-22,1991-08-22,10:00:00,True,True,
+676,2,laternser1992,published,1991-07-10,1991-07-10,11:00:00,2,True,
+676,3,laternser1992,published,1991-07-21,1991-07-21,10:00:00,2,True,
+676,4,laternser1992,published,1991-07-21,1991-07-21,10:00:00,2,True,
+676,5,laternser1992,published,1991-08-22,1991-08-22,12:00:00,2,True,
+676,6,laternser1992,published,1991-08-22,1991-08-22,12:00:00,2,True,
+677,1,laternser1992,published,1991-06-25,1991-06-25,15:15:00,2,False,
+677,2,laternser1992,published,1991-06-25,1991-06-25,19:45:00,2,False,
+677,3,laternser1992,published,1991-06-26,1991-06-26,06:50:00,2,False,
+677,4,laternser1992,published,1991-06-26,1991-06-26,11:20:00,2,False,
+677,5,laternser1992,published,1991-07-10,1991-07-10,11:05:00,2,True,
+677,6,laternser1992,published,1991-07-21,1991-07-21,10:00:00,2,True,
+677,7,laternser1992,published,1991-07-21,1991-07-21,10:00:00,2,True,
+677,8,laternser1992,published,1991-08-22,1991-08-22,12:00:00,2,True,
+677,9,laternser1992,published,1991-08-22,1991-08-22,12:00:00,2,True,
 678,1,laternser1992,published,1991-03-02,1991-03-13,,,True,equilibrated: Achieved by extrapolation
-678,2,laternser1992,published,1991-05-01,1991-05-01,08:10:00,True,True,
-678,3,laternser1992,published,1991-05-01,1991-05-01,08:10:00,True,True,
-678,4,laternser1992,published,1991-07-26,1991-07-26,15:00:00,True,True,
-678,5,laternser1992,published,1991-07-26,1991-07-26,15:00:00,True,True,
-678,6,laternser1992,published,1991-08-27,1991-08-27,08:00:00,True,True,
-678,7,laternser1992,published,1991-08-27,1991-08-27,08:00:00,True,True,
+678,2,laternser1992,published,1991-05-01,1991-05-01,10:10:00,2,True,
+678,3,laternser1992,published,1991-05-01,1991-05-01,10:10:00,2,True,
+678,4,laternser1992,published,1991-07-26,1991-07-26,15:00:00,2,True,
+678,5,laternser1992,published,1991-07-26,1991-07-26,15:00:00,2,True,
+678,6,laternser1992,published,1991-08-27,1991-08-27,10:00:00,2,True,
+678,7,laternser1992,published,1991-08-27,1991-08-27,10:00:00,2,True,
 679,1,laternser1992,published,1991-03-05,1991-03-13,,,True,equilibrated: Achieved by extrapolation
 680,1,laternser1992,published,1991-10-27,1991-10-27,,,True,Temperatures negative above 2 m but not reported
 680,2,laternser1992,published,1991-12-04,1991-12-04,,,True,Temperatures negative above 4 m but not reported
@@ -1332,19 +1331,19 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 696,6,razumeiko1963,published,1959-06-09,1959-06-09,,,,Snow thickness 1.2 m
 696,7,razumeiko1963,published,1959-07-01,1959-07-01,,,,Snow thickness 1.0 m
 696,8,razumeiko1963,published,1959-07-27,1959-07-27,,,,Snow thickness 0.0 m
-697,1,razumeiko1963,published,1959-04-13,1959-04-13,13:00:00,False,,Snow thickness 0.85 m
-697,2,razumeiko1963,published,1959-04-14,1959-04-14,13:00:00,False,,Snow thickness 0.85 m
-697,3,razumeiko1963,published,1959-04-15,1959-04-15,13:00:00,False,,Snow thickness 0.85 m
-697,4,razumeiko1963,published,1959-04-16,1959-04-16,13:00:00,False,,Snow thickness 0.85 m
-697,5,razumeiko1963,published,1959-04-17,1959-04-17,14:00:00,False,,Snow thickness 0.85 m
-697,6,razumeiko1963,published,1959-04-18,1959-04-18,13:00:00,False,,Snow thickness 0.85 m
-697,7,razumeiko1963,published,1959-04-19,1959-04-19,13:00:00,False,,Snow thickness 0.85 m
-697,8,razumeiko1963,published,1959-06-22,1959-06-22,01:00:00,False,,Snow thickness 0.87 m
-697,9,razumeiko1963,published,1959-06-22,1959-06-22,14:00:00,False,,Snow thickness 0.87 m
-697,10,razumeiko1963,published,1959-06-23,1959-06-23,14:00:00,False,,Snow thickness 0.87 m
-697,11,razumeiko1963,published,1959-06-24,1959-06-24,17:00:00,False,,Snow thickness 0.87 m
-697,12,razumeiko1963,published,1959-06-25,1959-06-25,13:00:00,False,,Snow thickness 0.87 m
-697,13,razumeiko1963,published,1959-06-28,1959-06-28,09:00:00,False,,Snow thickness 0.87 m
+697,1,razumeiko1963,published,1959-04-13,1959-04-13,13:00:00,,,Snow thickness 0.85 m
+697,2,razumeiko1963,published,1959-04-14,1959-04-14,13:00:00,,,Snow thickness 0.85 m
+697,3,razumeiko1963,published,1959-04-15,1959-04-15,13:00:00,,,Snow thickness 0.85 m
+697,4,razumeiko1963,published,1959-04-16,1959-04-16,13:00:00,,,Snow thickness 0.85 m
+697,5,razumeiko1963,published,1959-04-17,1959-04-17,14:00:00,,,Snow thickness 0.85 m
+697,6,razumeiko1963,published,1959-04-18,1959-04-18,13:00:00,,,Snow thickness 0.85 m
+697,7,razumeiko1963,published,1959-04-19,1959-04-19,13:00:00,,,Snow thickness 0.85 m
+697,8,razumeiko1963,published,1959-06-22,1959-06-22,01:00:00,,,Snow thickness 0.87 m
+697,9,razumeiko1963,published,1959-06-22,1959-06-22,14:00:00,,,Snow thickness 0.87 m
+697,10,razumeiko1963,published,1959-06-23,1959-06-23,14:00:00,,,Snow thickness 0.87 m
+697,11,razumeiko1963,published,1959-06-24,1959-06-24,17:00:00,,,Snow thickness 0.87 m
+697,12,razumeiko1963,published,1959-06-25,1959-06-25,13:00:00,,,Snow thickness 0.87 m
+697,13,razumeiko1963,published,1959-06-28,1959-06-28,09:00:00,,,Snow thickness 0.87 m
 698,1,razumeiko1963,published,1958-05-18,1958-05-18,,,,Snow thickness 0.38 m | Firn thickness 0.10 m
 699,1,razumeiko1963,published,1958-05-26,1958-05-26,,,,Snow thickness 0.40 m | Firn thickness 0.00 m
 700,1,razumeiko1963,published,1958-05-30,1958-05-30,,,,Snow thickness 0.22 m | Firn thickness 0.05 m
@@ -1403,3 +1402,21 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibra
 731,1,khmelevskoy1963,published,1959-04-16,1959-04-16,07:30:00,,,Snow thickness 0.20 m
 732,1,khmelevskoy1963,published,1959-04-16,1959-04-16,14:50:00,,,Snow thickness 0.45 m
 733,1,khmelevskoy1963,published,1959-04-18,1959-04-18,11:30:00,,,Snow thickness 0.00 m
+734,1,blatter1985,published,1975-06-26,1975-07-26,,,True,
+735,1,blatter1985,published,1975-06-26,1975-07-26,,,True,
+736,1,blatter1985,published,1975-07-07,1975-08-07,,,True,
+737,1,blatter1985,published,1975-07-23,1975-08-23,,,True,
+738,1,blatter1985,published,1975-07-24,1975-08-24,,,True,
+739,1,blatter1985,published,1976-07-03,1976-08-03,,,True,
+740,1,blatter1985,published,1976-07-08,1976-08-08,,,True,Temperatures at 70-100 m depth average of two thermistors (maximum difference 0.4 °C)
+741,1,blatter1985,published,1977-06-12,1977-07-12,,,True,
+742,1,blatter1985,published,1977-06-24,1977-07-24,,,True,
+743,1,blatter1985,published,1977-07-05,1977-08-05,,,True,
+744,1,blatter1985,published,1977-07-15,1977-08-15,,,True,
+745,1,blatter1985,published,1979-07-23,1979-08-23,,,True,
+746,1,blatter1985,published,1980-05-22,1980-06-22,,,True,
+747,1,blatter1985,published,1980-05-28,1980-06-28,,,True,Temperatures at 10 m depth average of two thermistors (difference 0.8 °C)
+748,1,blatter1985,published,1980-05-23,1980-06-23,,,True,
+749,1,blatter1985,published,1980-05-29,1980-06-29,,,True,
+750,1,blatter1985,published,1980-05-26,1980-06-26,,,True,
+751,1,blatter1985,published,1980-05-26,1980-06-26,,,True,

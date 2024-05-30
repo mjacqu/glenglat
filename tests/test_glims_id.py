@@ -31,6 +31,9 @@ elif gpd is None:
 
 def test_borehole_coordinates_match_glims_id() -> None:
   """Borehole latitude, longitude match the GLIMS ID."""
+  OVERRIDES = {
+    746: ['G269329E79672N']  # Outside of RGI 7 outline for White Glacier
+  }
   df = dfs['borehole'].set_index('id')
   points = gpd.points_from_xy(df['longitude'], df['latitude'], crs='EPSG:4326')
   sindex = points.sindex
@@ -43,6 +46,8 @@ def test_borehole_coordinates_match_glims_id() -> None:
     'glims_ids': glims['glac_id'].iloc[poly_idx].values
   }).drop_duplicates().groupby('id')['glims_ids'].agg(list)
   df['glims_ids'] = df['glims_ids'].fillna('').apply(list)
+  # Apply overrides
+  df.loc[list(OVERRIDES.keys()), 'glims_ids'] = list(OVERRIDES.values())
   # Evaluate matches
   valid = df.apply(
     lambda row: (
@@ -53,6 +58,7 @@ def test_borehole_coordinates_match_glims_id() -> None:
     ),
     axis=1
   )
+
   assert valid.all(), df.loc[
     ~valid, ['glacier_name', 'latitude', 'longitude', 'glims_ids']
   ]

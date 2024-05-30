@@ -38,9 +38,9 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `longitude` | Longitude (EPSG 4326). | number | required: True<br>minimum: -180<br>maximum: 180 |
 | `elevation` | Elevation above sea level. | number | required: True<br>maximum: 9999.0 |
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
-| `date_min` | Drilling date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
-| `date_max` | Drilling date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date |  |
-| `drill_method` | Drilling method:<br>- mechanical<br>- thermal: Hot water or steam<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
+| `date_min` | Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
+| `date_max` | End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date |  |
+| `drill_method` | Drilling method:<br>- mechanical: Push, percussion, rotary, ...<br>- thermal: Hot point, electrothermal, steam, ...<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
 | `ice_depth` | Starting depth of ice. Infinity (`INF`) indicates that ice was not reached. | number |  |
 | `depth` | Total borehole depth (not including drilling in the underlying bed). | number |  |
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
@@ -57,7 +57,7 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
 | `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date | required: True |
 | `time` | Measurement time.<br>`%H:%M:%S` | time |  |
-| `utc` | Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False). | boolean |  |
+| `utc_offset` | Time offset relative to Coordinated Universal Time (UTC). | number |  |
 | `equilibrated` | Whether the profile is in thermal equilibrium following drilling. | boolean |  |
 <!-- </contributor-format> -->
 
