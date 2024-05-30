@@ -403,7 +403,7 @@ resources:
           type: number
           unit: h
         - name: equilibrated
-          description: Whether the profile is in thermal equilibrium following drilling.
+          description: Whether temperatures have equilibrated following drilling.
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
