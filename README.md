@@ -132,12 +132,12 @@ Follow the instructions below to run a full test of the data package.
 
 ### Build generated files
 
-The `scripts` folder contains Python scripts that update certain files:
+The `scripts` directory contains Python scripts that update certain files:
 
-* [`scripts/build_zenodo_json.py`](scripts/build_zenodo_json.py): Build [`.zenodo.json`](.zenodo.json) file (for Zenodo releases) from `datapackage.yaml` and `data/source.csv`.
-* [`scripts/build_submission_yaml.py`](scripts/build_submission_md.py): Build [`contribute/datapackage.yaml`](contribute/datapackage.yaml) from `datapackage.yaml`.
-* [`scripts/build_submission_md.py`](scripts/build_submission_md.py): Updates tables in [`README.md`](README.md) from `contribute/datapackage.yaml`.
-* [`scripts/build_submission_xlsx.py`](scripts/build_submission_xlsx.py): Build [`contribute/template.xlsx`](contribute/template.xlsx) from `contribute/datapackage.yaml`.
+* [`build_zenodo_json.py`](scripts/build_zenodo_json.py): Build [`.zenodo.json`](.zenodo.json) file (for Zenodo releases) from `datapackage.yaml` and `data/source.csv`.
+* [`build_submission_yaml.py`](scripts/build_submission_md.py): Build [`contribute/datapackage.yaml`](contribute/datapackage.yaml) from `datapackage.yaml`.
+* [`build_submission_md.py`](scripts/build_submission_md.py): Updates tables in [`README.md`](README.md#borehole) from `contribute/datapackage.yaml`.
+* [`build_submission_xlsx.py`](scripts/build_submission_xlsx.py): Build [`contribute/template.xlsx`](contribute/template.xlsx) from `contribute/datapackage.yaml`.
 
 Assuming the `glenglat` Python environment is installed and activated (see above), they can be run as follows:
 
