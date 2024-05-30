@@ -59,4 +59,4 @@ zenodo = {
 }
 
 with open('.zenodo.json', 'w') as file:
-  json.dump(zenodo, file, indent=2)
+  json.dump(zenodo, file, indent=2, ensure_ascii=False)
