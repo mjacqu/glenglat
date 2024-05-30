@@ -12,7 +12,7 @@ package = frictionless.Package('datapackage.yaml')
 # --- Merge tables: source > borehole by source_id ----
 FOREIGN_NAME = 'source'
 LOCAL_NAME = 'borehole'
-OMIT_LOCAL = ['source_id', 'location_origin', 'elevation_origin']
+OMIT_LOCAL = ['source_id', 'location_origin', 'elevation_origin', 'curator']
 
 local = package.get_resource(LOCAL_NAME)
 # Filter local columns
@@ -26,6 +26,11 @@ package.resources = [
   resource for resource in package.resources
   if resource.name != FOREIGN_NAME
 ]
+# Customize description of borehole.notes
+local.schema.get_field('notes').description = (
+  'Additional remarks about the study site, the borehole, or the measurements therein. '
+  'Literature references should be formatted as `{url}` or `{author} {year} ({url})`.'
+)
 
 # Validate metadata
 report = frictionless.Package.validate_descriptor(package.to_descriptor())
@@ -34,9 +39,9 @@ assert report.valid
 
 # --- Merge tables: profile > measurement by (profile_id, borehole_id) ----
 LOCAL_NAME = 'measurement'
+OMIT_LOCAL = ['profile_id']
 FOREIGN_NAME = 'profile'
 OMIT_FOREIGN = ['id', 'borehole_id', 'source_id', 'measurement_origin', 'notes']
-OMIT_LOCAL = ['profile_id']
 
 local = package.get_resource(LOCAL_NAME)
 foreign = package.get_resource(FOREIGN_NAME)

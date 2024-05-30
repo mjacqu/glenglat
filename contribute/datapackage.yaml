@@ -2,7 +2,7 @@ name: glenglat-submission
 description: Submission format for the global englacial temperature database.
 profile: tabular-data-package
 version: 0.1.0
-created: '2024-05-30T15:16:46Z'
+created: '2024-05-30T15:32:57Z'
 resources:
 - name: borehole
   type: table
@@ -113,14 +113,8 @@ resources:
       unit: °C
     - name: notes
       type: string
-      description: Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
+      description: Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`.
       constraints:
-        pattern: '[^\s]+( [^\s]+)*'
-    - name: curator
-      type: string
-      description: Names of people who added the data to the database, as a pipe-delimited list. Additional details about each can be found under `contributors`.
-      contraints:
-        required: true
         pattern: '[^\s]+( [^\s]+)*'
     missingValues:
     - ''
