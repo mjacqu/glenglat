@@ -34,17 +34,17 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `id` | Unique identifier. | integer | required: True<br>unique: True<br>minimum: 1 |
 | `glacier_name` | Glacier or ice cap name (as reported). | string | required: True<br>pattern: `[^\s]+( [^\s]+)*` |
 | `glims_id` | Global Land Ice Measurements from Space (GLIMS) glacier identifier. | string | pattern: `G[0-9]{6}E[0-9]{5}[NS]` |
-| `latitude` | Latitude (EPSG 4326). | number | required: True<br>minimum: -90<br>maximum: 90 |
-| `longitude` | Longitude (EPSG 4326). | number | required: True<br>minimum: -180<br>maximum: 180 |
-| `elevation` | Elevation above sea level. | number | required: True<br>maximum: 9999.0 |
+| `latitude` | Latitude (EPSG 4326). | number [degree] | required: True<br>minimum: -90<br>maximum: 90 |
+| `longitude` | Longitude (EPSG 4326). | number [degree] | required: True<br>minimum: -180<br>maximum: 180 |
+| `elevation` | Elevation above sea level. | number [m] | required: True<br>maximum: 9999.0 |
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
-| `date_min` | Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
-| `date_max` | End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date |  |
+| `date_min` | Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01). | date | format: `%Y-%m-%d`<br> |
+| `date_max` | End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31). | date | format: `%Y-%m-%d`<br> |
 | `drill_method` | Drilling method:<br>- mechanical: Push, percussion, rotary, ...<br>- thermal: Hot point, electrothermal, steam, ...<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
-| `ice_depth` | Starting depth of ice. Infinity (`INF`) indicates that ice was not reached. | number |  |
-| `depth` | Total borehole depth (not including drilling in the underlying bed). | number |  |
+| `ice_depth` | Starting depth of ice. Infinity (INF) indicates that ice was not reached. | number [m] |  |
+| `depth` | Total borehole depth (not including drilling in the underlying bed). | number [m] |  |
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
-| `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number |  |
+| `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number [°C] |  |
 | `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`
@@ -52,12 +52,12 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | name | description | type | constraints |
 | - | - | - | - |
 | `borehole_id` | Borehole identifier. | integer | required: True |
-| `depth` | Depth below the glacier surface. | number | required: True |
-| `temperature` | Temperature. | number | required: True |
-| `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
-| `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date | required: True |
-| `time` | Measurement time.<br>`%H:%M:%S` | time |  |
-| `utc_offset` | Time offset relative to Coordinated Universal Time (UTC). | number |  |
+| `depth` | Depth below the glacier surface. | number [m] | required: True |
+| `temperature` | Temperature. | number [°C] | required: True |
+| `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01). | date | format: `%Y-%m-%d`<br> |
+| `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31). | date | format: `%Y-%m-%d`<br>required: True |
+| `time` | Measurement time. | time | format: `%H:%M:%S`<br> |
+| `utc_offset` | Time offset relative to Coordinated Universal Time (UTC). | number [h] |  |
 | `equilibrated` | Whether temperatures have equilibrated following drilling. | boolean |  |
 <!-- </contributor-format> -->
 
