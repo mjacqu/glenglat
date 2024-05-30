@@ -91,7 +91,9 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
    python contribute/validate_submission.py path/to/csvs
    ```
 
-## Testing
+## Developer guide
+
+### Run tests
 
 Follow the instructions below to run a full test of the data package.
 
@@ -127,3 +129,21 @@ Follow the instructions below to run a full test of the data package.
    conda install -c conda-forge geopandas=0.13 pyarrow
    GLIMS_PATH=/path/to/parquet pytest tests
    ```
+
+### Build generated files
+
+The `scripts` folder contains Python scripts that update certain files:
+
+* [`scripts/build_zenodo_json.py`](scripts/build_zenodo_json.py): Build [`.zenodo.json`](.zenodo.json) file (for Zenodo releases) from `datapackage.yaml` and `data/source.csv`.
+* [`scripts/build_submission_yaml.py`](scripts/build_submission_md.py): Build [`contribute/datapackage.yaml`](contribute/datapackage.yaml) from `datapackage.yaml`.
+* [`scripts/build_submission_md.py`](scripts/build_submission_md.py): Updates tables in [`README.md`](README.md) from `contribute/datapackage.yaml`.
+* [`scripts/build_submission_xlsx.py`](scripts/build_submission_xlsx.py): Build [`contribute/template.xlsx`](contribute/template.xlsx) from `contribute/datapackage.yaml`.
+
+Assuming the `glenglat` Python environment is installed and activated (see above), they can be run as follows:
+
+```sh
+python scripts/build_zenodo_json.py
+python scripts/build_submission_yaml.py
+python scripts/build_submission_md.py
+python scripts/build_submission_xlsx.py
+```
