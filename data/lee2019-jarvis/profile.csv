@@ -1,4 +1,4 @@
-borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibrated,notes
+borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrated,notes
 417,1,lee2019,published,2017-07-28,2017-07-28,18:00:00,,,
 417,2,lee2019,published,2017-07-29,2017-07-29,00:00:00,,,
 417,3,lee2019,published,2017-07-29,2017-07-29,06:00:00,,,

@@ -57,7 +57,7 @@ To contribute data, send an email to jacquemart@vaw.baug.ethz.ch. Please structu
 | `date_min` | Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).<br>`%Y-%m-%d` | date |  |
 | `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31).<br>`%Y-%m-%d` | date | required: True |
 | `time` | Measurement time.<br>`%H:%M:%S` | time |  |
-| `utc` | Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False). | boolean |  |
+| `utc_offset` | Time offset relative to Coordinated Universal Time (UTC). | number |  |
 | `equilibrated` | Whether the profile is in thermal equilibrium following drilling. | boolean |  |
 <!-- </contributor-format> -->
 

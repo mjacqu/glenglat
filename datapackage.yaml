@@ -398,11 +398,10 @@ resources:
           description: Measurement time.
           type: time
           format: '%H:%M:%S'
-        - name: utc
-          description: Whether `time` is in Coordinated Universal Time (True) or in another (but unknown) timezone (False).
-          type: boolean
-          trueValues: ['True']
-          falseValues: ['False']
+        - name: utc_offset
+          description: Time offset relative to Coordinated Universal Time (UTC).
+          type: number
+          unit: h
         - name: equilibrated
           description: Whether the profile is in thermal equilibrium following drilling.
           type: boolean

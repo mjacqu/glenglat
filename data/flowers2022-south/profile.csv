@@ -1,4 +1,4 @@
-borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc,equilibrated,notes
+borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrated,notes
 244,1,flowers2022,submitted,2011-07-28,2011-07-28,15:00:00,,False,
 244,2,flowers2022,submitted,2011-07-28,2011-07-28,16:00:00,,False,
 244,3,flowers2022,submitted,2011-07-28,2011-07-28,17:00:00,,False,
