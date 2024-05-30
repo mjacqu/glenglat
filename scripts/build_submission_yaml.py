@@ -128,8 +128,11 @@ yaml.add_representer(str, str_presenter)
 yaml.representer.SafeRepresenter.add_representer(str, str_presenter)
 
 # Write to YAML
+# Remove created property to avoid unnecessary changes
+obj = package.to_dict()
+del obj['created']
 yaml.dump(
-  package.to_dict(),
+  obj,
   open('contribute/datapackage.yaml', 'w'),
   indent=2,
   encoding='utf-8',

@@ -2,7 +2,6 @@ name: glenglat-submission
 description: Submission format for the global englacial temperature database.
 profile: tabular-data-package
 version: 0.1.0
-created: '2024-05-30T15:32:57Z'
 resources:
 - name: borehole
   type: table
