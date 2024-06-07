@@ -1,9 +1,9 @@
 name: glenglat
-version: 1.0.0-rc1
-created: '2024-07-10T06:44:26Z'
+version: 1.0.0-rc2
+created: '2024-07-10T07:58:00Z'
 title: Global englacial temperature database
 profile: tabular-data-package
-description: Measured englacial temperatures digitized from published studies or submitted by the authors.
+description: Open-access database of englacial temperature measurements compiled from data submissions and published literature. It is developed on [GitHub](https://github.com/mjacqu/glenglat) and published to [Zenodo](https://doi.org/10.5281/zenodo.11516611).
 keywords: [glacier, temperature, borehole, ice, firn, englacial, global, compilation]
 languages:
   - en

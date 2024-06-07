@@ -1,12 +1,15 @@
 import json
+from pathlib import Path
+import re
 import yaml
+
+import markdown
 import pandas as pd
 
 
-with open('datapackage.yaml', 'r') as file:
-  package = yaml.safe_load(file)
-
-sources = pd.read_csv('data/source.csv')
+package = yaml.safe_load(Path('datapackage.yaml').read_text())
+readme = Path('README.md').read_text()
+sources = pd.read_csv('data/source.csv', dtype='string')
 
 
 def convert_contributor_to_zenodo(person: dict, attribute: str = 'creators') -> dict:
@@ -27,19 +30,144 @@ def convert_contributor_to_zenodo(person: dict, attribute: str = 'creators') -> 
   return result
 
 
+def convert_people_to_english_list(people: str) -> str:
+  """Convert pipe-delimited people to English list."""
+  people = people.split(' | ')
+  if len(people) == 1:
+    return people[0]
+  if len(people) == 2:
+    return ' and '.join(people)
+  return ', '.join(people[:-1]) + ', and ' + people[-1]
+
+
+def convert_source_to_reference(source: pd.Series) -> str:
+  """Convert source to Zenodo reference."""
+  # author, year, title, url, container_title, volume, issue, page, version, editor,collection_title,collection_number,publisher
+  # author (year). title. container_title. editor. volume (issue), page. version. editor. collection_title collection_number. publisher. url
+  source = source[source.notnull()]
+  if 'author' not in source or 'year' not in source or 'title' not in source:
+    raise ValueError('Source must have author, year, and title')
+  # Convert authors to human readable list (a, b, and c)
+  s = f'{convert_people_to_english_list(source.author)} ({source.year}): {source.title}.'
+  if 'version' in source:
+    s += f' Version {source.version}.'
+  if 'container_title' in source:
+    s += f' {source.container_title}.'
+  if 'editor' in source:
+    s += f' {convert_people_to_english_list(source.editor)} (editors).'
+  if 'volume' in source or 'issue' in source or 'page' in source:
+    if 'volume' in source:
+      s += f' Volume {source.volume}'
+    if 'issue' in source:
+      if 'volume' in source:
+        s += f' ({source.issue})'
+      else:
+        s += f' Issue {source.issue}'
+    if 'page' in source:
+      if 'volume' in source or 'issue' in source:
+        s += f': {source.page}'
+      else:
+        s += f' Pages {source.page}'
+    s += '.'
+  if 'collection_title' in source:
+    s += f' {source.collection_title}'
+    if 'collection_number' in source:
+      s += f' {source.collection_number}'
+    s += '.'
+  if 'publisher' in source:
+    s += f' {source.publisher}.'
+  if 'url' in source:
+    s += f' {source.url}'
+  return s
+
+
+# ---- Build description ----
+
+# Extract from README.md
+start = '<!-- <for-zenodo> -->'
+end = '<!-- </for-zenodo> -->'
+start_index = readme.index(start) + len(start)
+end_index = readme.index(end)
+description_md = readme[start_index:end_index].strip()
+
+# Render markdown as html
+description_html = markdown.markdown(description_md)
+
+# Remove relative links
+# <a href="data"><code>data</code></a> -> <code>data</code>
+pattern = re.compile(r'<a href="([^"]+)">(.*?)</a>')
+for match in pattern.finditer(description_html):
+  if match.group(1).startswith('http'):
+    continue
+  description_html = description_html.replace(match.group(0), match.group(2))
+
+
+# --- Build references from CSL ----
+# import citeproc
+# import citeproc_styles
+
+
+# def convert_source_to_csl(source: pd.Series) -> dict:
+#   """Convert source to CSL-JSON."""
+#   source = source.astype(object, copy=True)
+#   source[source.isnull()] = None
+#   csl = {
+#     'id': source['id'],
+#     'author': [
+#       {'literal': author}
+#       for author in source['author'].split(' | ')
+#     ],
+#     'issued': {'date-parts': [[int(source['year'])]]},
+#     'type': source['type'],
+#     'title': source['title'],
+#     'URL': source['url'],
+#     'language': source['language'],
+#     'container-title': source['container_title'],
+#     'volume': source['volume'],
+#     'issue': source['issue'],
+#     'page': source['page'],
+#     'version': source['version'],
+#     'editor': [
+#       {'literal': editor}
+#       for editor in source['editor'].split(' | ')
+#     ] if source['editor'] else None,
+#     'collection-title': source['collection_title'],
+#     'collection-number': source['collection_number'],
+#     'publisher': source['publisher']
+#   }
+#   # Remove None values
+#   return {key: value for key, value in csl.items() if value is not None}
+
+
+# csl_json = [
+#   convert_source_to_csl(sources.loc[i])
+#   for i in sources.query('type.ne("personal-communication")').index
+# ]
+# csl = citeproc.source.json.CiteProcJSON(csl_json)
+# style_path = citeproc_styles.get_style_filepath('apa')
+# style = citeproc.CitationStylesStyle(style_path)
+# bibliography = citeproc.CitationStylesBibliography(style, csl, citeproc.formatter.plain)
+# for key in csl:
+#   citation = citeproc.Citation([citeproc.CitationItem(key)])
+#   bibliography.register(citation)
+
+# references = [str(item) for item in bibliography.bibliography()]
+
+
 # ---- Build zenodo.json ----
 
 zenodo = {
   'upload_type': 'dataset',
-  # Title is optional since it is read from the GitHub repository title
   'title': f"{package['name']}: {package['title']}",
   'language': 'eng',
-  # Description is optional since it is read from the README.md file
-  # 'description': package['description'],
+  'grants': [
+    # Schweizerischer Nationalfonds zur Förderung der wissenschaftlichen Forschung
+    {'id': '10.13039/501100001711::184634'}
+  ],
+  'description': description_html,
   'keywords': package['keywords'],
   'access_right': 'open',
-  # License is optional since it is read from the LICENSE.md file
-  # 'license': 'cc-by-4.0',
+  'license': 'cc-by-4.0',
   'creators': [
     convert_contributor_to_zenodo(person, attribute='creators')
     for person in package['contributors']
@@ -52,11 +180,18 @@ zenodo = {
   ],
   # Include sources with identifiers
   'related_identifiers': [
-    {'identifier': source['url'], 'relation': 'references'}
-    for source in sources.to_dict(orient='records')
-    if isinstance(source['url'], str)
+    # Adds 'Is supplement to' and maybe 'External resources: Available in GitHub'
+    {
+      'relation': 'isSupplementTo',
+      'identifier': 'https://github.com/mjacqu/glenglat',
+      'resource_type': 'dataset'
+    }
+  ],
+  # References
+  'references': [
+    convert_source_to_reference(sources.loc[i])
+    for i in sources.query('type.ne("personal-communication")').index
   ]
 }
 
-with open('.zenodo.json', 'w') as file:
-  json.dump(zenodo, file, indent=2, ensure_ascii=False)
+Path('.zenodo.json').write_text(json.dumps(zenodo, indent=2, ensure_ascii=False))
