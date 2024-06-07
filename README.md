@@ -1,5 +1,6 @@
 # `glenglat`: Global englacial temperature database
 
+[![DOI](https://zenodo.org/badge/11516611/mjacqu/glenglat.svg)](https://zenodo.org/doi/10.5281/zenodo.11516611)
 [![Frictionless](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=mjacqu&repo=glenglat&flow=frictionless)
 
 <!-- <for-zenodo> -->
