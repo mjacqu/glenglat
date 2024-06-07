@@ -2,6 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/11516611/mjacqu/glenglat.svg)](https://zenodo.org/doi/10.5281/zenodo.11516611)
 [![Frictionless](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml/badge.svg)](https://repository.frictionlessdata.io/pages/dashboard.html?user=mjacqu&repo=glenglat&flow=frictionless)
+![Pytest](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml/badge.svg)
 
 <!-- <for-zenodo> -->
 Open-access database of englacial temperature measurements compiled from data submissions and published literature. It is developed on [GitHub](https://github.com/mjacqu/glenglat) and published to [Zenodo](https://doi.org/10.5281/zenodo.11516611).
