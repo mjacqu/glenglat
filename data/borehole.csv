@@ -389,7 +389,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 448,thompson2022,Quelccaya Ice Cap,G289183E13941S,guessed,-13.930,-70.823,published,5670,,,,combined,26,,,1,See zagorodnov2005 | drill_method: mechanical down to 100-124 m and thermal beyond,Ethan Welty
 449,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3832,85.7156,published,7200,C2,,,mechanical,,149.2,True,,See thompson2000 | location: Confirmed by Figure 1 in yao2002,Ethan Welty
 450,thompson2022,Mount Kilimanjaro,G037352E03058S,guessed,-3.059,37.348,guessed,5780,NIF1,,,,,50.9,True,,See thompson2002,Ethan Welty
-451,thompson2022,Naimona'nyi Gacier,G081317E30454N,guessed,30.449,81.329,published,6050,,,,,,,,,elevation_origin: Table 1 in thompson2018,Ethan Welty
+451,thompson2022,Naimona'nyi Gacier,G081317E30454N,guessed,30.449,81.329,published,6050,,,,,,,,,elevation_origin: Table 1 in thompson2018 | glacier_name: 纳木那尼冰川,Ethan Welty
 452,thompson2022,South Inylchek Glacier,G079787E42137N,digitized,42.2087,80.2038,published,5100,Borehole 1,,,mechanical,,,False,0.4,See aizen2001 | Ice thickness estimated as 285-300 m by radio echo sounding | temperature: Temperature at 1 m fluctuated between -10.5 and -12.2°C over the observation period (2000-08-04 to 2008-08-07),Ethan Welty
 453,takeuchi2004,Western Belukha Plateau,G086544E49802N,estimated,49.807,86.563,published,4125,,,,mechanical,,171.3,True,,elevation_origin: Published as 4100-4150 m,Ethan Welty
 454,thompson1980,Quelccaya Ice Cap,G289167E13923S,digitized,-13.925459,-70.82232,published,5650,1,,,mechanical,INF,,False,,,Ethan Welty
@@ -688,4 +688,4 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 749,blatter1985,White Glacier,G269329E79672N,estimated,79.47109,-90.77339,published,622,5/80,1980-05-29,1980-05-29,thermal,,142,True,0.2,location_origin: Converted local coordinates in blatter1985 (Table A-1) to geodetic coordinates using an affine transform estimated from grid lines in harrison1963,Ethan Welty
 750,blatter1985,White Glacier,G269329E79672N,estimated,79.47100,-90.77557,published,620,6/80,1980-05-26,1980-05-26,thermal,,120,True,0.2,location_origin: Converted local coordinates in blatter1985 (Table A-1) to geodetic coordinates using an affine transform estimated from grid lines in harrison1963,Ethan Welty
 751,blatter1985,White Glacier,G269329E79672N,estimated,79.47086,-90.77752,published,618,7/80,1980-05-26,1980-05-26,thermal,,80,True,0.2,location_origin: Converted local coordinates in blatter1985 (Table A-1) to geodetic coordinates using an affine transform estimated from grid lines in harrison1963,Ethan Welty
-752,li2017,Qiangtang No. 1 Glacier,G088700E33291N,published,33.297,88.695,published,5853,,2014-05-04,2014-05-04,mechanical,,109,True,0.01,
+752,li2017,Qiangtang No. 1 Glacier,G088700E33291N,published,33.297,88.695,published,5853,,2014-05-04,2014-05-04,mechanical,,109,True,0.01,glacier_name: 羌塘1号冰川
