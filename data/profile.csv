@@ -1420,3 +1420,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 749,1,blatter1985,published,1980-05-29,1980-06-29,,,True,
 750,1,blatter1985,published,1980-05-26,1980-06-26,,,True,
 751,1,blatter1985,published,1980-05-26,1980-06-26,,,True,
+752,1,li2017,digitized,2014-05-04,2015-12-31,,,,
