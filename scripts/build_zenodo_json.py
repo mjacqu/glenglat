@@ -102,58 +102,6 @@ for match in pattern.finditer(description_html):
   description_html = description_html.replace(match.group(0), match.group(2))
 
 
-# --- Build references from CSL ----
-# import citeproc
-# import citeproc_styles
-
-
-# def convert_source_to_csl(source: pd.Series) -> dict:
-#   """Convert source to CSL-JSON."""
-#   source = source.astype(object, copy=True)
-#   source[source.isnull()] = None
-#   csl = {
-#     'id': source['id'],
-#     'author': [
-#       {'literal': author}
-#       for author in source['author'].split(' | ')
-#     ],
-#     'issued': {'date-parts': [[int(source['year'])]]},
-#     'type': source['type'],
-#     'title': source['title'],
-#     'URL': source['url'],
-#     'language': source['language'],
-#     'container-title': source['container_title'],
-#     'volume': source['volume'],
-#     'issue': source['issue'],
-#     'page': source['page'],
-#     'version': source['version'],
-#     'editor': [
-#       {'literal': editor}
-#       for editor in source['editor'].split(' | ')
-#     ] if source['editor'] else None,
-#     'collection-title': source['collection_title'],
-#     'collection-number': source['collection_number'],
-#     'publisher': source['publisher']
-#   }
-#   # Remove None values
-#   return {key: value for key, value in csl.items() if value is not None}
-
-
-# csl_json = [
-#   convert_source_to_csl(sources.loc[i])
-#   for i in sources.query('type.ne("personal-communication")').index
-# ]
-# csl = citeproc.source.json.CiteProcJSON(csl_json)
-# style_path = citeproc_styles.get_style_filepath('apa')
-# style = citeproc.CitationStylesStyle(style_path)
-# bibliography = citeproc.CitationStylesBibliography(style, csl, citeproc.formatter.plain)
-# for key in csl:
-#   citation = citeproc.Citation([citeproc.CitationItem(key)])
-#   bibliography.register(citation)
-
-# references = [str(item) for item in bibliography.bibliography()]
-
-
 # ---- Build zenodo.json ----
 
 zenodo = {
