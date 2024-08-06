@@ -1,3 +1,7 @@
+import numpy as np
+import pandas as pd
+import pytest
+
 from load import (
   dfs,
   package,
@@ -6,10 +10,6 @@ from load import (
   PEOPLE_COLUMNS,
   PEOPLE_REGEX
 )
-
-import numpy as np
-import pandas as pd
-import pytest
 
 
 # ---- source ----

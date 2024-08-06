@@ -1,7 +1,7 @@
-from load import dfs
-
 import pandas as pd
 import pytest
+
+from load import dfs
 
 
 def test_source_sorted_by_id() -> None:
