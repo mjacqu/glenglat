@@ -1,21 +1,13 @@
-from collections import defaultdict
-from pathlib import Path
-from typing import Dict
-
 import frictionless
-import pandas as pd
+
+import sys
+sys.path.append('scripts')
+import glenglat
 
 
 # ---- Load data ----
 
-dfs: Dict[str, pd.DataFrame] = defaultdict(dict)
-for path in Path('data').glob('**/*.csv'):
-  dfs[path.stem][str(path)] = pd.read_csv(path)
-for key, values in dfs.items():
-  for path, df in values.items():
-    # Include path to file in __path__ column
-    df['__path__'] = path
-  dfs[key] = pd.concat(values, ignore_index=True).convert_dtypes()
+dfs = glenglat.read_data()
 
 
 # ---- Load metadata ----

@@ -6,10 +6,12 @@ import yaml
 import markdown
 import pandas as pd
 
+import glenglat
+
 
 package = yaml.safe_load(Path('datapackage.yaml').read_text())
 readme = Path('README.md').read_text()
-sources = pd.read_csv('data/source.csv', dtype='string')
+dfs = glenglat.read_data()
 
 
 def convert_contributor_to_zenodo(person: dict, attribute: str = 'creators') -> dict:
@@ -126,6 +128,14 @@ zenodo = {
     for person in package['contributors']
     if 'author' not in person['role']
   ],
+  'dates': [
+    {
+      'start': dfs['profile']['date_min'].min(),
+      'end': dfs['profile']['date_max'].max(),
+      'type': 'Collected',
+      'description': 'Date range of temperature measurements'
+    }
+  ],
   # Include sources with identifiers
   'related_identifiers': [
     # Adds 'Is supplement to' and maybe 'External resources: Available in GitHub'
@@ -137,8 +147,8 @@ zenodo = {
   ],
   # References
   'references': [
-    convert_source_to_reference(sources.loc[i])
-    for i in sources.query('type.ne("personal-communication")').index
+    convert_source_to_reference(dfs['source'].loc[i])
+    for i in dfs['source'].query('type.ne("personal-communication")').index
   ]
 }
 
