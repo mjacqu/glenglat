@@ -9,6 +9,11 @@ import pandas as pd
 import glenglat
 
 
+FAMILY_GIVEN_NAMES = {
+  'Lander Van Tricht': 'Van Tricht, Lander',
+  '张通 [Zhang Tong]': 'Zhang, Tong',
+}
+
 package = yaml.safe_load(Path('datapackage.yaml').read_text())
 readme = Path('README.md').read_text()
 dfs = glenglat.read_data()
@@ -19,7 +24,16 @@ def convert_contributor_to_zenodo(person: dict, attribute: str = 'creators') -> 
   attributes = ['creators', 'contributors']
   if attribute not in attributes:
     raise ValueError(f'Attribute must be one of {attributes}')
-  result = {'name': person['title']}
+  name = person['title']
+  if name in FAMILY_GIVEN_NAMES:
+    name = FAMILY_GIVEN_NAMES[name]
+  else:
+    parts = name.split(' ')
+    if len(parts) == 1:
+      name = parts[0]
+    else:
+      name = parts[-1] + ', ' + ' '.join(parts[:-1])
+  result = {'name': name}
   if 'path' in person and 'orcid' in person['path']:
     result['orcid'] = person['path'].replace('https://orcid.org/', '')
   if 'organization' in person:
