@@ -22,71 +22,79 @@
   "license": "cc-by-4.0",
   "creators": [
     {
-      "name": "Mylène Jacquemart",
+      "name": "Jacquemart, Mylène",
       "orcid": "0000-0003-2501-7645",
       "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Research Institute for Forest, Snow and Landscape Research (WSL), Switzerland"
     },
     {
-      "name": "Ethan Welty",
+      "name": "Welty, Ethan",
       "orcid": "0000-0001-8046-2210",
       "affiliation": "World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland"
     }
   ],
   "contributors": [
     {
-      "name": "Guillem Carcanade",
+      "name": "Carcanade, Guillem",
       "affiliation": "Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland",
       "type": "DataCurator"
     },
     {
-      "name": "Lander Van Tricht",
+      "name": "Van Tricht, Lander",
       "orcid": "0000-0001-7619-8955",
       "type": "DataCurator"
     },
     {
-      "name": "Gwenn Flowers",
+      "name": "Flowers, Gwenn",
       "orcid": "0000-0002-3574-9324",
       "type": "DataCollector"
     },
     {
-      "name": "Shin Sugiyama",
+      "name": "Sugiyama, Shin",
       "orcid": "0000-0001-5323-9558",
       "type": "DataCollector"
     },
     {
-      "name": "Tika Ram Gurung",
+      "name": "Gurung, Tika Ram",
       "orcid": "0000-0003-4287-6150",
       "type": "DataCollector"
     },
     {
-      "name": "Rainer Prinz",
+      "name": "Prinz, Rainer",
       "orcid": "0000-0003-4032-773X",
       "type": "DataCollector"
     },
     {
-      "name": "Martina Barandun",
+      "name": "Barandun, Martina",
       "orcid": "0000-0003-1820-7600",
       "type": "DataCollector"
     },
     {
-      "name": "Olivier Gagliardini",
+      "name": "Gagliardini, Olivier",
       "orcid": "0000-0001-9162-3518",
       "type": "DataCollector"
     },
     {
-      "name": "Lonnie G. Thompson",
+      "name": "Thompson, Lonnie G.",
       "orcid": "0000-0001-5371-2579",
       "type": "DataCollector"
     },
     {
-      "name": "Tong Zhang",
+      "name": "Zhang, Tong",
       "affiliation": "Beijing Normal University (BNU), China",
       "type": "DataCollector"
     },
     {
-      "name": "Marcus Gastaldello",
+      "name": "Gastaldello, Marcus",
       "affiliation": "University of Fribourg (UniFr), Switzerland",
       "type": "DataCollector"
+    }
+  ],
+  "dates": [
+    {
+      "start": "1842-07-20",
+      "end": "2023-07-27",
+      "type": "Collected",
+      "description": "Date range of temperature measurements"
     }
   ],
   "related_identifiers": [
@@ -199,6 +207,7 @@
     "Andreas Lemark (2010): A study of the Flade Isblink ice cap using a simple ice ﬂow model. University of Copenhagen. https://nbi.ku.dk/english/theses/masters-theses/andreas-lemark",
     "李真 [Li Zhen], 姚檀栋 [Yao Tandong], 田立德 [Tian Lide], 徐柏青 [Xu Baiqing], 邬光剑 [Wu Guangjian], and 朱国才 (2004): 慕士塔格冰川海拔7000m处冰芯钻孔温度 [Ice-core borehole temperature at 7000 m on the Muztagh Glacier]. 冰川冻土 [Journal of Glaciology and Geocryology]. Volume 26 (3): 284-288. https://doi.org/10.7522/j.issn.1000-0240.2004.0047",
     "李忠勤 [Li Zhongqin], 李慧林 [Li Huilin], and 陈亚宁 [Chen Yaning] (2011): Mechanisms and simulation of accelerated shrinkage of continental glaciers: A case study of Urumqi Glacier No. 1 in eastern Tianshan, Central Asia. Journal of Earth Science. Volume 22 (4): 423-430. https://doi.org/10.1007/s12583-011-0194-5",
+    "Yemeng Li, Lide Tian, Yang Yi, John C. Moore, Sainan Sun, and Liyun Zhao (2017): Simulating the evolution of Qiangtang No. 1 Glacier in the central Tibetan Plateau to 2050. Arctic, Antarctic, and Alpine Research. Volume 49 (1): 1-12. https://doi.org/10.1657/AAAR0016-008",
     "Liu Yaping, Hou Shugui, Wang Yetang, and Song Linlin (2009): Distribution of borehole temperature at four high-altitude alpine glaciers in Central Asia. Journal of Mountain Science. Volume 6 (3): 221-227. https://doi.org/10.1007/s11629-009-0254-9",
     "刘时银 [Liu Shiyin], 郭万钦 [Guo Wanqin], and 许君利 [Xu Junli] (2012): 中国第二次冰川编目数据集 [The second glacier inventory dataset of China]. Version 1.0. 国家青藏高原数据中心 [National Tibetan Plateau Data Center]. https://doi.org/10.3972/glacier.001.2013.db",
     "Lin Liu, Liming Jiang, Yafei Sun, Hansheng Wang, Chaolu Yi, and Houtse Hsu (2016): Morphometric controls on glacier mass balance of the Puruogangri Ice Field, central Tibetan Plateau. Water. Volume 8 (11): 496. Multidisciplinary Digital Publishing Institute. https://doi.org/10.3390/w8110496",
