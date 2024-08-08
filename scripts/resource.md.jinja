@@ -1,7 +1,0 @@
-### `{{ resource.name }}`
-
-| name | description | type | constraints |
-| - | - | - | - |
-{% for field in resource.schema.fields %}
-| `{{ field.name }}` | {{ field.description.replace('\n\n', '\n').replace('\n', '<br>') }} | {{ field.type }}{% if field.custom['unit'] %} [{{ field.custom['unit'] }}]{% endif %} | {% if field.format != 'default' %}format: `{{ field.format }}`<br>{% endif %}{% for key, value in field.constraints.items() %}{{ key }}: {% if key == 'pattern' %}`{{ value }}`{% else %}{{ value }}{% endif %}{% if loop.nextitem %}<br>{% endif %}{% endfor %} |
-{% endfor %}

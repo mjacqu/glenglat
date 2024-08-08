@@ -12,7 +12,8 @@ from load import (
   DEFAULT_AXIS_NAMES,
   SPECIAL_AXIS_NAMES,
   SOURCE_ID_REGEX,
-  DIGITIZER_FILE_REGEX
+  DIGITIZER_FILE_REGEX,
+  ROOT
 )
 
 
@@ -35,8 +36,8 @@ secondary_source_ids = (
 digitizer_paths = []
 pattern = re.compile(DIGITIZER_FILE_REGEX)
 results = []
-for path in Path('sources').glob('**/*.xml'):
-  match = pattern.match(str(path))
+for path in ROOT.joinpath('sources').glob('**/*.xml'):
+  match = pattern.match(str(path.relative_to(ROOT)))
   if not match:
     continue
   parsed = match.groupdict()
@@ -81,7 +82,9 @@ def test_source_ids_in_borehole_notes_exist() -> None:
 
 def test_source_dirs_match_source_ids() -> None:
   """All source directories match a source id."""
-  source_paths = [path.name for path in Path('sources').iterdir() if path.is_dir()]
+  source_paths = [
+    path.name for path in ROOT.joinpath('sources').iterdir() if path.is_dir()
+  ]
   invalid = set(source_paths) - source_ids
   assert not invalid, invalid
 

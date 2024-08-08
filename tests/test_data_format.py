@@ -4,10 +4,10 @@ import re
 import pandas as pd
 import pytest
 
-from load import dfs, package, DATA_SUBDIR_REGEX
+from load import dfs, package, DATA_SUBDIR_REGEX, ROOT
 
 
-data_subdirs = [path for path in Path('data').iterdir() if path.is_dir()]
+data_subdirs = [path for path in ROOT.joinpath('data').iterdir() if path.is_dir()]
 profile_ids = pd.MultiIndex.from_frame(dfs['profile'][['borehole_id', 'id']])
 measurement_ids = pd.MultiIndex.from_frame(
   dfs['measurement'][['borehole_id', 'profile_id']]
@@ -17,8 +17,8 @@ measurement_ids = pd.MultiIndex.from_frame(
 def test_data_files_are_used_and_correctly_named() -> None:
   """Data files are used by the package and named {table}.csv."""
   present = [
-    str(path)
-    for path in Path('data').glob('**/*')
+    str(path.relative_to(ROOT))
+    for path in ROOT.joinpath('data').glob('**/*')
     if path.is_file() and not path.name.startswith('.')
   ]
   invalid = []
@@ -53,7 +53,7 @@ def test_data_subdir_contains_unique_profiles(dir: Path) -> None:
 def test_data_subdir_contains_only_profiles_from_named_source(dir: Path) -> None:
   """Data subdirectory only contains profiles from the named source."""
   source_id = dir.name.split('-', maxsplit=1)[0]
-  in_profile = dfs['profile']['__path__'] == str(dir / 'profile.csv')
+  in_profile = dfs['profile']['__path__'] == str(dir.relative_to(ROOT) / 'profile.csv')
   borehole_ids = dfs['profile']['borehole_id'][in_profile].drop_duplicates()
   source_ids = (
     dfs['borehole'].set_index('id')

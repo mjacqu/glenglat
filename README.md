@@ -121,33 +121,31 @@ Follow the instructions below to run a full test of the data package.
    frictionless validate datapackage.yaml
    ```
 
-4. Run the custom (`pytest`) tests.
+4. Run the custom (`pytest`) tests in the [`tests`](tests) folder.
 
    ```sh
-   pytest tests
+   pytest
    ```
 
 5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. This requires a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id). To run, first install `geopandas` and `pyarrow`, then set the `GLIMS_PATH` environment variable before calling `pytest`.
 
    ```sh
    conda install -c conda-forge geopandas=0.13 pyarrow
-   GLIMS_PATH=/path/to/parquet pytest tests
+   GLIMS_PATH=/path/to/parquet pytest
    ```
 
-### Build generated files
+### Build and publish
 
-The `scripts` directory contains Python scripts that update certain files:
+The [`glenglat.py`](glenglat.py) module contains various functions used to maintain the repository. Assuming the `glenglat` Python environment is installed and activated (see above), they can be called from the command line as `python glenglat.py {function}`. 
 
-* [`build_zenodo_json.py`](scripts/build_zenodo_json.py): Build [`.zenodo.json`](.zenodo.json) file (for Zenodo releases) from `datapackage.yaml` and `data/source.csv`.
-* [`build_submission_yaml.py`](scripts/build_submission_md.py): Build [`submission/datapackage.yaml`](submission/datapackage.yaml) from `datapackage.yaml`.
-* [`build_submission_md.py`](scripts/build_submission_md.py): Updates tables in [`README.md`](README.md#borehole) from `submission/datapackage.yaml`.
-* [`build_submission_xlsx.py`](scripts/build_submission_xlsx.py): Build [`submission/template.xlsx`](submission/template.xlsx) from `submission/datapackage.yaml`.
-
-Assuming the `glenglat` Python environment is installed and activated (see above), they can be run as follows:
+To update the contents of the [`submission`](submission) directory:
 
 ```sh
-python scripts/build_zenodo_json.py
-python scripts/build_submission_yaml.py
-python scripts/build_submission_md.py
-python scripts/build_submission_xlsx.py
+python glenglat.py write_submision
+```
+
+To generate a ZIP archive of the data for publishing to Zenodo:
+
+```sh
+python glenglat.py write_release_zip
 ```

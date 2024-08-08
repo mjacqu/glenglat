@@ -1,7 +1,8 @@
-import frictionless
-
+from pathlib import Path
 import sys
-sys.path.append('scripts')
+
+ROOT = Path(__file__).parent.parent
+sys.path.append(str(ROOT))
 import glenglat
 
 
@@ -12,7 +13,7 @@ dfs = glenglat.read_data()
 
 # ---- Load metadata ----
 
-package = frictionless.Package('datapackage.yaml')
+package = glenglat.read_package()
 
 
 # ---- Constants ----
