@@ -130,6 +130,20 @@ yaml.representer.SafeRepresenter.add_representer(str, str_presenter)
 # Write to YAML
 # Remove created property to avoid unnecessary changes
 obj = package.to_dict()
+
+# HACK: Remove spurious csv key from dialects introduced by frictionless
+for resource in obj['resources']:
+  if 'dialect' in resource:
+    dialect = resource['dialect']
+    resource['dialect'] = {
+      **{key: value for key, value in dialect.items() if key != 'csv'},
+      **dialect['csv']
+    }
+
+# Validate metadata
+report = frictionless.Package.validate_descriptor(obj)
+assert report.valid
+
 del obj['created']
 yaml.dump(
   obj,

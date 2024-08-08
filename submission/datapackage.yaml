@@ -13,13 +13,12 @@ resources:
   mediatype: text/csv
   dialect:
     header: true
-    csv:
-      delimiter: ','
-      lineTerminator: '
+    delimiter: ','
+    lineTerminator: '
 
-        '
-      quoteChar: '"'
-      doubleQuote: true
+      '
+    quoteChar: '"'
+    doubleQuote: true
   schema:
     fields:
     - name: id
@@ -129,13 +128,12 @@ resources:
   mediatype: text/csv
   dialect:
     header: true
-    csv:
-      delimiter: ','
-      lineTerminator: '
+    delimiter: ','
+    lineTerminator: '
 
-        '
-      quoteChar: '"'
-      doubleQuote: true
+      '
+    quoteChar: '"'
+    doubleQuote: true
   schema:
     fields:
     - name: borehole_id
