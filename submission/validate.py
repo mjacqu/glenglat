@@ -6,9 +6,7 @@ import frictionless
 
 # Load arguments
 data_basepath = sys.argv[1]
-package_path = 'submission/datapackage.yaml'
-if len(sys.argv) > 2 and sys.argv[2]:
-  package_path = sys.argv[2]
+package_path = Path(__file__).parent.joinpath('datapackage.yaml')
 
 # Inject basepath into resource paths
 package = frictionless.Package(package_path)
