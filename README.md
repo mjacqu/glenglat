@@ -111,7 +111,7 @@ Follow the instructions below to run a full test of the data package.
 2. Install the `glenglat` Python environment (with `conda`):
 
    ```sh
-   conda env create --file tests/environment.yaml
+   conda env create --file environment.yaml
    conda activate glenglat
    ```
 
