@@ -6,7 +6,7 @@ import jinja2
 import tablecloth.excel
 
 
-package = frictionless.Package('contribute/datapackage.yaml').to_dict()
+package = frictionless.Package('submission/datapackage.yaml').to_dict()
 
 
 # ---- Render column comments ----
@@ -32,5 +32,5 @@ book = tablecloth.excel.write_template(
   format_comments={'font_size': 11, 'x_scale': 3, 'y_scale': 4}
 )
 book.set_properties({'created': datetime.datetime(2000, 1, 1)})
-book.filename = 'contribute/template.xlsx'
+book.filename = 'submission/template.xlsx'
 book.close()

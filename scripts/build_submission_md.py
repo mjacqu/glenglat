@@ -26,15 +26,15 @@ def render_template(path: str, data: dict, encoding: str = "utf-8") -> str:
 
 # ---- Render template ----
 
-package = frictionless.Package('contribute/datapackage.yaml')
+package = frictionless.Package('submission/datapackage.yaml')
 docs = render_template(Path(__file__).parent / 'package.md.jinja', {'package': package})
 
 
 # ---- Inject into README.md ----
-# Between <!-- <contributor-format> --> and <!-- </contributor-format> -->
+# Between <!-- <submission-format> --> and <!-- </submission-format> -->
 
-start = '<!-- <contributor-format> -->'
-end = '<!-- </contributor-format> -->'
+start = '<!-- <submission-format> -->'
+end = '<!-- </submission-format> -->'
 path = Path('README.md')
 text = path.read_text()
 start_index = text.index(start) + len(start)

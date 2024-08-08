@@ -133,7 +133,7 @@ obj = package.to_dict()
 del obj['created']
 yaml.dump(
   obj,
-  open('contribute/datapackage.yaml', 'w'),
+  open('submission/datapackage.yaml', 'w'),
   indent=2,
   encoding='utf-8',
   allow_unicode=True,
