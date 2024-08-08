@@ -17,8 +17,8 @@ jobs:
       - name: Install conda environment
         uses: mamba-org/setup-micromamba@v1
         with:
-          environment-file: tests/environment.yaml
+          environment-file: environment.yaml
           cache-environment: true
       - name: Run tests
         shell: bash -l {0}
-        run: pytest tests -v
+        run: pytest -v
