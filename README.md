@@ -97,6 +97,18 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
 
 ## Developer guide
 
+### Set environment variables
+
+The following (optional) variables are used:
+
+* `GLIMS_PATH`: Path to a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id).
+
+To set them, copy [`.env.example`](.env.example) to `.env` and edit accordingly.
+
+```sh
+cp .env.example .env
+```
+
 ### Run tests
 
 Follow the instructions below to run a full test of the data package.
@@ -127,11 +139,11 @@ Follow the instructions below to run a full test of the data package.
    pytest
    ```
 
-5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. This requires a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id). To run, first install `geopandas` and `pyarrow`, then set the `GLIMS_PATH` environment variable before calling `pytest`.
+5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. To run, install `geopandas` and `pyarrow` and set the `GLIMS_PATH` environment variable (see above) before calling `pytest`.
 
    ```sh
    conda install -c conda-forge geopandas=0.13 pyarrow
-   GLIMS_PATH=/path/to/parquet pytest
+   pytest
    ```
 
 ### Build and publish
