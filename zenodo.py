@@ -8,6 +8,7 @@ import zipfile
 
 import dotenv
 import fire
+import git
 import markdown
 import pandas as pd
 import requests
@@ -23,6 +24,9 @@ DATA_PATH = ROOT.joinpath('data')
 
 BUILD_PATH = ROOT.joinpath('build')
 """Path to build directory."""
+
+REPO = git.Repo(ROOT)
+"""Git repository."""
 
 FAMILY_GIVEN_NAMES = {
   'Lander Van Tricht': 'Van Tricht, Lander',
@@ -521,6 +525,27 @@ def add_file_to_deposition(
   return response.json()
 
 
+def is_repo_publishable() -> str:
+  """
+  Whether repository can be published.
+
+  Returns the current publishable commit hash or
+  raises an exception if the repository cannot be published.
+  """
+  branch = REPO.active_branch.name
+  # Main branch
+  if branch != 'main':
+    raise Exception(
+      f'Repository is on branch {branch}. Publishing requires the main branch.'
+    )
+  # Clean repo
+  if REPO.is_dirty():
+    raise Exception(
+      'Repository has uncommitted changes. Publishing requires a clean state.'
+    )
+  return REPO.head.commit
+
+
 def publish_to_zenodo(sandbox: bool = True) -> None:
   """
   Publish glenglat as a Zenodo deposition.
@@ -532,9 +557,14 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   Args:
     sandbox: Use the Zenodo Sandbox rather than the production Zenodo.
   """
+  # Render metadata
   time = datetime.datetime.now(datetime.timezone.utc)
   metadata = render_zenodo_metadata(time=time)
   version = metadata['version']
+  # Check repository
+  if not sandbox:
+    commit = is_repo_publishable()
+    print(f'Publishing commit {commit}.')
   # Create deposition
   deposition = find_deposition(q='glenglat', all_versions=False, sandbox=sandbox)
   if not deposition:
@@ -565,6 +595,15 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
     f'Draft deposition for v{version} ready for review:',
     deposition['links']['latest_draft_html']
   )
+  if not sandbox:
+    print(
+      f'If deposition is published, make sure to tag and push the commit:',
+      f'git tag v{version}',
+      'git push --tags',
+      sep='\n'
+    )
+    tag = REPO.create_tag(f'v{version}')
+    REPO.remotes['origin'].push(tag.name)
 
 
 # Generate command line interface
