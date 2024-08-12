@@ -2,11 +2,10 @@ from collections import defaultdict
 import datetime
 import json
 from pathlib import Path
-import sys
 from typing import Dict, Union
 import yaml
-import zipfile
 
+import fire
 import frictionless
 import jinja2
 import pandas as pd
@@ -54,7 +53,7 @@ yaml.representer.SafeRepresenter.add_representer(str, yaml_str_representer)
 
 
 def render_yaml(data: dict) -> str:
-  """Render a dictionary as YAML string."""
+  """Render dictionary as YAML string."""
   return yaml.dump(
     data,
     stream=None,
@@ -141,40 +140,6 @@ def read_data() -> Dict[str, pd.DataFrame]:
 
 
 # ---- Write functions ----
-
-def write_release_zip() -> Path:
-  """
-  Write a zip archive of glenglat data as `build/glenglat-v{version}.zip`.
-
-  Returns:
-    Path to the zip archive.
-  """
-  # List files in desired order (although order is not respected by Zenodo display)
-  files = [
-    'README.md',
-    'LICENSE.md',
-    'datapackage.yaml',
-    'data/source.csv',
-    'data/borehole.csv',
-    'data/profile.csv',
-    'data/measurement.csv'
-  ]
-  for path in sorted(DATA_PATH.iterdir()):
-    if path.is_dir():
-      files += [
-        str(path.relative_to(ROOT).joinpath(file))
-        for file in ('profile.csv', 'measurement.csv')
-      ]
-  # Look up version
-  metadata = read_metadata()
-  version = metadata['version']
-  # Create zip archive
-  path = ROOT.joinpath(f'build/glenglat-v{version}.zip')
-  with zipfile.ZipFile(path, 'w') as zip:
-    for file in files:
-      zip.write(filename=ROOT.joinpath(file), arcname=file)
-  return path
-
 
 def write_readme(text: str) -> None:
   """Write readme."""
@@ -377,11 +342,6 @@ def render_sources_as_csl() -> str:
   return json.dumps(csl, indent=2, ensure_ascii=False)
 
 
-# Run function from command line and print result
+# Generate command line interface
 if __name__ == '__main__':
-  args = sys.argv
-  # args[0]: Current file
-  # args[1]: Function name
-  result = globals()[args[1]]()
-  if result is not None:
-    print(result)
+  fire.Fire()

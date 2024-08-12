@@ -12,17 +12,17 @@ Open-access database of englacial temperature measurements compiled from data su
 The dataset adheres to the Frictionless Data [Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package) specification.
 The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder:
 
-- [`source.csv`](data/source.csv): Description of each data source (either a personal communication or the reference to a published study).
-- [`borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
-- [`profile.csv`](data/profile.csv): Description of each profile (date, etc), linked to `borehole.csv` via `borehole_id` and to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
-- [`measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
+* [`source.csv`](data/source.csv): Description of each data source (either a personal communication or the reference to a published study).
+* [`borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
+* [`profile.csv`](data/profile.csv): Description of each profile (date, etc), linked to `borehole.csv` via `borehole_id` and to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
+* [`measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
 For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+<!-- </for-zenodo> -->
 
 ### Supporting information
 
 Folder [`sources`](sources) contains subfolders (with names matching column `source.id`) with files that document how and from where the data was extracted. Files with a `.png`, `.jpg`, or `.pdf` extension are figures, tables, maps, or text from the publication. Pairs of files with `.pgw` and `.{png|jpg}.aux.xml` extensions georeference a `.{png|jpg}` image, and files with `.geojson` extension are the subsequently-extracted spatial coordinates. Files with an `.xml` extension document how numeric values were extracted from maps and figures using [Plot Digitizer](https://plotdigitizer.sourceforge.net). Of these, digitized temperature profiles are named `{borehole.id}_{profile.id}{suffix}` where `borehole.id` and `profile.id` are either a single value or a hyphenated range (e.g. `1-8`). Those without the optional `suffix` use `temperature` and `depth` as axis names. Those with a `suffix` are unusual cases which, for example, may be part of a series (e.g. `_lower`) or use a non-standard axis (e.g. `_date`).
-<!-- </for-zenodo> -->
 
 ## Submitter guide
 
@@ -97,67 +97,89 @@ You can validate your CSV files (`borehole.csv` and `measurement.csv`) before su
 
 ## Developer guide
 
-### Set environment variables
+### Install dependencies
 
-The following (optional) variables are used:
+Clone this repository.
 
-* `GLIMS_PATH`: Path to a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id).
+```sh
+git clone https://github.com/mjacqu/glenglat
+cd glenglat
+```
 
-To set them, copy [`.env.example`](.env.example) to `.env` and edit accordingly.
+Install the `glenglat` Python environment (with `conda`):
+
+```sh
+conda env create --file environment.yaml
+conda activate glenglat
+```
+
+Copy [`.env.example`](.env.example) to `.env` and set the (optional) environment variables.
 
 ```sh
 cp .env.example .env
 ```
 
+* `GLIMS_PATH`: Path to a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id).
+* `ZENODO_SANDBOX_ACCESS_TOKEN`: Access token for the [Zenodo Sandbox](https://sandbox.zenodo.org) (for testing). Register an account (if needed), then navigate to [Account > Settings > Applications](https://sandbox.zenodo.org/account/settings/applications/) > Personal access tokens > New token and select scopes `deposit:actions` and `deposit:write`.
+* `ZENODO_ACCESS_TOKEN`: Access token for the "real" [Zenodo](https://sandbox.zenodo.org). Follow the same steps as above, but on the [real Zenodo](https://zenodo.org/account/settings/applications/).
+
 ### Run tests
 
-Follow the instructions below to run a full test of the data package.
+Run the basic (`frictionless`) tests.
 
-1. Clone this repository.
+```sh
+frictionless validate datapackage.yaml
+```
 
-   ```sh
-   git clone https://github.com/mjacqu/glenglat.git
-   cd glenglat
-   ```
+Run the custom (`pytest`) tests in the [`tests`](tests) folder.
 
-2. Install the `glenglat` Python environment (with `conda`):
+```sh
+pytest
+```
 
-   ```sh
-   conda env create --file environment.yaml
-   conda activate glenglat
-   ```
+An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. To run, install `geopandas` and `pyarrow` and set the `GLIMS_PATH` environment variable before calling `pytest`.
 
-3. Run the basic (`frictionless`) tests.
+```sh
+conda install -c conda-forge geopandas=0.13 pyarrow
+pytest
+```
 
-   ```sh
-   frictionless validate datapackage.yaml
-   ```
+### Update submission instructions
 
-4. Run the custom (`pytest`) tests in the [`tests`](tests) folder.
+The [`glenglat.py`](glenglat.py) module contains functions used to maintain the repository. They can be run from the command line as `python glenglat.py {function}`.
 
-   ```sh
-   pytest
-   ```
-
-5. An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. To run, install `geopandas` and `pyarrow` and set the `GLIMS_PATH` environment variable (see above) before calling `pytest`.
-
-   ```sh
-   conda install -c conda-forge geopandas=0.13 pyarrow
-   pytest
-   ```
-
-### Build and publish
-
-The [`glenglat.py`](glenglat.py) module contains various functions used to maintain the repository. Assuming the `glenglat` Python environment is installed and activated (see above), they can be called from the command line as `python glenglat.py {function}`. 
-
-To update the contents of the [`submission`](submission) directory:
+To update all generated [`submission`](submission) instructions:
 
 ```sh
 python glenglat.py write_submision
 ```
 
-To generate a ZIP archive of the data for publishing to Zenodo:
+This executes several functions:
+
+* `write_submission_yaml`: Builds [`submission/datapackage.yaml`](submission/datapackage.yaml) from [`datapackage.yaml`](datapackage.yaml).
+* `write_submission_md`: Updates tables in this [`README.md`](README.md) from [`submission/datapackage.yaml`](submission/datapackage.yaml).
+* `write_submission_xlsx`: Builds [`submission/template.xlsx`](submission/template.xlsx) from [`submission/datapackage.yaml`](submission/datapackage.yaml).
+
+
+### Publish to Zenodo
+
+The [`zenodo.py`](zenodo.py) module contains functions used to prepare and publish the data to [Zenodo](https://zenodo.org). They can be run from the command line as `python zenodo.py {function}`.
+
+To publish (as a draft) to the [Zenodo Sandbox](https://zenodo.org), set the `ZENODO_SANDBOX_ACCESS_TOKEN` environment variable and run:
 
 ```sh
-python glenglat.py write_release_zip
+python zenodo.py publish_to_zenodo
 ```
+
+To publish (as a draft) to the "real" [Zenodo](https://zenodo.org), set the `ZENODO_ACCESS_TOKEN` environment variable. Ensure that you are on the `main` branch, with no uncommitted changes, and have pushed your latest changes. Then run:
+
+```sh
+python zenodo.py publish_to_zenodo --sandbox False
+```
+
+This executes several functions:
+
+* `build_metadata_as_json`: Builds a final `build/datapackage.json` from [`datapackage.yaml`](datapackage.yaml) with filled placeholders for `id` (doi), `created` (timestamp), and `temporalCoverage` (measurement date range).
+* `build_zenodo_readme`: Builds `build/README.md` from [`datapackage.yaml`](datapackage.yaml).
+* `build_for_zenodo`: Builds a glenglat release as `build/glenglat-v{version}.zip` from new `build/datapackage.json` and `build/README.md` (see above), and unchanged [`LICENSE.md`](LICENSE.md) and [`data/`](data). The zip archive is extracted to `build/glenglat-v{version}` for review.
+* `render_zenodo_metadata`: Prepares a metadata dictionary for upload to Zenodo.

@@ -10,6 +10,8 @@ dependencies:
   - pytest=7.3
   - markdown=3.4
   - python-dotenv=0.21
+  - requests=2.32
+  - fire=0.6
   - pip=24.0
   - pip:
     - 'tablecloth[excel,gsheets] @ git+https://github.com/ezwelty/tablecloth'

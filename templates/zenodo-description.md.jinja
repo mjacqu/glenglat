@@ -1,0 +1,14 @@
+{{ introduction }}
+
+{% for resource in package.resources %}
+### `data/{{ resource.name }}.csv`
+
+{{ resource.description }}
+
+| name | type | description |
+| - | - | - |
+{% for field in resource.schema.fields %}
+| `{{ field.name }}`{% if field.constraints and field.constraints.required %} (required){% endif %} | {{ field.type }}{% if field.unit %} [{{ field.unit }}]{% endif %}{% if field.format %} ({{ field.format }}){% endif %} | {{ field.description.replace('\n\n', '\n').replace('\n', '<br>') }} |
+{% endfor %}
+
+{% endfor %}
