@@ -525,7 +525,7 @@ def add_file_to_deposition(
   return response.json()
 
 
-def is_repo_publishable() -> str:
+def is_repo_publishable(tag: str) -> str:
   """
   Whether repository can be published.
 
@@ -543,6 +543,20 @@ def is_repo_publishable() -> str:
     raise Exception(
       'Repository has uncommitted changes. Publishing requires a clean state.'
     )
+  # All tests pass (pytest -v)
+  print('Running: pytest -v')
+  if os.system('pytest -v') != 0:
+    raise Exception('Pytest tests failed. Publishing requires passing tests.')
+  print('Running: frictionless validate datapackage.yaml')
+  if os.system('frictionless validate datapackage.yaml') != 0:
+    raise Exception(
+      'Frictionless tests failed. Publishing requires passing tests.'
+    )
+  # Tag is not already in use
+  existing_tags = [tag for tag in REPO.tags if tag.name == tag]
+  if existing_tags:
+    commit = existing_tags[0].commit
+    raise Exception(f'Tag {tag} is already in use ({commit}).')
   return REPO.head.commit
 
 
@@ -563,8 +577,9 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   version = metadata['version']
   # Check repository
   if not sandbox:
-    commit = is_repo_publishable()
-    print(f'Publishing commit {commit}.')
+    tag = f'v{version}'
+    commit = is_repo_publishable(tag=tag)
+    print(f'Publishing commit {commit} as {tag}.')
   # Create deposition
   deposition = find_deposition(q='glenglat', all_versions=False, sandbox=sandbox)
   if not deposition:
@@ -592,18 +607,16 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   data_path = build_for_zenodo(doi=doi, time=time)
   add_file_to_deposition(deposition, path=data_path, filename=data_path.name)
   print(
-    f'Draft deposition for v{version} ready for review:',
+    f'Draft deposition for {tag} ready for review:',
     deposition['links']['latest_draft_html']
   )
   if not sandbox:
     print(
-      f'If deposition is published, make sure to tag and push the commit:',
-      f'git tag v{version}',
+      f'If deposition is published, make sure to tag and push this commit:',
+      f'git tag {tag}',
       'git push --tags',
       sep='\n'
     )
-    tag = REPO.create_tag(f'v{version}')
-    REPO.remotes['origin'].push(tag.name)
 
 
 # Generate command line interface
