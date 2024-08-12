@@ -49,7 +49,7 @@ To submit data, send an email to jacquemart@vaw.baug.ethz.ch. Please structure y
 | `depth` | Total borehole depth (not including drilling in the underlying bed). | number [m] |  |
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
 | `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number [°C] |  |
-| `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`. | string | pattern: `[^\s]+( [^\s]+)*` |
+| `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as {url} or {author} {year} ({url}). | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`
 

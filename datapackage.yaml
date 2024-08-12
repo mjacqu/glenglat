@@ -65,7 +65,7 @@ contributors:
 profile: tabular-data-package
 resources:
   - name: source
-    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. `В. С. Загороднов [V. S. Zagorodnov]`) and non-English titles are followed by a translation in square brackets.
+    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. В. С. Загороднов [V. S. Zagorodnov]) and non-English titles are followed by a translation in square brackets.
     path: data/source.csv
     format: csv
     dialect:
@@ -78,7 +78,7 @@ resources:
     schema:
       fields:
         - name: id
-          description: Unique identifier constructed from the first author's lowercase, latinized, family name and the publication year, followed as needed by a lowercase letter to ensure uniqueness (e.g. `Загороднов 1981` → `zagorodnov1981a`).
+          description: Unique identifier constructed from the first author's lowercase, latinized, family name and the publication year, followed as needed by a lowercase letter to ensure uniqueness (e.g. Загороднов 1981 → zagorodnov1981a).
           type: string
           constraints:
             required: true
@@ -167,17 +167,17 @@ resources:
           description: Volume number of the item or container.
           type: integer
         - name: issue
-          description: Issue number (e.g. `1`) or range (e.g. `1-2`) of the item or container, with an optional letter prefix (e.g. `F1`).
+          description: Issue number (e.g. 1) or range (e.g. 1-2) of the item or container, with an optional letter prefix (e.g. F1).
           type: string
           constraints:
             pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?'
         - name: page
-          description: Page number (e.g. `1`) or range (e.g. `1-2`) of the item in the container.
+          description: Page number (e.g. 1) or range (e.g. 1-2) of the item in the container.
           type: string
           constraints:
             pattern: '[0-9]+(-[0-9]+)?'
         - name: version
-          description: Version number (e.g. `1.0`) of the item.
+          description: Version number (e.g. 1.0) of the item.
           type: string
           constraints:
             pattern: '[0-9]+(\.[0-9]+)*'
@@ -192,7 +192,7 @@ resources:
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: collection_number
-          description: Number (e.g. `1`) or range (e.g. `1-2`) in the collection (e.g. book series volume).
+          description: Number (e.g. 1) or range (e.g. 1-2) in the collection (e.g. book series volume).
           type: string
           constraints:
             pattern: '[0-9]+(-[0-9]+)?'
@@ -332,7 +332,7 @@ resources:
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: curator
-          description: Names of people who added the data to the database, as a pipe-delimited list. Additional details about each can be found under `contributors`.
+          description: Names of people who added the data to the database, as a pipe-delimited list.
           type: string
           contraints:
             required: true

@@ -159,7 +159,7 @@ def write_submission_yaml() -> None:
   # Customize description of borehole.notes
   borehole.schema.get_field('notes').description = (
     'Additional remarks about the study site, the borehole, or the measurements therein. '
-    'Literature references should be formatted as `{url}` or `{author} {year} ({url})`.'
+    'Literature references should be formatted as {url} or {author} {year} ({url}).'
   )
   # Drop foreign keys
   borehole.schema.foreign_keys = None

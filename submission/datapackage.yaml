@@ -112,7 +112,7 @@ resources:
       unit: °C
     - name: notes
       type: string
-      description: Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as `{url}` or `{author} {year} ({url})`.
+      description: Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as {url} or {author} {year} ({url}).
       constraints:
         pattern: '[^\s]+( [^\s]+)*'
     missingValues:
