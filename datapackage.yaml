@@ -1,11 +1,15 @@
 name: glenglat
-homepage: https://github.com/mjacqu/glenglat
-id: https://doi.org/10.5281/zenodo.11516611
 version: 1.0.0-rc2
-created: '2024-07-10T07:58:00Z'
+# Placeholder replaced with current time during build process
+created: '2024-01-01T00:00:00Z'
+# Placeholder (concept DOI) replaced with tentative deposition DOI during build process
+id: https://doi.org/10.5281/zenodo.11516611
+homepage: https://github.com/mjacqu/glenglat
 title: Global englacial temperature database
-profile: tabular-data-package
 description: Open-access database of englacial temperature measurements compiled from data submissions and published literature. It is developed on [GitHub](https://github.com/mjacqu/glenglat) and published to [Zenodo](https://doi.org/10.5281/zenodo.11516611).
+spatialCoverage: Global
+# Placeholder replaced with minimum and maximum measurement dates during build process
+temporalCoverage:
 keywords: [glacier, temperature, borehole, ice, firn, englacial, global, compilation]
 languages:
   - en
@@ -58,6 +62,7 @@ contributors:
     email: marcus.gastaldello@unifr.ch
     organization: University of Fribourg (UniFr), Switzerland
     role: contributor
+profile: tabular-data-package
 resources:
   - name: source
     description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. `В. С. Загороднов [V. S. Zagorodnov]`) and non-English titles are followed by a translation in square brackets.
