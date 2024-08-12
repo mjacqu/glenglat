@@ -525,12 +525,12 @@ def add_file_to_deposition(
   return response.json()
 
 
-def is_repo_publishable(tag: str) -> str:
+def is_repo_publishable() -> Tuple[str, str]:
   """
   Whether repository can be published.
 
-  Returns the current publishable commit hash or
-  raises an exception if the repository cannot be published.
+  Returns the current publishable commit hash and tag,
+  or raises an exception if the repository cannot be published.
   """
   branch = REPO.active_branch.name
   # Main branch
@@ -543,9 +543,9 @@ def is_repo_publishable(tag: str) -> str:
     raise Exception(
       'Repository has uncommitted changes. Publishing requires a clean state.'
     )
-  # All tests pass (pytest -v)
-  print('Running: pytest -v')
-  if os.system('pytest -v') != 0:
+  # All tests pass (pytest)
+  print('Running: pytest')
+  if os.system('pytest') != 0:
     raise Exception('Pytest tests failed. Publishing requires passing tests.')
   print('Running: frictionless validate datapackage.yaml')
   if os.system('frictionless validate datapackage.yaml') != 0:
@@ -553,11 +553,12 @@ def is_repo_publishable(tag: str) -> str:
       'Frictionless tests failed. Publishing requires passing tests.'
     )
   # Tag is not already in use
-  existing_tags = [tag for tag in REPO.tags if tag.name == tag]
+  tag = 'v' + glenglat.read_metadata()['version']
+  existing_tags = [repo_tag for repo_tag in REPO.tags if repo_tag.name == tag]
   if existing_tags:
     commit = existing_tags[0].commit
-    raise Exception(f'Tag {tag} is already in use ({commit}).')
-  return REPO.head.commit
+    raise Exception(f'Tag {tag} is already in use (commit: {commit}).')
+  return REPO.head.commit, tag
 
 
 def publish_to_zenodo(sandbox: bool = True) -> None:
@@ -577,8 +578,7 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   version = metadata['version']
   # Check repository
   if not sandbox:
-    tag = f'v{version}'
-    commit = is_repo_publishable(tag=tag)
+    commit, tag = is_repo_publishable()
     print(f'Publishing commit {commit} as {tag}.')
   # Create deposition
   deposition = find_deposition(q='glenglat', all_versions=False, sandbox=sandbox)
@@ -613,8 +613,9 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   if not sandbox:
     print(
       f'If deposition is published, make sure to tag and push this commit:',
-      f'git tag {tag}',
-      'git push --tags',
+      f'git tag {tag} {commit}',
+      'git push',
+      'git push origin {tag}',
       sep='\n'
     )
 
