@@ -89,20 +89,20 @@ resources:
             required: true
         - name: type
           description: |-
-            Item type:
+            Item type.
 
-              - article-journal: Journal article.
-              - book: Book (if the entire book is relevant).
-              - chapter: Book section.
-              - document: Document not fitting into any other category.
-              - dataset: Collection of data.
-              - map: Geographic map.
-              - paper-conference: Paper published in conference proceedings.
-              - personal-communication: Personal communication between individuals.
-              - speech: Presentation (talk, poster) at a conference.
-              - report: Report distributed by an institution.
-              - thesis: Thesis written to satisfy degree requirements.
-              - webpage: Website or page on a website.
+            - article-journal: Journal article
+            - book: Book (if the entire book is relevant)
+            - chapter: Book section
+            - document: Document not fitting into any other category
+            - dataset: Collection of data
+            - map: Geographic map
+            - paper-conference: Paper published in conference proceedings
+            - personal-communication: Personal communication between individuals
+            - speech: Presentation (talk, poster) at a conference
+            - report: Report distributed by an institution
+            - thesis: Thesis written to satisfy degree requirements
+            - webpage: Website or page on a website
           type: string
           constraints:
             required: true
@@ -133,13 +133,13 @@ resources:
           description: |-
             Language as ISO 639-1 two-letter language code.
 
-              - de: German
-              - en: English
-              - fr: French
-              - ko: Korean
-              - ru: Russian
-              - sv: Swedish
-              - zh: Chinese
+            - de: German
+            - en: English
+            - fr: French
+            - ko: Korean
+            - ru: Russian
+            - sv: Swedish
+            - zh: Chinese
           type: string
           constraints:
             required: true
@@ -234,7 +234,7 @@ resources:
             pattern: 'G[0-9]{6}E[0-9]{5}[NS]'
         - name: location_origin
           description: |-
-            Origin of location (`latitude`, `longitude`):
+            Origin of location (`latitude`, `longitude`).
 
             - submitted: Provided in data submission
             - published: Reported as coordinates in original publication
@@ -263,7 +263,7 @@ resources:
             maximum: 180
         - name: elevation_origin
           description: |-
-            Origin of elevation (`elevation`):
+            Origin of elevation (`elevation`).
 
             - submitted: Provided in data submission
             - published: Reported as number in original publication
@@ -294,10 +294,10 @@ resources:
           format: '%Y-%m-%d'
         - name: drill_method
           description: |-
-            Drilling method:
+            Drilling method.
 
-            - mechanical: Push, percussion, rotary, ...
-            - thermal: Hot point, electrothermal, steam, ...
+            - mechanical: Push, percussion, rotary
+            - thermal: Hot point, electrothermal, steam
             - combined: Mechanical and thermal
           type: string
           constraints:
@@ -375,7 +375,7 @@ resources:
             required: true
         - name: measurement_origin
           description: |-
-            Origin of measurements (`measurement.depth`, `measurement.temperature`):
+            Origin of measurements (`measurement.depth`, `measurement.temperature`).
 
             - submitted: Provided as numbers in data submission
             - published: Numbers read from original publication
