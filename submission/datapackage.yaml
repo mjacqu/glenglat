@@ -1,5 +1,6 @@
 name: glenglat-submission
 description: Submission format for the global englacial temperature database.
+homepage: https://github.com/mjacqu/glenglat
 profile: tabular-data-package
 version: 1.0.0-rc2
 resources:
@@ -76,10 +77,10 @@ resources:
     - name: drill_method
       type: string
       description: |-
-        Drilling method:
+        Drilling method.
 
-        - mechanical: Push, percussion, rotary, ...
-        - thermal: Hot point, electrothermal, steam, ...
+        - mechanical: Push, percussion, rotary
+        - thermal: Hot point, electrothermal, steam
         - combined: Mechanical and thermal
       constraints:
         enum:
