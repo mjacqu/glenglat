@@ -553,6 +553,7 @@ def is_repo_publishable() -> Tuple[str, str]:
       'Frictionless tests failed. Publishing requires passing tests.'
     )
   # Tag is not already in use
+  REPO.remotes['origin'].fetch()
   tag = 'v' + glenglat.read_metadata()['version']
   existing_tags = [repo_tag for repo_tag in REPO.tags if repo_tag.name == tag]
   if existing_tags:
