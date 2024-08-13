@@ -1,4 +1,4 @@
-From: Lonnie Thompson <thompson.3@osu.edu>
+From: Lonnie G. Thompson <thompson.3@osu.edu>
 To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
 Sent: 2022-02-02 23:32
 Subject: Borehole temperature records

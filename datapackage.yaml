@@ -20,7 +20,7 @@ licenses:
 contributors:
   - title: Mylène Jacquemart
     path: https://orcid.org/0000-0003-2501-7645
-    organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Research Institute for Forest, Snow and Landscape Research (WSL), Switzerland
+    organization: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
     email: jacquemart@vaw.baug.ethz.ch
     role: author | curator
   - title: Ethan Welty
@@ -32,35 +32,43 @@ contributors:
     role: curator
   - title: Lander Van Tricht
     path: https://orcid.org/0000-0001-7619-8955
+    organization: Department of Water and Climate, Vrije Universiteit Brussel (VUB), Belgium
     role: curator
   - title: Gwenn Flowers
     path: https://orcid.org/0000-0002-3574-9324
+    organization: Department of Earth Sciences, Simon Fraser University (SFU), Canada
     role: contributor
   - title: Shin Sugiyama
     path: https://orcid.org/0000-0001-5323-9558
+    organization: Institute of Low Temperature Science (ILTS), Hokkaido University, Japan
     role: contributor
   - title: Tika Ram Gurung
     path: https://orcid.org/0000-0003-4287-6150
+    organization: International Centre for Integrated Mountain Development (ICIMOD), Nepal
     role: contributor
   - title: Rainer Prinz
     path: https://orcid.org/0000-0003-4032-773X
+    organization: Department of Atmospheric and Cryospheric Sciences (ACINN), University of Innsbruck (UIBK), Austria
     role: contributor
   - title: Martina Barandun
     path: https://orcid.org/0000-0003-1820-7600
+    organization: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: contributor
   - title: Olivier Gagliardini
     path: https://orcid.org/0000-0001-9162-3518
+    organization: Institute of Environmental Geosciences (IGE), University of Grenoble Alpes (UGA), France
     role: contributor
   - title: Lonnie G. Thompson
     path: https://orcid.org/0000-0001-5371-2579
+    organization: Byrd Polar and Climate Research Center, Ohio State University (OSU), United States
     role: contributor
   - title: 张通 [Zhang Tong]
     email: tzhang@bnu.edu.cn
-    organization: Beijing Normal University (BNU), China
+    organization: State Key Laboratory of Earth Surface Processes and Resource Ecology (ESPRE), Beijing Normal University (BNU), China
     role: contributor
   - title: Marcus Gastaldello
     email: marcus.gastaldello@unifr.ch
-    organization: University of Fribourg (UniFr), Switzerland
+    organization: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: contributor
 profile: tabular-data-package
 resources:
