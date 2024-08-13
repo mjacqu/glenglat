@@ -106,11 +106,17 @@ git clone https://github.com/mjacqu/glenglat
 cd glenglat
 ```
 
-Install the `glenglat` Python environment (with `conda`):
+Install the `glenglat` Python environment with [`conda`](https://docs.conda.io) (or the faster [`mamba`](https://mamba.readthedocs.io)):
 
 ```sh
 conda env create --file environment.yaml
 conda activate glenglat
+```
+
+or update it if it already exists:
+
+```sh
+conda env update --file environment.yaml
 ```
 
 Copy [`.env.example`](.env.example) to `.env` and set the (optional) environment variables.
