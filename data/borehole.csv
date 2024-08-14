@@ -160,8 +160,8 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 177,ryser2013,Grenzgletscher,G007800E45965N,published,45.965263,7.800062,published,2522.0,f1,,,,,,False,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
 178,ryser2013,Grenzgletscher,G007800E45965N,published,45.965586,7.797343,published,2514.0,f3,,,,,,False,0.05,Ablation area,Mylène Jacquemart | Guillem Carcanade
 179,schwikowski2013,Pío XI glacier,G286372E49263S,published,-49.278195,-73.3535648,published,2600.0,,,,,,,False,,Accumulation area,Mylène Jacquemart | Guillem Carcanade
-180,shiraiwa2001,Blichenok glacier,G160474E56097N,digitized,56.07338,160.4685,estimated,3870.0,BH1,,,,,,False,0.1,Monthly profiles are difficult to differentiate in Figure 4 and may be slightly incorrect below 5 m depth,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
-181,shiraiwa2001,Blichenok glacier,G160474E56097N,digitized,56.074062,160.4679,estimated,3870.0,K2,,,,,,False,0.1,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+180,shiraiwa2001,Blichenok Glacier,G160474E56097N,digitized,56.07338,160.4685,estimated,3870.0,BH1,,,,,,False,0.1,Monthly profiles are difficult to differentiate in Figure 4 and may be slightly incorrect below 5 m depth | glacier_name: Ледник Бильченок,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+181,shiraiwa2001,Blichenok Glacier,G160474E56097N,digitized,56.074062,160.4679,estimated,3870.0,K2,,,,,,False,0.1,glacier_name: Ледник Бильченок,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 182,signer2014,Glacier du Sex Rouge,G007212E46327N,published,46.326569,7.212807,published,2810.0,#1,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
 183,signer2014,Glacier du Sex Rouge,G007212E46327N,published,46.327953,7.212463,published,2780.0,#2,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
 184,signer2014,St. Annafirn,G008601E46597N,published,46.596277,8.598254,published,2855.0,#6,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
