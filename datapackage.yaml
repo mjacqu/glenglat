@@ -91,6 +91,7 @@ resources:
           constraints:
             required: true
             unique: true
+            pattern: '[a-z]+[0-9]{4}[a-z]?'
         - name: author
           description: Author names (optionally followed by their ORCID in parentheses) as a pipe-delimited list.
           type: string
