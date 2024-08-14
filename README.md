@@ -127,7 +127,7 @@ cp .env.example .env
 
 * `GLIMS_PATH`: Path to a [GeoParquet](https://geoparquet.org) file of glacier outlines from the [GLIMS](https://www.glims.org/) dataset with columns `geometry` (glacier outline) and `glac_id` (glacier id).
 * `ZENODO_SANDBOX_ACCESS_TOKEN`: Access token for the [Zenodo Sandbox](https://sandbox.zenodo.org) (for testing). Register an account (if needed), then navigate to [Account > Settings > Applications](https://sandbox.zenodo.org/account/settings/applications/) > Personal access tokens > New token and select scopes `deposit:actions` and `deposit:write`.
-* `ZENODO_ACCESS_TOKEN`: Access token for the "real" [Zenodo](https://sandbox.zenodo.org). Follow the same steps as above, but on the [real Zenodo](https://zenodo.org/account/settings/applications/).
+* `ZENODO_ACCESS_TOKEN`: Access token for [Zenodo](https://sandbox.zenodo.org). Follow the same steps as above, but on the [real Zenodo](https://zenodo.org/account/settings/applications/).
 
 ### Run tests
 
@@ -177,14 +177,15 @@ To publish (as a draft) to the [Zenodo Sandbox](https://zenodo.org), set the `ZE
 python zenodo.py publish_to_zenodo
 ```
 
-To publish (as a draft) to the "real" [Zenodo](https://zenodo.org), set the `ZENODO_ACCESS_TOKEN` environment variable. Ensure that you are on the `main` branch, with no uncommitted changes, and have pushed your latest changes. Then run:
+To publish (as a draft) to [Zenodo](https://zenodo.org), set the `ZENODO_ACCESS_TOKEN` environment variable, run the same command with `--sandbox False`, and follow the instructions:
 
 ```sh
 python zenodo.py publish_to_zenodo --sandbox False
 ```
 
-This executes several functions:
+The publish process executes several functions:
 
+* `is_repo_publishable` (only if `--sandbox False`): Checks that the repository is on the `main` branch, has no uncommitted changes, that all tests pass, and that a commit has not already been tagged with the current datapackage version.
 * `build_metadata_as_json`: Builds a final `build/datapackage.json` from [`datapackage.yaml`](datapackage.yaml) with filled placeholders for `id` (doi), `created` (timestamp), and `temporalCoverage` (measurement date range).
 * `build_zenodo_readme`: Builds `build/README.md` from [`datapackage.yaml`](datapackage.yaml).
 * `build_for_zenodo`: Builds a glenglat release as `build/glenglat-v{version}.zip` from new `build/datapackage.json` and `build/README.md` (see above), and unchanged [`LICENSE.md`](LICENSE.md) and [`data/`](data). The zip archive is extracted to `build/glenglat-v{version}` for review.
