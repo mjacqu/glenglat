@@ -608,7 +608,7 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   data_path = build_for_zenodo(doi=doi, time=time)
   add_file_to_deposition(deposition, path=data_path, filename=data_path.name)
   print(
-    f'Draft deposition for {tag} ready for review:',
+    f'Draft deposition for version {version} ready for review:',
     deposition['links']['latest_draft_html']
   )
   if not sandbox:
