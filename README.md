@@ -119,6 +119,7 @@ or update it if it already exists:
 
 ```sh
 conda env update --file environment.yaml
+conda activate glenglat
 ```
 
 Copy [`.env.example`](.env.example) to `.env` and set the (optional) environment variables.
