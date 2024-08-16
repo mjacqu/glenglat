@@ -180,7 +180,7 @@ To publish (as a draft) to the [Zenodo Sandbox](https://zenodo.org), set the `ZE
 python zenodo.py publish_to_zenodo
 ```
 
-To publish (as a draft) to [Zenodo](https://zenodo.org), set the `ZENODO_ACCESS_TOKEN` environment variable, run the same command with `--sandbox False`, and follow the instructions:
+To publish (as a draft) to [Zenodo](https://zenodo.org), set the `ZENODO_ACCESS_TOKEN` environment variable, run the same command with `--sandbox False`, and follow the instructions. It will first check that the repository is on the `main` branch, has no uncommitted changes, that all tests pass, and that a commit has not already been tagged with the current datapackage version (function `is_repo_publishable`).
 
 ```sh
 python zenodo.py publish_to_zenodo --sandbox False
@@ -188,7 +188,6 @@ python zenodo.py publish_to_zenodo --sandbox False
 
 The publish process executes several functions:
 
-* `is_repo_publishable` (only if `--sandbox False`): Checks that the repository is on the `main` branch, has no uncommitted changes, that all tests pass, and that a commit has not already been tagged with the current datapackage version.
 * `build_metadata_as_json`: Builds a final `build/datapackage.json` from [`datapackage.yaml`](datapackage.yaml) with filled placeholders for `id` (doi), `created` (timestamp), and `temporalCoverage` (measurement date range).
 * `build_zenodo_readme`: Builds `build/README.md` from [`datapackage.yaml`](datapackage.yaml).
 * `build_for_zenodo`: Builds a glenglat release as `build/glenglat-v{version}.zip` from new `build/datapackage.json` and `build/README.md` (see above), and unchanged [`LICENSE.md`](LICENSE.md) and [`data/`](data). The zip archive is extracted to `build/glenglat-v{version}` for review.
