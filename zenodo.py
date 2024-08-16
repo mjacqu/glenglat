@@ -616,7 +616,7 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
       f'If deposition is published, make sure to tag and push this commit:',
       f'git tag {tag} {commit}',
       'git push',
-      'git push origin {tag}',
+      f'git push origin {tag}',
       sep='\n'
     )
 
