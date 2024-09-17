@@ -6,6 +6,8 @@
 Version history | [![GitHub Release](https://img.shields.io/github/v/release/mjacqu/glenglat?label=latest)](https://github.com/mjacqu/glenglat/releases)
 Tests | [![Frictionless](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml) [![Pytest](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml)
 
+_Our paper is currently in public review at [Earth System Science Data](https://essd.copernicus.org). Preview it and consider reviewing it at https://essd.copernicus.org/preprints/essd-2024-249/!_
+
 <!-- <for-zenodo> -->
 Open-access database of englacial temperature measurements compiled from data submissions and published literature. It is developed on [GitHub](https://github.com/mjacqu/glenglat) and published to [Zenodo](https://doi.org/10.5281/zenodo.11516611).
 
