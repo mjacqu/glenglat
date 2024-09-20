@@ -112,11 +112,38 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 88,1,eisen2009,digitized,2006-01-01,2006-12-31,,,,
 89,1,eisen2009,digitized,2006-01-01,2006-12-31,,,,
 90,1,gilbert2020,digitized,2014-01-01,2015-12-31,,,,
-92,1,haeberli2004,digitized,1999-09-14,1999-09-14,,,,
-92,2,haeberli2004,digitized,1999-12-01,1999-12-01,,,,
-92,3,haeberli2004,digitized,2000-04-05,2000-04-05,,,,
-92,4,haeberli2004,digitized,2000-06-19,2000-06-19,,,,
-92,5,haeberli2004,digitized,2000-09-20,2000-09-20,,,,
+92,1,hager2002,published,1999-04-30,1999-04-30,,,,
+92,2,hager2002,published,1999-06-30,1999-06-30,,,True,
+92,3,hager2002,published,1999-07-19,1999-07-19,,,True,
+92,4,hager2002,published,1999-08-24,1999-08-24,,,True,
+92,5,hager2002,published,1999-09-14,1999-09-14,,,True,Also plotted in haeberli2004 (Figure 5)
+92,6,hager2002,published,1999-10-14,1999-10-14,,,True,
+92,7,hager2002,published,1999-12-01,1999-12-01,,,True,Also plotted in haeberli2004 (Figure 5)
+92,8,hager2002,published,2000-01-07,2000-01-07,,,True,
+92,9,hager2002,published,2000-01-31,2000-01-31,,,True,
+92,10,hager2002,published,2000-02-28,2000-02-28,,,True,
+92,11,hager2002,published,2000-04-05,2000-04-05,,,True,Also plotted in haeberli2004 (Figure 5)
+92,12,hager2002,published,2000-04-21,2000-04-21,,,True,
+92,13,hager2002,published,2000-06-19,2000-06-19,,,True,Also plotted in haeberli2004 (Figure 5)
+92,14,hager2002,published,2000-07-01,2000-07-01,,,True,
+92,15,hager2002,published,2000-07-13,2000-07-13,,,True,
+92,16,hager2002,published,2000-07-30,2000-07-30,,,True,
+92,17,hager2002,published,2000-08-30,2000-08-30,,,True,
+92,18,hager2002,published,2000-09-20,2000-09-20,,,True,Also plotted in haeberli2004 (Figure 5)
+92,19,hager2002,published,2000-10-21,2000-10-21,,,True,
+92,20,hager2002,published,2001-05-05,2001-05-05,,,True,
+92,21,hager2002,published,2001-06-15,2001-06-15,,,True,
+92,22,hager2002,published,2001-07-18,2001-07-18,,,True,
+92,23,hager2002,published,2001-07-31,2001-07-31,,,True,
+92,24,hager2002,published,2001-08-21,2001-08-21,,,True,
+92,25,hager2002,published,2001-08-27,2001-08-27,,,True,
+92,26,hager2002,published,2001-09-19,2001-09-19,,,True,
+92,27,hager2002,published,2001-10-16,2001-10-16,,,True,
+92,28,hager2002,published,2001-11-29,2001-11-29,,,True,
+92,29,hager2002,published,2002-01-08,2002-01-08,,,True,
+92,30,hager2002,published,2002-02-12,2002-02-12,,,True,
+92,31,hager2002,published,2002-03-20,2002-03-20,,,True,
+92,32,hager2002,published,2002-04-16,2002-04-16,,,True,
 97,1,harrison1975,digitized,1973-04-03,1973-04-03,,,,
 97,2,harrison1975,digitized,1973-07-19,1973-07-19,,,,
 99,1,harrison1975,digitized,1973-04-03,1973-04-03,,,,
@@ -1421,3 +1448,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 750,1,blatter1985,published,1980-05-26,1980-06-26,,,True,
 751,1,blatter1985,published,1980-05-26,1980-06-26,,,True,
 752,1,li2017,digitized,2014-05-04,2015-12-31,,,,
+753,1,hager2002,published,2001-08-20,2001-08-21,,,True,
+754,1,hager2002,published,2001-08-21,2001-08-21,,,False,"Measured to 4 m depth, beyond which water from redrilling filled the borehole"
+755,1,hager2002,published,2001-08-21,2001-08-21,,,True,equilibrated: Achieved by extrapolation but only reliably (r > 0.9) at depths ≥ 10 m
+756,1,hager2002,published,2001-08-22,2001-08-23,,,True,equilibrated: Achieved by extrapolation but only reliably (r > 0.9) at depths ≥ 4 m
+757,1,hager2002,published,2001-08-21,2001-08-22,,,True,equilibrated: Achieved by extrapolation but only reliably (r > 0.9) at depths ≥ 8 m
+758,1,hager2002,published,2001-08-23,2001-08-23,,,True,equilibrated: Achieved by extrapolation but only reliably (r > 0.9) at depths ≥ 4 m
+759,1,hager2002,published,2001-08-24,2001-08-24,,,False,equilibrated: Attempted by extrapolation but unreliable (r < 0.9) at all depths | Water from redrilling beyond 16 m depth
+760,1,hager2002,published,2001-08-21,2001-08-22,,,True,
+761,1,hager2002,published,2001-08-22,2001-08-23,,,False,equilibrated: Borehole filled with meltwater
