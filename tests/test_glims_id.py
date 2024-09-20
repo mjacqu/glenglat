@@ -22,8 +22,8 @@ if not GLIMS_PATH:
 elif gpd is None:
   pytest.skip(
     (
-      'Install geopandas to run the tests: '
-      'pip install geopandas OR conda install -c conda-forge geopandas'
+      'Install geopandas and pyarrow to run the tests: '
+      'conda install -c conda-forge geopandas=0.13 pyarrow'
     ),
     allow_module_level=True
   )
