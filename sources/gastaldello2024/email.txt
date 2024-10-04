@@ -118,7 +118,7 @@ Subject: Firn temperature data Colle Gnifetti and Grigoriev
 
 Hi Mylène,
 
-Please find attached the updated spreadsheet.
+Please find attached the updated spreadsheet [Grenzgletscher Boreholes.xlsx].
 
 Drilling and measurement times have been added, the DOI hyperlink has been corrected and estimates of whether the measurement reaches the ice have also added. I’ve also merged repeat measurements together to have the same ID number if they are in the same borehole. If the co-ordinates are similar but the borehole IDs are different, they are redrillings.
 
@@ -128,3 +128,7 @@ For example, the CG82-1 borehole has a single measurement CG82-1/82 in 1982 unde
 
 Many thanks,
 Marcus
+
+----------
+
+[...] Discussions of a resubmission because of some incorrect drilling dates and an accidental scrambling of borehole and profile identifiers. These issues were circumvented by Ethan by extracting data from the original sources, where possible, and an earlier version of the database to which Marcus Gastaldello had access (cryomap2023).

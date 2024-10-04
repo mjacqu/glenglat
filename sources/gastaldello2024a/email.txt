@@ -1,0 +1,43 @@
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-07-11 14:13
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Dear Ethan,
+
+I just thought I’d let you know that I’ve been withholding sending you the [revised] submission, because I've been questioning the validity of the measurements taken during 2008 and 2013 – some of which are in fact already contained within your database. These are for new steam-drilled boreholes, where the measurement has been taken shortly afterwards and the thermistor temperatures are not fully equilibrated. The values have subsequently been adjusted using a linear thermal dissipation adjustment according to Suter et al. (2002) https://doi.org/10.3189/172756402781817059 but due to the short measurement time there is a very high uncertainty. Recorded deep firn temperatures from these measurements are much warmer than present day observations and those prior to 2000 and therefore appear anomalous in the long-term trend of englacial warming. This is the reason that I investigated the matter further and it hasn’t been as apparent in the past.
+
+[...]
+
+Many thanks,
+Marcus
+
+----------
+
+[...] Discussions about how to represent this uncertainty in glenglat.
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-09-27 11:16
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Dear Ethan,
+
+[...]
+
+I have had a few discussions with Martin Hoelzle regarding these problematic profiles and I provide a table of estimated uncertainties below. As my PhD topic will revolve around further analysing englacial warming at Colle Gnifetti, I will be trying to improve these measurements - particulary those at the saddle point of Colle Gnifetti. (CG08-2/08 and CG13-2/13). I will let you know if I can provide improved values for these measurements in the future. But hopefully these estimates will suffice for the time being.
+
+Please note that this uncertainty value represents that of the least equilibrated thermistor below a depth of 10 metres - as you mentioned those near the surface are quite susceptible to greater fluctuation. At least in my own research, these are generally of lesser importance as I am interested in tracking warming beyond the depth of seasonal variance.
+
+I have calculated these values to a single decimal place, by adjusting the range of values in the regression calculation used by Suter. I.e. choosing less data points towards the end of the measurement typically provides a lower final temperature but with a less reliable extrapolation. Of the 12 profiles, 7 have a particulary poor extrapolation leading to high uncertainty.
+
+[uncertainties.csv]
+
+*Note: these values are specifically negative as opposed to the standard ± in conventional absolute uncertainty values. As these are pre-equilibrated temperatures where the thermistor is cooling from warmer conditions at the surface or the effects of the borehole steam drilling, Martin and I consider the temperature value provided to be more of an upper bound.
+
+Kind Regards,
+Marcus

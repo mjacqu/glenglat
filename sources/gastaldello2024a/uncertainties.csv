@@ -1,0 +1,13 @@
+Profile,Uncertainty [°C],Extrapolation Quality,Drilling Method,Notes
+CG08-2/08,-0.5,Poor,Thermal,
+CG08-3/08,< -0.1,Good,Thermal,
+GG08-5/08,-0.2,Moderate,Thermal,
+SJ08-6/08,-0.5,Poor,Thermal,
+SJ08-7/08,< -0.1,Good,Thermal,
+SJ08-8/08,-0.5,Poor,Thermal,
+CG13-1/13,< -0.1,Good,Mechanical,
+CG13-2/13,-0.6,Poor,Thermal,Last thermistor faulty? > 1 °C difference to adjacent deep thermistor (14 m and 19 m deep respectively)
+CG13-3/13,-0.2,Moderate,Thermal,
+CG13-4/13,-0.7,Poor,Thermal,Last thermistor faulty? > 1.2 °C difference to adjacent deep thermistor (16.5 m and 21.5 m deep respectively)
+GG13-5/13,-0.3,Poor,Thermal,
+SJ13-6/13,-0.4,Poor,Thermal,

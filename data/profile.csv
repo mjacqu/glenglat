@@ -21,7 +21,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 17,1,laternser1992,published,1991-08-04,1991-08-09,,,True,equilibrated: Achieved by extrapolation
 17,2,laternser1992,published,1991-10-26,1991-10-26,,,True,label: CG91-D/91 in hoelzle2011
 18,1,gastaldello2024,submitted,1999-05-27,1999-05-27,09:50:00,2,True,label: GG99-12/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.26)
-19,1,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-5 | equilibrated: Achieved by extrapolation
+19,1,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-5 | equilibrated: Achieved by extrapolation (see borehole.notes)
 20,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
 21,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
 22,1,paterson1972,digitized,1970-09-22,1970-09-22,,,,
@@ -365,7 +365,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 266,1,blatter1985,published,1979-07-21,1979-08-21,,,True,
 267,1,blatter1985,published,1976-06-21,1976-07-21,,,True,
 269,1,gastaldello2024,submitted,1999-05-26,1999-05-26,09:00:00,2,True,label: SJ99-10/99 in hoelzle2011 | equilibrated: Achieved by extrapolation (suter2002)
-270,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-8 | measurement_origin: First of two 4 m depths in Appendix C assumed to be 3 m based on Figure 3.10 | equilibrated: Achieved by extrapolation
+270,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-8 | measurement_origin: First of two 4 m depths in Appendix C assumed to be 3 m based on Figure 3.10 | equilibrated: Achieved by extrapolation (see borehole.notes)
 271,1,suter2002,digitized,1998-10-31,1998-10-31,,,True,
 271,2,suter2002,digitized,1999-01-25,1999-01-25,,,True,Shallowest measurement(s) are missing in suter2002 (Figure 6.22)
 271,3,suter2002,digitized,1999-09-01,1999-09-01,,,True,label: SJ98-A/99 in hoelzle2011
@@ -373,7 +373,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 271,5,suter2002,digitized,2000-01-25,2000-01-25,,,True,Shallowest measurement(s) are missing in suter2002 (Figure 6.22)
 271,6,suter2002,digitized,2000-09-01,2000-09-01,,,True,
 271,7,suter2002,digitized,2000-10-13,2000-10-13,,,True,
-272,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-6 | equilibrated: Achieved by extrapolation
+272,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-6 | equilibrated: Achieved by extrapolation (see borehole.notes)
 273,1,haeberli1991,digitized,1982-01-01,1982-12-31,,,,label: CG82-1/82 in hoelzle2011
 275,1,hoelzle2014,published,2007-11-04,2007-11-04,,,True,label: B05-1
 275,2,darms2009,published,2008-08-25,2008-08-25,,,True,label: B08-4 | measurement_origin: Also published in hoelzle2014 (Table 6.2)
@@ -1035,17 +1035,17 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 560,7,sharp1951,digitized,1949-07-06,1949-07-06,,,True,
 560,8,sharp1951,digitized,1949-07-07,1949-07-07,,,True,
 561,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-1 | equilibrated: Achieved by extrapolation
-562,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-2 | equilibrated: Achieved by extrapolation
-563,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-3 | equilibrated: Achieved by extrapolation
-565,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-7 | equilibrated: Achieved by extrapolation
-566,1,hoelzle2017,published,2013-08-20,2013-08-20,,,,label: B13-1
+562,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-2 | equilibrated: Achieved by extrapolation (see borehole.notes)
+563,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-3 | equilibrated: Achieved by extrapolation (see borehole.notes)
+565,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-7 | equilibrated: Achieved by extrapolation (see borehole.notes)
+566,1,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B13-1 | equilibrated: Achieved by extrapolation | borehole.temperature_accuracy: Reported temperatures are likely an upper bound (gastaldello2024a)
 566,2,hoelzle2017,published,2014-09-25,2014-09-25,,,True,label: B13-1
 566,3,hoelzle2017,published,2015-09-24,2015-09-24,,,True,label: B13-1
-567,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-2 | equilibrated: Achieved by extrapolation
-568,1,hoelzle2017,published,2013-08-23,2013-08-23,,,True,label: B13-3 | equilibrated: Achieved by extrapolation
-569,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-4 | equilibrated: Achieved by extrapolation
-570,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-5 | equilibrated: Achieved by extrapolation
-571,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-6 | equilibrated: Achieved by extrapolation
+567,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-2 | equilibrated: Achieved by extrapolation (see borehole.notes)
+568,1,hoelzle2017,published,2013-08-23,2013-08-23,,,True,label: B13-3 | equilibrated: Achieved by extrapolation (see borehole.notes)
+569,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-4 | equilibrated: Achieved by extrapolation (see borehole.notes)
+570,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-5 | equilibrated: Achieved by extrapolation (see borehole.notes)
+571,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-6 | equilibrated: Achieved by extrapolation (see borehole.notes)
 572,1,hoelzle2017,published,2015-09-27,2015-09-27,,,True,label: B15-1
 573,1,hoelzle2020,published,2018-12-14,2018-12-14,,,,label: CG18-1/18
 573,2,hoelzle2020,published,2019-06-25,2019-06-25,,,True,label: CG18-1/19
