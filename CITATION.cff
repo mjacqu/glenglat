@@ -1,0 +1,47 @@
+# https://github.com/citation-file-format/citation-file-format/blob/main/README.md
+cff-version: 1.2.0
+title: 'glenglat: Global englacial temperature database'
+message: If you use this dataset, please cite it using the metadata from this file. If you use a subset of the data, also cite the original source(s).
+type: dataset
+authors:
+  - given-names: Mylène
+    family-names: Jacquemart
+    affiliation: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
+    orcid: 'https://orcid.org/0000-0003-2501-7645'
+    email: jacquemart@vaw.baug.ethz.ch
+  - given-names: Ethan
+    family-names: Welty
+    affiliation: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
+    orcid: 'https://orcid.org/0000-0001-8046-2210'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11516611
+    description: All versions of glenglat published to Zenodo
+repository-code: 'https://github.com/mjacqu/glenglat'
+abstract: Open-access database of englacial temperature measurements compiled from data submissions and published literature.
+keywords:
+  - glacier
+  - temperature
+  - borehole
+  - ice
+  - firn
+  - englacial
+  - global
+  - compilation
+license: CC-BY-4.0
+preferred-citation:
+  authors:
+    - given-names: Mylène
+      family-names: Jacquemart
+      affiliation: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
+      orcid: 'https://orcid.org/0000-0003-2501-7645'
+    - given-names: Ethan
+      family-names: Welty
+      affiliation: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
+      orcid: 'https://orcid.org/0000-0001-8046-2210'
+  type: article
+  title: 'glenglat: A database of global englacial temperatures'
+  journal: Earth System Science Data
+  doi: 10.5194/essd-2024-249
+  status: submitted
+  date-released: '2024-08-26'
