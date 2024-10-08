@@ -162,7 +162,7 @@ The [`glenglat.py`](glenglat.py) module contains functions used to maintain the 
 To update all generated [`submission`](submission) instructions:
 
 ```sh
-python glenglat.py write_submision
+python glenglat.py write_submission
 ```
 
 This executes several functions:
