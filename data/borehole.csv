@@ -92,12 +92,12 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 101,harrison1975,Black Rapids Glacier,G213683E63392N,estimated,63.4553258,-146.143037,published,1140.0,,,,,0,,False,0.15,Snow temperatures also available | measurement.depth: Relative to 1972 summer surface | Ablation area,Mylène Jacquemart | Guillem Carcanade
 103,hodgkins1999,Scott Turnerbreen,G015894E78097N,guessed,78.114158,15.99040771,published,305.0,,1993-05-01,1993-05-31,thermal,,42,True,0.2,Surged around 1930 | Elevation labels in Figure 3c are flipped (assuming text and Figure 2a are correct),Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 104,hodgkins1999,Scott Turnerbreen,G015894E78097N,estimated,78.0954428,15.88386431,published,595.0,,1993-05-01,1993-05-31,thermal,,54,True,0.2,Surged around 1930 | Elevation labels in Figure 3c are flipped (assuming text and Figure 2a are correct),Mylène Jacquemart | Guillem Carcanade | Ethan Welty
-105,jania1996,Hansbreen,G015592E77097N,estimated,77.0189,15.60193332,estimated,100.0,site A,,,,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
-106,jania1996,Hansbreen,G015592E77097N,estimated,77.0275588,15.65626762,estimated,128.0,site B2,,,,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
-107,jania1996,Hansbreen,G015592E77097N,estimated,77.0916016,15.63406651,estimated,325.0,site D,,,,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
-108,jania1996,Hansbreen,G015592E77097N,estimated,77.0916016,15.63406651,estimated,324.0,site D2,,,,,,True,0.4,,Mylène Jacquemart | Guillem Carcanade
-109,jania1996,Hansbreen,G015592E77097N,estimated,77.1073192,15.53912754,estimated,405.0,site F,,,,,,True,0.4,,Mylène Jacquemart | Guillem Carcanade
-110,jania1996,Hansbreen,G015592E77097N,estimated,77.0196218,15.59521456,estimated,100.0,site G,,,,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
+105,jania1996,Hansbreen,G015592E77097N,estimated,77.0189,15.60193332,estimated,100.0,site A,1988-08-15,1988-08-15,thermal,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
+106,jania1996,Hansbreen,G015592E77097N,estimated,77.0275588,15.65626762,estimated,128.0,site B2,1994-05-13,1994-05-13,thermal,,,False,0.02,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+107,jania1996,Hansbreen,G015592E77097N,estimated,77.0916016,15.63406651,estimated,325.0,site D,1988-09-25,1988-10-17,thermal,,250,False,0.4,to_bed: 'glacier thickness is about 330 m',Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+108,jania1996,Hansbreen,G015592E77097N,estimated,77.0916016,15.63406651,estimated,324.0,site D2,1994-04-21,1994-04-21,thermal,,,True,0.02,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+109,jania1996,Hansbreen,G015592E77097N,estimated,77.1073192,15.53912754,estimated,405.0,site F,1994-05-04,1994-05-04,thermal,,,True,0.02,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+110,jania1996,Hansbreen,G015592E77097N,estimated,77.0196218,15.59521456,estimated,100.0,site G,,,thermal,,,False,,,Mylène Jacquemart | Guillem Carcanade
 111,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.22429,-140.34572,guessed,2460.0,"hole 1,2",,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
 112,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.22533,-140.35687,guessed,2520.0,hole 3,,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
 113,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.2234,-140.35467,guessed,2520.0,hole 4,,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
