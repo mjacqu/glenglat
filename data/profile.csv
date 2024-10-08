@@ -150,8 +150,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 99,2,harrison1975,digitized,1973-07-20,1973-07-20,,,,
 101,1,harrison1975,digitized,1973-04-04,1973-04-04,,,,
 101,2,harrison1975,digitized,1973-07-23,1973-07-23,,,,
-103,1,hodgkins1999,digitized,1993-05-01,1993-05-31,,,,
-104,1,hodgkins1999,digitized,1995-05-01,1995-05-31,,,,
+103,1,hodgkins1999,digitized,1993-05-01,1993-05-31,,,True,equilibrated: 'Final temperature readings were obtained 50–71 days after installation'
+104,1,hodgkins1999,digitized,1993-05-01,1993-05-31,,,True,equilibrated: 'Final temperature readings were obtained 50–71 days after installation'
 105,1,jania1996,digitized,1988-09-25,1988-09-25,,,,
 106,1,jania1996,digitized,1994-10-05,1994-10-05,,,,
 107,1,jania1996,digitized,1989-04-11,1989-04-11,,,,
