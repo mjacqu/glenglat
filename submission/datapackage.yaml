@@ -63,6 +63,19 @@ resources:
         required: true
         maximum: 9999.0
       unit: m
+    - name: mass_balance_area
+      type: string
+      description: |-
+        Mass balance area.
+
+        - ablation: Ablation area
+        - equilibrium: Near the equilibrium line
+        - accumulation: Accumulation area
+      constraints:
+        enum:
+        - ablation
+        - equilibrium
+        - accumulation
     - name: label
       type: string
       description: Borehole name (e.g. as labeled on a plot).

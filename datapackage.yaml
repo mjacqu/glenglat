@@ -297,6 +297,16 @@ resources:
           constraints:
             required: true
             maximum: 9999.0
+        - name: mass_balance_area
+          description: |-
+            Mass balance area.
+
+            - ablation: Ablation area
+            - equilibrium: Near the equilibrium line
+            - accumulation: Accumulation area
+          type: string
+          constraints:
+            enum: [ablation, equilibrium, accumulation]
         - name: label
           description: Borehole name (e.g. as labeled on a plot).
           type: string

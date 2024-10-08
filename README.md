@@ -45,6 +45,7 @@ To submit data, send an email to jacquemart@vaw.baug.ethz.ch. Please structure y
 | `latitude` | Latitude (EPSG 4326). | number [degree] | required: True<br>minimum: -90<br>maximum: 90 |
 | `longitude` | Longitude (EPSG 4326). | number [degree] | required: True<br>minimum: -180<br>maximum: 180 |
 | `elevation` | Elevation above sea level. | number [m] | required: True<br>maximum: 9999.0 |
+| `mass_balance_area` | Mass balance area.<br>- ablation: Ablation area<br>- equilibrium: Near the equilibrium line<br>- accumulation: Accumulation area | string | enum: ['ablation', 'equilibrium', 'accumulation'] |
 | `label` | Borehole name (e.g. as labeled on a plot). | string |  |
 | `date_min` | Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01). | date | format: `%Y-%m-%d`<br> |
 | `date_max` | End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31). | date | format: `%Y-%m-%d`<br> |
