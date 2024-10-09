@@ -21,9 +21,9 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 20,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20682,-117.23517,published,2065,ablation,N,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 21,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.18602,-117.26113,published,2275,ablation,D,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 22,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19837,-117.24919,published,2170,ablation,L,1967-09-01,1967-09-22,mechanical,0,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
-23,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.17594,-117.30924,published,3200,accumulation,A,1967-08-01,1967-08-18,mechanical,,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
-24,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.16331,-117.30632,published,2910,accumulation,B,1967-08-01,1967-08-18,mechanical,,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
-25,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1631,-117.28074,published,2730,accumulation,C,1967-08-01,1967-08-18,mechanical,,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
+23,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.17594,-117.30924,published,3200,accumulation,A,1967-08-01,1967-08-18,mechanical,,10,False,0.04,,Mylène Jacquemart | Ethan Welty
+24,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.16331,-117.30632,published,2910,accumulation,B,1967-08-01,1967-08-18,mechanical,,10,False,0.04,,Mylène Jacquemart | Ethan Welty
+25,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1631,-117.28074,published,2730,accumulation,C,1967-08-01,1967-08-18,mechanical,,10,False,0.04,,Mylène Jacquemart | Ethan Welty
 26,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.1885,-117.25327,published,2235,ablation,E,1968-04-01,1968-04-25,mechanical,0,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 27,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.19224,-117.25808,published,2230,ablation,H,1968-04-01,1968-04-24,mechanical,0,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 28,paterson1972,Athabasca Glacier,G242719E52168N,estimated,52.20112,-117.24085,published,2115,ablation,M,1968-04-01,1968-04-26,mechanical,0,10,False,0.04,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
@@ -50,10 +50,10 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 52,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22435,-140.32904,guessed,2320.0,,6,,,,,30,True,0.02,At surge bulge,Mylène Jacquemart | Guillem Carcanade
 53,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22416,-140.33217,guessed,2420.0,,9,,,,,50,True,0.02,Above surge bulge,Mylène Jacquemart | Guillem Carcanade
 54,clarke1984,Trapridge Glacier,G219646E61222N,guessed,61.22379,-140.33531,guessed,2500.0,,11,,,,,65,True,0.02,Above surge bulge,Mylène Jacquemart | Guillem Carcanade
-55,copland2003,John Evans Glacier,G285646E79663N,estimated,79.7072458,-74.5266339,published,1100.0,accumulation,#1,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
-56,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6860756,-74.4592733,published,975.0,accumulation,#4,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
-57,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6800437,-74.4332913,published,900.0,accumulation,#6,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
-58,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6482756,-74.2047463,published,575.0,ablation,#10,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
+55,copland2003,John Evans Glacier,G285646E79663N,estimated,79.7072458,-74.5266339,published,1100.0,accumulation,#1,,,,,,False,,,Mylène Jacquemart
+56,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6860756,-74.4592733,published,975.0,accumulation,#4,,,,,,False,,,Mylène Jacquemart
+57,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6800437,-74.4332913,published,900.0,accumulation,#6,,,,,,False,,,Mylène Jacquemart
+58,copland2003,John Evans Glacier,G285646E79663N,estimated,79.6482756,-74.2047463,published,575.0,ablation,#10,,,,,,False,,,Mylène Jacquemart
 59,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.315327,-143.853423,published,1750.0,ablation,JJMC,,,,,,True,,,Mylène Jacquemart | Guillem Carcanade
 60,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.283255,-143.831748,published,2100.0,accumulation,LC,,,,,,True,,,Mylène Jacquemart | Guillem Carcanade
 61,delcourt2013,McCall Glacier,G216152E69302N,digitized,69.295288,-143.790144,published,2400.0,accumulation,UC,,,,,,True,,,Mylène Jacquemart | Guillem Carcanade
@@ -105,7 +105,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 115,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.22427,-140.33176,guessed,2300.0,,hole 6,,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
 116,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.22578,-140.31965,guessed,2140.0,,hole 7,,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
 117,jarvis1975,Trapridge Glacier,G219646E61222N,estimated,61.21813,-140.35455,guessed,2600.0,,hole 8,,,,,,False,0.02,Pre surge,Mylène Jacquemart | Guillem Carcanade
-118,karuss2022,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,guessed,430.0,accumulation,,,,,,,False,0.2,,Mylène Jacquemart | Guillem Carcanade
+118,karuss2022,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,guessed,430.0,accumulation,,,,,,,False,0.2,,Mylène Jacquemart
 119,sobota2009,Waldemarbreen,G012079E78681N,estimated,78.6801692,12.1190339,estimated,430.0,accumulation,T2,,,,,,False,0.2,,Ethan Welty
 120,kinnard2020,Guanaco Glacier,G289989E29347S,published,-29.35,-70.014,published,5161.0,,,,,,,,True,0.1,"Assumed to be the same borehole as the 'Guanaco' profile in masiokas2020 (Figure 5) which references (not found): Pitte, P. (2014). Fluctuaciones de Los Glaciares, en Los Últimos 50 años, en las Cuencas Amarillo, Turbio, Canito y Potrerillos, San Juan, Argentina (in Spanish). PhD Thesis, Universidad Nacional de Córdoba, Argentina.",Mylène Jacquemart | Guillem Carcanade
 122,zagorodnov1981a,Lomonosovfonna,G018042E78675N,published,78.81,17.6,published,1120.0,,,,,thermal,27,,False,0.1,location_origin: Table 1 in kotlyakov2004,Ethan Welty
@@ -145,7 +145,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 158,muller1976,White Glacier,G269329E79672N,estimated,79.50706,-90.84274,published,1024,,I,1974-08-03,1974-08-03,thermal,,148,,0.2,label: 1/74 (blatter1985) | location_origin: Converted local coordinates in blatter1985 (Table A-1) to geodetic coordinates using an affine transform estimated from grid lines in harrison1963,Mylène Jacquemart | Guillem Carcanade
 159,muller1976,White Glacier,G269329E79672N,estimated,79.48403,-90.78791,published,717,,II,1974-08-08,1974-08-08,thermal,,268,False,0.2,label: 2/74 (blatter1985) | location_origin: Converted local coordinates in blatter1985 (Table A-1) to geodetic coordinates using an affine transform estimated from grid lines in harrison1963 | to_bed: blatter1985 (Figure 2-12),Mylène Jacquemart | Guillem Carcanade
 160,muller1976,White Glacier,G269329E79672N,estimated,79.47317,-90.75005,published,626,,III,1974-08-12,1974-08-12,thermal,,208,False,0.2,label: 3/74 (blatter1985) | location_origin: Converted local coordinates in blatter1985 (Table A-1) to geodetic coordinates using an affine transform estimated from grid lines in harrison1963 | to_bed: blatter1985 (Figure 2-12),Mylène Jacquemart | Guillem Carcanade
-161,naftz1993,Upper Fremont Glacier,G250390E43132N,guessed,43.1339651,-109.609941,guessed,3920.0,,,,,,,,False,0.4,,Mylène Jacquemart | Guillem Carcanade
+161,naftz1993,Upper Fremont Glacier,G250390E43132N,guessed,43.1339651,-109.609941,guessed,3920.0,,,,,,,,False,0.4,,Mylène Jacquemart
 162,odegard1997,Finsterwalderbreen,G015235E77463N,estimated,77.4924878,15.25323517,published,204.0,ablation,,,,,,,True,0.05,,Mylène Jacquemart | Guillem Carcanade
 163,odegard1997,Finsterwalderbreen,G015235E77463N,estimated,77.4366271,15.22366244,published,580.0,accumulation,,,,,,,True,0.05,,Mylène Jacquemart | Guillem Carcanade
 164,paterson1971,Athabasca Glacier,G242719E52168N,estimated,52.19942,-117.24299,published,2140,ablation,209,1966-08-01,1966-08-31,thermal,0,209,True,0.03,,Ethan Welty | Mylène Jacquemart
@@ -164,8 +164,8 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 181,shiraiwa2001,Blichenok Glacier,G160474E56097N,digitized,56.074062,160.4679,estimated,3870.0,,K2,,,,,,False,0.1,glacier_name: Ледник Бильченок,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 182,signer2014,Glacier du Sex Rouge,G007212E46327N,published,46.326569,7.212807,published,2810.0,,#1,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
 183,signer2014,Glacier du Sex Rouge,G007212E46327N,published,46.327953,7.212463,published,2780.0,,#2,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
-184,signer2014,St. Annafirn,G008601E46597N,published,46.596277,8.598254,published,2855.0,,#6,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
-185,signer2014,St. Annafirn,G008601E46597N,published,46.600537,8.601335,published,2650.0,,#9,,,,,,False,,,Mylène Jacquemart | Guillem Carcanade
+184,signer2014,St. Annafirn,G008601E46597N,published,46.596277,8.598254,published,2855.0,,#6,,,,,,False,,,Mylène Jacquemart
+185,signer2014,St. Annafirn,G008601E46597N,published,46.600537,8.601335,published,2650.0,,#9,,,,,,False,,,Mylène Jacquemart
 186,sobota2011,Irenebreen,G012138E78665N,estimated,78.67358,12.13132,published,420.0,,,,,,,,False,0.2,,Mylène Jacquemart | Guillem Carcanade
 187,odegard1992,Erikbreen,G012478E79621N,estimated,79.5945013,12.56989669,digitized,25.0,,site 1,,,,,,False,0.1,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
 189,odegard1992,Erikbreen,G012478E79621N,estimated,79.5985643,12.60153683,digitized,25.0,,site 2,,,,,,False,0.1,,Mylène Jacquemart | Guillem Carcanade | Ethan Welty
@@ -187,9 +187,9 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 213,thompson2022,Nevado Sajama,G291113E18113S,guessed,-18.10813679,-68.88302202,published,6548.0,accumulation,,,,,,,,,elevation_origin: Table 1 in zagorodnov2006,Ethan Welty
 214,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.54597514,-72.66058519,published,6451.0,,,,,mechanical,,,,,Rim | elevation_origin: Table 1 in zagorodnov2006 | drill_method: zagorodnov2005,Ethan Welty
 215,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.55002714,-72.66097867,published,6326.0,,,,,mechanical,,,,,Crater | elevation_origin: Table 1 in zagorodnov2006 | drill_method: zagorodnov2005,Ethan Welty
-216,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.63971832,-72.14945899,digitized,685.0,,14.3 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart | Guillem Carcanade
-217,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.5815068,-72.12125013,digitized,565.0,,19.5 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart | Guillem Carcanade
-218,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.54665509,-72.11040056,digitized,450.0,,24.55 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart | Guillem Carcanade
+216,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.63971832,-72.14945899,digitized,685.0,,14.3 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart
+217,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.5815068,-72.12125013,digitized,565.0,,19.5 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart
+218,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.54665509,-72.11040056,digitized,450.0,,24.55 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart
 219,gilbert2016,Barnes Ice Cap,G287718E69797N,digitized,69.81379,-72.093185,estimated,525.0,,T0975,,,thermal,,,False,0.05,elevation_origin: hooke1980,Mylène Jacquemart | Guillem Carcanade
 220,gilbert2016,Barnes Ice Cap,G287718E69797N,digitized,69.80686,-72.10005,estimated,575.0,,T091,,,thermal,,,False,0.05,elevation_origin: hooke1980,Mylène Jacquemart | Guillem Carcanade
 221,gilbert2016,Barnes Ice Cap,G287718E69797N,digitized,69.79795,-72.110344,estimated,650.0,,T081,,,thermal,,,False,0.05,elevation_origin: hooke1980,Mylène Jacquemart | Guillem Carcanade
