@@ -373,6 +373,7 @@ resources:
       - data/gurung2022-rikha-samba/profile.csv
       - data/lee2019-jarvis/profile.csv
       - data/carturan2023-ortles/profile.csv
+      - data/kronenberg2022-grigoriev/profile.csv
     format: csv
     dialect:
       header: true
@@ -459,6 +460,7 @@ resources:
       - data/gurung2022-rikha-samba/measurement.csv
       - data/lee2019-jarvis/measurement.csv
       - data/carturan2023-ortles/measurement.csv
+      - data/kronenberg2022-grigoriev/measurement.csv
     format: csv
     dialect:
       header: true

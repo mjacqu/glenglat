@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "location",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "label": "1962 [lower]" }, "geometry": { "type": "Point", "coordinates": [ 77.91302, 41.94594 ] } },
+{ "type": "Feature", "properties": { "label": "1962 [middle]" }, "geometry": { "type": "Point", "coordinates": [ 77.91695, 41.94793 ] } },
+{ "type": "Feature", "properties": { "label": "1962 (2 cores) [lower]" }, "geometry": { "type": "Point", "coordinates": [ 77.91693, 41.95059 ] } },
+{ "type": "Feature", "properties": { "label": "1962 (2 cores) [upper]" }, "geometry": { "type": "Point", "coordinates": [ 77.91692, 41.95102 ] } },
+{ "type": "Feature", "properties": { "label": "1962 [upper]" }, "geometry": { "type": "Point", "coordinates": [ 77.91531, 41.96074 ] } },
+{ "type": "Feature", "properties": { "label": "2003" }, "geometry": { "type": "Point", "coordinates": [ 77.91201, 41.96825 ] } },
+{ "type": "Feature", "properties": { "label": "2007" }, "geometry": { "type": "Point", "coordinates": [ 77.91348, 41.97583 ] } },
+{ "type": "Feature", "properties": { "label": "summit" }, "geometry": { "type": "Point", "coordinates": [ 77.91595, 41.97913 ] } }
+]
+}

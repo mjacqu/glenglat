@@ -54,13 +54,9 @@ def test_data_subdir_contains_only_profiles_from_named_source(dir: Path) -> None
   """Data subdirectory only contains profiles from the named source."""
   source_id = dir.name.split('-', maxsplit=1)[0]
   in_profile = dfs['profile']['__path__'] == str(dir.relative_to(ROOT) / 'profile.csv')
-  borehole_ids = dfs['profile']['borehole_id'][in_profile].drop_duplicates()
-  source_ids = (
-    dfs['borehole'].set_index('id')
-    .loc[borehole_ids]['source_id']
-    .drop_duplicates()
-  )
-  assert len(source_ids) == 1 and source_ids.iloc[0] == source_id, source_ids
+  profile = dfs['profile'][in_profile]
+  valid = profile['source_id'] == source_id
+  assert valid.all(), profile[~valid]
 
 
 @pytest.mark.parametrize('dir', data_subdirs)

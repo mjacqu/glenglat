@@ -150,7 +150,11 @@ def test_borehole_min_profile_id_is_1() -> None:
 
 def test_borehole_profile_ids_increment_by_1() -> None:
   """Borehole profile IDs increment by 1."""
+  EXCEPTIONS = [
+    766,  # kronenberg2022: Later single profile from machguth2023 in main tables
+  ]
   df = dfs['profile']
+  df = df[~df['borehole_id'].isin(EXCEPTIONS)]
   db = df['borehole_id'].diff()
   dp = df['id'].diff()
   valid = db.ne(0) | dp.eq(1)
@@ -173,22 +177,11 @@ def test_people_have_correct_format(table: str, column: str) -> None:
   assert valid.all(), s[~valid]
 
 
-def test_borehole_source_id_matches_first_profile() -> None:
-  """Borehole source id matches the first profile's source id."""
-  df = dfs['borehole'].set_index('id')
-  df['profile_source_id'] = (
-    dfs['profile']
-    .groupby('borehole_id')['source_id']
-    .first()
-  )
-  valid = df['source_id'].eq(df['profile_source_id'])
-  assert valid.all(), df.loc[~valid, ['source_id', 'profile_source_id']]
-
-
 def test_profile_ids_are_chronological() -> None:
   """Borehole profile ids are chronological."""
   EXCEPTIONS = [
     460,  # carturan2023: Borehole with timeseries from two different thermistor chains
+    766,  # kronenberg2022: Later single profile from machguth2023 in main tables
   ]
   df = dfs['profile']
   # By date
@@ -217,6 +210,7 @@ def test_profile_ids_are_chronological_by_datetime() -> None:
   """Borehole profile ids are chronological by datetime."""
   EXCEPTIONS = [
     460,  # carturan2023: Borehole with timeseries from two different thermistor chains
+    766,  # kronenberg2022: Later single profile from machguth2023 in main tables
   ]
   df = dfs['profile']
   groupby = df.groupby('borehole_id')

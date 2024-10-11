@@ -392,7 +392,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 284,7,muller1961,digitized,1960-08-20,1960-08-20,,,True,
 284,8,muller1961,digitized,1960-08-26,1960-08-26,,,True,
 292,1,ryser2013,digitized,2010-06-14,2010-06-14,,,,
-298,1,thompson1993,digitized,1990-07-23,1990-07-27,,,True,
+298,1,machguth2023,published,1990-07-29,1990-07-29,,,True,label: core1990_4609_20m
 299,1,takeuchi2014,digitized,2007-09-06,2007-09-06,,,True,
 300,1,hughes1939,digitized,1938-05-23,1938-05-23,,,,
 300,2,hughes1939,digitized,1938-05-31,1938-05-31,,,,
@@ -412,7 +412,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 313,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
 314,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
 315,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
-316,1,arkhipov2004,digitized,2001-08-31,2001-09-06,,,True,
+316,1,arkhipov2004,digitized,2001-08-31,2001-09-06,,,True,measurment_origin: Published in machguth2023 (as core2001_4600_21m) but missing shallower measurements | date_min/date_max: Figure 2 caption
 317,1,sobota2009,published,2007-09-01,2007-09-30,,,,
 317,2,sobota2009,published,2007-10-01,2007-10-31,,,,
 317,3,sobota2009,published,2007-11-01,2007-11-30,,,,
@@ -1015,7 +1015,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 552,7,marchenko2017,digitized,2013-06-04,2013-06-04,,,,measurement.depth: Relative to glacier surface in April 2013
 552,8,marchenko2017,digitized,2013-06-15,2013-06-15,,,,measurement.depth: Relative to glacier surface in April 2013
 552,9,marchenko2017,digitized,2013-07-15,2013-07-15,,,,measurement.depth: Relative to glacier surface in April 2013
-553,1,mikhalenko2005a,digitized,2003-01-01,2003-12-31,,,,
+553,1,machguth2023,published,2003-06-14,2003-06-14,,,,label: T_thermal2003_4440_30m (machguth2023) | measurement_origin: Also shown in mikhalenko2005a (Figure 10)
 554,1,singer1966,digitized,1965-06-25,1965-06-25,,,,
 554,2,singer1966,digitized,1965-06-27,1965-06-27,,,,
 554,3,singer1966,digitized,1965-08-03,1965-08-03,,,,
@@ -1457,3 +1457,13 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 759,1,hager2002,published,2001-08-24,2001-08-24,,,False,equilibrated: Attempted by extrapolation but unreliable (r < 0.9) at all depths | Water from redrilling beyond 16 m depth
 760,1,hager2002,published,2001-08-21,2001-08-22,,,True,
 761,1,hager2002,published,2001-08-22,2001-08-23,,,False,equilibrated: Borehole filled with meltwater
+762,1,machguth2023,published,1987-06-30,1987-06-30,,,,Profile I in mikhalenko1989 (Figure 3)
+762,2,machguth2023,published,1987-07-15,1987-07-15,,,,Profile II in mikhalenko1989 (Figure 3)
+762,3,machguth2023,published,1987-08-18,1987-08-18,,,,Profile IV in mikhalenko1989 (Figure 3) | date_min/date_max: mikhalenko1989 ('08.07.1987' in machguth2023 believed to be an error)
+763,1,machguth2023,published,1990-07-23,1990-07-23,,,,
+764,1,machguth2023,published,2003-06-11,2003-06-11,,,,
+764,2,machguth2023,published,2003-06-12,2003-06-12,,,,
+764,3,machguth2023,published,2003-06-13,2003-06-13,,,,
+764,4,machguth2023,published,2003-06-14,2003-06-14,,,,
+765,1,machguth2023,published,2003-06-03,2003-06-03,,,,label: core2003_4600_22m | measurement_origin: Also shown (but not labeled) in mikhalenko2005a (Figure 11)
+766,1882,machguth2023,published,2023-08-01,2023-08-01,,,True,
