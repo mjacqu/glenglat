@@ -181,10 +181,10 @@ resources:
           constraints:
             pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?'
         - name: page
-          description: Page number (e.g. 1) or range (e.g. 1-2) of the item in the container.
+          description: Page number (e.g. 1) or range (e.g. 1-2) of the item in the container, with an optional letter prefix (e.g. S1).
           type: string
           constraints:
-            pattern: '[0-9]+(-[0-9]+)?'
+            pattern: '[a-zA-Z]?[0-9]+(-[a-zA-Z]?[0-9]+)?'
         - name: version
           description: Version number (e.g. 1.0) of the item.
           type: string
