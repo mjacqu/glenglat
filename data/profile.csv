@@ -412,7 +412,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 313,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
 314,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
 315,1,dikikh1965,published,1962-10-01,1962-10-31,,,True,
-316,1,arkhipov2004,digitized,2001-08-31,2001-09-06,,,True,measurment_origin: Published in machguth2023 (as core2001_4600_21m) but missing shallower measurements | date_min/date_max: Figure 2 caption
+316,1,arkhipov2004,digitized,2001-08-31,2001-09-06,,,True,measurement_origin: Published in machguth2023 (as core2001_4600_21m) but missing shallower measurements | date_min/date_max: Figure 2 caption
 317,1,sobota2009,published,2007-09-01,2007-09-30,,,,
 317,2,sobota2009,published,2007-10-01,2007-10-31,,,,
 317,3,sobota2009,published,2007-11-01,2007-11-30,,,,
