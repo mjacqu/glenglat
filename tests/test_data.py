@@ -7,9 +7,9 @@ from load import (
   package,
   TRANSLATED_COLUMNS,
   TRANSLATED_REGEX,
-  PEOPLE_COLUMNS,
-  PEOPLE_REGEX
+  PEOPLE_COLUMNS
 )
+from glenglat import PEOPLE_REGEX
 
 
 # ---- source ----

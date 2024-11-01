@@ -1,6 +1,7 @@
 import pandas as pd
 
-from load import dfs, package, PEOPLE_REGEX, PERSON_REGEX
+from load import dfs, package
+from glenglat import PEOPLE_REGEX, PERSON_REGEX
 
 
 def test_personal_communication_author_listed_as_contributor() -> None:

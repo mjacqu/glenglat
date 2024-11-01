@@ -42,6 +42,17 @@ SUBMISSION_SPREADSHEET_PATH = ROOT.joinpath('submission/template.xlsx')
 SOURCE_ID_REGEX = r'(?:^|\s|\()([a-z]+[0-9]{4}[a-z]?)(?:$|\s|\)|,|\.)'
 """Regular expression for extracting source ids from notes."""
 
+ochar = r'[^\(\)\[\]\|\s]'
+ichar = r'[^\(\)\[\]\|]'
+phrase = fr'{ochar}{ichar}*{ochar}'
+orcid = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
+person = fr'{phrase}(?: \[{phrase}\])?(?: \({orcid}\))?'
+PERSON_REGEX = fr'(?P<title>{phrase}(?: \[{phrase}\])?)(?: \((?P<path>{orcid})\))?'
+"""Regular expression for a person."""
+
+PEOPLE_REGEX = fr'^({person})(?: \| ({person}))*$'
+"""Regular expression for people."""
+
 
 # ---- Configure YAML rendering ----
 
