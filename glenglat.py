@@ -1,8 +1,12 @@
+import copy
 from collections import defaultdict
 import datetime
 import json
 from pathlib import Path
-from typing import Dict, Union
+import re
+import shutil
+from typing import Dict, Union, Optional
+import xlsxwriter.worksheet
 import yaml
 
 import fire
@@ -10,6 +14,8 @@ import frictionless
 import jinja2
 import pandas as pd
 import tablecloth.excel
+import xlsxwriter
+import xlsxwriter.format
 
 
 ROOT = Path(__file__).parent
@@ -32,6 +38,9 @@ SUBMISSION_DATAPACKAGE_PATH = ROOT.joinpath('submission/datapackage.yaml')
 
 SUBMISSION_SPREADSHEET_PATH = ROOT.joinpath('submission/template.xlsx')
 """Path to submission spreadsheet template file."""
+
+SOURCE_ID_REGEX = r'(?:^|\s|\()([a-z]+[0-9]{4}[a-z]?)(?:$|\s|\)|,|\.)'
+"""Regular expression for extracting source ids from notes."""
 
 
 # ---- Configure YAML rendering ----
@@ -113,23 +122,30 @@ PANDAS_DTYPES = {
   'year': 'Int64'
 }
 
-def read_data() -> Dict[str, pd.DataFrame]:
+def read_data(dtype: Optional[str] = None) -> Dict[str, pd.DataFrame]:
   """
   Read all data files and concatenate them by table name.
 
   A __path__ column is added to each DataFrame with the path to the file.
+
+  Parameters
+  ----------
+  dtype
+    Data type for all columns (typically 'string').
+    If None, data types are inferred from metadata.
   """
-  package = read_package()
-  dtypes = {
-    resource.name: {
-      field.name: PANDAS_DTYPES[field.type] for field in resource.schema.fields
+  if dtype is None:
+    package = read_package()
+    dtypes = {
+      resource.name: {
+        field.name: PANDAS_DTYPES[field.type] for field in resource.schema.fields
+      }
+      for resource in package.resources
     }
-    for resource in package.resources
-  }
   dfs: Dict[str, pd.DataFrame] = defaultdict(dict)
   for path in DATA_PATH.glob('**/*.csv'):
     dfs[path.stem][str(path.relative_to(ROOT))] = pd.read_csv(
-      path, dtype=dtypes[path.stem]
+      path, dtype=(dtypes[path.stem] if dtype is None else dtype)
     )
   for key, values in dfs.items():
     for path, df in values.items():
@@ -340,6 +356,303 @@ def render_sources_as_csl() -> str:
   sources.replace({pd.NA: None}, inplace=True)
   csl = [convert_source_to_csl(source) for source in sources.to_dict(orient='records')]
   return json.dumps(csl, indent=2, ensure_ascii=False)
+
+
+# ---- Data subset ----
+
+def extract_source_ids(s: pd.Series) -> pd.Series:
+  """
+  Extract source ids from notes.
+
+  For each string, returns a list of source ids or null if none were found.
+
+  Example
+  -------
+  >>> extract_source_ids(pd.Series(['See an2016 (or zhang1993)', 'none', pd.NA]))
+  0    [an2016, zhang1993]
+  1                   <NA>
+  2                   <NA>
+  dtype: object
+  """
+  return s.apply(
+    lambda x: pd.NA if pd.isna(x) else re.findall(SOURCE_ID_REGEX, x) or pd.NA
+  )
+
+
+def gather_source_ids(*args: pd.DataFrame) -> tuple[set[str], set[str]]:
+  """Gather primary and secondary source ids from tables."""
+  primary = set()
+  secondary = set()
+  for df in args:
+    if 'source_id' in df:
+      primary |= set(df['source_id'])
+    if 'notes' in df:
+      secondary |= set(extract_source_ids(df['notes']).dropna().explode())
+  return primary, secondary
+
+
+def select_rows_by_origin(
+  df: pd.DataFrame,
+  source: Optional[str] = None,
+  curator: Optional[str] = None,
+  secondary_sources: bool = False
+) -> pd.Series:
+  """
+  Build boolean mask of rows matching source OR curator.
+
+  Parameters
+  ----------
+  df
+    Table to mask.
+  source
+    Select rows with a matching source in `source_id` or
+    `notes` (if `secondary_sources` is True).
+  curator
+    Select rows with a matching curator in `curator` column.
+  secondary_sources
+    Include secondary sources in `notes` column.
+  """
+  mask = pd.Series(False, index=df.index)
+  if curator and 'curator' in df:
+    mask |= df['curator'].str.split(' | ', regex=False).dropna().apply(
+      lambda x: curator in x
+    )
+  if source and 'source_id' in df:
+    source_mask = df['source_id'].eq(source)
+    if secondary_sources and 'notes' in df:
+      source_mask |= extract_source_ids(df['notes']).dropna().apply(
+        lambda x: source in x
+      )
+    mask |= source_mask
+  return mask
+
+
+def build_subset_from_selection(
+  dfs: dict[str, pd.DataFrame],
+  masks: dict[str, pd.DataFrame],
+  secondary_sources: bool = False
+) -> dict[str, pd.DataFrame]:
+  """
+  Build data subset.
+
+  Based on a selection of boreholes and profiles, build a subset of all related tables:
+  * Add profiles of selected measurements
+  * Add boreholes of selected + added profiles
+  * Add profiles of selected boreholes
+  * Add measurements of selected profiles and those added for selected boreholes
+  * Add all sources of the included boreholes and profiles
+
+  Parameters
+  ----------
+  dfs
+    Data tables.
+  masks
+    Boolean selection masks for each table (matching a key in `dfs`).
+  secondary_sources
+    Whether to include sources referenced in `notes` columns.
+  """
+  # Initialize selection
+  masks = copy.deepcopy(masks)
+  for key in dfs:
+    if key not in masks or masks[key] is None:
+      masks[key] = pd.Series(False, index=dfs[key].index)
+  if not any(masks[key].any() for key in dfs):
+    raise ValueError(f'Empty selection')
+  # Store initial borehole and profile masks
+  initial_borehole_mask = masks['borehole'].copy()
+  initial_profile_mask = masks['profile'].copy()
+  # Add profiles of selected measurements
+  select_measurement_index = pd.MultiIndex.from_frame(
+    dfs['measurement'][masks['measurement']][['borehole_id', 'profile_id']]
+  )
+  profile_index = pd.MultiIndex.from_frame(dfs['profile'][['borehole_id', 'id']])
+  masks['profile'] |= profile_index.isin(select_measurement_index)
+  # Add boreholes of selected + added profiles
+  masks['borehole'] |= dfs['borehole']['id'].isin(
+    dfs['profile'][masks['profile']]['borehole_id']
+  )
+  # Add profiles of selected boreholes
+  is_profile_of_selected_borehole = dfs['profile']['borehole_id'].isin(
+    dfs['borehole']['id'][initial_borehole_mask]
+  )
+  masks['profile'] |= is_profile_of_selected_borehole
+  # Add measurements of selected profiles + those added for selected boreholes
+  select_profile_index = profile_index[initial_profile_mask | is_profile_of_selected_borehole]
+  measurement_index = pd.MultiIndex.from_frame(dfs['measurement'][['borehole_id', 'profile_id']])
+  masks['measurement'] |= measurement_index.isin(select_profile_index)
+  # Add sources
+  primary, secondary = gather_source_ids(
+    *(dfs[key][masks[key]] for key in ('borehole', 'profile'))
+  )
+  masks['source'] |= dfs['source']['id'].isin(
+    primary | secondary if secondary_sources else primary
+  )
+  return {key: dfs[key][masks[key]] for key in dfs}
+
+
+def write_excel_sheet(
+  df: pd.DataFrame,
+  sheet: xlsxwriter.worksheet.Worksheet,
+  header_format: Optional[xlsxwriter.format.Format] = None,
+  cell_format: Optional[xlsxwriter.format.Format] = None,
+  freeze: Optional[tuple[int, int]] = None
+):
+  df = df.replace({float('inf'): 'INF', float('-inf'): '-INF'}).fillna('')
+  # HACK: Ensure that column names are also strings due to tablecloth bug (v <= 0.1.0)
+  df.columns = df.columns.astype('string')
+  tablecloth.excel.write_table(
+    sheet,
+    header=df.columns,
+    format_header=header_format,
+    freeze_header=False
+  )
+  for i, row in enumerate(df.values):
+    sheet.write_row(i + 1, 0, row)
+  if freeze:
+    sheet.freeze_panes(*freeze)
+  # Infer content width
+  min_width, max_width = 9, 30
+  column_widths = (
+    df.astype('string', copy=False)
+    .apply(lambda s: s.str.len())
+    .apply(lambda s: max(len(str(s.name)), s.max()))
+    .mul(1.25)
+    .clip(min_width, max_width)
+  )
+  for i, width in enumerate(column_widths):
+    sheet.set_column(i, i, width, cell_format)
+
+
+def write_subset(
+  path: Union[str, Path],
+  source: Optional[str] = None,
+  curator: Optional[str] = None,
+  secondary_sources: bool = False,
+  source_files: bool = False
+) -> None:
+  """
+  Write data subset.
+
+  Boreholes and profiles are selected by source and/or curator,
+  then all related records are included as needed.
+  See `select_by_origin` and `build_subset_from_selection` for details.
+
+  Parameters
+  ----------
+  path
+    Path to write the subset.
+  source
+    Select boreholes and profiles by source.
+  curator
+    Select boreholes by curator.
+  secondary_sources
+    Whether to consider sources in `notes` columns.
+  source_files
+    Whether to include source directories of included sources (sources/*).
+  dfs
+    Data tables (otherwise read with `read_data()`).
+  """
+  # ---- Build subset ----
+  dfs = read_data(dtype='string')
+  masks = {
+    key: select_rows_by_origin(
+      dfs[key],
+      source=source,
+      curator=curator,
+      secondary_sources=secondary_sources
+    )
+    for key in ('borehole', 'profile')
+  }
+  dfs = build_subset_from_selection(
+    dfs, masks=masks, secondary_sources=secondary_sources
+  )
+  # Drop empty tables, empty columns, and __path__ column
+  dfs = {
+    key: df.drop(columns=['__path__'], errors='ignore').dropna(axis='columns', how='all')
+    for key, df in dfs.items()
+    if not df.empty
+  }
+  if not dfs:
+    raise ValueError('Subset is empty')
+  # ---- Write subset ----
+  path = Path(path)
+  # Write CSV files
+  path.joinpath('data').mkdir(parents=True, exist_ok=True)
+  for key, df in dfs.items():
+    csv_path = path.joinpath(f'data/{key}.csv')
+    df.to_csv(csv_path, index=False)
+  # Write Excel file
+  excel_path = path.joinpath('data.xlsx')
+  book = xlsxwriter.Workbook(excel_path)
+  header_format = book.add_format({'bold': True, 'bg_color': '#d3d3d3'})
+  cell_format = book.add_format({'valign': 'top', 'text_wrap': True})
+  # single tables
+  for key in ('source', 'borehole', 'profile', 'measurement'):
+    if key not in dfs:
+      continue
+    # table
+    sheet = book.add_worksheet(key)
+    write_excel_sheet(
+      df=dfs[key],
+      sheet=sheet,
+      header_format=header_format,
+      cell_format=cell_format,
+      freeze=(1, 0)
+    )
+    if key not in ('source', 'borehole'):
+      continue
+    # table transpose
+    sheet = book.add_worksheet(f'{key}_transpose')
+    df = dfs[key].transpose().reset_index()
+    df.columns = df.iloc[0]
+    write_excel_sheet(
+      df=df.iloc[1:],
+      sheet=sheet,
+      header_format=header_format,
+      cell_format=cell_format,
+      freeze=(1, 1)
+    )
+  # profile_measurement transpose
+  if 'profile' in dfs and 'measurement' in dfs:
+    sheet = book.add_worksheet('profile_measurement_transpose')
+    profile_index = pd.MultiIndex.from_frame(dfs['profile'][['borehole_id', 'id']])
+    # Build transposed profiles
+    profiles = dfs['profile'].rename(columns={'id': 'profile_id'}).transpose().reset_index()
+    profiles.columns = profiles.iloc[0]
+    profiles = profiles.iloc[1:]
+    profiles = profiles.reindex(
+      columns=['borehole_id'] + [x for col in profiles.columns[1:] for x in (col, '')]
+    )
+    write_excel_sheet(
+      df=profiles,
+      sheet=sheet,
+      header_format=header_format,
+      cell_format=cell_format,
+      freeze=(2, 1)
+    )
+    # HACK: Also format second row (first data row) as header
+    sheet.write_row(1, 0, profiles.iloc[0].fillna(''), header_format)
+    # Add measurements
+    measurements = dfs['measurement'].set_index(['borehole_id', 'profile_id'])
+    blocks = [measurements.loc[index].reset_index(drop=True) for index in profile_index]
+    measurements = pd.concat(blocks, axis=1)
+    start_row_index = profiles.shape[0] + 1
+    sheet.write_row(start_row_index, 1, measurements.columns, header_format)
+    for i, row in enumerate(measurements.replace({pd.NA: None}).values):
+      sheet.write_row(i + start_row_index + 1, 1, row)
+  book.close()
+  # Write source directories
+  if source_files:
+    source_ids = dfs['source']['id']
+    for source_id in source_ids:
+      base_path = Path('sources').joinpath(source_id)
+      origin = ROOT.joinpath(base_path)
+      if origin.is_dir():
+        shutil.copytree(
+          src=origin,
+          dst=path.joinpath(base_path),
+          dirs_exist_ok=True
+        )
 
 
 # Generate command line interface

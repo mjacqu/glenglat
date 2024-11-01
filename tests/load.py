@@ -56,9 +56,6 @@ DEFAULT_AXIS_NAMES = {'temperature', 'depth'}
 SPECIAL_AXIS_NAMES = {'elevation', 'days', 'year'}
 """Special digitized axis names."""
 
-SOURCE_ID_REGEX = r'(?:^|\s|\()([a-z]+[0-9]{4}[a-z]?)(?:$|\s|\)|,|\.)'
-"""Regular expression for extracting source ids from notes."""
-
 DIGITIZER_FILE_REGEX = (
   r'^sources\/(?P<source_id>[^\/]+)\/' +
   r'(?P<borehole_id>[0-9]+)(-(?P<max_borehole_id>[0-9]+))?_' +
