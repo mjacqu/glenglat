@@ -8,10 +8,10 @@ import pandas as pd
 import pytest
 
 from load import (
+  glenglat,
   dfs,
   DEFAULT_AXIS_NAMES,
   SPECIAL_AXIS_NAMES,
-  SOURCE_ID_REGEX,
   DIGITIZER_FILE_REGEX,
   ROOT
 )
@@ -22,14 +22,9 @@ from load import (
 # All source ids
 source_ids = set(dfs['source']['id'])
 # Source ids used as measurement origin
-primary_source_ids = (
-  set(dfs['borehole']['source_id']) |
-  set(dfs['profile']['source_id'])
-)
 # Source ids cited in notes
-secondary_source_ids = (
-  set(dfs['borehole']['notes'].str.extractall(SOURCE_ID_REGEX)[0]) |
-  set(dfs['profile']['notes'].str.extractall(SOURCE_ID_REGEX)[0])
+primary_source_ids, secondary_source_ids = glenglat.gather_source_ids(
+  dfs['borehole'], dfs['profile']
 )
 
 # Paths and suffix of all digitized profiles

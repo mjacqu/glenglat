@@ -63,12 +63,12 @@ def strip_internal_links_from_markdown(md: str) -> str:
 
 
 def flatten_field_description(text: str) -> str:
-  """
+  r"""
   Flatten multiline field description for use in markdown table.
 
   Example:
     >>> flatten_field_description('Title:\n\n- item: value\n- item: value\n\nText.')
-    'Title. <br><br> - item: value <br> - item: value <br><br> Text.'
+    'Title: <br><br> - item: value <br> - item: value <br><br> Text.'
   """
   pattern = re.compile(r'(\n+)')
   for match in pattern.finditer(text):
