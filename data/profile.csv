@@ -303,7 +303,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 209,1,wang2018,digitized,2010-01-01,2011-12-31,,,,
 210,1,wang2018,digitized,2010-01-01,2011-12-31,,,,
 211,1,wang2018,digitized,2010-01-01,2011-12-31,,,,
-213,1,thompson2022,submitted,1997-01-01,1998-12-31,,,,
+213,1,thompson2022,submitted,1997-06-01,1997-06-30,,,,
 214,1,thompson2022,submitted,2003-08-28,2003-08-28,,,,
 215,1,thompson2022,submitted,2003-08-28,2003-08-28,,,,
 216,1,classen1977,published,1975-05-17,1975-05-17,,,,

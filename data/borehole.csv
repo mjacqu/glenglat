@@ -184,9 +184,9 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 209,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.4418617,96.55545016,published,4900.0,,Site 2,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
 210,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.429247,96.55633645,published,5040.0,,Site 3,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
 211,wang2018,Laohugou Glacier,G096524E39457N,estimated,39.4355057,96.55583,published,4971.0,,Deep borehole site,,,,,,False,0.05,,Mylène Jacquemart | Guillem Carcanade
-213,thompson2022,Nevado Sajama,G291113E18113S,guessed,-18.10813679,-68.88302202,published,6548.0,accumulation,,,,,,,,,elevation_origin: Table 1 in zagorodnov2006,Ethan Welty
-214,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.54597514,-72.66058519,published,6451.0,,,,,mechanical,,,,,Rim | elevation_origin: Table 1 in zagorodnov2006 | drill_method: zagorodnov2005,Ethan Welty
-215,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.55002714,-72.66097867,published,6326.0,,,,,mechanical,,,,,Crater | elevation_origin: Table 1 in zagorodnov2006 | drill_method: zagorodnov2005,Ethan Welty
+213,thompson2022,Nevado Sajama,G291113E18113S,estimated,-18.10813679,-68.88302202,published,6542,accumulation,,1997-06-01,1997-06-30,mechanical,,132.35,True,,See thompson1998 | date_min/date_max: vimeux2009,Ethan Welty
+214,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.54597514,-72.66058519,published,6451.0,accumulation,,2003-06-01,2003-08-28,mechanical,,34,True,,Rim | elevation_origin: Table 1 in zagorodnov2006 (6434 m in vimeux2009) | drill_method: zagorodnov2005 | date_min: vimeux2009 | to_bed: vimeux2009,Ethan Welty
+215,thompson2022,Volcán Coropuna,G287357E15537S,guessed,-15.55002714,-72.66097867,published,6326.0,accumulation,,2003-06-01,2003-08-28,mechanical,,147,True,,Crater | elevation_origin: Table 1 in zagorodnov2006 (6350 m in vimeux2009) | drill_method: zagorodnov2005 | date_min: vimeux2009 | to_bed: vimeux2009,Ethan Welty
 216,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.63971832,-72.14945899,digitized,685.0,,14.3 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart
 217,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.5815068,-72.12125013,digitized,565.0,,19.5 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart
 218,classen1977,Barnes Ice Cap,G287731E69650N,estimated,69.54665509,-72.11040056,digitized,450.0,,24.55 T,,,,,,False,0.1,Within surge zone,Mylène Jacquemart
@@ -335,7 +335,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 393,thompson1995,Guliya Ice Cap,G081480E35252N,estimated,35.2219,81.4891,published,6040.0,,Site 1,,,mechanical,,,False,,,Ethan Welty
 394,thompson2006,Puruogangri Ice Cap,G089122E33894N,digitized,33.91203,89.11842,published,5961.0,,C1 | Dome B,,,mechanical,0,118.4,True,,location_origin: Figure 1 in liu2016. May be swapped with C2,Ethan Welty
 395,thompson2006,Puruogangri Ice Cap,G089122E33894N,digitized,33.92259,89.12193,published,5980.0,,C2 | Dome A,,,mechanical,0,,False,,location_origin: Figure 1 in liu2016. May be swapped with C1,Ethan Welty
-396,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3833,85.7166,published,7200.0,,C3,,,mechanical,,167.7,True,,See thompson2000 | location: Confirmed by Figure 1 in yao2002,Ethan Welty
+396,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3833,85.7166,published,7200.0,accumulation,C3,,,mechanical,,167.7,True,,See thompson2000 | location: Confirmed by Figure 1 in yao2002,Ethan Welty
 397,zhang2013,East Rongbuk Glacier,G086939E28060N,estimated,28.0890,86.9145,published,5710.0,,BH3,,,,,18,False,,,Mylène Jacquemart | Guillem Carcanade
 398,hou2004,East Rongbuk Glacier,G086939E28060N,estimated,28.01883,86.96125,published,6518.0,,core 2002,,,mechanical,,108.83,True,,location_origin: Figure 1 in hou2007,Ethan Welty
 399,hou2018,崇测冰帽 [Chongce Ice Cap],G081119E35239N,estimated,35.2374,81.1286,published,6010.0,,Core 1,,,mechanical,,133.8,True,,,Ethan Welty
@@ -385,12 +385,12 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 444,zagorodnov1981a,Austre Grønfjordbreen,G014342E77910N,guessed,77.886,14.363,published,450,accumulation,,1975-06-01,1975-06-30,thermal,3.78,211.1,True,,location_origin: On ice divide between Austre Grønfjordbreen and Fridtjofbreen | elevation_origin: kotlyakov2004,Ethan Welty
 445,macheret1985,Austre Grønfjordbreen,G014342E77910N,estimated,77.886,14.363,estimated,450,,1,1975-01-01,1975-12-31,thermal,,213,True,,Maybe the same as borehole 444 (if 1979 expedition read the same 1975 thermistor chain read by 1976 expedition),Ethan Welty
 446,macheret1985,Fridtjofbreen,G014442E77835N,estimated,77.868,14.387,estimated,380,,2,1979-01-01,1979-12-31,thermal,,,False,,,Ethan Welty
-447,thompson2022,Nevado Huascarán,G282414E09082S,published,-9.111389,-77.61472,published,6048,,,,,thermal,,160.4,True,,See thompson1995a | depth: Either 160.4 m (core 1) or 166.1 m (core 2),Ethan Welty
-448,thompson2022,Quelccaya Ice Cap,G289183E13941S,guessed,-13.930,-70.823,published,5670,,,,,combined,26,,,1,See zagorodnov2005 | drill_method: mechanical down to 100-124 m and thermal beyond,Ethan Welty
-449,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3832,85.7156,published,7200,,C2,,,mechanical,,149.2,True,,See thompson2000 | location: Confirmed by Figure 1 in yao2002,Ethan Welty
-450,thompson2022,Mount Kilimanjaro,G037352E03058S,guessed,-3.059,37.348,guessed,5780,,NIF1,,,,,50.9,True,,See thompson2002,Ethan Welty
-451,thompson2022,Naimona'nyi Gacier,G081317E30454N,guessed,30.449,81.329,published,6050,,,,,,,,,,elevation_origin: Table 1 in thompson2018 | glacier_name: 纳木那尼冰川,Ethan Welty
-452,thompson2022,South Inylchek Glacier,G079787E42137N,digitized,42.2087,80.2038,published,5100,,Borehole 1,,,mechanical,,,False,0.4,See aizen2001 | Ice thickness estimated as 285-300 m by radio echo sounding | temperature: Temperature at 1 m fluctuated between -10.5 and -12.2°C over the observation period (2000-08-04 to 2008-08-07),Ethan Welty
+447,thompson2022,Nevado Huascarán,G282414E09082S,published,-9.111389,-77.61472,published,6048,accumulation,,1993-01-01,1993-12-31,thermal,,160.4,True,,See thompson1995a | depth: Either 160.4 m (core 1) or 166.1 m (core 2),Ethan Welty
+448,thompson2022,Quelccaya Ice Cap,G289183E13941S,guessed,-13.930,-70.823,published,5670,accumulation,,2003-07-13,2003-09-10,combined,26,168,True,1,See zagorodnov2005 | drill_method: mechanical down to 100-124 m and thermal beyond | to_bed: vimeux2009,Ethan Welty
+449,thompson2022,Dasuopu Glacier,G085752E28395N,published,28.3832,85.7156,published,7200,accumulation,C2,1997-01-01,1997-10-03,mechanical,,149.2,True,,See thompson2000 | location: Confirmed by Figure 1 in yao2002,Ethan Welty
+450,thompson2022,Mount Kilimanjaro,G037352E03058S,guessed,-3.059,37.348,guessed,5780,ablation,NIF1,2000-01-01,2000-02-29,,,50.9,True,,See thompson2002,Ethan Welty
+451,thompson2022,Naimona'nyi Gacier,G081317E30454N,guessed,30.449,81.329,published,6050,accumulation,,,2006-10-10,,,159,,,elevation_origin: Table 1 in thompson2018 | glacier_name: 纳木那尼冰川,Ethan Welty
+452,thompson2022,South Inylchek Glacier,G079787E42137N,digitized,42.2087,80.2038,published,5100,accumulation,Borehole 1,2000-07-01,2000-08-04,mechanical,,165,False,0.4,See aizen2001 | Ice thickness estimated as 285-300 m by radio echo sounding | temperature: Temperature at 1 m fluctuated between -10.5 and -12.2°C over the observation period (2000-08-04 to 2008-08-07),Ethan Welty
 453,takeuchi2004,Western Belukha Plateau,G086544E49802N,estimated,49.807,86.563,published,4125,,,,,mechanical,,171.3,True,,elevation_origin: Published as 4100-4150 m,Ethan Welty
 454,thompson1980,Quelccaya Ice Cap,G289167E13923S,digitized,-13.925459,-70.82232,published,5650,,1,,,mechanical,INF,,False,,,Ethan Welty
 455,urmann2009,Russell Glacier,G218192E61498N,published,61.4,-141.7,published,4420,,,2002-04-30,2002-06-10,combined,,460,True,,drill_method: Mechanical to 180 m and thermal beyond,Ethan Welty
