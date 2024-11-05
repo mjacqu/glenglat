@@ -329,7 +329,7 @@ resources:
           constraints:
             enum: [mechanical, thermal, combined]
         - name: ice_depth
-          description: Starting depth of ice. Infinity (INF) indicates that ice was not reached.
+          description: Starting depth of continuous ice. Infinity (INF) indicates that only snow, firn, or intermittent ice was reached.
           type: number
           unit: m
         - name: depth

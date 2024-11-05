@@ -102,7 +102,7 @@ resources:
         - combined
     - name: ice_depth
       type: number
-      description: Starting depth of ice. Infinity (INF) indicates that ice was not reached.
+      description: Starting depth of continuous ice. Infinity (INF) indicates that only snow, firn, or intermittent ice was reached.
       unit: m
     - name: depth
       type: number

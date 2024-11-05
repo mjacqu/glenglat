@@ -52,7 +52,7 @@ To submit data, send an email to jacquemart@vaw.baug.ethz.ch. Please structure y
 | `date_min` | Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01). | date | format: `%Y-%m-%d`<br> |
 | `date_max` | End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31). | date | format: `%Y-%m-%d`<br> |
 | `drill_method` | Drilling method.<br>- mechanical: Push, percussion, rotary<br>- thermal: Hot point, electrothermal, steam<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
-| `ice_depth` | Starting depth of ice. Infinity (INF) indicates that ice was not reached. | number [m] |  |
+| `ice_depth` | Starting depth of continuous ice. Infinity (INF) indicates that only snow, firn, or intermittent ice was reached. | number [m] |  |
 | `depth` | Total borehole depth (not including drilling in the underlying bed). | number [m] |  |
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
 | `temperature_accuracy` | Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation. | number [°C] |  |
