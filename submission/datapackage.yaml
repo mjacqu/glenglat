@@ -119,9 +119,9 @@ resources:
       - 'False'
       - 'false'
       - 'FALSE'
-    - name: temperature_accuracy
+    - name: temperature_uncertainty
       type: number
-      description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
+      description: Estimated temperature uncertainty (as reported).
       unit: °C
     - name: notes
       type: string

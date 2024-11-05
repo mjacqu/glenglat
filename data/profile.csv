@@ -1038,7 +1038,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 562,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-2 | equilibrated: Achieved by extrapolation (see borehole.notes)
 563,1,darms2009,published,2008-08-24,2008-08-24,,,True,label: B08-3 | equilibrated: Achieved by extrapolation (see borehole.notes)
 565,1,darms2009,published,2008-08-26,2008-08-26,,,True,label: B08-7 | equilibrated: Achieved by extrapolation (see borehole.notes)
-566,1,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B13-1 | equilibrated: Achieved by extrapolation | borehole.temperature_accuracy: Reported temperatures are likely an upper bound (gastaldello2024a)
+566,1,hoelzle2017,published,2013-08-20,2013-08-20,,,True,label: B13-1 | equilibrated: Achieved by extrapolation | borehole.temperature_uncertainty: Reported temperatures are likely an upper bound (gastaldello2024a)
 566,2,hoelzle2017,published,2014-09-25,2014-09-25,,,True,label: B13-1
 566,3,hoelzle2017,published,2015-09-24,2015-09-24,,,True,label: B13-1
 567,1,hoelzle2017,published,2013-08-22,2013-08-22,,,True,label: B13-2 | equilibrated: Achieved by extrapolation (see borehole.notes)

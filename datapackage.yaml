@@ -341,8 +341,8 @@ resources:
           type: boolean
           trueValues: ['True']
           falseValues: ['False']
-        - name: temperature_accuracy
-          description: Thermistor accuracy or precision (as reported). Typically understood to represent one standard deviation.
+        - name: temperature_uncertainty
+          description: Estimated temperature uncertainty (as reported).
           type: number
           unit: °C
         - name: notes
