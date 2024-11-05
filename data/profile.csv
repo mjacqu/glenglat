@@ -344,7 +344,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 238,1,clarke1987,digitized,1979-01-01,1979-12-31,,,,
 240,1,clarke1987,digitized,1977-01-01,1977-12-31,,,True,
 241,1,zhang2022,submitted,2008-05-04,2008-05-04,,,,
-243,1,flowers2022,submitted,2011-09-08,2011-09-08,,,,
+243,1,flowers2022,submitted,2011-09-08,2011-09-08,,,True,
 245,1,sugiyama2022,submitted,2016-03-08,2016-03-08,,,True,
 246,1,sugiyama2022,submitted,2016-03-08,2016-03-08,,,True,
 251,1,barkov1988,digitized,1978-12-02,1978-12-02,,,,
