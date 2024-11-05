@@ -380,7 +380,14 @@ def extract_source_ids(s: pd.Series) -> pd.Series:
 
 
 def gather_source_ids(*args: pd.DataFrame) -> tuple[set[str], set[str]]:
-  """Gather primary and secondary source ids from tables."""
+  """
+  Gather primary and secondary source ids from tables.
+
+  Parameters
+  ----------
+  args
+    DataFrames to extract source ids from.
+  """
   primary = set()
   secondary = set()
   for df in args:
@@ -398,7 +405,7 @@ def select_rows_by_origin(
   secondary_sources: bool = False
 ) -> pd.Series:
   """
-  Build boolean mask of rows matching source OR curator.
+  Build boolean mask of rows matching either source OR curator.
 
   Parameters
   ----------
@@ -494,9 +501,25 @@ def write_excel_sheet(
   df: pd.DataFrame,
   sheet: xlsxwriter.worksheet.Worksheet,
   header_format: Optional[xlsxwriter.format.Format] = None,
-  cell_format: Optional[xlsxwriter.format.Format] = None,
+  data_format: Optional[xlsxwriter.format.Format] = None,
   freeze: Optional[tuple[int, int]] = None
 ):
+  """
+  Write DataFrame to an Excel sheet.
+
+  Parameters
+  ----------
+  df
+    DataFrame to write.
+  sheet
+    Excel sheet to write to.
+  header_format
+    Format of header cells.
+  data_format
+    Format of data cells.
+  freeze
+    Row and column to freeze (zero-indexed).
+  """
   df = df.replace({float('inf'): 'INF', float('-inf'): '-INF'}).fillna('')
   # HACK: Ensure that column names are also strings due to tablecloth bug (v <= 0.1.0)
   df.columns = df.columns.astype('string')
@@ -511,6 +534,7 @@ def write_excel_sheet(
   if freeze:
     sheet.freeze_panes(*freeze)
   # Infer content width
+  # TODO: Use tablecloth.excel functions for calculating column widths (v > 0.1.0)
   min_width, max_width = 9, 30
   column_widths = (
     df.astype('string', copy=False)
@@ -520,7 +544,7 @@ def write_excel_sheet(
     .clip(min_width, max_width)
   )
   for i, width in enumerate(column_widths):
-    sheet.set_column(i, i, width, cell_format)
+    sheet.set_column(i, i, width, data_format)
 
 
 def write_subset(
@@ -537,6 +561,9 @@ def write_subset(
   then all related records are included as needed.
   See `select_by_origin` and `build_subset_from_selection` for details.
 
+  Writes a CSV file for each table (data/*.csv), an Excel file (data.xlsx), and
+  source directories (sources/*) if `source_files` is True.
+
   Parameters
   ----------
   path
@@ -549,8 +576,6 @@ def write_subset(
     Whether to consider sources in `notes` columns.
   source_files
     Whether to include source directories of included sources (sources/*).
-  dfs
-    Data tables (otherwise read with `read_data()`).
   """
   # ---- Build subset ----
   dfs = read_data(dtype='string')
@@ -566,9 +591,9 @@ def write_subset(
   dfs = build_subset_from_selection(
     dfs, masks=masks, secondary_sources=secondary_sources
   )
-  # Drop empty tables, empty columns, and __path__ column
+  # Drop __path__ column and empty tables
   dfs = {
-    key: df.drop(columns=['__path__'], errors='ignore').dropna(axis='columns', how='all')
+    key: df.drop(columns=['__path__'], errors='ignore')
     for key, df in dfs.items()
     if not df.empty
   }
@@ -585,36 +610,24 @@ def write_subset(
   excel_path = path.joinpath('data.xlsx')
   book = xlsxwriter.Workbook(excel_path)
   header_format = book.add_format({'bold': True, 'bg_color': '#d3d3d3'})
-  cell_format = book.add_format({'valign': 'top', 'text_wrap': True})
-  # single tables
-  for key in ('source', 'borehole', 'profile', 'measurement'):
+  data_format = book.add_format({'valign': 'top', 'text_wrap': True})
+  # source and borehole tables (transposed)
+  for key in ('source', 'borehole'):
     if key not in dfs:
       continue
-    # table
     sheet = book.add_worksheet(key)
-    write_excel_sheet(
-      df=dfs[key],
-      sheet=sheet,
-      header_format=header_format,
-      cell_format=cell_format,
-      freeze=(1, 0)
-    )
-    if key not in ('source', 'borehole'):
-      continue
-    # table transpose
-    sheet = book.add_worksheet(f'{key}_transpose')
     df = dfs[key].transpose().reset_index()
     df.columns = df.iloc[0]
     write_excel_sheet(
       df=df.iloc[1:],
       sheet=sheet,
       header_format=header_format,
-      cell_format=cell_format,
+      data_format=data_format,
       freeze=(1, 1)
     )
-  # profile_measurement transpose
+  # profile_measurement tables (complex transpose)
   if 'profile' in dfs and 'measurement' in dfs:
-    sheet = book.add_worksheet('profile_measurement_transpose')
+    sheet = book.add_worksheet('profile_measurement')
     profile_index = pd.MultiIndex.from_frame(dfs['profile'][['borehole_id', 'id']])
     # Build transposed profiles
     profiles = dfs['profile'].rename(columns={'id': 'profile_id'}).transpose().reset_index()
@@ -627,12 +640,12 @@ def write_subset(
       df=profiles,
       sheet=sheet,
       header_format=header_format,
-      cell_format=cell_format,
+      data_format=data_format,
       freeze=(2, 1)
     )
-    # HACK: Also format second row (first data row) as header
+    # Also format second row (profile_id) as header
     sheet.write_row(1, 0, profiles.iloc[0].fillna(''), header_format)
-    # Add measurements
+    # Add depth-temperature profiles
     measurements = dfs['measurement'].set_index(['borehole_id', 'profile_id'])
     blocks = [measurements.loc[index].reset_index(drop=True) for index in profile_index]
     measurements = pd.concat(blocks, axis=1)

@@ -158,7 +158,7 @@ conda install -c conda-forge geopandas=0.13 pyarrow
 pytest
 ```
 
-### Update submission instructions
+### Maintain the repository
 
 The [`glenglat.py`](glenglat.py) module contains functions used to maintain the repository. They can be run from the command line as `python glenglat.py {function}`.
 
@@ -174,6 +174,11 @@ This executes several functions:
 * `write_submission_md`: Updates tables in this [`README.md`](README.md) from [`submission/datapackage.yaml`](submission/datapackage.yaml).
 * `write_submission_xlsx`: Builds [`submission/template.xlsx`](submission/template.xlsx) from [`submission/datapackage.yaml`](submission/datapackage.yaml).
 
+To write a subset of the data (e.g. to send to a contributor for review), use `write_subset`. The selection can be made by curator name (`--curator`) or source `id` (`--source`), optionally including secondary sources mentioned in `notes` columns (`--secondary_sources`), and the output can include source directories (`--source_files`).
+
+```sh
+python glenglat.py write_subset subsets/vantricht --curator='Lander Van Tricht' --secondary_sources --source_files
+```
 
 ### Publish to Zenodo
 
