@@ -423,13 +423,13 @@ def select_rows_by_origin(
   if curator and 'curator' in df:
     mask |= df['curator'].str.split(' | ', regex=False).dropna().apply(
       lambda x: curator in x
-    )
+    ).reindex(df.index, fill_value=False)
   if source and 'source_id' in df:
     source_mask = df['source_id'].eq(source)
     if secondary_sources and 'notes' in df:
       source_mask |= extract_source_ids(df['notes']).dropna().apply(
         lambda x: source in x
-      )
+      ).reindex(df.index, fill_value=False)
     mask |= source_mask
   return mask
 
@@ -535,7 +535,7 @@ def write_excel_sheet(
     sheet.freeze_panes(*freeze)
   # Infer content width
   # TODO: Use tablecloth.excel functions for calculating column widths (v > 0.1.0)
-  min_width, max_width = 9, 30
+  min_width, max_width = 10, 30
   column_widths = (
     df.astype('string', copy=False)
     .apply(lambda s: s.str.len())
@@ -633,9 +633,15 @@ def write_subset(
     profiles = dfs['profile'].rename(columns={'id': 'profile_id'}).transpose().reset_index()
     profiles.columns = profiles.iloc[0]
     profiles = profiles.iloc[1:]
+    # Temporarily use profile multi-index as a unique index for reindexing
+    profiles.columns = [profiles.columns[0], *profile_index.to_list()]
     profiles = profiles.reindex(
-      columns=['borehole_id'] + [x for col in profiles.columns[1:] for x in (col, '')]
+      columns=[profiles.columns[0], *[x for col in profile_index for x in (col, '')]]
     )
+    profiles.columns = [
+      profiles.columns[0],
+      *[x for col in profile_index.get_level_values(level=0) for x in (col, '')]
+    ]
     write_excel_sheet(
       df=profiles,
       sheet=sheet,
@@ -646,7 +652,7 @@ def write_subset(
     # Also format second row (profile_id) as header
     sheet.write_row(1, 0, profiles.iloc[0].fillna(''), header_format)
     # Add depth-temperature profiles
-    measurements = dfs['measurement'].set_index(['borehole_id', 'profile_id'])
+    measurements = dfs['measurement'].set_index(['borehole_id', 'profile_id']).sort_index()
     blocks = [measurements.loc[index].reset_index(drop=True) for index in profile_index]
     measurements = pd.concat(blocks, axis=1)
     start_row_index = profiles.shape[0] + 1
