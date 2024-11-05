@@ -360,8 +360,8 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 418,lee2019,Jarvis Glacier,G214333E63481N,published,63.4743,-145.6766,published,1625,,JE,,,mechanical,,18,True,,elevation_origin: lee2020,Ethan Welty
 419,goel2017,Blåskimen Island Ice Rise,G356949E70424S,digitized,-70.3962,-3.0339,published,410,,,,,mechanical,,,False,0.1,Only the last temperature profile (of 1496 profiles measured over 25 hours) are recorded here | location_origin: Figure 1 in goel2017a,Ethan Welty
 420,watanabe2001,Austfonna,G023619E79932N,published,79.8333,24.0167,published,750.0,,Austfonna99,,,mechanical,,,False,,,Ethan Welty
-421,barandun2023,Batysh Sook Glacier,G077749E41787N,submitted,41.794233,77.749041,submitted,4030,,BS_res,,,thermal,0,,False,0.25,,Ethan Welty
-422,barandun2023,Ледник Абрамова [Abramov Glacier],G071570E39610N,submitted,39.59632,71.555761,submitted,4380,,Abra_res_1,,,thermal,INF,,False,0.25,,Ethan Welty
+421,barandun2023,Batysh Sook Glacier,G077749E41787N,submitted,41.794233,77.749041,submitted,4030,ablation,BS_res,,2013-08-26,thermal,0,,False,0.25,,Ethan Welty
+422,barandun2023,Abramov Glacier,G071570E39610N,submitted,39.59632,71.555761,submitted,4380,accumulation,Abra_res_1,2013-01-01,2013-08-17,thermal,INF,,False,0.25,See barandun2018 | glacier_name: Ледник Абрамова,Ethan Welty
 423,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85629825,6.820794613,submitted,3189.346,,70,,,,,,,,elevation: Measured on 2015-11-06,Ethan Welty
 424,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85655904,6.820649356,submitted,3188.739,,71,,,,,,,,elevation: Measured on 2015-11-06,Ethan Welty
 425,gagliardini2023,Glacier de Tête Rousse,G006819E45856N,submitted,45.85624493,6.821504615,submitted,3205.465,,72,,,,,,,,elevation: Measured on 2015-11-06 | Follows borehole 70,Ethan Welty
