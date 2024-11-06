@@ -28,12 +28,12 @@ BUILD_PATH = ROOT.joinpath('build')
 REPO = git.Repo(ROOT)
 """Git repository."""
 
-FAMILY_GIVEN_NAMES = {
-  'Lander Van Tricht': 'Van Tricht, Lander',
-  '张通 [Zhang Tong]': 'Zhang, Tong',
+GIVEN_FAMILY_NAMES = {
+  'Lander Van Tricht': ('Lander', 'Van Tricht'),
+  '张通 [Zhang Tong]': ('Tong', 'Zhang'),
 }
 """
-Custom Zenodo name format (family name, given names) for contributors.
+Zenodo name format (given name, family name) for contributors.
 
 If not specified, the last word is assumed to be the family name.
 """
@@ -225,36 +225,34 @@ def build_for_zenodo(
 
 # ---- Zenodo metadata ----
 
-def convert_contributor_to_zenodo(person: dict, attribute: str = 'creators') -> dict:
+def convert_contributor_to_zenodo(person: dict) -> dict:
   """Convert Data Package contributor to Zenodo creator or contributor."""
-  attributes = ['creators', 'contributors']
-  if attribute not in attributes:
-    raise ValueError(f'Attribute must be one of {attributes}')
+  # https://inveniordm.docs.cern.ch/reference/metadata/#creators-1-n
   name = person['title']
-  if name in FAMILY_GIVEN_NAMES:
-    name = FAMILY_GIVEN_NAMES[name]
+  if name in GIVEN_FAMILY_NAMES:
+    given, family = GIVEN_FAMILY_NAMES[name]
   else:
-    parts = name.split(' ')
-    if len(parts) == 1:
-      name = parts[0]
-    else:
-      name = parts[-1] + ', ' + ' '.join(parts[:-1])
-  result = {'name': name}
-  if 'path' in person and 'orcid' in person['path']:
-    result['orcid'] = person['path'].replace('https://orcid.org/', '')
-  if 'organization' in person:
-    result['affiliation'] = person['organization']
-  if attribute == 'contributors':
-    if 'curator' in person['role']:
-      result['type'] = 'DataCurator'
-    elif 'contributor' in person['role']:
-      result['type'] = 'DataCollector'
-  return result
+    words = name.split(' ')
+    given, family = ' '.join(words[:-1]), words[-1]
+  return {
+    'person_or_org': {
+      'type': 'personal',
+      'given_name': given,
+      'family_name': family,
+      'identifiers': [] if 'path' not in person else [
+        {'scheme': 'orcid', 'identifier': person['path'].replace('https://orcid.org/', '')}
+      ]
+    },
+    'role': {'id': person['role'].lower()},
+    'affiliations': person['affiliations']
+  }
 
 
 def convert_people_to_english_list(people: str) -> str:
   """Convert pipe-delimited people to English list."""
   people = people.split(' | ')
+  # Strip ORCID identifiers
+  people = [re.sub(fr' \({glenglat.ORCID_REGEX}\)', '', person) for person in people]
   if len(people) == 1:
     return people[0]
   if len(people) == 2:
@@ -262,7 +260,7 @@ def convert_people_to_english_list(people: str) -> str:
   return ', '.join(people[:-1]) + ', and ' + people[-1]
 
 
-def convert_source_to_reference(source: pd.Series) -> str:
+def convert_source_to_reference(source: pd.Series) -> dict:
   """Convert source to Zenodo reference."""
   source = source[source.notnull()]
   if 'author' not in source or 'year' not in source or 'title' not in source:
@@ -301,59 +299,71 @@ def convert_source_to_reference(source: pd.Series) -> str:
     s += f' {source.publisher}.'
   if 'url' in source:
     s += f' {source.url}'
-  return s
+  result = {'reference': s}
+  if 'url' in source:
+    if source.url.startswith('https://doi.org/'):
+      result['scheme'] = 'doi'
+      result['identifier'] = source.url.replace('https://doi.org/', '')
+    else:
+      result['scheme'] = 'url'
+      result['identifier'] = source.url
+  return result
 
 
 def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
   """Render Zenodo metadata."""
+  # https://inveniordm.docs.cern.ch/reference/metadata/#metadata
+  # https://github.com/inveniosoftware/invenio-rdm-records/tree/master/invenio_rdm_records/fixtures/data/vocabularies
   time = time or datetime.datetime.now(datetime.timezone.utc)
   description = render_zenodo_description()
   package = glenglat.read_metadata()
   dfs = glenglat.read_data()
   start_date, end_date = get_measurement_interval(dfs)
+  # List unique grants
+  grants = []
+  for person in package['contributors']:
+    for grant in person.get('funding', []):
+      if grant not in grants:
+        grants.append(grant)
   # HACK: Convert source to string to facilitate printing as a reference
   dfs['source'] = dfs['source'].astype('string')
   return {
-    'upload_type': 'dataset',
-    'publication_date': time.strftime('%Y-%m-%d'),
-    'title': f"{package['name']}: {package['title']}",
-    'version': package['version'],
-    'language': 'eng',
-    'grants': [
-      # Schweizerischer Nationalfonds zur Förderung der wissenschaftlichen Forschung
-      {'id': '10.13039/501100001711::184634'}
-    ],
-    'description': description,
-    'keywords': package['keywords'],
-    'access_right': 'open',
-    'license': 'cc-by-4.0',
+    'resource_type': {'id': 'dataset'},
     'creators': [
-      convert_contributor_to_zenodo(person, attribute='creators')
+      convert_contributor_to_zenodo(person)
       for person in package['contributors']
-      if 'author' in person['role']
+      if person['status'] == 'creator'
     ],
+    'title': f"{package['name']}: {package['title']}",
+    'publication_date': time.strftime('%Y-%m-%d'),
+    'description': description,
+    'rights': [{'id': license['name'].lower() for license in package['licenses']}],
     'contributors': [
-      convert_contributor_to_zenodo(person, attribute='contributors')
+      convert_contributor_to_zenodo(person)
       for person in package['contributors']
-      if 'author' not in person['role']
+      if person['status'] == 'contributor'
     ],
+    'subjects': [{'subject': keyword} for keyword in package['keywords']],
+    'languages': [{'id': 'eng'}],
     'dates': [
       {
-        'start': start_date,
-        'end': end_date,
-        'type': 'Collected',
+        'date': f'{start_date}/{end_date}',
+        'type': {'id': 'collected'},
         'description': 'Date range of temperature measurements'
       }
     ],
-    # Include sources with identifiers
+    'version': package['version'],
+    'publisher': 'Zenodo',
     'related_identifiers': [
       # Adds 'Is supplement to' and maybe 'External resources: Available in GitHub'
       {
-        'relation': 'isSupplementTo',
-        'identifier': 'https://github.com/mjacqu/glenglat',
+        'identifier': package['homepage'],
+        'scheme': 'url',
+        'relation_type': {'id': 'issupplementto'},
         'resource_type': 'dataset'
       }
     ],
+    'funding': grants,
     # References
     'references': [
       convert_source_to_reference(dfs['source'].loc[i])
@@ -367,7 +377,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
 def build_base_url(sandbox: bool = True) -> str:
   """Build base Zenodo API URL."""
   subdomain = 'sandbox.' if sandbox else ''
-  return f'https://{subdomain}zenodo.org/api/deposit/depositions'
+  return f'https://{subdomain}zenodo.org/api/records'
 
 
 def is_sandbox(url: str) -> bool:
@@ -375,15 +385,20 @@ def is_sandbox(url: str) -> bool:
   return 'sandbox.zenodo' in url
 
 
-def get_access_token(sandbox: bool = True) -> str:
-  """Get Zenodo access token."""
+def get_headers(sandbox: bool = True, invenio: bool = False) -> str:
+  """Get Zenodo request headers."""
   if sandbox:
     if 'ZENODO_SANDBOX_ACCESS_TOKEN' not in os.environ:
       raise ValueError('Missing ZENODO_SANDBOX_ACCESS_TOKEN in .env')
-    return os.environ['ZENODO_SANDBOX_ACCESS_TOKEN']
-  if 'ZENODO_ACCESS_TOKEN' not in os.environ:
-    raise ValueError('Missing ZENODO_ACCESS_TOKEN in .env')
-  return os.environ['ZENODO_ACCESS_TOKEN']
+    token = os.environ['ZENODO_SANDBOX_ACCESS_TOKEN']
+  else:
+    if 'ZENODO_ACCESS_TOKEN' not in os.environ:
+      raise ValueError('Missing ZENODO_ACCESS_TOKEN in .env')
+    token = os.environ['ZENODO_ACCESS_TOKEN']
+  return {
+    'Authorization': f'Bearer {token}',
+    'Accept': 'application/vnd.inveniordm.v1+json' if invenio else 'application/json'
+  }
 
 
 def raise_error(response: requests.Response) -> None:
@@ -403,124 +418,144 @@ def raise_error(response: requests.Response) -> None:
   raise Exception(error)
 
 
-def create_deposition(metadata: dict = {}, sandbox: bool = True) -> dict:
-  """Create a deposition."""
+def create_draft(metadata: dict = {}, sandbox: bool = True) -> dict:
+  """Create a draft record."""
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#create-a-draft-record
   response = requests.post(
     url=build_base_url(sandbox=sandbox),
     json={'metadata': metadata},
-    params={'access_token': get_access_token(sandbox=sandbox)},
+    headers=get_headers(sandbox=sandbox, invenio=True)
   )
   raise_error(response)
   return response.json()
 
 
-def find_deposition(
+def find_record(
   q: str = 'glenglat',
-  sort: str = 'mostrecent',
-  all_versions: bool = False,
+  sort: str = 'newest',
+  allversions: bool = False,
   sandbox: bool = True
 ) -> Optional[dict]:
-  """
-  Find a deposition.
-
-  Returns:
-    Deposition, if one was found.
-
-  Raises:
-    Exception: Multiple depositions found.
-  """
+  """Find a record."""
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#search-records
   response = requests.get(
     url=build_base_url(sandbox=sandbox),
     params={
-      'access_token': get_access_token(sandbox=sandbox),
       'q': q,
       'sort': sort,
-      'all_versions': str(all_versions).lower(),
+      'allversions': allversions,
     },
+    headers=get_headers(sandbox=sandbox, invenio=True)
   )
   raise_error(response)
-  depositions = response.json()
-  if len(depositions) > 1:
-    link_text = '\n'.join(deposition['links']['html'] for deposition in depositions)
-    raise Exception(f'Multiple depositions found:\n{link_text}')
-  return depositions[0] if depositions else None
+  result = response.json()
+  records = result['hits']['hits']
+  if len(records) > 1:
+    link_text = '\n'.join(record['links']['self_html'] for record in records)
+    raise Exception(f'Multiple records found:\n{link_text}')
+  return records[0] if records else None
 
 
-def create_new_deposition_version(deposition: dict) -> dict:
-  """Create a new version of a deposition."""
-  url = deposition['links']['newversion']
+def create_or_get_new_version_draft(record: dict) -> dict:
+  """Create or get a new version draft of a record."""
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#create-a-new-version
+  url = record['links']['versions']
   response = requests.post(
     url=url,
-    params={'access_token': get_access_token(sandbox=is_sandbox(url))}
-  )
-  raise_error(response)
-  deposition = response.json()
-  new_version_url = deposition['links']['latest_draft']
-  return get_deposition(new_version_url)
-
-
-def get_deposition(url: str) -> dict:
-  """Get a deposition."""
-  response = requests.get(
-    url=url,
-    params={'access_token': get_access_token(sandbox=is_sandbox(url))}
+    headers=get_headers(sandbox=is_sandbox(url), invenio=True)
   )
   raise_error(response)
   return response.json()
 
 
-def raise_error_if_submitted(deposition: dict) -> None:
-  """Raise an exception if the deposition is submitted."""
-  if deposition['submitted']:
-    raise Exception('Cannot edit a submitted deposition')
+def raise_error_if_not_draft(record: dict) -> None:
+  """Raise an exception if the record is not a draft."""
+  if not record.get('is_draft', False):
+    raise Exception('Record is not a draft.')
 
 
-def clear_deposition(deposition: dict) -> dict:
-  """Clear deposition files and metadata."""
-  raise_error_if_submitted(deposition)
+def clear_draft(record: dict) -> dict:
+  """Clear a draft record's files and metadata."""
+  raise_error_if_not_draft(record)
   # List files
-  url = f"{deposition['links']['latest_draft']}/files"
-  access_token = get_access_token(sandbox=is_sandbox(url))
-  response = requests.get(url=url, params={'access_token': access_token})
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#list-a-drafts-files
+  url = f"{record['links']['self']}/files"
+  response = requests.get(
+    url=url,
+    headers=get_headers(sandbox=is_sandbox(url), invenio=False)
+  )
   raise_error(response)
-  files = response.json()
+  result = response.json()
+  files = result['entries']
   # Delete files
   for file in files:
     response = requests.delete(
       url=file['links']['self'],
-      params={'access_token': access_token}
+      headers=get_headers(sandbox=is_sandbox(url), invenio=False)
     )
     raise_error(response)
   # Clear metadata
-  return edit_deposition(deposition, metadata={})
+  return edit_draft(record, metadata={})
 
 
-def edit_deposition(deposition: dict, metadata: dict) -> dict:
-  """Edit deposition metadata."""
-  raise_error_if_submitted(deposition)
-  url = deposition['links']['latest_draft']
+def edit_draft(record: dict, metadata: dict) -> dict:
+  """Edit draft record."""
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#update-a-draft-record
+  raise_error_if_not_draft(record)
+  url = record['links']['self']
   response = requests.put(
     url=url,
     json={'metadata': metadata},
-    params={'access_token': get_access_token(sandbox=is_sandbox(url))}
+    headers=get_headers(sandbox=is_sandbox(url), invenio=True)
   )
   raise_error(response)
   return response.json()
 
 
-def add_file_to_deposition(
-  deposition: dict, path: Union[Path, str], filename: str = None
-) -> dict:
-  """Add a file to a deposition."""
-  raise_error_if_submitted(deposition)
-  filename = filename or Path(path).name
-  url = f"{deposition['links']['bucket']}/{filename}"
+def add_file_to_draft(record: dict, path: Union[Path, str]) -> dict:
+  """Add file to a draft record."""
+  raise_error_if_not_draft(record)
+  url = record['links']['files']
+  path = Path(path)
+  # Register file
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#start-draft-file-uploads
+  response = requests.post(
+    url=url,
+    json=[{'key': path.name}],
+    headers=get_headers(sandbox=is_sandbox(url))
+  )
+  raise_error(response)
+  result = response.json()
+  upload = result['entries'][0]
+  # Upload file content
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#upload-a-draft-files-content
   with open(path, 'rb') as file:
     response = requests.put(
-      url=url,
+      url=upload['links']['content'],
       data=file,
-      params={'access_token': get_access_token(sandbox=is_sandbox(url))},
+      headers=get_headers(sandbox=is_sandbox(url))
     )
+  raise_error(response)
+  # Commit upload
+  # https://inveniordm.docs.cern.ch/reference/rest_api_drafts_records/#complete-a-draft-file-upload
+  response = requests.post(
+    url=upload['links']['commit'],
+    headers=get_headers(sandbox=is_sandbox(url))
+  )
+  raise_error(response)
+  return response.json()
+
+
+def reserve_draft_doi(record: dict) -> dict:
+  """Reserve a DOI for a draft record."""
+  raise_error_if_not_draft(record)
+  if 'doi' in record.get('pids', {}):
+    return record
+  url = record['links']['reserve_doi']
+  response = requests.post(
+    url=url,
+    headers=get_headers(sandbox=is_sandbox(url), invenio=True)
+  )
   raise_error(response)
   return response.json()
 
@@ -567,11 +602,13 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   Publish glenglat as a Zenodo deposition.
 
   Builds glenglat for release,
-  creates a new deposition (or a new version if one already exists),
-  and adds the release to the deposition.
+  creates a new record draft (or a new version draft if a record already exists),
+  and adds the release file to the record.
 
-  Args:
-    sandbox: Use the Zenodo Sandbox rather than the production Zenodo.
+  Parameters
+  ----------
+  sandbox
+    Use the Zenodo Sandbox rather than the production Zenodo.
   """
   # Render metadata
   time = datetime.datetime.now(datetime.timezone.utc)
@@ -581,35 +618,32 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   if not sandbox:
     commit, tag = is_repo_publishable()
     print(f'Publishing commit {commit} as {tag}.')
-  # Create deposition
-  deposition = find_deposition(q='glenglat', all_versions=False, sandbox=sandbox)
-  if not deposition:
-    print('No existing depositions found. A new one will be created.')
-    deposition = create_deposition(sandbox=sandbox)
+  # Create record
+  record = find_record(q='glenglat', allversions=False, sandbox=sandbox)
+  if not record:
+    print('No existing records found. A new draft will be created.')
+    draft = create_draft(sandbox=sandbox)
   else:
-    zenodo_version = deposition['metadata']['version']
-    if deposition['submitted']:
-      if version == zenodo_version:
-        raise Exception(
-          f"Deposition for v{version} already submitted: {deposition['links']['html']}"
-        )
-      print(
-        f'Found a submitted deposition for v{zenodo_version}.',
-        f'A draft for v{version} will be created.'
+    zenodo_version = record['metadata']['version']
+    if version == zenodo_version:
+      raise Exception(
+        f"A record for v{version} already exists: {record['links']['self_html']}"
       )
-      deposition = create_new_deposition_version(deposition)
-    else:
-      print('Found an existing draft deposition.', 'It will be reused.')
-    deposition = clear_deposition(deposition)
+    print(
+      f'Found a record for v{zenodo_version}. A draft for v{version} will be created.'
+    )
+    draft = create_or_get_new_version_draft(record)
+    draft = clear_draft(draft)
   # Update deposition metadata
-  deposition = edit_deposition(deposition, metadata=metadata)
+  draft = edit_draft(draft, metadata=metadata)
+  # Reserve a DOI
+  draft = reserve_draft_doi(draft)
   # Build and submit data
-  doi = 'https://doi.org/' + deposition['metadata']['prereserve_doi']['doi']
+  doi = f"https://doi.org/{draft['pids']['doi']['identifier']}"
   data_path = build_for_zenodo(doi=doi, time=time)
-  add_file_to_deposition(deposition, path=data_path, filename=data_path.name)
+  add_file_to_draft(draft, path=data_path)
   print(
-    f'Draft deposition for version {version} ready for review:',
-    deposition['links']['latest_draft_html']
+    f"Draft record for v{version} ready for review: {draft['links']['self_html']}"
   )
   if not sandbox:
     print(

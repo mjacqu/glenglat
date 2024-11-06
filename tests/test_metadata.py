@@ -20,7 +20,7 @@ def test_personal_communication_author_listed_as_contributor() -> None:
   people['path'] = 'https://orcid.org/' + people['orcid']
   contributors = pd.DataFrame([
     person for person in package.contributors
-    if 'contributor' in person['role'].split(' | ')
+    if person['role'] == 'DataCollector'
   ])
   # Fill missing ORCID from matching name in contributors
   people = people.merge(
@@ -55,7 +55,7 @@ def test_curator_listed_as_curator() -> None:
   people['path'] = 'https://orcid.org/' + people['orcid']
   contributors = pd.DataFrame([
     person for person in package.contributors
-    if 'curator' in person['role'].split(' | ')
+    if person['role'] in ('ProjectLeader', 'DataCurator')
   ])
   # Fill missing ORCID from matching name in contributors
   people = people.merge(

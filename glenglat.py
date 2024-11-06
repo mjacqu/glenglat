@@ -46,13 +46,16 @@ SOURCE_ID_REGEX = r'(?:^|\s|\()([a-z]+[0-9]{4}[a-z]?)(?:$|\s|\)|,|\.)'
 ochar = r'[^\(\)\[\]\|\s]'
 ichar = r'[^\(\)\[\]\|]'
 phrase = fr'{ochar}{ichar}*{ochar}'
-orcid = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
-person = fr'{phrase}(?: \[{phrase}\])?(?: \({orcid}\))?'
+
+ORCID_REGEX = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
+"""Regular expression for ORCID identifiers."""
+
+person = fr'{phrase}(?: \[{phrase}\])?(?: \({ORCID_REGEX}\))?'
 
 PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 """Regular expression for a person title."""
 
-PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?P<orcid>{orcid})\))?'
+PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?P<orcid>{ORCID_REGEX})\))?'
 """Regular expression for a person."""
 
 PEOPLE_REGEX = fr'^({person})(?: \| ({person}))*$'
