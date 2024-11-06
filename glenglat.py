@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 import shutil
 from typing import Dict, Union, Optional
-import xlsxwriter.worksheet
+import unicodedata
 import yaml
 
 import fire
@@ -16,6 +16,7 @@ import pandas as pd
 import tablecloth.excel
 import xlsxwriter
 import xlsxwriter.format
+import xlsxwriter.worksheet
 
 
 ROOT = Path(__file__).parent
@@ -47,14 +48,16 @@ ichar = r'[^\(\)\[\]\|]'
 phrase = fr'{ochar}{ichar}*{ochar}'
 orcid = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
 person = fr'{phrase}(?: \[{phrase}\])?(?: \({orcid}\))?'
-PERSON_REGEX = fr'(?P<title>{phrase}(?: \[{phrase}\])?)(?: \((?P<path>{orcid})\))?'
+
+PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
+"""Regular expression for a person title."""
+
+PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?P<orcid>{orcid})\))?'
 """Regular expression for a person."""
 
 PEOPLE_REGEX = fr'^({person})(?: \| ({person}))*$'
 """Regular expression for people."""
 
-PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
-"""Regular expression for a person title."""
 
 # ---- Configure YAML rendering ----
 
@@ -309,7 +312,276 @@ def write_submission() -> None:
   write_submission_xlsx()
 
 
-# ---- Citation Syntax Language (CSL) ----
+# ---- Sources ----
+
+def parse_person_string(person: str) -> dict:
+  """
+  Parse person string.
+
+  Example
+  -------
+  >>> parse_person_string('杉山 慎 [Sugiyama Shin] (0000-0001-5323-9558)')
+  {'title': '杉山 慎 [Sugiyama Shin]', 'name': '杉山 慎', 'latin': 'Sugiyama Shin',
+  'orcid': 'https://orcid.org/0000-0001-5323-9558'}
+  """
+  match = re.fullmatch(PERSON_REGEX, person)
+  groups = match.groupdict()
+  if groups['orcid']:
+    groups['orcid'] = f'https://orcid.org/{groups["orcid"]}'
+  return groups
+
+
+def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
+  """
+  Find person in person table.
+
+  Searches by keys (in decreasing order): 'orcid', 'email', 'title'.
+  Returns keys 'title', 'latin' (family and given), and 'orcid'.
+
+  Example
+  -------
+  >>> dfs = read_data()
+  >>> find_person(
+  ...   {'title': 'Shin Sugiyama', 'orcid': 'https://orcid.org/0000-0001-5323-9558'},
+  ...   dfs['person']
+  ... )
+  {'title': '杉山 慎 [Sugiyama Shin]', 'latin': {'family': 'Sugiyama', 'given': 'Shin'},
+  'orcid': 'https://orcid.org/0000-0001-5323-9558'}
+  """
+  matches = []
+  if person.get('orcid'):
+    mask = df['orcid'].eq(person['orcid'])
+    matches.append(df.index[mask])
+  if person.get('email'):
+    mask = (
+      df['emails'].str.split(' | ', regex=False)
+      .apply(lambda x: False if x is pd.NA else person['email'] in x)
+    )
+    matches.append(df.index[mask])
+  if person.get('title'):
+    mask = (
+      df['matches'].str.split(' | ', regex=False)
+      .apply(lambda x: False if x is pd.NA else person['title'] in x)
+    )
+    matches.append(df.index[mask])
+  index = set()
+  for indices in matches:
+    index |= set(indices)
+  if not index:
+    return None
+  if len(index) > 1:
+    raise ValueError(f'Multiple matches for person {person}')
+  row = df.loc[index.pop()]
+  title_parts = re.fullmatch(PERSON_TITLE_REGEX, row['title']).groupdict()
+  result = {
+    'title': row['title'],
+    'latin': {
+      'family': row['latin_family'],
+      'given': re.sub(
+        fr"( |^){row['latin_family']}(?: |$)", '\\1',
+        title_parts['latin'] or title_parts['name']
+      ).strip()
+    },
+    'orcid': None if pd.isna(row['orcid']) else row['orcid']
+  }
+  if person['orcid']:
+    if result['orcid'] != person['orcid']:
+      raise ValueError(f'ORCID mismatch for {person} matched to {result}')
+    if not result['orcid']:
+      print(f"ORCID missing for {result}: {person['orcid']}")
+      result['orcid'] = person['orcid']
+  return result
+
+
+def infer_name_parts(name: str, latin: str = None) -> dict:
+  """
+  Infer given and family names from a name and its Latin transliteration.
+
+  Examples
+  --------
+  >>> infer_name_parts('Jakob F. Steiner')
+  {'name': {'given': 'Jakob F.', 'family': 'Steiner'}, 'script': 'latin'}
+  >>> infer_name_parts('Н. Г. Разумейко', 'N. G. Razumeiko')
+  {'name': {'given': 'Н. Г.', 'family': 'Разумейко'},
+  'latin': {'given': 'N. G.', 'family': 'Razumeiko'}, 'script': 'cyrillic'}
+  >>> infer_name_parts('孙维君', 'Sun Weijun')
+  {'name': {'family': '孙', 'given': '维君'},
+  'latin': {'family': 'Sun', 'given': 'Weijun'}, 'script': 'chinese'}
+  >>> infer_name_parts('杉山 慎', 'Sugiyama Shin')
+  {'name': {'family': '杉山', 'given': '慎'},
+  'latin': {'family': 'Sugiyama', 'given': 'Shin'}, 'script': 'kanji'}
+  >>> infer_name_parts('スギヤマ シン', 'Sugiyama Shin')
+  {'name': {'family': 'スギヤマ', 'given': 'シン'},
+  'latin': {'family': 'Sugiyama', 'given': 'Shin'}, 'script': 'kana'}
+  >>> infer_name_parts('안진호', 'Ahn Jinho')
+  {'name': {'family': '안', 'given': '진호'},
+  'latin': {'family': 'Ahn', 'given': 'Jinho'}, 'script': 'hangul'}
+  """
+  words = name.split(' ')
+  # Latin: Last word is family name
+  if latin is None:
+    if (
+      # more than two words and multiple consecutive words not ending with a period
+      (len(words) > 2 and re.search(r'[^ \.]+ [^ \.]+(?: |$)', name))
+      # last word ends with a period
+      or words[-1].endswith('.')
+    ):
+      raise ValueError(f'Name "{name}" is amgiuous')
+    return {
+      'name': {'given': ' '.join(words[:-1]), 'family': words[-1]},
+      'script': 'latin'
+    }
+  latin_words = latin.split(' ')
+  # Cyrillic: Last word is family name
+  if re.search(r'[А-ЯЁа-яё]+', name):
+    if len(words) < 2 or len(words) != len(latin_words):
+      raise ValueError(f'Cyrillic name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'given': ' '.join(words[:-1]), 'family': words[-1]},
+      'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]},
+      'script': 'cyrillic'
+    }
+  # Chinese
+  if re.search(r'[\u4e00-\u9fff]+', name):
+    if len(words) > 2:
+      raise ValueError(f'Chinese character name "{name} [{latin}]" is ambiguous')
+    # Kanji (Japanese): First word is family name
+    if len(words) == 2:
+      if len(latin_words) != 2:
+        raise ValueError(f'Chinese character name "{name} [{latin}]" is ambiguous')
+      return {
+        'name': {'family': words[0], 'given': words[1]},
+        'latin': {'family': latin_words[0], 'given': latin_words[1]},
+        'script': 'kanji'
+      }
+    # Chinese: First character of original and first word of latin is family name
+    if len(latin_words) != 2:
+        raise ValueError(f'Chinese character name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'family': name[0], 'given': name[1:]},
+      'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
+      'script': 'chinese'
+    }
+  # Hangul (Korean): First character of original and first word of latin is family name
+  if re.search(r'[\uac00-\ud7af]+', name):
+    if len(words) > 1:
+        raise ValueError(f'Hangul (Korean) name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'family': name[0], 'given': name[1:]},
+      'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
+      'script': 'hangul'
+    }
+  # Kana (Japanese): First word is family name
+  if re.search(r'[\u3040-\u30ff]+', name):
+    if len(words) != 2 or len(latin_words) != 2:
+      raise ValueError(f'Kana (Japanese) name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'family': words[0], 'given': words[1]},
+      'latin': {'family': latin_words[0], 'given': latin_words[1]},
+      'script': 'kana'
+    }
+  raise NotImplementedError(f'Unsupported script for name "{name} [{latin}]"')
+
+
+def strip_diacritics(string: str) -> str:
+  """
+  Remove diacritics (accents, curls, strokes) from a string.
+
+  Examples
+  --------
+  >>> strip_diacritics('Jakob F. Steiner')
+  'Jakob F. Steiner'
+  >>> strip_diacritics('Rune Strand Ødegård')
+  'Rune Strand Odegard'
+  """
+  def replace_char(char: str) -> str:
+    description = unicodedata.name(char)
+    cutoff = description.find(' WITH ')
+    if cutoff != -1:
+      description = description[:cutoff]
+      try:
+        char = unicodedata.lookup(description)
+      except KeyError:
+        pass
+    return char
+
+  return ''.join(replace_char(char) for char in string)
+
+
+def render_author_list(
+  personal_communication: bool = False,
+  secondary_sources: bool = False,
+  infer: bool = False
+) -> list[str]:
+  """
+  Render list of authors.
+
+  Parameters
+  ----------
+  personal_communication
+    Include personal communication authors.
+  secondary_sources
+    Include secondary sources in `notes` column.
+  infer
+    Infer given and family names from the name and its Latin transliteration,
+    if not found in the person table.
+  """
+  dfs = read_data()
+  # Gather source ids
+  source_ids, secondary = gather_source_ids(*dfs.values())
+  if secondary_sources:
+    source_ids |= secondary
+  # Gather authors
+  mask = dfs['source']['id'].isin(source_ids)
+  if not personal_communication:
+    mask &= dfs['source']['type'].ne('personal-communication')
+  authors = (
+    dfs['source']['author'][mask].str.split(' | ', regex=False)
+    .dropna()
+    .explode()
+    .drop_duplicates()
+  )
+  # Parse and find people
+  people = []
+  missing = []
+  ambiguous = []
+  for person_string in authors:
+    person = parse_person_string(person_string)
+    found = find_person(person, dfs['person'])
+    if found:
+      person = found
+    else:
+      if infer:
+        try:
+          person = {**person, **infer_name_parts(person['name'], person.get('latin'))}
+          if person.get('latin') is None:
+            person['latin'] = person['name']
+        except (ValueError, NotImplementedError):
+          ambiguous.append(person_string)
+      else:
+        missing.append(person_string)
+    people.append(person)
+  if missing:
+    raise ValueError('People not found:\n' + '\n'.join(missing))
+  if ambiguous:
+    raise ValueError('Family name could not be inferred:\n' + '\n'.join(ambiguous))
+  # Sort by uppercase latin family name, latin first name
+  people = sorted(people, key=lambda x: (
+    strip_diacritics(x['latin']['family']).upper(),
+    strip_diacritics(x['latin']['given']).upper()
+  ))
+  # Format person string (uppercase latin family name in title)
+  people = [
+    re.sub(
+      fr"(^| |\[){person['latin']['family']}(\]| |$)",
+      fr"\1{person['latin']['family'].upper()}\2",
+      person['title']
+    )
+    for person in people
+  ]
+  # Drop duplicates
+  return list(dict.fromkeys(people))
+
 
 def convert_source_to_csl(source: Dict[str, str]) -> dict:
   """

@@ -17,7 +17,7 @@ def test_personal_communication_author_listed_as_contributor() -> None:
     .str.extract(PERSON_REGEX)
     .reset_index(drop=True)
   )
-  people['path'] = 'https://orcid.org/' + people['path']
+  people['path'] = 'https://orcid.org/' + people['orcid']
   contributors = pd.DataFrame([
     person for person in package.contributors
     if 'contributor' in person['role'].split(' | ')
@@ -52,7 +52,7 @@ def test_curator_listed_as_curator() -> None:
     .str.extract(PERSON_REGEX)
     .reset_index(drop=True)
   )
-  people['path'] = 'https://orcid.org/' + people['path']
+  people['path'] = 'https://orcid.org/' + people['orcid']
   contributors = pd.DataFrame([
     person for person in package.contributors
     if 'curator' in person['role'].split(' | ')
