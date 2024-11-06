@@ -500,3 +500,59 @@ resources:
           reference:
             resource: profile
             fields: [borehole_id, id]
+  - name: person
+    description: Author titles resolved to people.
+    path: data/person.csv
+    format: csv
+    dialect:
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: matches
+          description: Author titles matching this person, as a pipe-delimited list.
+          type: string
+          constraints:
+            required: true
+            unique: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: title
+          description: Preferred author title.
+          type: string
+          constraints:
+            required: true
+            unique: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: latin_family
+          description: Latinized family name.
+          type: string
+          constraints:
+            required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: orcid
+          description: ORCID.
+          type: string
+          constraints:
+            unique: true
+            pattern: 'https://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
+        - name: emails
+          description: Work email addresses, as a pipe-delimited list.
+          type: string
+          constraints:
+            unique: true
+            pattern: '[\w\.\-]+@[\w\-]+(\.(\w){2,})+( \| [\w\.\-]+@[\w\-]+(\.(\w){2,})+)*'
+        - name: urls
+          description: Work profile URLs, as a pipe-delimited list.
+          type: string
+          constraints:
+            unique: true
+            pattern: 'https?://[^\s]+( \| https?://[^\s]+)*'
+        - name: notes
+          description: Curator remarks.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'

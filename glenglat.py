@@ -210,10 +210,10 @@ def write_submission_yaml() -> None:
     field for field in profile.schema.fields
     if field.name not in ['id', 'borehole_id', 'source_id', 'measurement_origin', 'notes']
   ]
-  # --- Drop source and profile tables ---
+  # --- Drop tables other than borehole and measurement ---
   package.resources = [
     resource for resource in package.resources
-    if resource.name not in ['source', 'profile']
+    if resource.name in ['borehole', 'measurement']
   ]
   # --- Expand trueValues, falseValue to defaults ----
   for resource in package.resources:
