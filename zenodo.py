@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 from typing import Dict, Optional, Tuple, Union
 import zipfile
 
@@ -43,6 +44,17 @@ dotenv.load_dotenv(ROOT.joinpath('.env'))
 
 
 # ---- Helpers ----
+
+def read_select_metadata() -> dict:
+  """Read select package metadata."""
+  package = glenglat.read_metadata()
+  # Limit to select tables
+  package['resources'] = [
+    resource for resource in package['resources']
+    if resource['name'] in ('source', 'borehole', 'profile', 'measurement')
+  ]
+  return package
+
 
 def strip_internal_links_from_markdown(md: str) -> str:
   """
@@ -121,7 +133,7 @@ def render_zenodo_description() -> str:
     ROOT.joinpath('templates/zenodo-description.md.jinja'),
     {
       'introduction': extract_readme_introduction(),
-      'package': glenglat.read_metadata()
+      'package': read_select_metadata()
     }
   )
   return markdown.markdown(md, extensions=['tables'])
@@ -131,7 +143,7 @@ def build_zenodo_readme(
   doi: Optional[str] = None, time: Optional[datetime.datetime] = None
 ) -> Path:
   """Write Zenodo readme as `build/README.md`."""
-  metadata = glenglat.read_metadata()
+  metadata = read_select_metadata()
   time = time or datetime.datetime.now(datetime.timezone.utc)
   doi = doi or metadata['id']
   # Render description with flattened field descriptions
@@ -170,7 +182,7 @@ def build_metadata_as_json(
     time = time.astimezone(datetime.timezone.utc)
   else:
     time = datetime.datetime.now(datetime.timezone.utc)
-  metadata = glenglat.read_metadata()
+  metadata = read_select_metadata()
   if doi:
     metadata['id'] = doi
   metadata['created'] = time.strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -199,6 +211,14 @@ def build_for_zenodo(
     Path to the zip archive.
   """
   BUILD_PATH.mkdir(exist_ok=True)
+  metadata = read_select_metadata()
+  # Extract data file paths from metadata
+  data_paths = []
+  for resource in metadata['resources']:
+    if isinstance(resource['path'], str):
+      data_paths.append(resource['path'])
+    else:
+      data_paths.extend(resource['path'])
   # List files to include
   time = time or datetime.datetime.now(datetime.timezone.utc)
   built_files = [
@@ -207,10 +227,9 @@ def build_for_zenodo(
   ]
   unchanged_files = [
     ROOT.joinpath('LICENSE.md'),
-    *sorted(DATA_PATH.rglob('*.csv'))
+    *sorted([ROOT.joinpath(path) for path in data_paths])
   ]
   # Build zip archive
-  metadata = glenglat.read_metadata()
   version = metadata['version']
   path = BUILD_PATH.joinpath(f'glenglat-v{version}.zip')
   with zipfile.ZipFile(path, 'w') as zip:
@@ -218,8 +237,11 @@ def build_for_zenodo(
       zip.write(filename=file, arcname=file.relative_to(BUILD_PATH))
     for file in unchanged_files:
       zip.write(filename=file, arcname=file.relative_to(ROOT))
-    # Extract files for review
-    zip.extractall(path=BUILD_PATH.joinpath(f'glenglat-v{version}'))
+    # Extract files for review, cleaning up any existing directory
+    extract_path = BUILD_PATH.joinpath(f'glenglat-v{version}')
+    if extract_path.exists():
+      shutil.rmtree(extract_path)
+    zip.extractall(path=extract_path)
   return path
 
 
@@ -316,7 +338,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
   # https://github.com/inveniosoftware/invenio-rdm-records/tree/master/invenio_rdm_records/fixtures/data/vocabularies
   time = time or datetime.datetime.now(datetime.timezone.utc)
   description = render_zenodo_description()
-  package = glenglat.read_metadata()
+  package = read_select_metadata()
   dfs = glenglat.read_data()
   start_date, end_date = get_measurement_interval(dfs)
   # List unique grants
@@ -589,7 +611,7 @@ def is_repo_publishable() -> Tuple[str, str]:
     )
   # Tag is not already in use
   REPO.remotes['origin'].fetch()
-  tag = 'v' + glenglat.read_metadata()['version']
+  tag = 'v' + read_select_metadata()['version']
   existing_tags = [repo_tag for repo_tag in REPO.tags if repo_tag.name == tag]
   if existing_tags:
     commit = existing_tags[0].commit
