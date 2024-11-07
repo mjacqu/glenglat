@@ -37,6 +37,10 @@ _The repository's [license](LICENSE.md) does not extend to figures, tables, maps
 
 To submit data, send an email to jacquemart@vaw.baug.ethz.ch or open a GitHub [issue](https://github.com/mjacqu/glenglat/issues). Please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below and in the submission metadata: [`submission/datapackage.yaml`](submission/datapackage.yaml). Consider using our handy Excel template: [`submission/template.xlsx`](submission/template.xlsx)! For corrections and improvements to existing data, you can also describe the changes that need to be made or make the changes directly via a GitHub [pull request](https://github.com/mjacqu/glenglat/pulls).
 
+### Authorship policy
+
+By submitting data to glenglat, you agree to be listed as a contributor in the metadata and have your original submission preserved in the `sources` folder. You will also be invited to become a co-author on the next dataset release (with the option to opt-out or suggest someone in your stead) and asked to confirm your name, affiliation, funding sources, and that your data was correctly integrated into glenglat. Unless you opt-out, you will remain an author on all subsequent releases in which your data still appears.
+
 <!-- <submission-format> -->
 ### `borehole`
 
