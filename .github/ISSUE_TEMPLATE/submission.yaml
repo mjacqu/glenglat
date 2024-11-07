@@ -1,0 +1,59 @@
+name: Submission
+description: Submit data to glenglat.
+labels: ['submission']
+assignees:
+  - mjacqu
+  - ezwelty
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe your submission in detail here.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ## Authorship information
+  - type: input
+    id: name
+    attributes:
+      label: Full name
+      description: Your full name. Names in non-Latin scripts are encouraged, but please provide a latinization in square brackets. Use ALL CAPS to clarify your (Latin) family name.
+      placeholder: e.g. Lander VAN TRICHT, 李慧林 [LI Huilin]
+    validations:
+      required: true
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID
+      description: Your ORCID identifier.
+      placeholder: https://orcid.org/0000-0001-8046-2210
+  - type: input
+    id: affiliations
+    attributes:
+      label: Affiliations
+      description: Your institutional affiliations.
+      placeholder: e.g. Arctic and Antarctic Research Institute, St. Petersburg, Russia
+  - type: input
+    id: funding
+    attributes:
+      label: Funding
+      description: Funding agencies and grant numbers that supported the original data collection or this submission.
+      placeholder: e.g. Swiss National Science Foundation grant 184634
+  - type: dropdown
+    id: authorship
+    attributes:
+      label: Authorship
+      description: Submitters are listed as contributors in the metadata, and invited to also be co-authors on the next data release. See our [authorship policy](https://github.com/mjacqu/glenglat?tab=readme-ov-file#authorship-policy). Would you (and/or others) like to be co-authors on the next data release?
+      options:
+        - No. Contributor is fine.
+        - Yes. Please invite me as a co-author.
+      validations:
+        required: true
+  - type: textarea
+    id: others
+    attributes:
+      label: Other authors
+      description: If you selected "Yes" above, list whether others (in addition or instead of you) should be invited as co-authors. Please send us an email (jacquemart@vaw.baug.ethz.ch) copying them to confirm, or include their work email below so that we can contact them.
