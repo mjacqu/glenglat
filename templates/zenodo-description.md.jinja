@@ -1,7 +1,13 @@
 {{ introduction }}
 
+## Tables
+
+Jump to: {% for resource in package.resources %}
+[`{{ resource.name }}`](#{{ resource.name }}){% if not loop.last %} · {% endif %}
+{% endfor %}{{ "\n" }}
+
 {% for resource in package.resources %}
-### `data/{{ resource.name }}.csv`
+### <a name="{{ resource.name }}"></a>`{{ resource.name }}`
 
 {{ resource.description }}
 
