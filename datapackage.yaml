@@ -39,6 +39,9 @@ contributors:
           title:
             en: Process-based modelling of global glacier changes (PROGGRES)
           id: 00yjd3n13::184634
+          identifiers:
+            - scheme: url
+              identifier: https://data.snf.ch/grants/grant/184634
   - title: Ethan Welty
     path: https://orcid.org/0000-0001-8046-2210
     affiliations:
