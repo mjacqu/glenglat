@@ -48,6 +48,7 @@ body:
       label: Authorship
       description: Submitters are listed as contributors in the metadata, and invited to also be co-authors on the next data release. See our [authorship policy](https://github.com/mjacqu/glenglat?tab=readme-ov-file#authorship-policy). Would you (and/or others) like to be co-authors on the next data release?
       options:
+        - ''
         - No. Contributor is fine.
         - Yes. Please invite me as a co-author.
     validations:
