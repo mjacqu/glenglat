@@ -1,7 +1,7 @@
 import pandas as pd
 
 from load import dfs, package
-from glenglat import PEOPLE_REGEX, PERSON_REGEX
+from glenglat import PERSON_REGEX
 
 
 def test_personal_communication_author_listed_as_contributor() -> None:
@@ -9,10 +9,8 @@ def test_personal_communication_author_listed_as_contributor() -> None:
   df = dfs['source']
   mask = df['type'].eq('personal-communication')
   people = (
-    df['author'][mask].str.extract(PEOPLE_REGEX)
-    .unstack()
-    .droplevel(0, axis='index')
-    .dropna()
+    df['author'][mask].str.split(' | ', regex=False)
+    .explode()
     .drop_duplicates()
     .str.extract(PERSON_REGEX)
     .reset_index(drop=True)
@@ -44,10 +42,8 @@ def test_curator_listed_as_curator() -> None:
   """Curator is listed in data package contributors."""
   df = dfs['borehole']
   people = (
-    df['curator'].str.extract(PEOPLE_REGEX)
-    .unstack()
-    .droplevel(0, axis='index')
-    .dropna()
+    df['curator'].str.split(' | ', regex=False)
+    .explode()
     .drop_duplicates()
     .str.extract(PERSON_REGEX)
     .reset_index(drop=True)

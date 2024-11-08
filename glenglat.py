@@ -58,9 +58,6 @@ PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?P<orcid>{ORCID_REGEX})\))?'
 """Regular expression for a person."""
 
-PEOPLE_REGEX = fr'^({person})(?: \| ({person}))*$'
-"""Regular expression for people."""
-
 
 # ---- Configure YAML rendering ----
 
