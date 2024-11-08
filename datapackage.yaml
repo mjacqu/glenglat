@@ -111,6 +111,12 @@ contributors:
       - name: Department of Geography and Regional Science, University of Graz, Austria
     role: DataCollector
     status: creator
+  - title: Jakob Steiner
+    path: https://orcid.org/0000-0002-0063-0067
+    affiliations:
+      - name: Department of Geography and Regional Science, University of Graz, Austria
+    role: DataCollector
+    status: creator
   - title: Martina Barandun
     path: https://orcid.org/0000-0003-1820-7600
     affiliations:
