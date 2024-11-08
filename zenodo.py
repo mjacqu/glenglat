@@ -391,7 +391,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
         'identifier': package['homepage'],
         'scheme': 'url',
         'relation_type': {'id': 'issupplementto'},
-        'resource_type': 'dataset'
+        'resource_type': {'id': 'dataset'}
       }
     ],
     'funding': grants,
