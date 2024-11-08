@@ -82,6 +82,12 @@ contributors:
       - name: Department of Atmospheric and Cryospheric Sciences (ACINN), University of Innsbruck (UIBK), Austria
     role: DataCollector
     status: creator
+  - title: Jakob Abermann
+    path: https://orcid.org/0000-0003-1285-1868
+    affiliations:
+      - name: Department of Geography and Regional Science, University of Graz, Austria
+    role: DataCollector
+    status: creator
   - title: Martina Barandun
     path: https://orcid.org/0000-0003-1820-7600
     affiliations:
