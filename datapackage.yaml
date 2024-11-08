@@ -85,6 +85,26 @@ contributors:
       - name: Department of Atmospheric and Cryospheric Sciences (ACINN), University of Innsbruck (UIBK), Austria
     role: DataCollector
     status: creator
+    funding:
+      - funder:
+          name: Greenland Government
+          id: 00ra6qr58
+        award:
+          title:
+            da: Tips og Lottomidlerne Pulje C
+          identifiers:
+            - scheme: url
+              identifier: https://www.sullissivik.gl/Emner/Kultur_og_Fritid/Tilskud/Tips-og-lottomidlerne-til-almennyttige-formaal-pulje-C_samlet
+      - funder:
+          name: Australian Science Fund
+          id: 013tf3c58
+        award:
+          title:
+            en: Land-terminating ice cliffs in North Greenland (LATTICE)
+          number: P 36306
+          identifiers:
+            - scheme: url
+              identifier: https://www.fwf.ac.at/en/research-radar/10.55776/P36306
   - title: Jakob Abermann
     path: https://orcid.org/0000-0003-1285-1868
     affiliations:
