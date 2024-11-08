@@ -45,14 +45,23 @@ dotenv.load_dotenv(ROOT.joinpath('.env'))
 
 # ---- Helpers ----
 
-def read_select_metadata() -> dict:
-  """Read select package metadata."""
+def read_metadata_for_zenodo() -> dict:
+  """Read package metadata for Zenodo."""
   package = glenglat.read_metadata()
   # Limit to select tables
   package['resources'] = [
     resource for resource in package['resources']
     if resource['name'] in ('source', 'borehole', 'profile', 'measurement')
   ]
+  # HACK: Tag non-en grant titles as 'en' (Zenodo error)
+  # HACK: Add placeholder grant number (Zenodo error)
+  for person in package['contributors']:
+    for grant in person.get('funding', []):
+      award = grant['award']
+      if 'title' in award and 'en' not in award['title']:
+        award['title']['en'] = list(award['title'].values())[0]
+      if 'number' not in award:
+        award['number'] = '–'
   return package
 
 
@@ -133,7 +142,7 @@ def render_zenodo_description() -> str:
     ROOT.joinpath('templates/zenodo-description.md.jinja'),
     {
       'introduction': extract_readme_introduction(),
-      'package': read_select_metadata()
+      'package': read_metadata_for_zenodo()
     }
   )
   return markdown.markdown(md, extensions=['tables'])
@@ -143,7 +152,7 @@ def build_zenodo_readme(
   doi: Optional[str] = None, time: Optional[datetime.datetime] = None
 ) -> Path:
   """Write Zenodo readme as `build/README.md`."""
-  metadata = read_select_metadata()
+  metadata = read_metadata_for_zenodo()
   time = time or datetime.datetime.now(datetime.timezone.utc)
   doi = doi or metadata['id']
   # Render description with flattened field descriptions
@@ -182,7 +191,7 @@ def build_metadata_as_json(
     time = time.astimezone(datetime.timezone.utc)
   else:
     time = datetime.datetime.now(datetime.timezone.utc)
-  metadata = read_select_metadata()
+  metadata = read_metadata_for_zenodo()
   if doi:
     metadata['id'] = doi
   metadata['created'] = time.strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -211,7 +220,7 @@ def build_for_zenodo(
     Path to the zip archive.
   """
   BUILD_PATH.mkdir(exist_ok=True)
-  metadata = read_select_metadata()
+  metadata = read_metadata_for_zenodo()
   # Extract data file paths from metadata
   data_paths = []
   for resource in metadata['resources']:
@@ -338,7 +347,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
   # https://github.com/inveniosoftware/invenio-rdm-records/tree/master/invenio_rdm_records/fixtures/data/vocabularies
   time = time or datetime.datetime.now(datetime.timezone.utc)
   description = render_zenodo_description()
-  package = read_select_metadata()
+  package = read_metadata_for_zenodo()
   dfs = glenglat.read_data()
   start_date, end_date = get_measurement_interval(dfs)
   # List unique grants
@@ -611,7 +620,7 @@ def is_repo_publishable() -> Tuple[str, str]:
     )
   # Tag is not already in use
   REPO.remotes['origin'].fetch()
-  tag = 'v' + read_select_metadata()['version']
+  tag = 'v' + read_metadata_for_zenodo()['version']
   existing_tags = [repo_tag for repo_tag in REPO.tags if repo_tag.name == tag]
   if existing_tags:
     commit = existing_tags[0].commit
