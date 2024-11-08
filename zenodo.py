@@ -628,7 +628,7 @@ def is_repo_publishable() -> Tuple[str, str]:
   return REPO.head.commit, tag
 
 
-def publish_to_zenodo(sandbox: bool = True) -> None:
+def publish_to_zenodo(sandbox: bool = True, new: bool = False) -> None:
   """
   Publish glenglat as a Zenodo deposition.
 
@@ -640,6 +640,9 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
   ----------
   sandbox
     Use the Zenodo Sandbox rather than the production Zenodo.
+  new
+    Create a new record draft rather than a new version draft
+    (sandbox only).
   """
   # Render metadata
   time = datetime.datetime.now(datetime.timezone.utc)
@@ -650,21 +653,26 @@ def publish_to_zenodo(sandbox: bool = True) -> None:
     commit, tag = is_repo_publishable()
     print(f'Publishing commit {commit} as {tag}.')
   # Create record
-  record = find_record(q='glenglat', allversions=False, sandbox=sandbox)
-  if not record:
-    print('No existing records found. A new draft will be created.')
+  if new:
+    if not sandbox:
+      raise ValueError('Forcing a new record draft is only supported in the sandbox.')
     draft = create_draft(sandbox=sandbox)
   else:
-    zenodo_version = record['metadata']['version']
-    if version == zenodo_version:
-      raise Exception(
-        f"A record for v{version} already exists: {record['links']['self_html']}"
+    record = find_record(q='glenglat', allversions=False, sandbox=sandbox)
+    if not record:
+      print('No existing records found. A new draft will be created.')
+      draft = create_draft(sandbox=sandbox)
+    else:
+      zenodo_version = record['metadata']['version']
+      if version == zenodo_version:
+        raise Exception(
+          f"A record for v{version} already exists: {record['links']['self_html']}"
+        )
+      print(
+        f'Found a record for v{zenodo_version}. A draft for v{version} will be created.'
       )
-    print(
-      f'Found a record for v{zenodo_version}. A draft for v{version} will be created.'
-    )
-    draft = create_or_get_new_version_draft(record)
-    draft = clear_draft(draft)
+      draft = create_or_get_new_version_draft(record)
+      draft = clear_draft(draft)
   # Update deposition metadata
   draft = edit_draft(draft, metadata=metadata)
   # Reserve a DOI
