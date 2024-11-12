@@ -193,7 +193,7 @@ resources:
             unique: true
             pattern: '[a-z]+[0-9]{4}[a-z]?'
         - name: author
-          description: Author names (optionally followed by their ORCID in parentheses) as a pipe-delimited list.
+          description: Author names (optionally followed by their ORCID or contact email in parentheses) as a pipe-delimited list.
           type: string
           constraints:
             required: true
@@ -276,10 +276,10 @@ resources:
           description: Volume number of the item or container.
           type: integer
         - name: issue
-          description: Issue number (e.g. 1) or range (e.g. 1-2) of the item or container, with an optional letter prefix (e.g. F1).
+          description: Issue number (e.g. 1) or range (e.g. 1-2) of the item or container, with an optional letter prefix (e.g. F1) or part number (e.g. 75pt2).
           type: string
           constraints:
-            pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?'
+            pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?|[0-9]+pt[0-9]'
         - name: page
           description: Page number (e.g. 1) or range (e.g. 1-2) of the item in the container, with an optional letter prefix (e.g. S1).
           type: string
@@ -507,10 +507,12 @@ resources:
             - submitted: Provided as numbers in data submission
             - published: Numbers read from original publication
             - digitized: Digitized from published plot(s) with Plot Digitizer
+            - digitized-discrete: Digitized with Plot Digitizer from discrete points of depth versus temperature
+            - digitized-continuous: Digitized with Plot Digitizer from a continuous data source (e.g. line plot of depth versus temperature)
           type: string
           constraints:
             required: true
-            enum: [submitted, published, digitized]
+            enum: [submitted, published, digitized, digitized-discrete, digitized-continuous]
         - name: date_min
           description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           type: date
@@ -644,7 +646,7 @@ resources:
           type: string
           constraints:
             unique: true
-            pattern: '[\w\.\-]+@[\w\-]+(\.(\w){2,})+( \| [\w\.\-]+@[\w\-]+(\.(\w){2,})+)*'
+            pattern: '[\w\.\-]+@[\w\-]+(\.\w{2,})+( \| [\w\.\-]+@[\w\-]+(\.\w{2,})+)*'
         - name: urls
           description: Work profile URLs, as a pipe-delimited list.
           type: string

@@ -1467,3 +1467,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 764,4,machguth2023,published,2003-06-14,2003-06-14,,,,
 765,1,machguth2023,published,2003-06-03,2003-06-03,,,,label: core2003_4600_22m | measurement_origin: Also shown (but not labeled) in mikhalenko2005a (Figure 11)
 766,1882,machguth2023,published,2023-08-01,2023-08-01,,,True,
+767,1,tsutaki2017,digitized-discrete,2014-08-03,2014-08-03,,,True,
+768,1,tsutaki2017,digitized-discrete,2014-08-03,2014-08-03,,,True,
+769,1,tsutaki2017,digitized-discrete,2014-08-03,2014-08-03,,,True,

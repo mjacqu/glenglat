@@ -55,7 +55,9 @@ for path in ROOT.joinpath('sources').glob('**/*.xml'):
 # All digitizer files
 digitizer_files = pd.DataFrame(results)
 temp = dfs['profile'].rename(columns={'id': 'profile_id'})
-temp = temp[temp['measurement_origin'].eq('digitized')]
+temp = temp[temp['measurement_origin'].isin(
+  ['digitized', 'digitized-discrete', 'digitized-continuous']
+)]
 
 # All digitized profiles
 digitized_profiles = temp[['source_id', 'borehole_id', 'profile_id']].drop_duplicates()

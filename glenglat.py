@@ -47,6 +47,9 @@ ochar = r'[^\(\)\[\]\|\s]'
 ichar = r'[^\(\)\[\]\|]'
 phrase = fr'{ochar}{ichar}*{ochar}'
 
+EMAIL_REGEX = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
+"""Regular expression for an email address."""
+
 ORCID_REGEX = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
 """Regular expression for ORCID identifiers."""
 
@@ -55,7 +58,7 @@ person = fr'{phrase}(?: \[{phrase}\])?(?: \({ORCID_REGEX}\))?'
 PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 """Regular expression for a person title."""
 
-PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?P<orcid>{ORCID_REGEX})\))?'
+PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?:(?P<orcid>{ORCID_REGEX})|(?P<email>{EMAIL_REGEX}))\))?'
 """Regular expression for a person."""
 
 
@@ -322,9 +325,11 @@ def parse_person_string(person: str) -> dict:
   -------
   >>> parse_person_string('杉山 慎 [Sugiyama Shin] (0000-0001-5323-9558)')
   {'title': '杉山 慎 [Sugiyama Shin]', 'name': '杉山 慎', 'latin': 'Sugiyama Shin',
-  'orcid': 'https://orcid.org/0000-0001-5323-9558'}
+  'orcid': 'https://orcid.org/0000-0001-5323-9558', 'email': None}
   """
   match = re.fullmatch(PERSON_REGEX, person)
+  if match is None:
+    raise ValueError(f'Invalid person string: {person}')
   groups = match.groupdict()
   if groups['orcid']:
     groups['orcid'] = f'https://orcid.org/{groups["orcid"]}'
