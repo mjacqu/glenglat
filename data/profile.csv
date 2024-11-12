@@ -1470,3 +1470,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 767,1,tsutaki2017,digitized-discrete,2014-08-03,2014-08-03,,,True,
 768,1,tsutaki2017,digitized-discrete,2014-08-03,2014-08-03,,,True,
 769,1,tsutaki2017,digitized-discrete,2014-08-03,2014-08-03,,,True,
+770,1,vimeux2008,published,2005-03-01,2005-03-31,,,,
