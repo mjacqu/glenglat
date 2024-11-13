@@ -151,6 +151,13 @@ contributors:
         id: 01wwcfa26
     role: DataCollector
     status: creator
+  - title: Christian Vincent
+    path: https://orcid.org/0000-0002-9352-8167
+    affiliations:
+      - name: Institute of Environmental Geosciences (IGE), University of Grenoble Alpes (UGA), France
+        id: 01wwcfa26
+    role: DataCollector
+    status: creator
   - title: Lonnie G. Thompson
     path: https://orcid.org/0000-0001-5371-2579
     affiliations:
