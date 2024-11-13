@@ -294,8 +294,10 @@ def convert_people_to_english_list(people: str) -> str:
 def convert_source_to_reference(source: pd.Series) -> dict:
   """Convert source to Zenodo reference."""
   source = source[source.notnull()]
-  if 'author' not in source or 'year' not in source or 'title' not in source:
-    raise ValueError('Source must have author, year, and title')
+  if 'year' not in source or 'title' not in source:
+    raise ValueError('Source must have year and title')
+  if 'author' not in source:
+    source['author'] = '——'
   # {authors} ({year}): {title}.
   s = f'{convert_people_to_english_list(source.author)} ({source.year}): {source.title}.'
   # Version {version}. {container_title}. {editors} (editors).

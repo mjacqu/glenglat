@@ -1475,3 +1475,14 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 771,2,matsuda2004,digitized-discrete,2002-07-01,2002-07-01,,,True,
 771,3,matsuda2004,digitized-discrete,2002-08-01,2002-08-01,,,True,
 771,4,matsuda2004,digitized-discrete,2002-09-01,2002-09-01,,,True,
+772,1,fristrup1960,digitized-continuous,1957-06-12,1957-06-12,,,,
+772,2,fristrup1960,digitized-continuous,1957-07-10,1957-07-10,,,,
+772,3,fristrup1960,digitized-continuous,1957-08-17,1957-08-17,,,,
+772,4,fristrup1960,digitized-continuous,1957-09-02,1957-09-02,,,,
+773,1,fristrup1960,digitized-continuous,1957-06-27,1957-06-27,,,,
+773,2,fristrup1960,digitized-continuous,1957-07-15,1957-07-15,,,,
+773,3,fristrup1960,digitized-continuous,1957-08-18,1957-08-18,,,,
+773,4,fristrup1960,digitized-continuous,1957-09-02,1957-09-02,,,,
+774,1,fristrup1960,digitized-continuous,1957-08-01,1957-08-31,,,,date_min/date_max: fristrup1961
+775,1,fristrup1960,digitized-continuous,1957-08-01,1957-08-31,,,,date_min/date_max: fristrup1961
+776,1,fristrup1960,digitized-continuous,1958-08-01,1958-08-31,,,,date_min/date_max: fristrup1961

@@ -196,7 +196,6 @@ resources:
           description: Author names (optionally followed by their ORCID or contact email in parentheses) as a pipe-delimited list.
           type: string
           constraints:
-            required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: year
           description: Year of publication.
@@ -249,6 +248,7 @@ resources:
           description: |-
             Language as ISO 639-1 two-letter language code.
 
+            - da: Danish
             - de: German
             - en: English
             - fr: French
@@ -260,6 +260,7 @@ resources:
           constraints:
             required: true
             enum:
+              - da
               - de
               - en
               - fr
