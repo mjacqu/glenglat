@@ -1,0 +1,14 @@
+From: Martina Barandun <martina.barandun@unifr.ch>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Cc: Ethan Welty <ethan.welty@geo.uzh.ch>
+Sent: 2024-11-12 10:45
+Subject: Abramov and Batysh Sook data in glenglat
+
+Hi Ethan and Mylene,
+
+Sorry I am a bit confused about what to correct now. I added the second profile but only for one year. The reason is that we have some issues with depth adjustment and therefore I did not initially send it. The temperatures however do barely change over time, so that I think its best just to send one. I hope that s fine.
+
+For the 422 borehole there was a mistake in calibration adjustment and the depth from surface. I corrected also for this now. Sorry for that. Now the data should be correct. I corrected everything just on the Data.xlsx file. Is that ok or do you want me to also adjust the other files?
+
+Best,
+Martina
