@@ -201,7 +201,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 137,1,li2011,digitized-continuous,2001-01-01,2001-12-31,,,,
 138,1,li2011,digitized-continuous,2006-01-01,2006-12-31,,,,
 139,1,liu2009,digitized-discrete,2008-06-01,2008-06-30,,,,
-140,1,liu2009,digitized-discrete,2005-08-01,2005-08-31,,,,
+140,1,liu2009,digitized-discrete,2005-08-22,2005-08-22,,,,date_min/date_max: liu2006
 141,1,liu2009,digitized-discrete,2007-06-01,2007-06-30,,,,
 142,1,liu2009,digitized-discrete,2005-10-01,2005-10-31,,,,
 143,1,luthi1999,digitized-discrete,1996-06-13,1996-06-18,,,True,
