@@ -507,13 +507,12 @@ resources:
 
             - submitted: Provided as numbers in data submission
             - published: Numbers read from original publication
-            - digitized: Digitized from published plot(s) with Plot Digitizer
             - digitized-discrete: Digitized with Plot Digitizer from discrete points of depth versus temperature
             - digitized-continuous: Digitized with Plot Digitizer from a continuous data source (e.g. line plot of depth versus temperature)
           type: string
           constraints:
             required: true
-            enum: [submitted, published, digitized, digitized-discrete, digitized-continuous]
+            enum: [submitted, published, digitized-discrete, digitized-continuous]
         - name: date_min
           description: Measurement date, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           type: date
