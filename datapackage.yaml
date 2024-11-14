@@ -177,6 +177,12 @@ contributors:
       - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: DataCollector
     status: creator
+  - title: Martin Hoelzle
+    path: https://orcid.org/0000-0002-3591-4377
+    affiliations:
+      - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
+    role: DataCollector
+    status: creator
 profile: tabular-data-package
 resources:
   - name: source
