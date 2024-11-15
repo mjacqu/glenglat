@@ -1487,3 +1487,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 775,1,fristrup1960,digitized-continuous,1957-08-01,1957-08-31,,,,date_min/date_max: fristrup1961
 776,1,fristrup1960,digitized-continuous,1958-08-01,1958-08-31,,,,date_min/date_max: fristrup1961
 777,1,barandun2024,submitted,2013-08-17,2013-08-17,,,True,
+778,1,gidrometeoizdat1978,published,1971-01-01,1971-01-31,,,,
+779,1,gidrometeoizdat1978,published,1971-05-01,1971-05-31,,,,
+780,1,gidrometeoizdat1978,published,1971-07-01,1971-07-15,,,,Based on 'the temperature along the entire section is equal to zero' (Section 1.2.4)
+781,1,gidrometeoizdat1978,published,1971-01-01,1971-01-31,,,,
+782,1,gidrometeoizdat1978,published,1971-08-01,1971-08-31,,,,Measurements to 6 m depth may be from a shallow borehole drilled next to this borehole | [flag] Temperature increase at 30 m may be due to the proximity of a meltwater-filled cavity (Section 1.2.4)
