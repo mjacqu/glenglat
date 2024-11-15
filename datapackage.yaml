@@ -164,7 +164,7 @@ contributors:
       - name: Byrd Polar and Climate Research Center, Ohio State University (OSU), United States
         id: 030e1gk87
     role: DataCollector
-    status: contributor
+    status: creator
   - title: 张通 [Zhang Tong]
     email: tzhang@bnu.edu.cn
     affiliations:
