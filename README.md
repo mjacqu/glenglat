@@ -62,6 +62,7 @@ By submitting data to glenglat, you agree to be listed as a contributor in the m
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
 | `temperature_uncertainty` | Estimated temperature uncertainty (as reported). | number [°C] |  |
 | `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as {url} or {author} {year} ({url}). | string | pattern: `[^\s]+( [^\s]+)*` |
+| `funding` | Funding sources as a pipe-delimited list. Each entry must be in the format {funder} [{rorid}] > {award} [{number}] ({url}), where only the funder is required, funder and award cannot contain parentheses, and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49). | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`
 

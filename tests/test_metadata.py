@@ -1,7 +1,7 @@
 import pandas as pd
 
 from load import dfs, package
-from glenglat import PERSON_REGEX
+from glenglat import PERSON_REGEX, FUNDING_REGEX
 
 
 def test_personal_communication_author_listed_as_contributor() -> None:
@@ -69,3 +69,16 @@ def test_curator_listed_as_curator() -> None:
   ).convert_dtypes()
   valid = merge['index_x'].notnull() & merge['index_y'].notnull()
   assert valid.all(), merge[~valid]
+
+
+def test_funding_has_correct_format() -> None:
+  """Funding strings are in the correct format."""
+  funding = (
+    dfs['borehole']['funding']
+    .str.split(' | ', regex=False)
+    .explode()
+    .dropna()
+    .drop_duplicates()
+  )
+  valid = funding.str.fullmatch(FUNDING_REGEX)
+  assert valid.all(), funding[~valid].to_list()

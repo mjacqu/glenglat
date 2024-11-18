@@ -128,6 +128,11 @@ resources:
       description: Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as {url} or {author} {year} ({url}).
       constraints:
         pattern: '[^\s]+( [^\s]+)*'
+    - name: funding
+      type: string
+      description: Funding sources as a pipe-delimited list. Each entry must be in the format {funder} [{rorid}] > {award} [{number}] ({url}), where only the funder is required, funder and award cannot contain parentheses, and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
+      constraints:
+        pattern: '[^\s]+( [^\s]+)*'
     missingValues:
     - ''
     primaryKey:
