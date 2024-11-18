@@ -39,6 +39,9 @@ Zenodo name format (given name, family name) for contributors.
 If not specified, the last word is assumed to be the family name.
 """
 
+PLACEHOLDER = '——'
+"""Placeholder for missing values."""
+
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
 
@@ -303,7 +306,7 @@ def convert_source_to_reference(source: pd.Series) -> dict:
   if 'year' not in source or 'title' not in source:
     raise ValueError('Source must have year and title')
   if 'author' not in source:
-    source['author'] = '——'
+    source['author'] = PLACEHOLDER
   # {authors} ({year}): {title}.
   s = f'{convert_people_to_english_list(source.author)} ({source.year}): {source.title}.'
   # Version {version}. {container_title}. {editors} (editors).
@@ -366,7 +369,7 @@ def convert_funding_to_zenodo(funding: dict) -> dict:
       result['award']['number'] = funding['number']
   else:
     # HACK: Grant number is required
-    result['award']['number'] = '——'
+    result['award']['number'] = PLACEHOLDER
   if 'url' in funding and funding['url']:
     result['award']['identifiers'] = {'scheme': 'url', 'identifier': funding['url']}
   return result
