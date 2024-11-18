@@ -358,20 +358,26 @@ def convert_funding_to_zenodo(funding: dict) -> dict:
   result = {'funder': {'name': funding['funder']}}
   if 'rorid' in funding and funding['rorid']:
     result['funder']['id'] = funding['rorid']
+  if any(key in funding and funding[key] for key in ('award', 'number', 'url')):
+    result['award'] = {}
   if 'award' in funding and funding['award']:
     # HACK: Language codes other than 'en' (at least 'da') result in error
     result['award'] = {'title': {'en': funding['award']}}
   if 'number' in funding and funding['number']:
     if '::' in funding['number']:
-      # Award number in OpenAIRE format
+      # Award number in OpenAIRE format (rorid::number)
       result['award']['id'] = funding['number']
     else:
       result['award']['number'] = funding['number']
-  else:
-    # HACK: Grant number is required
-    result['award']['number'] = PLACEHOLDER
   if 'url' in funding and funding['url']:
     result['award']['identifiers'] = {'scheme': 'url', 'identifier': funding['url']}
+  if 'award' in result:
+    if 'title' not in result['award']:
+      # HACK: Award title is required
+      result['award']['title'] = PLACEHOLDER
+    if 'number' not in result['award']:
+      # HACK: Award number is required
+      result['award']['number'] = PLACEHOLDER
   return result
 
 
