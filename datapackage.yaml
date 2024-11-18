@@ -424,8 +424,13 @@ resources:
           contraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
+        - name: investigators
+          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry should be in the format {person} ({agencies}) [{notes}], where either person or at least one (semicolon-delimited) agencies is required.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
         - name: funding
-          description: Funding sources as a pipe-delimited list. Each entry must be in the format {funder} [{rorid}] > {award} [{number}] ({url}), where only the funder is required, funder and award cannot contain parentheses, and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
+          description: Funding sources as a pipe-delimited list. Each entry should be in the format {funder} [{rorid}] > {award} [{number}] ({url}), where only the funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
