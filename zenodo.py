@@ -284,7 +284,13 @@ def convert_contributor_to_zenodo(person: dict) -> dict:
       ]
     },
     'role': {'id': person['role'].lower()},
-    'affiliations': person['affiliations']
+    'affiliations': [
+      {
+        'name': agency['name'],
+        **({'id': agency['rorid']} if 'rorid' in agency else {})
+      }
+      for agency in person.get('affiliations', [])
+    ]
   }
 
 

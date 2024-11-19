@@ -20,14 +20,14 @@ licenses:
 contributors:
 # role: DataCite contributor type (https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType)
 # status: Zenodo authorship status (creator or contributor)
-# affiliations: Zenodo format (https://inveniordm.docs.cern.ch/reference/metadata/#funding-references-0-n) with RORID
+# affiliations: agency name (name, required), RORID (rorid)
 # funding: funder name (funder, required), RORID (rorid), award title (award), award number (number), and URL (url)
   - title: Mylène Jacquemart
     path: https://orcid.org/0000-0003-2501-7645
     affiliations:
       - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
       - name: Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
-        id: 04bs5yc70
+        rorid: 04bs5yc70
     email: jacquemart@vaw.baug.ethz.ch
     role: ProjectLeader
     status: creator
@@ -41,7 +41,7 @@ contributors:
     path: https://orcid.org/0000-0001-8046-2210
     affiliations:
       - name: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
-        id: 01jtrvx49
+        rorid: 01jtrvx49
     role: ProjectLeader
     status: creator
   - title: Guillem Carcanade
@@ -71,7 +71,7 @@ contributors:
     path: https://orcid.org/0000-0003-4287-6150
     affiliations:
       - name: International Centre for Integrated Mountain Development (ICIMOD), Nepal
-        id: 024brep87
+        rorid: 024brep87
     role: DataCollector
     status: creator
   - title: Rainer Prinz
@@ -102,21 +102,21 @@ contributors:
     path: https://orcid.org/0000-0001-9162-3518
     affiliations:
       - name: Institute of Environmental Geosciences (IGE), University of Grenoble Alpes (UGA), France
-        id: 01wwcfa26
+        rorid: 01wwcfa26
     role: DataCollector
     status: creator
   - title: Christian Vincent
     path: https://orcid.org/0000-0002-9352-8167
     affiliations:
       - name: Institute of Environmental Geosciences (IGE), University of Grenoble Alpes (UGA), France
-        id: 01wwcfa26
+        rorid: 01wwcfa26
     role: DataCollector
     status: creator
   - title: Lonnie G. Thompson
     path: https://orcid.org/0000-0001-5371-2579
     affiliations:
       - name: Byrd Polar and Climate Research Center, Ohio State University (OSU), United States
-        id: 030e1gk87
+        rorid: 030e1gk87
     role: DataCollector
     status: creator
   - title: 张通 [Zhang Tong]
