@@ -61,6 +61,14 @@ PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?:(?P<orcid>{ORCID_REGEX})|(?P<email>{EMAIL_REGEX}))\))?'
 """Regular expression for a person."""
 
+RORID_REGEX = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
+"""Regular expression for ROR identifiers."""
+
+FUNDING_REGEX = fr'(?P<funder>{phrase})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{phrase}))?(?: \[(?P<number>{phrase})\])?(?: \((?P<url>https?:\/\/[^\)]+)\))?)?'
+"""Regular expression for a funding source."""
+
+INVESTIGATOR_REGEX = fr'(?P<person>{phrase})?(?: ?\((?P<agencies>{phrase}(?:; {phrase})*)\))?(?: \[(?P<notes>[^\]]+)\])?'
+"""Regular expression for an investigator."""
 
 # ---- Configure YAML rendering ----
 

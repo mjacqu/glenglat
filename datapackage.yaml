@@ -20,33 +20,28 @@ licenses:
 contributors:
 # role: DataCite contributor type (https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/contributorType)
 # status: Zenodo authorship status (creator or contributor)
-# affiliations: Zenodo format (https://inveniordm.docs.cern.ch/reference/metadata/#funding-references-0-n) with RORID
-# funding: Zenodo format (https://inveniordm.docs.cern.ch/reference/metadata/#funding-references-0-n) with RORID
+# affiliations: agency name (name, required), RORID (rorid)
+# funding: funder name (funder, required), RORID (rorid), award title (award), award number (number), and URL (url)
   - title: Mylène Jacquemart
     path: https://orcid.org/0000-0003-2501-7645
     affiliations:
       - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
       - name: Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
-        id: 04bs5yc70
+        rorid: 04bs5yc70
     email: jacquemart@vaw.baug.ethz.ch
     role: ProjectLeader
     status: creator
     funding:
-      - funder:
-          name: Swiss National Science Foundation
-          id: 00yjd3n13
-        award:
-          title:
-            en: Process-based modelling of global glacier changes (PROGGRES)
-          id: 00yjd3n13::184634
-          identifiers:
-            - scheme: url
-              identifier: https://data.snf.ch/grants/grant/184634
+      - funder: Swiss National Science Foundation
+        rorid: 00yjd3n13
+        award: 'PROGGRES: Process-based modelling of global glacier changes'
+        number: 00yjd3n13::184634
+        url: https://data.snf.ch/grants/grant/184634
   - title: Ethan Welty
     path: https://orcid.org/0000-0001-8046-2210
     affiliations:
       - name: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
-        id: 01jtrvx49
+        rorid: 01jtrvx49
     role: ProjectLeader
     status: creator
   - title: Guillem Carcanade
@@ -76,7 +71,7 @@ contributors:
     path: https://orcid.org/0000-0003-4287-6150
     affiliations:
       - name: International Centre for Integrated Mountain Development (ICIMOD), Nepal
-        id: 024brep87
+        rorid: 024brep87
     role: DataCollector
     status: creator
   - title: Rainer Prinz
@@ -85,26 +80,6 @@ contributors:
       - name: Department of Atmospheric and Cryospheric Sciences (ACINN), University of Innsbruck (UIBK), Austria
     role: DataCollector
     status: creator
-    funding:
-      - funder:
-          name: Greenland Government
-          id: 00ra6qr58
-        award:
-          title:
-            da: Tips og Lottomidlerne Pulje C
-          identifiers:
-            - scheme: url
-              identifier: https://www.sullissivik.gl/Emner/Kultur_og_Fritid/Tilskud/Tips-og-lottomidlerne-til-almennyttige-formaal-pulje-C_samlet
-      - funder:
-          name: Australian Science Fund
-          id: 013tf3c58
-        award:
-          title:
-            en: Land-terminating ice cliffs in North Greenland (LATTICE)
-          number: P 36306
-          identifiers:
-            - scheme: url
-              identifier: https://www.fwf.ac.at/en/research-radar/10.55776/P36306
   - title: Jakob Abermann
     path: https://orcid.org/0000-0003-1285-1868
     affiliations:
@@ -123,46 +98,25 @@ contributors:
       - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: DataCollector
     status: creator
-    funding:
-      - funder:
-          name: Swiss Agency for Development and Cooperation
-          id: 02e5d6q93
-        award:
-          title:
-            en: Cryospheric Climate Services for improved Adaptation (CICADA)
-          number: '81049674'
-          identifiers:
-            - scheme: url
-              identifier: https://www.unifr.ch/geo/cryosphere/en/projects/glacier-monitoring-and-dynamics/cicada.html
-      - funder:
-          name: Swiss Agency for Development and Cooperation
-          id: 02e5d6q93
-        award:
-          title:
-            en: Capacity Building and Twinning for Climate Observing Systems (CATCOS)
-          number: 7F-08114.1 & 7F-08114.02.01
-          identifiers:
-            - scheme: url
-              identifier: https://www.unifr.ch/geo/cryosphere/en/projects/glacier-monitoring-and-dynamics/archive/catcos.html
   - title: Olivier Gagliardini
     path: https://orcid.org/0000-0001-9162-3518
     affiliations:
       - name: Institute of Environmental Geosciences (IGE), University of Grenoble Alpes (UGA), France
-        id: 01wwcfa26
+        rorid: 01wwcfa26
     role: DataCollector
     status: creator
   - title: Christian Vincent
     path: https://orcid.org/0000-0002-9352-8167
     affiliations:
       - name: Institute of Environmental Geosciences (IGE), University of Grenoble Alpes (UGA), France
-        id: 01wwcfa26
+        rorid: 01wwcfa26
     role: DataCollector
     status: creator
   - title: Lonnie G. Thompson
     path: https://orcid.org/0000-0001-5371-2579
     affiliations:
       - name: Byrd Polar and Climate Research Center, Ohio State University (OSU), United States
-        id: 030e1gk87
+        rorid: 030e1gk87
     role: DataCollector
     status: creator
   - title: 张通 [Zhang Tong]
@@ -469,6 +423,16 @@ resources:
           type: string
           contraints:
             required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: investigators
+          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry should be in the format {person} ({agencies}) [{notes}], where either person or at least one (semicolon-delimited) agencies is required.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: funding
+          description: Funding sources as a pipe-delimited list. Each entry should be in the format {funder} [{rorid}] > {award} [{number}] ({url}), where only the funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
+          type: string
+          constraints:
             pattern: '[^\s]+( [^\s]+)*'
       missingValues: ['']
       primaryKey: [id]

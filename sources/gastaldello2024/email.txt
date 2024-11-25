@@ -132,3 +132,24 @@ Marcus
 ----------
 
 [...] Discussions of a resubmission because of some incorrect drilling dates and an accidental scrambling of borehole and profile identifiers. These issues were circumvented by Ethan by extracting data from the original sources, where possible, and an earlier version of the database to which Marcus Gastaldello had access (cryomap2023).
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-12 14:53
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hello Ethan,
+
+Please find attached the updated spreadsheet [Monte Rosa Boreholes.xlsx].
+
+I’ve updated all identification numbers to match the database and corrected previous mistakes. All measurements within this spreadsheet are contained within your spreadsheet, except a repeat measurement for the CG77-1 borehole in 1978 (id 1 – label CG77-1/78), that I’ve highlighted in orange on the measurements tab.
+
+I’ve added some additional information regarding all funding sources for both the drilling and measurement of boreholes, as well as added any missing references.
+
+Do let me know if any changes are required.
+
+Many thanks,
+Marcus

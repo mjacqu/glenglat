@@ -39,6 +39,9 @@ Zenodo name format (given name, family name) for contributors.
 If not specified, the last word is assumed to be the family name.
 """
 
+PLACEHOLDER = '——'
+"""Placeholder for missing values."""
+
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
 
@@ -47,21 +50,27 @@ dotenv.load_dotenv(ROOT.joinpath('.env'))
 
 def read_metadata_for_zenodo() -> dict:
   """Read package metadata for Zenodo."""
+  dfs = glenglat.read_data()
   package = glenglat.read_metadata()
   # Limit to select tables
   package['resources'] = [
     resource for resource in package['resources']
     if resource['name'] in ('source', 'borehole', 'profile', 'measurement')
   ]
-  # HACK: Tag non-en grant titles as 'en' (Zenodo error)
-  # HACK: Add placeholder grant number (Zenodo error)
-  for person in package['contributors']:
-    for grant in person.get('funding', []):
-      award = grant['award']
-      if 'title' in award and 'en' not in award['title']:
-        award['title']['en'] = list(award['title'].values())[0]
-      if 'number' not in award:
-        award['number'] = '–'
+  # Extract funding from borehole table
+  if 'funding' in package:
+    raise ValueError('Funding already present in package metadata')
+  package['funding'] = (
+    dfs['borehole']['funding']
+    .dropna()
+    .str.split(' | ', regex=False)
+    .explode()
+    .drop_duplicates()
+    .str.extract(glenglat.FUNDING_REGEX)
+    .convert_dtypes()
+    .replace({pd.NA: None})
+    .to_dict(orient='records')
+  )
   return package
 
 
@@ -275,7 +284,13 @@ def convert_contributor_to_zenodo(person: dict) -> dict:
       ]
     },
     'role': {'id': person['role'].lower()},
-    'affiliations': person['affiliations']
+    'affiliations': [
+      {
+        'name': agency['name'],
+        **({'id': agency['rorid']} if 'rorid' in agency else {})
+      }
+      for agency in person.get('affiliations', [])
+    ]
   }
 
 
@@ -297,7 +312,7 @@ def convert_source_to_reference(source: pd.Series) -> dict:
   if 'year' not in source or 'title' not in source:
     raise ValueError('Source must have year and title')
   if 'author' not in source:
-    source['author'] = '——'
+    source['author'] = PLACEHOLDER
   # {authors} ({year}): {title}.
   s = f'{convert_people_to_english_list(source.author)} ({source.year}): {source.title}.'
   # Version {version}. {container_title}. {editors} (editors).
@@ -343,6 +358,35 @@ def convert_source_to_reference(source: pd.Series) -> dict:
   return result
 
 
+def convert_funding_to_zenodo(funding: dict) -> dict:
+  """Convert funding to Zenodo funding."""
+  # https://inveniordm.docs.cern.ch/reference/metadata/#funding-references-0-n
+  result = {'funder': {'name': funding['funder']}}
+  if 'rorid' in funding and funding['rorid']:
+    result['funder']['id'] = funding['rorid']
+  if any(key in funding and funding[key] for key in ('award', 'number', 'url')):
+    result['award'] = {}
+  if 'award' in funding and funding['award']:
+    # HACK: Language codes other than 'en' (at least 'da') result in error
+    result['award'] = {'title': {'en': funding['award']}}
+  if 'number' in funding and funding['number']:
+    if '::' in funding['number']:
+      # Award number in OpenAIRE format (rorid::number)
+      result['award']['id'] = funding['number']
+    else:
+      result['award']['number'] = funding['number']
+  if 'url' in funding and funding['url']:
+    result['award']['identifiers'] = {'scheme': 'url', 'identifier': funding['url']}
+  if 'award' in result:
+    if 'title' not in result['award']:
+      # HACK: Award title is required
+      result['award']['title'] = PLACEHOLDER
+    if 'number' not in result['award']:
+      # HACK: Award number is required
+      result['award']['number'] = PLACEHOLDER
+  return result
+
+
 def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
   """Render Zenodo metadata."""
   # https://inveniordm.docs.cern.ch/reference/metadata/#metadata
@@ -352,12 +396,13 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
   package = read_metadata_for_zenodo()
   dfs = glenglat.read_data()
   start_date, end_date = get_measurement_interval(dfs)
-  # List unique grants
+  # List all grants, dropping duplicates
   grants = []
   for person in package['contributors']:
     for grant in person.get('funding', []):
-      if grant not in grants:
-        grants.append(grant)
+      grants.append(grant)
+  grants.extend(package.get('funding', []))
+  grants = list({frozenset(grant.items()): grant for grant in grants}.values())
   # HACK: Convert source to string to facilitate printing as a reference
   dfs['source'] = dfs['source'].astype('string')
   return {
@@ -396,7 +441,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
         'resource_type': {'id': 'dataset'}
       }
     ],
-    'funding': grants,
+    'funding': [convert_funding_to_zenodo(grant) for grant in grants],
     # References
     'references': [
       convert_source_to_reference(dfs['source'].loc[i])
