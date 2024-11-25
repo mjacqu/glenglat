@@ -52,12 +52,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 32,7,laternser1992,published,1991-08-27,1991-08-27,11:15:00,2,True,
 33,1,laternser1992,published,1991-08-02,1991-08-07,,,True,equilibrated: Achieved by extrapolation | label: CG91-A/91 in hoelzle2011
 34,1,suter2001,digitized-discrete,1994-04-30,1994-05-03,,,True,equilibrated: Achieved by extrapolation
-34,2,gastaldello2024,submitted,1994-06-01,1994-06-01,08:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
-34,3,gastaldello2024,submitted,1994-09-07,1994-09-07,08:30:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
+34,2,gastaldello2024,submitted,1994-06-01,1994-06-01,08:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4)
+34,3,gastaldello2024,submitted,1994-09-07,1994-09-07,08:30:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4)
 35,1,suter2001,digitized-discrete,1994-04-30,1994-05-03,,,True,equilibrated: Achieved by extrapolation
-35,2,gastaldello2024,submitted,1994-06-01,1994-06-01,20:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
-35,3,gastaldello2024,submitted,1994-09-05,1994-09-05,17:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4) | time: cryomap2023
-36,1,gastaldello2024,submitted,1994-10-31,1994-10-31,13:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 5) | time: cryomap2023
+35,2,gastaldello2024,submitted,1994-06-01,1994-06-01,20:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4)
+35,3,gastaldello2024,submitted,1994-09-05,1994-09-05,17:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4)
+36,1,gastaldello2024,submitted,1994-10-31,1994-10-31,13:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 5)
 40,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
 41,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
 42,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
@@ -1182,7 +1182,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 651,1,gastaldello2024,submitted,1999-05-29,1999-05-29,09:40:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
 652,1,gastaldello2024,submitted,1999-05-29,1999-05-29,09:30:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
 653,1,gastaldello2024,submitted,1999-05-30,1999-05-30,19:10:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
-654,1,gastaldello2024,submitted,1999-07-15,1999-07-15,18:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | time: cryomap2023
+654,1,gastaldello2024,submitted,1999-07-15,1999-07-15,18:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
 655,1,gastaldello2024,submitted,1999-05-30,1999-05-30,19:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
 656,1,gastaldello2024,submitted,1999-07-16,1999-07-16,17:50:00,2,True,equilibrated: Achieved by extrapolation (suter2002) | measurement_origin: Also reported in suter2002 (Figure 6.27)
 657,1,gastaldello2024,submitted,1999-05-31,1999-05-31,12:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
@@ -1198,11 +1198,11 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 667,1,gastaldello2024,submitted,1999-07-17,1999-07-17,12:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
 668,1,gastaldello2024,submitted,1999-07-17,1999-07-17,11:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
 669,1,gastaldello2024,submitted,1999-07-17,1999-07-17,15:00:00,2,True,equilibrated: Achieved by extrapolation (suter2002)
-670,1,gastaldello2024,submitted,1994-06-02,1994-06-02,07:30:00,2,,time: cryomap2023
-671,1,gastaldello2024,submitted,1994-06-01,1994-06-01,15:07:00,2,,time: cryomap2023
-671,2,gastaldello2024,submitted,1994-09-06,1994-09-06,12:40:00,2,True,time: cryomap2023
-672,1,gastaldello2024,submitted,1994-05-31,1994-05-31,17:50:00,2,True,time: cryomap2023
-673,1,gastaldello2024,submitted,1994-10-31,1994-10-31,15:00:00,2,True,time: cryomap2023
+670,1,gastaldello2024,submitted,1994-06-02,1994-06-02,07:30:00,2,,
+671,1,gastaldello2024,submitted,1994-06-01,1994-06-01,15:07:00,2,,
+671,2,gastaldello2024,submitted,1994-09-06,1994-09-06,12:40:00,2,True,
+672,1,gastaldello2024,submitted,1994-05-31,1994-05-31,17:50:00,2,True,
+673,1,gastaldello2024,submitted,1994-10-31,1994-10-31,15:00:00,2,True,
 674,1,laternser1992,published,1991-08-04,1991-08-09,,,True,equilibrated: Achieved by extrapolation
 674,2,laternser1992,published,1991-10-26,1991-10-26,,,True,
 675,1,laternser1992,published,1991-06-25,1991-06-25,16:00:00,2,False,
