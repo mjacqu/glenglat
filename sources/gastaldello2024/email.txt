@@ -143,7 +143,7 @@ Subject: Firn temperature data Colle Gnifetti and Grigoriev
 
 Hello Ethan,
 
-Please find attached the updated spreadsheet [Monte Rosa Boreholes.xlsx].
+Please find attached the updated spreadsheet.
 
 I’ve updated all identification numbers to match the database and corrected previous mistakes. All measurements within this spreadsheet are contained within your spreadsheet, except a repeat measurement for the CG77-1 borehole in 1978 (id 1 – label CG77-1/78), that I’ve highlighted in orange on the measurements tab.
 
@@ -153,3 +153,182 @@ Do let me know if any changes are required.
 
 Many thanks,
 Marcus
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-15 17:27
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Marcus,
+
+Thank you for this revised submission.
+
+> All measurements within this spreadsheet are contained within your spreadsheet, except a repeat measurement for the CG77-1 borehole in 1978 (id 1 – label CG77-1/78), that I’ve highlighted in orange on the measurements tab.
+
+This profile was already present in glenglat (borehole-profile 1-2), as we had digitized it from Figure 2 in Blatter & Haeberli 1984. Are your numbers the result of a similar procedure, or really pulled from a more original data source?
+
+Rereading Haeberli 1991, I believe that both your submission and glenglat made the same mistake. Two boreholes were drilled 1 m apart in 1977, and I'm pretty sure that the 1977 profile from Haberli 1991 is from the first 50 m borehole (later filled with snow), and the 1978 profile from Blatter & Haeberli 1984 is from the second 65 m borehole. i.e. We have CG77-1/77 and CG77-2/78, not CG77-1/77 and 78. Would you agree?
+
+Then, very minor, but it seems like there are still some differences with the times reported in the cryomap database that Mylène found on the VAW servers (and which I put here for your reference: https://docs.google.com/spreadsheets/d/1KIuz_hGwGeR4WDcziQWmrtthFzKvcJ6rYxUMhIicRsw). These 1994 boreholes have times in this dataset but don't in your submission:
+
+GG94-0/94 (1994-06-02) – 07:30:00
+GG94-1/94A (1994-06-01) – 08:00:00
+GG94-1/94B (1994-09-07) – 08:30:00
+GG94-2/94A (1994-06-01) – 20:00:00
+GG94-2/94B (1994-09-05) – 17:00:00
+GG94-3/94A (1994-06-01) – 15:07:00
+GG94-3/94B (1994-09-06) – 12:40:00
+GG94-4/94 (1994-05-31) – 17:50:00
+GG94-A/94 (1994-10-31) – 13:00:00
+GG94-B/94 (1994-10-31) – 15:00:00
+
+And then one discrepancy for the time of the following profile. Note that 19:10:00 is the time in both sources for the GG99-15/99 profile reported immediately above, so maybe a copy-paste error in your submission? 1999-07-15 19:10 is also the same date and time reported for GG99-22/99 in both sources, so unlikely to also be the time of this borehole.
+LJ99-16/99 (1999-07-15) – 18:00:00 (cryomap) vs. 19:10:00 (your submission)
+
+[...]
+
+best,
+ethan
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-20 11:46
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Marcus,
+(email 2 of 2)
+
+I now had a chance to compare your submission more carefully to our database, and found a few deviations. I've listed them here: https://github.com/mjacqu/glenglat/issues/93
+
+Most are quite minor and mostly missing borehole attributes for us to fill in. But there are a few that suggest an error on your side, so I wanted to report these for your own data-compilation efforts. These are the ones listed with a dot instead of a checkbox.
+
+My one question is regarding the submitted temperature_uncertainty of 561 (CG08-1), which is 1.5. This borehole was not listed in your revised uncertainties table, but I presume that this very high uncertainty is a result of your reanalysis?
+
+[...]
+
+best,
+ethan
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-22 17:07
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hello Ethan,
+
+Thanks for all your hard work checking over the submission.
+
+In many cases they are small mistakes on my part that I have corrected in the attached version [Monte Rosa Boreholes.xlsx], although there are a few that I think need to be corrected in glenglat.
+
+Hopefully, this closes all discrepancies between the database and my submission.
+
+Cheers,
+Marcus
+
+Details below: [SUBMISSION] mistake in my submission that is now corrected ¦ [GLENGLAT] possible mistake in glenglat that needs to be corrected ¦ [INFO] additional information / question response]
+
+> This profile was already present in glenglat (borehole-profile 1-2), as we had digitized it from Figure 2 in Blatter & Haeberli 1984. Are your numbers the result of a similar procedure, or really pulled from a more original data source?
+
+SUBMISSION: No, this is your digitised version I acquired back in summer. I mistakenly assumed it was a new measurement because of the labelling mistake (see next point) and because I think it seems you have since updated the values, so they no longer match.
+
+> Rereading Haeberli 1991, I believe that both your submission and glenglat made the same mistake. Two boreholes were drilled 1 m apart in 1977, and I'm pretty sure that the 1977 profile from Haberli 1991 is from the first 50 m borehole (later filled with snow), and the 1978 profile from Blatter & Haeberli 1984 is from the second 65 m borehole. i.e. We have CG77-1/77 and CG77-2/78, not CG77-1/77 and 78. Would you agree?
+
+[SUBMISSION] Yes, you are completely correct – it should be CG77-1/77 and CG77-2/78.
+[GLENGLAT] Provisionally assigned borehole CG77-2 the new ID number 783 – correct as appropriate depending on glenglat update.
+[INFO] I have copied the same coordinates as CG77-1 as I am not entirely sure in which direction the metre offset is – I haven’t been able to find this info in the literature.
+
+> Then, very minor, but it seems like there are still some differences with the times reported in the cryomap database that Mylène found on the VAW servers [see above].
+
+[SUBMISSION] Yes, these are all the correct times. I’m not sure why they were missing but I shall put them back.
+
+> LJ99-16/99 (1999-07-15) – 18:00:00 (cryomap) vs. 19:10:00 (your submission)
+
+[SUBMISSION] Yes, that’s an Excel drag mistake on my part. 18:00:00 is the correct time.
+
+[...]
+
+> My one question is regarding the submitted temperature uncertainty of 561 (CG08-1), which is 1.5. This borehole was not listed in your revised uncertainties table, but I presume that this very high uncertainty is a result of your reanalysis?
+
+[SUBMISSION] Yes, I had not mentioned it in my previous submission because we had sort of discarded it as a bad measurement. I also hadn’t mentioned the CG19-1 borehole in my last submission because this is only a shallow depth thermistor chain contained above the depth of Zero Annual Amplitude (ZAA). It was a continuously logging (12-hour interval) chain designed to investigate annual/seasonal temperature variation near the surface.
+
+[Responses to https://github.com/mjacqu/glenglat/issues/93]
+
+> depth
+> 438 (CG00-A): 25 vs 40 -> 40 m borehole but measurements limited to first 25 m since water-filled below (see suter2002)
+
+[SUBMISSION] 40 m
+
+> 15 (CG91-B): 28
+> 17 (GG91-D): 30
+> 33 (CG91-A): 29
+> 674 (CG91-C): 30
+
+[GLENGLAT] Verified from source ( Laternser, M. (1992): Firntemperaturen in den Schweizer Alpen, MSc thesis, ETH-Zurich)
+
+> to_bed
+> 275 (CG05-1): False vs True -> True based on 'drilling stopped when the first dirt inclusions occurred in the ice. It is suggested that the glacier bed is likely to be up to 1 m deeper' (diez2013). Confirm that this is in the notes.
+> 572 (CG15-1): False vs True -> True based on 'In 2015, the Paul Scherrer Institute drilled a new borehole with a depth of 76 m down to bedrock (CG15-1)' (hoelzle2017)
+
+[SUBMISSION] This is my mistake; I assumed the glacier would still be around 120 m deep at this location as it is only around 70 m away at the saddle point. I’ve only recently understood how much the glacier thickness varies at Colle Gnifetti.
+[GLENGLAT] CG13-1 (KCC) and CG21-1 are therefore also TRUE reaching the bedrock.
+
+> elevation
+> 275 (CG05-1): 4425 vs 4452 -> 4452 (hoelzle2014)
+> 571 (SJ13-6): 4295 vs 4253 -> 4295 (hoelzle2017)
+> 572 (CG15-1): 4462 vs 4253 -> 4462 (hoelzle2017)
+
+[GLENGLAT] The values in our database should be correct (first values) – I have checked them with the Swissalti3D DEM product and topographic maps.
+
+> drill_method
+> 36 (GG94-A): thermal vs mechanical -> mechanical based on 'holes 94-0 (14 m), 94-A (120 m) and 94-B (28 m) resulted from electromechanical ice-core drilling' (suter2001)
+> 670 (GG94-0): thermal vs mechanical
+> 671 (GG94-B): thermal vs mechanical
+
+[SUBMISSION] Yes – mistake in my submission.
+
+> date_min
+> 1 (CG77-1): 1977-08-21 vs 1977-08-01 -> 1977-08-20 since likely same day as drilling since mechanical
+> 273 (CG82-1): 1982-07-23 vs 1982-01-01 -> 1982-07-23 (same for date_max) since likely same day as drilling since mechanical
+> 681 (CG76-1): 1976-09-09 vs 1976-07-01 -> 1976-09-08 (same for date_max) since likely day before drilling since mechanical
+
+[GLENGLAT] Submitted value verified from source (Haeberli, W. and Funk, M. (1991))
+
+> 438 (CG00-A): 2000-08-01 vs 2000-05-03 -> 2000-05-03 (suter2002)
+
+[GLENGLAT] Page 35 of Suter’s master thesis (2002) states that while the borehole was initially drilled on 2000-05-03, it was ‘completed’ (not sure exactly what that means) on 2000-08-10 (latest). I think the first 25 metres were drilled in May but then it was extended to 40 metres in August. Still the measurements only reach 25 metres due to water issue. It also states that temperatures were logged between 2000-08-24 to 2000-08-26. Incorrect in both glenglat and our database.
+[SUBMISSION] I have corrected this in my new submission.
+[INFO] Perhaps I can look into contacting Stephan Suter and searching through our archive data to validate this and find the times for all his 1999 campaign measurements.
+
+> 567 (CG13-2): 2013-08-22
+> 568 CG13-3 2013-08-22
+> 569 CG13-4 2013-08-21
+> 570 GG13-5 2013-08-22
+> 571 SJ13-6 2013-08-22
+> 572 CG15-1 2015-09-27
+> 575 CG21-1 2021-06-10
+
+[GLENGLAT] Verified with fieldwork data notes and GLAMOS reports.
+
+> 573 CG18-1 2018-10-12 -> 2018-12-14
+
+[GLENGLAT] Verified with fieldwork data notes and GLAMOS reports (Correct data in new submission if it wasn’t previously).
+
+> temperature_uncertainty
+> 561 (CG08-1): 1.5 vs 0.1 -> 1.5 assuming this was omitted from gastaldello2024a ? Suggested note: "temperature_uncertainty: Estimated as 1.5 °C (rather than 0.1 °C reported by darms2009) due to the poor quality of the extrapolation of the original unequilibrated measurements (gastaldello2024 and gastaldello2024a)"
+
+[SUBMISSION] See previous comment. We had omitted the result from our database because it was considered a ‘bad measurement’ – I have returned it to the database.
+
+> ice_depth
+> 15, 17, 33, 271, 567, 568, 569, 570, 571, 573, 574, 674, 681: INF
+> 1, 16, 36, 143, 144, 273, 275, 309, 438, 566, 572, 575, 670: Leave blank but write in notes that ice was reached but depth was not reported
+
+[INFO] These answers were based on a rough assumption that the firn-ice transition typically occurs in the 30m – 40 m depth range at Colle Gnifetti. It’s not something we record in our database but I might be able to find this information from the core analysis from mechanical drillings.
