@@ -227,7 +227,7 @@ Hello Ethan,
 
 Thanks for all your hard work checking over the submission.
 
-In many cases they are small mistakes on my part that I have corrected in the attached version [Monte Rosa Boreholes.xlsx], although there are a few that I think need to be corrected in glenglat.
+In many cases they are small mistakes on my part that I have corrected in the attached version, although there are a few that I think need to be corrected in glenglat.
 
 Hopefully, this closes all discrepancies between the database and my submission.
 
@@ -332,3 +332,45 @@ SUBMISSION: No, this is your digitised version I acquired back in summer. I mist
 > 1, 16, 36, 143, 144, 273, 275, 309, 438, 566, 572, 575, 670: Leave blank but write in notes that ice was reached but depth was not reported
 
 [INFO] These answers were based on a rough assumption that the firn-ice transition typically occurs in the 30m – 40 m depth range at Colle Gnifetti. It’s not something we record in our database but I might be able to find this information from the core analysis from mechanical drillings.
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-25 15:51
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Marcus,
+
+Thanks for the thorough point-by-point response. I implemented all of your suggested changes for glenglat, except for these few:
+
+1. I don't yet believe that we can infer that CG13-1 (KCC) reached the bed – I find no statement of this in the literature, and it is 100 m away from other boreholes. (I do however agree that CG21-1 probably reached the bed, since it has the same depth and location as CG03-1, which did).
+2. The elevation of CG05-1 is unlikely to be 4425 m, as it is 4450–4452 m in the literature and this is consistent with Swisstopo (https://s.geo.admin.ch/v470tawv0nae). Swissalti3D (at least the version I can access) doesn't include this location since it is on the Italian side.
+3. Drilling of CG77-1 must have completed by 1977-08-20 (not 1977-08-21) because it was measured on 1977-08-21, "25 h after the installation of the thermistor chain' (haeberli1991).
+4. I cannot find a mention of a month or day of drilling or measurement for CG82-1 in haeberli1991, which you gave as the source. Is the submitted date 1982-07-23 actually from field notes, and was it really drilled and measured on the same day?
+
+Thanks for clarifying that the ice_depth is inferred rather than measured. I'll omit this information then and it can always be updated in the future from core stratigraphy, where available.
+
+best,
+ethan
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-25 17:24
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Ethan,
+
+I’ve written my responses to your questions below. I’ll see if I can get some better evidence for your first and last queries.
+
+1. I can email someone who works at the Paul Scherrer Institute to double check this but I inferred that the CG13-1 reached the bedrock based on the GPR profiles of Konrad (2011) (https://doi.org/10.3189/2013JoG12J072) – it lies on the F3 profile line and therefore the measured radar depth would suggest a borehole of 71 metres would reach the bedrock.
+2. Sorry, I highlighted that wrong. The 4452-elevation value is correct and a typo in my submission carried forward from an error in our database (hoelzle2014). It is corrected in the attachment [Monte Rosa Boreholes.xlsx].
+[...]
+4. We are missing an exact date in our database, and I couldn’t find one in the sources or our archive of old notes. The date provided ‘1982-07-23’ is what is written in the recent GLAMOS reports and we believe it must have been directly communicated from Wilfried Haeberli. I’ll see if Martin Hoelzle has any written evidence of this.
+
+Many thanks,
+Marcus
