@@ -131,6 +131,12 @@ contributors:
       - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: DataCollector
     status: creator
+    funding:
+      - funder: Swiss Polar Institute
+      - rorid: 02z9ca723
+      - award: 'MAGNOLIA: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit'
+      - number: SPIEG-2022-003
+      - url: https://swisspolar.ch/projects/project-detail/?id=0bdacc92-ac90-4a08-98ee-5f78fcfb33d4
   - title: Martin Hoelzle
     path: https://orcid.org/0000-0002-3591-4377
     affiliations:
