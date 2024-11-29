@@ -58,12 +58,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 35,2,gastaldello2024,submitted,1994-06-01,1994-06-01,20:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4)
 35,3,gastaldello2024,submitted,1994-09-05,1994-09-05,17:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 4)
 36,1,gastaldello2024,submitted,1994-10-31,1994-10-31,13:00:00,2,True,measurement_origin: Also reported in suter2001 (Figure 5)
-40,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
-41,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
-42,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
-43,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
-44,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
-45,1,bjornsson1996,digitized-discrete,1992-01-01,1992-12-31,,,,
+40,1,bjornsson1996,digitized-discrete,1990-01-01,1992-04-26,,,,
+41,1,bjornsson1996,digitized-discrete,1990-01-01,1992-04-26,,,,
+42,1,bjornsson1996,digitized-discrete,1990-01-01,1992-04-26,,,,
+43,1,bjornsson1996,digitized-discrete,1990-01-01,1992-04-26,,,,
+44,1,bjornsson1996,digitized-discrete,1990-01-01,1992-04-26,,,,
+45,1,bjornsson1996,digitized-discrete,1990-01-01,1992-04-26,,,,
 46,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
 47,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
 48,1,blatter1985,published,1975-09-09,1975-09-09,,,True,
