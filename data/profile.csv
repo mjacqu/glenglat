@@ -104,13 +104,13 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 81,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,,
 82,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,,
 83,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,,
-84,1,eisen2009,digitized-discrete,2006-01-01,2006-12-31,,,,
-85,1,eisen2009,digitized-discrete,2007-01-01,2007-12-31,,,,
-86,1,eisen2009,digitized-discrete,2007-01-01,2007-12-31,,,,
-87,1,eisen2009,digitized-discrete,2004-01-01,2004-12-31,,,,
-88,1,eisen2009,digitized-discrete,2006-01-01,2006-12-31,,,,
-89,1,eisen2009,digitized-discrete,2006-01-01,2006-12-31,,,,
-90,1,gilbert2020,digitized-discrete,2014-01-01,2015-12-31,,,,
+84,1,eisen2009,digitized-discrete,2006-01-01,2006-12-31,,,True,
+85,1,eisen2009,digitized-discrete,2007-05-30,2007-12-31,,,True,
+86,1,eisen2009,digitized-discrete,2007-05-27,2007-12-31,,,True,
+87,1,eisen2009,digitized-discrete,2005-01-01,2006-12-31,,,True,date_max: 'temperatures reached equilibrium only after 1-2 years'
+88,1,eisen2009,digitized-discrete,2006-05-28,2006-12-31,,,True,
+89,1,eisen2009,digitized-discrete,2005-01-01,2006-12-31,,,True,date_max: 'temperatures reached equilibrium only after 1-2 years'
+90,1,gilbert2020,digitized-discrete,2014-01-01,2015-12-31,,,True,
 92,1,hager2002,published,1999-04-30,1999-04-30,,,,
 92,2,hager2002,published,1999-06-30,1999-06-30,,,True,
 92,3,hager2002,published,1999-07-19,1999-07-19,,,True,
@@ -243,12 +243,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 166,2,paterson1971,digitized-discrete,1968-08-01,1969-08-31,,,True,measurement_origin: Maximum of two thermistors at each depth in Figure 2
 167,1,pettersson2003,digitized-continuous,2002-04-01,2002-04-30,,,,
 168,1,herren2013,digitized-discrete,2009-07-01,2009-07-31,,,,
-171,1,ryser2013,digitized-discrete,2010-06-15,2010-06-15,,,,
-173,1,ryser2013,digitized-discrete,2008-06-09,2008-06-09,,,,
-175,1,ryser2013,digitized-discrete,2006-05-27,2006-05-27,,,,
-176,1,ryser2013,digitized-discrete,2010-06-13,2010-06-13,,,,
-177,1,ryser2013,digitized-discrete,2008-06-10,2008-06-10,,,,
-178,1,ryser2013,digitized-discrete,2008-06-11,2008-06-11,,,,
+171,1,ryser2013,digitized-discrete,2010-06-15,2010-06-25,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
+173,1,ryser2013,digitized-discrete,2008-06-09,2008-06-19,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
+175,1,ryser2013,digitized-discrete,2006-05-27,2006-06-06,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
+176,1,ryser2013,digitized-discrete,2010-06-13,2010-06-23,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
+177,1,ryser2013,digitized-discrete,2008-06-10,2008-06-20,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
+178,1,ryser2013,digitized-discrete,2008-06-11,2008-06-21,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
 179,1,schwikowski2013,digitized-discrete,2006-08-01,2006-08-31,,,,
 180,1,shiraiwa2001,digitized-continuous,1996-08-02,1996-08-31,,,,
 180,2,shiraiwa2001,digitized-continuous,1996-09-01,1996-09-30,,,True,
@@ -390,7 +390,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 284,6,muller1961,digitized-discrete,1960-08-19,1960-08-19,,,True,
 284,7,muller1961,digitized-discrete,1960-08-20,1960-08-20,,,True,
 284,8,muller1961,digitized-discrete,1960-08-26,1960-08-26,,,True,
-292,1,ryser2013,digitized-discrete,2010-06-14,2010-06-14,,,,
+292,1,ryser2013,digitized-discrete,2010-06-14,2010-06-25,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
 298,1,machguth2023,published,1990-07-29,1990-07-29,,,True,label: core1990_4609_20m
 299,1,takeuchi2014,digitized-discrete,2007-09-06,2007-09-06,,,True,
 300,1,hughes1939,digitized-discrete,1938-05-23,1938-05-23,,,,
@@ -1492,3 +1492,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 781,1,gidrometeoizdat1978,published,1971-01-01,1971-01-31,,,,
 782,1,gidrometeoizdat1978,published,1971-08-01,1971-08-31,,,,Measurements to 6 m depth may be from a shallow borehole drilled next to this borehole | [flag] Temperature increase at 30 m may be due to the proximity of a meltwater-filled cavity (Section 1.2.4)
 783,1,blatter1984,digitized-continuous,1978-04-01,1978-04-30,,,True,label: CG77-2/78 in gastaldello2024 | date_min/date_max: haeberli1991 | equilibrated: thermal disturbance from mechanical drilling and snow filling dissipate within 24 hours (haeberli1991)
+784,1,ryser2013,digitized-discrete,2008-06-12,2008-06-22,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements

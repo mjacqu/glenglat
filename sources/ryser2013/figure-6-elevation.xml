@@ -1,0 +1,11 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Fri Nov 29 18:24:26 CET 2024 -->
+<data>
+<image file='figure-6.jpg' />
+<axesnames x='distance'  y='elevation' />
+<calibpoints minXaxisX='147.0' minXaxisY='375.5' maxXaxisX='613.5' maxXaxisY='375.5' minYaxisX='143.5' minYaxisY='329.0' maxYaxisX='143.5' maxYaxisY='97.0' aX1='-300.0' aX2='300.0' aY1='2200.0' aY2='2500.0' isXLog='false' isYLog='false' />
+<point n='0' x='197.5' y='54.0' dx='-235.04823151125404' dy='2555.603448275862' />
+<point n='1' x='278.0' y='54.5' dx='-131.5112540192926' dy='2554.956896551724' />
+<point n='2' x='379.5' y='56.0' dx='-0.9646302250803842' dy='2553.0172413793102' />
+<point n='3' x='549.0' y='61.5' dx='217.04180064308684' dy='2545.905172413793' />
+</data>
