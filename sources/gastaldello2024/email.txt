@@ -374,3 +374,40 @@ I’ve written my responses to your questions below. I’ll see if I can get som
 
 Many thanks,
 Marcus
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-26 11:47
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Marcus,
+
+1. I'll abstain from marking KCC as having reached the bed until there is confirmation of such. I feel like the reports would have mentioned it if it had, as reaching the bed is something to boast about 😉
+[...]
+4. As for CG82-1, I'm a bit perplexed. I find 1982 in hoelzle2011 and 1982-07-23 in hoelzle2022 Figure 6.2 (GLAMOS report), but haeberli1991 states that although the borehole was drilled in 1982, the profile published in Figure 6 was measured in 1983: "Temperature measurements were carried out in the open 124 m borehole (B821) in 1983". Maybe this is a typo and 1982-07-23 is the correct date.
+
+best,
+ethan
+
+----------
+
+From: Marcus Gastaldello <marcus.gastaldello@unifr.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Martin Hoelzle <martin.hoelzle@unifr.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2024-11-26 16:09
+Subject: Firn temperature data Colle Gnifetti and Grigoriev
+
+Hi Ethan,
+
+I’ve found evidence that KCC did reach the bedrock from page 24 of Bohleber et al. (2018) (https://doi.org/10.5194/cp-14-21-2018)
+“In order to ensure a complete seal of the ablation chamber, porous firn parts could not be measured. From 29.5 mw.e. to bedrock, the KCC ice core was analysed…”
+
+For the CG82-1 borehole, I’ve just found I hadn’t checked one newer source – Luthi M. and Funk M. (2001) (https://doi.org/10.3189/172756501781832223). It states multiple times that the profile from CG82-1 was measured in 1983 although potentially in a contradictory manner it also states a basal temperature of -12.3 °C was measured from it in 1982.  I think there is reasonable grounds to suggest that the measured values in our database are from 1983 and maybe there was a preliminary measurement after drilling in 1982 or confusion arose from the borehole’s name – B82-1. As for the exact date of 23rd July, I cannot find evidence of that anywhere. Martin isn’t sure where he originally sourced this date and unfortunately Wilfried Haeberli is also unsure of the date.
+
+[...]
+
+Best,
+Marcus
