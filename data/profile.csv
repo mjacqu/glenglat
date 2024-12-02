@@ -233,8 +233,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 159,1,muller1976,digitized-discrete,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
 160,1,muller1976,digitized-discrete,1974-08-25,1974-08-25,,,True,equilibrated: blatter1985 (Section 2.1.1)
 161,1,naftz1993,published,1990-01-01,1990-12-31,,,,
-162,1,odegard1997,digitized-continuous,1994-04-01,1994-04-30,,,,
-163,1,odegard1997,digitized-continuous,1995-04-01,1995-04-30,,,,
+162,1,odegard1997,digitized-discrete,1994-04-23,1994-04-23,,,,
+163,1,odegard1997,digitized-discrete,1994-04-28,1995-04-02,,,,
 164,1,paterson1971,digitized-discrete,1967-04-01,1967-06-30,,,True,measurement_origin: Minimum of two thermistors at each depth in Figure 2
 164,2,paterson1971,digitized-discrete,1967-04-01,1967-06-30,,,True,measurement_origin: Maximum of two thermistors at each depth in Figure 2
 165,1,paterson1971,digitized-discrete,1967-06-01,1969-08-31,,,True,measurement_origin: Minimum of two thermistors at each depth in Figure 2
