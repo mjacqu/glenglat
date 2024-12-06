@@ -5,7 +5,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 4,1,blatter1985,published,1979-07-13,1979-08-13,,,True,
 5,1,blatter1985,published,1980-05-20,1980-06-20,,,True,
 6,1,blatter1985,published,1979-07-23,1979-08-23,,,True,Temperatures at 15 m depth average of two thermistors (difference 0.3 °C)
-7,1,gilbert2010,digitized-discrete,1999-06-04,1999-06-05,,,True,
+7,1,gilbert2010,digitized-discrete,1999-06-04,1999-06-05,,,True, Temperatures were measured several times on the two different days and chain was shifted upwards to increase measurement density. 
 8,1,gilbert2013,digitized-discrete,1999-01-01,1999-12-31,,,,
 9,1,gilbert2013,digitized-discrete,2011-01-01,2011-12-31,,,,
 10,1,gilbert2013,digitized-discrete,1994-06-01,1994-06-30,,,,date_min/date_max: vincent2007
