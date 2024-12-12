@@ -329,6 +329,8 @@ def parse_person_string(person: str) -> dict:
   """
   Parse person string.
 
+  Returns keys 'title', 'name', 'latin', 'orcid', and 'email'.
+
   Example
   -------
   >>> parse_person_string('杉山 慎 [Sugiyama Shin] (0000-0001-5323-9558)')
@@ -339,6 +341,10 @@ def parse_person_string(person: str) -> dict:
   if match is None:
     raise ValueError(f'Invalid person string: {person}')
   groups = match.groupdict()
+  if not groups['latin']:
+    # HACK: Assume that all non-Latin names have a Latin name in square brackets
+    groups['latin'] = groups['name']
+    groups['name'] = None
   if groups['orcid']:
     groups['orcid'] = f'https://orcid.org/{groups["orcid"]}'
   return groups
@@ -348,8 +354,8 @@ def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
   """
   Find person in person table.
 
-  Searches by keys (in decreasing order): 'orcid', 'email', 'title'.
-  Returns keys 'title', 'latin' (family and given), and 'orcid'.
+  Searches by keys (in decreasing order of priority): 'orcid', 'email', 'title'.
+  Returns keys 'latin', 'latin_family', 'name', and 'orcid'.
 
   Example
   -------
@@ -358,7 +364,7 @@ def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
   ...   {'title': 'Shin Sugiyama', 'orcid': 'https://orcid.org/0000-0001-5323-9558'},
   ...   dfs['person']
   ... )
-  {'title': '杉山 慎 [Sugiyama Shin]', 'latin': {'family': 'Sugiyama', 'given': 'Shin'},
+  {'name': '杉山 慎', 'latin': 'Sugiyama Shin', 'latin_family': 'Sugiyama',
   'orcid': 'https://orcid.org/0000-0001-5323-9558'}
   """
   matches = []
@@ -373,7 +379,7 @@ def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
     matches.append(df.index[mask])
   if person.get('title'):
     mask = (
-      df['matches'].str.split(' | ', regex=False)
+      df['titles'].str.split(' | ', regex=False)
       .apply(lambda x: False if x is pd.NA else person['title'] in x)
     )
     matches.append(df.index[mask])
@@ -385,16 +391,10 @@ def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
   if len(index) > 1:
     raise ValueError(f'Multiple matches for person {person}')
   row = df.loc[index.pop()]
-  title_parts = re.fullmatch(PERSON_TITLE_REGEX, row['title']).groupdict()
   result = {
-    'title': row['title'],
-    'latin': {
-      'family': row['latin_family'],
-      'given': re.sub(
-        fr"( |^){row['latin_family']}(?: |$)", '\\1',
-        title_parts['latin'] or title_parts['name']
-      ).strip()
-    },
+    'name': None if pd.isna(row['name']) else row['name'],
+    'latin': row['latin_name'],
+    'latin_family': row['latin_family_name'],
     'orcid': None if pd.isna(row['orcid']) else row['orcid']
   }
   if person['orcid']:
@@ -406,45 +406,72 @@ def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
   return result
 
 
-def infer_name_parts(name: str, latin: str = None) -> dict:
+def extract_given_name(name: str, family: str) -> str:
+  """
+  Extract given name from full name.
+
+  Examples
+  --------
+  >>> extract_given_name('Jakob F. Steiner', 'Steiner')
+  'Jakob F.'
+  >>> extract_given_name('Sugiyama Shin', 'Sugiyama')
+  'Shin'
+  """
+  return re.sub(fr"( |^){family}(?: |$)", '\\1', name).strip()
+
+
+def uppercase_family_name(name: str, family: str) -> str:
+  """
+  Uppercase family name in full name.
+
+  NOTE: Assumes that the family name is present once in the full name (see tests).
+
+  Examples
+  --------
+  >>> uppercase_family_name('Jakob F. Steiner', 'Steiner')
+  'Jakob F. STEINER'
+  >>> uppercase_family_name('Sugiyama Shin', 'Sugiyama')
+  'SUGIYAMA Shin'
+  """
+  return re.sub(fr"(^| ){family}( |$)", fr"\1{family.upper()}\2", name)
+
+
+def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
   """
   Infer given and family names from a name and its Latin transliteration.
 
   Examples
   --------
   >>> infer_name_parts('Jakob F. Steiner')
-  {'name': {'given': 'Jakob F.', 'family': 'Steiner'}, 'script': 'latin'}
-  >>> infer_name_parts('Н. Г. Разумейко', 'N. G. Razumeiko')
+  {'latin': {'given': 'Jakob F.', 'family': 'Steiner'}}
+  >>> infer_name_parts('N. G. Razumeiko', 'Н. Г. Разумейко')
   {'name': {'given': 'Н. Г.', 'family': 'Разумейко'},
   'latin': {'given': 'N. G.', 'family': 'Razumeiko'}, 'script': 'cyrillic'}
-  >>> infer_name_parts('孙维君', 'Sun Weijun')
+  >>> infer_name_parts('Sun Weijun', '孙维君')
   {'name': {'family': '孙', 'given': '维君'},
   'latin': {'family': 'Sun', 'given': 'Weijun'}, 'script': 'chinese'}
-  >>> infer_name_parts('杉山 慎', 'Sugiyama Shin')
+  >>> infer_name_parts('Sugiyama Shin', '杉山 慎')
   {'name': {'family': '杉山', 'given': '慎'},
   'latin': {'family': 'Sugiyama', 'given': 'Shin'}, 'script': 'kanji'}
-  >>> infer_name_parts('スギヤマ シン', 'Sugiyama Shin')
+  >>> infer_name_parts('Sugiyama Shin', 'スギヤマ シン')
   {'name': {'family': 'スギヤマ', 'given': 'シン'},
   'latin': {'family': 'Sugiyama', 'given': 'Shin'}, 'script': 'kana'}
-  >>> infer_name_parts('안진호', 'Ahn Jinho')
+  >>> infer_name_parts('Ahn Jinho', '안진호')
   {'name': {'family': '안', 'given': '진호'},
   'latin': {'family': 'Ahn', 'given': 'Jinho'}, 'script': 'hangul'}
   """
-  words = name.split(' ')
+  latin_words = latin.split(' ')
   # Latin: Last word is family name
-  if latin is None:
+  if name is None:
     if (
       # more than two words and multiple consecutive words not ending with a period
-      (len(words) > 2 and re.search(r'[^ \.]+ [^ \.]+(?: |$)', name))
+      (len(latin_words) > 2 and re.search(r'[^ \.]+ [^ \.]+(?: |$)', latin))
       # last word ends with a period
-      or words[-1].endswith('.')
+      or latin_words[-1].endswith('.')
     ):
-      raise ValueError(f'Name "{name}" is amgiuous')
-    return {
-      'name': {'given': ' '.join(words[:-1]), 'family': words[-1]},
-      'script': 'latin'
-    }
-  latin_words = latin.split(' ')
+      return None
+    return {'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]}}
+  words = name.split(' ')
   # Cyrillic: Last word is family name
   if re.search(r'[А-ЯЁа-яё]+', name):
     if len(words) < 2 or len(words) != len(latin_words):
@@ -457,11 +484,11 @@ def infer_name_parts(name: str, latin: str = None) -> dict:
   # Chinese
   if re.search(r'[\u4e00-\u9fff]+', name):
     if len(words) > 2:
-      raise ValueError(f'Chinese character name "{name} [{latin}]" is ambiguous')
+      return None
     # Kanji (Japanese): First word is family name
     if len(words) == 2:
       if len(latin_words) != 2:
-        raise ValueError(f'Chinese character name "{name} [{latin}]" is ambiguous')
+        return None
       return {
         'name': {'family': words[0], 'given': words[1]},
         'latin': {'family': latin_words[0], 'given': latin_words[1]},
@@ -469,7 +496,7 @@ def infer_name_parts(name: str, latin: str = None) -> dict:
       }
     # Chinese: First character of original and first word of latin is family name
     if len(latin_words) != 2:
-        raise ValueError(f'Chinese character name "{name} [{latin}]" is ambiguous')
+        return None
     return {
       'name': {'family': name[0], 'given': name[1:]},
       'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
@@ -478,7 +505,7 @@ def infer_name_parts(name: str, latin: str = None) -> dict:
   # Hangul (Korean): First character of original and first word of latin is family name
   if re.search(r'[\uac00-\ud7af]+', name):
     if len(words) > 1:
-        raise ValueError(f'Hangul (Korean) name "{name} [{latin}]" is ambiguous')
+        return None
     return {
       'name': {'family': name[0], 'given': name[1:]},
       'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
@@ -487,13 +514,63 @@ def infer_name_parts(name: str, latin: str = None) -> dict:
   # Kana (Japanese): First word is family name
   if re.search(r'[\u3040-\u30ff]+', name):
     if len(words) != 2 or len(latin_words) != 2:
-      raise ValueError(f'Kana (Japanese) name "{name} [{latin}]" is ambiguous')
+      return None
     return {
       'name': {'family': words[0], 'given': words[1]},
       'latin': {'family': latin_words[0], 'given': latin_words[1]},
       'script': 'kana'
     }
-  raise NotImplementedError(f'Unsupported script for name "{name} [{latin}]"')
+  return None
+
+
+def expand_person_strings(
+  strings: list[str],
+  df: pd.DataFrame,
+  infer: bool = False
+) -> list[dict]:
+  """
+  Expand person strings to dictionaries.
+
+  Returns keys 'latin', 'latin_family', 'name', and 'orcid'.
+
+  Parameters
+  ----------
+  strings
+    List of person strings.
+  df
+    DataFrame with person information.
+  infer
+    Infer given and family names from the name and its Latin transliteration,
+    if not found in the person table.
+  """
+  people = []
+  missing = []
+  ambiguous = []
+  for string in strings:
+    person = parse_person_string(string)
+    found = find_person(person, df)
+    if found:
+      people.append(found)
+    else:
+      if infer:
+        parts = infer_name_parts(latin=person['latin'], name=person.get('name'))
+        if parts:
+          person = {
+            'latin': person['latin'],
+            'latin_family': parts['latin']['family'],
+            'name': person.get('name'),
+            'orcid': person.get('orcid')
+          }
+          people.append(person)
+        else:
+          ambiguous.append(string)
+      else:
+        missing.append(string)
+  if missing:
+    raise ValueError('People not found:\n' + '\n'.join(missing))
+  if ambiguous:
+    raise ValueError('Family name could not be inferred:\n' + '\n'.join(ambiguous))
+  return people
 
 
 def strip_diacritics(string: str) -> str:
@@ -555,77 +632,38 @@ def render_author_list(
     .drop_duplicates()
   )
   # Parse and find people
-  people = []
-  missing = []
-  ambiguous = []
-  for person_string in authors:
-    person = parse_person_string(person_string)
-    found = find_person(person, dfs['person'])
-    if found:
-      person = found
-    else:
-      if infer:
-        try:
-          person = {**person, **infer_name_parts(person['name'], person.get('latin'))}
-          if person.get('latin') is None:
-            person['latin'] = person['name']
-        except (ValueError, NotImplementedError):
-          ambiguous.append(person_string)
-      else:
-        missing.append(person_string)
-    people.append(person)
-  if missing:
-    raise ValueError('People not found:\n' + '\n'.join(missing))
-  if ambiguous:
-    raise ValueError('Family name could not be inferred:\n' + '\n'.join(ambiguous))
+  people = expand_person_strings(authors, df=dfs['person'], infer=infer)
+  # Extract latin first names
+  for person in people:
+    person['latin_given'] = extract_given_name(person['latin'], person['latin_family'])
   # Sort by uppercase latin family name, latin first name
   people = sorted(people, key=lambda x: (
-    strip_diacritics(x['latin']['family']).upper(),
-    strip_diacritics(x['latin']['given']).upper()
+    strip_diacritics(x['latin_family']).upper(),
+    strip_diacritics(x['latin_given']).upper()
   ))
   # Format person string (uppercase latin family name in title)
-  people = [
-    re.sub(
-      fr"(^| |\[){person['latin']['family']}(\]| |$)",
-      fr"\1{person['latin']['family'].upper()}\2",
-      person['title']
-    )
-    for person in people
-  ]
+  strings = []
+  for person in people:
+    string = uppercase_family_name(person['latin'], person['latin_family'])
+    if person['name']:
+      string = f"{person['name']} [{string}]"
+    strings.append(string)
   # Drop duplicates
-  return list(dict.fromkeys(people))
+  return list(dict.fromkeys(strings))
 
 
 def convert_source_to_csl(source: Dict[str, str]) -> dict:
   """
   Convert source to CSL-JSON.
 
-  Names of people are currently represented with their full names only:
-  `{"literal": "Name"}`.
-  Extracting given and family names could be achieved with the following heuristics,
-  depending on the writing system:
-
-  * Latin: Assume last word is the family name
-    (e.g. "Jakob F. Steiner" -> {"family": "Steiner", "given": "Jakob F."}).
-    Although this assumption is valid in most cases, it is wrong when
-    particles (e.g. "Ward J. J. Van Pelt", "Roderik S. W. van de Wal"),
-    suffixes (e.g. "E. Calvin Alexander Jr."),
-    or double family names ("Guillermo Cobos Campos") are present.
-  * Cyrillic: Assume last word of the original and transliteration is the
-    family name (e.g. "Н. Г. Разумейко [N. G. Razumeiko]" ->
-    {"family": "Иванов [Razumeiko]", "given": "Н. Г. [N. G.]"}).
-  * Chinese: Assume first character and word of the original and
-    transliteration, respectively, is the family name (e.g. "孙维君 [Sun Weijun]" ->
-    "family": "孙 [Sun]", "given": "Weijun [维君]").
-  * Hangul: Same as for Chinese (e.g. "안진호 [Ahn Jinho]" ->
-    {"family": "안 [Ahn]", "given": "진호 [Jinho]"}).
+  Authors and editors are currently represented by their titles only, as {literal}.
   """
   csl = {
     'id': source['id'],
     'author': [
-      {'literal': author}
+      {'literal': parse_person_string(author)['title']}
       for author in source['author'].split(' | ')
-    ],
+    ] if source['author'] else None,
     'issued': {'date-parts': [[int(source['year'])]]},
     'type': source['type'],
     'title': source['title'],
@@ -637,7 +675,7 @@ def convert_source_to_csl(source: Dict[str, str]) -> dict:
     'page': source['page'],
     'version': source['version'],
     'editor': [
-      {'literal': editor}
+      {'literal': parse_person_string(editor)['title']}
       for editor in source['editor'].split(' | ')
     ] if source['editor'] else None,
     'collection-title': source['collection_title'],

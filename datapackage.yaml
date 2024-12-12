@@ -598,25 +598,31 @@ resources:
     profile: tabular-data-resource
     schema:
       fields:
-        - name: matches
+        - name: titles
           description: Author titles matching this person, as a pipe-delimited list.
           type: string
           constraints:
             required: true
             unique: true
             pattern: '[^\s]+( [^\s]+)*'
-        - name: title
-          description: Preferred author title.
+        - name: latin_name
+          description: Full name in Latin script.
           type: string
           constraints:
             required: true
             unique: true
             pattern: '[^\s]+( [^\s]+)*'
-        - name: latin_family
-          description: Latinized family name.
+        - name: latin_family_name
+          description: Family name in Latin script.
           type: string
           constraints:
             required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: name
+          description: Original full name in non-Latin script.
+          type: string
+          constraints:
+            unique: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: orcid
           description: ORCID.
