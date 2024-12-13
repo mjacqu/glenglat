@@ -165,6 +165,12 @@ conda install -c conda-forge geopandas=0.13 pyarrow
 pytest
 ```
 
+Slow tests can be skipped by using the `--fast` option.
+
+```sh
+pytest --fast
+```
+
 ### Maintain the repository
 
 The [`glenglat.py`](glenglat.py) module contains functions used to maintain the repository. They can be run from the command line as `python glenglat.py {function}`.

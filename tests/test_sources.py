@@ -112,6 +112,7 @@ indexed_measurements = (
 )
 
 
+@pytest.mark.slow
 @pytest.mark.parametrize('path, parsed', digitizer_paths)
 def test_digitizer_file_is_valid(path: Path, parsed: dict) -> None:
   """Digitizer file is valid."""

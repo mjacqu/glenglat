@@ -29,6 +29,7 @@ elif gpd is None:
   )
 
 
+@pytest.mark.slow
 def test_borehole_coordinates_match_glims_id() -> None:
   """Borehole latitude, longitude match the GLIMS ID."""
   OVERRIDES = {
