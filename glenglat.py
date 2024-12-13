@@ -1,11 +1,12 @@
 import copy
 from collections import defaultdict
 import datetime
+import functools
 import json
 from pathlib import Path
 import re
 import shutil
-from typing import Dict, Union, Optional
+from typing import Dict, Union, Optional, Literal
 import unicodedata
 import yaml
 
@@ -43,31 +44,31 @@ SUBMISSION_SPREADSHEET_PATH = ROOT.joinpath('submission/template.xlsx')
 SOURCE_ID_REGEX = r'(?:^|\s|\()([a-z]+[0-9]{4}[a-z]?)(?:$|\s|\)|,|\.)'
 """Regular expression for extracting source ids from notes."""
 
-ochar = r'[^\(\)\[\]\|\s]'
-ichar = r'[^\(\)\[\]\|]'
-phrase = fr'{ochar}{ichar}*{ochar}'
-
 EMAIL_REGEX = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
 """Regular expression for an email address."""
 
 ORCID_REGEX = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
 """Regular expression for ORCID identifiers."""
 
-person = fr'{phrase}(?: \[{phrase}\])?(?: \({ORCID_REGEX}\))?'
+# Outer character
+ochar = r'[^\(\)\[\]\|\s]'
+# Inner character
+ichar = r'[^\(\)\[\]\|]'
+phrase = fr'{ochar}{ichar}*{ochar}'
 
 PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 """Regular expression for a person title."""
 
-PERSON_REGEX = fr'(?P<title>{PERSON_TITLE_REGEX})(?: \((?:(?P<orcid>{ORCID_REGEX})|(?P<email>{EMAIL_REGEX}))\))?'
+PERSON_REGEX = fr'^(?P<title>{PERSON_TITLE_REGEX})(?: \((?:(?P<orcid>{ORCID_REGEX})|(?P<email>{EMAIL_REGEX}))\))?$'
 """Regular expression for a person."""
 
 RORID_REGEX = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
 """Regular expression for ROR identifiers."""
 
-FUNDING_REGEX = fr'(?P<funder>{phrase})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{phrase}))?(?: \[(?P<number>{phrase})\])?(?: \((?P<url>https?:\/\/[^\)]+)\))?)?'
+FUNDING_REGEX = fr'^(?P<funder>{ochar}[^\(\)\[\]\|>]*{ochar})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{phrase}))?(?: \[(?P<number>{phrase})\])?(?: \((?P<url>https?:\/\/[^\)]+)\))?)?$'
 """Regular expression for a funding source."""
 
-INVESTIGATOR_REGEX = fr'(?P<person>{phrase})?(?: ?\((?P<agencies>{phrase}(?:; {phrase})*)\))?(?: \[(?P<notes>[^\]]+)\])?'
+INVESTIGATOR_REGEX = fr'^(?P<person>{phrase})?(?: ?\((?P<agencies>{phrase}(?:; {phrase})*)\))?(?: \[(?P<notes>[^\]]+)\])?$'
 """Regular expression for an investigator."""
 
 # ---- Configure YAML rendering ----
@@ -323,118 +324,7 @@ def write_submission() -> None:
   write_submission_xlsx()
 
 
-# ---- Sources ----
-
-def parse_person_string(person: str) -> dict:
-  """
-  Parse person string.
-
-  Returns keys 'title', 'name', 'latin', 'orcid', and 'email'.
-
-  Example
-  -------
-  >>> parse_person_string('杉山 慎 [Sugiyama Shin] (0000-0001-5323-9558)')
-  {'title': '杉山 慎 [Sugiyama Shin]', 'name': '杉山 慎', 'latin': 'Sugiyama Shin',
-  'orcid': 'https://orcid.org/0000-0001-5323-9558', 'email': None}
-  """
-  match = re.fullmatch(PERSON_REGEX, person)
-  if match is None:
-    raise ValueError(f'Invalid person string: {person}')
-  groups = match.groupdict()
-  if not groups['latin']:
-    # HACK: Assume that all non-Latin names have a Latin name in square brackets
-    groups['latin'] = groups['name']
-    groups['name'] = None
-  if groups['orcid']:
-    groups['orcid'] = f'https://orcid.org/{groups["orcid"]}'
-  return groups
-
-
-def find_person(person: dict, df: pd.DataFrame) -> Optional[dict]:
-  """
-  Find person in person table.
-
-  Searches by keys (in decreasing order of priority): 'orcid', 'email', 'title'.
-  Returns keys 'latin', 'latin_family', 'name', and 'orcid'.
-
-  Example
-  -------
-  >>> dfs = read_data()
-  >>> find_person(
-  ...   {'title': 'Shin Sugiyama', 'orcid': 'https://orcid.org/0000-0001-5323-9558'},
-  ...   dfs['person']
-  ... )
-  {'name': '杉山 慎', 'latin': 'Sugiyama Shin', 'latin_family': 'Sugiyama',
-  'orcid': 'https://orcid.org/0000-0001-5323-9558'}
-  """
-  matches = []
-  if person.get('orcid'):
-    mask = df['orcid'].eq(person['orcid'])
-    matches.append(df.index[mask])
-  if person.get('email'):
-    mask = (
-      df['emails'].str.split(' | ', regex=False)
-      .apply(lambda x: False if x is pd.NA else person['email'] in x)
-    )
-    matches.append(df.index[mask])
-  if person.get('title'):
-    mask = (
-      df['titles'].str.split(' | ', regex=False)
-      .apply(lambda x: False if x is pd.NA else person['title'] in x)
-    )
-    matches.append(df.index[mask])
-  index = set()
-  for indices in matches:
-    index |= set(indices)
-  if not index:
-    return None
-  if len(index) > 1:
-    raise ValueError(f'Multiple matches for person {person}')
-  row = df.loc[index.pop()]
-  result = {
-    'name': None if pd.isna(row['name']) else row['name'],
-    'latin': row['latin_name'],
-    'latin_family': row['latin_family_name'],
-    'orcid': None if pd.isna(row['orcid']) else row['orcid']
-  }
-  if person['orcid']:
-    if result['orcid'] != person['orcid']:
-      raise ValueError(f'ORCID mismatch for {person} matched to {result}')
-    if not result['orcid']:
-      print(f"ORCID missing for {result}: {person['orcid']}")
-      result['orcid'] = person['orcid']
-  return result
-
-
-def extract_given_name(name: str, family: str) -> str:
-  """
-  Extract given name from full name.
-
-  Examples
-  --------
-  >>> extract_given_name('Jakob F. Steiner', 'Steiner')
-  'Jakob F.'
-  >>> extract_given_name('Sugiyama Shin', 'Sugiyama')
-  'Shin'
-  """
-  return re.sub(fr"( |^){family}(?: |$)", '\\1', name).strip()
-
-
-def uppercase_family_name(name: str, family: str) -> str:
-  """
-  Uppercase family name in full name.
-
-  NOTE: Assumes that the family name is present once in the full name (see tests).
-
-  Examples
-  --------
-  >>> uppercase_family_name('Jakob F. Steiner', 'Steiner')
-  'Jakob F. STEINER'
-  >>> uppercase_family_name('Sugiyama Shin', 'Sugiyama')
-  'SUGIYAMA Shin'
-  """
-  return re.sub(fr"(^| ){family}( |$)", fr"\1{family.upper()}\2", name)
-
+# ---- Reference list ----
 
 def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
   """
@@ -523,54 +413,290 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
   return None
 
 
-def expand_person_strings(
-  strings: list[str],
-  df: pd.DataFrame,
-  infer: bool = False
-) -> list[dict]:
+def squeeze_whitespace(string: str) -> str:
   """
-  Expand person strings to dictionaries.
+  Squeeze whitespace in a string.
 
-  Returns keys 'latin', 'latin_family', 'name', and 'orcid'.
-
-  Parameters
-  ----------
-  strings
-    List of person strings.
-  df
-    DataFrame with person information.
-  infer
-    Infer given and family names from the name and its Latin transliteration,
-    if not found in the person table.
+  Examples
+  --------
+  >>> squeeze_whitespace('  Jakob  F.  Steiner  ')
+  'Jakob F. Steiner'
   """
-  people = []
-  missing = []
-  ambiguous = []
-  for string in strings:
-    person = parse_person_string(string)
-    found = find_person(person, df)
-    if found:
-      people.append(found)
-    else:
-      if infer:
-        parts = infer_name_parts(latin=person['latin'], name=person.get('name'))
-        if parts:
-          person = {
-            'latin': person['latin'],
-            'latin_family': parts['latin']['family'],
-            'name': person.get('name'),
-            'orcid': person.get('orcid')
+  return re.sub(r'\s+', ' ', string.strip())
+
+
+def strip_curly_braces(string: str) -> str:
+  """
+  Strip curly braces from a string.
+
+  Examples
+  --------
+  >>> strip_curly_braces('Emmanuel {Le Meur}')
+  'Emmanuel Le Meur'
+  """
+  return re.sub(r'{|}', '', string)
+
+
+def parse_name_parts(name: str) -> Optional[dict]:
+  """
+  Parse given and family names from a name with curly braces.
+
+  Examples
+  --------
+  >>> parse_name_parts('Emmanuel {Le Meur}')
+  {'family': 'Le Meur', 'given': 'Emmanuel'}
+  >>> parse_name_parts('{Duan} Keqin')
+  {'family': 'Duan', 'given': 'Keqin'}
+  >>> parse_name_parts('Jon Ove {Hagen}')
+  {'family': 'Hagen', 'given': 'Jon Ove'}
+  >>> parse_name_parts('Duan Keqin') is None
+  True
+  """
+  # Extract name within curly braces
+  match = re.search(r'{(?P<family>[^}]+)}', name)
+  if match is None:
+    return None
+  parts = match.groupdict()
+  # Infer given name as remaining part of the name
+  parts['given'] = squeeze_whitespace(name.replace(match.group(), ''))
+  return parts
+
+
+def parse_person_string(string: str) -> dict:
+  """
+  Parse person string.
+
+  Returns {title, name, latin, orcid, email}, where name and latin have the format
+  {name, family, given} but name may be None.
+  Curly braces are removed from 'title' and 'orcid' is expanded to full URL.
+
+  Example
+  -------
+  >>> parse_person_string('杉山 慎 [Sugiyama Shin] (0000-0001-5323-9558)')
+  {'title': '杉山 慎 [Sugiyama Shin]',
+  'name': {'name': '杉山 慎', 'family': '杉山', 'given': '慎'},
+  'latin': {'name': 'Sugiyama Shin', 'family': 'Sugiyama', 'given': 'Shin'},
+  'orcid': 'https://orcid.org/0000-0001-5323-9558', 'email': None}
+  >>> parse_person_string('Emmanuel {Le Meur} (test@email.fr)')
+  {'title': 'Emmanuel Le Meur', 'name': None,
+  'latin': {'name': 'Emmanuel Le Meur', 'family': 'Le Meur', 'given': 'Emmanuel'},
+  'orcid': None, 'email': 'test@email.fr'}
+  """
+  match = re.fullmatch(PERSON_REGEX, string)
+  if match is None:
+    raise ValueError(f'Invalid person string: {string}')
+  groups = match.groupdict()
+  # Strip curly braces from title
+  groups['title'] = strip_curly_braces(groups['title'])
+  # If there is no latinized form in square brackets, assume name is in latin script
+  if not groups['latin']:
+    groups['latin'] = groups['name']
+    groups['name'] = None
+  # Curly braces should only appear for standalone latin names
+  elif re.search(r'{|}', groups['name']) or re.search(r'{|}', groups['latin']):
+    raise ValueError(f'Unexpected curly braces in name: {string}')
+  # Extract family and given names
+  if re.search(r'{|}', groups['latin']):
+    parsed = parse_name_parts(groups['latin'])
+    if not parsed:
+      raise ValueError(f'Failed to parse name parts: {string}')
+    groups['latin'] = {'name': strip_curly_braces(groups['latin']), **parsed}
+  else:
+    inferred = infer_name_parts(latin=groups['latin'], name=groups['name'])
+    if not inferred:
+      raise ValueError(f'Family name is ambiguous: {string}')
+    groups['latin'] = {'name': groups['latin'], **inferred['latin']}
+    if groups['name']:
+      groups['name'] = {'name': groups['name'], **inferred['name']}
+  # Expand ORCID to full URL
+  if groups['orcid']:
+    groups['orcid'] = f"https://orcid.org/{groups['orcid']}"
+  return groups
+
+
+def convert_source_to_csl(
+  source: Dict[str, str],
+  non_latin: Literal['literal', 'given'] = 'literal'
+) -> dict:
+  """
+  Convert source to CSL-JSON.
+
+  Authors and editors are represented as {family, given} if Latin-only. Otherwise, if:
+  * non_latin='given': non-latin name is appended in square brackets to latin given name
+  * non_latin='literal': original title (name [latin]) is used as {literal}
+  """
+  # Format person names
+  names = defaultdict(list)
+  for key in ('author', 'editor'):
+    if not source.get(key):
+      continue
+    strings = source[key].split(' | ')
+    for string in strings:
+      parsed = parse_person_string(string)
+      if parsed['name']:
+        if non_latin == 'given':
+          name = {
+            'family': parsed['latin']['family'],
+            'given': f"{parsed['latin']['given']} [{parsed['name']['name']}]"
           }
-          people.append(person)
+        elif non_latin == 'literal':
+          name = {'literal': parsed['title']}
         else:
-          ambiguous.append(string)
+          raise ValueError(f'Invalid non_latin: {non_latin}')
       else:
-        missing.append(string)
-  if missing:
-    raise ValueError('People not found:\n' + '\n'.join(missing))
-  if ambiguous:
-    raise ValueError('Family name could not be inferred:\n' + '\n'.join(ambiguous))
+        name = {'family': parsed['latin']['family'], 'given': parsed['latin']['given']}
+      names[key].append(name)
+  # Use DOI instead of URL if available
+  doi = None
+  if source['url'] and source['url'].startswith('https://doi.org/'):
+    doi = source['url'].replace('https://doi.org/', '')
+  csl = {
+    'id': source['id'],
+    'author': names['author'],
+    'issued': {'date-parts': [[int(source['year'])]]},
+    'type': source['type'],
+    'title': source['title'],
+    'DOI': doi,
+    'URL': None if doi else source['url'],
+    'language': source['language'],
+    'container-title': source['container_title'],
+    'volume': source['volume'],
+    'issue': source['issue'],
+    'page': source['page'],
+    'version': source['version'],
+    'editor': names['editor'],
+    'collection-title': source['collection_title'],
+    'collection-number': source['collection_number'],
+    'publisher': source['publisher']
+  }
+  # Keep only truthy values
+  return {key: value for key, value in csl.items() if value}
+
+
+def render_sources_as_csl(non_latin: Literal['literal', 'given'] = 'literal') -> str:
+  """Render sources as CSL-JSON."""
+  sources = pd.read_csv(DATA_PATH.joinpath('source.csv'), dtype='string')
+  sources.replace({pd.NA: None}, inplace=True)
+  csl = [
+    convert_source_to_csl(source, non_latin=non_latin)
+    for source in sources.to_dict(orient='records')
+  ]
+  return json.dumps(csl, indent=2, ensure_ascii=False)
+
+
+# ---- Author list ----
+
+@functools.lru_cache(maxsize=1)
+def build_person_list() -> list[dict]:
+  """
+  Build list of person dictionaries.
+
+  Returns a list of dictionaries formatted as
+  {titles[], emails[], orcid, latin: {name, family, given}, name}.
+  """
+  df = pd.read_csv(DATA_PATH.joinpath('person.csv'))[
+    ['titles', 'emails', 'orcid', 'latin_name', 'latin_family_name', 'name']
+  ]
+  # Split delimited lists
+  list_keys = ('titles', 'emails')
+  for key in list_keys:
+    df[key] = df[key].str.split(' | ', regex=False)
+  # Replace NA with None
+  df.replace({pd.NA: None}, inplace=True)
+  # Convert to list of dictionaries
+  people = df.to_dict(orient='records')
+  for person in people:
+    # Replace None in list keys with empty list
+    for key in list_keys:
+      if person[key] is None:
+        person[key] = []
+    # Format latin name as {name, family, given}
+    person['latin'] = {
+      'name': person['latin_name'],
+      'family': person['latin_family_name'],
+      'given': extract_given_name(person['latin_name'], person['latin_family_name'])
+    }
+    del person['latin_name']
+    del person['latin_family_name']
   return people
+
+
+def find_person(title: str = None, orcid: str = None, email: str = None) -> Optional[dict]:
+  """
+  Find person in person list.
+
+  Searches by keys (in decreasing order of priority): 'orcid', 'email', 'title'.
+  Returns matching {latin: {name, family, given}, name, orcid}.
+
+  Example
+  -------
+  >>> find_person(title='Shin Sugiyama', orcid='https://orcid.org/0000-0001-5323-9558')
+  {'latin': {'name': 'Sugiyama Shin', 'family': 'Sugiyama', 'given': 'Shin'},
+  'name': '杉山 慎', 'orcid': 'https://orcid.org/0000-0001-5323-9558'}
+  """
+  kwargs = {'title': title, 'orcid': orcid, 'email': email}
+  matches = []
+  for person in build_person_list():
+    if (
+      (orcid and person['orcid'] == orcid) or
+      (email and email in person['emails']) or
+      (title and title in person['titles'])
+    ):
+      matches.append(person)
+  if not matches:
+    return None
+  if len(matches) > 1:
+    raise ValueError(
+      f'Multiple person matches for {kwargs}: {matches}'
+    )
+  person = matches[0]
+  result = {key: person[key] for key in ('latin', 'name', 'orcid')}
+  if orcid:
+    if result['orcid'] and result['orcid'] != orcid:
+      raise ValueError(
+        f'ORCID mismatch for {kwargs} matched to {result}'
+      )
+    if not result['orcid']:
+      print(f"ORCID missing for {result}: {orcid}")
+      result['orcid'] = orcid
+  return result
+
+
+def extract_given_name(name: str, family: str) -> str:
+  """
+  Extract given name from full name.
+
+  Examples
+  --------
+  >>> extract_given_name('Jakob F. Steiner', 'Steiner')
+  'Jakob F.'
+  >>> extract_given_name('Sugiyama Shin', 'Sugiyama')
+  'Shin'
+  """
+  pattern = fr'( |^){family}(?: |$)'
+  if not re.search(pattern, name):
+    raise ValueError(f"Family name '{family}' not found in '{name}'")
+  return re.sub(pattern, r'\1', name).strip()
+
+
+def uppercase_family_name(name: str, family: str) -> str:
+  """
+  Uppercase family name in full name or title.
+
+  Examples
+  --------
+  >>> uppercase_family_name('Jakob F. Steiner', 'Steiner')
+  'Jakob F. STEINER'
+  >>> uppercase_family_name('Sugiyama Shin', 'Sugiyama')
+  'SUGIYAMA Shin'
+  >>> uppercase_family_name('张通 [Zhang Tong]', 'Zhang')
+  '张通 [ZHANG Tong]'
+  """
+  pattern = fr'(^| |\[){family}(?= |\]|$)'
+  matches = re.findall(pattern, name)
+  if not matches or len(matches) > 1:
+    raise ValueError(f"Family name '{family}' not unique (or present) in '{name}'")
+  return re.sub(pattern, fr'\1{family.upper()}', name)
 
 
 def strip_diacritics(string: str) -> str:
@@ -598,100 +724,40 @@ def strip_diacritics(string: str) -> str:
   return ''.join(replace_char(char) for char in string)
 
 
-def render_author_list(
-  personal_communication: bool = False,
-  secondary_sources: bool = False,
-  infer: bool = False
-) -> list[str]:
-  """
-  Render list of authors.
-
-  Parameters
-  ----------
-  personal_communication
-    Include personal communication authors.
-  secondary_sources
-    Include secondary sources in `notes` column.
-  infer
-    Infer given and family names from the name and its Latin transliteration,
-    if not found in the person table.
-  """
-  dfs = read_data()
-  # Gather source ids
-  source_ids, secondary = gather_source_ids(*dfs.values())
-  if secondary_sources:
-    source_ids |= secondary
-  # Gather authors
-  mask = dfs['source']['id'].isin(source_ids)
-  if not personal_communication:
-    mask &= dfs['source']['type'].ne('personal-communication')
-  authors = (
-    dfs['source']['author'][mask].str.split(' | ', regex=False)
+def render_author_list() -> list[str]:
+  """Render deduplicated and name-filled list of authors."""
+  # Gather author strings
+  df = pd.read_csv(DATA_PATH.joinpath('source.csv'))
+  strings = (
+    df['author'].str.split(' | ', regex=False)
     .dropna()
     .explode()
     .drop_duplicates()
   )
   # Parse and find people
-  people = expand_person_strings(authors, df=dfs['person'], infer=infer)
-  # Extract latin first names
+  people = [parse_person_string(string) for string in strings]
   for person in people:
-    person['latin_given'] = extract_given_name(person['latin'], person['latin_family'])
+    found = find_person(person)
+    if found:
+      person['latin'] = found['latin']
+      if not person['name']:
+        person['name'] = {}
+      person['name']['name'] = found['name']
+      person['orcid'] = found['orcid']
   # Sort by uppercase latin family name, latin first name
   people = sorted(people, key=lambda x: (
-    strip_diacritics(x['latin_family']).upper(),
-    strip_diacritics(x['latin_given']).upper()
+    strip_diacritics(x['latin']['family']).upper(),
+    strip_diacritics(x['latin']['given']).upper()
   ))
   # Format person string (uppercase latin family name in title)
   strings = []
   for person in people:
-    string = uppercase_family_name(person['latin'], person['latin_family'])
-    if person['name']:
-      string = f"{person['name']} [{string}]"
+    string = uppercase_family_name(person['latin']['name'], person['latin']['family'])
+    if person['name'] and person['name']['name']:
+      string = f"{person['name']['name']} [{string}]"
     strings.append(string)
   # Drop duplicates
   return list(dict.fromkeys(strings))
-
-
-def convert_source_to_csl(source: Dict[str, str]) -> dict:
-  """
-  Convert source to CSL-JSON.
-
-  Authors and editors are currently represented by their titles only, as {literal}.
-  """
-  csl = {
-    'id': source['id'],
-    'author': [
-      {'literal': parse_person_string(author)['title']}
-      for author in source['author'].split(' | ')
-    ] if source['author'] else None,
-    'issued': {'date-parts': [[int(source['year'])]]},
-    'type': source['type'],
-    'title': source['title'],
-    'URL': source['url'],
-    'language': source['language'],
-    'container-title': source['container_title'],
-    'volume': source['volume'],
-    'issue': source['issue'],
-    'page': source['page'],
-    'version': source['version'],
-    'editor': [
-      {'literal': parse_person_string(editor)['title']}
-      for editor in source['editor'].split(' | ')
-    ] if source['editor'] else None,
-    'collection-title': source['collection_title'],
-    'collection-number': source['collection_number'],
-    'publisher': source['publisher']
-  }
-  # Remove None values
-  return {key: value for key, value in csl.items() if value is not None}
-
-
-def render_sources_as_csl() -> str:
-  """Render sources as CSL-JSON."""
-  sources = pd.read_csv(DATA_PATH.joinpath('source.csv'), dtype='string')
-  sources.replace({pd.NA: None}, inplace=True)
-  csl = [convert_source_to_csl(source) for source in sources.to_dict(orient='records')]
-  return json.dumps(csl, indent=2, ensure_ascii=False)
 
 
 # ---- Data subset ----

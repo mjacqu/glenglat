@@ -9,7 +9,7 @@ from load import (
   TRANSLATED_REGEX,
   PEOPLE_COLUMNS
 )
-from glenglat import PERSON_REGEX
+import glenglat
 
 
 # ---- source ----
@@ -174,7 +174,7 @@ def test_people_have_correct_format(table: str, column: str) -> None:
   """People are formatted as {text} [{translation}] ({orcid}) | ."""
   s = dfs[table].set_index('id')[column]
   people = s.str.split(' | ', regex=False).explode()
-  valid = people.str.match(PERSON_REGEX)
+  valid = people.str.match(glenglat.PERSON_REGEX)
   assert valid.all(), s[~valid]
 
 

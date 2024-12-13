@@ -133,10 +133,10 @@ contributors:
     status: creator
     funding:
       - funder: Swiss Polar Institute
-      - rorid: 02z9ca723
-      - award: 'MAGNOLIA: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit'
-      - number: SPIEG-2022-003
-      - url: https://swisspolar.ch/projects/project-detail/?id=0bdacc92-ac90-4a08-98ee-5f78fcfb33d4
+        rorid: 02z9ca723
+        award: 'MAGNOLIA: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit'
+        number: SPIEG-2022-003
+        url: https://swisspolar.ch/projects/project-detail/?id=0bdacc92-ac90-4a08-98ee-5f78fcfb33d4
   - title: Martin Hoelzle
     path: https://orcid.org/0000-0002-3591-4377
     affiliations:
@@ -146,7 +146,7 @@ contributors:
 profile: tabular-data-package
 resources:
   - name: source
-    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. В. С. Загороднов [V. S. Zagorodnov]) and non-English titles are followed by a translation in square brackets.
+    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. В. С. Загороднов [V. S. Zagorodnov]) and non-English titles are followed by a translation in square brackets. The family name of Latin-script names is wrapped in curly braces when it is not the last word of the name (e.g. Emmanuel {Le Meur}, e.g. {Duan} Keqin) or the name ends in two or more unabbreviated words (e.g. Jon Ove {Hagen}).
     path: data/source.csv
     format: csv
     dialect:

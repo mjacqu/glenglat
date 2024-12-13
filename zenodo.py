@@ -29,16 +29,6 @@ BUILD_PATH = ROOT.joinpath('build')
 REPO = git.Repo(ROOT)
 """Git repository."""
 
-GIVEN_FAMILY_NAMES = {
-  'Lander Van Tricht': ('Lander', 'Van Tricht'),
-  '张通 [Zhang Tong]': ('Tong', 'Zhang'),
-}
-"""
-Zenodo name format (given name, family name) for contributors.
-
-If not specified, the last word is assumed to be the family name.
-"""
-
 PLACEHOLDER = '——'
 """Placeholder for missing values."""
 
@@ -268,19 +258,19 @@ def build_for_zenodo(
 def convert_contributor_to_zenodo(person: dict) -> dict:
   """Convert Data Package contributor to Zenodo creator or contributor."""
   # https://inveniordm.docs.cern.ch/reference/metadata/#creators-1-n
-  name = person['title']
-  if name in GIVEN_FAMILY_NAMES:
-    given, family = GIVEN_FAMILY_NAMES[name]
-  else:
-    words = name.split(' ')
-    given, family = ' '.join(words[:-1]), words[-1]
+  found = glenglat.find_person(title=person['title'], orcid=person.get('path'))
+  if not found:
+    raise ValueError(f"Contributor '{person['title']}' not found in person table")
   return {
     'person_or_org': {
       'type': 'personal',
-      'given_name': given,
-      'family_name': family,
+      'given_name': found['latin']['given'],
+      'family_name': found['latin']['family'],
       'identifiers': [] if 'path' not in person else [
-        {'scheme': 'orcid', 'identifier': person['path'].replace('https://orcid.org/', '')}
+        {
+          'scheme': 'orcid',
+          'identifier': person['path'].replace('https://orcid.org/', '')
+        }
       ]
     },
     'role': {'id': person['role'].lower()},
@@ -295,66 +285,87 @@ def convert_contributor_to_zenodo(person: dict) -> dict:
 
 
 def convert_people_to_english_list(people: str) -> str:
-  """Convert pipe-delimited people to English list."""
-  people = people.split(' | ')
-  # Strip ORCID identifiers
-  people = [re.sub(fr' \({glenglat.ORCID_REGEX}\)', '', person) for person in people]
-  if len(people) == 1:
-    return people[0]
-  if len(people) == 2:
-    return ' and '.join(people)
-  return ', '.join(people[:-1]) + ', and ' + people[-1]
+  """
+  Convert pipe-delimited people to English list.
+
+  Latin family names are uppercased.
+
+  Examples
+  --------
+  >>> convert_people_to_english_list('Gwenn Flowers (0000-0002-3574-9324)')
+  'Gwenn FLOWERS'
+  >>> convert_people_to_english_list('Gwenn Flowers | N. Roux')
+  'Gwenn FLOWERS and N. ROUX'
+  >>> convert_people_to_english_list('Gwenn Flowers | N. Roux | 张通 [Zhang Tong]')
+  'Gwenn FLOWERS, N. ROUX, and 张通 [ZHANG Tong]'
+  """
+  names = []
+  for string in people.split(' | '):
+    parsed = glenglat.parse_person_string(string)
+    name = glenglat.uppercase_family_name(
+      parsed['title'], family=parsed['latin']['family']
+    )
+    names.append(name)
+  if len(names) == 1:
+    return names[0]
+  if len(names) == 2:
+    return ' and '.join(names)
+  return ', '.join(names[:-1]) + ', and ' + names[-1]
 
 
-def convert_source_to_reference(source: pd.Series) -> dict:
+def convert_source_to_reference(source: dict) -> dict:
   """Convert source to Zenodo reference."""
-  source = source[source.notnull()]
+  # Keep only truthy values
+  source = {key: value for key, value in source.items() if value}
   if 'year' not in source or 'title' not in source:
     raise ValueError('Source must have year and title')
   if 'author' not in source:
     source['author'] = PLACEHOLDER
   # {authors} ({year}): {title}.
-  s = f'{convert_people_to_english_list(source.author)} ({source.year}): {source.title}.'
+  s = (
+    f"{convert_people_to_english_list(source['author'])} "
+    f"({source['year']}): {source['title']}."
+  )
   # Version {version}. {container_title}. {editors} (editors).
   if 'version' in source:
-    s += f' Version {source.version}.'
+    s += f" Version {source['version']}."
   if 'container_title' in source:
-    s += f' {source.container_title}.'
+    s += f" {source['container_title']}."
   if 'editor' in source:
-    s += f' {convert_people_to_english_list(source.editor)} (editors).'
+    s += f" {convert_people_to_english_list(source['editor'])} (editors)."
   # Volume {volume} ({issue}): {page} | Issue {issue}: {page} | Pages {page}
   if 'volume' in source or 'issue' in source or 'page' in source:
     if 'volume' in source:
-      s += f' Volume {source.volume}'
+      s += f" Volume {source['volume']}"
     if 'issue' in source:
       if 'volume' in source:
-        s += f' ({source.issue})'
+        s += f" ({source['issue']})"
       else:
-        s += f' Issue {source.issue}'
+        s += f" Issue {source['issue']}"
     if 'page' in source:
       if 'volume' in source or 'issue' in source:
-        s += f': {source.page}'
+        s += f": {source['page']}"
       else:
-        s += f' Pages {source.page}'
+        s += f" Pages {source['page']}"
     s += '.'
   # {collection_title} {collection_number}. {publisher}. {url}
   if 'collection_title' in source:
-    s += f' {source.collection_title}'
+    s += f" {source['collection_title']}"
     if 'collection_number' in source:
-      s += f' {source.collection_number}'
+      s += f" {source['collection_number']}"
     s += '.'
   if 'publisher' in source:
-    s += f' {source.publisher}.'
+    s += f" {source['publisher']}."
   if 'url' in source:
-    s += f' {source.url}'
+    s += f" {source['url']}"
   result = {'reference': s}
   if 'url' in source:
-    if source.url.startswith('https://doi.org/'):
+    if source['url'].startswith('https://doi.org/'):
       result['scheme'] = 'doi'
-      result['identifier'] = source.url.replace('https://doi.org/', '')
+      result['identifier'] = source['url'].replace('https://doi.org/', '')
     else:
       result['scheme'] = 'url'
-      result['identifier'] = source.url
+      result['identifier'] = source['url']
   return result
 
 
@@ -444,8 +455,13 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
     'funding': [convert_funding_to_zenodo(grant) for grant in grants],
     # References
     'references': [
-      convert_source_to_reference(dfs['source'].loc[i])
-      for i in dfs['source'].query('type.ne("personal-communication")').index
+      convert_source_to_reference(source)
+      for source in (
+        dfs['source']
+        .query('type.ne("personal-communication")')
+        .replace({pd.NA: None})
+        .to_dict(orient='records')
+      )
     ]
   }
 
