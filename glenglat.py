@@ -735,15 +735,17 @@ def render_author_list() -> list[str]:
     .drop_duplicates()
   )
   # Parse and find people
+  missing = []
   people = [parse_person_string(string) for string in strings]
   for person in people:
-    found = find_person(person)
-    if found:
-      person['latin'] = found['latin']
-      if not person['name']:
-        person['name'] = {}
-      person['name']['name'] = found['name']
-      person['orcid'] = found['orcid']
+    found = find_person(
+      title=person['title'], orcid=person['orcid'], email=person['email']
+    )
+    if not found:
+      missing.append(person)
+    person.update(found)
+  if missing:
+    raise ValueError(f'People not found: {missing}')
   # Sort by uppercase latin family name, latin first name
   people = sorted(people, key=lambda x: (
     strip_diacritics(x['latin']['family']).upper(),
@@ -753,8 +755,8 @@ def render_author_list() -> list[str]:
   strings = []
   for person in people:
     string = uppercase_family_name(person['latin']['name'], person['latin']['family'])
-    if person['name'] and person['name']['name']:
-      string = f"{person['name']['name']} [{string}]"
+    if person['name']:
+      string = f"{person['name']} [{string}]"
     strings.append(string)
   # Drop duplicates
   return list(dict.fromkeys(strings))
