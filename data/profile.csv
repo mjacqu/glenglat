@@ -1493,3 +1493,9 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 782,1,gidrometeoizdat1978,published,1971-08-01,1971-08-31,,,,Measurements to 6 m depth may be from a shallow borehole drilled next to this borehole | [flag] Temperature increase at 30 m may be due to the proximity of a meltwater-filled cavity (Section 1.2.4)
 783,1,blatter1984,digitized-continuous,1978-04-01,1978-04-30,,,True,label: CG77-2/78 in gastaldello2024 | date_min/date_max: haeberli1991 | equilibrated: thermal disturbance from mechanical drilling and snow filling dissipate within 24 hours (haeberli1991)
 784,1,ryser2013,digitized-discrete,2008-06-12,2008-06-22,,,True,equilibrated: Achieved by extrapolation from 10 days of measurements
+785,1,liu1988,published,1987-05-10,1987-05-10,,,,
+785,2,liu1988,published,1987-05-16,1987-05-16,,,,
+785,3,liu1988,published,1987-05-20,1987-05-20,,,,
+785,4,liu1988,published,1987-05-24,1987-05-24,,,,
+786,1,liu1988,published,1987-06-05,1987-06-05,,,,
+786,2,liu1988,published,1987-06-10,1987-06-10,,,,
