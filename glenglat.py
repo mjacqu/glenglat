@@ -520,14 +520,28 @@ def parse_person_string(string: str) -> dict:
 
 def convert_source_to_csl(
   source: Dict[str, str],
-  non_latin: Literal['literal', 'given'] = 'literal'
+  non_latin: Literal['literal', 'given'] = 'literal',
+  zotero_citation_key: bool = False
 ) -> dict:
   """
   Convert source to CSL-JSON.
 
-  Authors and editors are represented as {family, given} if Latin-only. Otherwise, if:
-  * non_latin='given': non-latin name is appended in square brackets to latin given name
-  * non_latin='literal': original title (name [latin]) is used as {literal}
+  To conform to the official JSON Schema for CSL data
+  (https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json),
+  type 'personal-communication' is replaced with 'personal_communication'.
+
+  Parameters
+  ----------
+  source
+    Dictionary representing a row in the source table.
+  non_latin
+    Authors and editors are represented as 'family, given' if Latin-only. Otherwise, if:
+
+    * 'given': non-latin name is appended in square brackets to the latin given name
+    * 'literal': original title ('name [latin]') is used as 'literal' attribute
+  zotero_citation_key
+    Add id to a note formatted as 'Citation key: id'. This is useful for Zotero with
+    the Better BibTeX plugin.
   """
   # Format person names
   names = defaultdict(list)
@@ -554,11 +568,16 @@ def convert_source_to_csl(
   doi = None
   if source['url'] and source['url'].startswith('https://doi.org/'):
     doi = source['url'].replace('https://doi.org/', '')
+  # Migrate 'personal-communication' to 'personal_communication'
+  source_type = source['type']
+  if source_type == 'personal-communication':
+    source_type = 'personal_communication'
   csl = {
     'id': source['id'],
+    'citation-key': source['id'],
     'author': names['author'],
     'issued': {'date-parts': [[int(source['year'])]]},
-    'type': source['type'],
+    'type': source_type,
     'title': source['title'],
     'DOI': doi,
     'URL': None if doi else source['url'],
@@ -573,16 +592,23 @@ def convert_source_to_csl(
     'collection-number': source['collection_number'],
     'publisher': source['publisher']
   }
+  if zotero_citation_key:
+    csl['note'] = f"Citation key: {source['id']}"
   # Keep only truthy values
   return {key: value for key, value in csl.items() if value}
 
 
-def render_sources_as_csl(non_latin: Literal['literal', 'given'] = 'literal') -> str:
+def render_sources_as_csl(
+  non_latin: Literal['literal', 'given'] = 'literal',
+  zotero_citation_key: bool = False
+) -> str:
   """Render sources as CSL-JSON."""
   sources = pd.read_csv(DATA_PATH.joinpath('source.csv'), dtype='string')
   sources.replace({pd.NA: None}, inplace=True)
   csl = [
-    convert_source_to_csl(source, non_latin=non_latin)
+    convert_source_to_csl(
+      source, non_latin=non_latin, zotero_citation_key=zotero_citation_key
+    )
     for source in sources.to_dict(orient='records')
   ]
   return json.dumps(csl, indent=2, ensure_ascii=False)
