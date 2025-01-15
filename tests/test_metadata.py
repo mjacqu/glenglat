@@ -115,7 +115,7 @@ def test_all_authors_and_editors_are_parseable() -> None:
     try:
       glenglat.parse_person_string(string)
     except ValueError as error:
-      errors.append(error.message)
+      errors.append(error)
   assert not errors, errors
 
 

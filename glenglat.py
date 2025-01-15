@@ -487,21 +487,22 @@ def parse_person_string(string: str) -> dict:
   if match is None:
     raise ValueError(f'Invalid person string: {string}')
   groups = match.groupdict()
-  # Strip curly braces from title
-  groups['title'] = strip_curly_braces(groups['title'])
   # If there is no latinized form in square brackets, assume name is in latin script
   if not groups['latin']:
     groups['latin'] = groups['name']
     groups['name'] = None
-  # Curly braces should only appear for standalone latin names
-  elif re.search(r'{|}', groups['name']) or re.search(r'{|}', groups['latin']):
-    raise ValueError(f'Unexpected curly braces in name: {string}')
   # Extract family and given names
-  if re.search(r'{|}', groups['latin']):
-    parsed = parse_name_parts(groups['latin'])
-    if not parsed:
-      raise ValueError(f'Failed to parse name parts: {string}')
-    groups['latin'] = {'name': strip_curly_braces(groups['latin']), **parsed}
+  if re.search(r'{|}', groups['title']):
+    for key in ('latin', 'name'):
+      if groups[key]:
+        if not re.search(r'{|}', groups[key]):
+          raise ValueError(
+            f"Curly braces missing from original or latin name: {groups['title']}"
+          )
+        parsed = parse_name_parts(groups[key])
+        if not parsed:
+          raise ValueError(f'Failed to parse name parts from curly braces: {string}')
+        groups[key] = {'name': strip_curly_braces(groups[key]), **parsed}
   else:
     inferred = infer_name_parts(latin=groups['latin'], name=groups['name'])
     if not inferred:
@@ -509,6 +510,8 @@ def parse_person_string(string: str) -> dict:
     groups['latin'] = {'name': groups['latin'], **inferred['latin']}
     if groups['name']:
       groups['name'] = {'name': groups['name'], **inferred['name']}
+  # Strip curly braces from title
+  groups['title'] = strip_curly_braces(groups['title'])
   # Expand ORCID to full URL
   if groups['orcid']:
     groups['orcid'] = f"https://orcid.org/{groups['orcid']}"

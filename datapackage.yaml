@@ -146,7 +146,7 @@ contributors:
 profile: tabular-data-package
 resources:
   - name: source
-    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. В. С. Загороднов [V. S. Zagorodnov]) and non-English titles are followed by a translation in square brackets. The family name of Latin-script names is wrapped in curly braces when it is not the last word of the name (e.g. Emmanuel {Le Meur}, e.g. {Duan} Keqin) or the name ends in two or more unabbreviated words (e.g. Jon Ove {Hagen}).
+    description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. В. С. Загороднов [V. S. Zagorodnov]) and non-English titles are followed by a translation in square brackets. The family name of Latin-script names is wrapped in curly braces when it is not the last word of the name (e.g. Emmanuel {Le Meur}, e.g. {Duan} Keqin) or the name ends in two or more unabbreviated words (e.g. Jon Ove {Hagen}). The family name of a Chinese name (and of the latinization) is wrapped in curly braces when it is not the first character.
     path: data/source.csv
     format: csv
     dialect:
