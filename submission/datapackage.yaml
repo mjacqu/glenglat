@@ -130,12 +130,12 @@ resources:
         pattern: '[^\s]+( [^\s]+)*'
     - name: investigators
       type: string
-      description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry should be in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
+      description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
       constraints:
         pattern: '[^\s]+( [^\s]+)*'
     - name: funding
       type: string
-      description: Funding sources as a pipe-delimited list. Each entry should be in the format 'funder [rorid] > award [number] (url)', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
+      description: Funding sources as a pipe-delimited list. Each entry is in the format 'funder [rorid] > award [number] url', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
       constraints:
         pattern: '[^\s]+( [^\s]+)*'
     missingValues:

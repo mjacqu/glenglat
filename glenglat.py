@@ -50,11 +50,10 @@ EMAIL_REGEX = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
 ORCID_REGEX = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
 """Regular expression for ORCID identifiers."""
 
-# Outer character
-ochar = r'[^\(\)\[\]\|\s]'
-# Inner character
-ichar = r'[^\(\)\[\]\|]'
-phrase = fr'{ochar}{ichar}*{ochar}'
+# Phrase
+outchar = r'[^\(\)\[\]\|\s]'
+inchar = r'[^\(\)\[\]\|]'
+phrase = fr'{outchar}{inchar}*?{outchar}'
 
 PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 """Regular expression for a person title."""
@@ -65,7 +64,12 @@ PERSON_REGEX = fr'^(?P<title>{PERSON_TITLE_REGEX})(?: \((?:(?P<orcid>{ORCID_REGE
 RORID_REGEX = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
 """Regular expression for ROR identifiers."""
 
-FUNDING_REGEX = fr'^(?P<funder>{ochar}[^\(\)\[\]\|>]*{ochar})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{phrase}))?(?: \[(?P<number>{phrase})\])?(?: \((?P<url>https?:\/\/[^\)]+)\))?)?$'
+# Phrase with parentheses
+outchar = r'[^\[\]\|\s]'
+inchar = r'[^\[\]\|]'
+parphrase = fr'{outchar}{inchar}*?{outchar}'
+
+FUNDING_REGEX = fr'^(?P<funder>{parphrase})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{parphrase}))?(?: \[(?P<number>{parphrase})\])?(?: (?P<url>https?:\/\/[^\)]+))?)?$'
 """Regular expression for a funding source."""
 
 title_regex = fr'{phrase}(?: \[{phrase}\])?'

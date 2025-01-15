@@ -34,7 +34,7 @@ contributors:
     funding:
       - funder: Swiss National Science Foundation
         rorid: 00yjd3n13
-        award: 'PROGGRES: Process-based modelling of global glacier changes'
+        award: Process-based modelling of global glacier changes (PROGRESS)
         number: 00yjd3n13::184634
         url: https://data.snf.ch/grants/grant/184634
   - title: Ethan Welty
@@ -134,7 +134,7 @@ contributors:
     funding:
       - funder: Swiss Polar Institute
         rorid: 02z9ca723
-        award: 'MAGNOLIA: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit'
+        award: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit (MAGNOLIA)
         number: SPIEG-2022-003
         url: https://swisspolar.ch/projects/project-detail/?id=0bdacc92-ac90-4a08-98ee-5f78fcfb33d4
   - title: Martin Hoelzle
@@ -431,12 +431,12 @@ resources:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: investigators
-          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry should be in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
+          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
         - name: funding
-          description: Funding sources as a pipe-delimited list. Each entry should be in the format 'funder [rorid] > award [number] (url)', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
+          description: Funding sources as a pipe-delimited list. Each entry is in the format 'funder [rorid] > award [number] url', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
