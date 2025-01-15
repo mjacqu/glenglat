@@ -387,7 +387,7 @@ def convert_funding_to_zenodo(funding: dict) -> dict:
     else:
       result['award']['number'] = funding['number']
   if 'url' in funding and funding['url']:
-    result['award']['identifiers'] = {'scheme': 'url', 'identifier': funding['url']}
+    result['award']['identifiers'] = [{'scheme': 'url', 'identifier': funding['url']}]
   if 'award' in result:
     if 'title' not in result['award'] and 'number' in result['award']:
       # HACK: Award title is required to display number
