@@ -29,7 +29,7 @@ BUILD_PATH = ROOT.joinpath('build')
 REPO = git.Repo(ROOT)
 """Git repository."""
 
-AUTHOR_PLACEHOLDER = '——'
+AUTHOR_PLACEHOLDER = '—'
 """Placeholder for missing source author."""
 
 # Load environment variables from .env
@@ -319,13 +319,12 @@ def convert_source_to_reference(source: dict) -> dict:
   source = {key: value for key, value in source.items() if value}
   if 'year' not in source or 'title' not in source:
     raise ValueError('Source must have year and title')
-  if 'author' not in source:
-    source['author'] = AUTHOR_PLACEHOLDER
+  if 'author' in source:
+    s = convert_people_to_english_list(source['author'])
+  else:
+    s = AUTHOR_PLACEHOLDER
   # {authors} ({year}): {title}.
-  s = (
-    f"{convert_people_to_english_list(source['author'])} "
-    f"({source['year']}): {source['title']}."
-  )
+  s = f"{s} ({source['year']}): {source['title']}."
   # Version {version}. {container_title}. {editors} (editors).
   if 'version' in source:
     s += f" Version {source['version']}."
