@@ -29,8 +29,8 @@ BUILD_PATH = ROOT.joinpath('build')
 REPO = git.Repo(ROOT)
 """Git repository."""
 
-PLACEHOLDER = '——'
-"""Placeholder for missing values."""
+AUTHOR_PLACEHOLDER = '——'
+"""Placeholder for missing source author."""
 
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
@@ -320,7 +320,7 @@ def convert_source_to_reference(source: dict) -> dict:
   if 'year' not in source or 'title' not in source:
     raise ValueError('Source must have year and title')
   if 'author' not in source:
-    source['author'] = PLACEHOLDER
+    source['author'] = AUTHOR_PLACEHOLDER
   # {authors} ({year}): {title}.
   s = (
     f"{convert_people_to_english_list(source['author'])} "
@@ -389,12 +389,10 @@ def convert_funding_to_zenodo(funding: dict) -> dict:
   if 'url' in funding and funding['url']:
     result['award']['identifiers'] = {'scheme': 'url', 'identifier': funding['url']}
   if 'award' in result:
-    if 'title' not in result['award']:
-      # HACK: Award title is required
-      result['award']['title'] = PLACEHOLDER
-    if 'number' not in result['award']:
-      # HACK: Award number is required
-      result['award']['number'] = PLACEHOLDER
+    if 'title' not in result['award'] and 'number' in result['award']:
+      # HACK: Award title is required to display number
+      result['award']['title'] = {'en': result['award']['number']}
+      del result['award']['number']
   return result
 
 
