@@ -68,7 +68,8 @@ RORID_REGEX = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
 FUNDING_REGEX = fr'^(?P<funder>{ochar}[^\(\)\[\]\|>]*{ochar})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{phrase}))?(?: \[(?P<number>{phrase})\])?(?: \((?P<url>https?:\/\/[^\)]+)\))?)?$'
 """Regular expression for a funding source."""
 
-INVESTIGATOR_REGEX = fr'^(?P<person>{phrase})?(?: ?\((?P<agencies>{phrase}(?:; {phrase})*)\))?(?: \[(?P<notes>[^\]]+)\])?$'
+title_regex = fr'{phrase}(?: \[{phrase}\])?'
+INVESTIGATOR_REGEX = fr'^(?P<person>{title_regex})?(?: ?\((?P<agencies>{title_regex}(?:; {title_regex})*)\))?(?: {{(?P<notes>[^\]]+)}})?$'
 """Regular expression for an investigator."""
 
 # ---- Configure YAML rendering ----
@@ -741,9 +742,10 @@ def render_author_list() -> list[str]:
     found = find_person(
       title=person['title'], orcid=person['orcid'], email=person['email']
     )
-    if not found:
+    if found:
+      person.update(found)
+    else:
       missing.append(person)
-    person.update(found)
   if missing:
     raise ValueError(f'People not found: {missing}')
   # Sort by uppercase latin family name, latin first name

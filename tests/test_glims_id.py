@@ -35,6 +35,7 @@ def test_borehole_coordinates_match_glims_id() -> None:
   OVERRIDES = {
     746: ['G269329E79672N'],  # Outside of RGI 7 outline for White Glacier
     761: ['G009822E46416N'],  # Outside of RGI 7 outline for Vadret dal Corvatsch
+    796: ['G095488E29960N'],  # Outside of RGI 7 outline for Guxiang No. 3 Glacier
   }
   df = dfs['borehole'].set_index('id')
   points = gpd.points_from_xy(df['longitude'], df['latitude'], crs='EPSG:4326')
