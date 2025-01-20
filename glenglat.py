@@ -573,16 +573,19 @@ def convert_source_to_csl(
   if source['url'] and source['url'].startswith('https://doi.org/'):
     doi = source['url'].replace('https://doi.org/', '')
   # Migrate 'personal-communication' to 'personal_communication'
+  # Add a title to personal communications
   source_type = source['type']
+  source_title = source['title']
   if source_type == 'personal-communication':
     source_type = 'personal_communication'
+    source_title = 'Personal communication'
   csl = {
     'id': source['id'],
     'citation-key': source['id'],
     'author': names['author'],
     'issued': {'date-parts': [[int(source['year'])]]},
     'type': source_type,
-    'title': source['title'],
+    'title': source_title,
     'DOI': doi,
     'URL': None if doi else source['url'],
     'language': source['language'],
