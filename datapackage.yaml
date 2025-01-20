@@ -49,6 +49,18 @@ contributors:
       - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
     role: DataCurator
     status: creator
+  - title: Marcus Gastaldello
+    path: https://orcid.org/0009-0003-2384-3617
+    affiliations:
+      - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
+    role: DataCollector
+    status: creator
+    funding:
+      - funder: Swiss Polar Institute
+        rorid: 02z9ca723
+        award: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit (MAGNOLIA)
+        number: SPIEG-2022-003
+        url: https://swisspolar.ch/projects/project-detail/?id=0bdacc92-ac90-4a08-98ee-5f78fcfb33d4
   - title: Lander Van Tricht
     path: https://orcid.org/0000-0001-7619-8955
     affiliations:
@@ -125,18 +137,6 @@ contributors:
       - name: State Key Laboratory of Earth Surface Processes and Resource Ecology (ESPRE), Beijing Normal University (BNU), China
     role: DataCollector
     status: creator
-  - title: Marcus Gastaldello
-    path: https://orcid.org/0009-0003-2384-3617
-    affiliations:
-      - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
-    role: DataCollector
-    status: creator
-    funding:
-      - funder: Swiss Polar Institute
-        rorid: 02z9ca723
-        award: Measuring Firn Hydrology and Ice Dynamics at the Greenland Runoff Limit (MAGNOLIA)
-        number: SPIEG-2022-003
-        url: https://swisspolar.ch/projects/project-detail/?id=0bdacc92-ac90-4a08-98ee-5f78fcfb33d4
   - title: Martin Hoelzle
     path: https://orcid.org/0000-0002-3591-4377
     affiliations:
