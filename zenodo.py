@@ -624,7 +624,10 @@ def add_file_to_draft(record: dict, path: Union[Path, str]) -> dict:
     response = requests.put(
       url=upload['links']['content'],
       data=file,
-      headers=get_headers(sandbox=is_sandbox(url))
+      headers={
+        **get_headers(sandbox=is_sandbox(url)),
+        'Content-Type': 'application/octet-stream'
+      }
     )
   raise_error(response)
   # Commit upload
