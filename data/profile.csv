@@ -181,7 +181,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 120,2,kinnard2020,digitized-discrete,2010-03-13,2010-03-13,,,,
 120,3,kinnard2020,digitized-discrete,2011-04-04,2011-04-04,,,,
 120,4,kinnard2020,digitized-discrete,2011-10-23,2011-10-23,,,,
-122,1,zagorodnov1981a,digitized-discrete,1976-07-06,1976-08-06,,,,
+122,1,zagorodnov1981a,digitized-discrete,1976-07-06,1976-08-06,,,False,equilibrated: > 1 °C warmer (at 14 m) than a mechanically-drilled hole 100 m away (borehole 813)
 123,1,kotlyakov1985,digitized-continuous,1981-01-01,1981-12-31,,,,
 124,1,watanabe2001,digitized-discrete,1995-05-01,1995-06-30,,,,
 125,1,zagorodnov1990a,digitized-discrete,1987-06-04,1987-06-29,,,,
@@ -671,7 +671,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 443,1,zagorodnov1981,digitized-continuous,1980-05-26,1980-05-26,,,,
 443,2,zagorodnov1981,digitized-continuous,1980-06-07,1980-06-07,,,,
 443,3,zagorodnov1981,digitized-continuous,1980-06-12,1980-06-12,,,,
-444,1,zagorodnov1981a,digitized-discrete,1976-06-01,1976-06-30,,,True,"measurement_origin: Digitized from Figure 4, which does not exactly match the values in the text (-0.27 °C at 17 m, -0.16 °C at 32.4 m, -0.38 °C at 83 m)"
+444,1,zagorodnov1981a,digitized-discrete,1976-06-01,1976-06-30,,,,"measurement_origin: Digitized from Figure 4, which does not exactly match the values in the text (-0.27 °C at 17 m, -0.16 °C at 32.4 m, -0.38 °C at 83 m)"
 445,1,macheret1985,published,1979-07-01,1979-07-31,,,True,
 446,1,macheret1985,published,1981-07-01,1981-07-31,,,True,
 447,1,thompson2022,submitted,1993-01-01,1993-12-31,,,False,
@@ -1523,3 +1523,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 810,1,huang1982,published,1964-11-01,1966-05-31,,,,
 811,1,liu1988,digitized-discrete,1987-06-16,1987-06-16,,,,
 812,1,shao1990,published,1987-08-26,1987-08-26,,,,
+813,1,zagorodnov1981a,digitized-continuous,1976-07-09,1976-07-09,,,,
+814,1,zagorodnov1981a,digitized-continuous,1976-07-19,1976-07-19,,,,
+815,1,zagorodnov1981a,digitized-continuous,1976-08-01,1976-08-01,,,,
