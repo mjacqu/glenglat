@@ -225,6 +225,7 @@ resources:
             - de: German
             - en: English
             - fr: French
+            - ja: Japanese
             - ko: Korean
             - ru: Russian
             - sv: Swedish
@@ -237,6 +238,7 @@ resources:
               - de
               - en
               - fr
+              - ja
               - ko
               - ru
               - sv
@@ -514,11 +516,16 @@ resources:
           description: Time offset relative to Coordinated Universal Time (UTC).
           type: number
           unit: h
-        - name: equilibrated
-          description: Whether temperatures have equilibrated following drilling.
-          type: boolean
-          trueValues: ['True']
-          falseValues: ['False']
+        - name: equilibrium
+          description: |-
+            Whether and how reported temperatures equilibrated following drilling.
+
+            - true: Equilibrium was measured
+            - estimated: Equilibrium was estimated (typically by extrapolation)
+            - false: Equilibrium was not reached
+          type: string
+          constraints:
+            enum: ['true', 'estimated', 'false']
         - name: notes
           description: Additional remarks about the profile or the measurements therein. Sources are referenced by `source.id`.
           type: string

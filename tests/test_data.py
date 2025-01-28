@@ -119,9 +119,14 @@ def test_borehole_max_measurement_depth_is_positive() -> None:
 
 def test_borehole_measurement_depth_less_than_total_depth() -> None:
   """Borehole measurement depth is less than total depth (within tolerance)."""
+  EXCEPTIONS = [
+    201,  # thompson1995 (Summit core): 16 m core depth vs 17.2 m digitized measurement
+    79,  # classen1970 (2-B): 30.5 m depth agrees with table but not figure
+  ]
   df = (
     dfs['profile']
     .rename(columns={'id': 'profile_id'})
+    .query('~(borehole_id in @EXCEPTIONS)')
     .set_index(['borehole_id', 'profile_id'])
   )
   df['max_depth'] = (

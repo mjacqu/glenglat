@@ -195,17 +195,19 @@ resources:
       type: number
       description: Time offset relative to Coordinated Universal Time (UTC).
       unit: h
-    - name: equilibrated
-      type: boolean
-      description: Whether temperatures have equilibrated following drilling.
-      trueValues:
-      - 'True'
-      - 'true'
-      - 'TRUE'
-      falseValues:
-      - 'False'
-      - 'false'
-      - 'FALSE'
+    - name: equilibrium
+      type: string
+      description: |-
+        Whether and how reported temperatures equilibrated following drilling.
+
+        - true: Equilibrium was measured
+        - estimated: Equilibrium was estimated (typically by extrapolation)
+        - false: Equilibrium was not reached
+      constraints:
+        enum:
+        - 'true'
+        - estimated
+        - 'false'
     missingValues:
     - ''
     foreignKeys:

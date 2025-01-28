@@ -1,4 +1,4 @@
-borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrated,notes
+borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrium,notes
 249,1,prinz2022,submitted,2017-08-12,2017-08-12,12:00:00,0,,
 249,2,prinz2022,submitted,2017-08-12,2017-08-12,13:00:00,0,,
 249,3,prinz2022,submitted,2017-08-12,2017-08-12,14:00:00,0,,

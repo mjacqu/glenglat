@@ -76,7 +76,7 @@ By submitting data to glenglat, you agree to be listed as a contributor in the m
 | `date_max` | Measurement date, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31). | date | format: `%Y-%m-%d`<br>required: True |
 | `time` | Measurement time. | time | format: `%H:%M:%S`<br> |
 | `utc_offset` | Time offset relative to Coordinated Universal Time (UTC). | number [h] |  |
-| `equilibrated` | Whether temperatures have equilibrated following drilling. | boolean |  |
+| `equilibrium` | Whether and how reported temperatures equilibrated following drilling.<br>- true: Equilibrium was measured<br>- estimated: Equilibrium was estimated (typically by extrapolation)<br>- false: Equilibrium was not reached | string | enum: ['true', 'estimated', 'false'] |
 <!-- </submission-format> -->
 
 ### Validation
