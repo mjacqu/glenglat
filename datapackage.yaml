@@ -415,8 +415,8 @@ resources:
         - name: to_bed
           description: Whether the borehole reached the glacier bed.
           type: boolean
-          trueValues: ['True']
-          falseValues: ['False']
+          trueValues: ['true']
+          falseValues: ['false']
         - name: temperature_uncertainty
           description: Estimated temperature uncertainty (as reported).
           type: number
