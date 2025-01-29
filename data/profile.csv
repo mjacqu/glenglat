@@ -188,11 +188,11 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 120,4,kinnard2020,digitized-discrete,2011-10-23,2011-10-23,,,,
 122,1,zagorodnov1981a,digitized-discrete,1976-07-06,1976-08-06,,,false,equilibrium: > 1 °C warmer (at 14 m) than a mechanically-drilled hole 100 m away (borehole 813)
 123,1,kotlyakov1985,digitized-continuous,1981-01-01,1981-12-31,,,,
-124,1,watanabe2001,digitized-discrete,1995-05-01,1995-06-30,,,,date_max: Assumes date range in Table 1 includes temperature measurement
+124,1,motoyama2008,published,1995-06-01,1995-06-02,,,,measurement_origin: Originally published in watanabe2001 (Figure 5)
 125,1,zagorodnov1990a,digitized-discrete,1987-06-04,1987-06-29,,,true,measurement_origin: Points on diverging profiles were omitted (these are associated with short equilibration times or introduction of fluids into the borehole) | equilibrium: Temperature stabilized after 3-16 days
-126,1,kawamura1991,digitized-discrete,1987-06-04,1987-06-04,,,,
+126,1,motoyama2008,published,1987-06-04,1987-06-04,,,,measurement_origin: Originally published in kawamura1991 (Figure 2) | date_min/date_max: kawamura1991
 127,1,kameda1993,published,1992-08-14,1992-08-16,,,estimated,equilibrium: Deviations between final and estimated equilibrated temperatures reflected in the uncertainty
-128,1,uchida1996,digitized-discrete,1993-06-01,1993-07-31,,,estimated,equilibrium: Deviations between final and estimated equilibrated temperatures reflected in the uncertainty (method per kameda1993)
+128,1,motoyama2008,published,1993-07-01,1993-07-31,,,estimated,equilibrium: Deviations between final and estimated equilibrated temperatures reflected in the uncertainty (uchida1996 per kameda1993) | measurement_origin: Originally published in uchida1996 (Figure 6)
 129,1,barkov1988,published,1979-03-01,1979-03-31,,,true,
 130,1,morev1988,published,1984-06-01,1984-06-30,,,,
 131,1,morev1988,published,1984-05-01,1984-05-01,,,,
@@ -391,7 +391,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 275,3,hoelzle2017,published,2013-08-20,2013-08-20,,,true,label: B05-1
 275,4,hoelzle2017,published,2015-09-25,2015-09-25,,,true,label: B05-1
 280,1,watts1997,published,,1997-12-31,,,,
-281,1,watanabe2001,digitized-discrete,1998-03-01,1998-04-30,,,,date_max: Assumes date range in Table 1 includes temperature measurement
+281,1,motoyama2008,published,1998-04-10,1998-04-12,,,,measurement_origin: Originally published in watanabe2001 (Figure 5)
 282,1,huang1990,digitized-discrete,1982-09-30,1982-09-30,,,,
 283,1,huang1990,digitized-discrete,1982-07-11,1982-07-11,,,,
 284,1,muller1961,digitized-discrete,1959-08-19,1959-08-19,,,true,equilibrium: Based on timeseries in Figure 1
@@ -634,7 +634,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 415,4,han1995,digitized-continuous,1992-11-08,1992-11-08,,,,
 416,1,zagorodnov1992,digitized-discrete,1987-01-01,1988-12-31,,,,
 419,1,goel2017,published,2012-12-01,2014-02-28,,,true,
-420,1,watanabe2001,digitized-discrete,1999-05-01,1999-05-31,,,,date_max: Assumes date range in Table 1 includes temperature measurement
+420,1,motoyama2008,published,1999-05-16,1999-05-18,,,,measurement_origin: Originally published in watanabe2001 (Figure 5)
 421,1,barandun2023,submitted,2013-08-26,2013-08-26,15:00:00,6,true,
 421,2,barandun2023,submitted,2014-08-29,2014-08-29,15:20:00,6,true,
 421,3,barandun2023,submitted,2015-06-08,2015-06-08,,,true,
