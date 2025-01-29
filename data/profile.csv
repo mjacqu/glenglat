@@ -1524,9 +1524,14 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 794,1,huang1982,published,1963-08-10,1963-08-10,,,,
 795,1,huang1982,published,1976-07-31,1976-07-31,,,,
 796,1,yuan1982,published,1965-07-01,1965-08-31,,,,
-797,1,shi1964,digitized-discrete,1964-04-20,1964-04-20,,,,
-799,1,shi1964,digitized-discrete,1964-05-04,1964-05-04,,,,
-801,1,shi1964,digitized-discrete,1964-04-21,1964-04-21,,,,
+797,1,huang1982a,published,1964-04-19,1964-04-19,19:00:00,,,
+797,2,huang1982a,published,1964-04-20,1964-04-20,17:00:00,,,
+797,3,huang1982a,published,1964-04-22,1964-04-22,14:00:00,,,
+797,4,huang1982a,published,1964-05-05,1964-05-05,14:00:00,,,
+799,1,huang1982a,published,1964-04-27,1964-04-27,19:00:00,,false,
+799,2,huang1982a,published,1964-05-01,1964-05-01,15:00:00,,,[flag] Warming above 1 m attributed to removal of 0.5 m snow during drilling
+799,3,huang1982a,published,1964-05-04,1964-05-04,14:00:00,,,[flag] Cooling (compared to profile 2) but warming (compared to profile 1) above 1 m attributed to 0.1 m of new snow
+801,1,huang1982a,published,1964-04-21,1964-04-21,19:00:00,,,
 802,1,huang1982,published,1966-05-29,1966-05-29,,,,
 803,1,huang1982,published,1966-04-22,1966-04-22,,,,
 804,1,huang1982,published,1976-07-17,1976-07-17,,,,
