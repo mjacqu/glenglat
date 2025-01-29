@@ -96,8 +96,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 73,1,gilbert2015,digitized-discrete,2008-01-01,2008-12-31,,,,
 74,1,gilbert2015,digitized-discrete,2008-01-01,2008-12-31,,,,
 75,1,gilbert2015,digitized-discrete,2013-01-01,2013-12-31,,,,
-76,1,clarke1976,digitized-discrete,1974-09-05,1974-09-05,,,true,
-77,1,clarke1976,digitized-discrete,1974-09-05,1974-09-05,,,true,
+76,1,clarke1976,published,1974-09-05,1974-09-05,,,,[flag] Melted-out (0 °C) thermistor at 3 m depth indicates surface lowering of 3-6 m since installation (1973-07-26) | Thermistor chain 73T7 is omitted here because it was drilled 20 m from a moulin 70 m from the other chains (and is up to 2 °C warmer)
+77,1,clarke1976,published,1974-09-05,1974-09-05,,,,
 78,1,classen1970,published,1969-07-22,1969-08-06,,,estimated,equilibrium: Measured after 30-45 days and corrected with a 50-day cooling curve
 79,1,classen1970,published,1969-07-22,1969-08-07,,,estimated,equilibrium: Measured after 14-30 days and corrected with a 50-day cooling curve
 80,1,classen1970,published,1969-07-22,1969-08-07,,,false,[flag] equilibrium: In principle achieved by extrapolation but 'the melt water drained from the hole due to a subsurface crack and prevented the thermistors from being frozen into the surrounding ice. As a result air or snow temperatures were probably measured.'
@@ -765,7 +765,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 502,1,hooke1976,published,1973-07-01,1973-07-31,,,,
 503,1,hooke1976,published,1973-07-01,1973-07-31,,,,
 504,1,hooke1976,published,1973-07-01,1973-07-31,,,,
-505,1,jarvis1974,published,1972-07-01,1972-07-31,,,estimated,equilibrium: 10-day wait time was compensated for by correcting the measured ice temperatures with cooling curves
+505,1,jarvis1974,published,1972-07-01,1972-07-31,,,estimated,[flag] equilibrium: Measured after 10 days and corrected with a cooling curve but significantly warmer than profile 2 (1973)
+505,2,clarke1976,published,1973-07-27,1973-07-27,,,,
 506,1,haeberli1976,published,1975-05-01,1975-05-31,,,,
 507,1,haeberli1976,published,1975-06-01,1975-08-31,,,,
 508,1,haeberli1976,published,1975-06-01,1975-08-31,,,,
@@ -1543,3 +1544,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 822,2,crossley1972,digitized-discrete,1968-08-12,1968-08-16,,,,
 823,1,crossley1972,digitized-discrete,1968-08-08,1968-08-08,,,,
 824,1,crossley1972,digitized-discrete,1968-08-04,1968-08-04,,,,
+825,1,clarke1976,published,1974-09-05,1974-09-05,,,,[flag] Melted-out (0 °C) thermistor at 3 m depth indicates surface lowering of 3-6 m since installation (1973-07-19)
