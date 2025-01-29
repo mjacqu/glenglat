@@ -156,7 +156,9 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 107,1,jania1996,digitized-discrete,1989-04-11,1989-04-11,,,,
 108,1,jania1996,digitized-discrete,1994-09-25,1994-09-25,,,,
 109,1,jania1996,digitized-discrete,1995-10-05,1995-10-05,,,,
-110,1,jania1996,digitized-continuous,1979-08-02,1979-08-02,,,,
+110,1,grzes1980,digitized-continuous,1979-08-02,1979-08-02,,,,
+110,2,grzes1980,digitized-continuous,1979-08-22,1979-08-22,,,,
+110,3,grzes1980,digitized-continuous,1979-08-25,1979-08-25,,,,
 111,1,jarvis1975,published,1972-08-05,1972-08-05,20:15:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
 111,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
 112,1,jarvis1975,published,1972-08-05,1972-08-05,16:35:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
