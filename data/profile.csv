@@ -157,13 +157,18 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 108,1,jania1996,digitized-discrete,1994-09-25,1994-09-25,,,,
 109,1,jania1996,digitized-discrete,1995-10-05,1995-10-05,,,,
 110,1,jania1996,digitized-continuous,1979-08-02,1979-08-02,,,,
-111,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
-112,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
-113,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
-114,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
-115,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
-116,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
-117,1,jarvis1975,digitized-discrete,1972-06-01,1973-12-31,,,true,equilibrium: Temperature measured every 2-3 days until stable
+111,1,jarvis1975,published,1972-08-05,1972-08-05,20:15:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+111,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
+112,1,jarvis1975,published,1972-08-05,1972-08-05,16:35:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+112,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
+113,1,jarvis1975,published,1972-08-05,1972-08-05,16:25:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+113,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
+114,1,jarvis1975,published,1972-08-05,1972-08-05,16:55:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+114,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
+115,1,jarvis1975,published,1972-08-05,1972-08-05,17:45:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+115,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
+116,1,jarvis1975,published,1972-08-05,1972-08-05,18:00:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+117,1,jarvis1975,published,1973-06-01,1973-09-30,,,,[flag] Anonalous temperatures attributed to proximity of large water-filled crevasses
 118,1,karuss2022,published,2018-09-01,2019-07-31,,,,
 119,1,sobota2009,published,2007-09-01,2007-09-30,,,true,
 119,2,sobota2009,published,2007-10-01,2007-10-31,,,true,
@@ -1545,3 +1550,5 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 823,1,crossley1972,digitized-discrete,1968-08-08,1968-08-08,,,,
 824,1,crossley1972,digitized-discrete,1968-08-04,1968-08-04,,,,
 825,1,clarke1976,published,1974-09-05,1974-09-05,,,,[flag] Melted-out (0 °C) thermistor at 3 m depth indicates surface lowering of 3-6 m since installation (1973-07-19)
+826,1,jarvis1975,published,1972-08-05,1972-08-05,20:30:00,-8,,equilibrium: Temperature measured every 2-3 days but uncertainty remained whether the warmer measurements had stabilized | date/time: jarvis1973 (Appendix IX: Table III)
+826,2,jarvis1975,published,1973-06-01,1973-09-30,,,,
