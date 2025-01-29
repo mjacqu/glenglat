@@ -98,12 +98,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 75,1,gilbert2015,digitized-discrete,2013-01-01,2013-12-31,,,,
 76,1,clarke1976,digitized-discrete,1974-09-05,1974-09-05,,,true,
 77,1,clarke1976,digitized-discrete,1974-09-05,1974-09-05,,,true,
-78,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,estimated,
-79,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,estimated,
-80,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,false,[flag] equilibrium: In principle achieved by extrapolation but 'the melt water drained from the hole due to a subsurface crack and prevented the thermistors from being frozen into the surrounding ice. As a result air or snow temperatures were probably measured.'
-81,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,estimated,
-82,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,estimated,
-83,1,classen1970,digitized-discrete,1969-01-01,1969-12-31,,,estimated,
+78,1,classen1970,published,1969-07-22,1969-08-06,,,estimated,equilibrium: Measured after 30-45 days and corrected with a 50-day cooling curve
+79,1,classen1970,published,1969-07-22,1969-08-07,,,estimated,equilibrium: Measured after 14-30 days and corrected with a 50-day cooling curve
+80,1,classen1970,published,1969-07-22,1969-08-07,,,false,[flag] equilibrium: In principle achieved by extrapolation but 'the melt water drained from the hole due to a subsurface crack and prevented the thermistors from being frozen into the surrounding ice. As a result air or snow temperatures were probably measured.'
+81,1,classen1970,published,1969-08-03,1969-08-10,,,estimated,equilibrium: Measured after 6-13 days and corrected with a 50-day cooling curve
+82,1,classen1970,published,1969-07-22,1969-08-09,,,estimated,equilibrium: Measured after 12-30 days and corrected with a 50-day cooling curve
+83,1,classen1970,published,1969-07-22,1969-08-09,,,estimated,equilibrium: Measured after 7-25 days and corrected with a 50-day cooling curve
 84,1,eisen2009,digitized-discrete,2006-01-01,2006-12-31,,,true,
 85,1,eisen2009,digitized-discrete,2007-05-30,2007-12-31,,,true,
 86,1,eisen2009,digitized-discrete,2007-05-27,2007-12-31,,,true,
@@ -1533,3 +1533,13 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 813,1,zagorodnov1981a,digitized-continuous,1976-07-09,1976-07-09,,,,
 814,1,zagorodnov1981a,digitized-continuous,1976-07-19,1976-07-19,,,,
 815,1,zagorodnov1981a,digitized-continuous,1976-08-01,1976-08-01,,,,
+816,1,classen1970,published,1969-07-22,1969-08-07,,,estimated,equilibrium: Measured after 25-41 days and corrected with a 50-day cooling curve
+817,1,classen1970,published,1969-06-01,1969-09-30,,,true,[flag] equilibrium: 'the effect of glycol on ice-temperature measurements is a matter of controversy'
+818,1,classen1970,published,1969-06-01,1969-09-30,,,estimated,equilibrium: Measured after 9 days and corrected with a 50-day cooling curve
+819,1,classen1971,published,1970-01-01,1970-12-31,,,true,
+820,1,classen1971,published,1970-01-01,1970-12-31,,,true,
+821,1,crossley1972,digitized-discrete,1968-08-16,1968-08-16,,,,
+822,1,crossley1972,digitized-discrete,1968-07-10,1968-07-10,,,,
+822,2,crossley1972,digitized-discrete,1968-08-12,1968-08-16,,,,
+823,1,crossley1972,digitized-discrete,1968-08-08,1968-08-08,,,,
+824,1,crossley1972,digitized-discrete,1968-08-04,1968-08-04,,,,
