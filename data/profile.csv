@@ -765,7 +765,7 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 502,1,hooke1976,published,1973-07-01,1973-07-31,,,,
 503,1,hooke1976,published,1973-07-01,1973-07-31,,,,
 504,1,hooke1976,published,1973-07-01,1973-07-31,,,,
-505,1,jarvis1974,published,1972-07-01,1972-07-31,,,estimated,[flag] equilibrium: Measured after 10 days and corrected with a cooling curve but significantly warmer than profile 2 (1973)
+505,1,jarvis1974,published,1972-08-10,1972-08-10,,,estimated,[flag] equilibrium: Measured after 10 days and corrected with a cooling curve but significantly warmer than profile 2 (1973) | date_min/date_max: jarvis1973 (page 216)
 505,2,clarke1976,published,1973-07-27,1973-07-27,,,,
 506,1,haeberli1976,published,1975-05-01,1975-05-31,,,,
 507,1,haeberli1976,published,1975-06-01,1975-08-31,,,,
