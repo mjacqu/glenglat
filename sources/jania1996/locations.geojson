@@ -9,6 +9,8 @@
 { "type": "Feature", "properties": { "label": "D" }, "geometry": { "type": "Point", "coordinates": [ 15.630353, 77.090933 ] } },
 { "type": "Feature", "properties": { "label": "E" }, "geometry": { "type": "Point", "coordinates": [ 15.574059, 77.098466 ] } },
 { "type": "Feature", "properties": { "label": "F" }, "geometry": { "type": "Point", "coordinates": [ 15.51699, 77.10694 ] } },
-{ "type": "Feature", "properties": { "label": "G" }, "geometry": { "type": "Point", "coordinates": [ 15.595588, 77.01281 ] } }
+{ "type": "Feature", "properties": { "label": "G" }, "geometry": { "type": "Point", "coordinates": [ 15.595588, 77.01281 ] } },
+{ "type": "Feature", "properties": { "label": "D2" }, "geometry": { "type": "Point", "coordinates": [ 15.630241, 77.091815 ] } },
+{ "type": "Feature", "properties": { "label": "B2" }, "geometry": { "type": "Point", "coordinates": [ 15.663486, 77.02435 ] } }
 ]
 }
