@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "table-2.1",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "site": 2, "year": 1994, "x": 950179, "y": 103592, "z": 4243 }, "geometry": { "type": "Point", "coordinates": [ 6.846699, 45.84219 ] } },
+{ "type": "Feature", "properties": { "site": 1, "year": 1999, "x": 949952, "y": 103633, "z": 4301 }, "geometry": { "type": "Point", "coordinates": [ 6.843812, 45.842675 ] } },
+{ "type": "Feature", "properties": { "site": 3, "year": 1999, "x": 950366, "y": 103395, "z": 4251 }, "geometry": { "type": "Point", "coordinates": [ 6.848957, 45.840324 ] } },
+{ "type": "Feature", "properties": { "site": 2, "year": 2004, "x": 950188, "y": 103595, "z": 4243 }, "geometry": { "type": "Point", "coordinates": [ 6.846817, 45.842212 ] } },
+{ "type": "Feature", "properties": { "site": 2, "year": 2009, "x": 950187, "y": 103590, "z": 4243 }, "geometry": { "type": "Point", "coordinates": [ 6.846801, 45.842168 ] } },
+{ "type": "Feature", "properties": { "site": 1, "year": 2011, "x": 949945, "y": 103626, "z": 4303 }, "geometry": { "type": "Point", "coordinates": [ 6.843717, 45.842616 ] } },
+{ "type": "Feature", "properties": { "site": 3, "year": 2011, "x": 950363, "y": 103389, "z": 4249 }, "geometry": { "type": "Point", "coordinates": [ 6.848914, 45.840271 ] } }
+]
+}
