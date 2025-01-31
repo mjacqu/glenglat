@@ -1608,3 +1608,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 834,5,hattersleysmith1960,digitized-discrete,1958-07-06,1958-07-06,,,,
 834,6,hattersleysmith1960,digitized-discrete,1958-07-27,1958-07-27,,,,
 834,7,hattersleysmith1960,digitized-discrete,1958-08-13,1958-08-13,,,,
+835,1,schotterer2003,digitized-continuous,2000-11-27,2000-12-04,,,,date_min/date_max: bonnaveira2011
