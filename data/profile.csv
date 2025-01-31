@@ -1599,3 +1599,12 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 829,13,jania1996,published,1994-10-01,1994-10-01,,,,
 830,1,jania1996,published,1993-09-01,1993-09-30,,,,
 831,1,beaudon2013,digitized-continuous,2005-04-01,2005-12-31,,,,
+832,1,hattersleysmith1960,digitized-discrete,1958-07-01,1958-07-03,,,,
+833,1,hattersleysmith1960,digitized-continuous,1958-08-07,1958-08-07,,,,
+834,1,hattersleysmith1960,digitized-discrete,1958-05-24,1958-05-24,,,,[flag] temperature_uncertainty: 0.25 °C at all depths
+834,2,hattersleysmith1960,digitized-discrete,1958-06-07,1958-06-07,,,,
+834,3,hattersleysmith1960,digitized-discrete,1958-06-15,1958-06-15,,,,
+834,4,hattersleysmith1960,digitized-discrete,1958-06-26,1958-06-26,,,,
+834,5,hattersleysmith1960,digitized-discrete,1958-07-06,1958-07-06,,,,
+834,6,hattersleysmith1960,digitized-discrete,1958-07-27,1958-07-27,,,,
+834,7,hattersleysmith1960,digitized-discrete,1958-08-13,1958-08-13,,,,

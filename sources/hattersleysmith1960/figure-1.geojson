@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "figure-1",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "label": "Pit 1805" }, "geometry": { "type": "Point", "coordinates": [ -73.419049, 82.148796 ] } },
+{ "type": "Feature", "properties": { "label": "Pit 1385" }, "geometry": { "type": "Point", "coordinates": [ -71.933135, 82.172728 ] } },
+{ "type": "Feature", "properties": { "label": "Camp" }, "geometry": { "type": "Point", "coordinates": [ -70.952119, 82.143015 ] } }
+]
+}
