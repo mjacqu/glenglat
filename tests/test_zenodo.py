@@ -17,4 +17,4 @@ def test_builds_valid_datapackage() -> None:
   unzipped_path = zip_path.with_suffix('')
   # Validate package (slow)
   report = frictionless.validate(unzipped_path.joinpath('datapackage.json'))
-  assert report.valid, report.errors
+  assert report.valid, report.to_summary()
