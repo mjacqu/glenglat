@@ -765,3 +765,4 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 828,jania1996,Hansbreen,G015592E77097N,estimated,77.023463,15.663655,published,127,ablation,B,1991-09-30,1991-09-30,thermal,,20,false,0.03,,Ethan Welty,,
 829,jania1996,Hansbreen,G015592E77097N,estimated,77.053605,15.650649,published,225,ablation,C,1991-09-24,1991-09-24,thermal,,20,false,0.03,,Ethan Welty,,
 830,jania1996,Hansbreen,G015592E77097N,estimated,77.098466,15.574059,estimated,365,equilibrium,E,1991-10-01,1991-10-01,thermal,,,false,0.1,,Ethan Welty,,
+831,beaudon2013,Holtedahlfonna,G013095E79037N,published,79.1375,13.272222,published,1150,accumulation,,2005-04-01,2005-04-30,mechanical,,125,false,,"Original reference (not found): Sommer W (2005) Reconstruction of surface temperature variations from temperature measurements along a medium-depth borehole at Holtedahlfonna, Svalbard. (BSc thesis, University of Utrecht)",Ethan Welty,,

@@ -1598,3 +1598,4 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 829,12,jania1996,published,1994-05-28,1994-05-28,,,,
 829,13,jania1996,published,1994-10-01,1994-10-01,,,,
 830,1,jania1996,published,1993-09-01,1993-09-30,,,,
+831,1,beaudon2013,digitized-continuous,2005-04-01,2005-12-31,,,,
