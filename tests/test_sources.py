@@ -1,5 +1,4 @@
 from pathlib import Path
-import xml.etree.ElementTree as ET
 import re
 import warnings
 
@@ -10,8 +9,6 @@ import pytest
 from load import (
   glenglat,
   dfs,
-  DEFAULT_AXIS_NAMES,
-  SPECIAL_AXIS_NAMES,
   DIGITIZER_FILE_REGEX,
   ROOT
 )
@@ -37,26 +34,31 @@ for path in ROOT.joinpath('sources').glob('**/*.xml'):
     continue
   parsed = match.groupdict()
   parsed['borehole_id'] = int(parsed['borehole_id'])
-  parsed['profile_id'] = int(parsed['profile_id'])
   parsed['max_borehole_id'] = int(parsed['max_borehole_id'] or parsed['borehole_id'])
-  parsed['max_profile_id'] = int(parsed['max_profile_id'] or parsed['profile_id'])
+  if parsed['profile_id'] is not None:
+    parsed['profile_id'] = int(parsed['profile_id'])
+    parsed['max_profile_id'] = int(parsed['max_profile_id'] or parsed['profile_id'])
   digitizer_paths.append((path, parsed))
   borehole_ids = range(parsed['borehole_id'], parsed['max_borehole_id'] + 1)
   for borehole_id in borehole_ids:
-    profile_ids = range(parsed['profile_id'], parsed['max_profile_id'] + 1)
-    for profile_id in range(parsed['profile_id'], parsed['max_profile_id'] + 1):
+    if parsed['profile_id'] is None:
+      profile_ids = [None]
+    else:
+      profile_ids = range(parsed['profile_id'], parsed['max_profile_id'] + 1)
+    for profile_id in profile_ids:
       results.append({
         'source_id': parsed['source_id'],
         'borehole_id': borehole_id,
         'profile_id': profile_id,
+        'depth': parsed['depth'],
         'suffix': parsed['suffix']
       })
 
 # All digitizer files
-digitizer_files = pd.DataFrame(results)
+digitizer_files = pd.DataFrame(results).convert_dtypes()
 temp = dfs['profile'].rename(columns={'id': 'profile_id'})
 temp = temp[temp['measurement_origin'].isin(
-  ['digitized', 'digitized-discrete', 'digitized-continuous']
+  ['digitized-discrete', 'digitized-continuous']
 )]
 
 # All digitized profiles
@@ -86,9 +88,9 @@ def test_source_dirs_match_source_ids() -> None:
   assert not invalid, invalid
 
 
-def test_digitized_profiles_match_at_most_one_file_without_a_suffix() -> None:
+def test_digitized_profiles_match_at_most_one_standard_file() -> None:
   """Digitized profiles match <= 1 files without a suffix."""
-  mask = digitizer_files['suffix'].isnull()
+  mask = digitizer_files['suffix'].isnull() & digitizer_files['profile_id'].notnull()
   invalid = (
     digitizer_files.loc[mask, ['source_id', 'borehole_id', 'profile_id']]
     .duplicated(keep=False)
@@ -98,12 +100,30 @@ def test_digitized_profiles_match_at_most_one_file_without_a_suffix() -> None:
 
 def test_digitized_profiles_match_digitizer_files() -> None:
   """Digitized profiles and digitizer files have the same ids."""
-  files = pd.MultiIndex.from_frame(
-    digitizer_files[digitized_profiles.columns].drop_duplicates().astype('string'),
-  ).sort_values()
-  profiles = pd.MultiIndex.from_frame(digitized_profiles.astype('string')).sort_values()
-  assert files.difference(profiles).empty, files.difference(profiles)
-  assert profiles.difference(files).empty, profiles.difference(files)
+  # Files
+  mask = digitizer_files['profile_id'].notnull()
+  files_with_ids = pd.MultiIndex.from_frame(
+    digitizer_files[mask][digitized_profiles.columns]
+    .drop_duplicates()
+    .astype('string')
+  )
+  mask = digitizer_files['profile_id'].isnull()
+  files_without_ids = pd.MultiIndex.from_frame(
+    digitizer_files[mask][digitized_profiles.columns[:2]]
+    .drop_duplicates()
+    .astype('string')
+  )
+  # Profiles
+  temp = digitized_profiles.astype('string')
+  profiles_with_ids = pd.MultiIndex.from_frame(temp)
+  profiles_without_ids = pd.MultiIndex.from_frame(temp.iloc[:, :2])
+  # Compare
+  assert files_with_ids.isin(profiles_with_ids).all()
+  assert files_without_ids.isin(profiles_without_ids).all()
+  assert (
+    profiles_with_ids.isin(files_with_ids) |
+    profiles_without_ids.isin(files_without_ids)
+  ).all()
 
 
 # Indexed measurements (for speed)
@@ -116,42 +136,15 @@ indexed_measurements = (
 @pytest.mark.parametrize('path, parsed', digitizer_paths)
 def test_digitizer_file_is_valid(path: Path, parsed: dict) -> None:
   """Digitizer file is valid."""
-  tree = ET.parse(path)
-  root = tree.getroot()
-  # Image file
-  image = root.find('image')
-  assert image is not None, 'Missing <image>'
-  assert 'file' in image.attrib, 'Missing <image.file>'
-  file = image.attrib['file']
-  assert file not in [None, '', 'none', 'null'], f'Invalid <image.file>: {file}'
-  filepath = path.parent / file
-  assert filepath.is_file(), f'Image does not exist: {filepath}'
-  # Axes
-  axes = root.find('axesnames')
-  assert axes is not None, 'Missing <axesnames>'
-  assert 'x' in axes.attrib, 'Missing <axisnames.x>'
-  assert 'y' in axes.attrib, 'Missing <axisnames.y>'
-  names = {axes.attrib['x'], axes.attrib['y']}
-  valid_names = DEFAULT_AXIS_NAMES
-  if parsed['suffix']:
-    valid_names = valid_names.union(SPECIAL_AXIS_NAMES)
-  assert not (names - valid_names), f'Unexpected axes names: {names}'
-  # Profile
+  df = glenglat.read_plotdigitizer_xml(path)
   if (
     parsed['max_borehole_id'] != parsed['borehole_id'] or
+    parsed['profile_id'] is None or
     parsed['max_profile_id'] != parsed['profile_id'] or
     parsed['suffix']
   ):
     return None
-  points = root.findall('point')
-  df = pd.DataFrame([point.attrib for point in points]).astype(float)
-  assert not df.empty, 'No points found'
-  assert (df['n'].sort_values() == df['n']).all(), 'Points are not sorted'
-  assert df[['dx', 'dy']].notnull().all(axis=None), 'Points contain null values'
-  columns = ['dx', 'dy']
-  if axes.attrib['x'] == 'temperature':
-    columns = columns[::-1]
-  xml_data = df[columns]
+  xml_data = df[['depth', 'temperature']]
   # Ignore performance warning due to unsorted index
   with warnings.catch_warnings():
     warnings.simplefilter(action='ignore', category=pd.errors.PerformanceWarning)

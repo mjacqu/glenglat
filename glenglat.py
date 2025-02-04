@@ -1,6 +1,7 @@
 import copy
 from collections import defaultdict
 import datetime
+from decimal import Decimal
 import functools
 import json
 from pathlib import Path
@@ -8,11 +9,13 @@ import re
 import shutil
 from typing import Dict, Union, Optional, Literal
 import unicodedata
+import xml.etree.ElementTree as ET
 import yaml
 
 import fire
 import frictionless
 import jinja2
+import numpy as np
 import pandas as pd
 import tablecloth.excel
 import xlsxwriter
@@ -1116,6 +1119,224 @@ def write_subset(
           dst=path.joinpath(base_path),
           dirs_exist_ok=True
         )
+
+
+def read_plotdigitizer_xml(path: Union[str, Path]) -> pd.DataFrame:
+  path = Path(path)
+  tree = ET.parse(path)
+  root = tree.getroot()
+  # Image file
+  image = root.find('image')
+  if image is None:
+    raise ValueError('Missing <image>')
+  if 'file' not in image.attrib:
+    raise ValueError('Missing <image.file>')
+  file = image.attrib['file']
+  if file in (None, '', 'none', 'null'):
+    raise ValueError(f'Invalid <image.file>: {file}')
+  filepath = path.parent / file
+  if not filepath.is_file():
+    raise FileNotFoundError(f'Image does not exist: {filepath}')
+  # Axes
+  axes = root.find('axesnames')
+  if axes is None:
+    raise ValueError('Missing <axesnames>')
+  if 'x' not in axes.attrib:
+    raise ValueError('Missing <axisnames.x>')
+  if 'y' not in axes.attrib:
+    raise ValueError('Missing <axisnames.y>')
+  points = root.findall('point')
+  if not points:
+    raise ValueError('No <point> elements found')
+  df = pd.DataFrame([point.attrib for point in points]).astype(float)
+  if not df['n'].is_monotonic_increasing:
+    raise ValueError('Points are not sorted')
+  if df[['dx', 'dy']].isnull().any(axis=None):
+    raise ValueError('Points contain null values')
+  return (
+    df[['dx', 'dy']].rename(columns={'dx': axes.attrib['x'], 'dy': axes.attrib['y']})
+  )
+
+
+def convert_date_to_decimal_year(date: datetime.datetime) -> float:
+  """
+  Convert date to decimal year.
+
+  Examples
+  --------
+  >>> convert_date_to_decimal_year(datetime.datetime(1969, 1, 1))
+  1969.0
+  >>> convert_date_to_decimal_year(datetime.datetime(1969, 10, 1))
+  1969.7479452054795
+  >>> convert_date_to_decimal_year(datetime.datetime(1969, 11, 30))
+  1969.9123287671232
+  """
+  begin = datetime.datetime(date.year, 1, 1)
+  end = datetime.datetime(date.year + 1, 1, 1)
+  return date.year + (date - begin).total_seconds() / (end - begin).total_seconds()
+
+
+def round_date(date: datetime.datetime) -> datetime.datetime:
+  """
+  Round date to nearest date.
+
+  Examples
+  --------
+  >>> round_date(datetime.datetime(1969, 10, 1, 0, 0, 0, 1))
+  datetime.datetime(1969, 10, 1, 0, 0)
+  >>> round_date(datetime.datetime(1969, 10, 1, 12))
+  datetime.datetime(1969, 10, 2, 0, 0)
+  >>> round_date(datetime.datetime(1969, 11, 29, 23, 59, 59, 999997))
+  datetime.datetime(1969, 11, 30, 0, 0)
+  """
+  return (date + datetime.timedelta(hours=12)).replace(
+    hour=0, minute=0, second=0, microsecond=0
+  )
+
+
+def convert_decimal_year_to_date(year: float) -> datetime.datetime:
+  """
+  Convert decimal year to ISO8601 date format.
+
+  Examples
+  --------
+  >>> convert_decimal_year_to_date(1969.0)
+  datetime.datetime(1969, 1, 1, 0, 0)
+  >>> convert_decimal_year_to_date(1969 + 1/365)
+  datetime.datetime(1969, 1, 1, 23, 59, 59, 999999)
+  >>> year = convert_date_to_decimal_year(datetime.datetime(1969, 10, 1))
+  >>> round_date(convert_decimal_year_to_date(year))
+  datetime.datetime(1969, 10, 1, 0, 0)
+  >>> year = convert_date_to_decimal_year(datetime.datetime(1969, 11, 30))
+  >>> round_date(convert_decimal_year_to_date(year))
+  datetime.datetime(1969, 11, 30, 0, 0)
+  """
+  full_years = int(year)
+  remainder = year - full_years
+  begin = datetime.datetime(full_years, 1, 1)
+  end = datetime.datetime(full_years + 1, 1, 1)
+  last_year_length = datetime.timedelta(seconds=(end - begin).total_seconds())
+  return begin + remainder * last_year_length
+
+
+def interpolate_depth_timeseries(
+  dfs: Dict[Union[str, int, Decimal], pd.DataFrame],
+  years: list[float],
+  borehole_id: int,
+) -> Dict[str, pd.DataFrame]:
+  """
+  Interpolate temperature-depth profiles from temperatures at different depths.
+
+  Parameters
+  ----------
+  dfs
+    Dictionary of DataFrames with columns (decimal) 'year' and 'temperature',
+    where keys are thermistor depth.
+  Years
+    List of decimal years to interpolate.
+  borehole_id
+    Borehole id to assign to profiles.
+
+  Returns
+  -------
+  A 'profile' DataFrame with columns
+  'borehole_id', 'id' (index of date in dates with measurements), and 'date',
+  and a 'measurement' DataFrame with columns
+  'borehole_id', 'profile_id', 'depth', and 'temperature' for each date.
+  Measurements with no temperature and profiles with no measurements are dropped.
+  """
+  # Initialize profiles
+  profiles = pd.DataFrame({
+    'borehole_id': borehole_id,
+    'id': np.arange(len(years)) + 1,
+    'date': [round_date(convert_decimal_year_to_date(year)) for year in years]
+  })
+  # Interpolate temperatures
+  measurements = []
+  for depth, df in dfs.items():
+    if df.empty:
+      continue
+    temperature = np.interp(
+      x=years,
+      xp=df['year'].astype(float),
+      fp=df['temperature'].astype(float),
+      left=np.nan,
+      right=np.nan
+    )
+    measurement = pd.DataFrame({
+      'borehole_id': borehole_id,
+      'profile_id': profiles['id'].values,
+      'depth': Decimal(depth),
+      'temperature': temperature
+    })
+    measurements.append(measurement)
+  measurements = pd.concat(measurements, ignore_index=True)
+  # Order measurements by profile id and depth
+  measurements.sort_values(['profile_id', 'depth'], inplace=True)
+  # Drop measurements with no temperature
+  measurements.dropna(subset=['temperature'], inplace=True)
+  measurements.reset_index(inplace=True, drop=True)
+  # Drop profiles with no measurements
+  mask = profiles['id'].isin(measurements['profile_id'])
+  profiles = profiles[mask].reset_index(drop=True)
+  profiles.index += 1
+  # Renumber profile ids
+  remap = dict(zip(profiles['id'], profiles.index))
+  profiles['id'].map(remap)
+  measurements['profile_id'] = measurements['profile_id'].map(remap)
+  return {'profile': profiles, 'measurement': measurements}
+
+
+def interpolate_plotdigitizer_depth_timeseries(
+  glob: str,
+  n: int,
+  coverage: Literal['any', 'all'] = 'any',
+  ignore_coverage: list[str] = None
+) -> Dict[str, pd.DataFrame]:
+  """
+  Interpolate temperature-depth profiles from PlotDigitizer XML files for each depth.
+
+  Parameters
+  ----------
+  glob
+    Glob pattern to match XML files.
+  n
+    Number of equal-length time intervals to divide temporal coverage into.
+    Interpolation is performed at the endpoints of these intervals (so n + 1 profiles).
+  coverage
+    Whether to run interpolation from the earliest to latest time with temperature at
+    any depth, or at the earliest to latest time with temperature at all depths.
+  ignore_coverage
+    Depths to ignore for coverage check.
+  """
+  # Load thermistors
+  paths = list((ROOT / 'sources').glob(glob))
+  borehole_ids = {path.stem.split('_')[0] for path in paths}
+  if len(set(borehole_ids)) > 1:
+    raise ValueError(f'Multiple boreholes found: {borehole_ids}')
+  borehole_id = int(borehole_ids.pop())
+  dfs = {}
+  for path in paths:
+    depth = path.stem.split('_')[1]
+    if depth[-1] != 'm':
+      raise ValueError(f'Invalid depth: {depth}')
+    depth = depth.replace('m', '')
+    if depth in dfs:
+      raise ValueError(f'Duplicate depth: {depth}')
+    dfs[depth] = read_plotdigitizer_xml(path)
+  # Interpolate thermistors
+  ignore = [] if ignore_coverage is None else ignore_coverage
+  if coverage == 'any':
+    min_year = min(df['year'].min() for depth, df in dfs.items() if depth not in ignore)
+    max_year = max(df['year'].max() for depth, df in dfs.items() if depth not in ignore)
+    years = np.linspace(min_year, max_year, n + 1)
+  elif coverage == 'all':
+    min_year = max(df['year'].min() for depth, df in dfs.items() if depth not in ignore)
+    max_year = min(df['year'].max() for depth, df in dfs.items() if depth not in ignore)
+    years = np.linspace(min_year, max_year, n + 1)
+  else:
+    raise ValueError(f'Invalid coverage: {coverage}')
+  return interpolate_depth_timeseries(dfs, years, borehole_id)
 
 
 # Generate command line interface

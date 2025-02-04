@@ -46,9 +46,9 @@ SPECIAL_AXIS_NAMES = {'elevation', 'days', 'year'}
 
 DIGITIZER_FILE_REGEX = (
   r'^sources\/(?P<source_id>[^\/]+)\/' +
-  r'(?P<borehole_id>[0-9]+)(-(?P<max_borehole_id>[0-9]+))?_' +
-  r'(?P<profile_id>[0-9]+)(-(?P<max_profile_id>[0-9]+))?' +
-  r'(_(?P<suffix>.+))?\.xml$'
+  r'(?P<borehole_id>[0-9]+)(?:-(?P<max_borehole_id>[0-9]+))?' +
+  r'_(?:(?P<profile_id>[0-9]+)(?:-(?P<max_profile_id>[0-9]+))?|(?P<depth>[\-0-9\.]+)m)' +
+  r'(?:_(?P<suffix>.+))?\.xml$'
 )
 """Regular expression for digitizer file paths."""
 
