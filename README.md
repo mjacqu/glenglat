@@ -187,10 +187,10 @@ This executes several functions:
 * `write_submission_md`: Updates tables in this [`README.md`](README.md) from [`submission/datapackage.yaml`](submission/datapackage.yaml).
 * `write_submission_xlsx`: Builds [`submission/template.xlsx`](submission/template.xlsx) from [`submission/datapackage.yaml`](submission/datapackage.yaml).
 
-To write a subset of the data (e.g. to send to a contributor for review), use `write_subset`. The selection can be made by curator name (`--curator`) or source `id` (`--source`), optionally including secondary sources mentioned in `notes` columns (`--secondary_sources`), and the output can include source directories (`--source_files`).
+To select and write a subset of the data (e.g. to send to a contributor for review), use `select_and_write_subset`. The selection can be made by curator name (`--curator`) or source `id` (`--source`), optionally including secondary sources mentioned in `notes` columns (`--secondary_sources`), and the output can include source directories (`--source_files`).
 
 ```sh
-python glenglat.py write_subset subsets/vantricht --curator='Lander Van Tricht' --secondary_sources --source_files
+python glenglat.py select_and_write_subset subsets/vantricht --curator='Lander Van Tricht' --secondary_sources --source_files
 ```
 
 ### Publish to Zenodo
