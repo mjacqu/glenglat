@@ -224,6 +224,7 @@ resources:
             - da: Danish
             - de: German
             - en: English
+            - es: Spanish
             - fr: French
             - ja: Japanese
             - ko: Korean
@@ -237,6 +238,7 @@ resources:
               - da
               - de
               - en
+              - es
               - fr
               - ja
               - ko
@@ -460,6 +462,7 @@ resources:
       - data/lee2019-jarvis/profile.csv
       - data/carturan2023-ortles/profile.csv
       - data/kronenberg2022-grigoriev/profile.csv
+      - data/bravo2015-pascua-lama/profile.csv
     format: csv
     dialect:
       header: true
@@ -553,6 +556,7 @@ resources:
       - data/lee2019-jarvis/measurement.csv
       - data/carturan2023-ortles/measurement.csv
       - data/kronenberg2022-grigoriev/measurement.csv
+      - data/bravo2015-pascua-lama/measurement.csv
     format: csv
     dialect:
       header: true
