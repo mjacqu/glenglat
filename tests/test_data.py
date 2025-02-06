@@ -1,3 +1,4 @@
+import frictionless
 import numpy as np
 import pandas as pd
 import pytest
@@ -10,6 +11,13 @@ from load import (
   PEOPLE_COLUMNS
 )
 import glenglat
+
+
+@pytest.mark.slow
+def test_datapackage_is_valid() -> None:
+  """Frictionless datapackage is valid."""
+  report = frictionless.validate('datapackage.yaml')
+  assert report.valid, report.to_summary()
 
 
 # ---- source ----
