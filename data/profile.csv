@@ -1657,3 +1657,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 851,1,wang1989,digitized-discrete,1986-06-12,1986-06-12,,,,
 851,2,wang1989,digitized-discrete,1986-07-23,1986-07-23,,,,
 851,3,wang1989,digitized-discrete,1986-08-26,1986-08-26,,,,
+852,1,keeler1964,digitized-discrete,1963-05-26,1963-05-26,,,,
+852,2,keeler1964,digitized-discrete,1963-07-19,1963-07-19,,,,
+852,3,keeler1964,digitized-discrete,1963-08-11,1963-08-11,,,,
