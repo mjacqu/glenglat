@@ -248,11 +248,7 @@ def write_submission_yaml() -> None:
         field.false_values = ['False', 'false', 'FALSE']
   # --- Strip path prefixes ---
   for resource in package.resources:
-    if isinstance(resource.path, list):
-      path = resource.path[0]
-    else:
-      path = resource.path
-    resource.path = Path(path).name
+    resource.path = Path(resource.path).name
     resource.extrapaths = None
   # --- Overwrite package metadata ---
   package.name = 'glenglat-submission'
@@ -263,7 +259,10 @@ def write_submission_yaml() -> None:
   package.licenses = None
   package.contributors = None
   package.keywords = None
-  package.custom = {}
+  package.custom = {
+    key: value for key, value in package.custom.items()
+    if key in ['$schema', 'languages']
+  }
   # --- Validate metadata ----
   metadata = package.to_dict()
   # HACK: Remove spurious csv key from dialects introduced by frictionless

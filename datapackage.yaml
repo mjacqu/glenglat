@@ -143,20 +143,22 @@ contributors:
       - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: DataCollector
     status: creator
-profile: tabular-data-package
+$schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
     description: Sources of information considered in the compilation of this database. Column names and categorical values closely follow the Citation Style Language (CSL) 1.0.2 specification. Names of people in non-Latin scripts are followed by a latinization in square brackets (e.g. В. С. Загороднов [V. S. Zagorodnov]) and non-English titles are followed by a translation in square brackets. The family name of Latin-script names is wrapped in curly braces when it is not the last word of the name (e.g. Emmanuel {Le Meur}, e.g. {Duan} Keqin) or the name ends in two or more unabbreviated words (e.g. Jon Ove {Hagen}). The family name of a Chinese name (and of the latinization) is wrapped in curly braces when it is not the first character.
     path: data/source.csv
     format: csv
     dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
       header: true
       delimiter: ','
       lineTerminator: "\n"
       quoteChar: '"'
       doubleQuote: true
-    profile: tabular-data-resource
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
     schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
       fields:
         - name: id
           description: Unique identifier constructed from the first author's lowercase, latinized, family name and the publication year, followed as needed by a lowercase letter to ensure uniqueness (e.g. Загороднов 1981 → zagorodnov1981a).
@@ -295,13 +297,15 @@ resources:
     path: data/borehole.csv
     format: csv
     dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
       header: true
       delimiter: ','
       lineTerminator: "\n"
       quoteChar: '"'
       doubleQuote: true
-    profile: tabular-data-resource
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
     schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
       fields:
         - name: id
           description: Unique identifier.
@@ -465,13 +469,15 @@ resources:
       - data/bravo2015-pascua-lama/profile.csv
     format: csv
     dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
       header: true
       delimiter: ','
       lineTerminator: "\n"
       quoteChar: '"'
       doubleQuote: true
-    profile: tabular-data-resource
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
     schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
       fields:
         - name: borehole_id
           description: Borehole identifier.
@@ -559,13 +565,15 @@ resources:
       - data/bravo2015-pascua-lama/measurement.csv
     format: csv
     dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
       header: true
       delimiter: ','
       lineTerminator: "\n"
       quoteChar: '"'
       doubleQuote: true
-    profile: tabular-data-resource
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
     schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
       fields:
         - name: borehole_id
           description: Borehole identifier.
@@ -601,13 +609,15 @@ resources:
     path: data/person.csv
     format: csv
     dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
       header: true
       delimiter: ','
       lineTerminator: "\n"
       quoteChar: '"'
       doubleQuote: true
-    profile: tabular-data-resource
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
     schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
       fields:
         - name: titles
           description: Author titles matching this person, as a pipe-delimited list.

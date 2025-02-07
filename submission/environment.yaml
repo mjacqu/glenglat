@@ -5,4 +5,4 @@ channels:
 
 dependencies:
   - python=3.9
-  - frictionless=5.13
+  - frictionless=5.18

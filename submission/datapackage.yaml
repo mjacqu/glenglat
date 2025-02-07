@@ -1,19 +1,18 @@
 name: glenglat-submission
 description: Submission format for the global englacial temperature database.
 homepage: https://github.com/mjacqu/glenglat
-profile: tabular-data-package
 version: 1.0.0-rc4
 resources:
 - name: borehole
   type: table
   description: Metadata about each borehole.
-  profile: tabular-data-resource
   path: borehole.csv
   scheme: file
   format: csv
   mediatype: text/csv
   dialect:
     header: true
+    $schema: https://datapackage.org/profiles/2.0/tabledialect.json
     delimiter: ','
     lineTerminator: '
 
@@ -142,16 +141,18 @@ resources:
     - ''
     primaryKey:
     - id
+    $schema: https://datapackage.org/profiles/2.0/tableschema.json
+  $schema: https://datapackage.org/profiles/2.0/dataresource.json
 - name: measurement
   type: table
   description: Temperature measurements with depth.
-  profile: tabular-data-resource
   path: measurement.csv
   scheme: multipart
   format: csv
   mediatype: text/csv
   dialect:
     header: true
+    $schema: https://datapackage.org/profiles/2.0/tabledialect.json
     delimiter: ','
     lineTerminator: '
 
@@ -217,3 +218,8 @@ resources:
         resource: borehole
         fields:
         - id
+    $schema: https://datapackage.org/profiles/2.0/tableschema.json
+  $schema: https://datapackage.org/profiles/2.0/dataresource.json
+languages:
+- en
+$schema: https://datapackage.org/profiles/2.0/datapackage.json
