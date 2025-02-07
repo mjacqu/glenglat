@@ -4,7 +4,7 @@
 | :- | :- |
 [Tutorial notebook](tutorial.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mjacqu/glenglat/blob/main/tutorial.ipynb)
 Version history | [![GitHub Release](https://img.shields.io/github/v/release/mjacqu/glenglat?label=latest)](https://github.com/mjacqu/glenglat/releases)
-Tests | [![Frictionless](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/frictionless.yaml) [![Pytest](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml)
+Tests | [![Pytest](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml)
 
 _Our paper is currently in public review at [Earth System Science Data](https://essd.copernicus.org). Preview it and consider reviewing it at https://essd.copernicus.org/preprints/essd-2024-249/!_
 
@@ -146,29 +146,24 @@ cp .env.example .env
 
 ### Run tests
 
-Run the basic (`frictionless`) tests.
-
-```sh
-frictionless validate datapackage.yaml
-```
-
-Run the custom (`pytest`) tests in the [`tests`](tests) folder.
+Run all the tests in the [`tests`](tests) folder.
 
 ```sh
 pytest
 ```
 
-An optional test checks that `borehole.glims_id` is consistent with borehole coordinates. To run, install `geopandas` and `pyarrow` and set the `GLIMS_PATH` environment variable before calling `pytest`.
+Run only fast tests with the `--fast` option and only slow tests with the `--slow` option.
+
+```sh
+pytest --fast
+pytest --slow
+```
+
+An optional (slow) test checks that `borehole.glims_id` is consistent with borehole coordinates. To run, install `geopandas` and `pyarrow` and set the `GLIMS_PATH` environment variable before calling `pytest`.
 
 ```sh
 conda install -c conda-forge geopandas=0.13 pyarrow
 pytest
-```
-
-Slow tests can be skipped by using the `--fast` option.
-
-```sh
-pytest --fast
 ```
 
 ### Maintain the repository
