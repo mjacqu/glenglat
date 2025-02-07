@@ -143,6 +143,16 @@ contributors:
       - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
     role: DataCollector
     status: creator
+  - title: Horst Machguth
+    path: https://orcid.org/0000-0001-5924-0998
+    affiliations:
+      - name: Department of Geosciences, University of Fribourg (UniFr), Switzerland
+    role: DataCollector
+    status: contributor
+  - title: Marlene Kronenberg
+    path: https://orcid.org/0000-0003-0214-107X
+    role: DataCollector
+    status: contributor
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
@@ -467,6 +477,7 @@ resources:
       - data/carturan2023-ortles/profile.csv
       - data/kronenberg2022-grigoriev/profile.csv
       - data/bravo2015-pascua-lama/profile.csv
+      - data/kronenberg2022b-abramov/profile.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
@@ -563,6 +574,7 @@ resources:
       - data/carturan2023-ortles/measurement.csv
       - data/kronenberg2022-grigoriev/measurement.csv
       - data/bravo2015-pascua-lama/measurement.csv
+      - data/kronenberg2022b-abramov/measurement.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json

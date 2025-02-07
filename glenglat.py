@@ -994,49 +994,25 @@ def write_excel_sheet(
 
 
 def write_subset(
+  dfs: dict[str, pd.DataFrame],
   path: Union[str, Path],
-  source: Optional[str] = None,
-  curator: Optional[str] = None,
-  secondary_sources: bool = False,
   source_files: bool = False
 ) -> None:
   """
   Write data subset.
-
-  Boreholes and profiles are selected by source and/or curator,
-  then all related records are included as needed.
-  See `select_by_origin` and `build_subset_from_selection` for details.
 
   Writes a CSV file for each table (data/*.csv), an Excel file (data.xlsx), and
   source directories (sources/*) if `source_files` is True.
 
   Parameters
   ----------
+  dfs
+    Subset data tables.
   path
     Path to write the subset.
-  source
-    Select boreholes and profiles by source.
-  curator
-    Select boreholes by curator.
-  secondary_sources
-    Whether to consider sources in `notes` columns.
   source_files
     Whether to include source directories of included sources (sources/*).
   """
-  # ---- Build subset ----
-  dfs = read_data(dtype='string')
-  masks = {
-    key: select_rows_by_origin(
-      dfs[key],
-      source=source,
-      curator=curator,
-      secondary_sources=secondary_sources
-    )
-    for key in ('borehole', 'profile')
-  }
-  dfs = build_subset_from_selection(
-    dfs, masks=masks, secondary_sources=secondary_sources
-  )
   # Drop __path__ column and empty tables
   dfs = {
     key: df.drop(columns=['__path__'], errors='ignore')
@@ -1118,6 +1094,54 @@ def write_subset(
           dst=path.joinpath(base_path),
           dirs_exist_ok=True
         )
+
+
+def select_and_write_subset(
+  path: Union[str, Path],
+  source: Optional[str] = None,
+  curator: Optional[str] = None,
+  secondary_sources: bool = False,
+  source_files: bool = False
+) -> None:
+  """
+  Select and write data subset.
+
+  Boreholes and profiles are selected by source and/or curator,
+  then all related records are included as needed.
+  See `select_by_origin` and `build_subset_from_selection` for details.
+
+  Writes a CSV file for each table (data/*.csv), an Excel file (data.xlsx), and
+  source directories (sources/*) if `source_files` is True.
+  See `write_subset` for details.
+
+  Parameters
+  ----------
+  path
+    Path to write the subset.
+  source
+    Select boreholes and profiles by source.
+  curator
+    Select boreholes by curator.
+  secondary_sources
+    Whether to consider sources in `notes` columns.
+  source_files
+    Whether to include source directories of included sources (sources/*).
+  """
+  # ---- Build subset ----
+  dfs = read_data(dtype='string')
+  masks = {
+    key: select_rows_by_origin(
+      dfs[key],
+      source=source,
+      curator=curator,
+      secondary_sources=secondary_sources
+    )
+    for key in ('borehole', 'profile')
+  }
+  dfs = build_subset_from_selection(
+    dfs, masks=masks, secondary_sources=secondary_sources
+  )
+  write_subset(dfs, path=path, source_files=source_files)
 
 
 def read_plotdigitizer_xml(path: Union[str, Path]) -> pd.DataFrame:
