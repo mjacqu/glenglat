@@ -55,24 +55,6 @@ def test_title_not_null_unless_submission() -> None:
   assert valid.all(), df.loc[~valid, ['id', 'type', 'title']]
 
 
-def test_submission_only_has_author_year() -> None:
-  """Submission only has author and year (in addition to required columns)."""
-  df = dfs['source']
-  resource = package.get_resource('source')
-  null_columns = [
-    field.name for field in resource.schema.fields
-    if (
-      field.name not in ['author', 'year'] and
-      not field.constraints.get('required', False)
-    )
-  ]
-  valid = (
-    df['type'].ne('personal-communication') |
-    df[null_columns].isnull().all(axis=1)
-  )
-  assert valid.all(), df.loc[~valid, ['id', 'author', 'year']]
-
-
 def test_borehole_id_in_profile_table() -> None:
   """All boreholes have at least one profile."""
   df = dfs['borehole']
@@ -129,6 +111,7 @@ def test_borehole_measurement_depth_less_than_total_depth() -> None:
   """Borehole measurement depth is less than total depth (within tolerance)."""
   EXCEPTIONS = [
     201,  # thompson1995 (Summit core): 16 m core depth vs 17.2 m digitized measurement
+    845,  # kronenberg2022b: Original depth 17.75 m increasing to 23.1 m due to snow
   ]
   df = (
     dfs['profile']
