@@ -580,7 +580,7 @@ def convert_source_to_csl(
   source_title = source['title']
   if source_type == 'personal-communication':
     source_type = 'personal_communication'
-    source_title = 'Personal communication'
+    source_title = source_title or 'Personal communication'
   csl = {
     'id': source['id'],
     'citation-key': source['id'],
