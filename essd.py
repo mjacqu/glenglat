@@ -159,6 +159,13 @@ def convert_source_to_csl(source: Dict[str, str]) -> dict:
   source
     Dictionary representing a row in the source table.
   """
+  # Migrate 'personal-communication' to 'personal_communication'
+  # Add a title to personal communications
+  source_type = source['type']
+  source_title = source['title']
+  if source_type == 'personal-communication':
+    source_type = 'personal_communication'
+    source_title = source_title or 'Personal communication'
   # Format person names
   names = defaultdict(list)
   # Authors
@@ -167,7 +174,7 @@ def convert_source_to_csl(source: Dict[str, str]) -> dict:
     persons = [parse_person_string(string) for string in strings]
     names['author'], names_in_title = format_authors_for_essd(persons)
     if names_in_title:
-      source['title'] = f"({names_in_title}): {source['title']}"
+      source_title = f"({names_in_title}): {source_title}"
   # Editors
   if source.get('editor'):
     strings = source['editor'].split(' | ')
@@ -177,13 +184,6 @@ def convert_source_to_csl(source: Dict[str, str]) -> dict:
   doi = None
   if source['url'] and source['url'].startswith('https://doi.org/'):
     doi = source['url'].replace('https://doi.org/', '')
-  # Migrate 'personal-communication' to 'personal_communication'
-  # Add a title to personal communications
-  source_type = source['type']
-  source_title = source['title']
-  if source_type == 'personal-communication':
-    source_type = 'personal_communication'
-    source_title = source_title or 'Personal communication'
   csl = {
     'id': source['id'],
     'citation-key': source['id'],
