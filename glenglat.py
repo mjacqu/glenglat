@@ -333,6 +333,37 @@ def write_submission() -> None:
 
 # ---- Reference list ----
 
+def infer_script(text: str) -> Literal['cyrillic', 'chinese', 'hangul', 'kana', 'latin']:
+  """
+  Infer script of text.
+
+  Examples
+  --------
+  >>> infer_script('Jakob F. Steiner')
+  'latin'
+  >>> infer_script('Н. Г. Разумейко')
+  'cyrillic'
+  >>> infer_script('孙维君')
+  'chinese'
+  >>> infer_script('杉山 慎')
+  'chinese'
+  >>> infer_script('スギヤマ シン')
+  'kana'
+  >>> infer_script('안진호')
+  'hangul'
+  """
+  if re.search(r'[А-ЯЁа-яё]+', text):
+    return 'cyrillic'
+  if re.search(r'[\u4e00-\u9fff]+', text):
+    # Includes kanji
+    return 'chinese'
+  if re.search(r'[\uac00-\ud7af]+', text):
+    return 'hangul'
+  if re.search(r'[\u3040-\u30ff]+', text):
+    return 'kana'
+  return 'latin'
+
+
 def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
   """
   Infer given and family names from a name and its Latin transliteration.
@@ -369,8 +400,9 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
       return None
     return {'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]}}
   words = name.split(' ')
+  script = infer_script(name)
   # Cyrillic: Last word is family name
-  if re.search(r'[А-ЯЁа-яё]+', name):
+  if script == 'cyrillic':
     if len(words) < 2 or len(words) != len(latin_words):
       raise ValueError(f'Cyrillic name "{name} [{latin}]" is ambiguous')
     return {
@@ -379,7 +411,7 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
       'script': 'cyrillic'
     }
   # Chinese
-  if re.search(r'[\u4e00-\u9fff]+', name):
+  if script == 'chinese':
     if len(words) > 2:
       return None
     # Kanji (Japanese): First word is family name
@@ -397,25 +429,25 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
     return {
       'name': {'family': name[0], 'given': name[1:]},
       'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
-      'script': 'chinese'
+      'script': script
     }
   # Hangul (Korean): First character of original and first word of latin is family name
-  if re.search(r'[\uac00-\ud7af]+', name):
+  if script == 'hangul':
     if len(words) > 1:
         return None
     return {
       'name': {'family': name[0], 'given': name[1:]},
       'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
-      'script': 'hangul'
+      'script': script
     }
   # Kana (Japanese): First word is family name
-  if re.search(r'[\u3040-\u30ff]+', name):
+  if script == 'kana':
     if len(words) != 2 or len(latin_words) != 2:
       return None
     return {
       'name': {'family': words[0], 'given': words[1]},
       'latin': {'family': latin_words[0], 'given': latin_words[1]},
-      'script': 'kana'
+      'script': script
     }
   return None
 
