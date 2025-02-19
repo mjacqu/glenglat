@@ -266,10 +266,10 @@ resources:
           description: Volume number of the item or container.
           type: integer
         - name: issue
-          description: Issue number (e.g. 1) or range (e.g. 1-2) of the item or container, with an optional letter prefix (e.g. F1) or part number (e.g. 75pt2).
+          description: Issue number (e.g. 1) or range (e.g. 1-2) of the item or container, with an optional letter prefix (e.g. F1) or part number (e.g. 75pt2), or '增刊 [Supplement]'.
           type: string
           constraints:
-            pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?|[0-9]+pt[0-9]'
+            pattern: '[a-zA-Z]?[0-9]+(-[0-9]+)?|[0-9]+pt[0-9]|增刊 \[Supplement\]'
         - name: page
           description: Page number (e.g. 1) or range (e.g. 1-2) of the item in the container, with an optional letter prefix (e.g. S1).
           type: string
