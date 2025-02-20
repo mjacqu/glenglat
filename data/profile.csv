@@ -1669,3 +1669,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 857,3,su1996,published,1990-10-21,1990-10-21,,,,
 857,4,su1996,published,1990-11-03,1990-11-03,,,,
 857,5,su1996,published,1990-11-26,1990-11-26,,,,
+858,1,khmelevskoy1971,published,1969-07-29,1969-07-29,,,,
+859,1,khmelevskoy1971,published,1969-07-31,1969-07-31,,,,
+860,1,khmelevskoy1971,published,1969-08-02,1969-08-02,,,,
