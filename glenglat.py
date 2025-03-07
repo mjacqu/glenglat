@@ -556,10 +556,29 @@ def parse_person_string(string: str) -> dict:
   return groups
 
 
+def extract_translation(s: Optional[str]) -> str:
+  """
+  Extract translation from a string (or if none, the original string).
+
+  Examples
+  --------
+  >>> extract_translation('name [translation]')
+  'translation'
+  >>> extract_translation('name')
+  'name'
+  """
+  if s is None:
+    return None
+  match = re.match(r'^(.*) \[([^\]]+)\]$', s)
+  if match:
+    return match.group(2)
+  return s
+
+
 def convert_source_to_csl(
   source: Dict[str, str],
-  non_latin: Literal['literal', 'given'] = 'literal',
-  zotero_citation_key: bool = False
+  non_latin: Literal['literal', 'given', 'none'] = 'literal',
+  zotero: bool = False
 ) -> dict:
   """
   Convert source to CSL-JSON.
@@ -577,9 +596,8 @@ def convert_source_to_csl(
 
     * 'given': non-latin name is appended in square brackets to the latin given name
     * 'literal': original title ('name [latin]') is used as 'literal' attribute
-  zotero_citation_key
-    Add id to a note formatted as 'Citation key: id'. This is useful for Zotero with
-    the Better BibTeX plugin.
+    * 'none': All non-Latin characters are removed
+  zotero
   """
   # Format person names
   names = defaultdict(list)
@@ -589,7 +607,7 @@ def convert_source_to_csl(
     strings = source[key].split(' | ')
     for string in strings:
       parsed = parse_person_string(string)
-      if parsed['name']:
+      if parsed['name'] and non_latin != 'none':
         if non_latin == 'given':
           name = {
             'family': parsed['latin']['family'],
@@ -638,7 +656,9 @@ def convert_source_to_csl(
     'collection-number': source['collection_number'],
     'publisher': source['publisher']
   }
-  if zotero_citation_key:
+  if non_latin == 'none':
+    for key in ('title', 'container-title', 'collection-title', 'publisher'):
+      csl[key] = extract_translation(csl[key])
     csl['note'] = f"Citation key: {source['id']}"
   # Keep only truthy values
   return {key: value for key, value in csl.items() if value}
