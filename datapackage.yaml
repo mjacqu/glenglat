@@ -438,7 +438,7 @@ resources:
           type: number
           unit: °C
         - name: notes
-          description: Additional remarks about the study site, the borehole, or the measurements therein. Souces are referenced by their `id`.
+          description: Additional remarks about the study site, the borehole, or the measurements therein as a pipe-delimited list. Sources are referenced by `source.id`. Quality concerns are prefixed with '[flag]'.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
@@ -547,7 +547,7 @@ resources:
           constraints:
             enum: ['true', 'estimated', 'false']
         - name: notes
-          description: Additional remarks about the profile or the measurements therein. Sources are referenced by `source.id`.
+          description: Additional remarks about the profile or the measurements therein as a pipe-delimited list. Sources are referenced by `source.id`. Quality concerns are prefixed with '[flag]'.
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
