@@ -677,15 +677,13 @@ def convert_source_to_csl(
 
 def render_sources_as_csl(
   non_latin: Literal['literal', 'given'] = 'literal',
-  zotero_citation_key: bool = False
+  zotero: bool = False
 ) -> str:
   """Render sources as CSL-JSON."""
   sources = pd.read_csv(DATA_PATH.joinpath('source.csv'), dtype='string')
   sources.replace({pd.NA: None}, inplace=True)
   csl = [
-    convert_source_to_csl(
-      source, non_latin=non_latin, zotero_citation_key=zotero_citation_key
-    )
+    convert_source_to_csl(source, non_latin=non_latin, zotero=zotero)
     for source in sources.to_dict(orient='records')
   ]
   return json.dumps(csl, indent=2, ensure_ascii=False)
