@@ -728,49 +728,58 @@ def convert_people_to_english_list(people: str) -> str:
 def render_source_as_reference(source: dict) -> dict:
   """Render source to text reference."""
   source = {key: value for key, value in source.items() if value is not None}
+  # Replace - with – in page ranges
+  if 'page' in source:
+    source['page'] = source['page'].replace('-', '–')
   if 'year' not in source or 'title' not in source:
     raise ValueError('Source must have year and title')
   if 'author' in source:
     s = convert_people_to_english_list(source['author'])
   else:
     s = AUTHOR_PLACEHOLDER
-  # {authors} ({year}): {title}.
-  s = f"{s} ({source['year']}): {source['title']}."
-  # Version {version}. {container_title}. {editors} (editors).
+  # {authors} ({year}). {title}.
+  s = f"{s} ({source['year']}). {source['title']}"
+  # (version {version}), in: {container_title}, editors: {editors}.
   if 'version' in source:
-    s += f" Version {source['version']}."
+    s += f" (version {source['version']})"
   if 'container_title' in source:
-    s += f" {source['container_title']}."
+    s += f", in: {source['container_title']}"
   if 'editor' in source:
-    s += f" {convert_people_to_english_list(source['editor'])} (editors)."
-  # Volume {volume} ({issue}): {page} | Issue {issue}: {page} | Pages {page}
+    s += f", edited by: {convert_people_to_english_list(source['editor'])}"
+  # vol. {volume} ({issue}): {page} | no. {issue}: {page} | pp. {page}
   if 'volume' in source or 'issue' in source or 'page' in source:
+    s += ','
     if 'volume' in source:
-      s += f" Volume {source['volume']}"
+      if 'editor' in source:
+        s += ' vol.'
+      s += f" {source['volume']}"
     if 'issue' in source:
       if 'volume' in source:
         s += f" ({source['issue']})"
       else:
-        s += f" Issue {source['issue']}"
+        if 'editor' in source:
+          s += ' no.'
+        s += f" {source['issue']}"
     if 'page' in source:
       if 'volume' in source or 'issue' in source:
         s += f": {source['page']}"
       else:
-        s += f" Pages {source['page']}"
-    s += '.'
-  # {collection_title} {collection_number}. {publisher}. {url}
+        if 'editor' in source:
+          s += ' pp.'
+        s += f" {source['page']}"
+  # {collection_title}, no. {collection_number}. {publisher}. {url}
   if 'collection_title' in source:
-    s += f" {source['collection_title']}"
+    s += f". {source['collection_title']}"
     if 'collection_number' in source:
-      s += f" {source['collection_number']}"
-    s += '.'
+      s += f", no. {source['collection_number']}"
   if source['type'].startswith('thesis-'):
+    s += f". {THESIS_STRING[source['type']]}"
     if 'publisher' in source:
-      s += f"{THESIS_STRING[source['type']]}, {source['publisher']}."
-    else:
-      s += f"{THESIS_STRING[source['type']]}."
+      s += f", {source['publisher']}"
+  elif 'publisher' in source:
+    s += f". {source['publisher']}"
   if 'url' in source:
-    s += f" {source['url']}"
+    s += f". {source['url']}"
   return s
 
 
