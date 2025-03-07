@@ -1,7 +1,7 @@
 # https://github.com/citation-file-format/citation-file-format/blob/main/README.md
 cff-version: 1.2.0
 title: 'glenglat: Global englacial temperature database'
-message: If you use this dataset, please cite it using the metadata from this file. If you use a subset of the data, also cite the original source(s).
+message: When using glenglat, please cite both the dataset version (see Zenodo) and the data publication (see 'preferred-citation' below). We also recommend citing the original sources, especially when using only a subset.
 type: dataset
 authors:
   - given-names: Mylène
@@ -13,6 +13,7 @@ authors:
     family-names: Welty
     affiliation: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
     orcid: 'https://orcid.org/0000-0001-8046-2210'
+  - name: Contributors (see Zenodo and 'datapackage.yaml')
 identifiers:
   - type: doi
     value: 10.5281/zenodo.11516611
@@ -39,9 +40,16 @@ preferred-citation:
       family-names: Welty
       affiliation: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
       orcid: 'https://orcid.org/0000-0001-8046-2210'
+    - given-names: Marcus
+      family-names: Gastaldello
+      affiliation: Department of Geosciences (GIUZ), University of Fribourg (UniFr), Switzerland
+      orcid: 'https://orcid.org/0009-0003-2384-3617'
+    - given-names: Guillem
+      family-names: Carcanade
+      affiliation: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
   type: article
   title: 'glenglat: A database of global englacial temperatures'
-  journal: Earth System Science Data
+  journal: Earth System Science Data Discussions
   doi: 10.5194/essd-2024-249
-  status: submitted
+  status: in-press
   date-released: '2024-08-26'

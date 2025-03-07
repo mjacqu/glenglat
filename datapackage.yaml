@@ -47,6 +47,8 @@ contributors:
   - title: Guillem Carcanade
     affiliations:
       - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
+      - name: Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
+        rorid: 04bs5yc70
     role: DataCurator
     status: creator
   - title: Marcus Gastaldello
