@@ -53,6 +53,15 @@ EMAIL_REGEX = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
 ORCID_REGEX = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
 """Regular expression for ORCID identifiers."""
 
+AUTHOR_PLACEHOLDER = '—'
+"""Display string for missing source author."""
+
+THESIS_STRING = {
+  'thesis-phd': 'Ph.D. thesis',
+  'thesis-msc': "Master's thesis",
+}
+"""Display string by thesis type."""
+
 # Phrase
 outchar = r'[^\(\)\[\]\|\s]'
 inchar = r'[^\(\)\[\]\|]'
@@ -685,6 +694,94 @@ def render_sources_as_csl(
     for source in sources.to_dict(orient='records')
   ]
   return json.dumps(csl, indent=2, ensure_ascii=False)
+
+
+def convert_people_to_english_list(people: str) -> str:
+  """
+  Convert pipe-delimited people to English list.
+
+  Latin family names are uppercased.
+
+  Examples
+  --------
+  >>> convert_people_to_english_list('Gwenn Flowers (0000-0002-3574-9324)')
+  'Gwenn FLOWERS'
+  >>> convert_people_to_english_list('Gwenn Flowers | N. Roux')
+  'Gwenn FLOWERS and N. ROUX'
+  >>> convert_people_to_english_list('Gwenn Flowers | N. Roux | 张通 [Zhang Tong]')
+  'Gwenn FLOWERS, N. ROUX, and 张通 [ZHANG Tong]'
+  """
+  names = []
+  for string in people.split(' | '):
+    parsed = parse_person_string(string)
+    name = uppercase_family_name(
+      parsed['title'], family=parsed['latin']['family']
+    )
+    names.append(name)
+  if len(names) == 1:
+    return names[0]
+  if len(names) == 2:
+    return ' and '.join(names)
+  return ', '.join(names[:-1]) + ', and ' + names[-1]
+
+
+def render_source_as_reference(source: dict) -> dict:
+  """Render source to text reference."""
+  source = {key: value for key, value in source.items() if value is not None}
+  if 'year' not in source or 'title' not in source:
+    raise ValueError('Source must have year and title')
+  if 'author' in source:
+    s = convert_people_to_english_list(source['author'])
+  else:
+    s = AUTHOR_PLACEHOLDER
+  # {authors} ({year}): {title}.
+  s = f"{s} ({source['year']}): {source['title']}."
+  # Version {version}. {container_title}. {editors} (editors).
+  if 'version' in source:
+    s += f" Version {source['version']}."
+  if 'container_title' in source:
+    s += f" {source['container_title']}."
+  if 'editor' in source:
+    s += f" {convert_people_to_english_list(source['editor'])} (editors)."
+  # Volume {volume} ({issue}): {page} | Issue {issue}: {page} | Pages {page}
+  if 'volume' in source or 'issue' in source or 'page' in source:
+    if 'volume' in source:
+      s += f" Volume {source['volume']}"
+    if 'issue' in source:
+      if 'volume' in source:
+        s += f" ({source['issue']})"
+      else:
+        s += f" Issue {source['issue']}"
+    if 'page' in source:
+      if 'volume' in source or 'issue' in source:
+        s += f": {source['page']}"
+      else:
+        s += f" Pages {source['page']}"
+    s += '.'
+  # {collection_title} {collection_number}. {publisher}. {url}
+  if 'collection_title' in source:
+    s += f" {source['collection_title']}"
+    if 'collection_number' in source:
+      s += f" {source['collection_number']}"
+    s += '.'
+  if source['type'].startswith('thesis-'):
+    if 'publisher' in source:
+      s += f"{THESIS_STRING[source['type']]}, {source['publisher']}."
+    else:
+      s += f"{THESIS_STRING[source['type']]}."
+  if 'url' in source:
+    s += f" {source['url']}"
+  return s
+
+
+def render_sources_as_bibliography() -> str:
+  """Render sources as a bibliography."""
+  sources = pd.read_csv(DATA_PATH.joinpath('source.csv'), dtype='string')
+  sources.replace({pd.NA: None}, inplace=True)
+  return '\n\n'.join(
+    render_source_as_reference(source)
+    for source in sources.to_dict(orient='records')
+  )
 
 
 # ---- Author list ----

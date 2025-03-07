@@ -29,15 +29,6 @@ BUILD_PATH = ROOT.joinpath('build')
 REPO = git.Repo(ROOT)
 """Git repository."""
 
-AUTHOR_PLACEHOLDER = '—'
-"""Placeholder for missing source author."""
-
-THESIS_STRING = {
-  'thesis-phd': 'Ph.D. thesis',
-  'thesis-msc': "Master's thesis",
-}
-"""Display strings by thesis type."""
-
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
 
@@ -290,84 +281,10 @@ def convert_contributor_to_zenodo(person: dict) -> dict:
   }
 
 
-def convert_people_to_english_list(people: str) -> str:
-  """
-  Convert pipe-delimited people to English list.
-
-  Latin family names are uppercased.
-
-  Examples
-  --------
-  >>> convert_people_to_english_list('Gwenn Flowers (0000-0002-3574-9324)')
-  'Gwenn FLOWERS'
-  >>> convert_people_to_english_list('Gwenn Flowers | N. Roux')
-  'Gwenn FLOWERS and N. ROUX'
-  >>> convert_people_to_english_list('Gwenn Flowers | N. Roux | 张通 [Zhang Tong]')
-  'Gwenn FLOWERS, N. ROUX, and 张通 [ZHANG Tong]'
-  """
-  names = []
-  for string in people.split(' | '):
-    parsed = glenglat.parse_person_string(string)
-    name = glenglat.uppercase_family_name(
-      parsed['title'], family=parsed['latin']['family']
-    )
-    names.append(name)
-  if len(names) == 1:
-    return names[0]
-  if len(names) == 2:
-    return ' and '.join(names)
-  return ', '.join(names[:-1]) + ', and ' + names[-1]
-
-
 def convert_source_to_reference(source: dict) -> dict:
   """Convert source to Zenodo reference."""
-  # Keep only truthy values
-  source = {key: value for key, value in source.items() if value}
-  if 'year' not in source or 'title' not in source:
-    raise ValueError('Source must have year and title')
-  if 'author' in source:
-    s = convert_people_to_english_list(source['author'])
-  else:
-    s = AUTHOR_PLACEHOLDER
-  # {authors} ({year}): {title}.
-  s = f"{s} ({source['year']}): {source['title']}."
-  # Version {version}. {container_title}. {editors} (editors).
-  if 'version' in source:
-    s += f" Version {source['version']}."
-  if 'container_title' in source:
-    s += f" {source['container_title']}."
-  if 'editor' in source:
-    s += f" {convert_people_to_english_list(source['editor'])} (editors)."
-  # Volume {volume} ({issue}): {page} | Issue {issue}: {page} | Pages {page}
-  if 'volume' in source or 'issue' in source or 'page' in source:
-    if 'volume' in source:
-      s += f" Volume {source['volume']}"
-    if 'issue' in source:
-      if 'volume' in source:
-        s += f" ({source['issue']})"
-      else:
-        s += f" Issue {source['issue']}"
-    if 'page' in source:
-      if 'volume' in source or 'issue' in source:
-        s += f": {source['page']}"
-      else:
-        s += f" Pages {source['page']}"
-    s += '.'
-  # {collection_title} {collection_number}. {publisher}. {url}
-  if 'collection_title' in source:
-    s += f" {source['collection_title']}"
-    if 'collection_number' in source:
-      s += f" {source['collection_number']}"
-    s += '.'
-  if source['type'].startswith('thesis-'):
-    if 'publisher' in source:
-      s += f"{THESIS_STRING[source['type']]}, {source['publisher']}."
-    else:
-      s += f"{THESIS_STRING[source['type']]}."
-  if 'url' in source:
-    s += f" {source['url']}"
-  result = {'reference': s}
-  if 'url' in source:
+  result = {'reference': glenglat.render_source_as_reference(source)}
+  if source.get('url'):
     if source['url'].startswith('https://doi.org/'):
       result['scheme'] = 'doi'
       result['identifier'] = source['url'].replace('https://doi.org/', '')
