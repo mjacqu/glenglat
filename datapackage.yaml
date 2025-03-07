@@ -201,7 +201,8 @@ resources:
             - personal-communication: Personal communication between individuals
             - speech: Presentation (talk, poster) at a conference
             - report: Report distributed by an institution
-            - thesis: Thesis written to satisfy degree requirements
+            - thesis-phd: Doctor of Philosophy (PhD) thesis
+            - thesis-msc: Master of Science (MSc) thesis
             - webpage: Website or page on a website
           type: string
           constraints:
@@ -217,7 +218,8 @@ resources:
               - personal-communication
               - speech
               - report
-              - thesis
+              - thesis-phd
+              - thesis-msc
               - webpage
         - name: title
           description: Item title.

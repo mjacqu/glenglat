@@ -32,6 +32,12 @@ REPO = git.Repo(ROOT)
 AUTHOR_PLACEHOLDER = '—'
 """Placeholder for missing source author."""
 
+THESIS_STRING = {
+  'thesis-phd': 'Ph.D. thesis',
+  'thesis-msc': "Master's thesis",
+}
+"""Display strings by thesis type."""
+
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
 
@@ -353,8 +359,11 @@ def convert_source_to_reference(source: dict) -> dict:
     if 'collection_number' in source:
       s += f" {source['collection_number']}"
     s += '.'
-  if 'publisher' in source:
-    s += f" {source['publisher']}."
+  if source['type'].startswith('thesis-'):
+    if 'publisher' in source:
+      s += f"{THESIS_STRING[source['type']]}, {source['publisher']}."
+    else:
+      s += f"{THESIS_STRING[source['type']]}."
   if 'url' in source:
     s += f" {source['url']}"
   result = {'reference': s}
