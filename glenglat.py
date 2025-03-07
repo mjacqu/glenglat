@@ -800,8 +800,15 @@ def strip_diacritics(string: str) -> str:
   return ''.join(replace_char(char) for char in string)
 
 
-def render_author_list() -> list[str]:
-  """Render deduplicated and name-filled list of authors."""
+def render_author_list(latin: bool = False) -> list[str]:
+  """
+  Render deduplicated and name-filled list of authors.
+
+  Parameters
+  ----------
+  latin
+    Whether to include only names in Latin script.
+  """
   # Gather author strings
   df = pd.read_csv(DATA_PATH.joinpath('source.csv'))
   strings = (
@@ -834,7 +841,7 @@ def render_author_list() -> list[str]:
   strings = []
   for person in people:
     string = uppercase_family_name(person['latin']['name'], person['latin']['family'])
-    if person['name']:
+    if not latin and person['name']:
       string = f"{person['name']} [{string}]"
     strings.append(string)
   # Drop duplicates
