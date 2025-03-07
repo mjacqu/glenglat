@@ -583,9 +583,10 @@ def convert_source_to_csl(
   """
   Convert source to CSL-JSON.
 
-  To conform to the official JSON Schema for CSL data
-  (https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json),
-  type 'personal-communication' is replaced with 'personal_communication'.
+  The following mappings are applied to conform to the CSL JSON Schema
+  (https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json):
+  * type: 'personal-communication' -> 'personal_communication'
+  * type: 'thesis-{suffix}' -> 'thesis', genre: '{suffix}'
 
   Parameters
   ----------
@@ -598,6 +599,11 @@ def convert_source_to_csl(
     * 'literal': original title ('name [latin]') is used as 'literal' attribute
     * 'none': All non-Latin characters are removed
   zotero
+    Export for import to Zotero.
+
+    * Add 'Citation key: id' to `note`.
+    * Add 'DOI: doi' to `note` for types without direct DOI support in Zotero
+      (personal-communication, book, chapter, thesis-*, map).
   """
   # Format person names
   names = defaultdict(list)
@@ -659,7 +665,12 @@ def convert_source_to_csl(
   if non_latin == 'none':
     for key in ('title', 'container-title', 'collection-title', 'publisher'):
       csl[key] = extract_translation(csl[key])
+  if zotero:
     csl['note'] = f"Citation key: {source['id']}"
+    if csl['DOI'] and csl['type'] in (
+      'personal_communication', 'book', 'chapter', 'thesis', 'map'
+    ):
+      csl['note'] += f"\nDOI: {doi}"
   # Keep only truthy values
   return {key: value for key, value in csl.items() if value}
 
