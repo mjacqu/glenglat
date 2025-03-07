@@ -633,22 +633,20 @@ def convert_source_to_csl(
   # Migrate 'personal-communication' to 'personal_communication'
   # Add a title to personal communications
   source_type = source['type']
-  source_title = source['title']
-  genre = None
+  source_genre = None
   if source_type == 'personal-communication':
     source_type = 'personal_communication'
-    source_title = source_title or 'Personal communication'
   # Migrate 'thesis-{suffix}' to 'thesis', genre: '{suffix}'
   elif source_type.startswith('thesis-'):
-    source_type, genre = source_type.split('-')
+    source_type, source_genre = source_type.split('-')
   csl = {
     'id': source['id'],
     'citation-key': source['id'],
     'author': names['author'],
     'issued': {'date-parts': [[int(source['year'])]]},
     'type': source_type,
-    'genre': genre,
-    'title': source_title,
+    'genre': source_genre,
+    'title': source['title'],
     'DOI': doi,
     'URL': None if doi else source['url'],
     'language': source['language'],

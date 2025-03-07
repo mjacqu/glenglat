@@ -48,13 +48,6 @@ def test_profile_date_after_borehole_date() -> None:
   assert valid.all(), df.loc[~valid, ['id', 'date_min_b', 'date_max_b', 'date_min', 'date_max']]
 
 
-def test_title_not_null_unless_submission() -> None:
-  """Source title is required (except for submissions)."""
-  df = dfs['source']
-  valid = df['title'].notnull() | df['type'].eq('personal-communication')
-  assert valid.all(), df.loc[~valid, ['id', 'type', 'title']]
-
-
 def test_borehole_id_in_profile_table() -> None:
   """All boreholes have at least one profile."""
   df = dfs['borehole']

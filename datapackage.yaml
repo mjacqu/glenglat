@@ -227,6 +227,7 @@ resources:
           description: Item title.
           type: string
           constraints:
+            required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: url
           description: URL (DOI if available).
