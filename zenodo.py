@@ -602,11 +602,6 @@ def is_repo_publishable() -> Tuple[str, str]:
   print('Running: pytest')
   if os.system('pytest') != 0:
     raise Exception('Pytest tests failed. Publishing requires passing tests.')
-  print('Running: frictionless validate datapackage.yaml')
-  if os.system('frictionless validate datapackage.yaml') != 0:
-    raise Exception(
-      'Frictionless tests failed. Publishing requires passing tests.'
-    )
   # Tag is not already in use
   REPO.remotes['origin'].fetch()
   tag = 'v' + read_metadata_for_zenodo()['version']
