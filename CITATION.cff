@@ -1,4 +1,3 @@
-# https://github.com/citation-file-format/citation-file-format/blob/main/README.md
 cff-version: 1.2.0
 title: 'glenglat: Global englacial temperature database'
 message: When using glenglat, please cite both the dataset (see Zenodo) and the data publication (see 'preferred-citation' below). We also recommend citing the original sources, especially when using only a subset. Mylène Jacquemart and Ethan Welty contributed equally to this work.
@@ -30,8 +29,6 @@ keywords:
   - compilation
 license: CC-BY-4.0
 preferred-citation:
-  # Message displayed on GitHub
-  message: When using glenglat, please cite both the dataset (see Zenodo) and the data publication below. We also recommend citing the original sources, especially when using only a subset.
   authors:
     - given-names: Mylène
       family-names: Jacquemart
