@@ -1,18 +1,17 @@
 # https://github.com/citation-file-format/citation-file-format/blob/main/README.md
 cff-version: 1.2.0
 title: 'glenglat: Global englacial temperature database'
-message: When using glenglat, please cite both the dataset version (see Zenodo) and the data publication (see 'preferred-citation' below). We also recommend citing the original sources, especially when using only a subset.
+message: When using glenglat, please cite both the dataset version (see Zenodo) and the data publication (see 'preferred-citation' below). We also recommend citing the original sources, especially when using only a subset. Mylène Jacquemart and Ethan Welty contributed equally to this work.
 type: dataset
 authors:
-  - given-names: Mylène
-    family-names: Jacquemart
-    affiliation: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
-    orcid: 'https://orcid.org/0000-0003-2501-7645'
-    email: jacquemart@vaw.baug.ethz.ch
   - given-names: Ethan
     family-names: Welty
     affiliation: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
     orcid: 'https://orcid.org/0000-0001-8046-2210'
+  - given-names: Mylène
+    family-names: Jacquemart
+    affiliation: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
+    orcid: 'https://orcid.org/0000-0003-2501-7645'
   - name: Contributors (see Zenodo and 'datapackage.yaml')
 identifiers:
   - type: doi

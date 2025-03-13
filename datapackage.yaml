@@ -22,6 +22,14 @@ contributors:
 # status: Zenodo authorship status (creator or contributor)
 # affiliations: agency name (name, required), RORID (rorid)
 # funding: funder name (funder, required), RORID (rorid), award title (award), award number (number), and URL (url)
+  - title: Ethan Welty
+    path: https://orcid.org/0000-0001-8046-2210
+    affiliations:
+      - name: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
+        rorid: 01jtrvx49
+    email: ethan.welty@geo.uzh.ch
+    role: ProjectLeader
+    status: creator
   - title: Mylène Jacquemart
     path: https://orcid.org/0000-0003-2501-7645
     affiliations:
@@ -37,13 +45,6 @@ contributors:
         award: Process-based modelling of global glacier changes (PROGRESS)
         number: 00yjd3n13::184634
         url: https://data.snf.ch/grants/grant/184634
-  - title: Ethan Welty
-    path: https://orcid.org/0000-0001-8046-2210
-    affiliations:
-      - name: World Glacier Monitoring Service (WGMS), Department of Geography (GIUZ), University of Zurich (UZH), Switzerland
-        rorid: 01jtrvx49
-    role: ProjectLeader
-    status: creator
   - title: Guillem Carcanade
     affiliations:
       - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
