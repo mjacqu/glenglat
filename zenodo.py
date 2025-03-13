@@ -237,7 +237,7 @@ def build_for_zenodo(
   # Build zip archive
   version = metadata['version']
   path = BUILD_PATH.joinpath(f'glenglat-v{version}.zip')
-  with zipfile.ZipFile(path, 'w') as zip:
+  with zipfile.ZipFile(path, 'w', compression=zipfile.ZIP_DEFLATED) as zip:
     for file in built_files:
       zip.write(filename=file, arcname=file.relative_to(BUILD_PATH))
     for file in unchanged_files:
