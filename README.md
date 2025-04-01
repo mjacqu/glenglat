@@ -13,7 +13,7 @@ Open-access database of englacial temperature measurements compiled from data su
 
 ## Dataset structure
 
-The dataset adheres to the Frictionless Data [Tabular Data Package](https://specs.frictionlessdata.io/tabular-data-package) specification. The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder:
+The dataset adheres to the Frictionless [Data Package](https://datapackage.org/standard/data-package/) standard. The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder:
 
 * [`source.csv`](data/source.csv): Description of each data source (either a personal communication or the reference to a published study).
 * [`borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
