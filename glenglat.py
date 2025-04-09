@@ -746,7 +746,7 @@ def render_source_as_reference(source: dict) -> dict:
     s += f", in: {source['container_title']}"
   if 'editor' in source:
     s += f", edited by: {convert_people_to_english_list(source['editor'])}"
-  # vol. {volume} ({issue}): {page} | no. {issue}: {page} | pp. {page}
+  # vol. {volume} ({issue}): {page} | no. {issue}: {page} | pp. {page} | art. {page}
   if 'volume' in source or 'issue' in source or 'page' in source:
     s += ','
     if 'volume' in source:
@@ -765,7 +765,7 @@ def render_source_as_reference(source: dict) -> dict:
         s += f": {source['page']}"
       else:
         if 'editor' in source:
-          s += ' pp.'
+          s += ' pp.' if '–' in source['page'] else ' art.'
         s += f" {source['page']}"
   # {collection_title}, no. {collection_number}. {publisher}. {url}
   if 'collection_title' in source:
