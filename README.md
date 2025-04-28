@@ -7,9 +7,9 @@ Version history | [![GitHub Release](https://img.shields.io/github/v/release/mja
 Tests | [![Pytest](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml)
 
 <!-- <for-zenodo> -->
-Open-access database of englacial temperature measurements compiled from data submissions and published literature. It is developed on [GitHub](https://github.com/mjacqu/glenglat) and published to [Zenodo](https://doi.org/10.5281/zenodo.11516611). The dataset is described in the following publication:
+Open-access database of englacial temperature measurements compiled from data submissions and published literature. It is developed on [GitHub](https://github.com/mjacqu/glenglat) and published to [Zenodo](https://doi.org/10.5281/zenodo.11516611). Version [1.0.0](https://doi.org/10.5281/zenodo.15005624) was described in the following publication:
 
-> Mylène Jacquemart, Ethan Welty, Marcus Gastaldello, and Guillem Carcanade (2025). glenglat: A database of global englacial temperatures. Earth System Science Data Discussions. https://doi.org/10.5194/essd-2024-249
+> Mylène Jacquemart, Ethan Welty, Marcus Gastaldello, and Guillem Carcanade (2025). glenglat: a database of global englacial temperatures. Earth System Science Data 17(4): 1627–1666. https://doi.org/10.5194/essd-17-1627-2025
 
 ## Dataset structure
 

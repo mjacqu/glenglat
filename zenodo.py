@@ -13,6 +13,7 @@ import git
 import markdown
 import pandas as pd
 import requests
+import yaml
 
 import glenglat
 
@@ -28,6 +29,9 @@ BUILD_PATH = ROOT.joinpath('build')
 
 REPO = git.Repo(ROOT)
 """Git repository."""
+
+CITATION_PATH = ROOT.joinpath('CITATION.cff')
+"""Path to citation file."""
 
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
@@ -112,6 +116,12 @@ def get_measurement_interval(
   start = dfs['profile']['date_min'].min()
   end = dfs['profile']['date_max'].max()
   return start, end
+
+
+def read_citation() -> dict:
+  """Read preferred citation from CITATION.cff."""
+  text = CITATION_PATH.read_text()
+  return yaml.safe_load(text)['preferred-citation']
 
 
 # ---- Readme ----
@@ -232,6 +242,7 @@ def build_for_zenodo(
   ]
   unchanged_files = [
     ROOT.joinpath('LICENSE.md'),
+    ROOT.joinpath('CITATION.cff'),
     *sorted([ROOT.joinpath(path) for path in data_paths])
   ]
   # Build zip archive
@@ -328,6 +339,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
   time = time or datetime.datetime.now(datetime.timezone.utc)
   description = render_zenodo_description()
   package = read_metadata_for_zenodo()
+  citation = read_citation()
   dfs = glenglat.read_data()
   start_date, end_date = get_measurement_interval(dfs)
   # List all grants, dropping duplicates
@@ -367,12 +379,17 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
     'version': package['version'],
     'publisher': 'Zenodo',
     'related_identifiers': [
-      # Adds 'Is supplement to' and maybe 'External resources: Available in GitHub'
       {
         'identifier': package['homepage'],
         'scheme': 'url',
         'relation_type': {'id': 'issupplementto'},
         'resource_type': {'id': 'dataset'}
+      },
+      {
+        'identifier': citation['doi'],
+        'scheme': 'doi',
+        'relation_type': {'id': 'isdescribedby'},
+        'resource_type': {'id': 'publication-article'}
       }
     ],
     'funding': [convert_funding_to_zenodo(grant) for grant in grants],

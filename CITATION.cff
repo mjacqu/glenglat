@@ -46,8 +46,11 @@ preferred-citation:
       family-names: Carcanade
       affiliation: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland | Swiss Federal Institute for Forest, Snow and Landscape Research (WSL), Switzerland
   type: article
-  title: 'glenglat: A database of global englacial temperatures'
-  journal: Earth System Science Data Discussions
-  doi: 10.5194/essd-2024-249
-  status: in-press
-  date-released: '2024-08-26'
+  title: 'glenglat: a database of global englacial temperatures'
+  journal: Earth System Science Data
+  volume: 17
+  issue: 4
+  start: 1627
+  end: 1666
+  doi: 10.5194/essd-17-1627-2025
+  date-published: '2025-04-17'
