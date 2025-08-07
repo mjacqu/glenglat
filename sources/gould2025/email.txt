@@ -1,0 +1,60 @@
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Bobbie Winter-Burke <b.winter-burke@bristol.ac.uk>
+Sent: 2025-07-14 15:46
+Subject: Glacier temperatures from 1970s
+
+Dear Bobbie Winter-Burke,
+
+I am a researcher at the Department of Geography at the University of Zurich, and a maintainer of the global database of glacier temperature measurements (https://github.com/mjacqu/glenglat). During a literature search, we found that the following paper mentions temperature measurements made at Storglaciären (a glacier in Sweden) in 1978.
+
+> Hooke, R., Gould, J. E., & Brzozowski, J. (1983). Near-surface temperatures near and below the equilibrium line on polar and subpolar glaciers. Zeitschrift Für Gletchserkunde Und Glazialgeologie, 19(1), 1–25.
+  https://www.researchgate.net/profile/Roger-Hooke/publication/316560947_Near-surface_temperatures_near_and_below_the_equilibrium_line_on_polar_and_subpolar_glaciers/links/599dd4e145851574f4b357bc/Near-surface-temperatures-near-and-below-the-equilibrium-line-on-polar-and-subpolar-glaciers.pdf
+
+Which in turn references:
+
+> Gould, John E. A survey of the summer ice temperature distribution of Storglaciären, N. Sweden. Unpublished manuscript dated 1978 available from University of Bristol, Department of Geography or from University of Stockholm
+
+Colleagues at U. of Stockholm / Tarfala Research Station found a hand-written manuscript that partly matches the description, but it is missing the most important data: the temperature measurements to ~25 m depth in the borehole drilled at stake #15, which presumably continued from 1978 until 1981. The manuscript references another which they have not found:
+
+> Gould J.E. (1978) Temperature measurements on Storglaciären
+
+John E. Gould was presumably a student (bachelor or master?) at the University of Bristol's Department of Geography at the time, so perhaps some of this material is archived in your library as unpublished and not-yet-indexed-online manuscripts or theses?
+
+thank you for your time and all the best,
+ethan
+
+----------
+
+[...]
+
+----------
+
+From: John E. Gould
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Christopher Williamson <c.williamson@bristol.ac.uk>; David Richards <David.Richards@bristol.ac.uk>; geography-sam@bristol.ac.uk; b.winter-burke@bristol.ac.uk; Paul Broady <paul.broady@canterbury.ac.nz>
+Sent: 2025-08-02 17:00
+Subject: Fw: Glacier temperatures from 1970s - long shot!!
+
+Hi Ethan,
+
+Good news. I have managed to locate a copy of my undergraduate thesis (attached).
+
+> Gould, John E. A survey of the summer ice temperature distribution of Storglaciären, N. Sweden. Unpublished manuscript dated 1978
+
+Refer to your original email request at the bottom of this rather lengthy email thread to view your original request..
+
+It was stored in my late parents loft for most of the past 47 years! I have had it scanned along with my article "Arctic Summer" in the 1978 Brycgstowe Vol.14 p23-26 (Brycgstowe is the Univ of Bristol, Geographical Society, Magazine)
+
+Luckily I was in the UK when this request came through as I normally reside in New Zealand and the papers in the attic!
+
+Although some significant cost was involved in getting the attached scans, I am happy to make this contribution to the important work of the World Glacier Monitoring Service.
+
+Finally, thanks are due to all those copied into this email for helping to make the retrieval of this potentially important data possible.
+
+Keep up the good work.
+Warm regards,
+John Gould
+
+Dept. Of Environmental Management,
+Lincoln University, Lincoln, Aotearoa New Zealand
+Mobile: [...]

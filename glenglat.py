@@ -57,8 +57,9 @@ AUTHOR_PLACEHOLDER = '—'
 """Display string for missing source author."""
 
 THESIS_STRING = {
+  'thesis-bsc': "Bachelor's thesis",
   'thesis-phd': 'Ph.D. thesis',
-  'thesis-msc': "Master's thesis",
+  'thesis-msc': "Master's thesis"
 }
 """Display string by thesis type."""
 
@@ -744,6 +745,8 @@ def render_source_as_reference(source: dict) -> dict:
     s += f" (version {source['version']})"
   if 'container_title' in source:
     s += f", in: {source['container_title']}"
+  elif source['type'] == 'manuscript':
+    s += ' [unpublished]'
   if 'editor' in source:
     s += f", edited by: {convert_people_to_english_list(source['editor'])}"
   # vol. {volume} ({issue}): {page} | no. {issue}: {page} | pp. {page} | art. {page}

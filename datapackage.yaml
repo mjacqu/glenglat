@@ -156,6 +156,16 @@ contributors:
     path: https://orcid.org/0000-0003-0214-107X
     role: DataCollector
     status: contributor
+  - title: Daniella Lillieroth Charalambous
+    affiliations:
+      - name: Department of Physical Geography, Stockholm University (SU), Sweden
+    role: DataCollector
+    status: contributor
+  - title: John E. Gould
+    affiliations:
+      - name: Department of Environmental Management, Lincoln University, New Zealand
+    role: DataCollector
+    status: contributor
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
@@ -199,13 +209,15 @@ resources:
             - chapter: Book section
             - document: Document not fitting into any other category
             - dataset: Collection of data
+            - manuscript: Unpublished manuscript
             - map: Geographic map
             - paper-conference: Paper published in conference proceedings
             - personal-communication: Personal communication between individuals
             - speech: Presentation (talk, poster) at a conference
             - report: Report distributed by an institution
-            - thesis-phd: Doctor of Philosophy (PhD) thesis
+            - thesis-bsc: Bachelor of Science (BSc) thesis
             - thesis-msc: Master of Science (MSc) thesis
+            - thesis-phd: Doctor of Philosophy (PhD) thesis
             - webpage: Website or page on a website
           type: string
           constraints:
@@ -216,13 +228,15 @@ resources:
               - chapter
               - dataset
               - document
+              - manuscript
               - map
               - paper-conference
               - personal-communication
               - speech
               - report
-              - thesis-phd
+              - thesis-bsc
               - thesis-msc
+              - thesis-phd
               - webpage
         - name: title
           description: Item title.
