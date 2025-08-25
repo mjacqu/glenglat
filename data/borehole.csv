@@ -202,7 +202,7 @@ id,source_id,glacier_name,glims_id,location_origin,latitude,longitude,elevation_
 228,kinnard2008,Prince of Wales Ice Cap,G279351E78361N,published,78.3897,-80.395,published,1630,accumulation,,2005-05-03,2005-05-14,mechanical,,176.5,true,,location: mankoff2022b (more precise than kinnard2008) | date: mankoff2022b,Mylène Jacquemart,,
 229,fisher1998,Penny Ice Cap,G294647E67092N,estimated,67.22413980,-65.35314171,published,1810,accumulation,P96,1996-01-01,1996-12-31,,,177.91,true,,location: Estimated from Figure 1 and dome elevation,Mylène Jacquemart,,
 230,paterson1968,Meighen Ice Cap,G260810E79982N,estimated,79.943,-99.121,published,268,,,,,thermal,,121.2,true,0.01,location: Figure 1 in koerner1968,Ethan Welty,,
-231,thomsen1996,Hare Glacier,G323403E82808N,digitized,82.8425,-36.1958,published,507,,451,,,thermal,,288,true,,elevation: Table 2 in reeh2001,Ethan Welty,,
+231,thomsen1996,Hare Glacier,G323403E82808N,digitized,82.8425,-36.1958,published,507,ablation,451,1995-08-03,1995-08-03,thermal,,288.8,true,0.2,elevation: Table 2 in reeh2001 | date: olesen1995 | temperature_uncertainty: olesen1995,Ethan Welty,,
 232,hammer1995,Hans Tausen Ice Cap,G323085E82488N,published,82.492,-37.477,published,1271,accumulation,HT95,1995-05-29,1995-06-20,mechanical,,344.86,true,,location: reeh1995 (Figure 3) | elevation: steffensen2001,Ethan Welty | Mylène Jacquemart,,
 233,lemark2010,Flade Isblink Ice Cap,G344790E81287N,published,81.2926,-15.7029,estimated,685,accumulation,,2006-06-01,2006-08-31,mechanical,,425,false,,drill_method: sheldon2014 | elevation: esa2024,Mylène Jacquemart,,
 234,kinnard2006,Devon Ice Cap,G278488E75058N,published,75.32,-81.64,published,1930,accumulation,D98,1998-04-01,1998-05-31,,,302,true,,,Mylène Jacquemart,,
