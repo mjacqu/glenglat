@@ -1,0 +1,59 @@
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Johanna Dahlkvist <johanna.dahlkvist@su.se>; Nina Kirchner <nina.kirchner@su.se>
+Sent: 2025-02-14 13:24
+Subject: Glaciologist family hiking to Tarfala
+
+Hi Johanna and Nina,
+
+[...]
+
+The following paper mentions a bunch of temperature measurements made at Storglaciären in 1978.
+
+> Hooke, R., Gould, J. E., & Brzozowski, J. (1983). Near-surface temperatures near and below the equilibrium line on polar and subpolar glaciers. Zeitschrift Für Gletchserkunde Und Glazialgeologie, 19(1), 1–25.
+  https://www.researchgate.net/profile/Roger-Hooke/publication/316560947_Near-surface_temperatures_near_and_below_the_equilibrium_line_on_polar_and_subpolar_glaciers/links/599dd4e145851574f4b357bc/Near-surface-temperatures-near-and-below-the-equilibrium-line-on-polar-and-subpolar-glaciers.pdf
+
+However, I have not been able to find the original data reference: "Gould, John E. A survey of the summer ice temperature distribution of Storglaciären, N. Sweden. Unpublished manuscript dated 1978 available from University of Bristol, Department of Geography or from University of Stockholm".
+
+Is this report available to you at Stockholm University?
+
+thanks and all the best,
+ethan
+
+----------
+
+From: Daniella Lillieroth Charalambous <[...]>
+To: Nina Kirchner <nina.kirchner@su.se>
+Cc: Ethan Welty <ethan.welty@geo.uzh.ch>; Johanna Dahlkvist <johanna.dahlkvist@su.se>
+Sent: 2025-02-20 09:09
+Subject: Glaciologist family hiking to Tarfala
+
+Hi Ethan and Mylène,
+
+[...]
+
+As Nina says, in the box is what I have been able to find in the TRS archive at SU, which is usually (but not always...) where things related to Tarfala goes when it says "available from University of Stockholm". Sometimes it says "Department of Physical Geography, Stockholm", and then it is usually a hint that if it still exists, it is in the TRS archive at the Department of Physical Geography. I have asked our department archivist to also check in another archive, to see if there is a typed version there as this one [gould1978a] is handwritten (which was of course not uncommon for unpublished stuff in those days).
+
+As Nina says, let us know if this seems right and you want to see more of the tables, graphs (which were quite hard to read) or if I can translate any of the Swedish content for you!
+
+Best,
+Dani
+
+----------
+
+From: Daniella Lillieroth Charalambous <[...]>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Nina Kirchner <nina.kirchner@su.se>; Johanna Dahlkvist <johanna.dahlkvist@su.se>
+Sent: 2025-03-17 16:57
+Subject: Glaciologist family hiking to Tarfala
+
+Hi again Ethan and all,
+
+I found a report from 1982-83 in the same folder [langberg1983]. It does not cover -81 from my understanding but instead contains tables covering -82. I did not at quick glance see something about borehole #15, but you know better so please take a look, hopefully it can be of value to you. I will also keep a look out for any other things related to the report covering -81 and ask the librarian and archivist again if they have any ideas about where the report could be.
+
+Here is the digitized version ("TRS_Långberg_1983") of this report attached in the box. They did it in the big professional scanner so it's in both pdf and tif format and is in large parts OCR-interpreted, there is a txt file accompanying it in the zip!
+
+The other earlier report is coming too (but will not be able to be OCR-interpreted since it is handwritten).
+
+Cheers!
+
+Dani

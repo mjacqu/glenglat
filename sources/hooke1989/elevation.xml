@@ -1,0 +1,9 @@
+<?xml version = '1.0'  encoding = 'ISO-8859-1'  standalone = 'yes' ?>
+<!-- PlotDigitizer data file: created on Fri Aug 08 00:51:09 CEST 2025 -->
+<data>
+<image file='figure-2.jpg' />
+<axesnames x='distance downglacier'  y='elevation' />
+<calibpoints minXaxisX='172.0' minXaxisY='473.3333333333333' maxXaxisX='816.6666666666666' maxXaxisY='474.6666666666667' minYaxisX='831.3333333333334' minYaxisY='294.6666666666667' maxYaxisX='832.0' maxYaxisY='90.0' aX1='0.0' aX2='2500.0' aY1='1100.0' aY2='1500.0' isXLog='false' isYLog='false' />
+<point n='0' x='498.0' y='153.33333333333334' dx='1261.6472372266717' dy='1374.872250910328' />
+<point n='1' x='498.6' y='261.4' dx='1264.8407698485607' dy='1163.6708873551138' />
+</data>
