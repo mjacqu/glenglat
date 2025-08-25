@@ -163,9 +163,10 @@ contributors:
     status: creator
   - title: John E. Gould
     affiliations:
-      - name: Department of Environmental Management, Lincoln University, New Zealand
+      - name: Department of Geography, University of Bristol, United Kingdom
+      - name: Department of Physical Geography, Stockholm University (SU), Sweden
     role: DataCollector
-    status: contributor
+    status: creator
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
