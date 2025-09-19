@@ -59,6 +59,7 @@ AUTHOR_PLACEHOLDER = '—'
 THESIS_STRING = {
   'thesis-bsc': "Bachelor's thesis",
   'thesis-phd': 'Ph.D. thesis',
+  'thesis-ma': "Master's thesis",
   'thesis-msc': "Master's thesis"
 }
 """Display string by thesis type."""
@@ -343,30 +344,38 @@ def write_submission() -> None:
 
 # ---- Reference list ----
 
-def infer_script(text: str) -> Literal['cyrillic', 'chinese', 'hangul', 'kana', 'latin']:
+def infer_script(text: str) -> Literal['cyrillic', 'chinese', 'devanagari', 'georgian', 'hangul', 'kana', 'latin']:
   """
   Infer script of text.
 
   Examples
   --------
-  >>> infer_script('Jakob F. Steiner')
-  'latin'
-  >>> infer_script('Н. Г. Разумейко')
-  'cyrillic'
   >>> infer_script('孙维君')
   'chinese'
   >>> infer_script('杉山 慎')
   'chinese'
-  >>> infer_script('スギヤマ シン')
-  'kana'
+  >>> infer_script('Н. Г. Разумейко')
+  'cyrillic'
+  >>> infer_script('दीपक श्रीवास्तव')
+  'devanagari'
+  >>> infer_script('ლევან გ. ტიელიძე')
+  'georgian'
   >>> infer_script('안진호')
   'hangul'
+  >>> infer_script('スギヤマ シン')
+  'kana'
+  >>> infer_script('Jakob F. Steiner')
+  'latin'
   """
-  if re.search(r'[А-ЯЁа-яё]+', text):
-    return 'cyrillic'
   if re.search(r'[\u4e00-\u9fff]+', text):
     # Includes kanji
     return 'chinese'
+  if re.search(r'[А-ЯЁа-яё]+', text):
+    return 'cyrillic'
+  if re.search(r'[\u0900-\u097f]+', text):
+    return 'devanagari'
+  if re.search(r'[\u10a0-\u10ff]+', text):
+    return 'georgian'
   if re.search(r'[\uac00-\ud7af]+', text):
     return 'hangul'
   if re.search(r'[\u3040-\u30ff]+', text):
@@ -425,6 +434,7 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
     if len(words) > 2:
       return None
     # Kanji (Japanese): First word is family name
+    # https://en.wikipedia.org/wiki/Japanese_name
     if len(words) == 2:
       if len(latin_words) != 2:
         return None
@@ -434,6 +444,7 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
         'script': 'kanji'
       }
     # Chinese: First character of original and first word of latin is family name
+    # https://en.wikipedia.org/wiki/Chinese_name
     if len(latin_words) != 2:
         return None
     return {
@@ -441,7 +452,28 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
       'latin': {'family': latin_words[0], 'given': ' '.join(latin_words[1:])},
       'script': script
     }
+  # Devanagari (Hindi): Last word is family name (probably)
+  # https://en.wikipedia.org/wiki/Indian_name
+  if script == 'devanagari':
+    if len(words) < 2 or len(words) != len(latin_words):
+      raise ValueError(f'Devanagari name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'given': ' '.join(words[:-1]), 'family': words[-1]},
+      'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]},
+      'script': 'devanagari'
+    }
+  # Georgian: Last word is family name
+  # https://en.wikipedia.org/wiki/Georgian_name
+  if script == 'georgian':
+    if len(words) < 2 or len(words) != len(latin_words):
+      raise ValueError(f'Georgian name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'given': ' '.join(words[:-1]), 'family': words[-1]},
+      'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]},
+      'script': 'georgian'
+    }
   # Hangul (Korean): First character of original and first word of latin is family name
+  # https://en.wikipedia.org/wiki/Korean_name
   if script == 'hangul':
     if len(words) > 1:
         return None
@@ -451,6 +483,7 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
       'script': script
     }
   # Kana (Japanese): First word is family name
+  # https://en.wikipedia.org/wiki/Japanese_name
   if script == 'kana':
     if len(words) != 2 or len(latin_words) != 2:
       return None
