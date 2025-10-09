@@ -1,7 +1,8 @@
 # `glenglat`: Global englacial temperature database
 
-| Download & Cite | [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11516611.svg)](https://zenodo.org/doi/10.5281/zenodo.11516611) |
+| Dataset | [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.11516611.svg)](https://zenodo.org/doi/10.5281/zenodo.11516611) |
 | :- | :- |
+| Paper | [![DOI](https://img.shields.io/badge/DOI-10.5194%2Fessd--17--1627--2025-blue.svg)](https://doi.org/10.5194/essd-17-1627-2025) |
 [Tutorial notebook](tutorial.ipynb) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mjacqu/glenglat/blob/main/tutorial.ipynb)
 Version history | [![GitHub Release](https://img.shields.io/github/v/release/mjacqu/glenglat?label=latest)](https://github.com/mjacqu/glenglat/releases)
 Tests | [![Pytest](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml/badge.svg)](https://github.com/mjacqu/glenglat/actions/workflows/pytest.yaml)
