@@ -376,6 +376,17 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
         'description': 'Date range of temperature measurements'
       }
     ],
+    'locations': {
+      'features': [
+        {
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [row['longitude'], row['latitude']]
+          }
+        }
+        for row in dfs['borehole'].to_dict(orient='records')
+      ]
+    },
     'version': package['version'],
     'publisher': 'Zenodo',
     'related_identifiers': [
