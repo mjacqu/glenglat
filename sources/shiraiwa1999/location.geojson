@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "location",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "label": "BH1" }, "geometry": { "type": "Point", "coordinates": [ 160.468131, 56.073754 ] } },
+{ "type": "Feature", "properties": { "label": "BH2" }, "geometry": { "type": "Point", "coordinates": [ 160.467836, 56.074454 ] } },
+{ "type": "Feature", "properties": { "label": "BH4" }, "geometry": { "type": "Point", "coordinates": [ 160.478303, 56.075686 ] } },
+{ "type": "Feature", "properties": { "label": "K2" }, "geometry": { "type": "Point", "coordinates": [ 160.467779, 56.074593 ] } }
+]
+}
