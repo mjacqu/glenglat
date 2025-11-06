@@ -1546,8 +1546,8 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 799,2,huang1982a,published,1964-05-01,1964-05-01,15:00:00,,,[flag] Warming above 1 m attributed to removal of 0.5 m snow during drilling
 799,3,huang1982a,published,1964-05-04,1964-05-04,14:00:00,,,[flag] Cooling (compared to profile 2) but warming (compared to profile 1) above 1 m attributed to 0.1 m of new snow
 801,1,huang1982a,published,1964-04-21,1964-04-21,19:00:00,,,
-802,1,huang1982,published,1966-05-29,1966-05-29,,,,
-803,1,huang1982,published,1966-04-22,1966-04-22,,,,
+802,1,xie1975,published,1966-05-29,1966-05-29,,,,equilibrium: Flat ice surface 30 m from nearest meltwater gullies | Reprinted in part in huang1982
+803,1,xie1975,published,1968-04-22,1968-04-22,,,false,equilibrium: Convective heat conduction in the crevasse | Reprinted in part in huang1982
 804,1,huang1982,published,1976-07-17,1976-07-17,,,,
 805,1,huang1982,published,1976-07-31,1976-07-31,,,,
 806,1,dolgushin1961,digitized-continuous,1959-07-01,1959-07-01,,,,[flag] date_max: Reported as 1959-06-31 (which does not exist) | Digitized the solid line to 4.5 m depth but the dashed line only to 5 m (the depth mentioned in the text) since the dashes may be hypothetical rather than measured
