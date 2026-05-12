@@ -1,0 +1,137 @@
+From: Janosch Beer <jabeer@ethz.ch>
+To: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Cc: Ethan Welty <ethan.welty@geo.uzh.ch>
+Sent: 2026-04-24 13:33
+Subject: Glenglat data submission
+
+Ciao Mylène (Ethan in Cc),
+
+I have followed all your guidelines and prepared the ice temperature data of my project for submission to glenglat. I validated the files via the frictionless package (see attached screenshots). All temperature data is calibrated (adding 0-degree offsets from ice bath & alcohol bath).
+
+[...]
+
+Cheers,
+Janosch
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Janosch Beer <jabeer@ethz.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-04-29 11:31
+Subject: Glenglat data submission
+
+Dear Janosch,
+
+Thanks for your submission. I really appreciate that you took the time to validate the files per the instructions! Feedback after a quick review:
+
+borehole.csv
+
+* Columns date_min, date_max are the dates of drilling, not measurement. Please revise.
+* Please fill out column ice_depth with the starting depth of continuous ice at each borehole, in the same depth datum as reported for the measurements. For example, if you drilled into bare ice, you probably defined depth relative to this upper ice surface at the time of installation, and so ice_depth=0. If snow/firn was present and you defined depth relative to the start of ice, ice_depth=0 (but mention depth of snow/firn in the notes). If snow/firn was present and you defined depth relative to the upper surface at time of installation, ice_depth=snow/firn depth.
+* If you have estimates of ice ablation during the period of measurement (or anything that changes the depth of the temperature measurements relative to the time-varying surface), please include that in the notes.
+
+measurement.csv
+
+* What is the resolution of the temperature measurements? Your file uses 7+ digits after the period (which increases the file size), but I presume the true precision is around 2–3 digits?
+
+[...]
+
+ethan
+
+----------
+
+From: Janosch Beer <jabeer@ethz.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-04-29 14:38
+Subject: Glenglat data submission
+
+Ciao Ethan,
+
+I updated the two files based on your feedback. Note that I am reporting the initial depths (without surface ablation) for all boreholes. But I added the reported ablation in the notes of those boreholes that were measured over an entire hydrological year (ending on 1TT and 2TT), as here we had ablation stakes recordings right at the borehole.
+
+[...]
+
+Cheers,
+Janosch
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Janosch Beer <jabeer@ethz.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-05-12 10:32
+Subject: Glenglat data submission
+
+Hi Janosch,
+
+[...]
+
+And thanks for the resubmission. Just a few last things to tidy up:
+
+* Boreholes 1–8 have first measurements at 00:00:00 UTC on the same day as drilling, which doesn't seem possible (e.g. drilled 2025-08-07, measured 2025-08-07 00:00:00 UTC).
+* Borehole 9 is drilled on 2024-08-21 and first measured 2025-03-22. Is this what happened, or a typo?
+* All profiles are marked as equilibrium=true, despite the boreholes being drilled thermally and the measurements beginning (apparently) the same day. Are you able to estimate how long after drilling the temperatures actually equilibrate?
+* Finally, borehole.depth for borehole 22 is 7 m despite measurements to 8.09 m. Typo?
+
+cheers,
+ethan
+
+----------
+
+From: Janosch Beer <jabeer@ethz.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-05-12 12:31
+Subject: Glenglat data submission
+
+Ciao Ethan,
+
+[...]
+
+Regarding glenglat, I went through your points (thanks for checking this):
+
+* The 00:00:00 UTC timestamps (BH 1–8): These were indeed wrong (sorry for that) the script was using midnight as a default placeholder. I've now corrected the drilling dates and replaced the midnight timestamps with the actual installation times to the nearest hour based on my field notes, converted to UTC.
+* BH 9 (AH1TT): Yes, this is what happened, the logger was installed on 2024-08-21 but there is a data gap until 2025-03-22, I do not know the reason for this, but it is what it is. I've added a note to the borehole record explaining this.
+* Equilibrium: You're right to flag this. Equilibrium was typically reached around 2-3 days after installation. These days were cut off from the measurements when I dealt with the data in my paper. Though I feel it might be cleaner to provide the entire timeseries for submission to glenglat, so I switched this and set equilibrium = false for all profiles and added a note that thermal equilibration was typically reached around 2–3 days post-installation (hope this works for you).
+* BH 22 depth: The 7 m is correct, the 8.09 m came from a bug in the script where CV1TT was accidentally pointed to the depth settings file of CV2TT, a deeper borehole at the same site.
+
+[...]
+
+Cheers,
+Janosch
+
+----------
+
+From: Ethan Welty <ethan.welty@geo.uzh.ch>
+To: Janosch Beer <jabeer@ethz.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-05-12 12:47
+Subject: Glenglat data submission
+
+Hi Janosch,
+
+[...]
+
+In that case, I would suggest equilibrium = true for the profiles you trusted and used in your paper, and equilibrium = false for the measurements within 2-3 days after installation. And when the paper is published, let us know so that we can add it as a reference in glenglat.
+
+cheers,
+ethan
+
+----------
+
+From: Janosch Beer <jabeer@ethz.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>, Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-05-12 14:11
+Subject: Glenglat data submission
+
+Ciao Ethan,
+
+[...]
+
+I have adjusted this Boolean in a way that it is set to true as soon as equilibrium was reached.
+
+[...]
+
+Cheers,
+Janosch
+
+----------
+
+[...] Fixed the depth of borehole BH21 from 13.3 m to 15.25 m

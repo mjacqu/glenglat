@@ -167,6 +167,12 @@ contributors:
       - name: Department of Physical Geography, Stockholm University (SU), Sweden
     role: DataCollector
     status: creator
+  - title: Janosch Beer
+    path: https://orcid.org/0009-0002-1128-5470
+    affiliations:
+      - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
+    role: DataCollector
+    status: creator
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
@@ -499,6 +505,7 @@ resources:
       - data/kronenberg2022-grigoriev/profile.csv
       - data/bravo2015-pascua-lama/profile.csv
       - data/kronenberg2022b-abramov/profile.csv
+      - data/beer2026/profile.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
@@ -596,6 +603,7 @@ resources:
       - data/kronenberg2022-grigoriev/measurement.csv
       - data/bravo2015-pascua-lama/measurement.csv
       - data/kronenberg2022b-abramov/measurement.csv
+      - data/beer2026/measurement.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
