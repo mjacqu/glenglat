@@ -245,9 +245,6 @@ borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,eq
 150,1,huang1990,digitized-continuous,1986-09-27,1986-09-27,,,,
 151,1,huang1990,digitized-continuous,1986-09-27,1986-09-27,,,,
 154,1,ginot2006,digitized-discrete,1999-02-01,1999-02-28,,,,
-155,1,miles2018,digitized-discrete,2017-05-10,2017-05-27,,,false,
-156,1,miles2018,digitized-discrete,2017-05-17,2017-10-31,,,true,
-157,1,miles2018,digitized-discrete,2017-05-23,2017-10-31,,,true,
 158,1,muller1976,digitized-discrete,1974-08-25,1974-08-25,,,true,equilibrium: Verified by control measurements a year later (blatter1985 Section 2.1.1)
 159,1,muller1976,digitized-discrete,1974-08-25,1974-08-25,,,true,equilibrium: Verified by control measurements a year later (blatter1985 Section 2.1.1)
 160,1,muller1976,digitized-discrete,1974-08-25,1974-08-25,,,true,equilibrium: Verified by control measurements a year later (blatter1985 Section 2.1.1)
