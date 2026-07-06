@@ -1043,18 +1043,27 @@ def render_author_list(latin: bool = False) -> list[str]:
     Whether to include only names in Latin script.
   """
   # Gather author strings
-  df = pd.read_csv(DATA_PATH.joinpath('source.csv'))
-  strings = (
-    df['author'].str.split(' | ', regex=False)
-    .dropna()
-    .explode()
-    .drop_duplicates()
-  )
+  columns = {
+    'source': 'author',
+    'borehole': 'investigators',
+    'cts_survey': 'investigators'
+  }
+  strings = []
+  for table, column in columns.items():
+    df = pd.read_csv(DATA_PATH.joinpath(f'{table}.csv'))
+    strings.extend(
+      df[column].str.split(' | ', regex=False)
+      .dropna()
+      .explode()
+      .drop_duplicates()
+    )
   # Parse and find people
   people = []
   missing = []
   for string in strings:
-    person = parse_person_string(string)
+    person = parse_investigator_string(string)
+    if not person['title']:
+      continue
     found = find_person(
       title=person['title'], orcid=person['orcid'], email=person['email']
     )
