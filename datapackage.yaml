@@ -188,6 +188,13 @@ contributors:
         rorid: 015m2p889
     role: DataCollector
     status: creator
+  - title: Erik Schytt Mannerfelt
+    path: https://orcid.org/0000-0002-9146-557X
+    affiliations:
+      - name: Department of Geosciences, University of Oslo, Norway
+      - name: Arctic Geology, The University Centre in Svalbard, Svalbard & Jan Mayen
+    role: DataCollector
+    status: creator
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
