@@ -159,7 +159,7 @@ def test_translations_have_correct_format(table: str, column: str) -> None:
 
 @pytest.mark.parametrize('table, column', PEOPLE_COLUMNS)
 def test_people_have_correct_format(table: str, column: str) -> None:
-  """People are formatted as {text} [{translation}] ({orcid}) | ."""
+  """People are formatted as {name} [{latinization}] {orcid/email} | ."""
   s = dfs[table].set_index('id')[column]
   people = s.str.split(' | ', regex=False).explode()
   valid = people.str.match(glenglat.PERSON_REGEX)

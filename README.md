@@ -63,7 +63,8 @@ By submitting data to glenglat, you agree to be listed as a contributor in the m
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
 | `temperature_uncertainty` | Estimated temperature uncertainty (as reported). | number [°C] |  |
 | `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as {url} or {author} {year} ({url}). | string | pattern: `[^\s]+( [^\s]+)*` |
-| `investigators` | Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets. | string | pattern: `[^\s]+( [^\s]+)*` |
+| `investigators` | Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)'). | string | pattern: `[^\s]+( [^\s]+)*` |
+| `agencies` | Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format 'number. acronym: name > ... [latinization]', where only the agency number and either a name or acronym are required (e.g. '1. UZH: Universität Zürich > GIUZ'). | string | pattern: `[^\s]+( [^\s]+)*` |
 | `funding` | Funding sources as a pipe-delimited list. Each entry is in the format 'funder [rorid] > award [number] url', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49). | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`

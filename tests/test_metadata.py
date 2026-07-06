@@ -1,6 +1,13 @@
 import pandas as pd
+import pytest
 
-from load import dfs, package
+from load import (
+  AGENCY_COLUMNS,
+  FUNDING_COLUMNS,
+  INVESTIGATOR_COLUMNS,
+  dfs,
+  package
+)
 import glenglat
 
 
@@ -38,14 +45,17 @@ def test_personal_communication_author_listed_as_contributor() -> None:
 
 def test_curator_listed_as_curator() -> None:
   """Curator is listed in data package contributors."""
-  df = dfs['borehole']
-  people = (
-    df['curator'].str.split(' | ', regex=False)
-    .explode()
-    .drop_duplicates()
-    .str.extract(glenglat.PERSON_REGEX)
-    .reset_index(drop=True)
-  )
+  people_dfs = [
+    (
+      dfs[table]['curator'].str.split(' | ', regex=False)
+      .explode()
+      .drop_duplicates()
+      .str.extract(glenglat.PERSON_REGEX)
+      .reset_index(drop=True)
+    )
+    for table in ['borehole', 'cts_survey']
+  ]
+  people = pd.concat(people_dfs, ignore_index=True).drop_duplicates()
   people['path'] = 'https://orcid.org/' + people['orcid']
   contributors = pd.DataFrame([
     person for person in package.contributors
@@ -69,11 +79,12 @@ def test_curator_listed_as_curator() -> None:
   assert valid.all(), merge[~valid]
 
 
-def test_funding_has_correct_format() -> None:
+@pytest.mark.parametrize('table, column', FUNDING_COLUMNS)
+def test_funding_has_correct_format(table: str, column: str) -> None:
   """Funding strings are in the correct format."""
+  df = dfs[table][column]
   funding = (
-    dfs['borehole']['funding']
-    .str.split(' | ', regex=False)
+    df.str.split(' | ', regex=False)
     .explode()
     .dropna()
     .drop_duplicates()
@@ -82,25 +93,31 @@ def test_funding_has_correct_format() -> None:
   assert valid.all(), funding[~valid].to_list()
 
 
-def test_investigators_has_correct_format() -> None:
+@pytest.mark.parametrize('table, column', INVESTIGATOR_COLUMNS)
+def test_investigators_have_correct_format(table: str, column: str) -> None:
   """Investigator strings are in the correct format."""
+  df = dfs[table][column]
   investigators = (
-    dfs['borehole']['investigators']
-    .str.split(' | ', regex=False)
+    df.str.split(' | ', regex=False)
     .explode()
     .dropna()
     .drop_duplicates()
   )
   valid = investigators.str.fullmatch(glenglat.INVESTIGATOR_REGEX)
   assert valid.all(), investigators[~valid].to_list()
-  parsed = investigators.str.extract(glenglat.INVESTIGATOR_REGEX)
+
+
+@pytest.mark.parametrize('table, column', AGENCY_COLUMNS)
+def test_agencies_have_correct_format(table: str, column: str) -> None:
+  """Agency strings are in the correct format."""
+  df = dfs[table][column]
   agencies = (
-    parsed['agencies']
-    .drop_duplicates()
+    df.str.split(' | ', regex=False)
+    .explode()
     .dropna()
-    .str.split('; ', regex=False, expand=False)
+    .drop_duplicates()
   )
-  valid = agencies.apply(lambda x: all(x))
+  valid = agencies.str.fullmatch(glenglat.AGENCY_REGEX)
   assert valid.all(), agencies[~valid].to_list()
 
 

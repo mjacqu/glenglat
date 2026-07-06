@@ -33,7 +33,11 @@ def test_data_files_are_used_and_correctly_named() -> None:
 def test_data_subdir_only_contains_profile_and_measurement(dir: Path) -> None:
   """Data subdirectory only contains profile and measurement tables."""
   csvs = {path.stem for path in dir.glob('*.csv')}
-  assert csvs == {'profile', 'measurement'}, csvs
+  is_valid = (
+    csvs == {'profile', 'measurement'} or
+    csvs == {'cts_profile', 'cts_measurement'}
+  )
+  assert is_valid, csvs
 
 
 @pytest.mark.parametrize('dir', data_subdirs)

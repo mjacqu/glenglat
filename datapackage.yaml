@@ -498,7 +498,13 @@ resources:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: investigators
-          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
+          description: Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)').
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: agencies
+          description: |-
+            Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format 'number. acronym: name > ... [latinization]', where only the agency number and either a name or acronym are required (e.g. '1. UZH: Universität Zürich > GIUZ').
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
@@ -669,70 +675,6 @@ resources:
           reference:
             resource: profile
             fields: [borehole_id, id]
-  - name: person
-    description: Author titles resolved to people.
-    path: data/person.csv
-    format: csv
-    dialect:
-      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
-      header: true
-      delimiter: ','
-      lineTerminator: "\n"
-      quoteChar: '"'
-      doubleQuote: true
-    $schema: https://datapackage.org/profiles/2.0/dataresource.json
-    schema:
-      $schema: https://datapackage.org/profiles/2.0/tableschema.json
-      fields:
-        - name: titles
-          description: Author titles matching this person, as a pipe-delimited list.
-          type: string
-          constraints:
-            required: true
-            unique: true
-            pattern: '[^\s]+( [^\s]+)*'
-        - name: latin_name
-          description: Full name in Latin script.
-          type: string
-          constraints:
-            required: true
-            unique: true
-            pattern: '[^\s]+( [^\s]+)*'
-        - name: latin_family_name
-          description: Family name in Latin script.
-          type: string
-          constraints:
-            required: true
-            pattern: '[^\s]+( [^\s]+)*'
-        - name: name
-          description: Original full name in non-Latin script.
-          type: string
-          constraints:
-            unique: true
-            pattern: '[^\s]+( [^\s]+)*'
-        - name: orcid
-          description: ORCID.
-          type: string
-          constraints:
-            unique: true
-            pattern: 'https://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
-        - name: emails
-          description: Work email addresses, as a pipe-delimited list.
-          type: string
-          constraints:
-            unique: true
-            pattern: '[\w\.\-]+@[\w\-]+(\.\w{2,})+( \| [\w\.\-]+@[\w\-]+(\.\w{2,})+)*'
-        - name: urls
-          description: Work profile URLs, as a pipe-delimited list.
-          type: string
-          constraints:
-            unique: true
-            pattern: 'https?://[^\s]+( \| https?://[^\s]+)*'
-        - name: notes
-          description: Curator remarks.
-          type: string
-          constraints:
-            pattern: '[^\s]+( [^\s]+)*'
   - name: cts_survey
     description: Cold-temperate transition surface (CTS) surveys.
     path: data/cts_survey.csv
@@ -798,7 +740,13 @@ resources:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: investigators
-          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
+          description: Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)').
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: agencies
+          description: |-
+            Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format 'number. acronym: name > ... [latinization]', where only the agency number and either a name or acronym are required (e.g. '1. UZH: Universität Zürich > GIUZ').
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
@@ -816,7 +764,8 @@ resources:
             fields: [id]
   - name: cts_profile
     description: Cold-temperate transition surface (CTS) profiles.
-    path: data/cts_profile.csv
+    path:
+      - data/mannerfelt2026/cts_profile.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
@@ -852,6 +801,11 @@ resources:
           format: '%Y-%m-%d'
           constraints:
             required: true
+        - name: notes
+          description: Additional remarks about the profile or the measurements therein as a pipe-delimited list. Sources are referenced by `source.id`. Quality concerns are prefixed with '[flag]'.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
       missingValues: ['']
       primaryKey: [cts_survey_id, id]
       foreignKeys:
@@ -861,7 +815,8 @@ resources:
             fields: [id]
   - name: cts_measurement
     description: Cold-temperate transition surface (CTS) measurements.
-    path: data/cts_measurement.csv
+    path:
+      - data/mannerfelt2026/cts_measurement.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
@@ -889,7 +844,6 @@ resources:
           type: integer
           constraints:
             required: true
-            unique: true
             minimum: 1
         - name: latitude
           description: Latitude (EPSG 4326).
@@ -950,3 +904,67 @@ resources:
           reference:
             resource: cts_profile
             fields: [cts_survey_id, id]
+  - name: person
+    description: Author titles resolved to people.
+    path: data/person.csv
+    format: csv
+    dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
+    schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
+      fields:
+        - name: titles
+          description: Author titles matching this person, as a pipe-delimited list.
+          type: string
+          constraints:
+            required: true
+            unique: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: latin_name
+          description: Full name in Latin script.
+          type: string
+          constraints:
+            required: true
+            unique: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: latin_family_name
+          description: Family name in Latin script.
+          type: string
+          constraints:
+            required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: name
+          description: Original full name in non-Latin script.
+          type: string
+          constraints:
+            unique: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: orcid
+          description: ORCID.
+          type: string
+          constraints:
+            unique: true
+            pattern: 'https://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
+        - name: emails
+          description: Work email addresses, as a pipe-delimited list.
+          type: string
+          constraints:
+            unique: true
+            pattern: '[\w\.\-]+@[\w\-]+(\.\w{2,})+( \| [\w\.\-]+@[\w\-]+(\.\w{2,})+)*'
+        - name: urls
+          description: Work profile URLs, as a pipe-delimited list.
+          type: string
+          constraints:
+            unique: true
+            pattern: 'https?://[^\s]+( \| https?://[^\s]+)*'
+        - name: notes
+          description: Curator remarks.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'

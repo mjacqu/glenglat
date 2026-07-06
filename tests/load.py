@@ -34,9 +34,28 @@ TRANSLATED_COLUMNS: list[tuple[str, str]] = [
 PEOPLE_COLUMNS: list[tuple[str, str]] = [
   ('source', 'author'),
   ('source', 'editor'),
-  ('borehole', 'curator')
+  ('borehole', 'curator'),
+  ('cts_survey', 'curator'),
 ]
 """Columns that contain people (table, column)."""
+
+INVESTIGATOR_COLUMNS: list[tuple[str, str]] = [
+  ('borehole', 'investigators'),
+  ('cts_survey', 'investigators')
+]
+"""Columns that contain investigators (table, column)."""
+
+AGENCY_COLUMNS: list[tuple[str, str]] = [
+  ('borehole', 'agencies'),
+  ('cts_survey', 'agencies')
+]
+"""Columns that contain agencies (table, column)."""
+
+FUNDING_COLUMNS: list[tuple[str, str]] = [
+  ('borehole', 'funding'),
+  ('cts_survey', 'funding')
+]
+"""Columns that contain funding sources (table, column)."""
 
 DEFAULT_AXIS_NAMES = {'temperature', 'depth'}
 """Default digitized axis names."""

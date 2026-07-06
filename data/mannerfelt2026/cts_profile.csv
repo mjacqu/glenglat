@@ -1,139 +1,139 @@
-cts_survey_id,id,label,date
-1,1,slakbreen-20240310-DAT_0286_A1_1,2024-03-10
-1,2,slakbreen-20240310-DAT_0287_A1_1,2024-03-10
-1,3,slakbreen-20240310-DAT_0289_A1_1,2024-03-10
-1,4,slakbreen-20240310-DAT_0290_A1_1,2024-03-10
-1,5,slakbreen-20240310-DAT_0291_A1_1,2024-03-10
-1,6,slakbreen-20240310-DAT_0292_A1_1,2024-03-10
-1,7,edvardbreen-20240411-DAT_0395_A1_1,2024-04-11
-1,8,edvardbreen-20240411-DAT_0396_A1_1,2024-04-11
-1,9,ragna_mariebreen-20240412-DAT_0399_A1_1,2024-04-12
-1,10,ragna_mariebreen-20240412-DAT_0402_A1_1,2024-04-12
-1,11,ragna_mariebreen-20240412-DAT_0404_A1_1,2024-04-12
-1,12,ragna_mariebreen-20240412-DAT_0405_A1_1,2024-04-12
-1,13,etonbreen-20240503-DAT_0009_A1_1,2024-05-03
-1,14,etonbreen-20240503-DAT_0011_A1_1,2024-05-03
-1,15,etonbreen-20240503-DAT_0012_A1_1,2024-05-03
-1,16,winsnesbreen-20240503-DAT_0013_A1_1,2024-05-03
-1,17,winsnesbreen-20240503-DAT_0014_A1_1,2024-05-03
-1,18,austfonna-20240507-DAT_0027_A1_1,2024-05-07
-1,19,austfonna-20240507-DAT_0028_A1_1,2024-05-07
-1,20,amenfonna-20240510-DAT_0044_A1_1,2024-05-10
-1,21,amenfonna-20240510-DAT_0046_A1_1,2024-05-10
-1,22,dronbreen-20250326-DAT_0044_A1_1,2025-03-26
-1,23,dronbreen-20250326-DAT_0046_A1_1,2025-03-26
-1,24,dronbreen-20250326-DAT_0050_A1_1,2025-03-26
-1,25,dronbreen-20250326-DAT_0051_A1_1,2025-03-26
-1,26,dronbreen-20250326-DAT_0052_A1_1,2025-03-26
-1,27,dronbreen-20250326-DAT_0053_A1_1,2025-03-26
-1,28,dronbreen-20250326-DAT_0054_A1_1,2025-03-26
-1,29,dronbreen-20250326-DAT_0058_A1_1,2025-03-26
-1,30,lofthusbreen-20250326-DAT_0057_A1_1,2025-03-26
-1,31,dronbreen-20250327-DAT_0062_A1_1,2025-03-27
-1,32,dronbreen-20250327-DAT_0063_A1_1,2025-03-27
-1,33,dronbreen-20250327-DAT_0065_A1_1,2025-03-27
-1,34,dronbreen-20250327-DAT_0066_A1_1,2025-03-27
-1,35,rabotbreen-20250402-DAT_0068_A1_1,2025-04-02
-1,36,rabotbreen-20250402-DAT_0071_A1_1,2025-04-02
-1,37,von_postbreen-20250402-DAT_0024_A1_0002_1,2025-04-02
-1,38,antoniabreen-20250406-DAT_0166_A1_1,2025-04-06
-1,39,antoniabreen-20250406-DAT_0168_A1_1,2025-04-06
-1,40,finsterwalderbreen-20250407-DAT_0171_A1_1,2025-04-07
-2,1,dronbreen-20190225-DAT_0015_A1_2,2019-02-25
-2,2,dronbreen-20190225-DAT_0018_A1_2,2019-02-25
-2,3,dronbreen-20190225-DAT_0020_A1_1,2019-02-25
-2,4,dronbreen-20190225-DAT_0021_A1_2,2019-02-25
-3,1,dronbreen-20200224-DAT_0002_A1_1,2020-02-24
-3,2,dronbreen-20200224-DAT_0003_A1_2,2020-02-24
-3,3,dronbreen-20200224-DAT_0007_A1_20,2020-02-24
-3,4,dronbreen-20200225-DAT_0029_A1_1,2020-02-25
-3,5,dronbreen-20200225-DAT_0030_A1_10,2020-02-25
-3,6,dronbreen-20200226-DAT_0041_A1_3,2020-02-26
-3,7,dronbreen-20200226-DAT_0044_A1_15,2020-02-26
-3,8,vallakrabreen-20210513-DAT_0012_A1_1,2021-05-13
-3,9,vallakrabreen-20210513-DAT_0014_A1_31,2021-05-13
-3,10,rugaasfonna-20220218-DAT_0723_A1_1,2022-02-18
-3,11,rugaasfonna-20220218-DAT_0727_A1_1,2022-02-18
-3,12,rugaasfonna-20220218-DAT_0728_A1_3,2022-02-18
-3,13,svellnosbreen-20220218-DAT_0735_A1_2,2022-02-18
-3,14,moysalbreen-20220222-DAT_0749_A1_1,2022-02-22
-3,15,moysalbreen-20220222-DAT_0750_A1_6,2022-02-22
-3,16,rugaasfonna-20220222-DAT_0738_A1_9,2022-02-22
-3,17,dronbreen-20220328-DAT_0226_A1_1,2022-03-28
-3,18,dronbreen-20220328-DAT_0227_A1_1,2022-03-28
-3,19,dronbreen-20220328-DAT_0228_A1_2,2022-03-28
-3,20,dronbreen-20220328-DAT_0230_A1_4,2022-03-28
-3,21,dronbreen-20220329-DAT_0234_A1_1,2022-03-29
-3,22,dronbreen-20220329-DAT_0235_A1_1,2022-03-29
-3,23,dronbreen-20220329-DAT_0236_A1_2,2022-03-29
-3,24,dronbreen-20220329-DAT_0238_A1_8,2022-03-29
-3,25,dronbreen-20220329-DAT_0247_A1_2,2022-03-29
-3,26,dronbreen-20220329-DAT_0249_A1_1,2022-03-29
-3,27,slakbreen-20220330-DAT_0250_A1_2,2022-03-30
-3,28,slakbreen-20220330-DAT_0253_A1_1,2022-03-30
-3,29,vallakrabreen-20220419-DAT_0067_A1_1,2022-04-19
-3,30,vallakrabreen-20220419-DAT_0068_A1_1,2022-04-19
-3,31,vallakrabreen-20220419-DAT_0069_A1_3,2022-04-19
-3,32,fimbulisen-20220430-DAT_0079_B1_1,2022-04-30
-3,33,fimbulisen-20220430-DAT_0080_B1_2,2022-04-30
-3,34,fimbulisen-20220430-DAT_0084_B1_1,2022-04-30
-3,35,vallakrabreen-20220505-DAT_0098_A1_1,2022-05-05
-3,36,vallakrabreen-20220505-DAT_0100_A1_1,2022-05-05
-3,37,dronbreen-20230220-DAT_0009_A1_1,2023-02-20
-3,38,dronbreen-20230221-DAT_0012_A1_1,2023-02-21
-3,39,dronbreen-20230221-DAT_0013_A1_1,2023-02-21
-3,40,dronbreen-20230221-DAT_0014_A1_1,2023-02-21
-3,41,bergmesterbreen-20230222-DAT_0016_A1_1,2023-02-22
-3,42,bergmesterbreen-20230222-DAT_0017_A1_4,2023-02-22
-3,43,bergmesterbreen-20230222-DAT_0033_A1_3,2023-02-22
-3,44,bergmesterbreen-20230222-DAT_0036_A1_1,2023-02-22
-3,45,bergmesterbreen-20230222-DAT_0037_A1_1,2023-02-22
-3,46,kroppbreen-20230228-DAT_0042_A1_1,2023-02-28
-3,47,edvardbreen-20230305-DAT_0230_A1_1,2023-03-05
-3,48,edvardbreen-20230305-DAT_0232_A1_1,2023-03-05
-3,49,edvardbreen-20230305-DAT_0234_A1_1,2023-03-05
-3,50,mettebreen-20230305-DAT_0229_A1_1,2023-03-05
-3,51,mettebreen-20230305-DAT_0235_A1_8,2023-03-05
-3,52,ragna_mariebreen-20230305-DAT_0067_A1_1,2023-03-05
-3,53,ragna_mariebreen-20230305-DAT_0068_A1_3,2023-03-05
-3,54,slakbreen-20230320-DAT_0296_A1_1,2023-03-20
-3,55,slakbreen-20230320-DAT_0297_A1_1,2023-03-20
-3,56,slakbreen-20230320-DAT_0298_A1_1,2023-03-20
-3,57,slakbreen-20230320-DAT_0299_A1_1,2023-03-20
-3,58,slakbreen-20230320-DAT_0300_A1_2,2023-03-20
-3,59,slakbreen-20230320-DAT_0302_A1_1,2023-03-20
-3,60,slakbreen-20230320-DAT_0303_A1_1,2023-03-20
-3,61,jinnbreen-20240206-DAT_0447_A1_1,2024-02-06
-3,62,jinnbreen-20240206-DAT_0448_A1_1,2024-02-06
-3,63,scott_turnerbreen-20240207-DAT_0453_A1_2,2024-02-07
-3,64,scott_turnerbreen-20240207-DAT_0455_A1_1,2024-02-07
-3,65,scott_turnerbreen-20240207-DAT_0456_A1_1,2024-02-07
-3,66,scott_turnerbreen-20240207-DAT_0457_A1_3,2024-02-07
-3,67,dronbreen-20240209-DAT_0462_A1_1,2024-02-09
-3,68,dronbreen-20240209-DAT_0463_A1_3,2024-02-09
-3,69,dronbreen-20240209-DAT_0466_A1_1,2024-02-09
-3,70,dronbreen-20240209-DAT_0467_A1_3,2024-02-09
-3,71,dronbreen-20240209-DAT_0470_A1_3,2024-02-09
-3,72,dronbreen-20240209-DAT_0473_A1_3,2024-02-09
-3,73,ragna_mariebreen-20240317-DAT_0332_A1_2,2024-03-17
-3,74,ragna_mariebreen-20240317-DAT_0345_A1_2,2024-03-17
-3,75,ragna_mariebreen-20240405-DAT_0357_A1_1,2024-04-05
-3,76,ragna_mariebreen-20240405-DAT_0358_A1_1,2024-04-05
-3,77,ragna_mariebreen-20240405-DAT_0359_A1_1,2024-04-05
-3,78,filantropbreen-20240406-DAT_0372_A1_1,2024-04-06
-3,79,filantropbreen-20240406-DAT_0373_A1_1,2024-04-06
-3,80,edvardbreen-20240407-DAT_0380_A1_1,2024-04-07
-3,81,kroppbreen-20240407-DAT_0384_A1_1,2024-04-07
-3,82,dronbreen-20250325-DAT_0007_A1_1,2025-03-25
-3,83,dronbreen-20250325-DAT_0009_A1_4,2025-03-25
-3,84,dronbreen-20250325-DAT_0015_A1_7,2025-03-25
-3,85,dronbreen-20250325-DAT_0029_A1_1,2025-03-25
-3,86,dronbreen-20250326-DAT_0002_A1_1,2025-03-26
-3,87,dronbreen-20250326-DAT_0004_A1_1,2025-03-26
-3,88,dronbreen-20250326-DAT_0006_A1_1,2025-03-26
-3,89,dronbreen-20250326-DAT_0013_A1_1,2025-03-26
-3,90,dronbreen-20250326-DAT_0014_A1_1,2025-03-26
-3,91,elfenbeinbreen-20250326-DAT_0435_B1_1,2025-03-26
-3,92,elfenbeinbreen-20250326-DAT_0436_B1_1,2025-03-26
-3,93,etonbreen-20250506-DAT_0027_B1_1,2025-05-06
-3,94,etonbreen-20250506-DAT_0028_B1_1,2025-05-06
+cts_survey_id,id,label,date,notes
+1,1,dronbreen-20190225-DAT_0015_A1_2,2019-02-25,Central frequency: 50 MHz
+1,2,dronbreen-20190225-DAT_0018_A1_2,2019-02-25,Central frequency: 50 MHz
+1,3,dronbreen-20190225-DAT_0020_A1_1,2019-02-25,Central frequency: 50 MHz
+1,4,dronbreen-20190225-DAT_0021_A1_2,2019-02-25,Central frequency: 50 MHz
+1,5,dronbreen-20200224-DAT_0002_A1_1,2020-02-24,Central frequency: 100 MHz
+1,6,dronbreen-20200224-DAT_0003_A1_2,2020-02-24,Central frequency: 100 MHz
+1,7,dronbreen-20200224-DAT_0007_A1_20,2020-02-24,Central frequency: 100 MHz
+1,8,dronbreen-20200225-DAT_0029_A1_1,2020-02-25,Central frequency: 100 MHz
+1,9,dronbreen-20200225-DAT_0030_A1_10,2020-02-25,Central frequency: 100 MHz
+1,10,dronbreen-20200226-DAT_0041_A1_3,2020-02-26,Central frequency: 100 MHz
+1,11,dronbreen-20200226-DAT_0044_A1_15,2020-02-26,Central frequency: 100 MHz
+1,12,vallakrabreen-20210513-DAT_0012_A1_1,2021-05-13,Central frequency: 100 MHz
+1,13,vallakrabreen-20210513-DAT_0014_A1_31,2021-05-13,Central frequency: 100 MHz
+1,14,rugaasfonna-20220218-DAT_0723_A1_1,2022-02-18,Central frequency: 100 MHz
+1,15,rugaasfonna-20220218-DAT_0727_A1_1,2022-02-18,Central frequency: 100 MHz
+1,16,rugaasfonna-20220218-DAT_0728_A1_3,2022-02-18,Central frequency: 100 MHz
+1,17,svellnosbreen-20220218-DAT_0735_A1_2,2022-02-18,Central frequency: 100 MHz
+1,18,moysalbreen-20220222-DAT_0749_A1_1,2022-02-22,Central frequency: 100 MHz
+1,19,moysalbreen-20220222-DAT_0750_A1_6,2022-02-22,Central frequency: 100 MHz
+1,20,rugaasfonna-20220222-DAT_0738_A1_9,2022-02-22,Central frequency: 100 MHz
+1,21,dronbreen-20220328-DAT_0226_A1_1,2022-03-28,Central frequency: 100 MHz
+1,22,dronbreen-20220328-DAT_0227_A1_1,2022-03-28,Central frequency: 100 MHz
+1,23,dronbreen-20220328-DAT_0228_A1_2,2022-03-28,Central frequency: 100 MHz
+1,24,dronbreen-20220328-DAT_0230_A1_4,2022-03-28,Central frequency: 100 MHz
+1,25,dronbreen-20220329-DAT_0234_A1_1,2022-03-29,Central frequency: 100 MHz
+1,26,dronbreen-20220329-DAT_0235_A1_1,2022-03-29,Central frequency: 100 MHz
+1,27,dronbreen-20220329-DAT_0236_A1_2,2022-03-29,Central frequency: 100 MHz
+1,28,dronbreen-20220329-DAT_0238_A1_8,2022-03-29,Central frequency: 100 MHz
+1,29,dronbreen-20220329-DAT_0247_A1_2,2022-03-29,Central frequency: 100 MHz
+1,30,dronbreen-20220329-DAT_0249_A1_1,2022-03-29,Central frequency: 100 MHz
+1,31,slakbreen-20220330-DAT_0250_A1_2,2022-03-30,Central frequency: 100 MHz
+1,32,slakbreen-20220330-DAT_0253_A1_1,2022-03-30,Central frequency: 100 MHz
+1,33,vallakrabreen-20220419-DAT_0067_A1_1,2022-04-19,Central frequency: 100 MHz
+1,34,vallakrabreen-20220419-DAT_0068_A1_1,2022-04-19,Central frequency: 100 MHz
+1,35,vallakrabreen-20220419-DAT_0069_A1_3,2022-04-19,Central frequency: 100 MHz
+1,36,fimbulisen-20220430-DAT_0079_B1_1,2022-04-30,Central frequency: 100 MHz
+1,37,fimbulisen-20220430-DAT_0080_B1_2,2022-04-30,Central frequency: 100 MHz
+1,38,fimbulisen-20220430-DAT_0084_B1_1,2022-04-30,Central frequency: 100 MHz
+1,39,vallakrabreen-20220505-DAT_0098_A1_1,2022-05-05,Central frequency: 100 MHz
+1,40,vallakrabreen-20220505-DAT_0100_A1_1,2022-05-05,Central frequency: 100 MHz
+1,41,dronbreen-20230220-DAT_0009_A1_1,2023-02-20,Central frequency: 100 MHz
+1,42,dronbreen-20230221-DAT_0012_A1_1,2023-02-21,Central frequency: 100 MHz
+1,43,dronbreen-20230221-DAT_0013_A1_1,2023-02-21,Central frequency: 100 MHz
+1,44,dronbreen-20230221-DAT_0014_A1_1,2023-02-21,Central frequency: 100 MHz
+1,45,bergmesterbreen-20230222-DAT_0016_A1_1,2023-02-22,Central frequency: 100 MHz
+1,46,bergmesterbreen-20230222-DAT_0017_A1_4,2023-02-22,Central frequency: 100 MHz
+1,47,bergmesterbreen-20230222-DAT_0033_A1_3,2023-02-22,Central frequency: 100 MHz
+1,48,bergmesterbreen-20230222-DAT_0036_A1_1,2023-02-22,Central frequency: 100 MHz
+1,49,bergmesterbreen-20230222-DAT_0037_A1_1,2023-02-22,Central frequency: 100 MHz
+1,50,kroppbreen-20230228-DAT_0042_A1_1,2023-02-28,Central frequency: 100 MHz
+1,51,edvardbreen-20230305-DAT_0230_A1_1,2023-03-05,Central frequency: 100 MHz
+1,52,edvardbreen-20230305-DAT_0232_A1_1,2023-03-05,Central frequency: 100 MHz
+1,53,edvardbreen-20230305-DAT_0234_A1_1,2023-03-05,Central frequency: 100 MHz
+1,54,mettebreen-20230305-DAT_0229_A1_1,2023-03-05,Central frequency: 100 MHz
+1,55,mettebreen-20230305-DAT_0235_A1_8,2023-03-05,Central frequency: 100 MHz
+1,56,ragna_mariebreen-20230305-DAT_0067_A1_1,2023-03-05,Central frequency: 100 MHz
+1,57,ragna_mariebreen-20230305-DAT_0068_A1_3,2023-03-05,Central frequency: 100 MHz
+1,58,slakbreen-20230320-DAT_0296_A1_1,2023-03-20,Central frequency: 100 MHz
+1,59,slakbreen-20230320-DAT_0297_A1_1,2023-03-20,Central frequency: 100 MHz
+1,60,slakbreen-20230320-DAT_0298_A1_1,2023-03-20,Central frequency: 100 MHz
+1,61,slakbreen-20230320-DAT_0299_A1_1,2023-03-20,Central frequency: 100 MHz
+1,62,slakbreen-20230320-DAT_0300_A1_2,2023-03-20,Central frequency: 100 MHz
+1,63,slakbreen-20230320-DAT_0302_A1_1,2023-03-20,Central frequency: 100 MHz
+1,64,slakbreen-20230320-DAT_0303_A1_1,2023-03-20,Central frequency: 100 MHz
+1,65,jinnbreen-20240206-DAT_0447_A1_1,2024-02-06,Central frequency: 100 MHz
+1,66,jinnbreen-20240206-DAT_0448_A1_1,2024-02-06,Central frequency: 100 MHz
+1,67,scott_turnerbreen-20240207-DAT_0453_A1_2,2024-02-07,Central frequency: 100 MHz
+1,68,scott_turnerbreen-20240207-DAT_0455_A1_1,2024-02-07,Central frequency: 100 MHz
+1,69,scott_turnerbreen-20240207-DAT_0456_A1_1,2024-02-07,Central frequency: 100 MHz
+1,70,scott_turnerbreen-20240207-DAT_0457_A1_3,2024-02-07,Central frequency: 100 MHz
+1,71,dronbreen-20240209-DAT_0462_A1_1,2024-02-09,Central frequency: 100 MHz
+1,72,dronbreen-20240209-DAT_0463_A1_3,2024-02-09,Central frequency: 100 MHz
+1,73,dronbreen-20240209-DAT_0466_A1_1,2024-02-09,Central frequency: 100 MHz
+1,74,dronbreen-20240209-DAT_0467_A1_3,2024-02-09,Central frequency: 100 MHz
+1,75,dronbreen-20240209-DAT_0470_A1_3,2024-02-09,Central frequency: 100 MHz
+1,76,dronbreen-20240209-DAT_0473_A1_3,2024-02-09,Central frequency: 100 MHz
+1,77,slakbreen-20240310-DAT_0286_A1_1,2024-03-10,Central frequency: 25 MHz
+1,78,slakbreen-20240310-DAT_0287_A1_1,2024-03-10,Central frequency: 25 MHz
+1,79,slakbreen-20240310-DAT_0289_A1_1,2024-03-10,Central frequency: 25 MHz
+1,80,slakbreen-20240310-DAT_0290_A1_1,2024-03-10,Central frequency: 25 MHz
+1,81,slakbreen-20240310-DAT_0291_A1_1,2024-03-10,Central frequency: 25 MHz
+1,82,slakbreen-20240310-DAT_0292_A1_1,2024-03-10,Central frequency: 25 MHz
+1,83,ragna_mariebreen-20240317-DAT_0332_A1_2,2024-03-17,Central frequency: 100 MHz
+1,84,ragna_mariebreen-20240317-DAT_0345_A1_2,2024-03-17,Central frequency: 100 MHz
+1,85,ragna_mariebreen-20240405-DAT_0357_A1_1,2024-04-05,Central frequency: 100 MHz
+1,86,ragna_mariebreen-20240405-DAT_0358_A1_1,2024-04-05,Central frequency: 100 MHz
+1,87,ragna_mariebreen-20240405-DAT_0359_A1_1,2024-04-05,Central frequency: 100 MHz
+1,88,filantropbreen-20240406-DAT_0372_A1_1,2024-04-06,Central frequency: 100 MHz
+1,89,filantropbreen-20240406-DAT_0373_A1_1,2024-04-06,Central frequency: 100 MHz
+1,90,edvardbreen-20240407-DAT_0380_A1_1,2024-04-07,Central frequency: 100 MHz
+1,91,kroppbreen-20240407-DAT_0384_A1_1,2024-04-07,Central frequency: 100 MHz
+1,92,edvardbreen-20240411-DAT_0395_A1_1,2024-04-11,Central frequency: 25 MHz
+1,93,edvardbreen-20240411-DAT_0396_A1_1,2024-04-11,Central frequency: 25 MHz
+1,94,ragna_mariebreen-20240412-DAT_0399_A1_1,2024-04-12,Central frequency: 25 MHz
+1,95,ragna_mariebreen-20240412-DAT_0402_A1_1,2024-04-12,Central frequency: 25 MHz
+1,96,ragna_mariebreen-20240412-DAT_0404_A1_1,2024-04-12,Central frequency: 25 MHz
+1,97,ragna_mariebreen-20240412-DAT_0405_A1_1,2024-04-12,Central frequency: 25 MHz
+1,98,etonbreen-20240503-DAT_0009_A1_1,2024-05-03,Central frequency: 25 MHz
+1,99,etonbreen-20240503-DAT_0011_A1_1,2024-05-03,Central frequency: 25 MHz
+1,100,etonbreen-20240503-DAT_0012_A1_1,2024-05-03,Central frequency: 25 MHz
+1,101,winsnesbreen-20240503-DAT_0013_A1_1,2024-05-03,Central frequency: 25 MHz
+1,102,winsnesbreen-20240503-DAT_0014_A1_1,2024-05-03,Central frequency: 25 MHz
+1,103,austfonna-20240507-DAT_0027_A1_1,2024-05-07,Central frequency: 25 MHz
+1,104,austfonna-20240507-DAT_0028_A1_1,2024-05-07,Central frequency: 25 MHz
+1,105,amenfonna-20240510-DAT_0044_A1_1,2024-05-10,Central frequency: 25 MHz
+1,106,amenfonna-20240510-DAT_0046_A1_1,2024-05-10,Central frequency: 25 MHz
+1,107,dronbreen-20250325-DAT_0007_A1_1,2025-03-25,Central frequency: 100 MHz
+1,108,dronbreen-20250325-DAT_0009_A1_4,2025-03-25,Central frequency: 100 MHz
+1,109,dronbreen-20250325-DAT_0015_A1_7,2025-03-25,Central frequency: 100 MHz
+1,110,dronbreen-20250325-DAT_0029_A1_1,2025-03-25,Central frequency: 100 MHz
+1,111,dronbreen-20250326-DAT_0002_A1_1,2025-03-26,Central frequency: 100 MHz
+1,112,dronbreen-20250326-DAT_0004_A1_1,2025-03-26,Central frequency: 100 MHz
+1,113,dronbreen-20250326-DAT_0006_A1_1,2025-03-26,Central frequency: 100 MHz
+1,114,dronbreen-20250326-DAT_0013_A1_1,2025-03-26,Central frequency: 100 MHz
+1,115,dronbreen-20250326-DAT_0014_A1_1,2025-03-26,Central frequency: 100 MHz
+1,116,dronbreen-20250326-DAT_0044_A1_1,2025-03-26,Central frequency: 25 MHz
+1,117,dronbreen-20250326-DAT_0046_A1_1,2025-03-26,Central frequency: 25 MHz
+1,118,dronbreen-20250326-DAT_0050_A1_1,2025-03-26,Central frequency: 25 MHz
+1,119,dronbreen-20250326-DAT_0051_A1_1,2025-03-26,Central frequency: 25 MHz
+1,120,dronbreen-20250326-DAT_0052_A1_1,2025-03-26,Central frequency: 25 MHz
+1,121,dronbreen-20250326-DAT_0053_A1_1,2025-03-26,Central frequency: 25 MHz
+1,122,dronbreen-20250326-DAT_0054_A1_1,2025-03-26,Central frequency: 25 MHz
+1,123,dronbreen-20250326-DAT_0058_A1_1,2025-03-26,Central frequency: 25 MHz
+1,124,elfenbeinbreen-20250326-DAT_0435_B1_1,2025-03-26,Central frequency: 100 MHz
+1,125,elfenbeinbreen-20250326-DAT_0436_B1_1,2025-03-26,Central frequency: 100 MHz
+1,126,lofthusbreen-20250326-DAT_0057_A1_1,2025-03-26,Central frequency: 25 MHz
+1,127,dronbreen-20250327-DAT_0062_A1_1,2025-03-27,Central frequency: 25 MHz
+1,128,dronbreen-20250327-DAT_0063_A1_1,2025-03-27,Central frequency: 25 MHz
+1,129,dronbreen-20250327-DAT_0065_A1_1,2025-03-27,Central frequency: 25 MHz
+1,130,dronbreen-20250327-DAT_0066_A1_1,2025-03-27,Central frequency: 25 MHz
+1,131,rabotbreen-20250402-DAT_0068_A1_1,2025-04-02,Central frequency: 25 MHz
+1,132,rabotbreen-20250402-DAT_0071_A1_1,2025-04-02,Central frequency: 25 MHz
+1,133,von_postbreen-20250402-DAT_0024_A1_0002_1,2025-04-02,Central frequency: 25 MHz
+1,134,antoniabreen-20250406-DAT_0166_A1_1,2025-04-06,Central frequency: 25 MHz
+1,135,antoniabreen-20250406-DAT_0168_A1_1,2025-04-06,Central frequency: 25 MHz
+1,136,finsterwalderbreen-20250407-DAT_0171_A1_1,2025-04-07,Central frequency: 25 MHz
+1,137,etonbreen-20250506-DAT_0027_B1_1,2025-05-06,Central frequency: 100 MHz
+1,138,etonbreen-20250506-DAT_0028_B1_1,2025-05-06,Central frequency: 100 MHz
