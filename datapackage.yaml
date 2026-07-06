@@ -173,6 +173,21 @@ contributors:
       - name: Laboratory of Hydraulics, Hydrology and Glaciology (VAW), ETH Zurich, Switzerland
     role: DataCollector
     status: creator
+  - title: Bryn Hubbard
+    path: https://orcid.org/0000-0002-3565-3875
+    affiliations:
+      - name: Centre for Glaciology, Department of Geography and Earth Sciences, Aberystwyth University, United Kingdom
+    role: DataCollector
+    status: creator
+  - title: Katie E. Miles
+    path: https://orcid.org/0000-0003-2793-9766
+    affiliations:
+      - name: Lancaster University, United Kingdom
+        rorid: 04f2nsd36
+      - name: Aberystwyth University, United Kingdom
+        rorid: 015m2p889
+    role: DataCollector
+    status: creator
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
@@ -506,6 +521,7 @@ resources:
       - data/bravo2015-pascua-lama/profile.csv
       - data/kronenberg2022b-abramov/profile.csv
       - data/beer2026/profile.csv
+      - data/hubbard2021-khumbu/profile.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
@@ -604,6 +620,7 @@ resources:
       - data/bravo2015-pascua-lama/measurement.csv
       - data/kronenberg2022b-abramov/measurement.csv
       - data/beer2026/measurement.csv
+      - data/hubbard2021-khumbu/measurement.csv
     format: csv
     dialect:
       $schema: https://datapackage.org/profiles/2.0/tabledialect.json
