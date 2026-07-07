@@ -58,7 +58,7 @@ def read_metadata_for_zenodo() -> dict:
   if 'funding' in package:
     raise ValueError('Funding already present in package metadata')
   funding = []
-  for table, column in glenglat.FUNDING_COLUMNS:
+  for table, column in glenglat.FUNDING_COLUMNS.items():
     funding.extend(
       dfs[table][column]
       .dropna()

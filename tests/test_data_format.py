@@ -4,7 +4,7 @@ import re
 import pandas as pd
 import pytest
 
-from load import dfs, package, DATA_SUBDIR_REGEX, ROOT
+from load import dfs, glenglat, package, ROOT
 
 
 data_subdirs = [path for path in ROOT.joinpath('data').iterdir() if path.is_dir()]
@@ -66,4 +66,4 @@ def test_data_subdir_contains_only_profiles_from_named_source(dir: Path) -> None
 @pytest.mark.parametrize('dir', data_subdirs)
 def test_data_subdir_suffix_is_kebab_case(dir: Path) -> None:
   """Data subdirectory suffix is latinized kebab-case."""
-  assert re.match(DATA_SUBDIR_REGEX, dir.name), dir.name
+  assert re.match(glenglat.DATA_SUBDIR_REGEX, dir.name), dir.name

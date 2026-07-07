@@ -6,12 +6,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from load import (
-  glenglat,
-  dfs,
-  DIGITIZER_FILE_REGEX,
-  ROOT
-)
+from load import dfs, glenglat, ROOT
 
 
 # ---- Derived variables ----
@@ -29,7 +24,7 @@ primary_source_ids, secondary_source_ids = glenglat.gather_source_ids(
 
 # Paths and suffix of all digitized profiles
 digitizer_paths = []
-pattern = re.compile(DIGITIZER_FILE_REGEX)
+pattern = re.compile(glenglat.DIGITIZER_FILE_REGEX)
 results = []
 for path in ROOT.joinpath('sources').glob('**/*.xml'):
   match = pattern.match(str(path.relative_to(ROOT)))

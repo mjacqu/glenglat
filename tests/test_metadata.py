@@ -1,13 +1,7 @@
 import pandas as pd
 import pytest
 
-from load import (
-  AGENCY_COLUMNS,
-  INVESTIGATOR_COLUMNS,
-  dfs,
-  package
-)
-import glenglat
+from load import dfs, glenglat, package
 
 
 def test_personal_communication_author_listed_as_contributor() -> None:
@@ -78,7 +72,7 @@ def test_curator_listed_as_curator() -> None:
   assert valid.all(), merge[~valid]
 
 
-@pytest.mark.parametrize('table, column', glenglat.FUNDING_COLUMNS)
+@pytest.mark.parametrize('table, column', glenglat.FUNDING_COLUMNS.items())
 def test_funding_has_correct_format(table: str, column: str) -> None:
   """Funding strings are in the correct format."""
   df = dfs[table][column]
@@ -92,7 +86,7 @@ def test_funding_has_correct_format(table: str, column: str) -> None:
   assert valid.all(), funding[~valid].to_list()
 
 
-@pytest.mark.parametrize('table, column', INVESTIGATOR_COLUMNS)
+@pytest.mark.parametrize('table, column', glenglat.INVESTIGATOR_COLUMNS.items())
 def test_investigators_have_correct_format(table: str, column: str) -> None:
   """Investigator strings are in the correct format."""
   df = dfs[table][column]
@@ -106,7 +100,7 @@ def test_investigators_have_correct_format(table: str, column: str) -> None:
   assert valid.all(), investigators[~valid].to_list()
 
 
-@pytest.mark.parametrize('table, column', AGENCY_COLUMNS)
+@pytest.mark.parametrize('table, column', glenglat.AGENCY_COLUMNS.items())
 def test_agencies_have_correct_format(table: str, column: str) -> None:
   """Agency strings are in the correct format."""
   df = dfs[table][column]

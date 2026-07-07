@@ -87,11 +87,71 @@ FUNDING_REGEX = fr'^(?P<funder>{parphrase})(?: \[(?P<rorid>{rorid_regex})\])?(?:
 AGENCY_REGEX = fr'^(?P<id>[0-9]+)\. {title_regex}(?: \((?P<place>[^\)]+)\))?$'
 """Regular expression for an agency."""
 
-FUNDING_COLUMNS: list[tuple[str, str]] = [
-  ('borehole', 'funding'),
-  ('cts_survey', 'funding')
-]
-"""Columns that contain funding sources (table, column)."""
+ochar = r'[^\[\]\s]'
+ichar = r'[^\[\]]'
+phrase = fr'{ochar}{ichar}*{ochar}'
+
+TRANSLATED_REGEX = fr'^{phrase}(?: \[{phrase}\])?$'
+"""Regular expression for translated text."""
+
+DEFAULT_AXIS_NAMES = {'temperature', 'depth'}
+"""Default digitized axis names."""
+
+SPECIAL_AXIS_NAMES = {'elevation', 'days', 'year'}
+"""Special digitized axis names."""
+
+DIGITIZER_FILE_REGEX = (
+  r'^sources\/(?P<source_id>[^\/]+)\/' +
+  r'(?P<borehole_id>[0-9]+)(?:-(?P<max_borehole_id>[0-9]+))?' +
+  r'_(?:(?P<profile_id>[0-9]+)(?:-(?P<max_profile_id>[0-9]+))?|(?P<depth>[\-0-9\.]+)m)' +
+  r'(?:_(?P<suffix>.+))?\.xml$'
+)
+"""Regular expression for digitizer file paths."""
+
+DATA_SUBDIR_REGEX = r'^[a-z]+[0-9]{4}[a-z]?(?:-[a-z0-9]+)*$'
+"""Regular expression for data subdirectory names."""
+
+PEOPLE_COLUMNS: dict[str, str] = {
+  'source': 'author',
+  'source': 'editor',
+  'borehole': 'curator',
+  'cts_survey': 'curator',
+}
+"""Columns that contain people (table: column)."""
+
+AUTHOR_COLUMNS: dict[str, str] = {
+  'source': 'author',
+  'borehole': 'investigators',
+  'cts_survey': 'investigators'
+}
+"""Columns that contain authors for author list (table: column)."""
+
+INVESTIGATOR_COLUMNS: dict[str, str] = {
+  'borehole': 'investigators',
+  'cts_survey': 'investigators'
+}
+"""Columns that contain investigators (table: column)."""
+
+AGENCY_COLUMNS: dict[str, str] = {
+  'borehole': 'agencies',
+  'cts_survey': 'agencies'
+}
+"""Columns that contain agencies (table: column)."""
+
+FUNDING_COLUMNS: dict[str, str] = {
+  'borehole': 'funding',
+  'cts_survey': 'funding'
+}
+"""Columns that contain funding sources (table: column)."""
+
+TRANSLATED_COLUMNS: dict[str, str] = {
+  'source': 'title',
+  'source': 'container_title',
+  'source': 'collection_title',
+  'source': 'publisher',
+  'borehole': 'glacier_name'
+}
+"""Columns that contain translated text (table: column)."""
 
 
 # ---- Configure YAML rendering ----
@@ -1049,13 +1109,8 @@ def render_author_list(latin: bool = False) -> list[str]:
     Whether to include only names in Latin script.
   """
   # Gather author strings
-  columns = {
-    'source': 'author',
-    'borehole': 'investigators',
-    'cts_survey': 'investigators'
-  }
   strings = []
-  for table, column in columns.items():
+  for table, column in AUTHOR_COLUMNS.items():
     df = pd.read_csv(DATA_PATH.joinpath(f'{table}.csv'))
     strings.extend(
       df[column].str.split(' | ', regex=False)

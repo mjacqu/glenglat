@@ -1,7 +1,8 @@
 import pytest
 
 import frictionless
-import zenodo
+
+from load import zenodo
 
 
 @pytest.mark.slow

@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 
 from load import dfs
-import glenglat
 
 
 def test_survey_id_in_profile_table() -> None:
