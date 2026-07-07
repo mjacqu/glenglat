@@ -87,6 +87,12 @@ FUNDING_REGEX = fr'^(?P<funder>{parphrase})(?: \[(?P<rorid>{rorid_regex})\])?(?:
 AGENCY_REGEX = fr'^(?P<id>[0-9]+)\. {title_regex}(?: \((?P<place>[^\)]+)\))?$'
 """Regular expression for an agency."""
 
+FUNDING_COLUMNS: list[tuple[str, str]] = [
+  ('borehole', 'funding'),
+  ('cts_survey', 'funding')
+]
+"""Columns that contain funding sources (table, column)."""
+
 
 # ---- Configure YAML rendering ----
 

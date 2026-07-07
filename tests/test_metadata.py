@@ -3,7 +3,6 @@ import pytest
 
 from load import (
   AGENCY_COLUMNS,
-  FUNDING_COLUMNS,
   INVESTIGATOR_COLUMNS,
   dfs,
   package
@@ -79,7 +78,7 @@ def test_curator_listed_as_curator() -> None:
   assert valid.all(), merge[~valid]
 
 
-@pytest.mark.parametrize('table, column', FUNDING_COLUMNS)
+@pytest.mark.parametrize('table, column', glenglat.FUNDING_COLUMNS)
 def test_funding_has_correct_format(table: str, column: str) -> None:
   """Funding strings are in the correct format."""
   df = dfs[table][column]

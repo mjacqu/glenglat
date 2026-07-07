@@ -51,12 +51,6 @@ AGENCY_COLUMNS: list[tuple[str, str]] = [
 ]
 """Columns that contain agencies (table, column)."""
 
-FUNDING_COLUMNS: list[tuple[str, str]] = [
-  ('borehole', 'funding'),
-  ('cts_survey', 'funding')
-]
-"""Columns that contain funding sources (table, column)."""
-
 DEFAULT_AXIS_NAMES = {'temperature', 'depth'}
 """Default digitized axis names."""
 
