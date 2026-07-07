@@ -494,7 +494,7 @@ resources:
         - name: curator
           description: Names of people who added the data to the database, as a pipe-delimited list.
           type: string
-          contraints:
+          constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: investigators
