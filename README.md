@@ -21,7 +21,7 @@ The dataset adheres to the Frictionless [Data Package](https://datapackage.org/s
 * [`profile.csv`](data/profile.csv): Description of each profile (date, etc), linked to `borehole.csv` via `borehole_id` and to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
 * [`measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
-For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is an optional simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
 
 ### Supporting information
 
