@@ -78,6 +78,8 @@ resources:
     - name: label
       type: string
       description: Borehole name (e.g. as labeled on a plot).
+      constraints:
+        pattern: '[^\s]+( [^\s]+)*'
     - name: date_min
       type: date
       description: Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
