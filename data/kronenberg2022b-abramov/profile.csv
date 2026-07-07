@@ -1,4 +1,4 @@
-borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrated,notes
+borehole_id,id,source_id,measurement_origin,date_min,date_max,time,utc_offset,equilibrium,notes
 845,1,kronenberg2022b,published,2018-02-01,2018-02-01,21:00:00,,,
 845,2,kronenberg2022b,published,2018-02-01,2018-02-01,21:30:00,,,
 845,3,kronenberg2022b,published,2018-02-01,2018-02-01,22:00:00,,,
