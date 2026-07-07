@@ -14,7 +14,9 @@ Open-access database of englacial temperature measurements compiled from data su
 
 ## Dataset structure
 
-The dataset adheres to the Frictionless [Data Package](https://datapackage.org/standard/data-package/) standard. The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder:
+The dataset adheres to the Frictionless [Data Package](https://datapackage.org/standard/data-package/) standard. The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder.
+
+### Borehole temperature measurements
 
 * [`source.csv`](data/source.csv): Description of each data source (either a personal communication or the reference to a published study).
 * [`borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
@@ -22,6 +24,14 @@ The dataset adheres to the Frictionless [Data Package](https://datapackage.org/s
 * [`measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
 For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is an optional simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+
+### Cold-temperate transition surface (CTS) measurements
+
+* [`cts_survey.csv`](data/cts_survey.csv): Description of each survey, linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
+* `cts_profile.csv`: Description of each profile (date, etc), linked to `cts_survey.csv` via `cts_survey_id`.
+* `cts_measurement.csv`: Description of each measurement (CTS depth) linked to `cts_profile.csv` via `cts_survey_id` and `cts_profile_id`.
+
+Pairs of the latter two are stored separately in subfolders of [`data`](data) named `{source.id}` (e.g. [`mannerfelt2026`](data/mannerfelt2026)).
 
 ### Supporting information
 
@@ -34,9 +44,11 @@ _The repository's [license](LICENSE.md) does not extend to figures, tables, maps
 
 ## Submitter guide
 
-*We welcome submissions of new data as well as corrections and improvements to existing data.*
+To submit data, send an email to jacquemart@vaw.baug.ethz.ch or open a GitHub [issue](https://github.com/mjacqu/glenglat/issues). We welcome submissions of new data as well as corrections and improvements to existing data.
 
-To submit data, send an email to jacquemart@vaw.baug.ethz.ch or open a GitHub [issue](https://github.com/mjacqu/glenglat/issues). Please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below and in the submission metadata: [`submission/datapackage.yaml`](submission/datapackage.yaml). Consider using our handy Excel template: [`submission/template.xlsx`](submission/template.xlsx)! For corrections and improvements to existing data, you can also describe the changes that need to be made or make the changes directly via a GitHub [pull request](https://github.com/mjacqu/glenglat/pulls).
+**For borehole measurements**, please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below and in the submission metadata: [`submission/datapackage.yaml`](submission/datapackage.yaml). Consider using our handy Excel template: [`submission/template.xlsx`](submission/template.xlsx)! For corrections and improvements to existing data, you can also describe the changes that need to be made or make the changes directly via a GitHub [pull request](https://github.com/mjacqu/glenglat/pulls).
+
+**For CTS measurements**, please contact us describing your data. Support for CTS data is still in development.
 
 ### Authorship policy
 
