@@ -6,12 +6,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from load import (
-  glenglat,
-  dfs,
-  DIGITIZER_FILE_REGEX,
-  ROOT
-)
+from load import dfs, glenglat, ROOT
 
 
 # ---- Derived variables ----
@@ -21,12 +16,15 @@ source_ids = set(dfs['source']['id'])
 # Source ids used as measurement origin
 # Source ids cited in notes
 primary_source_ids, secondary_source_ids = glenglat.gather_source_ids(
-  dfs['borehole'], dfs['profile']
+  dfs['borehole'],
+  dfs['profile'],
+  dfs['cts_survey'],
+  dfs['cts_measurement']
 )
 
 # Paths and suffix of all digitized profiles
 digitizer_paths = []
-pattern = re.compile(DIGITIZER_FILE_REGEX)
+pattern = re.compile(glenglat.DIGITIZER_FILE_REGEX)
 results = []
 for path in ROOT.joinpath('sources').glob('**/*.xml'):
   match = pattern.match(str(path.relative_to(ROOT)))
@@ -68,13 +66,13 @@ digitized_profiles = temp[['source_id', 'borehole_id', 'profile_id']].drop_dupli
 # ---- Tests ----
 
 def test_sources_are_used() -> None:
-  """All sources are used in *.source_id or borehole.notes."""
+  """All sources are used in *.source_id or *.notes."""
   invalid = source_ids - (primary_source_ids.union(secondary_source_ids))
   assert not invalid, invalid
 
 
-def test_source_ids_in_borehole_notes_exist() -> None:
-  """All source ids in borehole notes exist."""
+def test_source_ids_in_notes_exist() -> None:
+  """All source ids in notes exist."""
   invalid = secondary_source_ids - source_ids
   assert not invalid, invalid
 

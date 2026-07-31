@@ -78,6 +78,8 @@ resources:
     - name: label
       type: string
       description: Borehole name (e.g. as labeled on a plot).
+      constraints:
+        pattern: '[^\s]+( [^\s]+)*'
     - name: date_min
       type: date
       description: Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
@@ -129,7 +131,12 @@ resources:
         pattern: '[^\s]+( [^\s]+)*'
     - name: investigators
       type: string
-      description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
+      description: Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)').
+      constraints:
+        pattern: '[^\s]+( [^\s]+)*'
+    - name: agencies
+      type: string
+      description: 'Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format ''number. acronym: name > ... [latinization]'', where only the agency number and either a name or acronym are required (e.g. ''1. UZH: Universität Zürich > GIUZ'').'
       constraints:
         pattern: '[^\s]+( [^\s]+)*'
     - name: funding

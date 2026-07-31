@@ -3,14 +3,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from load import (
-  dfs,
-  package,
-  TRANSLATED_COLUMNS,
-  TRANSLATED_REGEX,
-  PEOPLE_COLUMNS
-)
-import glenglat
+from load import dfs, glenglat
 
 
 @pytest.mark.slow
@@ -149,17 +142,17 @@ def test_borehole_profile_ids_increment_by_1() -> None:
   assert valid.all(), df[~valid]
 
 
-@pytest.mark.parametrize('table, column', TRANSLATED_COLUMNS)
+@pytest.mark.parametrize('table, column', glenglat.TRANSLATED_COLUMNS.items())
 def test_translations_have_correct_format(table: str, column: str) -> None:
   """Translated text is formatted as {text} [{translation}]."""
   s = dfs[table].set_index('id')[column]
-  valid = s.str.match(TRANSLATED_REGEX)
+  valid = s.str.match(glenglat.TRANSLATED_REGEX)
   assert valid.all(), s[~valid]
 
 
-@pytest.mark.parametrize('table, column', PEOPLE_COLUMNS)
+@pytest.mark.parametrize('table, column', glenglat.PEOPLE_COLUMNS.items())
 def test_people_have_correct_format(table: str, column: str) -> None:
-  """People are formatted as {text} [{translation}] ({orcid}) | ."""
+  """People are formatted as {name} [{latinization}] {orcid/email} | ."""
   s = dfs[table].set_index('id')[column]
   people = s.str.split(' | ', regex=False).explode()
   valid = people.str.match(glenglat.PERSON_REGEX)

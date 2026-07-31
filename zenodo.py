@@ -33,6 +33,12 @@ REPO = git.Repo(ROOT)
 CITATION_PATH = ROOT.joinpath('CITATION.cff')
 """Path to citation file."""
 
+PUBLISHED_TABLES = [
+  'source', 'borehole', 'profile', 'measurement',
+  'cts_survey', 'cts_profile', 'cts_measurement'
+]
+"""Names of published tables."""
+
 # Load environment variables from .env
 dotenv.load_dotenv(ROOT.joinpath('.env'))
 
@@ -46,16 +52,22 @@ def read_metadata_for_zenodo() -> dict:
   # Limit to select tables
   package['resources'] = [
     resource for resource in package['resources']
-    if resource['name'] in ('source', 'borehole', 'profile', 'measurement')
+    if resource['name'] in PUBLISHED_TABLES
   ]
-  # Extract funding from borehole table
+  # Extract funding
   if 'funding' in package:
     raise ValueError('Funding already present in package metadata')
+  funding = []
+  for table, column in glenglat.FUNDING_COLUMNS.items():
+    funding.extend(
+      dfs[table][column]
+      .dropna()
+      .astype('string')
+      .str.split(' | ', regex=False)
+      .explode()
+    )
   package['funding'] = (
-    dfs['borehole']['funding']
-    .dropna()
-    .str.split(' | ', regex=False)
-    .explode()
+    pd.Series(funding)
     .drop_duplicates()
     .str.extract(glenglat.FUNDING_REGEX)
     .convert_dtypes()
@@ -113,8 +125,8 @@ def get_measurement_interval(
 ) -> Tuple[str, str]:
   """Get measurement interval from data."""
   dfs = dfs or glenglat.read_data()
-  start = dfs['profile']['date_min'].min()
-  end = dfs['profile']['date_max'].max()
+  start = min(dfs['profile']['date_min'].min(), dfs['cts_profile']['date'].min())
+  end = max(dfs['profile']['date_max'].max(), dfs['cts_profile']['date'].max())
   return start, end
 
 
@@ -384,6 +396,7 @@ def render_zenodo_metadata(time: Optional[datetime.datetime] = None) -> dict:
             'coordinates': [row['longitude'], row['latitude']]
           }
         }
+        # TODO: Consider whether and how to include CTS measurements
         for row in dfs['borehole'].to_dict(orient='records')
       ]
     },

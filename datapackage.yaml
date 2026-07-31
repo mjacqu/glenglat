@@ -188,6 +188,13 @@ contributors:
         rorid: 015m2p889
     role: DataCollector
     status: creator
+  - title: Erik Schytt Mannerfelt
+    path: https://orcid.org/0000-0002-9146-557X
+    affiliations:
+      - name: Department of Geosciences, University of Oslo, Norway
+      - name: Arctic Geology, The University Centre in Svalbard, Svalbard & Jan Mayen
+    role: DataCollector
+    status: creator
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
@@ -444,6 +451,8 @@ resources:
         - name: label
           description: Borehole name (e.g. as labeled on a plot).
           type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
         - name: date_min
           description: Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01).
           type: date
@@ -487,11 +496,17 @@ resources:
         - name: curator
           description: Names of people who added the data to the database, as a pipe-delimited list.
           type: string
-          contraints:
+          constraints:
             required: true
             pattern: '[^\s]+( [^\s]+)*'
         - name: investigators
-          description: Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets.
+          description: Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)').
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: agencies
+          description: |-
+            Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format 'number. acronym: name > ... [latinization]', where only the agency number and either a name or acronym are required (e.g. '1. UZH: Universität Zürich > GIUZ').
           type: string
           constraints:
             pattern: '[^\s]+( [^\s]+)*'
@@ -662,6 +677,235 @@ resources:
           reference:
             resource: profile
             fields: [borehole_id, id]
+  - name: cts_survey
+    description: Cold-temperate transition surface (CTS) surveys.
+    path: data/cts_survey.csv
+    format: csv
+    dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
+    schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
+      fields:
+        - name: id
+          description: Unique identifier.
+          type: integer
+          constraints:
+            required: true
+            unique: true
+            minimum: 1
+        - name: source_id
+          type: string
+          description: Source of the measurements. This is also the source of the survey attributes unless otherwise stated in `notes`.
+          constraints:
+            required: true
+        - name: location_origin
+          description: |-
+            Origin of location (`cts_point.latitude`, `cts_point.longitude`).
+
+            - submitted: Provided in data submission
+            - published: Reported as coordinates in original publication
+            - digitized: Digitized from published map with complete axes
+            - estimated: Estimated from published plot by comparing to a map (e.g. Google Maps, CalTopo)
+            - guessed: Estimated with difficulty, for example by comparing `cts_point.elevation` to a map (e.g. Google Maps, CalTopo)
+          type: string
+          constraints:
+            required: true
+            enum: [submitted, published, digitized, estimated, guessed]
+        - name: elevation_origin
+          description: |-
+            Origin of elevation (`cts_point.elevation`).
+
+            - submitted: Provided in data submission
+            - published: Reported as number in original publication
+            - digitized: Digitized from published plot with complete axes
+            - estimated: Estimated from elevation contours in published map
+            - guessed: Estimated with difficulty, for example by comparing location (`cts_point.latitude`, `cts_point.longitude`) to a map of contemporary elevations (e.g. CalTopo, Google Maps)
+          type: string
+          constraints:
+            required: true
+            enum: [submitted, published, digitized, estimated, guessed]
+        - name: notes
+          description: Additional remarks about the survey or the measurements therein as a pipe-delimited list. Sources are referenced by `source.id`. Quality concerns are prefixed with '[flag]'.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: curator
+          description: Names of people who added the data to the database, as a pipe-delimited list.
+          type: string
+          constraints:
+            required: true
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: investigators
+          description: Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)').
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: agencies
+          description: |-
+            Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format 'number. acronym: name > ... [latinization]', where only the agency number and either a name or acronym are required (e.g. '1. UZH: Universität Zürich > GIUZ').
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: funding
+          description: Funding sources as a pipe-delimited list. Each entry is in the format 'funder [rorid] > award [number] url', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49).
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+      missingValues: ['']
+      primaryKey: [id]
+      foreignKeys:
+        - fields: [source_id]
+          reference:
+            resource: source
+            fields: [id]
+  - name: cts_profile
+    description: Cold-temperate transition surface (CTS) profiles.
+    path:
+      - data/mannerfelt2026/cts_profile.csv
+    format: csv
+    dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
+    schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
+      fields:
+        - name: cts_survey_id
+          description: Cold-temperate transition surface (CTS) survey identifier.
+          type: integer
+          constraints:
+            required: true
+        - name: id
+          description: Unique identifier (starting from 1 for each survey).
+          type: integer
+          constraints:
+            required: true
+            unique: true
+            minimum: 1
+        - name: label
+          description: Profile name (e.g. as used in the original study).
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+        - name: date
+          description: Measurement date.
+          type: date
+          format: '%Y-%m-%d'
+          constraints:
+            required: true
+        - name: notes
+          description: Additional remarks about the profile or the measurements therein as a pipe-delimited list. Sources are referenced by `source.id`. Quality concerns are prefixed with '[flag]'.
+          type: string
+          constraints:
+            pattern: '[^\s]+( [^\s]+)*'
+      missingValues: ['']
+      primaryKey: [cts_survey_id, id]
+      foreignKeys:
+        - fields: [cts_survey_id]
+          reference:
+            resource: cts_survey
+            fields: [id]
+  - name: cts_measurement
+    description: Cold-temperate transition surface (CTS) measurements.
+    path:
+      - data/mannerfelt2026/cts_measurement.csv
+    format: csv
+    dialect:
+      $schema: https://datapackage.org/profiles/2.0/tabledialect.json
+      header: true
+      delimiter: ','
+      lineTerminator: "\n"
+      quoteChar: '"'
+      doubleQuote: true
+    $schema: https://datapackage.org/profiles/2.0/dataresource.json
+    schema:
+      $schema: https://datapackage.org/profiles/2.0/tableschema.json
+      fields:
+        - name: cts_survey_id
+          description: Survey identifier.
+          type: integer
+          constraints:
+            required: true
+        - name: cts_profile_id
+          description: Profile identifier.
+          type: integer
+          constraints:
+            required: true
+        - name: id
+          description: Unique identifier (starting from 1 for each profile). Should be in chronological measurement order.
+          type: integer
+          constraints:
+            required: true
+            minimum: 1
+        - name: latitude
+          description: Latitude (EPSG 4326).
+          type: number
+          unit: degree
+          constraints:
+            required: true
+            minimum: -90
+            maximum: 90
+        - name: longitude
+          description: Longitude (EPSG 4326).
+          type: number
+          unit: degree
+          constraints:
+            required: true
+            minimum: -180
+            maximum: 180
+        - name: elevation
+          description: Elevation above sea level.
+          type: number
+          unit: m
+          constraints:
+            required: true
+            maximum: 9999
+        - name: elevation_date
+          description: Date of the elevation measurement.
+          type: date
+          format: '%Y-%m-%d'
+        - name: depth
+          description: Depth of the cold-temperate transition surface (CTS) below the glacier surface. Infinity (INF) indicates that no CTS was detected.
+          type: number
+          unit: m
+          constraints:
+            required: true
+            minimum: 0
+        - name: depth_uncertainty
+          description: Estimated uncertainty of `depth` (as reported).
+          type: number
+          unit: m
+          constraints:
+            minimum: 0
+        - name: bed_depth
+          description: Depth of the bed below the glacier surface. Infinity (INF) indicates that the bed was not detected.
+          type: number
+          unit: m
+          constraints:
+            minimum: 0
+        - name: bed_depth_uncertainty
+          description: Estimated uncertainty of `bed_depth` (as reported).
+          type: number
+          unit: m
+          constraints:
+            minimum: 0
+      missingValues: ['']
+      primaryKey: [cts_survey_id, cts_profile_id, id]
+      foreignKeys:
+        - fields: [cts_survey_id, cts_profile_id]
+          reference:
+            resource: cts_profile
+            fields: [cts_survey_id, id]
   - name: person
     description: Author titles resolved to people.
     path: data/person.csv

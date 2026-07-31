@@ -47,12 +47,6 @@ SUBMISSION_SPREADSHEET_PATH = ROOT.joinpath('submission/template.xlsx')
 SOURCE_ID_REGEX = r'(?:^|\s|\()([a-z]+[0-9]{4}[a-z]?)(?:$|\s|\)|,|\.)'
 """Regular expression for extracting source ids from notes."""
 
-EMAIL_REGEX = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
-"""Regular expression for an email address."""
-
-ORCID_REGEX = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
-"""Regular expression for ORCID identifiers."""
-
 AUTHOR_PLACEHOLDER = '—'
 """Display string for missing source author."""
 
@@ -69,26 +63,96 @@ outchar = r'[^\(\)\[\]\|\s]'
 inchar = r'[^\(\)\[\]\|]'
 phrase = fr'{outchar}{inchar}*?{outchar}'
 
-PERSON_TITLE_REGEX = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
-"""Regular expression for a person title."""
-
-PERSON_REGEX = fr'^(?P<title>{PERSON_TITLE_REGEX})(?: \((?:(?P<orcid>{ORCID_REGEX})|(?P<email>{EMAIL_REGEX}))\))?$'
-"""Regular expression for a person."""
-
-RORID_REGEX = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
-"""Regular expression for ROR identifiers."""
-
 # Phrase with parentheses
 outchar = r'[^\[\]\|\s]'
 inchar = r'[^\[\]\|]'
 parphrase = fr'{outchar}{inchar}*?{outchar}'
 
-FUNDING_REGEX = fr'^(?P<funder>{parphrase})(?: \[(?P<rorid>{RORID_REGEX})\])?(?: >(?: (?P<award>{parphrase}))?(?: \[(?P<number>{parphrase})\])?(?: (?P<url>https?:\/\/[^\)]+))?)?$'
+name_regex = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
+title_regex = fr'(?P<title>{name_regex})'
+email_regex = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
+orcid_regex = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
+person_regex = fr'{title_regex}(?: (?:(?P<orcid>{orcid_regex})|(?P<email>{email_regex})))?'
+rorid_regex = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
+
+PERSON_REGEX = fr'^{person_regex}$'
+"""Regular expression for a person."""
+
+INVESTIGATOR_REGEX = fr'^(?:\[(?P<notes>[^\]]+)\] )?(?:{person_regex})?(?: ?\((?P<agencies>[0-9]+(?:, [0-9]+)*)\))?$'
+"""Regular expression for an investigator."""
+
+FUNDING_REGEX = fr'^(?P<funder>{parphrase})(?: \[(?P<rorid>{rorid_regex})\])?(?: >(?: (?P<award>{parphrase}))?(?: \[(?P<number>{parphrase})\])?(?: (?P<url>https?:\/\/[^\)]+))?)?$'
 """Regular expression for a funding source."""
 
-title_regex = fr'{phrase}(?: \[{phrase}\])?'
-INVESTIGATOR_REGEX = fr'^(?P<person>{title_regex})?(?: ?\((?P<agencies>{title_regex}(?:; {title_regex})*)\))?(?: {{(?P<notes>[^\]]+)}})?$'
-"""Regular expression for an investigator."""
+AGENCY_REGEX = fr'^(?P<id>[0-9]+)\. {title_regex}(?: \((?P<place>[^\)]+)\))?$'
+"""Regular expression for an agency."""
+
+ochar = r'[^\[\]\s]'
+ichar = r'[^\[\]]'
+phrase = fr'{ochar}{ichar}*{ochar}'
+
+TRANSLATED_REGEX = fr'^{phrase}(?: \[{phrase}\])?$'
+"""Regular expression for translated text."""
+
+DEFAULT_AXIS_NAMES = {'temperature', 'depth'}
+"""Default digitized axis names."""
+
+SPECIAL_AXIS_NAMES = {'elevation', 'days', 'year'}
+"""Special digitized axis names."""
+
+DIGITIZER_FILE_REGEX = (
+  r'^sources\/(?P<source_id>[^\/]+)\/' +
+  r'(?P<borehole_id>[0-9]+)(?:-(?P<max_borehole_id>[0-9]+))?' +
+  r'_(?:(?P<profile_id>[0-9]+)(?:-(?P<max_profile_id>[0-9]+))?|(?P<depth>[\-0-9\.]+)m)' +
+  r'(?:_(?P<suffix>.+))?\.xml$'
+)
+"""Regular expression for digitizer file paths."""
+
+DATA_SUBDIR_REGEX = r'^[a-z]+[0-9]{4}[a-z]?(?:-[a-z0-9]+)*$'
+"""Regular expression for data subdirectory names."""
+
+PEOPLE_COLUMNS: dict[str, str] = {
+  'source': 'author',
+  'source': 'editor',
+  'borehole': 'curator',
+  'cts_survey': 'curator',
+}
+"""Columns that contain people (table: column)."""
+
+AUTHOR_COLUMNS: dict[str, str] = {
+  'source': 'author',
+  'borehole': 'investigators',
+  'cts_survey': 'investigators'
+}
+"""Columns that contain authors for author list (table: column)."""
+
+INVESTIGATOR_COLUMNS: dict[str, str] = {
+  'borehole': 'investigators',
+  'cts_survey': 'investigators'
+}
+"""Columns that contain investigators (table: column)."""
+
+AGENCY_COLUMNS: dict[str, str] = {
+  'borehole': 'agencies',
+  'cts_survey': 'agencies'
+}
+"""Columns that contain agencies (table: column)."""
+
+FUNDING_COLUMNS: dict[str, str] = {
+  'borehole': 'funding',
+  'cts_survey': 'funding'
+}
+"""Columns that contain funding sources (table: column)."""
+
+TRANSLATED_COLUMNS: dict[str, str] = {
+  'source': 'title',
+  'source': 'container_title',
+  'source': 'collection_title',
+  'source': 'publisher',
+  'borehole': 'glacier_name'
+}
+"""Columns that contain translated text (table: column)."""
+
 
 # ---- Configure YAML rendering ----
 
@@ -544,6 +608,37 @@ def parse_name_parts(name: str) -> Optional[dict]:
   return parts
 
 
+def _format_person(person: dict) -> dict:
+  # If there is no latinized form in square brackets, assume name is in latin script
+  if not person['latin']:
+    person['latin'] = person['name']
+    person['name'] = None
+  # Extract family and given names
+  if re.search(r'{|}', person['title']):
+    for key in ('latin', 'name'):
+      if person[key]:
+        if not re.search(r'{|}', person[key]):
+          raise ValueError(
+            f"Curly braces missing from original or latin name: {person['title']}"
+          )
+        parsed = parse_name_parts(person[key])
+        if not parsed:
+          raise ValueError(f'Failed to parse name parts from curly braces: {person["title"]}')
+        person[key] = {'name': strip_curly_braces(person[key]), **parsed}
+  else:
+    inferred = infer_name_parts(latin=person['latin'], name=person['name'])
+    if not inferred:
+      raise ValueError(f'Family name is ambiguous: {person["title"]}')
+    person['latin'] = {'name': person['latin'], **inferred['latin']}
+    if person['name']:
+      person['name'] = {'name': person['name'], **inferred['name']}
+  # Strip curly braces from title
+  person['title'] = strip_curly_braces(person['title'])
+  # Expand ORCID to full URL
+  if person['orcid']:
+    person['orcid'] = f"https://orcid.org/{person['orcid']}"
+
+
 def parse_person_string(string: str) -> dict:
   """
   Parse person string.
@@ -554,12 +649,12 @@ def parse_person_string(string: str) -> dict:
 
   Example
   -------
-  >>> parse_person_string('杉山 慎 [Sugiyama Shin] (0000-0001-5323-9558)')
+  >>> parse_person_string('杉山 慎 [Sugiyama Shin] 0000-0001-5323-9558')
   {'title': '杉山 慎 [Sugiyama Shin]',
   'name': {'name': '杉山 慎', 'family': '杉山', 'given': '慎'},
   'latin': {'name': 'Sugiyama Shin', 'family': 'Sugiyama', 'given': 'Shin'},
   'orcid': 'https://orcid.org/0000-0001-5323-9558', 'email': None}
-  >>> parse_person_string('Emmanuel {Le Meur} (test@email.fr)')
+  >>> parse_person_string('Emmanuel {Le Meur} test@email.fr')
   {'title': 'Emmanuel Le Meur', 'name': None,
   'latin': {'name': 'Emmanuel Le Meur', 'family': 'Le Meur', 'given': 'Emmanuel'},
   'orcid': None, 'email': 'test@email.fr'}
@@ -568,34 +663,69 @@ def parse_person_string(string: str) -> dict:
   if match is None:
     raise ValueError(f'Invalid person string: {string}')
   groups = match.groupdict()
-  # If there is no latinized form in square brackets, assume name is in latin script
+  _format_person(groups)
+  return groups
+
+
+def parse_investigator_string(string: str) -> dict:
+  """
+  Parse investigator string.
+
+  Same as `parse_person_string` but extracts notes and agencies and
+  allows agencies without a person.
+
+  Example
+  -------
+  >>> parse_investigator_string('[notes] 杉山 慎 [Sugiyama Shin] 0000-0001-5323-9558 (1, 2)')
+  {'notes': 'notes',
+  'title': '杉山 慎 [Sugiyama Shin]',
+  'name': {'name': '杉山 慎', 'family': '杉山', 'given': '慎'},
+  'latin': {'name': 'Sugiyama Shin', 'family': 'Sugiyama', 'given': 'Shin'},
+  'orcid': 'https://orcid.org/0000-0001-5323-9558', 'email': None,
+  'agencies': ['1', '2']}
+  >>> parse_investigator_string('[notes] (1)')
+  {'notes': 'notes', 'title': None, 'name': None, 'latin': None, 'orcid': None,
+  'email': None, 'agencies': ['1']}
+  """
+  match = re.fullmatch(INVESTIGATOR_REGEX, string)
+  if match is None:
+    raise ValueError(f'Invalid investigator string: {string}')
+  groups = match.groupdict()
+  # Parse person string
+  if groups['title']:
+    _format_person(groups)
+  # Split agencies into list
+  if groups['agencies']:
+    groups['agencies'] = groups['agencies'].split(', ')
+  return groups
+
+
+def parse_agency_string(string: str) -> dict:
+  """
+  Parse agency string.
+
+  Example
+  -------
+  >>> parse_agency_string('1. 天山冰川站 [Tianshan Glacier Station]')
+  {'id': '1',
+  'title': '天山冰川站 [Tianshan Glacier Station]',
+  'name': '天山冰川站', 'latin': 'Tianshan Glacier Station',
+  'place': None}
+  >>> parse_agency_string('12. Universität Zürich')
+  {'id': '12',
+  'title': 'Universität Zürich', 'name': None, 'latin': 'Universität Zürich',
+  'place': None}
+  >>> parse_agency_string('3. WGMS (Switzerland)')
+  {'id': '3', 'title': 'WGMS', 'name': None, 'latin': 'WGMS', 'place': 'Switzerland'}
+  """
+  match = re.fullmatch(AGENCY_REGEX, string)
+  if match is None:
+    raise ValueError(f'Invalid agency string: {string}')
+  groups = match.groupdict()
+  # Assume latin if original name is missing
   if not groups['latin']:
     groups['latin'] = groups['name']
     groups['name'] = None
-  # Extract family and given names
-  if re.search(r'{|}', groups['title']):
-    for key in ('latin', 'name'):
-      if groups[key]:
-        if not re.search(r'{|}', groups[key]):
-          raise ValueError(
-            f"Curly braces missing from original or latin name: {groups['title']}"
-          )
-        parsed = parse_name_parts(groups[key])
-        if not parsed:
-          raise ValueError(f'Failed to parse name parts from curly braces: {string}')
-        groups[key] = {'name': strip_curly_braces(groups[key]), **parsed}
-  else:
-    inferred = infer_name_parts(latin=groups['latin'], name=groups['name'])
-    if not inferred:
-      raise ValueError(f'Family name is ambiguous: {string}')
-    groups['latin'] = {'name': groups['latin'], **inferred['latin']}
-    if groups['name']:
-      groups['name'] = {'name': groups['name'], **inferred['name']}
-  # Strip curly braces from title
-  groups['title'] = strip_curly_braces(groups['title'])
-  # Expand ORCID to full URL
-  if groups['orcid']:
-    groups['orcid'] = f"https://orcid.org/{groups['orcid']}"
   return groups
 
 
@@ -738,7 +868,7 @@ def convert_people_to_english_list(people: str) -> str:
 
   Examples
   --------
-  >>> convert_people_to_english_list('Gwenn Flowers (0000-0002-3574-9324)')
+  >>> convert_people_to_english_list('Gwenn Flowers 0000-0002-3574-9324')
   'Gwenn FLOWERS'
   >>> convert_people_to_english_list('Gwenn Flowers | N. Roux')
   'Gwenn FLOWERS and N. ROUX'
@@ -979,18 +1109,22 @@ def render_author_list(latin: bool = False) -> list[str]:
     Whether to include only names in Latin script.
   """
   # Gather author strings
-  df = pd.read_csv(DATA_PATH.joinpath('source.csv'))
-  strings = (
-    df['author'].str.split(' | ', regex=False)
-    .dropna()
-    .explode()
-    .drop_duplicates()
-  )
+  strings = []
+  for table, column in AUTHOR_COLUMNS.items():
+    df = pd.read_csv(DATA_PATH.joinpath(f'{table}.csv'))
+    strings.extend(
+      df[column].str.split(' | ', regex=False)
+      .dropna()
+      .explode()
+      .drop_duplicates()
+    )
   # Parse and find people
   people = []
   missing = []
   for string in strings:
-    person = parse_person_string(string)
+    person = parse_investigator_string(string)
+    if not person['title']:
+      continue
     found = find_person(
       title=person['title'], orcid=person['orcid'], email=person['email']
     )

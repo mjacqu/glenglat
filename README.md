@@ -14,14 +14,24 @@ Open-access database of englacial temperature measurements compiled from data su
 
 ## Dataset structure
 
-The dataset adheres to the Frictionless [Data Package](https://datapackage.org/standard/data-package/) standard. The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder:
+The dataset adheres to the Frictionless [Data Package](https://datapackage.org/standard/data-package/) standard. The metadata in [`datapackage.yaml`](datapackage.yaml) describes, in detail, the contents of the tabular data files in the [`data`](data) folder.
+
+### Borehole temperature measurements
 
 * [`source.csv`](data/source.csv): Description of each data source (either a personal communication or the reference to a published study).
 * [`borehole.csv`](data/borehole.csv): Description of each borehole (location, elevation, etc), linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
 * [`profile.csv`](data/profile.csv): Description of each profile (date, etc), linked to `borehole.csv` via `borehole_id` and to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
 * [`measurement.csv`](data/measurement.csv): Description of each measurement (depth and temperature), linked to `profile.csv` via `borehole_id` and `profile_id`.
 
-For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is a simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+For boreholes with many profiles (e.g. from automated loggers), pairs of `profile.csv` and `measurement.csv` are stored separately in subfolders of [`data`](data) named `{source.id}-{glacier}`, where `glacier` is an optional simplified and kebab-cased version of the glacier name (e.g. [`flowers2022-little-kluane`](data/flowers2022-little-kluane)).
+
+### Cold-temperate transition surface (CTS) measurements
+
+* [`cts_survey.csv`](data/cts_survey.csv): Description of each survey, linked to `source.csv` via `source_id` and less formally via source identifiers in `notes`.
+* `cts_profile.csv`: Description of each profile (date, etc), linked to `cts_survey.csv` via `cts_survey_id`.
+* `cts_measurement.csv`: Description of each measurement (CTS depth) linked to `cts_profile.csv` via `cts_survey_id` and `cts_profile_id`.
+
+Pairs of the latter two are stored separately in subfolders of [`data`](data) named `{source.id}` (e.g. [`mannerfelt2026`](data/mannerfelt2026)).
 
 ### Supporting information
 
@@ -34,9 +44,11 @@ _The repository's [license](LICENSE.md) does not extend to figures, tables, maps
 
 ## Submitter guide
 
-*We welcome submissions of new data as well as corrections and improvements to existing data.*
+To submit data, send an email to jacquemart@vaw.baug.ethz.ch or open a GitHub [issue](https://github.com/mjacqu/glenglat/issues). We welcome submissions of new data as well as corrections and improvements to existing data.
 
-To submit data, send an email to jacquemart@vaw.baug.ethz.ch or open a GitHub [issue](https://github.com/mjacqu/glenglat/issues). Please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below and in the submission metadata: [`submission/datapackage.yaml`](submission/datapackage.yaml). Consider using our handy Excel template: [`submission/template.xlsx`](submission/template.xlsx)! For corrections and improvements to existing data, you can also describe the changes that need to be made or make the changes directly via a GitHub [pull request](https://github.com/mjacqu/glenglat/pulls).
+**For borehole measurements**, please structure your data as either comma-separated values (CSV) files (`borehole.csv` and `measurement.csv`) or as an Excel file (with sheets `borehole` and `measurement`). The required and optional columns for each table are described below and in the submission metadata: [`submission/datapackage.yaml`](submission/datapackage.yaml). Consider using our handy Excel template: [`submission/template.xlsx`](submission/template.xlsx)! For corrections and improvements to existing data, you can also describe the changes that need to be made or make the changes directly via a GitHub [pull request](https://github.com/mjacqu/glenglat/pulls).
+
+**For CTS measurements**, please contact us describing your data. Support for CTS data is still in development.
 
 ### Authorship policy
 
@@ -54,7 +66,7 @@ By submitting data to glenglat, you agree to be listed as a contributor in the m
 | `longitude` | Longitude (EPSG 4326). | number [degree] | required: True<br>minimum: -180<br>maximum: 180 |
 | `elevation` | Elevation above sea level. | number [m] | required: True<br>maximum: 9999.0 |
 | `mass_balance_area` | Mass balance area.<br>- ablation: Ablation area<br>- equilibrium: Near the equilibrium line<br>- accumulation: Accumulation area | string | enum: ['ablation', 'equilibrium', 'accumulation'] |
-| `label` | Borehole name (e.g. as labeled on a plot). | string |  |
+| `label` | Borehole name (e.g. as labeled on a plot). | string | pattern: `[^\s]+( [^\s]+)*` |
 | `date_min` | Begin date of drilling, or if not known precisely, the first possible date (e.g. 2019 → 2019-01-01). | date | format: `%Y-%m-%d`<br> |
 | `date_max` | End date of drilling, or if not known precisely, the last possible date (e.g. 2019 → 2019-12-31). | date | format: `%Y-%m-%d`<br> |
 | `drill_method` | Drilling method.<br>- mechanical: Push, percussion, rotary<br>- thermal: Hot point, electrothermal, steam<br>- combined: Mechanical and thermal | string | enum: ['mechanical', 'thermal', 'combined'] |
@@ -63,7 +75,8 @@ By submitting data to glenglat, you agree to be listed as a contributor in the m
 | `to_bed` | Whether the borehole reached the glacier bed. | boolean |  |
 | `temperature_uncertainty` | Estimated temperature uncertainty (as reported). | number [°C] |  |
 | `notes` | Additional remarks about the study site, the borehole, or the measurements therein. Literature references should be formatted as {url} or {author} {year} ({url}). | string | pattern: `[^\s]+( [^\s]+)*` |
-| `investigators` | Names of people and/or agencies who performed the work, as a pipe-delimited list. Each entry is in the format 'person (agency; ...) {notes}', where only person or one agency is required. Person and agency may contain a latinized form in square brackets. | string | pattern: `[^\s]+( [^\s]+)*` |
+| `investigators` | Pipe-delimited list of persons and their agency affiliations (linked by number to `agencies`) responsible for the measurements. Each entry is in the format '[notes] name [latinization] (number, ...)', where only name or one agency number is required (e.g., '[drilling] Gian Darms (1)'). | string | pattern: `[^\s]+( [^\s]+)*` |
+| `agencies` | Numbered, pipe-delimited list of agencies referred to by number in `investigators`. Each entry is in the format 'number. acronym: name > ... [latinization]', where only the agency number and either a name or acronym are required (e.g. '1. UZH: Universität Zürich > GIUZ'). | string | pattern: `[^\s]+( [^\s]+)*` |
 | `funding` | Funding sources as a pipe-delimited list. Each entry is in the format 'funder [rorid] > award [number] url', where only funder is required and rorid is the funder's ROR (https://ror.org) ID (e.g. 01jtrvx49). | string | pattern: `[^\s]+( [^\s]+)*` |
 
 ### `measurement`
