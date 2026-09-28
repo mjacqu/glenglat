@@ -408,12 +408,14 @@ def write_submission() -> None:
 
 # ---- Reference list ----
 
-def infer_script(text: str) -> Literal['cyrillic', 'chinese', 'devanagari', 'georgian', 'hangul', 'kana', 'latin']:
+def infer_script(text: str) -> Literal['arabic', 'chinese', 'cyrillic', 'devanagari', 'georgian', 'hangul', 'kana', 'latin']:
   """
   Infer script of text.
 
   Examples
   --------
+  >>> infer_script('مسعود بربر')
+  'arabic'
   >>> infer_script('孙维君')
   'chinese'
   >>> infer_script('杉山 慎')
@@ -431,6 +433,8 @@ def infer_script(text: str) -> Literal['cyrillic', 'chinese', 'devanagari', 'geo
   >>> infer_script('Jakob F. Steiner')
   'latin'
   """
+  if re.search(r'[\u0600-\u06ff]+', text):
+    return 'arabic'
   if re.search(r'[\u4e00-\u9fff]+', text):
     # Includes kanji
     return 'chinese'
@@ -455,6 +459,9 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
   --------
   >>> infer_name_parts('Jakob F. Steiner')
   {'latin': {'given': 'Jakob F.', 'family': 'Steiner'}}
+  >>> infer_name_parts('Masoud Barbar', 'مسعود بربر')
+  {'name': {'given': 'مسعود', 'family': 'بربر'},
+  'latin': {'given': 'Masoud', 'family': 'Barbar'}, 'script': 'arabic'}
   >>> infer_name_parts('N. G. Razumeiko', 'Н. Г. Разумейко')
   {'name': {'given': 'Н. Г.', 'family': 'Разумейко'},
   'latin': {'given': 'N. G.', 'family': 'Razumeiko'}, 'script': 'cyrillic'}
@@ -484,6 +491,16 @@ def infer_name_parts(latin: str, name: str = None) -> Optional[dict]:
     return {'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]}}
   words = name.split(' ')
   script = infer_script(name)
+  # Arabic: Last word is family name
+  # https://en.wikipedia.org/wiki/Arabic_name
+  if script == 'arabic':
+    if len(words) < 2 or len(words) != len(latin_words):
+      raise ValueError(f'Arabic name "{name} [{latin}]" is ambiguous')
+    return {
+      'name': {'given': ' '.join(words[:-1]), 'family': words[-1]},
+      'latin': {'given': ' '.join(latin_words[:-1]), 'family': latin_words[-1]},
+      'script': 'arabic'
+    }
   # Cyrillic: Last word is family name
   if script == 'cyrillic':
     if len(words) < 2 or len(words) != len(latin_words):
