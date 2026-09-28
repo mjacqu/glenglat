@@ -52,6 +52,7 @@ AUTHOR_PLACEHOLDER = '—'
 
 THESIS_STRING = {
   'thesis-bsc': "Bachelor's thesis",
+  'thesis-hab': 'Habilitation thesis',
   'thesis-phd': 'Ph.D. thesis',
   'thesis-ma': "Master's thesis",
   'thesis-msc': "Master's thesis"
