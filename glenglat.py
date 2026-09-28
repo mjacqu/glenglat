@@ -72,7 +72,7 @@ name_regex = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 title_regex = fr'(?P<title>{name_regex})'
 email_regex = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
 orcid_regex = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
-person_regex = fr'{title_regex}(?: (?:(?P<orcid>{orcid_regex})|(?P<email>{email_regex})))?'
+person_regex = fr'{title_regex}(?:(?: (?P<orcid>{orcid_regex}))?(?: (?P<email>{email_regex}))?)'
 rorid_regex = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
 
 PERSON_REGEX = fr'^{person_regex}$'
@@ -675,6 +675,10 @@ def parse_person_string(string: str) -> dict:
   {'title': 'Emmanuel Le Meur', 'name': None,
   'latin': {'name': 'Emmanuel Le Meur', 'family': 'Le Meur', 'given': 'Emmanuel'},
   'orcid': None, 'email': 'test@email.fr'}
+  >>> parse_person_string('Shin Sugiyama 0000-0001-5323-9558 test@email.jp')
+  {'title': 'Shin Sugiyama', 'name': None,
+  'latin': {'name': 'Shin Sugiyama', 'given': 'Shin', 'family': 'Sugiyama'},
+  'orcid': 'https://orcid.org/0000-0001-5323-9558', 'email': 'test@email.jp'}
   """
   match = re.fullmatch(PERSON_REGEX, string)
   if match is None:
