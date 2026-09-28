@@ -71,7 +71,7 @@ parphrase = fr'{outchar}{inchar}*?{outchar}'
 
 name_regex = fr'(?P<name>{phrase})(?: \[(?P<latin>{phrase})\])?'
 title_regex = fr'(?P<title>{name_regex})'
-email_regex = r'[\w\.\-]+@[\w\-]+(?:\.\w{2,})+'
+email_regex = r'[\w\.\-]+@[\w\-]+(?:\.[\w\-]{2,})+'
 orcid_regex = r'[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]'
 person_regex = fr'{title_regex}(?:(?: (?P<orcid>{orcid_regex}))?(?: (?P<email>{email_regex}))?)'
 rorid_regex = r'0[a-hj-km-np-tv-z|0-9]{6}[0-9]{2}'
