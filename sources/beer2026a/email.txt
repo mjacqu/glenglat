@@ -1,0 +1,30 @@
+From: Janosch Beer <beer@vaw.baug.ethz.ch>
+To: Ethan Welty <ethan.welty@geo.uzh.ch>
+Cc: Mylène Jacquemart <jacquemart@vaw.baug.ethz.ch>
+Sent: 2026-10-22 17:15
+Subject: Glenglat data submission
+
+Ciao Ethan, ciao Mylène,
+
+as you know, this summer we read out the loggers from my project again, so here is an update for the beer2026 submission in glenglat. It only contains measurements that are newer than what glenglat already has for each borehole. That is 20 boreholes (all 8 Geoprecision chains and 12 Tinytag boreholes) covering Jul/Sep 2025 to Jul/Aug 2026. Both files pass submission/validate.py.
+
+Borehole ids and metadata are the same as in the May submission. I only added a "2026 update" part to the notes with the ablation up to the 2026 survey and any failed or melted-out sensors. As before, depths are relative to the ice surface at installation and not corrected for ablation. For the chains we have no ablation measurement at the borehole itself, so the notes give an estimate from the change in sensor depth at the nearest Tinytag borehole. Calibration offsets and utc_offset = 0 are the same as before.
+
+Not included: GT2TT (no longer reliable), and GT1TT and CJ3TT (we didn’t read them out this year or they melted out).
+
+While preparing this I found a mistake in my last submission that affect data already in glenglat. Could you correct them?
+
+Depths of CJ1TT and CJ2TT (borehole ids 888 and 889)
+For these two boreholes I accidentally submitted the sensor depths from a later survey (Sep 2024) instead of the depths at installation, so all their measurements are listed too shallow. The fix is to replace the depths of all existing measurements in these two boreholes:
+- CJ1TT (888): 5.45 m becomes 6.80 m, and 10.45 m becomes 11.80 m
+- CJ2TT (889): 6.99 m becomes 8.50 m, and 11.99 m becomes 13.50 m
+The temperatures stay the same. The new data already uses the corrected depths.
+
+Also, the paper is now published, so you can add it as a reference: Beer et al. (2026), The Cryosphere 20, 5453-5473, https://doi.org/10.5194/tc-20-5453-2026
+
+You’ll find all files as a zip in the attachments.
+
+Let me know if there are any questions.
+
+Cheers,
+Janosch
