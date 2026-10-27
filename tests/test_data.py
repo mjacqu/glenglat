@@ -164,41 +164,31 @@ def test_profile_ids_are_chronological() -> None:
   EXCEPTIONS = [
     460,  # carturan2023: Borehole with timeseries from two different thermistor chains
     766,  # kronenberg2022: Later single profile from machguth2023 in main tables
+    *range(877, 899 + 1),  # beer2026a: Later profiles for beer2026 boreholes
   ]
   df = dfs['profile']
-  # By date
-  groupby = df.groupby('borehole_id')
-  valid = (
-    groupby['date_min'].apply(lambda s: s.dropna().is_monotonic_increasing) &
-    groupby['date_max'].apply(lambda s: s.dropna().is_monotonic_increasing)
-  )
-  valid.loc[EXCEPTIONS] = True
-  assert valid.all(), valid.index[~valid]
-  # By datetime
-  mask = (
+  is_datetime = (
     df['date_min'].notnull() &
     df['date_max'].notnull() &
     df['date_min'].eq(df['date_max']) &
     df['time'].notnull()
   )
-  df = df[mask]
-  datetime = df['date_min'] + 'T' + df['time']
-  valid = datetime.groupby(df['borehole_id']).apply(lambda s: s.is_monotonic_increasing)
-  valid.loc[valid.index.intersection(EXCEPTIONS)] = True
-  assert valid.all(), valid.index[~valid]
-
-
-def test_profile_ids_are_chronological_by_datetime() -> None:
-  """Borehole profile ids are chronological by datetime."""
-  EXCEPTIONS = [
-    460,  # carturan2023: Borehole with timeseries from two different thermistor chains
-    766,  # kronenberg2022: Later single profile from machguth2023 in main tables
-  ]
-  df = dfs['profile']
-  groupby = df.groupby('borehole_id')
-  valid = (
+  # By date
+  groupby = df[~is_datetime].groupby('borehole_id')
+  valid_date = (
     groupby['date_min'].apply(lambda s: s.dropna().is_monotonic_increasing) &
     groupby['date_max'].apply(lambda s: s.dropna().is_monotonic_increasing)
   )
+  # By datetime
+  datetime = df[is_datetime]['date_min'] + 'T' + df[is_datetime]['time']
+  valid_datetime = datetime.groupby(df['borehole_id']).apply(
+    lambda s: s.is_monotonic_increasing
+  )
+  valid_datetime.loc[valid_datetime.index.intersection(EXCEPTIONS)] = True
+  # Merge results
+  valid = pd.Series(True, index=df['borehole_id'].drop_duplicates().sort_values())
+  valid.loc[valid_date.index] &= valid_date
+  valid.loc[valid_datetime.index] &= valid_datetime
+  # Mark exceptions as valid
   valid.loc[EXCEPTIONS] = True
   assert valid.all(), valid.index[~valid]
