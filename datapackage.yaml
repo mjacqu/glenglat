@@ -195,6 +195,27 @@ contributors:
       - name: Arctic Geology, The University Centre in Svalbard, Svalbard & Jan Mayen
     role: DataCollector
     status: creator
+  - title: Evan Miles
+    path: https://orcid.org/0000-0001-5446-8571
+    affiliations:
+      - name: ETH Zurich, Switzerland
+        rorid: 05a28rw58
+    role: DataCollector
+    status: creator
+  - title: Koji Fujita
+    path: https://orcid.org/0000-0003-3753-4981
+    affiliations:
+      - name: Nagoya University, Japan
+        rorid: 04chrp450
+    role: DataCollector
+    status: contributor
+  - title: Stanislav Kutuzov
+    path: https://orcid.org/0000-0003-2007-0922
+    affiliations:
+      - name: Ohio State University (OSU), United States
+        rorid: 00rs6vg23
+    role: DataCollector
+    status: contributor
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
