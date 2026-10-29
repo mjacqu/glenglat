@@ -205,15 +205,13 @@ contributors:
   - title: Koji Fujita
     path: https://orcid.org/0000-0003-3753-4981
     affiliations:
-      - name: Nagoya University, Japan
-        rorid: 04chrp450
+      - name: Graduate School of Environmental Studies, Nagoya University, Japan
     role: DataCollector
     status: contributor
   - title: Stanislav Kutuzov
     path: https://orcid.org/0000-0003-2007-0922
     affiliations:
-      - name: Ohio State University (OSU), United States
-        rorid: 00rs6vg23
+      - name: School of Earth Sciences, Ohio State University (OSU), United States
     role: DataCollector
     status: contributor
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
