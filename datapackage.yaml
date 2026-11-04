@@ -213,7 +213,7 @@ contributors:
     affiliations:
       - name: School of Earth Sciences, Ohio State University (OSU), United States
     role: DataCollector
-    status: contributor
+    status: creator
 $schema: https://datapackage.org/profiles/2.0/datapackage.json
 resources:
   - name: source
