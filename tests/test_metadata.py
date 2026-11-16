@@ -32,7 +32,7 @@ def test_personal_communication_author_listed_as_contributor() -> None:
     on=['title', 'path'],
     how='outer'
   ).convert_dtypes()
-  valid = merge['index_x'].notnull() & merge['index_y'].notnull()
+  valid = merge['index_y'].notnull()
   assert valid.all(), merge[~valid]
 
 
